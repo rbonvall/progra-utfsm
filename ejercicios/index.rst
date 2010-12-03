@@ -1,0 +1,8 @@
+Ejercicios
+==========
+
+.. toctree::
+   :glob:
+
+   *
+
