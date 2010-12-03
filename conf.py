@@ -35,7 +35,7 @@ html_static_path = ['_static']
 
 html_theme = 'sphinxdoc'
 html_theme_options = {
-#    'nosidebar': True,
+    'nosidebar': True,
 }
 html_style = 'progra.css'
 html_title = u'Programación'
