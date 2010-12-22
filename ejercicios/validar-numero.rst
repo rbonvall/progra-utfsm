@@ -7,6 +7,7 @@ El programa termina solo si el numero ingresado cumple con la condición, de lo
 contrario se debe volver a pedir el numero.
 
 ::
+
     Ingrese numero: `17`
     Numero valido.
 

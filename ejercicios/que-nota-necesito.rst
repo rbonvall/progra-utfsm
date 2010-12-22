@@ -5,9 +5,10 @@ para aprobar un ramo.
 
 El promedio del ramo se calcula con la siguiente formula.
 
-Nc= (C1+C2+C3)/3
+::
 
-Nf= Nc*0.7 + Nl*0.3
+    Nc= (C1+C2+C3)/3
+    Nf= Nc*0.7 + Nl*0.3
 
 Donde Ns es Nota Certamen, Nl nota laboratorio y Nf nota final.
 
