@@ -1,17 +1,18 @@
 Determinar pares
 ----------------
 
-#. Determinar los números pares entre 0 y 10
+Realizar un programa que determine
+los números *pares* entre 0 y 10.
 
- * **Entrada**
+* **Entrada**
 
   Nada
 
- * **Salida**
+* **Salida**
 
   Los números pares entre 0 y 10.
 
- * Comportamiento::
+* Comportamiento::
 
     Los números son:
     0
@@ -20,7 +21,7 @@ Determinar pares
     6
     8
 
- * Solución::
+* Solución::
 
     print ("Los números son:"),
     for num in range(0,10):

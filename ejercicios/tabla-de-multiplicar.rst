@@ -1,10 +1,20 @@
 Tabla Multiplicar
-----------------------
+------------------
 
-Realice un programa que reciba un numero y muestre la tabla de multiplicar del 1 
-al 10 de dicho numero.
+Realice un programa que reciba un número
+y muestre la tabla de multiplicar del
+1 al 10, de dicho numero.
 
-::
+ * **Entrada**
+
+    Un número entero positivo *n*
+
+ * **Salida**
+
+    La tabla de multiplicar del 1 al 10 de *n*.
+
+ * Comportamiento::
+
     Ingrese Numero: `9`
     9x1 = 9
     9x2 = 18

@@ -1,18 +1,18 @@
 No múltiplos
 ------------
 
- #. Realizar un programa determine los números naturales menores o iguales
-    de un número determinado, que no sean múltiplos ni de *3* ni de *7*.
+Realizar un programa determine los números naturales menores o iguales
+de un número determinado, que no sean múltiplos ni de *3* ni de *7*.
  
- * **Entrada:**
+* **Entrada:**
 
     un número entero positivo *n*.
 
- * **Salida:**
+* **Salida:**
 
     los números naturales menores o iguales a *n* que no son múltiplos ni de *3* ni de *7*.
 
- * Comportamiento::
+* Comportamiento::
 
     Ingrese número: 24
     1

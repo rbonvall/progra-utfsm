@@ -1,7 +1,9 @@
 Leer tres números
 -----------------
 
-#. Realizar un ciclo que lea 3 números
+Desarrollar un programa que permita
+realizar un ciclo que lea 3 números
+ingresados por el usuario.
 
  * **Entrada**
 

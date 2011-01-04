@@ -1,17 +1,17 @@
 Ordenamiento
 ------------
 
-#. Determinar el orden de tres números ingresados
+Determinar el orden de tres números ingresados
 
- * **Entrada**
+* **Entrada**
 
   Tres números enteros.
 
- * **Salida**
+* **Salida**
 
   Los tres números ordenados de menor a mayor.
 
- * Comportamiento::
+* Comportamiento::
 
 	Ingrese número: 8
 	Ingrese número: 1
@@ -26,7 +26,7 @@ Ordenamiento
 	Ingrese números: 7
 	[1, 6, 7]
 
- * Solución::
+* Solución::
 	
 	num1 = int(raw_input("Ingrese número: "))
 	num2 = int(raw_input("Ingrese número: "))

@@ -1,17 +1,18 @@
 Determinar par
 --------------
 
-#. Determinar si un número es par
+Realizar un programa que permita determinar
+si un número ingresado es par o no.
 
- * **Entrada**
+* **Entrada**
 
   Un número cualquiera
 
- * **Salida**
+* **Salida**
 
   Si el número es par o impar.
 
- * Comportamiento::
+* Comportamiento::
 
     Ingrese un número: 4
     Su número es par
@@ -20,11 +21,10 @@ Determinar par
     Su número es impar
 
 
- * Solución::
+* Solución::
 
     num = input("Ingrese un número")
     if num%2 == 0:
         print ("Su número es par)
     else:
         print ("Su número es impar)
-

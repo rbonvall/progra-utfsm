@@ -1,20 +1,21 @@
 Círculos
 --------
 
-#. Determinar el radio y área de un círculo,
-   los cuales están determinados por las fórmulas:
+Determinar el radio y área de un círculo,
+los cuales están determinados por las fórmulas:
 
-	`\text{perímetro} = \pi\cdot r`
-	`\text{área} = \pi\cdot r^{2}`
+`\text{perímetro} = \pi\cdot r`
+
+`\text{área} = \pi\cdot r^{2}`
 
 
  * **Entrada**
 
-  El radio de un círculo.
+  El *radio* de un círculo.
 
  * **Salida**
 
-  El perímetro y el área del círculo.
+  El *perímetro* y el *área* del círculo.
 
  * Comportamiento::
 

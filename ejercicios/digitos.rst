@@ -1,18 +1,21 @@
 Dígitos
 -------
 
- #. Realizar un programa determine la cantidad de digitos en el número
-    ingresado.
+Realizar un programa determine la cantidad
+de dígitos en el número ingresado.
  
- * **Entrada:**
+* **Entrada:**
 
     un número entero *n*.
 
- * **Salida:**
+* **Salida:**
 
     la cantidad de dígitos que tiene *n*.
 
- * Comportamiento::
+* Comportamiento::
 
     Ingrese número: 2048
     4
+
+    Ingrese número: 12
+    2

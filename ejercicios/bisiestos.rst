@@ -1,6 +1,12 @@
-Bisiesto
---------
-#. Años bisiestos
+Años Bisiestos
+--------------
+
+Desarrollar un programa que pueda determinar si un año
+es bisiesto o no.
+
+Recuerde que un año bisiesto es cuando dura 366 días,
+existiendo un día adicional en el mes más corto,
+es decir, el 29 de febrero.
 
  * **Entrada**
 

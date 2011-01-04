@@ -1,22 +1,22 @@
 Situación del Ramo
 ------------------
 
- #. Realizar un programa que pueda determinar la
-    situación del ramo de un alumno.
+Realizar un programa que pueda determinar la
+situación del ramo de un alumno.
 
- * **Entrada**
+* **Entrada**
 
     cuatro notas (*int* entre 0 y 100).
 
- * **Salida**
+* **Salida**
 
-  * la situación del ramo según el promedio final:
+ * la situación del ramo según el promedio final:
 
-   * si es menor a 40, debe decir *reprobado*;
-   * si está entre 40 y 54, debe decir *examen*;
-   * si es mayor que 54, debe decir *eximido*.
+  * si es menor a 40, debe decir *reprobado*;
+  * si está entre 40 y 54, debe decir *examen*;
+  * si es mayor que 54, debe decir *eximido*.
 
- * Comportamiento::
+* Comportamiento::
 
     Ingrese nota 1: 45
     Ingrese nota 2: 60

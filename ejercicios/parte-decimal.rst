@@ -1,17 +1,17 @@
 Parte decimal
 -------------
 
-#. Determinar la parte decimal de un número ingresado
+Determinar la parte decimal de un número ingresado
 
- * **Entrada**
+* **Entrada**
 
   Un número real.
 
- * **Salida**
+* **Salida**
 
   La parte decimal de un número.
 
- * Comportamiento::
+* Comportamiento::
 	
 	Ingrese un número: 4.5
 	0.5
@@ -20,7 +20,7 @@ Parte decimal
 	Ingrese un número: 4
 	0.0
 	
- * Solución::
+* Solución::
 
 	num = float(raw_input("Infrese un número: "))
 	print(num-int(int))

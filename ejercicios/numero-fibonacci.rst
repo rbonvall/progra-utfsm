@@ -12,16 +12,19 @@ La sucesión de Fibonacci es la siguiente sucesión infinita de números natural
 	
 La sucesión inicia con 0 y 1, y a partir de ahí cada elemento es la suma de los dos anteriores.
  
- * **Entrada:**
+* **Entrada:**
 
     un número entero positivo *n*.
 
- * **Salida:**
+* **Salida:**
 
     el n-ésimo número de Fibonacci.
 
- * Comportamiento::
+* Comportamiento::
 
     Ingrese número: 8
     21
+
+    Ingrese número: 2
+    1
 

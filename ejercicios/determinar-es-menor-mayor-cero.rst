@@ -1,7 +1,7 @@
 Determinar relación con 0
 -------------------------
 
-#. Determinar si un número es menor que 0, 0 o mayor que 0
+Determinar si un número es menor que 0, 0 o mayor que 0.
 
  * **Entrada**
   

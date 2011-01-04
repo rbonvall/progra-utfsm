@@ -1,7 +1,7 @@
 Determinar 0
 ------------
 
-#. Determinar si el número ingresado es *0*
+Determinar si el número ingresado es *0*
 
  * **Entrada**
 

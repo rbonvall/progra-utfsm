@@ -1,7 +1,10 @@
 Leer número
 -----------
 
-#. Determinar número ingresado
+Desarrollar un programa que permita
+determinar el número ingresado por
+el usuario.
+
  * **Entrada**
 
   Un número cualquiera

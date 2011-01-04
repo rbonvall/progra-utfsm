@@ -1,5 +1,5 @@
-Es Fibonacci
-------------
+Conversión de Temperatura
+-------------------------
 
 Realizar un programa que determine si un número es parte de
 la secuencia de Fibonacci:
