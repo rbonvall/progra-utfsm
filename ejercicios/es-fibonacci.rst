@@ -14,8 +14,8 @@ la secuencia de Fibonacci:
 
 * Comportamiento::
 
-    Ingrese número: 17
+    Ingrese numero: 17
     False
 
-    Ingrese número: 21
+    Ingrese numero: 21
     True
