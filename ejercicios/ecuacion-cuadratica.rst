@@ -25,7 +25,15 @@ Recuerde la fórmula:
 
 * Comportamiento::
 
+    Ingrese el valor de a: 2
+    Ingrese el valor de b: 4
+    Ingrese el valor de c: -2
+    x1 = 0.4142
+    x2 = -2.4142
+
+
     Ingrese el valor de a: 1
-    Ingrese el valor de b: 1
+    Ingrese el valor de b: 2
     Ingrese el valor de c: 1
-    x1 = 0 
+    x1 = -1
+    x2 = -1
