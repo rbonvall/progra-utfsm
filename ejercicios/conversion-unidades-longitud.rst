@@ -11,19 +11,18 @@ Recuerde que:
     1 pulgada =	2.54 centímetros
     
 
- 
-* **Entrada:**
+Al programa se le debe ingresar una cierta
+longitud en centímetros *n*,
+y debe entregar el equivalente de *n* en pulgadas.
 
-    una longitud en centímetros *n*.
+* Comportamiento
 
-* **Salida:**
-
-    el equivalente de *n* en pulgadas.
-
-* Comportamiento::
+::
 
     Ingrese longitud: 45
     17.7165
+
+::
 
     Ingrese longitud: 13
     5.1181

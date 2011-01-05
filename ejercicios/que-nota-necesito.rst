@@ -18,20 +18,16 @@ primeros certamen y la nota de laboratorio y muestre la nota que necesita el alu
 
 Considere nota con aproximación o nota sin aproximación.
 
-* **Entrada**
+* Comportamiento
 
-    Notas del certamen 1, certamen 2 y laboratorio.
-
-* **Salida**
-
-    La nota que necesita en el certamen 3.
-
-* Comportamiento::
+::
 
     Ingrese nota Certamen 1: `45`
     Ingrese nota Certamen 2: `55`
     Ingrese nota Laboratorio: `65`
     Necesita nota 74 en el Certamen 3, sin aproximación
+
+::
 
     Ingrese nota Certamen 1: `45`
     Ingrese nota Certamen 2: `55`

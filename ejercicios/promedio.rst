@@ -1,17 +1,13 @@
 Promedio
 --------
 
-Determinar el promedio de 4 notas ingresadas
+Realizar un programa que permita
+determinar el promedio de 4 notas ingresadas
+por el usuario.
 
-* **Entrada**
+* Comportamiento
 
-  Cuatro notas obtenidas por un alumno.
-
-* **Salida**
-
-  El promedio de las notas.
-
-* Comportamiento::
+::
 
     Primera nota: 55
     Segunda nota: 71
@@ -19,7 +15,9 @@ Determinar el promedio de 4 notas ingresadas
     Cuarta nota: 87
     El promedio es: 64.75 
 
-* Solución::
+* Solución
+
+::
 
     nota1 = int(input("Primera nota:"))
     nota2 = int(input("Segunda nota:"))

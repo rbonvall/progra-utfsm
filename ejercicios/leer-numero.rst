@@ -5,20 +5,16 @@ Desarrollar un programa que permita
 determinar el número ingresado por
 el usuario.
 
- * **Entrada**
+* Comportamiento
 
-  Un número cualquiera
-
- * **Salida**
-
-  El número ingresado
-
- * Comportamiento::
+::
 
     Ingrese un número: 4
     Su número es 4
 
- * Solución::
+* Solución
+
+::
 
     num = input("Ingrese un número")
     print ("Su número es ", num)

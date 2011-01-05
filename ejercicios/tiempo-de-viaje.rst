@@ -14,16 +14,9 @@ total de viaje en formato *HH:MM*.
 El programa deja de pedir tiempos de viaje
 cuando ingresa un 0.
 
-* **Entrada**
+* Comportamiento
 
-    Tiempos de cada viaje.
-
-* **Salida**
-
-    Tiempo total de viaje.
-
-
-* Comportamiento::
+::
 
     Tiempo de viaje: `15`
     Tiempo de viaje: `30`

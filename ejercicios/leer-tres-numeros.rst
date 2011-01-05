@@ -5,16 +5,9 @@ Desarrollar un programa que permita
 realizar un ciclo que lea 3 números
 ingresados por el usuario.
 
- * **Entrada**
+* Comportamiento
 
-  Un número en cada iteración.
-
- * **Salida**
-
-  El número ingresado en cada iteración.
-
-
- * Comportamiento::
+::
 
     Ingrese un número: 3
     Ingresado el 3
@@ -24,7 +17,9 @@ ingresados por el usuario.
     Ingresado el 0
     Fin del programa
 
- * Solución::
+* Solución
+
+::
 
 	i = 0
 	while i < 3:

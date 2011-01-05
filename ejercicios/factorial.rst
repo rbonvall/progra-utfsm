@@ -13,18 +13,14 @@ de aquel numero.
 
 Considere todos los números ingresados como enteros positivos mayores a cero.
 
-* **Entrada**
+* Comportamiento
 
-    Número entero positivo *n*.
-
-* **Salida**
-
-    Factorial de *n*.
-
-* Comportamiento::
+::
 
     Ingrese numero: `6`
     Factorial de 6: 720
+
+::
 
     Ingrese numero: `3`
     Factorial de 3: 6 

@@ -1,21 +1,22 @@
 Conversión de Temperatura
 -------------------------
 
-Realizar un programa que determine si un número es parte de
-la secuencia de Fibonacci:
- 
-* **Entrada:**
+Desarrolle un programa cuya entrada
+sea una temperatura en grados Celsius
+y su salida sea la temperatura en
+grados Fahrenheit.
 
-    un número entero positivo *n*.
+La fórmula de conversión es:
 
-* **Salida:**
+.. math::
+	F = \frac{9}{5} C + 32
 
-    *True* o *False* dependiendo si *n* es o no un número de Fibonacci.
+.. Por ejemplo, si la entrada es 55, el programa debe entregar el resultado 129.2.
 
-* Comportamiento::
+* Comportamiento
 
-    Ingrese número: 17
-    False
+::
 
-    Ingrese número: 21
-    True
+    Ingrese temperatura en celsius: 55
+    129.2 grados fahrenheit
+

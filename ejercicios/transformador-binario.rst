@@ -12,18 +12,17 @@ forma:
 
     101001 = 1\cdot 2^{5} + 0\cdot 2^{4} + 0\cdot 2^{3} + 1\cdot 2^{2} + 0\cdot 2^{1} + 1\cdot 2^{0} = 37
 
-* **Entrada**
+El programa debe recibir una secuencia *s* en binario,
+y poder entregar el equivalente en decimal de la secuencia *s*.
 
-    una secuencia *s* en binario.
+* Comportamiento
 
-* **Salida**
-
-    el equivalente en decimal de la secuencia *s*.
-
-* Comportamiento::
+::
 
     Ingrese secuencia: 110101
     53
+
+::
 
     Ingrese secuencia: 110111
     55 

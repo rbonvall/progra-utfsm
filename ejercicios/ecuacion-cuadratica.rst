@@ -15,15 +15,14 @@ Recuerde la fórmula:
     x = \frac{-b \pm \sqrt {b^{2} - 4ac}}{2a}
     
 
-* **Entrada**
+El programa debe recibir como entrada,
+los valores de *a*, *b* y *c*,
+y nos debe entregar los resultados
+de la ecuación *x1* y *x2*.
 
-    Los valores de *a*, *b* y *c*.
+* Comportamiento
 
-* **Salida**
-
-    Los resultados de la ecuación *x1* y *x2*.
-
-* Comportamiento::
+::
 
     Ingrese el valor de a: 2
     Ingrese el valor de b: 4
@@ -31,6 +30,7 @@ Recuerde la fórmula:
     x1 = 0.4142
     x2 = -2.4142
 
+::
 
     Ingrese el valor de a: 1
     Ingrese el valor de b: 2

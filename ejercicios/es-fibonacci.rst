@@ -1,21 +1,18 @@
 Es Fibonacci
 ------------
 
-Realizar un programa que determine si un número es parte de
-la secuencia de Fibonacci:
- 
-* **Entrada:**
+Realizar un programa que determine si un número
+*n* cualquiera es o no parte de
+la secuencia de Fibonacci.
 
-    un número entero positivo *n*.
+* Comportamiento
 
-* **Salida:**
-
-    *True* o *False* dependiendo si *n* es o no un número de Fibonacci.
-
-* Comportamiento::
+::
 
     Ingrese numero: 17
     False
+
+::
 
     Ingrese numero: 21
     True

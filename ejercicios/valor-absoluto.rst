@@ -14,21 +14,19 @@ Por definición el valor absoluto cumple lo siguiente:
           \end{array} \right.
 
 
-* **Entrada**
+* Comportamiento
 
-    Un número real *n*.
-
-* **Salida**
-
-    El valor absoluto de *n*.
-
-* Comportamiento::
+::
 
     Ingrese número: 67
     67
 
+::
+
     Ingrese número: -24
     24
+
+::
 
     Ingrese número: 0
     0

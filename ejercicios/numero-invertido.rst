@@ -1,22 +1,28 @@
 Número invertido
 ----------------
 
-Determinar el número invertido de un número ingresado
+Realizar un programa que
+permita determinar el número
+invertido a partir de un número
+*n* ingresado por el usuario,
+de tres dígitos.
 
-* **Entrada**
+* Comportamiento
 
-  Un número entero de tres dígitos.
-
-* **Salida**
-
-  El número con los dígitos en orden inverso.
-
-* Comportamiento::
+::
 
     Ingrese número: 345
     543
 
-* Solución::
+::
+
+    Ingrese número: 123
+    321
+
+
+* Solución
+
+::
 
     num = int(input("Ingrese número:"))
     centena = num//100

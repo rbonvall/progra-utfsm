@@ -3,22 +3,24 @@ Determinar 0
 
 Determinar si el número ingresado es *0*
 
- * **Entrada**
+Al programa se le debe ingresar
+un número *n* cualquiera, y debe
+entregar si es cero o no.
 
-   Un número cualquiera
+* Comportamiento
 
- * **Salida**
-
-   Si el número es 0.
-
- * Comportamiento::
+::
 
     Ingrese un número: 2
+
+::
 
     Ingrese un número: 0
     Su número es cero
 
- * Solución::
+* Solución
+
+::
 
     num = input("Ingrese un número")
     if num == 0:
