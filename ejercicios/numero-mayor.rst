@@ -1,5 +1,5 @@
-Determinar el número mayor
---------------------------
+Número mayor
+-------------
 
 Realizar un programa que permita
 determinar el número mayor perteneciente
