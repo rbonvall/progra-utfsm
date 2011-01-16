@@ -1,35 +1,26 @@
-Que nota necesito
+Qué nota necesito
 -----------------
-Un alumno desea saber que nota necesita en el ultimo certamen (C3),
+Un alumno desea saber que nota necesita en el tercer certamen
 para aprobar un ramo. 
 
 El promedio del ramo se calcula con la siguiente formula.
 
 .. math::
 
-    Nc= \frac{(C1+C2+C3)}{3}
+    N_C = \frac{(C1+C2+C3)}{3}
 
-    Nf= Nc\cdot 0.7 + Nl\cdot 0.3
+    N_F = N_C\cdot 0.7 + N_L\cdot 0.3
 
-Donde *Ns* es Nota Certamen, *Nl* nota laboratorio y *Nf* nota final.
+Donde `N_C` es el promedio de certámenes,
+`N_L` el promedio de laboratorio
+y `N_F` la nota final.
 
 Escriba un programa que pregunte al usuario las notas de los dos
-primeros certamen y la nota de laboratorio y muestre la nota que necesita el alumno para aprobar el ramo con nota final *60*.
-
-Considere nota con aproximación o nota sin aproximación.
-
-* Comportamiento
+primeros certamen y la nota de laboratorio y muestre la nota que necesita el alumno para aprobar el ramo con nota final 60.
 
 ::
 
-    Ingrese nota Certamen 1: `45`
-    Ingrese nota Certamen 2: `55`
-    Ingrese nota Laboratorio: `65`
-    Necesita nota 74 en el Certamen 3, sin aproximación
-
-::
-
-    Ingrese nota Certamen 1: `45`
-    Ingrese nota Certamen 2: `55`
-    Ingrese nota Laboratorio: `65`
-    Necesita nota 72 en el Certamen 3, con aproximación
+    Ingrese nota certamen 1: `45`
+    Ingrese nota certamen 2: `55`
+    Ingrese nota laboratorio: `65`
+    Necesita nota 72 en el certamen 3
