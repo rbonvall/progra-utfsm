@@ -9,7 +9,7 @@ A modo de ejemplo, considere la pieza de la
 siguiente figura, la cual tiene 5 puntos.
 
 
-.. image:: ../diagramas/domino.png
+.. image:: ../../diagramas/domino.png
     :alt: domino
     :align: center
 
