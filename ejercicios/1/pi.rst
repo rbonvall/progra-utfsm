@@ -10,16 +10,14 @@ de `\pi` usando la siguiente suma infinita:
 
 
 La entrada del programa debe ser un número entero
-*n* que indique cuántos términos de la suma se utilizará.
-
-* Comportamiento
+`n` que indique cuántos términos de la suma se utilizará.
 
 ::
 
-   n: 3
+   n: `3`
    3.466666666666667
 
 ::
 
-   n: 1000
+   n: `1000`
    3.140592653839794
