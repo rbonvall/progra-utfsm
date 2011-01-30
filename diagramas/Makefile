@@ -8,6 +8,7 @@ pdf: $(PDFFILES)
 %.pdf: %.tex
 	@rubber --pdf $<
 %.png: %.pdf
+	@echo "creating $@..."
 	@convert -density 1200 -scale 10\% -quality 80 $< $@
 clean:
 	@rubber --clean --pdf $(TEXFILES:.tex=)
