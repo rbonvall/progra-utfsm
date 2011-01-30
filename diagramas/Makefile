@@ -1,4 +1,4 @@
-TEXFILES = $(shell ls *.tex)
+TEXFILES = $(wildcard *.tex)
 PDFFILES = $(TEXFILES:.tex=.pdf)
 PNGFILES = $(PDFFILES:.pdf=.png)
 
