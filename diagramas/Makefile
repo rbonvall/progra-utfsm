@@ -26,7 +26,7 @@ multiplicacion.gif: multiplicacion.pdf
 	@convert -density 1200 -scale 10\% -quality 80 $< $@
 clean:
 	@rubber --clean --pdf $(TEXFILES:.tex=)
-	@rm -f *.png
+	@rm -f *.png *.gif *.vrb
 
 .PHONY: png pdf clean all
 
