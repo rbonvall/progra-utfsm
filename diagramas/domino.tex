@@ -8,16 +8,16 @@
 \begin{document}
 %\input{flujo}
 \begin{preview}
+\tikzstyle{place}=[circle, draw, fill=black, inner sep=0pt, thick, minimum size=2mm]
 \begin{tikzpicture}
-   [place/.style={circle,draw,fill=black,inner sep=0pt,thick,minimum size=2mm}]
    \def\rectanglepath{-- ++(1cm,0cm)-- ++(0cm,1cm)-- ++(-1cm,0cm) -- cycle}
    \draw (0,0) \rectanglepath;
    \draw (1,0) \rectanglepath;
-   \node at (0.5,0.5) [place] {};
-   \node at (1.25,0.75) [place] {};
-   \node at (1.25,0.25) [place] {};
-   \node at (1.75,0.75) [place] {};
-   \node at (1.75,0.25) [place] {};
+   \node [place] at (0.5,0.5)   {};
+   \node [place] at (1.25,0.75) {};
+   \node [place] at (1.25,0.25) {};
+   \node [place] at (1.75,0.75) {};
+   \node [place] at (1.75,0.25) {};
 \end{tikzpicture}
 \end{preview}
 \end{document}
