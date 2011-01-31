@@ -11,7 +11,7 @@ PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-DEPLOYDIR = $(HOME)/public_html/progra-utfsm-2010-2
+DEPLOYDIR = $(HOME)/public_html/progra
 
 .PHONY: all help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy diagramas
 
