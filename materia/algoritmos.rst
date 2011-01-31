@@ -11,10 +11,6 @@ Los pasos deben estar muy bien definidos,
 y tienen que describir sin ambigüedades
 cómo llegar desde el inicio hasta el final.
 
-.. index:: ejecución
-
-El seguir los pasos de un algoritmo se denomina **ejecutar** el algoritmo.
-
 Un algoritmo tiene tres componentes:
 
 .. index:: entrada, proceso, salida
@@ -49,11 +45,19 @@ incluso sin darse cuenta:
   El proceso es la serie de pasos para manipular los ingredientes.
   La salida es el plato terminado.
 
+  En principio,
+  si una receta está suficientemente bien explicada,
+  podría permitir preparar un plato
+  a alguien que no sepa nada de cocina.
+
 * El `método para multiplicar`_ números a mano
-  que se aprende en el colegio es un algoritmo.
+  que aprendimos en el colegio es un algoritmo.
   Dado cualquier par de números enteros,
   si seguimos paso a paso el procedimiento
-  siempre obtendremos el producto.
+  siempre obtendremos el producto:
+
+  .. image:: ../diagramas/multiplicacion.gif
+     :align: center
 
   La entrada del algoritmo de multiplicación
   son los dos factores.
@@ -87,7 +91,9 @@ y `x` es la incógnita que se desea determinar.
 Por ejemplo, `2x^2 - 5x + 2 = 0` es una ecuación cuadrática
 con `a = 2`, `b = -5` y `c = 2`.
 Sus soluciones son `x_1 = 1/2` y `x_2 = 2`,
-como se puede comprobar reemplazando estos valores en la ecuación.
+como se puede comprobar fácilmente
+al reemplazar estos valores en la ecuación.
+El problema es cómo obtener estos valores en primer lugar.
 
 El problema computacional de resolver una ecuación cuadrática
 puede ser planteado así:
@@ -98,7 +104,8 @@ puede ser planteado así:
 
 En álgebra aprendemos un algoritmo para resolver este problema.
 Es lo suficientemente detallado para que pueda usarlo cualquier persona,
-incluso sin saber qué es una ecuación cuadrática.
+incluso sin saber qué es una ecuación cuadrática,
+o para que lo pueda hacer un computador:
 
 1. Obtener los valores de
    `a`, `b` y `c`.
@@ -125,7 +132,7 @@ cuyo significado sea universal.
 Primero veremos
 cuáles son los elementos básicos
 mediante los que un algoritmo es descrito.
-Más adelante,
-aprenderemos a representar un algoritmo usando diagramas de flujo
-y finalmente a implementarlos en el computador
+y durante el ramo aprenderemos
+a implementarlos en el computador
 usando el lenguaje Python.
+
