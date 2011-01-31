@@ -1,18 +1,12 @@
 Círculos
 --------
 
-Determinar el perímetro y área de un círculo,
-los cuales están determinados por las fórmulas:
+Escriba un programa que reciba como entrada el radio de un círculo
+y entregue como salida su perímetro y su área,
+dados por las siguientes fórmulas:
 
-`\text{perímetro} = \pi\cdot r`
-
-`\text{área} = \pi\cdot r^{2}`
-
-El programa necesitará que se ingrese
-el *radio* del círculo determinado,
-y nos entregará su perímetro y área.
-
-* Comportamiento
+* `\text{perímetro} = 2\pi r`
+* `\text{área} = \pi r^{2}`
 
 ::
 
@@ -20,10 +14,10 @@ y nos entregará su perímetro y área.
     Perímetro: 31.4
     Área: 78.5
 
-* Solución
+Solución::
 
-::
+    from math import pi
 
-	radio = int(input("Ingrese el radio:"))
-	print "Perímetro":, 2*3.14*radio
-	print "Área":, 3.14*radio**2
+    radio = float(input("Ingrese el radio:"))
+    print "Perímetro":, 2 * pi * radio
+    print "Área":, pi * radio ** 2
