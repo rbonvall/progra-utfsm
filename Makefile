@@ -18,7 +18,7 @@ DEPLOYDIR = $(HOME)/public_html/progra
 all: html
 
 diagramas:
-	$(MAKE) -C diagramas
+	-$(MAKE) -C diagramas
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
