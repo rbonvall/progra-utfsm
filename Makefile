@@ -13,9 +13,12 @@ ALLSPHINXOPTS   = -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 DEPLOYDIR = $(HOME)/public_html/progra-utfsm-2010-2
 
-.PHONY: all help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy
+.PHONY: all help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy diagramas
 
 all: html
+
+diagramas:
+	$(MAKE) -C diagramas
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -33,7 +36,7 @@ help:
 clean:
 	-rm -rf _build/*
 
-html:
+html: diagramas
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) _build/html
 	@echo
 	@echo "Build finished. The HTML pages are in _build/html."
