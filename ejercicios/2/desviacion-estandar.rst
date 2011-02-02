@@ -10,7 +10,7 @@ la `desviación estándar`_ de los valores:
 
 .. math::
 
-   DE = \sqrt{\sum_i (x_i - m)^2/n}
+   DE = \sqrt{\sum_{i} \frac{(x_i - m)^2}{n}}
 
 .. _desviación estándar: http://es.wikipedia.org/wiki/Desviaci%C3%B3n_est%C3%A1ndar
 
@@ -29,10 +29,10 @@ Esto significa que hay que hacerlo siguiendo estos pasos:
 Por ejemplo:
 
 ::
-    desviacion_estandar([1.3, 1.3, 1.3])
-    0.0
-    desviacion_estandar([4.0, 1.0, 11.0, 13.0, 2.0, 7.0])
-    4.459696053419884
-    desviacion_estandar([1.5, 9.5])
-    4.0
-	
+
+	desviacion_estandar([1.3, 1.3, 1.3])
+	0.0
+	desviacion_estandar([4.0, 1.0, 11.0, 13.0, 2.0, 7.0])
+	4.459696053419884
+	desviacion_estandar([1.5, 9.5])
+	4.0
