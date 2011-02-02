@@ -5,7 +5,7 @@ Cuando la suma de los dígitos de un número
 es perfectamente divisible por nueve,
 el propio número es divisible por nueve.
 
-Por ejemplo, 7767, pues::
+Por ejemplo, 7767, pues:
 
 .. math::
 

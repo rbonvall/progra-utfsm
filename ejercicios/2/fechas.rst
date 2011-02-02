@@ -29,8 +29,8 @@ El progama debe realizar lo siguiente:
 Recuerde que debe ingresar tambien,
 la cantidad de elementos que tendrán `A` y `B`.
 
-
 ::
+
 	elementos de A: 3
 	A 1: 06 05 1992
 	A 2: 07 02 1969
