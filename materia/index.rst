@@ -3,6 +3,7 @@ Materia
 
 .. toctree::
 
+    introduccion
     algoritmos
     programas
     uso-interprete
