@@ -5,7 +5,8 @@ Algoritmos
 
 .. index:: algoritmo
 
-Un **algoritmo** es una secuencia de pasos para resolver un problema.
+Un **algoritmo** es una secuencia de pasos
+para resolver un problema.
 
 Los pasos deben estar muy bien definidos,
 y tienen que describir sin ambigüedades
@@ -31,48 +32,6 @@ la relación deseada entre la entrada y la salida.
 El algoritmo especifica
 cómo la entrada se transforma en la salida.
 
-Todo el mundo conoce y utiliza algoritmos a diario,
-incluso sin darse cuenta:
-
-* Una receta de cocina es un algoritmo;
-  si bien podríamos cuestionar que algunos pasos son ambiguos
-  (¿cuánto es «una pizca de sal»? ¿qué significa «agregar a gusto»?),
-  en general las instrucciones están lo suficientemente bien definidas
-  para que uno las pueda seguir sin problemas.
-
-  La entrada de una receta son los ingredientes
-  y algunos datos como: ¿para cuántas personas se cocinará?
-  El proceso es la serie de pasos para manipular los ingredientes.
-  La salida es el plato terminado.
-
-  En principio,
-  si una receta está suficientemente bien explicada,
-  podría permitir preparar un plato
-  a alguien que no sepa nada de cocina.
-
-* El `método para multiplicar`_ números a mano
-  que aprendimos en el colegio es un algoritmo.
-  Dado cualquier par de números enteros,
-  si seguimos paso a paso el procedimiento
-  siempre obtendremos el producto:
-
-  .. image:: ../diagramas/multiplicacion.gif
-     :align: center
-
-  La entrada del algoritmo de multiplicación
-  son los dos factores.
-  El proceso es la secuencia de pasos
-  en que los dígitos van siendo multiplicados
-  las reservas van siendo sumadas,
-  y los productos intermedios son finalmente sumados.
-  La salida del algoritmo es el producto obtenido.
-
-.. _método para multiplicar: http://es.wikipedia.org/wiki/Algoritmo_de_multiplicación
-
-No toda secuencia de instrucciones es un algoritmo.
-Un algoritmo debe poder ser usado mecánicamente,
-sin necesidad de usar inteligencia, intuición ni habilidad.
-
 Cómo describir un algoritmo
 ---------------------------
 Consideremos un ejemplo sencillo:
@@ -80,11 +39,10 @@ un algoritmo para resolver ecuaciones cuadráticas.
 
 .. index:: ecuación cuadrática
 
-Una `ecuación cuadrática`_
-es una ecuación de la forma
+Una `ecuación cuadrática`_ es una ecuación de la forma
 `ax^2 + bx + c = 0`,
-donde `a`, `b` y `c` son datos dados
-y `x` es la incógnita que se desea determinar.
+donde `a`, `b` y `c` son datos dados, con `a\ne 0`,
+y `x` es la incógnita cuyo valor que se desea determinar.
 
 .. _ecuación cuadrática: http://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_segundo_grado
 
@@ -138,10 +96,54 @@ y el flujo de ejecución es indicado por flechas que conectan los bloques:
 .. image:: ../diagramas/cuadratica.png
    :align: center
 
+El inicio y el final del algoritmo son representados con bloques circulares.
+El algoritmo siempre debe ser capaz llegar desde uno hasta el otro,
+sin importar por qué camino lo hace.
+Un algoritmo no puede «quedarse pegado» en la mitad.
+
+La entrada y la salida de datos son representadas con romboides,
+que en la figura de arriba están pintados de verde.
+
+Los diamantes representan condiciones
+en las que el algoritmo sigue uno de dos caminos.
+que están etiquetados con *sí* o *no*,
+dependiendo si la condición es verdadera o falsa.
+
+También puede haber ciclos,
+representados por flechas
+que regresan a bloques anteriores.
+
+Otras sentencias van dentro de rectángulos,
+que en la figura están pintados de azul.
+
+Los diagramas de flujo no son usados en la práctica para programar,
+pero son útiles para ilustrar cómo funcionan algoritmos sencillos.
 
 Pseudo código
 ~~~~~~~~~~~~~
 
 Código
 ~~~~~~
+.. index:: lenguaje de programación
+
+El producto final de la programación
+siempre debe ser código que pueda ser ejecutado en el computador.
+Esto requiere describir los algoritmos
+en un **lenguaje de programación**.
+Los lenguajes de programación
+definen un conjunto limitado de conceptos básicos,
+en función de los cuales uno puede expresar cualquier algoritmo.
+
+En esta asignatura,
+usaremos el lenguaje de programación Python_
+para escribir nuestros programas.
+
+.. _Python: http://python.org/
+
+El código en Python para resolver la ecuación cuadrática es el siguiente:
+
+.. literalinclude:: programas/cuadratica.py
+
+A partir de ahora, aprenderás a entender, escribir y ejecutar
+códigos como éste.
 
