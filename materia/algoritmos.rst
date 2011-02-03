@@ -70,13 +70,13 @@ incluso sin darse cuenta:
 .. _método para multiplicar: http://es.wikipedia.org/wiki/Algoritmo_de_multiplicación
 
 No toda secuencia de instrucciones es un algoritmo.
-Un algoritmo debe poder seguirse
+Un algoritmo debe poder ser usado mecánicamente,
 sin necesidad de usar inteligencia, intuición ni habilidad.
-Un criterio para saber si un algoritmo está bien descrito
-puede ser: ¿podría un robot seguir estas instrucciones sin equivocarse?
 
-Un ejemplo sencillo: resolver una ecuación cuadrática
------------------------------------------------------
+Cómo describir un algoritmo
+---------------------------
+Consideremos un ejemplo sencillo:
+un algoritmo para resolver ecuaciones cuadráticas.
 
 .. index:: ecuación cuadrática
 
@@ -102,37 +102,46 @@ puede ser planteado así:
   entontrar los valores de `x`
   que satisfacen `ax^2 + bx + c = 0`.
 
-En álgebra aprendemos un algoritmo para resolver este problema.
+Al estudiar álgebra aprendemos un algoritmo para resolver este problema.
 Es lo suficientemente detallado para que pueda usarlo cualquier persona,
 incluso sin saber qué es una ecuación cuadrática,
-o para que lo pueda hacer un computador:
+o para que lo pueda hacer un computador.
+A continuación veremos algunas maneras de describir el procedimiento.
 
-1. Obtener los valores de
-   `a`, `b` y `c`.
-2. Calcular el discriminante `b^2 - 4ac`, y llamarlo `Δ`.
-3. Si `Δ < 0`, entonces la ecuación no tiene soluciones reales.
-4. Si `Δ = 0`, entonces la ecuación tiene una solución real,
-   que es `x = -b/2a`.
-5. Si `Δ > 0`, entonces
-   la ecuación tiene dos soluciones reales,
-   que son `x = (-b ± \sqrt{Δ})/2a`.
-6. Entregar las soluciones `x` obtenidas.
+Lenguaje natural
+~~~~~~~~~~~~~~~~
+Durante el proceso mental de diseñar un algoritmo,
+es común pensar y describir los pasos
+en la misma manera en que hablamos a diario.
+Por ejemplo:
 
-La entrada es el paso 1, la salida es el paso 6,
-y el resto de los pasos son parte del proceso.
+    Teniendo los valores de `a`, `b` y `c`,
+    calcular el discriminante `b^2 - 4ac`.
+    Si es discriminante es negativo, entonces la ecuación no tiene soluciones
+    reales. Si es discriminante es igual a cero, entonces la ecuación tiene una
+    única solución real, que es `x = -b/2a`. Si el discriminante es positivo,
+    entonces la ecuación tiene dos soluciones reales, que son
+    `x_1 = (-b - \sqrt{D})/2a` y `x_2 = (-b + \sqrt{D})/2a`.
+    
+Esta manera de expresar un algoritmo no es ideal, ya que el lenguaje natural es:
 
-Cómo describir un algoritmo
----------------------------
-El lenguaje natural (la manera en que hablamos a diario)
-no es el más apropiado para describir un algoritmo:
-es complejo, ambiguo e impreciso.
+* impreciso: puede tener ambigüedades;
+* no universal: personas distintas describirán el proceso de maneras distintas; y
+* no estructurado: la descripción no está expresada en función de componentes simples.
 
-Un algoritmo debe ser descrito mediante un lenguaje
-cuyo significado sea universal.
-Primero veremos
-cuáles son los elementos básicos
-mediante los que un algoritmo es descrito.
-y durante el ramo aprenderemos
-a implementarlos en el computador
-usando el lenguaje Python.
+Diagrama de flujo
+~~~~~~~~~~~~~~~~~
+Un **diagrama de flujo** es una representación gráfica de un algoritmo.
+Los pasos son representados por varios tipos de bloques,
+y el flujo de ejecución es indicado por flechas que conectan los bloques:
+
+.. image:: ../diagramas/cuadratica.png
+   :align: center
+
+
+Pseudo código
+~~~~~~~~~~~~~
+
+Código
+~~~~~~
 
