@@ -119,8 +119,34 @@ que en la figura están pintados de azul.
 Los diagramas de flujo no son usados en la práctica para programar,
 pero son útiles para ilustrar cómo funcionan algoritmos sencillos.
 
-Pseudo código
-~~~~~~~~~~~~~
+Pseudocódigo
+~~~~~~~~~~~~
+El **pseudocódigo** es una descripción estructurada de un algoritmo
+basada en ciertas convenciones notacionales.
+Si bien es muy parecido al código que finalmente se escribirá en el computador,
+el pseudocódigo está pensado para ser leído por humanos.
+
+Una manera de escribir el algoritmo para la ecuación cuadrática
+en pseudocódigo es la siguiente:
+
+.. code-block:: none
+
+    leer a
+    leer b
+    leer c
+
+    discriminante ← b² - 4ac
+    si discriminante < 0:
+        escribir 'La ecuación no tiene soluciones reales'
+    o si no, si discriminante == 0:
+        x ← -b / 2a
+        escribir 'La solución única es', x
+    o si no:
+        x1 ← (-b - √discriminante) / 2a
+        x2 ← (-b + √discriminante) / 2a
+        escribir 'Las dos soluciones reales son:'
+        escribir x1
+        escribir x2
 
 Código
 ~~~~~~
