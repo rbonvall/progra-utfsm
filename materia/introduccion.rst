@@ -29,11 +29,15 @@ y que efectivamente resuelva el problema.
 
 Esto no tiene nada que ver con computadores.
 
+.. index:: algoritmo
+
 Un procedimiento que resuelve un problema
 es llamado un **algoritmo**.
 
 Todo el mundo conoce y utiliza algoritmos a diario,
 incluso sin darse cuenta:
+
+.. index:: receta de cocina
 
 * Una receta de cocina es un algoritmo;
   si bien podríamos cuestionar que algunos pasos son ambiguos
@@ -50,6 +54,8 @@ incluso sin darse cuenta:
   si una receta está suficientemente bien explicada,
   podría permitir preparar un plato
   a alguien que no sepa nada de cocina.
+
+.. index:: algoritmo de multiplicación
 
 * El `método para multiplicar`_ números a mano
   que aprendimos en el colegio es un algoritmo.
@@ -73,7 +79,6 @@ incluso sin darse cuenta:
 No toda secuencia de instrucciones es un algoritmo.
 Un algoritmo debe poder ser usado mecánicamente,
 sin necesidad de usar inteligencia, intuición ni habilidad.
-
 
     *Los computadores son inútiles: sólo pueden darte respuestas*.
     --- `Pablo Picasso <http://es.wikipedia.org/wiki/Pablo_Picasso>`_.
