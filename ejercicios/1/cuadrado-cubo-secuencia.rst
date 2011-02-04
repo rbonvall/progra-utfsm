@@ -4,7 +4,6 @@ Cuadrados y Cubos
 Realizar un programa que pueda determinar el
 *cuadrado* y el *cubo* de los números del 1 al 10.
 
-* Comportamiento
 
 ::
 

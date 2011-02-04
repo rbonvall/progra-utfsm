@@ -13,19 +13,17 @@ Escriba un programa que pregunte al usuario un puntaje,
 y muestre como resultado la cantidad de combinaciones de dados
 con las que se puede obtener ese puntaje.
 
-* Comportamiento
-
-::
+.. code-block:: testcase
 
     Ingrese el puntaje: `4`
     Hay 3 combinaciones para obtener 4
 
-::
+.. code-block:: testcase
 
     Ingrese el puntaje: `11`
     Hay 2 combinaciones para obtener 11
 
-::
+.. code-block:: testcase
 
     Ingrese el puntaje: `17`
     Hay 0 combinaciones para obtener 17

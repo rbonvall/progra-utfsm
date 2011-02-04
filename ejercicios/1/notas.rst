@@ -8,7 +8,6 @@ La nota ingresado debe tener un valor *int* entre 0 y 100,
 y al momento de determinar la salida, entre
 *rojo* o *azul*, dependerá si la nota es mayor o menor a 55.
 
-* Comportamiento
 
 ::
 

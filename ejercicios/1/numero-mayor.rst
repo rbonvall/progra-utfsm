@@ -8,7 +8,6 @@ donde tanto el valor de *n* como
 el de los números deben ser ingresados
 por el usuario.
 
-* Comportamiento
 
 ::
    

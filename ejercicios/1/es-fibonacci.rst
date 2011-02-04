@@ -5,7 +5,6 @@ Realizar un programa que determine si un número
 *n* cualquiera es o no parte de
 la secuencia de Fibonacci.
 
-* Comportamiento
 
 ::
 

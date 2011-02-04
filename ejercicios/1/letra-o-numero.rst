@@ -10,7 +10,6 @@ El programa debe señalar si *c*
 es número, letra mayúscula, letra minúscula,
 o ninguna de las anteriores.
 
-* Comportamiento
 
 ::
 

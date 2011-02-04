@@ -12,21 +12,17 @@ El programa debe tener como entrada un determinado *año*,
 y como salida debe decirnos si el *año* ingresado es o no
 bisiesto.
 
-* Comportamiento
-
-::
+.. code-block:: testcase
 
 	Ingrese un año: 1988
 	True
 
-::
+.. code-block:: testcase
 
 	Ingrese un año: 2010
 	False
 
-* Solución
-
-::
+Solución::
 
     num = int(raw_input("Ingrese un año: "))
     if num % 4 == 0 and num % 100 != 0 or num % 400 == 0:

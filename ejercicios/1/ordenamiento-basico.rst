@@ -6,7 +6,6 @@ determinar la secuencia ordenada
 de tres números ingresados por
 el usuario, de menor a mayor.
 
-* Comportamiento
 
 ::
 

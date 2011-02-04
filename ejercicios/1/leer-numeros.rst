@@ -7,7 +7,6 @@ hasta que se ingrese un número negativo,
 en éste último caso, se debe mostrar un mensaje
 de que el programa terminará.
 
-* Comportamiento
 
 ::
 

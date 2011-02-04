@@ -15,7 +15,6 @@ Al programa se le debe ingresar una cierta
 longitud en centímetros *n*,
 y debe entregar el equivalente de *n* en pulgadas.
 
-* Comportamiento
 
 ::
 

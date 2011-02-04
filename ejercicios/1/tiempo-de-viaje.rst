@@ -14,7 +14,6 @@ total de viaje en formato *HH:MM*.
 El programa deja de pedir tiempos de viaje
 cuando ingresa un 0.
 
-* Comportamiento
 
 ::
 

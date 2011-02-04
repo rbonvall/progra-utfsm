@@ -5,7 +5,6 @@ Realizar un programa que permita determinar
 si un número *n* cualquiera,
 ingresado por el usuario es par o no.
 
-* Comportamiento
 
 ::
 

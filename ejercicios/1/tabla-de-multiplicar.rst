@@ -5,7 +5,6 @@ Realice un programa que reciba un número
 y muestre la tabla de multiplicar del
 1 al 10, de dicho numero.
 
-* Comportamiento
 
 ::
 

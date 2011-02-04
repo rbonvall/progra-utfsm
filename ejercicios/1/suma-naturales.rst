@@ -27,7 +27,6 @@ El programa debe entregar
 el resultado diciendo si *Suma1* y *Suma2*
 son iguales o no.
 
-* Comportamiento
 
 ::
 

@@ -14,7 +14,6 @@ Por definición el valor absoluto cumple lo siguiente:
           \end{array} \right.
 
 
-* Comportamiento
 
 ::
 

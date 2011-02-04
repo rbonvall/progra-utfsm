@@ -7,7 +7,6 @@ invertido a partir de un número
 *n* ingresado por el usuario,
 de tres dígitos.
 
-* Comportamiento
 
 ::
 

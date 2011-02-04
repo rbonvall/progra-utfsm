@@ -19,7 +19,6 @@ La tabla debe considerar todos los números enteros
 en el rango `[a,b]`, donde *a* es el menor elemento
 ingresado (no necesariamente el primero).
 
-* Comportamiento
 
 ::
 

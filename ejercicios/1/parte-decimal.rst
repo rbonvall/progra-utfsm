@@ -5,7 +5,6 @@ Realizar un programa que pueda
 determinar la parte decimal de un
 número *n* ingresado por el usuario.
 
-* Comportamiento
 
 ::
 	

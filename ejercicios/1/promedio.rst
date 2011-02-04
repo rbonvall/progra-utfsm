@@ -5,7 +5,6 @@ Realizar un programa que permita
 determinar el promedio de 4 notas ingresadas
 por el usuario.
 
-* Comportamiento
 
 ::
 

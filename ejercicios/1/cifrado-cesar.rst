@@ -38,23 +38,21 @@ o sea, si por ejemplo se quisiera codificar el número *6789* con 
 cifrado César, *llave=2*, el número quedaría *8901*.
 
 Se pide entonces realizar un programa para poder utilizar el
-*Cifrado César* para cualquier mensaje ingresado,
+cifrado César para cualquier mensaje ingresado,
 ya sean números o un string, requiriendo también
 señalar una *llave* a utilizar.
 
 El programa nos entregará el *mensaje* ingresado,
 de una manera codificada.
 
-* Comportamiento
+.. code-block:: testcase
 
-::
-
-    Ingrese mensaje: abcdef
-    Ingrese llave: 2
+    Ingrese mensaje: `abcdef`
+    Ingrese llave: `2`
     cdefgh
 
-::
+.. code-block:: testcase
 
-    Ingrese mensaje: 9112
-    Ingrese llave: 3
+    Ingrese mensaje: `9112`
+    Ingrese llave: `3`
     2445

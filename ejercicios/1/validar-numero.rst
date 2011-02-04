@@ -8,7 +8,6 @@ El programa termina sólo si el número
 ingresado cumple con la condición, de lo
 contrario se debe volver a pedir el numero.
 
-* Comportamiento
 
 ::
 

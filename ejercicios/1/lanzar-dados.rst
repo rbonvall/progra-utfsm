@@ -6,7 +6,6 @@ todas las combinaciones posibles al momento
 de lanzar dos *dados* (de 6 caras).
 
 
-* Comportamiento
 
 ::
 

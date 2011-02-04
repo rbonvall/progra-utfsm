@@ -11,7 +11,6 @@ el promedio final:
   * si está entre 40 y 54, debe decir *examen*;
   * si es mayor que 54, debe decir *eximido*.
 
-* Comportamiento
 
 ::
 

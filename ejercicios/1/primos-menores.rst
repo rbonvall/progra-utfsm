@@ -5,7 +5,6 @@ Escriba un programa cuya entrada sea un número entero positivo,
 y que muestre todos los números primos que son menores que el
 número ingresado.
 
-* Comportamiento
 
 ::
 

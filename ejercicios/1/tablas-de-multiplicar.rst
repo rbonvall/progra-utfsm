@@ -5,7 +5,6 @@ Realice un programa que sea capaz
 de generar las tablas de multiplicar
 para los números del 1 al 10.
 
-* Comportamiento
 
 ::
 

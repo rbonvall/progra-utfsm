@@ -28,7 +28,6 @@ siguiendo la siguiente regla
 
    Si\ n \geq 0.5:\ cara
 
-* Comportamiento
 
 ::
 

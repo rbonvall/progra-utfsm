@@ -21,7 +21,6 @@ de un string:
    8
 
 
-* Comportamiento
 
 ::
 

@@ -6,7 +6,6 @@ de dígitos en un número *n* cualquiera
 ingresado por el usuario.
 
 
-* Comportamiento
 
 ::
 

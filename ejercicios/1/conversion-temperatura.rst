@@ -13,10 +13,8 @@ La fórmula de conversión es:
 
 .. Por ejemplo, si la entrada es 55, el programa debe entregar el resultado 129.2.
 
-* Comportamiento
+.. code-block:: test-case
 
-::
-
-    Ingrese temperatura en celsius: 55
+    Ingrese temperatura en celsius: `55`
     129.2 grados fahrenheit
 

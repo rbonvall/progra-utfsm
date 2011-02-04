@@ -7,7 +7,6 @@ Al programa se le debe ingresar
 un número *n* cualquiera, y debe
 entregar si es cero o no.
 
-* Comportamiento
 
 ::
 

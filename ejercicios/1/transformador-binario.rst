@@ -15,7 +15,6 @@ forma:
 El programa debe recibir una secuencia *s* en binario,
 y poder entregar el equivalente en decimal de la secuencia *s*.
 
-* Comportamiento
 
 ::
 

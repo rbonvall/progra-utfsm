@@ -20,7 +20,6 @@ los valores de *a*, *b* y *c*,
 y nos debe entregar los resultados
 de la ecuación *x1* y *x2*.
 
-* Comportamiento
 
 ::
 

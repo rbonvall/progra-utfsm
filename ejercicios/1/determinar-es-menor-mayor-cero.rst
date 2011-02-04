@@ -6,7 +6,6 @@ que permita determinar si un número
 *n* cualquiera, es menor que 0, 
 0 o mayor que 0.
 
-* Comportamiento
 
 ::
 

@@ -10,7 +10,6 @@ igresando también, el exponente *b*.
     a^{b}
 
 
-* Comportamiento
 
 ::
 

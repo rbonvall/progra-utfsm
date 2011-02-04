@@ -14,7 +14,6 @@ que reciba un número natural *n*,
 y pueda determinar si *n* es
 o no palíndromo.
 
-* Comportamiento
 
 ::
 

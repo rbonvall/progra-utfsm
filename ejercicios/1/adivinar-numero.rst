@@ -15,17 +15,13 @@ el programa debe decir cuantos intentos
 utilizaste para poder adivinar el número *n*.
 
 Para generar un número aleatorio puede utilizar
-el siguiente código
-
-::
+el siguiente código::
 
    import random
    # guardamos el número aleatorio en n
    n = random.randint(0,100)
 
-* Comportamiento
-
-::
+.. code-block:: testcase
 
    Generando número aletorio...
    Ingrese un número: 45

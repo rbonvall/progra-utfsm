@@ -5,7 +5,6 @@ Desarrollar un programa que permita
 realizar un ciclo que lea 3 números
 ingresados por el usuario.
 
-* Comportamiento
 
 ::
 

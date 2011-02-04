@@ -4,7 +4,6 @@ Determinar pares
 Realizar un programa que determine
 los números *pares* entre 0 y 10.
 
-* Comportamiento
 
 ::
 

@@ -13,7 +13,6 @@ de aquel numero.
 
 Considere todos los números ingresados como enteros positivos mayores a cero.
 
-* Comportamiento
 
 ::
 

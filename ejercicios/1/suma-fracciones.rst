@@ -29,7 +29,6 @@ que contengan la siguiente información:
 El programa debe terminar cuando la fracción decimal sea menor
 o igual a 0.000001.
 
-* Comportamiento
 
 ::
 
