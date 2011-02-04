@@ -27,12 +27,14 @@ que esté completamente bien definido,
 que no tenga ambigüedades,
 y que efectivamente resuelva el problema.
 
-Esto no tiene nada que ver con computadores.
+Así es como la programación no es tanto sobre computadores,
+sino sobre resolver problemas de manera estructurada.
+El objeto de estudio de la programación no son los programas,
+sino los **algoritmos**.
 
 .. index:: algoritmo
 
-Un procedimiento que resuelve un problema
-es llamado un **algoritmo**.
+Un algoritmo es un procedimiento que resuelve un problema.
 
 Todo el mundo conoce y utiliza algoritmos a diario,
 incluso sin darse cuenta:
