@@ -8,7 +8,7 @@ class TestCaseLexer (RegexLexer):
     tokens = {
         'root': [
             (r'[^`]+', Text),
-            (r'`[^`]*`', Comment),
+            (r'`[^`]*`\n', Comment),
         ],
     }
 
