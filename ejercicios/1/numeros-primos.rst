@@ -73,12 +73,23 @@ El número 1 no es ni primo ni compuesto.
    .. _conjetura de Goldbach: http://es.wikipedia.org/wiki/Conjetura_de_Goldbach
 
    Escriba un programa que reciba un número par como entrada
-   y entregue dos números primos cuya suma sea el número ingresado:
+   y muestre todas las maneras en que puede ser escrito como una suma de dos primos:
 
    .. code-block:: testcase
 
       Ingrese número par: `338`
-      338 = 7 + 331
+      7 + 331
+      31 + 307
+      61 + 277
+      67 + 271
+      97 + 241
+      109 + 229
+      127 + 211
+      139 + 199
+      157 + 181
+
+   Muestre sólo una de las maneras de escribir cada suma
+   (por ejemplo, si muestra `61 + 271`, no muestre `271 + 61`).
 
 #. Escriba programas que respondan las siguientes preguntas:
 
