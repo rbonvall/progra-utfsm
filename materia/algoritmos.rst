@@ -170,6 +170,6 @@ El código en Python para resolver la ecuación cuadrática es el siguiente:
 
 .. literalinclude:: programas/cuadratica.py
 
-A partir de ahora, aprenderás a entender, escribir y ejecutar
+A partir de ahora, usted aprenderá a entender, escribir y ejecutar
 códigos como éste.
 
