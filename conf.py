@@ -5,12 +5,14 @@ from glob import glob
 from os.path import abspath
 
 sys.path.insert(0, abspath('.'))
+sys.path.insert(0, abspath('_modules'))
 
 templates_path = ['_templates']
 exclude_patterns = ['_build']
 
 extensions = [
     'sphinx.ext.jsmath',
+    'testcase',
 ]
 
 jsmath_path = 'jsMath/easy/load.js'
