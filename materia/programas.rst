@@ -3,6 +3,8 @@
 Programas
 =========
 
+.. index:: programa, intérprete
+
 Un **programa** es un archivo de texto
 que contiene código para ser ejecutado por el computador.
 
@@ -16,13 +18,74 @@ que tenga la extensión ``.py``.
 En Windows, el programa puede ser ejecutado
 haciendo doble clic sobre el ícono del archivo.
 
+Para probar cómo hacerlo,
+descargue el programa cuadratica.py_
+que sirve para resolver ecuaciones cuadráticas.
+
+.. _cuadratica.py: ../_static/cuadratica.py
+
+Edición de programas
+--------------------
+.. index:: editor de texto
+
+Un programa es un `archivo de texto`_.
+Por lo tanto, puede ser creado y editado
+usando cualquier `editor de texto`_,
+como el Bloc de Notas.
+
+Lo que no se puede usar
+es un procesador de texto,
+como Microsoft Word.
+
+Haga la prueba:
+abra el programa ``cuadratica.py``
+con el Bloc de Notas (u otro editor)
+y verá su contenido.
+
+.. _archivo de texto: http://es.wikipedia.org/wiki/Archivo_de_texto
+.. _editor de texto: http://es.wikipedia.org/wiki/Editor_de_texto
+
+.. index:: editor de texto (lista)
+
+Otros editores de texto
+(mucho mejores que el Bloc de Notas)
+que usted puede instalar son:
+
+* en Windows:
+  `Notepad++ <http://notepad-plus-plus.org/>`_,
+  `Textpad <http://www.textpad.com/>`_;
+* en Mac:
+  `TextWrangler <http://www.barebones.com/products/textwrangler/>`_,
+  `TextMate <http://macromates.com/>`_;
+* en Linux:
+  `Gedit <http://projects.gnome.org/gedit/>`_,
+  `Kate <http://kate-editor.org/>`_.
+
 Instalación del intérprete de Python
 ------------------------------------
-Para poder ejecutar
+.. index:: intérprete (instalación)
 
-El siguiente video muestra cómo instalar
+Una cosa es editar el programa, y otra es ejecutarlo.
+Para poder ejecutar un programa en Python
+hay que instalar el **intérprete**.
+
+En la `página de descargas de Python`_
+está la lista de instaladores.
+Debe descargar el indicado para su computador
+y su sistema operativo.
+
+.. _página de descargas de Python: http://www.python.org/download/
+..
+
+El siguiente video muestra cómo descargar e instalar el intérprete:
 
     [Video]
+
+La versión que debe instalar es la **2.7.1**, no la 3.1.3.
+
+No use los instaladores que dicen ``x86-64``
+a no ser que esté seguro que su computador
+tiene una arquitectura de 64 bits.
 
 Ejecución de un programa
 ------------------------
@@ -31,3 +94,7 @@ Ejecución de un programa
 
 Uso de la consola
 -----------------
+.. index:: intérprete (interactivo), consola
+..
+
+    [Video]
