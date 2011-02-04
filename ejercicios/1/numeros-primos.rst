@@ -60,7 +60,7 @@ El número 1 no es ni primo ni compuesto.
    .. code-block:: testcase
 
       Contar primos menores que: `1000000`
-      Hay   primos menores que 1000000
+      Hay 78498 primos menores que 1000000
 
    En matemáticas, a este valor se le llama `función π`_.
 
