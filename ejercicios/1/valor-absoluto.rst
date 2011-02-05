@@ -1,31 +1,29 @@
-Valor Absoluto
+Valor absoluto
 ---------------
-
-Realizar un programa que pueda determinar el
-valor absoluto de un número ingresado.
+Escriba un programa que muestre el
+valor absoluto de un número real
+ingresado por el usuario.
 
 Por definición el valor absoluto cumple lo siguiente:
 
 .. math::
 
     |x| = \left\{ \begin{array}{rl}
-            -x &\mbox{ if $x<0$} \\
-             x &\mbox{ en otro caso}
+            -x &\text{ si $x<0$} \\
+             x &\text{ si $x\ge 0$}
           \end{array} \right.
 
+.. code-block:: testcase
 
+    Ingrese numero: `67.4`
+    67.4
 
-::
+.. code-block:: testcase
 
-    Ingrese número: 67
-    67
+    Ingrese numero: `-24.1`
+    24.1
 
-::
+.. code-block:: testcase
 
-    Ingrese número: -24
-    24
-
-::
-
-    Ingrese número: 0
+    Ingrese numero: `0`
     0
