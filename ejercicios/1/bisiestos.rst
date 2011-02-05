@@ -1,31 +1,28 @@
-Años Bisiestos
---------------
+Año bisiesto
+------------
 
-Desarrollar un programa que pueda determinar si un año
-es bisiesto o no.
+Escriba un programa que indique si un año
+es bisiesto_ o no:
 
-Recuerde que un año bisiesto es cuando dura 366 días,
-existiendo un día adicional en el mes más corto,
-es decir, el 29 de febrero.
-
-El programa debe tener como entrada un determinado *año*,
-y como salida debe decirnos si el *año* ingresado es o no
-bisiesto.
+.. _bisiesto: http://es.wikipedia.org/wiki/A%C3%B1o_bisiesto
 
 .. code-block:: testcase
 
-	Ingrese un año: 1988
-	True
+	Ingrese un anno: `1988`
+	1988 es bisiesto
 
 .. code-block:: testcase
 
-	Ingrese un año: 2010
-	False
+	Ingrese un anno: `2011`
+        2011 no es bisiesto
 
-Solución::
+.. code-block:: testcase
 
-    num = int(raw_input("Ingrese un año: "))
-    if num % 4 == 0 and num % 100 != 0 or num % 400 == 0:
-        print True
-    else:
-        print False
+	Ingrese un anno: `1700`
+        1700 no es bisiesto
+
+.. code-block:: testcase
+
+	Ingrese un anno: `2400`
+        2400 es bisiesto
+
