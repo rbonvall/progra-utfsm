@@ -5,6 +5,10 @@ Programas simples
 -----------------
 .. toctree::
 
+    saludo
+    circulos
+    pitagoras
+    parte-decimal
     tiempo-de-viaje
     huevos-a-la-copa
 
@@ -13,6 +17,8 @@ Estructuras condicionales
 .. toctree::
 
     valor-absoluto
+    bisiestos
+    ordenamiento-basico
     calculadora
     set-de-tenis
 
@@ -28,7 +34,11 @@ Patrones comunes
 ----------------
 .. toctree::
 
+    no-multiplos
     contar-combinaciones-dados
+    histograma
+    piezas-domino
+    factorial
     lanzar-dados
 
 Diseño de algoritmos
@@ -39,6 +49,7 @@ Diseño de algoritmos
     rol
     numeros-primos
     el-mejor-numero
+    adivinar-numero
 
 Desafíos
 --------
@@ -48,10 +59,7 @@ Sin clasificar aún
 ------------------
 .. toctree::
 
-    adivinar-numero
-    bisiestos
     cifrado-cesar
-    circulos
     conversion-temperatura
     conversion-unidades-longitud
     cuadrado-cubo-secuencia
@@ -62,8 +70,6 @@ Sin clasificar aún
     ecuacion-cuadratica
     es-fibonacci
     es-numero-palindromo
-    factorial
-    histograma
     lanzando-monedas
     largo-corto
     leer-numero
@@ -71,7 +77,6 @@ Sin clasificar aún
     leer-tres-numeros
     letra-o-numero
     multiplicacion-rusa
-    no-multiplos
     notas
     numero-deleitable
     numero-fibonacci
@@ -79,14 +84,9 @@ Sin clasificar aún
     numero-mayor
     numeros-amistosos
     numeros-combinatorios
-    ordenamiento-basico
-    parte-decimal
-    piezas-domino
-    pitagoras
     potencia
     promedio
     que-nota-necesito
-    saludo
     situacion-ramo
     suma-digitos-cubo
     suma-fracciones
