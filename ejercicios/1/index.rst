@@ -5,6 +5,7 @@ Programas simples
 -----------------
 .. toctree::
 
+    tiempo-de-viaje
     huevos-a-la-copa
 
 Estructuras condicionales
@@ -92,7 +93,6 @@ Sin clasificar aún
     suma-naturales
     suma-tres-cubos
     tabla-valores
-    tiempo-de-viaje
     transformador-binario
     triangulo-pascal
     validar-numero
