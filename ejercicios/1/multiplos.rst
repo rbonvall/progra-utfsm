@@ -1,5 +1,5 @@
-Tabla de multiplicar
---------------------
+Múltiplos
+---------
 
 Escriba un programa que
 muestre la tabla de multiplicar del 1 al 10
@@ -7,7 +7,7 @@ del número ingresado por el usuario:
 
 .. code-block:: testcase
 
-    Ingrese Numero: `9`
+    Ingrese un numero: `9`
     9 x 1 = 9
     9 x 2 = 18
     9 x 3 = 27
