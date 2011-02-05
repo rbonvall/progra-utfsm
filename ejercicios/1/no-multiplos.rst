@@ -1,13 +1,12 @@
 No múltiplos
 ------------
 
-Realizar un programa determine los números naturales menores o iguales
-de un número *n* determinado, que no sean múltiplos ni de *3* ni de *7*.
- 
+Escriba un programa que muestre los números naturales menores o iguales
+que un número `n` determinado, que no sean múltiplos ni de 3 ni de 7.
 
-::
+.. code-block:: testcase
 
-    Ingrese número: 24
+    Ingrese número: `24`
     1
     2
     4
