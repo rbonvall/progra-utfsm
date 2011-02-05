@@ -37,6 +37,7 @@ Patrones comunes
     no-multiplos
     contar-combinaciones-dados
     histograma
+    largo-corto
     piezas-domino
     factorial
     lanzar-dados
@@ -71,7 +72,6 @@ Sin clasificar aún
     es-fibonacci
     es-numero-palindromo
     lanzando-monedas
-    largo-corto
     leer-numero
     leer-numeros
     leer-tres-numeros
