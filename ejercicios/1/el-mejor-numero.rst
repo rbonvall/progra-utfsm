@@ -11,7 +11,7 @@ En binario_, 73 es un palíndromo: 1001001.
 Escriba programas que le permitan responder las siguientes preguntas:
 
 #. ¿Existen otros valores `p` que sean el `n`-ésimo primo,
-   tales que `\text{espejo}(p)` sean el `\text{espejo}(n)`-ésimo primo?
+   tales que `\text{espejo}(p)` es el `\text{espejo}(n)`-ésimo primo?
 
 #. ¿Existen otros valores `p` que sean el `n`-ésimo primo,
    tales que `n` es el producto de los dígitos de `p`?
