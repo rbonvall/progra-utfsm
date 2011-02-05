@@ -1,13 +1,11 @@
 Lanzar dados
 ------------
 
-Escriba un programa que sea capaz de mostrar
+Escriba un programa que muestre
 todas las combinaciones posibles al momento
-de lanzar dos *dados* (de 6 caras).
+de lanzar dos dados de 6 caras:
 
-
-
-::
+.. code-block:: testcase
 
    1 1
    1 2
@@ -50,3 +48,4 @@ de lanzar dos *dados* (de 6 caras).
    6 4
    6 5
    6 6
+

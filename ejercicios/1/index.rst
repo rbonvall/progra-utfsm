@@ -28,6 +28,7 @@ Patrones comunes
 .. toctree::
 
     contar-combinaciones-dados
+    lanzar-dados
 
 Diseño de algoritmos
 --------------------
@@ -63,7 +64,6 @@ Sin clasificar aún
     factorial
     histograma
     lanzando-monedas
-    lanzar-dados
     largo-corto
     leer-numero
     leer-numeros
