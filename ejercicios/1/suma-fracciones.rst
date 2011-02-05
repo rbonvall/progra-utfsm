@@ -1,4 +1,4 @@
-Suma de Fracciones
+Suma de fracciones
 ------------------
 
 Desarrolle un programa que permita trabajar
@@ -14,12 +14,10 @@ en forma decimal:
 
    0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, \ldots
 
-El programa debe mostrar 3 columnas de información
-que contengan la siguiente información:
+El programa debe mostrar 3 columnas
+que contengan la siguiente información::
 
-::
-
-      Potencia  Fracción  Suma 
+      Potencia  Fraccion  Suma 
       1         0.5       0.5 
       2         0.25      0.75 
       3         0.125     0.875 
@@ -27,10 +25,7 @@ que contengan la siguiente información:
       ...       ...       ... 
 
 El programa debe terminar cuando la fracción decimal sea menor
-o igual a 0.000001.
-
-
-::
+o igual a 0.000001::
 
    1 0.5                0.5
    2 0.25               0.75
@@ -51,3 +46,4 @@ o igual a 0.000001.
    17 7.62939453125e-06 0.999992370605
    18 3.81469726562e-06 0.999996185303
    19 1.90734863281e-06 0.999998092651
+
