@@ -34,6 +34,7 @@ Diseño de algoritmos
 .. toctree::
 
     digitos
+    rol
     numeros-primos
     el-mejor-numero
 
@@ -84,7 +85,6 @@ Sin clasificar aún
     potencia
     promedio
     que-nota-necesito
-    rol
     saludo
     situacion-ramo
     suma-digitos-cubo
