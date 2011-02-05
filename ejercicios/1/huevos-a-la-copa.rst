@@ -37,11 +37,12 @@ donde `M` es la masa del huevo,
 `c` su capacidad calorífica específica
 y `K` su conductividad térmica.
 Algunos valores típicos son:
-`M = 47\,[\text{g}]` para un huevo pequeño y
-`M = 67\,[\text{g}]` para uno grande,
-`\rho = 1.038\,[\text{g}\,\text{cm}^{-3}]`,
-`c = 3.7\,[\text{J}\,\text{g}^{-1} \text{K}^{-1}]` y
-`K = 5.4\cdot 10^{-3}\,[\text{W}\,\text{cm}^{-1} \text{K}^{-1}`].
+
+* `M = 47\,[\text{g}]` para un huevo pequeño y
+  `M = 67\,[\text{g}]` para uno grande,
+* `\rho = 1.038\,[\text{g}\,\text{cm}^{-3}]`,
+* `c = 3.7\,[\text{J}\,\text{g}^{-1} \text{K}^{-1}]`, y
+* `K = 5.4\cdot 10^{-3}\,[\text{W}\,\text{cm}^{-1} \text{K}^{-1}`].
 
 `T_w` es la temperatura de ebullición del agua
 y `T_o` la temperatura original del huevo
