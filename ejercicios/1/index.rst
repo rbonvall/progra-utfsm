@@ -37,7 +37,7 @@ Patrones comunes
     no-multiplos
     contar-combinaciones-dados
     histograma
-    largo-corto
+    larga-corta
     piezas-domino
     factorial
     lanzar-dados
