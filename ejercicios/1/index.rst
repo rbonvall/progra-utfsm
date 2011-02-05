@@ -33,6 +33,7 @@ Diseño de algoritmos
 --------------------
 .. toctree::
 
+    digitos
     numeros-primos
     el-mejor-numero
 
@@ -55,7 +56,6 @@ Sin clasificar aún
     determinar-es-menor-mayor-cero
     determinar-pares-entre-1y10
     determinar-par
-    digitos
     ecuacion-cuadratica
     es-fibonacci
     es-numero-palindromo
