@@ -14,7 +14,7 @@ cómo llegar desde el inicio hasta el final.
 
 Un algoritmo tiene tres componentes:
 
-.. index:: entrada, proceso, salida
+.. index:: entrada (algoritmo), proceso, salida (algoritmo)
 
 1. la **entrada**: son los datos que necesita un algoritmo
    para poder ser ejecutado;
