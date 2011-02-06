@@ -39,50 +39,11 @@ y entrega como resultado el equivalente en grados Celsius:
 .. literalinclude:: ../_static/programas/temperatura.py
    :lines: 1-3
 
-Descargue el programa `temperatura.py`_
-y pruébelo para cerciorarse que funciona.
+Descargue_ el programa
+y ejecútelo para convencerse de que funciona correctamente.
 
-.. _temperatura.py: ../_static/programas/temperatura.py
+.. _Descargue: ../_static/programas/temperatura.py
 
-
-Salida
-------
-.. index:: print, salida
-
-En Python, la salida del programa es realizada
-por la sentencia **print** (*imprimir* en inglés).
-Cada vez que aparece una sentencia ``print`` en el programa,
-algún texto es escrito en la pantalla del computador.
-
-Si se desea imprimir un texto tal cual,
-la sintaxis es la siguente::
-
-    print valor_a_imprimir
-
-Si los valores a imprimir son varios,
-deben ser puestos separados por comas.
-
-Por ejemplo,
-el programa de conversión de temperaturas
-tiene la siguiente sentencia de salida::
-
-    print 'El equivalente en Celsius es:', c
-
-En este caso,
-el mensaje entre comillas es mostrado tal cual aparece,
-mientras que el valor ``c`` impreso a continuación
-es el que tiene esa variable 
-por lo que representa un mensaje que es impreso tal cual aparece.
-
-Otra sentencia de salida que aparece en el programa es::
-
-    print 'La solucion unica es x =', x
-
-En este caso,
-``x`` es una variable,
-y el valor impreso será el valor que tiene
-al momento de ejecutar la sentencia,
-como veremos a continuación.
 
 Expresiones y variables
 -----------------------
@@ -155,10 +116,12 @@ A continuación, la variable ``i`` toma el nuevo valor.
 Por ejemplo, si ``i`` tiene el valor 15,
 después de la asignación tendrá el valor 16.
 
-Esto *no* significa que 15 = 16.
-Una asignación no es una igualdad matemática o una ecuación.
+Esto no significa que `15 = 16`.
+Una asignación no es una igualdad matemática ni una ecuación.
 
-Por ejemplo, las siguientes asignaciones son correctas::
+Por ejemplo, las siguientes asignaciones son correctas,
+suponiendo que las variables que aparecen en ellas
+ya fueron asignadas previamente::
 
     nombre = 'Perico Los Palotes'
     discriminante = b ** 2 - 4 * a * c
@@ -172,12 +135,123 @@ Por ejemplo, las siguientes asignaciones son correctas::
     r = 2 * abs(x - x0)
     nombre = raw_input('Ingrese su nombre')
 
-Todas las siguientes asignaciones tienen errores
-(tarea: indíquelos)::
+Las siguientes no son asignaciones válidas,
+pues no respetan la sintaxis ``nombre = expresión``
+(tarea: identifique los errores)::
 
     n + 1 = 5
     7 = a
     2_pi_r = 2 * pi * r
     area del circulo = pi * r ** 2
     x ** 2 = x * x
+
+Entrada
+-------
+.. index:: entrada (programa)
+
+La **entrada** es la parte del programa
+en que el usuario ingresa datos.
+
+.. index:: raw_input
+
+La manera más simple de ingresar datos
+es hacerlo a través del teclado.
+La función ``raw_input(mensaje)``
+pide al usuario ingresar un valor,
+que puede ser asignado a una variable
+para ser usado por el programa.
+El ``mensaje`` es lo que se mostrará al usuario
+antes de que él ingrese el valor.
+
+El valor ingresado por el usuario
+siempre es interpretado como texto,
+por lo que es de tipo ``str``.
+Si es necesario usarlo como si fuera de otro tipo,
+hay que convertirlo explícitamente.
+
+Por ejemplo,
+en el programa de conversión de temperaturas,
+la entrada es realizada por la sentencia::
+
+    f = float(raw_input('Ingrese temperatura en Fahrenheit: '))
+
+Cuando el programa llega a esta línea,
+el mensaje ``Ingrese temperatura en Fahrenheit:``
+es mostardo al usuario,
+que entonces debe ingresar un valor,
+que es convertido a un número real
+y asociado al nombre ``f``.
+
+Desde esa línea en adelante,
+la variable ``f`` puede ser usada en el programa
+para referirse al valor ingresado.
+
+Salida
+------
+.. index:: salida (programa)
+
+La **salida** es la parte del programa
+en que los resultados son entregados al usuario.
+
+.. index:: print
+
+La manera más simple de entregar la salida
+es mostrando texto en la pantalla.
+En Python, la salida del programa es realizada
+por la sentencia **print** (*imprimir* en inglés).
+
+Si se desea imprimir un texto tal cual,
+la sintaxis es la siguente::
+
+    print valor_a_imprimir
+
+Si los valores a imprimir son varios,
+deben ser puestos separados por comas.
+Por ejemplo,
+el programa de conversión de temperaturas
+tiene la siguiente sentencia de salida::
+
+    print 'El equivalente en Celsius es:', c
+
+En este caso,
+se está imprimiendo el mensaje ``El equivalente en Celsius es:``
+y a continuación, en la misma línea,
+el valor de la variable ``c``.
+
+Otra sentencia de salida que aparece en el programa es::
+
+    print 'La solucion unica es x =', x
+
+Las comillas sólo sirven para representar un string en el código.
+Cuando un string es impreso usando ``print``,
+las comillas no aparecen::
+
+    >>> 'Hola'
+    'Hola'
+    >>> print 'Hola'
+    Hola
+
+Comentarios
+-----------
+.. index:: comentario, #
+
+Un **comentario** es una sección del código
+que es ignorada por el intérprete.
+Un comentario puede ser utilizado por el programador
+para dejar un mensaje en el código
+que puede ser útil para alguien que tenga que leerlo en el futuro.
+
+En Python,
+cualquier texto que aparezca a la derecha de un signo ``#``
+es un comentario::
+
+    >>> 2 + 3  # Esto es una suma
+    5
+    >>> # Esto es ignorado
+    >>>
+
+La excepción son los signos ``#`` que aparecen en un string::
+
+    >>> "123 # 456" # 789
+    '123 # 456'
 
