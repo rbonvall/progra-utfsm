@@ -53,6 +53,7 @@ Diseño de algoritmos
     numeros-primos
     el-mejor-numero
     adivinar-numero
+    multiplicacion-rusa
 
 Desafíos
 --------
@@ -76,7 +77,6 @@ Sin clasificar aún
     leer-numeros
     leer-tres-numeros
     letra-o-numero
-    multiplicacion-rusa
     notas
     numero-deleitable
     numero-fibonacci
