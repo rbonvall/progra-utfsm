@@ -21,6 +21,7 @@ Estructuras condicionales
     ordenamiento-basico
     calculadora
     set-de-tenis
+    triangulos.
 
 Ciclos
 ------
