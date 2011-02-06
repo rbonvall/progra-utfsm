@@ -7,8 +7,8 @@ Materia
     algoritmos
     programas
     tipos
-    expresiones
     programas-simples
+    expresiones
     condicionales
     ciclos
     patrones
