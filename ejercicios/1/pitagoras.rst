@@ -5,7 +5,7 @@ Escriba un programa que reciba como entrada
 las longitudes de los dos catetos `a` y `b` de un triángulo rectángulo,
 y que entregue como salida
 el largo de la hipotenusa `c` del triangulo,
-ocupando el `teorema de Pitágoras`:
+ocupando el `teorema de Pitágoras`_:
 
 .. math::
 
