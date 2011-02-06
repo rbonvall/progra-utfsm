@@ -87,7 +87,9 @@ tiene una arquitectura de 64 bits
 
 Ejecución de un programa
 ------------------------
-Una vez escrito el programa e instalado el intérprete
+Una vez escrito el programa e instalado el intérprete,
+es posible ejecutar los programas.
+El siguiente video muestra cómo hacerlo:
 
     [Video]
 
@@ -105,7 +107,7 @@ Además,
 sirve para evaluar expresiones y ver su resultado inmediatamente.
 Esto permite usarla como si fuera una calculadora.
 
-El siguiente video muestra cómo usar el intérprete interactivo.
+El siguiente video muestra cómo usar el intérprete interactivo:
 
     [Video]
 
@@ -126,6 +128,11 @@ y no en un programa. Por ejemplo::
 
 En este ejemplo, al ingresar las expresiones ``a > 10`` y ``a ** 2``,
 el intérprete interactivo entrega los resultados ``False`` y ``25``.
+
+No hay ningún motivo para tipear el símbolo ``>>>``
+ni en un programa ni en un certamen,
+pues no es parte de la sintaxis del lenguaje.
+
 
 Entornos de desarollo
 ---------------------
