@@ -48,6 +48,7 @@ Diseño de algoritmos
 
     digitos
     rol
+    caballo-de-ajedrez
     numeros-primos
     el-mejor-numero
     adivinar-numero
