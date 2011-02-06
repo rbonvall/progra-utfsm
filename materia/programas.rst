@@ -87,6 +87,7 @@ tiene una arquitectura de 64 bits
 
 Ejecución de un programa
 ------------------------
+Una vez escrito el programa e instalado el intérprete
 
     [Video]
 
@@ -99,9 +100,32 @@ no es la única manera de ejecutar el intérprete.
 Si uno ejecuta Python sin pasarle ningún programa,
 se abre la **consola** (o **intérprete interactivo**).
 
+La consola permite ingresar un programa línea por línea.
+Además,
+sirve para evaluar expresiones y ver su resultado inmediatamente.
+Esto permite usarla como si fuera una calculadora.
+
 El siguiente video muestra cómo usar el intérprete interactivo.
 
     [Video]
+
+La consola interactiva
+siempre muestra el símbolo ``>>>``,
+para indicar que ahí se puede ingresar código.
+En todos los libros sobre Python,
+y a lo largo de este apunte,
+cada vez que aparezca un ejemplo en el que aparezca este símbolo,
+significa que debe ejecutarse en la consola,
+y no en un programa. Por ejemplo::
+
+    >>> a = 5
+    >>> a > 10
+    False
+    >>> a ** 2
+    25
+
+En este ejemplo, al ingresar las expresiones ``a > 10`` y ``a ** 2``,
+el intérprete interactivo entrega los resultados ``False`` y ``25``.
 
 Entornos de desarollo
 ---------------------
