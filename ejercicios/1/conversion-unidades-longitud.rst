@@ -1,27 +1,15 @@
-Conversión de Unidades de longitud
+Conversión de unidades de longitud
 ----------------------------------
 
-Realizar un programa que permita transformar
-unidades de *centímetro* a *pulgadas*.
+Escriba un programa que convierta de centímetros a pulgadas.
+Una pulgada es igual a 2.54 centímetros.
 
-Recuerde que:
+.. code-block:: testcase
 
-.. math::
+    Ingrese longitud: `45`
+    45 cm = 17.7165 in
 
-    1 pulgada =	2.54 centímetros
-    
+.. code-block:: testcase
 
-Al programa se le debe ingresar una cierta
-longitud en centímetros *n*,
-y debe entregar el equivalente de *n* en pulgadas.
-
-
-::
-
-    Ingrese longitud: 45
-    17.7165
-
-::
-
-    Ingrese longitud: 13
-    5.1181
+    Ingrese longitud: `13`
+    13 cm = 5.1181 in
