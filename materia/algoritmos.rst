@@ -57,8 +57,15 @@ El problema computacional de resolver una ecuación cuadrática
 puede ser planteado así:
 
   Dados `a`, `b` y `c`,
-  entontrar los valores de `x`
+  entontrar los valores reales de `x`
   que satisfacen `ax^2 + bx + c = 0`.
+
+La entrada del algoritmo, pues, son los valores `a`, `b` y `c`,
+y la salida son las raíces reales `x`
+(que pueden ser cero, una o dos) de la ecuación.
+En un programa computacional,
+los valores de `a`, `b` y `c` deberían ser ingresados usando el teclado,
+y las soluciones `x` deberían ser mostradas a continuación en la pantalla.
 
 Al estudiar álgebra aprendemos un algoritmo para resolver este problema.
 Es lo suficientemente detallado para que pueda usarlo cualquier persona,
@@ -74,7 +81,7 @@ en la misma manera en que hablamos a diario.
 Por ejemplo:
 
     Teniendo los valores de `a`, `b` y `c`,
-    calcular el discriminante `b^2 - 4ac`.
+    calcular el discriminante `D = b^2 - 4ac`.
     Si es discriminante es negativo, entonces la ecuación no tiene soluciones
     reales. Si es discriminante es igual a cero, entonces la ecuación tiene una
     única solución real, que es `x = -b/2a`. Si el discriminante es positivo,
@@ -86,6 +93,16 @@ Esta manera de expresar un algoritmo no es ideal, ya que el lenguaje natural es:
 * impreciso: puede tener ambigüedades;
 * no universal: personas distintas describirán el proceso de maneras distintas; y
 * no estructurado: la descripción no está expresada en función de componentes simples.
+
+Aún así, es posible identificar los pasos del algoritmo.
+Por ejemplo,
+hay que evaluar la expresión `b^2 - 4ac`,
+y ponerle el nombre `D` a su resultado.
+Esto se llama **asignación**,
+y es un tipo de instrucción que aparece en casi todos los algoritmos.
+Después de eso,
+el algoritmo puede usar el nombre `D`
+para referirse al valor calculado.
 
 Diagrama de flujo
 ~~~~~~~~~~~~~~~~~
@@ -112,9 +129,13 @@ dependiendo si la condición es verdadera o falsa.
 También puede haber ciclos,
 representados por flechas
 que regresan a bloques anteriores.
+En este ejemplo, no hay ciclos.
 
 Otras sentencias van dentro de rectángulos,
 que en la figura están pintados de azul.
+En este ejemplo,
+las sentencias son asignaciones,
+representadas en la forma ``nombre = valor``.
 
 Los diagramas de flujo no son usados en la práctica para programar,
 pero son útiles para ilustrar cómo funcionan algoritmos sencillos.
@@ -135,18 +156,34 @@ en pseudocódigo es la siguiente:
     leer b
     leer c
 
-    discriminante ← b² - 4ac
+    discriminante = b² - 4ac
+
     si discriminante < 0:
         escribir 'La ecuación no tiene soluciones reales'
-    o si no, si discriminante == 0:
-        x ← -b / 2a
+
+    o si no, si discriminante = 0:
+        x = -b / 2a
         escribir 'La solución única es', x
+
     o si no:
-        x1 ← (-b - √discriminante) / 2a
-        x2 ← (-b + √discriminante) / 2a
+        x1 = (-b - √discriminante) / 2a
+        x2 = (-b + √discriminante) / 2a
         escribir 'Las dos soluciones reales son:'
         escribir x1
         escribir x2
+
+Las líneas que comienzan con ``leer`` y ``escribir`` denotan,
+respectivamente, la entrada y la salida del programa.
+Los diferentes casos son representados usando sentencias
+``si`` y ``o si no``.
+Las asignaciones siguen la misma notación que en el caso
+de los diagramas de flujo.
+
+La notación de pseudocódigo es bien liberal.
+Uno puede mezclar notación de matemáticas con frases en español,
+siempre que quede absolutamente claro para el lector
+qué representa cada una de las líneas del algoritmo.
+
 
 Código
 ~~~~~~
