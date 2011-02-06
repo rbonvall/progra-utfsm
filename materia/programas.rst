@@ -1,7 +1,7 @@
 .. _programas:
 
-Programas
-=========
+Desarrollo de programas
+=======================
 
 .. index:: programa, intérprete
 
@@ -61,6 +61,7 @@ que usted puede instalar son:
   `Gedit <http://projects.gnome.org/gedit/>`_,
   `Kate <http://kate-editor.org/>`_.
 
+
 Instalación del intérprete de Python
 ------------------------------------
 .. index:: intérprete (instalación)
@@ -77,15 +78,12 @@ y su sistema operativo.
 .. _página de descargas de Python: http://www.python.org/download/
 ..
 
-El siguiente video muestra cómo descargar e instalar el intérprete:
-
-    [Video]
-
 La versión que debe instalar es la **2.7.1**, no la 3.1.3.
 
 No use los instaladores que dicen ``x86-64``
 a no ser que esté seguro que su computador
-tiene una arquitectura de 64 bits.
+tiene una arquitectura de 64 bits
+(lo más probable es que no sea así).
 
 Ejecución de un programa
 ------------------------
@@ -95,6 +93,37 @@ Ejecución de un programa
 Uso de la consola
 -----------------
 .. index:: intérprete (interactivo), consola
-..
+
+La ejecución de programas
+no es la única manera de ejecutar el intérprete.
+Si uno ejecuta Python sin pasarle ningún programa,
+se abre la **consola** (o **intérprete interactivo**).
+
+El siguiente video muestra cómo usar el intérprete interactivo.
 
     [Video]
+
+Entornos de desarollo
+---------------------
+.. index:: entorno de desarrollo, IDE
+
+En general,
+usar un simple editor de texto para escribir programas
+no es la manera más eficiente de trabajar.
+
+Los **entornos de desarrollo** (en inglés, *IDE*)
+son aplicaciones que hacen más fácil la tarea
+de escribir programas.
+
+Python viene con su propio entorno de desarrollo llamado **IDLE**.
+El siguiente video muestra cómo usar IDLE para desarrollar un programa
+y para usar la consola interactiva:
+
+    [Video]
+
+Otros buenos entornos de desarrollo más avanzados para Python son:
+
+* `PyScripter <http://code.google.com/p/pyscripter/downloads/list>`_,
+* `WingIDE 101 <http://www.wingware.com/downloads/wingide-101/3.2.12-1/binaries>`_
+
+Usted puede probar éstos y usar el que más le acomode durante el semestre.
