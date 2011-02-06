@@ -49,7 +49,120 @@ y sus operandos son ``2.0`` y ``x``.
 
 Los principales operadores se pueden clasificar en:
 lógicos, aritméticos y relacionales.
-Hay otros más que veremos más adelante.
+
+Operadores aritméticos
+~~~~~~~~~~~~~~~~~~~~~~
+.. index:: operador aritmético
+
+Los **operadores aritméticos** son los que representan operaciones numéricas.
+Tanto sus operandos como sus resultados son valores numéricos.
+
+.. index:: + (binario), - (binario), /, //, %, ** , *
+.. index:: suma, resta, multiplicación, división, módulo, potencia
+
+Algunos operadores aritméticos binarios son:
+
+* la **suma** ``+``;
+* la **resta** ``-``;
+* la **multiplicación** ``*``;
+* la **división** ``/``;
+* el **módulo** ``%`` (resto de la división);
+* la **potencia** ``**`` («elevado a»).
+
+En general,
+si los operandos son de tipo entero,
+el resultado también será de tipo entero.
+Pero basta que uno de los operandos sea real
+para que el resultado también lo sea::
+
+    >>> 8 - 5
+    3
+    >>> 8 - 5.0
+    3.0
+    >>> 8.0 - 5.0
+    3.0
+
+Esta regla suele causar confusión en el caso de la división.
+Al dividir números enteros,
+el resultado siempre es entero,
+y es igual al resultado real **truncado**,
+es decir, sin su parte decimal::
+
+    >>> 5 / 2
+    2
+    >>> 5 / -2
+    -3
+
+El operador de módulo entrega el resto de la división
+entre sus operandos::
+
+    >>> 7 % 3
+    1
+
+Una relación entre ``/`` y ``%`` que siempre se cumple
+para los números enteros es::
+
+    (a // b) * b + (a % b) == a
+
+.. index:: + (unario), - (unario), positivo, negativo
+
+Hay dos operadores aritméticos unarios:
+
+* el **positivo** ``+``, y
+* el **negativo** ``-``.
+
+El positivo entrega el mismo valor que su operando,
+y el negativo también pero con el signo cambiado::
+
+    >>> n = -4
+    >>> +n
+    -4
+    >>> -n
+    4
+
+Operadores relacionales
+~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: operador relacional, comparación
+
+Los **operadores relacionales** son los que permiten comparar valores.
+Sus operandos son cualquier cosa que pueda ser comparada,
+y sus resultados siempre son valores lógicos.
+
+Algunos operadores relacionales son:
+
+* el **igual a** ``==`` (no confundir con el ``=`` de las asignaciones);
+* el **distinto a** ``!=``;
+* el **mayor que** ``>``;
+* el **mayor o igual que** ``>=``;
+* el **menor que** ``<``;
+* el **menor o igual que** ``<=``;
+
+Algunos ejemplos en la consola interactiva::
+
+    >>> a = 5
+    >>> b = 9
+    >>> c = 14
+    >>> a < b
+    True
+    >>> a + b != c
+    False
+    >>> 2.0 == 2
+    True
+    >>> 'amarillo' < 'negro'
+    True
+
+Los operadores relacionales pueden ser encadenados,
+como se usa en matemáticas,
+de la siguiente manera::
+
+    >>> x = 4
+    >>> 0 < x <= 10
+    True
+    >>> 5 <= x <= 20
+    False
+
+La expresión ``0 < x <= 10``
+es equivalente a ``(0 < x) and (x <= 10)``
 
 Operadores lógicos
 ~~~~~~~~~~~~~~~~~~
@@ -85,91 +198,33 @@ y las siguientes tres, los resultados de las operaciones.
 ``False`` ``False`` ``False``   ``False``
 ========= ========= =========== ========== =========
 
+Operadores de texto
+~~~~~~~~~~~~~~~~~~~
+Los operadores ``+`` y ``*`` tienen otras interpretaciones
+cuando sus operandos son strings.
 
-Operadores aritméticos
-~~~~~~~~~~~~~~~~~~~~~~
-.. index:: operador aritmético
+``+`` es el operador de **concatenación** de strings:
+pega dos strings uno después del otro::
 
-Los **operadores aritméticos** son los que representan operaciones numéricas.
-Tanto sus operandos como sus resultados son valores numéricos.
+    >>> 'perro' + 'gato'
+    'perrogato'
 
-.. index:: + (binario), - (binario), /, //, %, ** , *
+La concatenación no es una suma.
+Ni siquiera es una operación conmutativa.
 
-Algunos operadores aritméticos binarios son:
+``*`` es el operador de **repetición** de strings.
+Recibe un operando string y otro entero,
+y entrega como resultado el string repetido tantas veces como indica el entero::
 
-* la **suma** ``+``;
-* la **resta** ``-``;
-* la **multiplicación** ``*``;
-* la **división real** ``/``;
-* la **división entera** ``//`` (cuociente de la división);
-* el **módulo** ``%`` (resto de la división);
-* la **potencia** ``**`` («elevado a»).
-
-Las divisiones y el módulo suelen causar confusión.
-Algunos ejemplos que pueden dejarlos más claro::
-
-    >>> 17 / 3
-    5.666666666666667
-    >>> 17 // 3
-    5
-    >>> 17 % 3
-    2
-
-Una relación entre ``//`` y ``%`` que siempre se cumple es::
-
-    (a // b) * b + (a % b) == a
-
-.. index:: + (unario), - (unario), positivo, negativo
-
-Además,
-hay dos operadores aritméticos unarios:
-
-* el **positivo** ``+``, y
-* el **negativo** ``-``.
-
-El positivo mantiene el signo de un valor,
-y el negativo lo cambia::
-
-    >>> n = -4
-    >>> +n
-    -4
-    >>> -n
-    4
-
-
-Operadores relacionales
-~~~~~~~~~~~~~~~~~~~~~~~
-.. index:: operador relacional, comparación
-
-Los **operadores relacionales** son los que permiten comparar valores.
-Sus operandos son cualquier cosa que pueda ser comparada,
-y sus resultados siempre son valores lógicos.
-
-Algunos operadores relacionales son:
-
-* el **igual a** ``==`` (no confundir con el ``=`` de las asignaciones);
-* el **distinto a** ``!=``;
-* el **mayor que** ``>``;
-* el **mayor o igual que** ``>=``;
-* el **menor que** ``<``;
-* el **menor o igual que** ``<=``;
-
-Los operadores relacionales pueden ser encadenados,
-como se usa en matemáticas,
-de la siguiente manera::
-
-    0 < x <= 10
-
-Esta expresión es equivalente a::
-
-    0 < x and <= 10
+    >>> 'waka' * 2
+    'wakawaka'
 
 Precedencia
 -----------
 .. index:: precedencia de operadores, paréntesis
 
 La **precedencia de operadores**
-es una regla que especifica
+es un conjunto de reglas que especifica
 en qué orden deben ser evaluadas
 las operaciones de una expresión.
 
@@ -197,11 +252,14 @@ y que las comparaciones se evalúan antes que las operaciones lógicas::
 
 Operaciones dentro de un mismo nivel
 son evaluadas en el orden en que aparecen en la expresión,
-de izquierda a derecha.  La única excepción son las potencias,
-que son evaluadas de derecha a izquierda::
+de izquierda a derecha::
 
     >>> 15 * 12 % 7    # es igual a (15 * 12) % 7
     5
+
+La única excepción a la regla anterior son las potencias,
+que son evaluadas de derecha a izquierda::
+
     >>> 2 ** 3 ** 2    # es igual a 2 ** (3 ** 2)
     512
 
@@ -215,39 +273,46 @@ debe usarse paréntesis::
     >>> (2 ** 3) ** 2
     64
 
-Por ejemplo, consideremos la siguiente expresión::
+Otra manera de forzar el orden
+es ir guardando los resultados intermedios en variables::
 
-    15 + 59 * 75 // 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
+    >>> n = 12 % 7
+    >>> 15 * n
+    75
+
+Como ejemplo, consideremos la siguiente expresión::
+
+    15 + 59 * 75 / 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
 
 y supongamos que la variable ``n`` tiene el valor 2.
 Aquí podemos ver cómo la expresión es evaluada
-hasta llegar al resultado final::
+hasta llegar al resultado final, que es ``False``::
 
-    15 + 59 * 75 // 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
-    #                          ↓
-    15 + 59 * 75 // 9 < 2 **   9    and (15 + 59) * 75 % n == 1
-    #                     ↓
-    15 + 59 * 75 // 9 < 512         and (15 + 59) * 75 % n == 1
+    15 + 59 * 75 / 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
+    #                         ↓
+    15 + 59 * 75 / 9 < 2 **   9    and (15 + 59) * 75 % n == 1
+    #                    ↓
+    15 + 59 * 75 / 9 < 512         and (15 + 59) * 75 % n == 1
     #       ↓
-    15 +  4425   // 9 < 512         and (15 + 59) * 75 % n == 1
+    15 +  4425   / 9 < 512         and (15 + 59) * 75 % n == 1
     #            ↓
-    15 +        491   < 512         and (15 + 59) * 75 % n == 1
-    #                                       ↓
-    15 +        491   < 512         and    74     * 75 % n == 1
-    #                                             ↓
-    15 +        491   < 512         and          5550  % n == 1
-    #                                                    ↓
-    15 +        491   < 512         and          5550  % 2 == 1
-    #                                                  ↓
-    15 +        491   < 512         and                0   == 1
+    15 +        491  < 512         and (15 + 59) * 75 % n == 1
+    #                                      ↓
+    15 +        491  < 512         and    74     * 75 % n == 1
+    #                                            ↓
+    15 +        491  < 512         and          5550  % n == 1
+    #                                                   ↓
+    15 +        491  < 512         and          5550  % 2 == 1
+    #                                                 ↓
+    15 +        491  < 512         and                0   == 1
     #  ↓
-      506             < 512         and                0   == 1
-    #                 ↓
-                     True           and                0   == 1
-    #                                                      ↓
-                     True           and                  False
-    #                                ↓
-                                   False
+      506            < 512         and                0   == 1
+    #                ↓
+                    True           and                0   == 1
+    #                                                     ↓
+                    True           and                  False
+    #                               ↓
+                                  False
 
 La operación entre paréntesis ``(15 + 59)``
 debe ser evaluada antes de la multiplicación por 75,
@@ -270,4 +335,17 @@ pueden ser consultados en
 de la documentación oficial de Python.
 
 .. _la sección sobre expresiones: http://docs.python.org/reference/expressions.html#summary
+
+¿Cómo aprenderse las reglas de precedencia?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+La respuesta es: mejor no aprendérselas.
+Las reglas de precedencia son muchas y no siempre son intuitivas,
+
+Un programa queda mucho más fácil de entender
+si uno explícitamente indica el orden de evaluación usando paréntesis
+o guardando en variables los resultados intermedios del cálculo.
+
+Un buen programador siempre se preocupa
+de que su código sea fácil de entender por otras personas,
+¡e incluso por él mismo en unas semanas más adelante!
 
