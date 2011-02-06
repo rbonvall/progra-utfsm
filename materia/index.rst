@@ -6,6 +6,7 @@ Materia
     introduccion
     algoritmos
     programas
+    tipos
     expresiones
     programas-simples
     condicionales
