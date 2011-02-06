@@ -44,23 +44,26 @@ un **operador unario** es el que tiene sólo uno.
 
 Por ejemplo,
 en la expresión ``2.0 + x``
-el operador ``+`` es un operador binario que representa la suma,
-y sus operandos son ``2.0`` y ``x``.
+el operador ``+`` es un operador binario
+que en este contexto representa la operación de adición.
+Sus operandos son ``2.0`` y ``x``.
 
-Los principales operadores se pueden clasificar en:
-aritméticos, relacionales, lógicos y de texto.
+Las operaciones más comunes se pueden clasificar en:
+aritméticas, relacionales, lógicas y de texto.
 
 Operadores aritméticos
 ~~~~~~~~~~~~~~~~~~~~~~
-.. index:: operador aritmético
+.. index:: operación aritmética
 
-Los **operadores aritméticos** son los que representan operaciones numéricas.
-Tanto sus operandos como sus resultados son valores numéricos.
+Las **operaciones aritméticas** son las que operan sobre valores numéricos
+y entregan otro valor numérico como resultado.
+Los valores numéricos son los que tienen tipo entero, real o complejo. entero, real o complejo.
 
 .. index:: + (suma), - (resta), /, %, ** , *
 .. index:: suma, resta, multiplicación, división, módulo, potencia
 
-Algunos operadores aritméticos binarios son:
+Las siguientes son algunas operaciones aritméticas básicas,
+junto con el operador que las representa en Python:
 
 * la **suma** ``+``;
 * la **resta** ``-``;
@@ -79,6 +82,8 @@ para que el resultado también lo sea::
     3
     >>> 8 - 5.0
     3.0
+    >>> 8.0 - 5
+    3.0
     >>> 8.0 - 5.0
     3.0
 
@@ -93,16 +98,32 @@ es decir, sin su parte decimal::
     >>> 5 / -2
     -3
 
+Si uno de los operandos es complejo,
+el resultado también será complejo::
+
+    >>> 3 + 4
+    7
+    >>> 3 + (4+0j)
+    (7+0j)
+
 El operador de módulo entrega el resto de la división
 entre sus operandos::
 
     >>> 7 % 3
     1
 
+Un uso bastante común del operador de módulo
+es usarlo para determinar si un número es divisible por otro::
+
+    >>> 17 % 5   # 17 no es divisible por 5
+    2
+    >>> 20 % 5   # 20 si es divisible por 5
+    0
+
 Una relación entre ``/`` y ``%`` que siempre se cumple
 para los números enteros es::
 
-    (a // b) * b + (a % b) == a
+    (a / b) * b + (a % b) == a
 
 .. index:: + (positivo), - (negativo), positivo, negativo
 
@@ -120,15 +141,15 @@ y el negativo también pero con el signo cambiado::
     >>> -n
     4
 
-Operadores relacionales
-~~~~~~~~~~~~~~~~~~~~~~~
-.. index:: operador relacional, comparación
+Operaciones relacionales
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: operación relacional, comparación
 
-Los **operadores relacionales** son los que permiten comparar valores.
+Las **operaciones relacionales** sirven para comparar valores.
 Sus operandos son cualquier cosa que pueda ser comparada,
 y sus resultados siempre son valores lógicos.
 
-Algunos operadores relacionales son:
+Algunas operaciones relacionales son:
 
 * el **igual a** ``==`` (no confundir con el ``=`` de las asignaciones);
 * el **distinto a** ``!=``;
@@ -164,25 +185,27 @@ de la siguiente manera::
 La expresión ``0 < x <= 10``
 es equivalente a ``(0 < x) and (x <= 10)``
 
-Operadores lógicos
-~~~~~~~~~~~~~~~~~~
-.. index:: operador lógico, operador booleano
+Operaciones lógicas
+~~~~~~~~~~~~~~~~~~~
+.. index:: operación lógica, operación booleana
 
-Los **operadores lógicos** son los que tienen valores lógicos
-(verdadero y falso) como operandos y como resultado.
-Los valores lógicos posibles son
-``True`` (verdadero) y ``False`` (falso).
+Los **operadores lógicos** son los que tienen operandos y resultado
+de tipo lógico.
 
-Hay tres operadores lógicos:
+En Python, hay tres operaciones lógicas:
 
 .. index:: and, or, not
 
-* **and** (en español: «y») representa la conjunción lógica;
-* **or** (en español: «o») representa la disyunción lógica.
-* **not** (en español: «negación») representa la negación lógica.
+* la conjunción lógica **and** (en español: «y»),
+* la disyunción lógica **or** (en español: «o»), y
+* la negación lógica **not** (en español: «no»).
 
-Los operadores ``and`` y ``or`` son binarios,
-mientras que ``not`` es unario.
+Los operadores ``and`` y ``or`` son binarios, mientras que ``not`` es unario::
+
+    >>> True and False
+    False
+    >>> not True
+    False
 
 La siguiente tabla muestra todos los resultados posibles
 de las operaciones lógicas.
@@ -198,8 +221,8 @@ y las siguientes tres, los resultados de las operaciones.
 ``False`` ``False`` ``False``   ``False``
 ========= ========= =========== ========== =========
 
-Operadores de texto
-~~~~~~~~~~~~~~~~~~~
+Operaciones de texto
+~~~~~~~~~~~~~~~~~~~~
 Los operadores ``+`` y ``*`` tienen otras interpretaciones
 cuando sus operandos son strings.
 
@@ -222,6 +245,35 @@ y entrega como resultado el string repetido tantas veces como indica el entero::
 
     >>> 'waka' * 2
     'wakawaka'
+
+Más adelante veremos muchas más operaciones para trabajar sobre texto.
+Por ahora utilizaremos las más elementales.
+Otras operaciones que pueden serle útiles por el momento son:
+
+* obtener el `i`-ésimo caracter de un string (partiendo desde cero)::
+
+    >>> nombre = 'Perico'
+    >>> nombre[0]
+    'P'
+    >>> nombre[1]
+    'e'
+    >>> nombre[2]
+    'r'
+
+* comprarar strings alfabéticamente
+  (lamentablemente no funciona con acentos y eñes)::
+
+    >>> 'a' < 'abad' < 'abeja'
+    True
+    >>> 'zapato' <= 'alpargata'
+    False
+
+* obtener el largo de un string::
+
+    >>> len('papalelepipedo')
+    14
+    >>> len("")
+    0
 
 Precedencia
 -----------
@@ -352,4 +404,8 @@ o guardando en variables los resultados intermedios del cálculo.
 Un buen programador siempre se preocupa
 de que su código sea fácil de entender por otras personas,
 ¡e incluso por él mismo en unas semanas más adelante!
+
+Llamadas a función
+------------------
+(Por escribir)
 
