@@ -63,7 +63,6 @@ Sin clasificar aún
 .. toctree::
 
     cifrado-cesar
-    conversion-temperatura
     conversion-unidades-longitud
     cuadrado-cubo-secuencia
     determinar-cero
