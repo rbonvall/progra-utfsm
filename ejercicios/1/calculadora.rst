@@ -5,35 +5,42 @@ Escriba un programa que simule una calculadora básica, este puede realizar
 operación de suma, resta, multiplicación y división.
 
 El programa debe recibir como entrada 2 números reales y un operador,
-que puede ser, *suma (+)*, *resta (-)*, *división (/)* o *multiplicación (*)*.
+que puede ser ``+``, ``-``, ``*``, ``/`` o ``//``.
 
-La salida del programa, debe ser el resultado de la operación con
-los parámetros ingresados.
-
-.. code-block:: testcase
-
-    Ingrese primer Operando: `3`
-    Ingrese Operador: `+`
-    Ingrese segundo Operando: `2`
-    Resultado: 5
+La salida del programa debe ser el resultado de la operación.
 
 .. code-block:: testcase
 
-    Ingrese primer Operando: `6`
-    Ingrese Operador: `-`
-    Ingrese segundo Operando: `7`
-    Resultado: -1
+    Operando: `3`
+    Operador: `+`
+    Operando: `2`
+    3 + 2 = 5
 
 .. code-block:: testcase
 
-    Ingrese primer Operando: `4`
-    Ingrese Operador: `*`
-    Ingrese segundo Operando: `5`
-    Resultado: 20
+    Operando: `6`
+    Operador: `-`
+    Operando: `7`
+    6 - 7 = -1
 
 .. code-block:: testcase
 
-    Ingrese primer Operando: `10`
-    Ingrese Operador: `/`
-    Ingrese segundo Operando: `4`
-    Resultado: 2.5
+    Operando: `4`
+    Operador: `*`
+    Operando: `5`
+    4 * 5 = 20
+
+.. code-block:: testcase
+
+    Operando: `10`
+    Operador: `/`
+    Operando: `4`
+    10 / 4 = 2.5
+
+.. code-block:: testcase
+
+    Operando: `-1`
+    Operador: `**`
+    Operando: `4`
+    -1 ** 4 = 1
+
