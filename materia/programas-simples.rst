@@ -177,7 +177,7 @@ la entrada es realizada por la sentencia::
 
 Cuando el programa llega a esta línea,
 el mensaje ``Ingrese temperatura en Fahrenheit:``
-es mostardo al usuario,
+es mostrado al usuario,
 que entonces debe ingresar un valor,
 que es convertido a un número real
 y asociado al nombre ``f``.
