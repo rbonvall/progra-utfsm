@@ -9,8 +9,7 @@ Materia
     tipos
     programas-simples
     expresiones
-    condicionales
-    ciclos
+    sentencias-de-control
     patrones
 
 
