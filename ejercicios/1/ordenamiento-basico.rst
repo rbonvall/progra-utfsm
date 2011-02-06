@@ -1,39 +1,29 @@
 Ordenamiento
 ------------
 
-Realizar un programa que pueda
-determinar la secuencia ordenada
-de tres números ingresados por
-el usuario, de menor a mayor.
+Escriba un programa
+que reciba como entrada
+tres números,
+y los muestre ordenados de menor a mayor.
 
+.. code-block:: testcase
 
-::
+	Ingrese numero: `8`
+	Ingrese numero: `1`
+	Ingrese numero: `4`
+        1 4 8
 
-	Ingrese número: 8
-	Ingrese número: 1
-	Ingrese número: 4
-	[1, 4, 8]
+.. code-block:: testcase
 
-::
+	Ingrese numero: `1`
+	Ingrese numero: `3`
+	Ingrese numero: `2`
+        1 2 3
 
-	Ingrese números: 1
-	Ingrese números: 3
-	Ingrese números: 2
-	[1, 2, 3]
+.. code-block:: testcase
 
-::
+	Ingrese numero: `7`
+	Ingrese numero: `6`
+	Ingrese numero: `1`
+        1 6 7
 
-	Ingrese números: 1
-	Ingrese números: 6
-	Ingrese números: 7
-	[1, 6, 7]
-
-* Solución
-
-::
-	
-	num1 = int(raw_input("Ingrese número: "))
-	num2 = int(raw_input("Ingrese número: "))
-	num3 = int(raw_input("Ingrese número: "))
-	print sorted([num1,num2,num3])
-	
