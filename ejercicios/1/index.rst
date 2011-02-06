@@ -64,7 +64,6 @@ Sin clasificar aún
 
     cifrado-cesar
     conversion-unidades-longitud
-    cuadrado-cubo-secuencia
     determinar-cero
     determinar-es-menor-mayor-cero
     determinar-pares-entre-1y10
