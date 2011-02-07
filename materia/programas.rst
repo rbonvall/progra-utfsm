@@ -142,7 +142,8 @@ En general,
 usar un simple editor de texto para escribir programas
 no es la manera más eficiente de trabajar.
 
-Los **entornos de desarrollo** (en inglés, *IDE*)
+Los **entornos de desarrollo**
+(también llamados *IDE*, por sus siglas en inglés)
 son aplicaciones que hacen más fácil la tarea
 de escribir programas.
 
