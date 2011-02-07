@@ -22,7 +22,7 @@ Para probar cómo hacerlo,
 descargue el programa cuadratica.py_
 que sirve para resolver ecuaciones cuadráticas.
 
-.. _cuadratica.py: ../_static/cuadratica.py
+.. _cuadratica.py: ../_static/programas/cuadratica.py
 
 Edición de programas
 --------------------
