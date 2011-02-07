@@ -404,3 +404,74 @@ es posible hacer ciclos que van hacia atrás::
 ..     gato tiene largo 4
 ..     vaca tiene largo 4
 ..     hamster tiene largo 7
+
+
+Salir de un ciclo
+-----------------
+.. index:: break
+
+Además de las condiciones de término propias
+de los ciclos ``while`` y ``for``,
+siempre es posible salir de un ciclo
+en medio de una iteración
+usando la sentencia **break**.
+Lo lógico es que sea usada dentro de un ``if``,
+para evitar que el ciclo termine prematuramente
+en la primera iteración:
+
+.. image:: ../diagramas/break.png
+   :alt: (Diagrama de flujo ciclo con break)
+
+Por ejemplo,
+en el programa para determinar si un número es primo o no,
+la búsqueda de divisores puede ser terminada prematuramente
+apenas se encuentra el primero de ellos::
+
+    es_primo = True
+    for d in range(2, n):
+        if n % d == 0:
+            es_primo = False
+            break
+
+Saltar a la siguiente iteración
+-------------------------------
+.. index:: continue
+
+La sentencia **cycle** se usa
+para saltar a la iteración siguiente
+sin llegar al final de la que está en curso.
+
+.. image:: ../diagramas/continue.png
+   :alt: (Diagrama de flujo ciclo con continue)
+
+Por ejemplo,
+el siguiente programa muestra el seno, el coseno y la tangente
+de los números del 1 al 30, pero omitiendo los que terminan en 7::
+
+    from math import sin, cos, tan
+    for i in range(1, 31):
+        if i % 10 == 7:
+            continue
+        print i, sin(i), cos(i), tan(i)
+
+.. Ciclo infinito
+.. --------------
+.. .. index:: ciclo infinito
+..
+.. A veces es útil crear ciclos
+.. que iteran indefinidamente,
+.. sin tener una condición de término
+..
+.. Hay una manera especial de usar u
+.. en que
+.. Se llama **ciclo infinito**
+.. y la sintaxis es::
+..
+..     while True:
+..         qué hacer
+..
+.. La única manera de salir de un ciclo infinito
+.. es usando la sentencia ``break``,
+.. que por lógica debe ir siempre dentro de un ``if``.
+
+.. TODO: ejemplo
