@@ -19,14 +19,13 @@ Números enteros
 ---------------
 .. index:: número entero, int
 
-El tipo ``int`` permite representar números enteros.
+El tipo **int**
+(del inglés *integer*, que significa «entero»)
+permite representar números enteros.
 
 Los valores que puede tomar un ``int`` son
 todos los números enteros:
 ... ``-3``, ``-2``, ``-1``, ``0``, ``1``, ``2``, ``3``, ...
-
-El nombre ``int`` viene del inglés *integer*,
-que significa «entero».
 
 Los números enteros literales
 se escriben con un signo opcional
@@ -40,7 +39,7 @@ Números reales
 --------------
 .. index:: número real, número de punto flotante, float
 
-El tipo ``float`` permite representar números reales.
+El tipo **float** permite representar números reales.
 
 El nombre ``float`` viene del término `punto flotante`_,
 que es la manera en que el computador representa internamente
@@ -54,7 +53,7 @@ de manera exacta en un computador.
 Por ejemplo,
 el número decimal 0.7
 es representado internamente por el computador
-con la aproximación 0.69999999999999996.
+mediante la aproximación 0.69999999999999996.
 Todas las operaciones entre valores ``float``
 son aproximaciones.
 Esto puede conducir a resultados algo sorpresivos::
@@ -117,7 +116,7 @@ Números complejos
 -----------------
 .. index:: número complejo, complex
 
-El tipo ``complex`` permite representar números complejos.
+El tipo **complex** permite representar números complejos.
 
 Los números complejos tienen una parte real y una imaginaria.
 La parte imaginaria es denotada
@@ -131,14 +130,15 @@ Valores lógicos
 .. index:: bool, valor lógico, valor booleano
 
 Los valores lógicos ``True`` y ``False``
-son de tipo ``bool``, que representa valores lógicos.
+(verdadero y falso)
+son de tipo **bool**, que representa valores lógicos.
 
 El nombre ``bool`` viene del matemático `George Boole`_,
 quien creó un sistema algebraico para la lógica binaria.
 Por lo mismo,
 a ``True`` y ``False`` también se les llama
 **valores booleanos**.
-No es el nombre más intuitivo,
+El nombre no es muy intuitivo,
 pero es el que se usa en informática,
 así que hay que conocerlo.
 
@@ -168,7 +168,7 @@ Texto
 
 A los valores que representan texto
 se les llama **strings**,
-y tienen el tipo ``str``.
+y tienen el tipo **str**.
 
 Los strings literales
 pueden ser representados
@@ -242,13 +242,15 @@ Nulo
 ----
 .. index:: tipo nulo, None
 
-Existe un valor muy especial que se llama ``None``.
-
-``None`` es un valor que se utiliza
-en contextos en que ningún valor es válido.
-En inglés, *none* significa «ninguno».
+Existe un valor llamado **None**
+(en inglés, «ninguno»)
+que es utilizado para representar casos
+en que ningún valor es válido,
+o para indicar que una variable
+todavía no tiene un valor que tenga sentido.
 
 El valor ``None`` tiene su propio tipo,
+llamado ``NoneType``,
 que es diferente al de todos los demás valores.
 
 .. Conversión de tipos
