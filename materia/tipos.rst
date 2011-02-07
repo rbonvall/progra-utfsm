@@ -238,6 +238,14 @@ pueden estar representados::
    >>> True == 'True'
    False
 
+Los strings que difieren en mayúsculas y minúsculas,
+o en espacios también son distintos::
+
+   >>> 'mesa' == 'Mesa'
+   False
+   >>> ' mesa' == 'mesa '
+   False
+
 Nulo
 ----
 .. index:: tipo nulo, None
