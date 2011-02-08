@@ -50,6 +50,7 @@ Diseño de algoritmos
     digitos
     rol
     caballo-de-ajedrez
+    cachipun
     numeros-primos
     el-mejor-numero
     adivinar-numero
