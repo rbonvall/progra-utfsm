@@ -59,6 +59,8 @@ Desafíos
 --------
 .. toctree::
 
+    espiral
+
 Sin clasificar aún
 ------------------
 .. toctree::
