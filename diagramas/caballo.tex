@@ -11,7 +11,7 @@
 \tikzstyle{jump}=[->, thick]
 \tikzstyle{odd}=[black!40!red]
 \tikzstyle{even}=[black!60]
-\begin{tikzpicture}[yscale=-1]
+\begin{tikzpicture}[yscale=-1, scale=.9]
   \foreach\n in {1,...,8} {
     \node at (-.25, \n - .5) {\n};
     \node at (\n - .5, -.25) {\n};
@@ -33,22 +33,22 @@
 
   \def\row{2}
   \def\col{8}
-  \node[knight] (c1) at (\row - .5, \col - .5) {C};
-  \draw [jump, out=-90, in=  0] (c1) to (\row - 1 - .5, \col - 2 - .5);
-  \draw [jump, out=  0, in= 90] (c1) to (\row + 2 - .5, \col - 1 - .5);
-  \draw [jump, out=-90, in=180] (c1) to (\row + 1 - .5, \col - 2 - .5);
+  \node[knight] (c1) at (\col - .5, \row - .5) {C};
+  \draw [jump, out=180, in= 90] (c1) to (\col - 2 - .5, \row - 1 - .5);
+  \draw [jump, out=180, in=-90] (c1) to (\col - 2 - .5, \row + 1 - .5);
+  \draw [jump, out= 90, in=  0] (c1) to (\col - 1 - .5, \row + 2 - .5);
 
   \def\row{3}
   \def\col{4}
-  \node[knight] (c1) at (\row - .5, \col - .5) {C};
-  \draw [jump, out=180, in= 90] (c1) to (\row - 2 - .5, \col - 1 - .5);
-  \draw [jump, out=180, in=-90] (c1) to (\row - 2 - .5, \col + 1 - .5);
-  \draw [jump, out=-90, in=  0] (c1) to (\row - 1 - .5, \col - 2 - .5);
-  \draw [jump, out= 90, in=  0] (c1) to (\row - 1 - .5, \col + 2 - .5);
-  \draw [jump, out=  0, in= 90] (c1) to (\row + 2 - .5, \col - 1 - .5);
-  \draw [jump, out=  0, in=-90] (c1) to (\row + 2 - .5, \col + 1 - .5);
-  \draw [jump, out=-90, in=180] (c1) to (\row + 1 - .5, \col - 2 - .5);
-  \draw [jump, out= 90, in=180] (c1) to (\row + 1 - .5, \col + 2 - .5);
+  \node[knight] (c1) at (\col - .5, \row - .5) {C};
+  \draw [jump, out=180, in= 90] (c1) to (\col - 2 - .5, \row - 1 - .5);
+  \draw [jump, out=180, in=-90] (c1) to (\col - 2 - .5, \row + 1 - .5);
+  \draw [jump, out=-90, in=  0] (c1) to (\col - 1 - .5, \row - 2 - .5);
+  \draw [jump, out= 90, in=  0] (c1) to (\col - 1 - .5, \row + 2 - .5);
+  \draw [jump, out=  0, in= 90] (c1) to (\col + 2 - .5, \row - 1 - .5);
+  \draw [jump, out=  0, in=-90] (c1) to (\col + 2 - .5, \row + 1 - .5);
+  \draw [jump, out=-90, in=180] (c1) to (\col + 1 - .5, \row - 2 - .5);
+  \draw [jump, out= 90, in=180] (c1) to (\col + 1 - .5, \row + 2 - .5);
 
 \end{tikzpicture}
 \end{preview}
