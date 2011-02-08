@@ -22,6 +22,7 @@ Estructuras condicionales
     calculadora
     set-de-tenis
     triangulos
+    indice-masa-corporal
 
 Ciclos
 ------
