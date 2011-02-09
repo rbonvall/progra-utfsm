@@ -98,6 +98,7 @@ Sin clasificar aún
     transformador-binario
     triangulo-pascal
     validar-numero
+    calculo-interes
 
 
 
