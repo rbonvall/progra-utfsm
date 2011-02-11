@@ -1,0 +1,48 @@
+\newcommand{\onelinerule}{\rule[2.3ex]{0pt}{0pt}}
+\newcommand{\twolinerule}{\rule[6.2ex]{0pt}{0pt}}
+\newcommand{\respuesta}{\framebox[\textwidth]{\twolinerule}}
+\newcommand{\nombre}{%
+  \begin{tikzpicture}[xscale=.4,yscale=.7]
+    \draw (0, 0) rectangle (22, 1);
+  \end{tikzpicture}%
+}
+%\newcommand{\rol}   {\framebox[0.3\textwidth]{\onelinerule}}
+\newcommand{\rol}{%
+  \begin{tikzpicture}[xscale=.4,yscale=.7]
+    \draw[gray] ( 0, 0) grid      ( 9, 1);
+    \draw       ( 0, 0) rectangle ( 9, 1);
+    \draw       (10, 0) rectangle (11, 1);
+    \draw (9 + .2, .5) -- (10 - .2, .5);
+  \end{tikzpicture}%
+}
+\newcommand{\li}{\lstinline}
+
+\lstdefinelanguage{py}{%
+  classoffset=0,%
+    morekeywords={%
+      False,class,finally,is,return,None,continue,for,lambda,try,%
+      True,def,from,nonlocal,while,and,del,global,not,with,print,%
+      as,elif,if,or,yield,assert,else,import,pass,break,except,in,raise},%
+    keywordstyle=\color{black!80}\bfseries,%
+  classoffset=1,
+    morekeywords={int,float,str,abs,len,raw_input,exit,range,min,max,%
+      set,dict,tuple,list},
+    keywordstyle=\color{black!50}\bfseries,%
+  classoffset=0,%
+  sensitive=true,%
+  morecomment=[l]\#,%
+  morestring=[b]',%
+  morestring=[b]",%
+  stringstyle=\em,%
+}
+
+\lstdefinelanguage{testcase}{%
+  moredelim=[is][\bfseries]{`}{`},%
+}
+
+\lstset{language=py}
+\lstset{basicstyle=\ttfamily}
+\lstset{columns=fixed}
+\lstset{upquote=true}
+\lstset{showstringspaces=false}
+
