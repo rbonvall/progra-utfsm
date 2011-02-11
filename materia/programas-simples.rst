@@ -251,3 +251,34 @@ La excepción son los signos ``#`` que aparecen en un string::
     >>> "123 # 456" # 789
     '123 # 456'
 
+Evitar que se cierre el programa
+--------------------------------
+
+La ejecución de programas en Windows presenta un inconveniente práctico:
+cuando el programa termina, la ventana de ejecución se cierra inmediatamente,
+por lo que no es posible alcanzar a leer la salida del programa.
+
+Por ejemplo,
+al ejecutar el programa ``temperatura.py`` tal como está arriba,
+el usuario verá el mensaje ``Ingrese temperatura...``
+y a continuación ingresará el valor.
+Una vez que el programa entrega como resultado
+el equivalente en grados Celcius,
+no quedan más sentencias para ejecutar,
+por lo que el programa se cierra.
+
+Existen otras maneras de ejecutar programas
+con las que este problema no ocurre..
+Por ejemplo, al ejecutar un programa desde una IDE,
+generalmente la salida aparece en una ventana que no se cierra.
+
+Una solución para evitar que la ventana se cierre
+es agregar un ``raw_input()`` al final del código.
+De este modo,
+el programa quedará esperando que el usuario ingrese cualquier cosa
+(un enter basta) antes de cerrarse.
+
+Los programas presentados en este apunte no tendrán el ``raw_input()`` al final,
+pero usted puede agregarlo por su cuenta si así lo desea.
+En controles y certámenes, no será necesario hacerlo.
+
