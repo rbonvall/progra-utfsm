@@ -15,6 +15,7 @@ Contenidos del primer certamen
     tipos
     programas-simples
     expresiones
+    errores
     sentencias-de-control
 ..    patrones
 
