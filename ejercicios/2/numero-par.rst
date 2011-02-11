@@ -1,26 +1,18 @@
 Número par
 ----------
 
-Desarrolle un programa
-que contenga una función
-llamada:
+Escriba una función ``par(x)``
+que retorne ``True`` si ``x`` es par,
+y ``False`` si es impar::
 
-::
+    >>> par(16)
+    True
+    >>> par(29)
+    False
+    >>> par('hola')
+    Traceback (most recent call last):
+    File "<console>", line 1, in <module>
+    File "<console>", line 2, in par
+    TypeError: not all arguments converted during string formatting
 
-	par(x)
 
-que retorne **True** si *x* es par,
-y **False** si es impar.
-
-Por ejemplo:
-
-::
-
-	par(16)
-	True
-	par(29)
-	False
-	par('hola')
-	Traceback (most recent call last):
-	TypeError: not all arguments converted during string formatting
-	
