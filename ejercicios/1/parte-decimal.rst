@@ -1,30 +1,18 @@
 Parte decimal
 -------------
 
-Realizar un programa que pueda
-determinar la parte decimal de un
-número *n* ingresado por el usuario.
+Escriba un programa que entregue
+la parte decimal de un número real
+ingresado por el usuario.
 
-
-::
+.. code-block:: testcase
 	
-	Ingrese un número: 4.5
-	0.5
+    Ingrese un numero: `4.5`
+    0.5
 
-::
+.. code-block:: testcase
 
-	Ingrese un número: -1.19
-	0.19
+    Ingrese un numero: `-1.19`
+    0.19
 
-::
-	Ingrese un número: 4
-	0.0
-	
-* Solución
-
-::
-
-	num = float(raw_input("Infrese un número: "))
-	print(num-int(int))
-	
 
