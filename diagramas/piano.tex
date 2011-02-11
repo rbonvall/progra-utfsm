@@ -10,12 +10,24 @@
 \begin{tikzpicture}[scale=.8]
 
   \foreach \i in {0,...,6} {
-    \draw (\i,       5) -- ({\i + 1}, 5) --
-          ({\i + 1}, 0) -- (\i,       0) -- cycle;
+    \draw
+         (\i,       5)
+      -- ({\i + 1}, 5)
+      {[rounded corners]
+        -- ({\i + 1}, 0)
+        -- (\i,       0)
+      }
+      -- cycle;
   }
   \foreach\i in {1,2,4,5,6} {
-    \fill[black] ({\i + .3}, 5.0) -- ({\i - .3}, 5.0) --
-                 ({\i - .3}, 1.8) -- ({\i + .3}, 1.8) -- cycle;
+    \fill[black]
+         ({\i + .3}, 5.0)
+      -- ({\i - .3}, 5.0)
+      {[rounded corners]
+        -- ({\i - .3}, 1.8)
+        -- ({\i + .3}, 1.8)
+      }
+      -- cycle;
   }
 
   \node at (0.5, .5) {do};  \node at (1, 5.3) {do$^\sharp$};
