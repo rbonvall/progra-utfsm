@@ -218,10 +218,6 @@ se está imprimiendo el mensaje ``El equivalente en Celsius es:``
 y a continuación, en la misma línea,
 el valor de la variable ``c``.
 
-Otra sentencia de salida que aparece en el programa es::
-
-    print 'La solucion unica es x =', x
-
 Las comillas sólo sirven para representar un string en el código.
 Cuando un string es impreso usando ``print``,
 las comillas no aparecen::
