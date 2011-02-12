@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+
+\setjobnamebeamerversion{02-diapos}
+
+\input{../evaluaciones/incluir/definiciones.tex}
+
+\title{Uso de intérprete, expresiones y tipos}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{9 y 10 de marzo de 2011}
+
+\begin{document}
+  \maketitle
+
+  \includeslide[width=.5\textwidth]{prog-ejemplo}
+
+  Ésta diapositiva presenta el programa de ejemplo
+  que será usado para mostrar cómo ejecutar un programa.
+  Además, introduce algunas de las convenciones
+  que serán seguidas durante todo el semestre
+  en las diapositivas, los apuntes y las evaluaciones:
+  \begin{itemize}
+    \item los enunciados explican el problema en palabras;
+    \item el caso de prueba muestra cómo se ve la ejecución de un programa,
+      donde la entrada ingresada por el usuario aparece en negrita;
+    \item el código es el programa que puede ser copiado y pegado
+      en un editor de texto para ser guardado y ejecutado.
+  \end{itemize}
+
+  En este punto,
+  explicar en detalle qué hace cada parte del programa,
+  para que los estudiantes comiencen a familiarizarse con el código.
+  En particular, explicar lo siguiente:
+  \begin{itemize}
+    \item la primera línea del programa es la entrada,
+      la segunda línea es el proceso
+      y la tercera línea es la salida;
+    \item la función \li!raw_input! recibe como parámetro
+      el texto que será mostrado en la pantalla,
+      y entrega com resultado el texto ingresado por el usuario;
+    \item la función \li!float! convierte el texto a un número real,
+      lo que es necesario para poder hacer operaciones aritméticas
+      con el valor ingresado;
+    \item cómo es evaluada la expresión,
+      y su resultado asignado a la variable \li!c!;
+  \end{itemize}
+
+\end{document}
+
+
