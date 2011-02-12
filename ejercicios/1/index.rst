@@ -77,7 +77,6 @@ Sin clasificar aún
     es-fibonacci
     es-numero-palindromo
     lanzando-monedas
-    leer-numero
     leer-numeros
     leer-tres-numeros
     letra-o-numero
