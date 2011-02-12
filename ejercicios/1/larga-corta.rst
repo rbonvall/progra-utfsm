@@ -12,7 +12,7 @@ entrada:
 La salida del programa debe mostrar la palabra más larga
 y la más corta que fueron ingresadas por el usuario.
 
-Recuerde que la función ``len`` permite obtener el largo
+Recuerde que la función ``len`` entrega el largo
 de un string::
 
    >>> len('amarillo')
