@@ -1,14 +1,7 @@
-TEXFILES = $(wildcard *.tex)
-PDFFILES = $(TEXFILES:.tex=.pdf)
-
-all: pdf
-
-pdf: $(PDFFILES)
-
-%.pdf: %.tex ../latex/* %/*
-	@rubber --pdf $<
+all:
+	@-for i in $$(ls -d */); do make -C $$i; done
 clean:
-	@rubber --clean --pdf $(TEXFILES:.tex=)
+	@-for i in $$(ls -d */); do make -C $$i clean; done
 
-.PHONY: pdf clean all
 
+.PHONY: all
