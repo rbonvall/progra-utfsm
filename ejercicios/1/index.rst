@@ -7,6 +7,7 @@ Programas simples
 
     saludo
     circulos
+    numero-invertido
     pitagoras
     parte-decimal
     tiempo-de-viaje
@@ -83,7 +84,6 @@ Sin clasificar aún
     notas
     numero-deleitable
     numero-fibonacci
-    numero-invertido
     numero-mayor
     numeros-amistosos
     numeros-combinatorios
