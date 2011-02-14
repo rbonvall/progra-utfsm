@@ -87,7 +87,6 @@ Sin clasificar aún
     numero-mayor
     numeros-amistosos
     numeros-combinatorios
-    potencia
     promedio
     que-nota-necesito
     situacion-ramo
