@@ -52,6 +52,7 @@ Diseño de algoritmos
     digitos
     rol
     caballo-de-ajedrez
+    es-numero-palindromo
     cachipun
     numeros-primos
     el-mejor-numero
@@ -76,7 +77,6 @@ Sin clasificar aún
     determinar-par
     ecuacion-cuadratica
     es-fibonacci
-    es-numero-palindromo
     lanzando-monedas
     leer-numeros
     leer-tres-numeros
