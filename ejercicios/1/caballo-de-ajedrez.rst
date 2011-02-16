@@ -8,10 +8,9 @@ numeradas desde 1 hasta 8.
 
 El caballo_ es una pieza que se desplaza en forma de L:
 su movimiento consiste en avanzar dos casillas en una dirección
-y luego una casilla en una dirección perpendicular a la primera.
+y luego una casilla en una dirección perpendicular a la primera:
 
-    [Insertar diagrama]
-
+.. image:: ../../diagramas/caballo.png
 
 Escriba un programa que reciba como entrada
 las coordenadas en que se encuentra un caballo,

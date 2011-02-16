@@ -17,6 +17,9 @@ La **programación** es el proceso de
 transformar un método para resolver problemas
 en uno que pueda ser entendido por el computador.
 
+Algoritmos
+----------
+
     *La informática se trata de computadores
     tanto como la astronomía se trata de telescopios*.
     --- `Edsger Dijkstra <http://es.wikipedia.org/wiki/Edsger_Dijkstra>`_.
@@ -30,11 +33,12 @@ y que efectivamente resuelva el problema.
 Así es como la programación no es tanto sobre computadores,
 sino sobre resolver problemas de manera estructurada.
 El objeto de estudio de la programación no son los programas,
-sino los **algoritmos**.
+sino los algoritmos.
 
 .. index:: algoritmo
 
-Un algoritmo es un procedimiento que resuelve un problema.
+Un **algoritmo** es un procedimiento bien definido
+para resolver un problema.
 
 Todo el mundo conoce y utiliza algoritmos a diario,
 incluso sin darse cuenta:
@@ -78,22 +82,37 @@ incluso sin darse cuenta:
 
 .. _método para multiplicar: http://es.wikipedia.org/wiki/Algoritmo_de_multiplicación
 
-No toda secuencia de instrucciones es un algoritmo.
 Un algoritmo debe poder ser usado mecánicamente,
 sin necesidad de usar inteligencia, intuición ni habilidad.
 
-    *Los computadores son inútiles: sólo pueden darte respuestas*.
-    --- `Pablo Picasso <http://es.wikipedia.org/wiki/Pablo_Picasso>`_.
-
-.. .. raw:: html
+.. Programas
+.. ---------
 .. 
-..     <iframe
-..       title="YouTube video player" class="youtube-player"
-..       type="text/html" width="480" height="390"
-..       src="http://www.youtube.com/embed/k6U-i4gXkLM?rel=0"
-..       frameborder="0"></iframe>
+..     *Los computadores son buenos para seguir instrucciones,
+..     pero son malos leyéndote la mente*.
+..     --- `Donald E. Knuth <http://es.wikipedia.org/wiki/Donald_Knuth>`_.
+.. 
+.. Un algoritmo puede ser descrito con palabras,
+.. pero E: computador necesita una descripción mucho más
 
-..  *Los computadores son buenos para seguir instrucciones,
-..  pero son malos leyéndote la mente*.
-..  --- `Donald E. Knuth <http://es.wikipedia.org/wiki/Donald_Knuth>`_.
+
+.. Problemas
+.. ---------
+..
+..     *Los computadores son inútiles: sólo pueden darte respuestas*.
+..     --- `Pablo Picasso <http://es.wikipedia.org/wiki/Pablo_Picasso>`_.
+..
+.. Los programa
+
+
+A lo largo de esta asignatura,
+haremos un recorrido por los conceptos elementales de la programación,
+con énfasis en el aspecto práctico de la disciplina.
+
+Al final del semestre,
+usted tendrá la capacidad
+de identificar problemas que pueden ser resueltos por el computador,
+y de diseñar y escribir programas sencillos.
+Además, entenderá qué es lo que ocurre dentro del computador
+los programas que usted usa.
 

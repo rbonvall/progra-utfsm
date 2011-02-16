@@ -66,6 +66,32 @@ El número 1 no es ni primo ni compuesto.
 
    .. _función π: http://es.wikipedia.org/wiki/Funci%C3%B3n_%CF%80
 
+#. Todos los números naturales mayores que 1
+   pueden ser factorizados de una única manera
+   como un `producto de divisores primos`_.
+
+   .. _producto de divisores primos: http://es.wikipedia.org/wiki/Factorizaci%C3%B3n_de_enteros
+
+   Escriba un programa que muestre los factores primos
+   de un número entero ingresado por el usuario:
+
+   .. code-block:: testcase
+
+      Ingrese numero: `204`
+      2
+      2
+      3
+      17
+      
+   .. code-block:: testcase
+
+      Ingrese numero: `8575`
+      5
+      5
+      7
+      7
+      7
+
 #. La `conjetura de Goldbach`_ sugiere que todo número par mayor que dos
    puede ser escrito como la suma de dos números primos.
    Hasta ahora no se conoce ningún número para el que esto no se cumpla.

@@ -1,0 +1,44 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\input{../latex/definiciones.tex}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Uso de intérprete, expresiones y tipos}
+\author{
+  Programación \\ \url{http://progra.usm.cl}
+}
+\date{9 y 10 de marzo de 2011}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Programa de ejemplo}\label{prog-ejemplo}
+    \textbf{Problema:}\\
+    Escriba un programa que reciba una temperatura en grados Fahrenheit
+    y entregue como resultado el equivalente en grados Celcius.
+    \vfill
+    \textbf{Caso de prueba:}\\
+    \lstinputlisting[language=testcase]{programas/temperatura-caso.txt}
+    \vfill
+    \textbf{Código:}\\
+    \lstinputlisting[language=py]{programas/temperatura.py}
+  \end{frame}
+
+
+\end{document}

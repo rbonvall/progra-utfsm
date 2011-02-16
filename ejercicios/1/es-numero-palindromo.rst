@@ -9,20 +9,18 @@ Por ejemplo,
 14941 es un palíndromo,
 mientras que 81924 no lo es.
 
-Se pide realizar un programa
-que reciba un número natural *n*,
-y pueda determinar si *n* es
-o no palíndromo.
+Escriba un programa
+que indique si el número ingresado
+es o no palíndromo:
 
+.. code-block:: testcase
 
-::
+    Ingrese un numero: `14941`
+    14941 es palindromo
 
-    Ingrese un número: `14941`
-    14941 es palíndromo
+.. code-block:: testcase
 
-::
-
-    Ingrese un número: `81924`
-    81924 no es palíndromo
+    Ingrese un numero: `81924`
+    81924 no es palindromo
 
 

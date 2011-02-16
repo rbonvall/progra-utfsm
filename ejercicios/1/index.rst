@@ -7,6 +7,7 @@ Programas simples
 
     saludo
     circulos
+    numero-invertido
     pitagoras
     parte-decimal
     tiempo-de-viaje
@@ -22,6 +23,7 @@ Estructuras condicionales
     calculadora
     set-de-tenis
     triangulos
+    indice-masa-corporal
 
 Ciclos
 ------
@@ -50,6 +52,8 @@ Diseño de algoritmos
     digitos
     rol
     caballo-de-ajedrez
+    es-numero-palindromo
+    cachipun
     numeros-primos
     el-mejor-numero
     adivinar-numero
@@ -58,6 +62,8 @@ Diseño de algoritmos
 Desafíos
 --------
 .. toctree::
+
+    espiral
 
 Sin clasificar aún
 ------------------
@@ -71,20 +77,16 @@ Sin clasificar aún
     determinar-par
     ecuacion-cuadratica
     es-fibonacci
-    es-numero-palindromo
     lanzando-monedas
-    leer-numero
     leer-numeros
     leer-tres-numeros
     letra-o-numero
     notas
     numero-deleitable
     numero-fibonacci
-    numero-invertido
     numero-mayor
     numeros-amistosos
     numeros-combinatorios
-    potencia
     promedio
     que-nota-necesito
     situacion-ramo
@@ -96,6 +98,7 @@ Sin clasificar aún
     transformador-binario
     triangulo-pascal
     validar-numero
+    calculo-interes
 
 
 

@@ -12,25 +12,24 @@ Los pasos deben estar muy bien definidos,
 y tienen que describir sin ambigüedades
 cómo llegar desde el inicio hasta el final.
 
-Un algoritmo tiene tres componentes:
+Componentes de un algoritmo
+---------------------------
+Conceptualmente, un algoritmo tiene tres componentes:
 
 .. index:: entrada (algoritmo), proceso, salida (algoritmo)
 
-1. la **entrada**: son los datos que necesita un algoritmo
-   para poder ser ejecutado;
+1. la **entrada**: son los datos sobre los que el algoritmo opera;
 2. el **proceso**: son los pasos que hay que seguir,
    utilizando la entrada;
 3. la **salida**: es el resultado que entrega el algoritmo.
 
-.. index:: problema computacional
-
-Los algoritmos son una herramienta para resolver
-**problemas computacionales**.
-La definición de un problema computacional
-especifica en términos generales
-la relación deseada entre la entrada y la salida.
-El algoritmo especifica
-cómo la entrada se transforma en la salida.
+El proceso es una secuencia de **sentencias**,
+que debe ser realizada en orden.
+El proceso también puede tener **ciclos**
+(grupos de sentencias que son ejecutadas varias veces)
+y **condicionales**
+(grupos de sentencias que sólo son ejecutadas
+bajo ciertas condiciones).
 
 Cómo describir un algoritmo
 ---------------------------

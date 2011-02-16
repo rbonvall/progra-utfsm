@@ -1,0 +1,3 @@
+Temp. en Fahrenheit: `95`
+El equivalente en Celsius es: 35.0
+
