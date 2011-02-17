@@ -14,16 +14,18 @@ Los sostenidos son las teclas negras:
   .. image:: ../../diagramas/piano.png
 
 La escala es circular, y se extiende infinitamente en ambas direcciones.
-Esto signfica que después de si viene do.
+Esto signfica que después de si viene nuevamente do.
 
 Cada par de notas consecutivas está separada por un semitono.
 Por ejemplo, entre re y sol♯ hay 6 semitonos.
 
-Un acorde es una combinación de notas que suenan bien al unísono.
+Un acorde_ es una combinación de notas que suenan bien al unísono.
 
-Existen varias tonalidades de acordes,
+.. _acorde: http://es.wikipedia.org/wiki/Acorde
+
+Existen varios tipos de acordes,
 que difieren en la cantidad de semitonos
-por las que las notas están separadas.
+por las que sus notas están separadas.
 
 Por ejemplo,
 los acordes mayores tienen tres notas
@@ -61,6 +63,8 @@ que entegue una lista de las notas del acorde en el orden correcto::
     ['sol#', 'si', 'do#']
     >>> acorde('si', '7')
     ['si', 're#', 'fa#', 'la']
+    >>> acorde('do#', '5')
+    ['do#', 'sol#']
 
 Si el tipo no es entregado,
 la función debe suponer que el acorde es mayor::
