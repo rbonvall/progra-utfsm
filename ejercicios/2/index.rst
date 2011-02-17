@@ -16,6 +16,7 @@ Listas
 .. toctree::
 
     estadisticos-localizacion
+    polinomios
 
 Conjuntos
 ---------
@@ -69,7 +70,6 @@ Sin clasificar aún
     modulo-listas
     notas-certamenes
     numeros-romanos
-    polinomio-evaluacion-derivacion
     promedio-cuadrados
     trios-pitagoricos
 
