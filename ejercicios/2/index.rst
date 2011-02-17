@@ -15,6 +15,8 @@ Listas
 ------
 .. toctree::
 
+    estadisticos-localizacion
+
 Conjuntos
 ---------
 .. toctree::
@@ -28,6 +30,12 @@ Estructuras de datos anidadas
 .. toctree::
 
     acordes
+
+Strings
+-------
+.. toctree::
+
+    telegrafo
 
 Desafíos
 --------
@@ -47,7 +55,6 @@ Sin clasificar aún
     desviacion-estandar
     divisibles-nueve
     divisibles-once
-    estadisticos-localizacion
     factorial-reciproco
     fecha
     fechas
@@ -64,6 +71,5 @@ Sin clasificar aún
     numeros-romanos
     polinomio-evaluacion-derivacion
     promedio-cuadrados
-    telegrafo
     trios-pitagoricos
 
