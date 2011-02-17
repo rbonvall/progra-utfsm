@@ -36,22 +36,20 @@ a las siguientes reglas:
   del total acumulado. Así, `IV = 4`, `XL = 40`
   y `CM = 900`.
 
-Desarrolle un programa que sea capaz de leer
-una secuencia de hasta 10 caracteres que
-representa un número en notación romana y
-calcule el equivalente en notación arábiga.
+Escriba una función ``romano_a_arabigo``
+que reciba un string con un número en notación romana,
+y entregue el equivalente en la notación arábiga::
 
-::
+    >>> romano_a_arabigo('MCMXIV')
+    1914
+    >>> romano_a_arabigo('XIV')
+    14
+    >>> romano_a_arabigo('X')
+    10
+    >>> romano_a_arabigo('IV')
+    4
+    >>> romano_a_arabigo('DLIV')
+    554
+    >>> romano_a_arabigo('CCCIII')
+    303
 
-	Ingrese secuencia: MCMXIV
-	1914
-	Ingrese secuencia: XIV
-	14
-	Ingrese secuencia: X
-	10
-	Ingrese secuencia: IV
-	4
-	Ingrese secuencia: DLIV
-	554
-	Ingrese secuencia: CCCIII
-	303
