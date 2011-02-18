@@ -13,10 +13,12 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{pgfpages}
+\usepackage{wrapfig}
 
 \setjobnamebeamerversion{02-diapos}
 
 \input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
 
 \title{Uso de intérprete, expresiones y tipos}
 \author{Programación \\ \url{http://progra.usm.cl}}
@@ -25,25 +27,25 @@
 \begin{document}
   \maketitle
 
-  \includeslide[width=.5\textwidth]{prog-ejemplo}
+  \diapo{conceptos}
 
-  Ésta diapositiva presenta el programa de ejemplo
-  que será usado para mostrar cómo ejecutar un programa.
-  Además, introduce algunas de las convenciones
+  \diapo{prog-ejemplo}
+  Esta diapositiva es importante
+  porque introduce algunas convenciones
   que serán seguidas durante todo el semestre
   en las diapositivas, los apuntes y las evaluaciones:
   \begin{itemize}
-    \item los enunciados explican el problema en palabras;
+    \item los enunciados explican el problema en prosa;
     \item el caso de prueba muestra cómo se ve la ejecución de un programa,
       donde la entrada ingresada por el usuario aparece en negrita;
     \item el código es el programa que puede ser copiado y pegado
       en un editor de texto para ser guardado y ejecutado.
   \end{itemize}
+  Presentar estas convenciones en detalle a los estudiantes.
 
-  En este punto,
-  explicar en detalle qué hace cada parte del programa,
-  para que los estudiantes comiencen a familiarizarse con el código.
-  En particular, explicar lo siguiente:
+  Antes de mostrar el programa en ejecución,
+  explicar también los siguientes aspectos del ejemplo,
+  para que los estudiantes comiencen a familiarizarse con el código:
   \begin{itemize}
     \item la primera línea del programa es la entrada,
       la segunda línea es el proceso
@@ -54,9 +56,31 @@
     \item la función \li!float! convierte el texto a un número real,
       lo que es necesario para poder hacer operaciones aritméticas
       con el valor ingresado;
-    \item cómo es evaluada la expresión,
-      y su resultado asignado a la variable \li!c!;
+    \item la expresión \((f - 32)\cdot 5/9\)
+      es evaluada con el valor que tiene \(f\) en ese momento,
+      y al resultado se le asocia el nombre \li!c!;
+    \item la sentencia \li!print!
+      imprime el texto entre comillas tal cual aparece,
+      y a continuación el valor que tiene \li!c! en ese momento.
   \end{itemize}
+
+  A continuación,
+  muestre en vivo cómo ingresar el programa en el editor de texto y ejecutarlo.
+  Hágalo de varias maneras:
+  \begin{itemize}
+    \item primero usando Bloc de Notas + doble clic en el ícono del programa,
+    \item luego, ingresando el código en IDLE y ejecutándolo desde ahí
+      (presionando F5, o desde el menú),
+    \item finalmente,
+      ingresando el programa línea por línea en la consola de Python.
+  \end{itemize}
+
+  \diapo{ejemplos-expresiones}
+  Presente la definición de \textbf{expresión}:
+  una combinación de valores y operaciones
+  que al ser evaluadas entregan un valor como resultado.
+
+
 
 \end{document}
 
