@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+
+\setjobnamebeamerversion{02-diapos}
+\lstset{xleftmargin=3em}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Diapositivas y notas de clases}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{Febrero de 2011}
+
+\begin{document}
+  \maketitle
+
+  El material de clases de la asignatura de programación
+  está compuesto por:
+  \begin{itemize}
+    \item diapositivas para ser usadas en cada clase, y
+    \item notas de clases como apoyo para los profesores.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  Las presentaciones están diseñadas para apoyar una clase
+  que consiste en presentación de contenidos,
+  ejemplos y ejercicios para ser resueltos
+  en la pizarra y en el computador.
+
+  Las diapositivas no tienen texto en prosa para ser leído,
+  sino que incluyen ejemplos, diagramas y enunciados de ejercicios,
+  que el profesor puede usar como complemento para su exposición.
+
+  No toda la información relevante a cada contenido
+  aparece en las diapositivas,
+  sino sólo la necesaria para presentar cada concepto.
+  Para profundizar la materia y estudiar los detalles,
+  es importante incentivar al estudiante
+  Para que lea el apunte del ramo y la bibliografía complementaria,
+  busque en internet y ejercite por su cuenta.
+
+  Cada profesor puede presentar los contenidos
+  siguiendo su estilo personal,
+  y apoyándose de la pizarra y el computador
+  para desarrollar sus propios ejemplos.
+
+  \section*{Notas de clases}
+  Cada presentación va acompañada de un documento de notas de clases.
+
+  Las notas no son una imposición para los profesores,
+  sino más bien una explicación
+  de cómo están pensadas las diapositivas para ser expuestas.
+  Además,
+  sirven como recordatorio para puntos importantes
+  que es importante mencionar en clases
+  y que podrían ser olvidados.
+
+  \section*{Convenciones}
+
+  Todos los programas y ejemplos que aparecen
+  en apuntes, diapositivas y evaluaciones
+  siguen todos algunas convenciones de estilo,
+
+  Los ejercicios de hacer programas
+  irán acompañados de casos de pruebas,
+  que son un ejemplo de una ejecución del programa.
+  Los casos de prueba tienen fondo gris
+  y denotan la entrada del usuario con negrita:%
+  \begin{lstlisting}[language=testcase,linewidth=.6\textwidth]
+Ingrese anno de nacimiento: `1980`
+Ingrese anno actual: `2011`
+Usted tiene 31 annos.
+  \end{lstlisting}
+
+  El código fuente de programas aparece siempre
+  con la sintaxis resaltada para mayor claridad:
+  \begin{lstlisting}[language=py,linewidth=.5\textwidth]
+nacimiento = int(raw_input('Ingrese anno de nacimiento: '))
+actual     = int(raw_input('Ingrese anno actual: '))
+edad = actual - nacimiento
+print 'Usted tiene', edad, 'annos'
+  \end{lstlisting}
+
+  Los ejemplos que usan la consola interactiva
+  pueden ser identificados por el símbolo \verb!>>>!:
+  \begin{lstlisting}[language=py,linewidth=.5\textwidth]
+>>> nacimiento = 1971
+>>> actual = 2010
+>>> actual - nacimiento
+39
+>>> edad = actual - nacimiento
+>>> print edad
+39
+  \end{lstlisting}
+
+\end{document}
+
+
