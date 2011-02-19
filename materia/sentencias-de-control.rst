@@ -437,7 +437,7 @@ Saltar a la siguiente iteración
 -------------------------------
 .. index:: continue
 
-La sentencia **cycle** se usa
+La sentencia **continue** se usa
 para saltar a la iteración siguiente
 sin llegar al final de la que está en curso.
 

@@ -74,4 +74,33 @@ Sin clasificar aún
     numeros-romanos
     promedio-cuadrados
     trios-pitagoricos
-
+    contrasenas
+    dividir-frases
+    eliminar-elementos-comienzan-con
+    formateando-fechas
+    formatear-strings
+    laminas
+    largo-listas
+    mayusculas-y-minusculas.rst
+    secuencia-adn
+    consulta-medica
+    inventario
+    sumas-filas-columnas
+    anagramas
+    paises
+    reporte
+    supermercado
+    contar-iniciales
+    palabras-panvocalicas
+    escalas
+    mayores-que
+    asistencia
+    palabras-repetidas
+    iguales-o-distintos
+    poker
+    recorrido-diccionarios
+    subconjuntos
+    partidos
+    cumpleanos
+    rectas
+    compatibilidad-personas
