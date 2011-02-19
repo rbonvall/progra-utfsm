@@ -407,5 +407,118 @@ de que su código sea fácil de entender por otras personas,
 
 Llamadas a función
 ------------------
-(Por escribir)
+.. index:: función
+
+Los operadores forman un conjunto bastante reducido de operaciones.
+Más comúnmente,
+las operaciones más generales son representadas como **funciones**.
+
+.. index:: parámetro, argumento, llamada a función
+
+Al igual que en matemáticas, las funciones tienen un nombre,
+y reciben **parámetros** (o **argumentos**)
+que van entre paréntesis después del nombre.
+La operación de usar la función para obtener un resultado
+se llama **llamar la función**.
+
+Ya conocemos la función ``raw_input()``,
+que entrega como resultado
+el texto ingresado por el usuario mediante el teclado.
+
+.. index:: abs
+
+La función ``abs`` entrega el valor absoluto de su argumento::
+
+    >>> abs(4 - 5)
+    1
+    >>> abs(5 - 4)
+    1
+
+.. index:: len (de un string)
+
+La función ``len`` recibe un string y entrega su largo.
+(más adelante veremos otros usos de la función ``len``)::
+
+    >>> len('hola mundo')
+    10
+    >>> len('hola' * 10)
+    40
+
+.. index:: int (función), float (función), str (función)
+
+Los nombres de los tipos también sirven como funciones,
+que entregan el equivalente de su parámetro
+en el tipo correspondiente::
+
+    >>> int(3.8)
+    3
+    >>> float('1.5')
+    1.5
+    >>> str(5 + 6)
+    '11'
+    >>> int('5' + '6')
+    56
+
+.. index:: min, max
+
+Las funciones ``min`` y ``max``
+entregan el mínimo y el máximo de sus argumentos::
+
+    >>> min(6, 1, 8)
+    1
+    >>> min(6.0, 1.0, 8.0)
+    1.0
+    >>> max(6, 1, 4, 8)
+    8
+
+.. index:: round
+
+La función ``round`` redondea un número real
+al entero más cercano::
+
+    >>> round(4.4)
+    4.0
+    >>> round(4.6)
+    5.0
+
+.. index:: exp, sin, log, 
+
+Algunas funciones matemáticas
+como la exponencial, el logaritmo
+y las trigonométricas pueden ser usadas,
+pero deben ser importadas primero
+usando la sentencia ``import``,
+que veremos en detalle más adelante::
+
+    >>> from math import exp
+    >>> exp(2)
+    7.3890560989306504
+    >>> from math import sin, cos
+    >>> cos(3.14)
+    -0.9999987317275395
+    >>> sin(3.14)
+    0.0015926529164868282
+
+La lista completa de funciones matemáticas que pueden ser importadas
+está en la `descripción del módulo math`_
+en la documentación de Python.
+
+.. _descripción del módulo math: http://docs.python.org/library/math.html
+
+Más adelante también aprenderemos
+a crear nuestras propias funciones.
+Por ahora, sólo necesitamos saber cómo llamarlas.
+
+Por supuesto,
+siempre es necesario que los argumentos de una llamada
+tengan el tipo apropiado::
+
+    >>> round('perro')
+    Traceback (most recent call last):
+      File "<console>", line 1, in <module>
+    TypeError: a float is required
+    >>> len(8)
+    Traceback (most recent call last):
+      File "<console>", line 1, in <module>
+    TypeError: object of type 'int' has no len()
 
