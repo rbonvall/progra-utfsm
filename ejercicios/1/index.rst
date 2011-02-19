@@ -99,7 +99,7 @@ Sin clasificar aún
     triangulo-pascal
     validar-numero
     calculo-interes
-
-
+    media-armonica
+    e
 
 
