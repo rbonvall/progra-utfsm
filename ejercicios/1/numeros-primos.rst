@@ -121,9 +121,9 @@ El número 1 no es ni primo ni compuesto.
 
    * ¿Cuántos primos menores que diez mil terminan en 7?
    * ¿Cuál es la suma de los cuadrados de los números primos entre 1 y 1000?
-     (Respuesta: `49.345.379`).
+     (Respuesta: 49.345.379).
    * ¿Cuál es el producto de todos los números primos menores que 100 que tienen algún dígito 7?
-     (Respuesta: `7\times 17\times 37\times 47\times 67\times 71\times 73\times 79\times 97 = 550.682.633.299.463`).
+     (Respuesta: 7 × 17 × 37 × 47 × 67 × 71 × 73 × 79 × 97 = 550.682.633.299.463).
 
 
 
