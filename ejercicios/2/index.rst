@@ -72,4 +72,12 @@ Sin clasificar aún
     numeros-romanos
     promedio-cuadrados
     trios-pitagoricos
-
+    contrasenas
+    dividir-frases
+    eliminar-elementos-comienzan-con
+    formateando-fechas
+    formatear-strings
+    laminas
+    largo-listas
+    mayusculas-y-minusculas.rst
+    secuencia-adn
