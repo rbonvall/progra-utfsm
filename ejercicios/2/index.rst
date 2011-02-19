@@ -6,6 +6,7 @@ Funciones
 .. toctree::
 
     numero-par
+    funciones-numeros-primos
 
 Módulos
 -------
@@ -17,6 +18,7 @@ Listas
 
     estadisticos-localizacion
     polinomios
+    josefo
 
 Conjuntos
 ---------
