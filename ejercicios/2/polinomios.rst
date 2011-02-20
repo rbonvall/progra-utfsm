@@ -44,7 +44,15 @@ en un programa::
     >>> r = [-1, 0, 0, -5, 0, 3]
     >>> s = [0] * 40 + [5] + [0] * 39 + [2]
 
-#. Escriba una función ``evaluar(p, x)``
+#. Escriba la función ``grado(p)``
+   que entregue el grado de un polinomio::
+
+     >>> grado(r)
+     5
+     >>> grado(s)
+     80
+
+#. Escriba la función ``evaluar(p, x)``
    que evalúe el polinomio ``p``
    (representado como una lista)
    en el valor ``x``::
@@ -58,7 +66,7 @@ en un programa::
      >>> evaluar([4, 3, 1], 3.14)
      23.2796
 
-#. Escriba una función ``sumar_polinomios(p1, p2)``
+#. Escriba la función ``sumar_polinomios(p1, p2)``
    que entregue la suma de dos polinomios::
 
      >>> sumar_polinomios(p, r)
@@ -69,4 +77,10 @@ en un programa::
 
      >>> derivar_polinomio(r)
      [0, 0, -15, 0, 15]
+
+#. Escriba la función ``multiplicar_polinomios(p1, p2)``
+   que entregue el producto de dos polinomios::
+
+     >>> multiplicar_polinomios(p, q)
+     [4, -9, -30, -17]
 
