@@ -1,26 +1,18 @@
 Números automórficos y trimórficos
 ----------------------------------
 
-Un número se dice *automórfico* si su cuadrado termina
-en los mismos dígitos que el número original, por ejemplo:
+Un número se dice **automórfico** si su cuadrado termina
+en los mismos dígitos que el número original, por ejemplo: `76^{2} = 5776`.
 
-.. math::
-
-	76^{2} = 5776
-
-Un número se dice *trimórfico* si su cubo termina en los mismos
-dígitos que el número original, por ejemplo:
-
-.. math::
-
-	49^{3} = 117649
+Un número se dice **trimórfico** si su cubo termina en los mismos
+dígitos que el número original, por ejemplo `49^{3} = 117649`.
 
 Desarrolle una función para poder determinar los números
-automórficos y los trimórficos menos que 1000.
+automórficos y trimórficos menores que 1000.
 
 ::
 
-	automorificos()
+	>>> automorificos()
 	0
 	1
 	5
@@ -33,7 +25,7 @@ automórficos y los trimórficos menos que 1000.
 
 ::
 
-	trimorficos()
+	>>>  trimorficos()
 	0
 	1
 	4
