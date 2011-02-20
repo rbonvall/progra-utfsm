@@ -1,6 +1,5 @@
 Láminas
 -------
-
 El módulo ``random`` provee funciones
 para entregar valores al azar.
 En computación, los números creados al azar
@@ -58,15 +57,13 @@ entre 5 y 14).
 ..     >>> a
 ..     [9, 12, 14, 1, 5]
 
-* Ejercicio 1
-
-Suponga que Pepito colecciona un álbum de láminas.
-Las láminas están numeradas desde 1 hasta 640,
-y se compran en sobres de cinco láminas al azar.
-
-Escriba una función ``nuevo_sobre()``
-que entregue una lista con las láminas que vienen
-en un sobre recién comprado::
+#. Suponga que Pepito colecciona un álbum de láminas.
+   Las láminas están numeradas desde 1 hasta 640,
+   y se compran en sobres de cinco láminas al azar.
+   
+   Escriba una función ``nuevo_sobre()``
+   que entregue una lista con las láminas que vienen
+   en un sobre recién comprado::
 
     >>> nuevo_sobre()
     [27, 31, 207, 455, 529]
@@ -77,17 +74,15 @@ en un sobre recién comprado::
     >>> nuevo_sobre()
     [113, 35, 592, 560, 244]
 
-* Ejercicio 2
+#. Pepito lleva un registro de sus láminas
+   en una lista llamada ``laminas_pepito``.
+   Cada ciertos días,
+   Pepito va al quiosco y compra algunos sobres,
+   y los agrega a su lista.
 
-Pepito lleva un registro de sus láminas
-en una lista llamada ``laminas_pepito``.
-Cada ciertos días,
-Pepito va al quiosco y compra algunos sobres,
-y los agrega a su lista.
-
-Escriba una función ``agregar_laminas(lista_laminas, m)``,
-que agregue las láminas de ``m`` nuevos sobres
-a la ``lista_laminas``::
+   Escriba una función ``agregar_laminas(lista_laminas, m)``,
+   que agregue las láminas de ``m`` nuevos sobres
+   a la ``lista_laminas``::
 
     >>> laminas_pepito = []
     >>> agregar_laminas(laminas_pepito, 1)
@@ -101,44 +96,38 @@ a la ``lista_laminas``::
     >>> len(laminas_pepito)
     85
 
-Note que la función no retorna nada.
-Sólo modifica la lista que recibe como parámetro.
+   Note que la función no retorna nada.
+   Sólo modifica la lista que recibe como parámetro.
 
-* Ejercicio 3
-
-Escriba una función ``faltantes(lista_laminas)``
-que entregue el conjunto de las láminas que faltan para completar el álbum::
+#. Escriba una función ``faltantes(lista_laminas)``
+   que entregue el conjunto de las láminas que faltan para completar el álbum::
 
     >>> laminas_pepito = []
     >>> agregar_laminas(laminas_pepito, 128)
     >>> faltantes(laminas_pepito)
     {514, 3, 5, 7, 10, 523, 12, 525, 14, 16, 529, ...}
 
-Note que Pepito compró 128 sobres,
-que en total tienen el mismo número de láminas del álbum,
-pero como hay muchas láminas repetidas y otras que no salen,
-no es suficiente para completar el álbum.
+   Note que Pepito compró 128 sobres,
+   que en total tienen el mismo número de láminas del álbum,
+   pero como hay muchas láminas repetidas y otras que no salen,
+   no es suficiente para completar el álbum.
 
-* Ejercicio 4
-
-Escriba una función ``cuenta(lista_laminas)``
-que entregue un diccionario que asocie a cada lámina
-el número de veces que está en la lista de láminas::
+#. Escriba una función ``cuenta(lista_laminas)``
+   que entregue un diccionario que asocie a cada lámina
+   el número de veces que está en la lista de láminas::
 
     >>> laminas_pepito = [4, 6, 9, 12, 9, 9, 6, 12, 2]
     >>> cuenta(laminas_pepito)
     {9: 3, 2: 1, 4: 1, 6: 2, 12: 2}
 
-* Ejercicio 5
-
-Pepito intercambia láminas con Yayita,
-que también colecciona el álbum.
-A Pepito le interesa obtener las láminas que Yayita tiene repetidas
-y que a él le faltan, y viceversa.
-
-Escriba una función ``cuales_me_sirven(lista_quiere, lista_tiene)``
-que entregue el conjunto de las láminas que le faltan a ``lista_quiere``
-y que ``lista_tiene`` tiene repetidas::
+#. Pepito intercambia láminas con Yayita,
+   que también colecciona el álbum.
+   A Pepito le interesa obtener las láminas que Yayita tiene repetidas
+   y que a él le faltan, y viceversa.
+   
+   Escriba una función ``cuales_me_sirven(lista_quiere, lista_tiene)``
+   que entregue el conjunto de las láminas que le faltan a ``lista_quiere``
+   y que ``lista_tiene`` tiene repetidas::
 
     >>> laminas_pepito = [4, 6, 9, 12, 9, 9, 6, 12, 2]
     >>> laminas_yayita = [4, 9, 7, 7, 4, 4, 8]
@@ -147,22 +136,20 @@ y que ``lista_tiene`` tiene repetidas::
     >>> cuales_me_sirven(laminas_yayita, laminas_pepito)
     {12, 6}
 
-A Pepito le falta la lámina 7, que Yayita tiene repetida.
-También le falta la 8, pero ella no la tiene repetida,
-así que no le sirve.
-Yayita tiene repetida la 4,
-pero Pepito ya la tiene,
-así que tampoco le sirve.
+   A Pepito le falta la lámina 7, que Yayita tiene repetida.
+   También le falta la 8, pero ella no la tiene repetida,
+   así que no le sirve.
+   Yayita tiene repetida la 4,
+   pero Pepito ya la tiene,
+   así que tampoco le sirve.
 
-* Ejercicio 6
+#. El sobre de láminas vale $250.
+   Pepito quiere saber cuánto va a gastar en láminas
+   para completar el álbum.
 
-El sobre de láminas vale $250.
-Pepito quiere saber cuánto va a gastar en láminas
-para completar el álbum.
-
-Escriba una función ``costo_laminas()``
-que vaya comprando sobres hasta completar las 640 láminas distintas,
-y que retorne cuál fue el gasto total::
+   Escriba una función ``costo_laminas()``
+   que vaya comprando sobres hasta completar las 640 láminas distintas,
+   y que retorne cuál fue el gasto total::
 
     # Si no sale ninguna repetida, el resultado será:
     >>> costo_laminas()
@@ -176,16 +163,14 @@ y que retorne cuál fue el gasto total::
     >>> costo_laminas()
     241750
 
-* Ejercicio 7
+#. Vladimiro es un fanfarrón:
+   él desea sacar pica a Yayita
+   por las láminas que él tiene
+   y que ella no.
 
-Vladimiro es un fanfarrón:
-él desea sacar pica a Yayita
-por las láminas que él tiene
-y que ella no.
-
-Escriba una función ``tengo_y_tu_no(mis_laminas, tus_laminas)``
-que entregue el conjunto de láminas que
-están en ``mis_laminas`` y no en ``tus_laminas``::
+   Escriba una función ``tengo_y_tu_no(mis_laminas, tus_laminas)``
+   que entregue el conjunto de láminas que
+   están en ``mis_laminas`` y no en ``tus_laminas``::
 
     >>> laminas_vladimiro = [6, 1, 3, 3, 4, 7]
     >>> laminas_yayita = [8, 4, 9, 12, 2, 11, 4, 6, 13, 14]
