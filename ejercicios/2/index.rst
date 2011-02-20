@@ -108,3 +108,8 @@ Sin clasificar aún
     loto
     digitos-numero
     rut
+    becas-puntajes
+    calcular-raiz
+    automorficos-trimorficos
+    binarios
+    cuenta-caracteres
