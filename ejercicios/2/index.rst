@@ -104,3 +104,7 @@ Sin clasificar aún
     cumpleanos
     rectas
     compatibilidad-personas
+    personas
+    loto
+    digitos-numero
+    rut
