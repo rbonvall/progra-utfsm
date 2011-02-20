@@ -43,3 +43,35 @@ reutilizando componentes para evitar escribir código repetido.
        >>> primos_hasta(19)
        [2, 3, 5, 7, 11, 13, 17, 19]
 
+#. Cree un módulo llamado ``primos.py``
+   que contenga todas las funciones anteriores.
+
+   Al ejecutar ``primos.py`` como un programa por sí solo,
+   debe mostrar, a modo de prueba,
+   los veinte primeros números primos.
+   Al importarlo como un módulo,
+   esto no debe ocurrir.
+
+#. Un `primo de Mersenne`_ es un número primo de la forma `2^p - 1`.
+   Una propiedad conocida de los primos de Mersenne es que
+   `p` debe ser también un número primo.
+
+   .. _primo de Mersenne: http://es.wikipedia.org/wiki/N%C3%BAmero_primo_de_Mersenne
+
+   Escriba un programa llamado ``mersenne.py``
+   que pregunte al usuario un número `n`,
+   y muestre como salida
+   los primeros `n` primos de Mersenne:
+
+   .. code-block:: testcase
+
+       Cuantos primos de Mersenne: `5`
+       3
+       7
+       31
+       127
+       8191
+
+   Su programa debe importar el módulo ``primos``
+   y usar las funciones que éste contiene.
+
