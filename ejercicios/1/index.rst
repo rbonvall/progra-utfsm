@@ -7,6 +7,7 @@ Programas simples
 
     saludo
     circulos
+    promedio
     numero-invertido
     pitagoras
     parte-decimal
@@ -19,6 +20,7 @@ Estructuras condicionales
 
     valor-absoluto
     bisiestos
+    situacion-ramo
     ordenamiento-basico
     calculadora
     set-de-tenis
@@ -32,6 +34,7 @@ Ciclos
     multiplos
     tablas-de-multiplicar
     pi
+    e
 
 Patrones comunes
 ----------------
@@ -85,9 +88,7 @@ Sin clasificar aún
     numero-mayor
     numeros-amistosos
     numeros-combinatorios
-    promedio
     que-nota-necesito
-    situacion-ramo
     suma-digitos-cubo
     suma-fracciones
     suma-naturales
@@ -98,6 +99,5 @@ Sin clasificar aún
     validar-numero
     calculo-interes
     media-armonica
-    e
 
 
