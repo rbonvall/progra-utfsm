@@ -1,12 +1,9 @@
 Promedio
 --------
 
-Realizar un programa que permita
-determinar el promedio de 4 notas ingresadas
-por el usuario.
-
-
-::
+Escriba un programa que calcule
+el promedio de 4 notas ingresadas
+por el usuario::
 
     Primera nota: 55
     Segunda nota: 71
@@ -14,12 +11,3 @@ por el usuario.
     Cuarta nota: 87
     El promedio es: 64.75 
 
-* Solución
-
-::
-
-    nota1 = int(input("Primera nota:"))
-    nota2 = int(input("Segunda nota:"))
-    nota3 = int(input("Tercera nota:"))
-    nota4 = int(input("Cuarta nota:"))
-    print ("El promedio es: ", (nota1+nota2+nota3+nota4)/4)
