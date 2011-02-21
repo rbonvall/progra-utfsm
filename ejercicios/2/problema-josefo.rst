@@ -11,14 +11,13 @@ el sobreviviente es la persona 10:
 
 .. image:: http://img.thedailywtf.com/images/200907/Josephus.gif
 
-Escriba un programa que reciba como entrada
-los valores de ``m`` y ``n``,
+.. _problema de Josefo: http://es.wikipedia.org/wiki/Problema_de_Flavio_Josefo
+
+Escriba una función que reciba los parámetros ``m`` y ``n``,
 e indique quién es el sobreviviente:
 
 .. code-block:: none
 
-     Ingrese m y n
-    12 3
-     El sobreviviente es 10
-
-.. _problema de Josefo: http://es.wikipedia.org/wiki/Problema_de_Flavio_Josefo
+    >>> sobreviviente(12, 3)
+    10
+-
