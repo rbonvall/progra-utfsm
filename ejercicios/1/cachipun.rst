@@ -45,5 +45,5 @@ escribiendo ``tijera``, ``papel`` o ``piedra``.
     B: `piedra`
     3 - 1
 
-    Gano A
+    A es el ganador
 

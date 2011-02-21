@@ -1,6 +1,12 @@
 Introducción a la programación
 ==============================
 
+    *Se suele decir que una persona no entiende algo de verdad
+    hasta que puede explicárselo a otro.
+    En realidad, no lo entiende de verdad
+    hasta que puede explicárselo a un computador.*
+    --- `Donald Knuth <http://es.wikipedia.org/wiki/Donald_Knuth>`_.
+
 Si tuvieramos que resumir el propósito de la programación en una frase,
 ésta debería ser:
 
@@ -116,3 +122,5 @@ y de diseñar y escribir programas sencillos.
 Además, entenderá qué es lo que ocurre dentro del computador
 los programas que usted usa.
 
+     *Los computadores son inútiles: sólo pueden darte respuestas*.
+     --- `Pablo Picasso <http://es.wikipedia.org/wiki/Pablo_Picasso>`_.

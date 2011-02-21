@@ -17,7 +17,7 @@ Contenidos del primer certamen
     expresiones
     errores
     sentencias-de-control
-..    patrones
+    patrones
 
 Contenidos del segundo certamen
 -------------------------------

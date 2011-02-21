@@ -4,11 +4,10 @@ Huevos a la copa
     *Ejercicio sacado de* [Lang09]_.
 
 Cuando un huevo es hervido en agua,
-primero las proteínas se transforman
-y después se coagulan.
-Apenas la temperatura sobrepasa un punto crítico,
-las reacciones comienzan,
-y se aceleran a medida que la temperatura aumenta.
+las proteínas comienzan a coagularse
+cuando la temperatura sobrepasa un punto crítico.
+A medida que la temperatura aumenta,
+las reacciones se aceleran.
 
 En la clara, las proteínas comienzan a coagularse
 para temperaturas sobre 63°C,

@@ -1,16 +1,12 @@
 Ejercicios para el certamen 2
 =============================
 
-Funciones
----------
+Funciones y módulos
+-------------------
 .. toctree::
 
     numero-par
     funciones-numeros-primos
-
-Módulos
--------
-.. toctree::
 
 Listas
 ------

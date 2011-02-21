@@ -15,9 +15,7 @@ la raíz cuadrada de un número de acuerdo al siguiente procedimiento:
   y el resultado aproximado (truncado) estará dada por la cantidad de
   veces que se hizo la resta menos uno.
 
-Por ejemplo:
-
-::
+Por ejemplo::
 
 	36
 
@@ -43,13 +41,11 @@ Por ejemplo:
 	raíz aproximada: 3
 
 
-La dinámica de la función deberá ser la siguiente:
+La dinámica de la función deberá ser la siguiente::
 
-::
-
-	raiz_aproximada(25)
+	>>> raiz_aproximada(25)
 	5
-	raiz_aproximada(6)
+	>>> raiz_aproximada(6)
 	2
-	raiz_aproximada(1)
+	>>> raiz_aproximada(1)
 	1

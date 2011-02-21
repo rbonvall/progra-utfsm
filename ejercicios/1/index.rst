@@ -78,8 +78,6 @@ Sin clasificar aún
     ecuacion-cuadratica
     es-fibonacci
     lanzando-monedas
-    leer-numeros
-    leer-tres-numeros
     letra-o-numero
     notas
     numero-deleitable
