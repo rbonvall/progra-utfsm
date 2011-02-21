@@ -113,3 +113,10 @@ Sin clasificar aún
     automorficos-trimorficos
     binarios
     cuenta-caracteres
+    numero-letras
+    fecha-siguiente
+    dias-entre-fechas
+    problema-josefo
+    distancias
+    donantes
+    mezcla-numeros

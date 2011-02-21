@@ -101,5 +101,16 @@ Sin clasificar aún
     calculo-interes
     media-armonica
     e
-
-
+    edad
+    segundos
+    division
+    comparador
+    multiplo
+    tres-numeros
+    ecuacion-primer-grado
+    potencia-dos
+    suma-entre-numeros
+    dibujar-rectangulo
+    dibujar-triangulo
+    divisores
+    n-multiplos
