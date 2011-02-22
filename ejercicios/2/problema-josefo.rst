@@ -20,4 +20,3 @@ e indique quién es el sobreviviente:
 
     >>> sobreviviente(12, 3)
     10
--
