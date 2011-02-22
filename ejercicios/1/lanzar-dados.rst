@@ -5,7 +5,7 @@ Escriba un programa que muestre
 todas las combinaciones posibles al momento
 de lanzar dos dados de 6 caras:
 
-.. code-block:: testcase
+.. testcase::
 
    1 1
    1 2

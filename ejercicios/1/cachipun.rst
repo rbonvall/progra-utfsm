@@ -19,7 +19,7 @@ y termine cuando uno de ellos haya ganado tres rondas.
 Los jugadores deben indicar su jugada
 escribiendo ``tijera``, ``papel`` o ``piedra``.
 
-.. code-block:: testcase
+.. testcase::
 
     A: `tijera`
     B: `papel`

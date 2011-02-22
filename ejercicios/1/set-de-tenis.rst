@@ -28,31 +28,31 @@ al periodista le gustaría saber:
 
 Desarrolle un programa que solucione el problema de Solarrabietas:
 
-.. code-block:: testcase
+.. testcase::
 
     Juegos ganados por A: `4`
     Juegos ganados por B: `5`
     Aun no termina
 
-.. code-block:: testcase
+.. testcase::
 
     Juegos ganados por A: `5`
     Juegos ganados por B: `7`
     Gano B
 
-.. code-block:: testcase
+.. testcase::
 
     Juegos ganados por A: `5`
     Juegos ganados por B: `6`
     Aun no termina
 
-.. code-block:: testcase
+.. testcase::
 
     Juegos ganados por A: `3`
     Juegos ganados por B: `7`
     Invalido
 
-.. code-block:: testcase
+.. testcase::
 
     Juegos ganados por A: `6`
     Juegos ganados por B: `4`

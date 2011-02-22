@@ -4,7 +4,7 @@ Escriba un programa que reciba como entrada
 dos números,
 y los muestre ordenados de menor a mayor:
 
-.. code-block:: testcase
+.. testcase::
 
 	Ingrese numero: `51`
 	Ingrese numero: `24`
@@ -13,7 +13,7 @@ y los muestre ordenados de menor a mayor:
 A continuación,
 haga lo mismo con tres números:
 
-.. code-block:: testcase
+.. testcase::
 
 	Ingrese numero: `8`
 	Ingrese numero: `1`
@@ -23,7 +23,7 @@ haga lo mismo con tres números:
 Finalmente,
 hágalo con cuatro números:
 
-.. code-block:: testcase
+.. testcase::
 
 	Ingrese numero: `7`
 	Ingrese numero: `0`

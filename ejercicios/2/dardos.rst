@@ -29,18 +29,18 @@ lanzando tres dardos o menos,
 bajo la restricción que el último
 debe ser un doble o un *bull*.
 
-.. code-block:: testcase
+.. testcase::
 
     Puntaje: `178`
     Imposible
 
-.. code-block:: testcase
+.. testcase::
 
     Puntaje: `167`
     T20 T19 BULL
     T19 T20 BULL
 
-.. code-block:: testcase
+.. testcase::
 
     Puntaje: `5`
     3 D1
@@ -51,7 +51,7 @@ debe ser un doble o un *bull*.
     D1 1 D1
     T1 D1
 
-.. code-block:: testcase
+.. testcase::
 
     Puntaje: `142`
     T20 T20 D11

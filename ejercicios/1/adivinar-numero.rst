@@ -17,7 +17,7 @@ El usuario debe ingresar su intento,
 y el programa debe decir
 si el número pensado es mayor, menor, o el correcto:
 
-.. code-block:: testcase
+.. testcase::
 
   Adivine el numero.
   Intento 1: `32`
@@ -48,7 +48,7 @@ si usted piensa el número 82,
 y no hace trampa al jugar,
 la ejecución del programa se verá así:
 
-.. code-block:: testcase
+.. testcase::
 
     Intento 1: 50
     `>`

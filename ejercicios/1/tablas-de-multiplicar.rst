@@ -4,7 +4,7 @@ Tabla de multiplicar
 Escriba un programa que muestre una tabla de multiplicar
 como la siguiente:
 
-.. code-block:: testcase
+.. testcase::
 
      1   2   3   4   5   6   7   8   9  10
      2   4   6   8  10  12  14  16  18  20

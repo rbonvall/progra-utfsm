@@ -8,7 +8,7 @@ dados por las siguientes fórmulas:
 * `\text{perímetro} = 2\pi r`
 * `\text{área} = \pi r^{2}`
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese el radio: `5`
     Perímetro: 31.4

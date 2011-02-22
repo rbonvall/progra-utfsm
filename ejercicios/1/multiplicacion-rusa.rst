@@ -29,7 +29,7 @@ el multiplicador y el multiplicando,
 y entrege como resultado el producto de ambos,
 calculado mediante el método de multiplicación rusa.
 
-.. code-block:: testcase
+.. testcase::
 
    Ingrese multiplicador: `37`
    Ingrese multiplicando: `12`

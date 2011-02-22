@@ -5,7 +5,7 @@ Escriba un programa que
 muestre la tabla de multiplicar del 1 al 10
 del número ingresado por el usuario:
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese un numero: `9`
     9 x 1 = 9

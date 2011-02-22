@@ -14,7 +14,7 @@ total de viaje en formato ``horas:minutos``.
 El programa deja de pedir tiempos de viaje
 cuando se ingresa un 0.
 
-.. code-block:: testcase
+.. testcase::
 
     Duracion tramo: `15`
     Duracion tramo: `30`
@@ -22,7 +22,7 @@ cuando se ingresa un 0.
     Duracion tramo: `0`
     Tiempo total de viaje: 2:12 horas
 
-.. code-block:: testcase
+.. testcase::
 
     Duracion tramo: `51`
     Duracion tramo: `17`

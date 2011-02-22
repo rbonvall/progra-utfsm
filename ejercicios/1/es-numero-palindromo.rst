@@ -13,12 +13,12 @@ Escriba un programa
 que indique si el número ingresado
 es o no palíndromo:
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese un numero: `14941`
     14941 es palindromo
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese un numero: `81924`
     81924 no es palindromo

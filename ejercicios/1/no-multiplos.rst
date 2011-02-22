@@ -4,7 +4,7 @@ No múltiplos
 Escriba un programa que muestre los números naturales menores o iguales
 que un número `n` determinado, que no sean múltiplos ni de 3 ni de 7.
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese número: `24`
     1

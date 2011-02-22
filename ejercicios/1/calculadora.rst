@@ -9,35 +9,35 @@ que puede ser ``+``, ``-``, ``*``, ``/`` o ``//``.
 
 La salida del programa debe ser el resultado de la operación.
 
-.. code-block:: testcase
+.. testcase::
 
     Operando: `3`
     Operador: `+`
     Operando: `2`
     3 + 2 = 5
 
-.. code-block:: testcase
+.. testcase::
 
     Operando: `6`
     Operador: `-`
     Operando: `7`
     6 - 7 = -1
 
-.. code-block:: testcase
+.. testcase::
 
     Operando: `4`
     Operador: `*`
     Operando: `5`
     4 * 5 = 20
 
-.. code-block:: testcase
+.. testcase::
 
     Operando: `10`
     Operador: `/`
     Operando: `4`
     10 / 4 = 2.5
 
-.. code-block:: testcase
+.. testcase::
 
     Operando: `-1`
     Operador: `**`

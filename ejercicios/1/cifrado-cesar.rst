@@ -45,13 +45,13 @@ señalar una *llave* a utilizar.
 El programa nos entregará el *mensaje* ingresado,
 de una manera codificada.
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese mensaje: `abcdef`
     Ingrese llave: `2`
     cdefgh
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese mensaje: `9112`
     Ingrese llave: `3`

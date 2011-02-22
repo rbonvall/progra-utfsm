@@ -63,7 +63,7 @@ reutilizando componentes para evitar escribir código repetido.
    y muestre como salida
    los primeros `n` primos de Mersenne:
 
-   .. code-block:: testcase
+   .. testcase::
 
        Cuantos primos de Mersenne: `5`
        3

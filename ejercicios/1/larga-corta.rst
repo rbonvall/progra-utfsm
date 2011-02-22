@@ -18,7 +18,7 @@ de un string::
    >>> len('amarillo')
    8
 
-.. code-block:: testcase
+.. testcase::
 
    Cantidad de palabras: `5`
    Palabra 1: `negro`

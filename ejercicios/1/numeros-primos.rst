@@ -13,12 +13,12 @@ El número 1 no es ni primo ni compuesto.
 #. Escriba un programa que reciba como entrada un número natural,
    e indique si es primo o compuesto:
 
-   .. code-block:: testcase
+   .. testcase::
 
       Ingrese un numero: `17`
       17 es primo
 
-   .. code-block:: testcase
+   .. testcase::
 
       Ingrese un numero: `221`
       221 es compuesto
@@ -26,7 +26,7 @@ El número 1 no es ni primo ni compuesto.
 #. Escriba un programa que muestre los `n` primeros números primos,
    donde `n` es ingresado por el usuario:
 
-   .. code-block:: testcase
+   .. testcase::
 
       Cuantos primos: `10`
       2
@@ -43,7 +43,7 @@ El número 1 no es ni primo ni compuesto.
 #. Escriba un programa que muestre los números primos menores que `m`,
    donde `m` es ingresado por el usuario:
 
-   .. code-block:: testcase
+   .. testcase::
 
       Primos menores que: `19`
       2
@@ -57,7 +57,7 @@ El número 1 no es ni primo ni compuesto.
 #. Escriba un programa que cuente cuántos son los números primos menores que `m`,
    donde `m` es ingresado por el usuario:
 
-   .. code-block:: testcase
+   .. testcase::
 
       Contar primos menores que: `1000000`
       Hay 78498 primos menores que 1000000
@@ -75,7 +75,7 @@ El número 1 no es ni primo ni compuesto.
    Escriba un programa que muestre los factores primos
    de un número entero ingresado por el usuario:
 
-   .. code-block:: testcase
+   .. testcase::
 
       Ingrese numero: `204`
       2
@@ -83,7 +83,7 @@ El número 1 no es ni primo ni compuesto.
       3
       17
       
-   .. code-block:: testcase
+   .. testcase::
 
       Ingrese numero: `8575`
       5
@@ -101,7 +101,7 @@ El número 1 no es ni primo ni compuesto.
    Escriba un programa que reciba un número par como entrada
    y muestre todas las maneras en que puede ser escrito como una suma de dos primos:
 
-   .. code-block:: testcase
+   .. testcase::
 
       Ingrese número par: `338`
       7 + 331

@@ -7,7 +7,7 @@ Cuando se ingrese un cero,
 el programa debe terminar
 y mostrar un gráfico de cuántos valores positivos y negativos fueron ingresados:
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese varios valores, termine con cero:
     `-17`

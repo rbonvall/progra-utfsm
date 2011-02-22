@@ -25,7 +25,7 @@ Todas las coordenadas mostradas deben estar dentro del tablero.
 Si la coordenada ingresada por el usuario es inválida,
 el programa debe indicarlo.
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese coordenadas del caballo.
     Fila: `2`
@@ -36,7 +36,7 @@ el programa debe indicarlo.
     3 6
     4 7
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese coordenadas del caballo.
     Fila: `3`
@@ -52,7 +52,7 @@ el programa debe indicarlo.
     5 3
     5 5
 
-.. code-block:: testcase
+.. testcase::
 
     Ingrese coordenadas del caballo.
     Fila: `1`
