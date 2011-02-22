@@ -1,6 +1,12 @@
 Ejercicios para el certamen 1
 =============================
 
+Expresiones
+-----------
+.. toctree::
+
+    evaluacion-expresiones
+
 Programas simples
 -----------------
 .. toctree::
