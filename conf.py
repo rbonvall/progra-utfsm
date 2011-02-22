@@ -13,6 +13,7 @@ exclude_patterns = ['_build']
 extensions = [
     'sphinx.ext.jsmath',
     'testcase',
+    'testcase_directive',
 ]
 
 jsmath_path = 'jsMath/easy/load.js'
