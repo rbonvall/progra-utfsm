@@ -14,7 +14,7 @@ Listas
 
     estadisticos-localizacion
     polinomios
-    josefo
+    problema-josefo
 
 Conjuntos
 ---------
@@ -112,7 +112,6 @@ Sin clasificar aún
     numero-letras
     fecha-siguiente
     dias-entre-fechas
-    problema-josefo
     distancias
     donantes
     mezcla-numeros
