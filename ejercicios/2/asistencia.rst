@@ -6,44 +6,35 @@ La asistencia de los alumnos a clases puede ser llevada en una tabla como la sig
  +----------+---+---+---+---+---+---+---+
  | Clase    | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
  +==========+===+===+===+===+===+===+===+
- | Pepito   | T | T | T |   |   |   |   |
+ | Pepito   | ✓ | ✓ | ✓ |   |   |   |   |
  +----------+---+---+---+---+---+---+---+
- | Yayita   | T | T | T |   | T |   | T |
+ | Yayita   | ✓ | ✓ | ✓ |   | ✓ |   | ✓ |
  +----------+---+---+---+---+---+---+---+
- | Fulanita | T | T | T | T | T | T | T |
+ | Fulanita | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
  +----------+---+---+---+---+---+---+---+
- | Panchito | T | T | T |   | T | T | T |
+ | Panchito | ✓ | ✓ | ✓ |   | ✓ | ✓ | ✓ |
  +----------+---+---+---+---+---+---+---+
 
-En un programa, esta informacion puede ser representada usando listas:
+En un programa, esta informacion puede ser representada usando listas::
 
-::
+    >>> alumnos = ['Pepito', 'Yayita', 'Fulanita', 'Panchito']
+    >>> asistencia = [
+    ...  [True, True, True, False, False, False, False],
+    ...  [True, True, True, False, True,  False, True ],
+    ...  [True, True, True, True,  True,  True,  True ],
+    ...  [True, True, True, False, True,  True,  True ]]
+    >>>
+    
+#. Escriba una función ``total_por_alumno(asistencia)``
+   que entregue una lista con el número de clases
+   asistidas por cada alumno::
 
+    >>> total_por_alumno(asistencia)
+    [3, 5, 7, 6]
 
-	>>> alumnos = ['Pepito', 'Yayita', 'Fulanita', 'Panchito']
-	>>> asistencia = [
-	...
-	[True, True, True, False, False, False, False],
-	...
-	[True, True, True, False, True, False, True ],
-	...
-	[True, True, True, True, True, True, True ],
-	...
-	[True, True, True, False, True, True, True ]]
-	
-* Escriba una funció *total_por_alumno(asistencia)* que entregue una lista con
-  el número de clases asistidas por cada alumno:
+#. Escriba una función ``alumno_estrella(asistencia)``
+   que indique qué alumno asistió más a clases::
 
-::
-
-	>>> total_por_alumno(asistencia)
-	[3, 5, 7, 6]
-
-* Escriba una función *alumno_estrella(asistencia)* que indique qué alumno asistió
-  más a clases.
-
-::
-
-	>>> alumno_estrella(asistencia)
-	'Fulanita'
+    >>> alumno_estrella(asistencia)
+    'Fulanita'
 

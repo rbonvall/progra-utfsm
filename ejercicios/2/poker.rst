@@ -30,8 +30,9 @@ y los «monos» J, Q y K como 11, 12 y 13::
     carta4 = (12, 'C')
 
 En el juego de póker,
-una mano tiene cinco cartas.
-Esto sería un conjunto de cinco tuplas::
+una mano tiene cinco cartas,
+lo que en un programa vendría a ser
+un conjunto de cinco tuplas::
 
     mano = {(1, 'P'), (1, 'C'), (1, 'T'), (13, 'D'), (12, 'P')}
 
@@ -64,10 +65,10 @@ Esto sería un conjunto de cinco tuplas::
     >>> mano_2 = {(12, 'T'), (7, 'C'), (3, 'C'), (12, 'C'), (5, 'T')}
     >>> es_escalera(mano_1)
     True
-    >>> escalera(mano_2)
+    >>> es_escalera(mano_2)
     False
 
 #. Escriba el resto de las funciones
-   para identificar `el resto de las manos` del póker.
+   para identificar `el resto de las manos`_ del póker.
 
    .. _el resto de las manos: http://www.poquer.com.es/ranking.html

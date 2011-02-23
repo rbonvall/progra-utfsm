@@ -21,7 +21,8 @@ que indique si todos los elementos de una lista son distintos::
     >>> todos_distintos([0, 90, 1])
     True
 
-Sus funciones deben funcionar para listas de cualquier tamaño::
+Sus funciones deben funcionar para listas de cualquier tamaño
+y con cualquier tipo de datos::
 
     >>> todos_iguales([7, 7, 7, 7, 7, 7, 7, 7, 7])
     True

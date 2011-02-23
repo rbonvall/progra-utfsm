@@ -2,7 +2,7 @@ Donantes
 --------
 Una institución de beneficiencia
 tiene un registro de las personas que han hecho donaciones
-en un archivo de registros llamado ``donantes.dat``.
+en un archivo de registros llamado ``donantes.txt``.
 
 El archivo está ordenado por rut
 de menor a mayor.
@@ -24,7 +24,7 @@ puede ser el siguiente:
     17004  Jan Kowalski           200
     ====== ==================== =====
 
-Los problemas son los siguientes.
+Los problemas son los siguientes:
 
 1. Escribir una función que cree el archivo
    con los datos de la tabla.
@@ -37,10 +37,7 @@ Los problemas son los siguientes.
 4. Escribir una función que pida al usuario ingresar un rut,
    y elimine del archivo al donante con ese rut.
 
-   (Puede utilizar de un archivo temporal)
-
 5. Escribir un programa que pida al usuario
    ingresar los datos de un donante,
    y los agregue al archivo.
 
-   (Puede utilizar de un archivo temporal)

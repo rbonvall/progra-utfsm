@@ -8,9 +8,7 @@ Un número se dice **trimórfico** si su cubo termina en los mismos
 dígitos que el número original, por ejemplo `49^{3} = 117649`.
 
 Desarrolle una función para poder determinar los números
-automórficos y trimórficos menores que 1000.
-
-::
+automórficos y trimórficos menores que 1000::
 
 	>>> automorificos()
 	0
@@ -21,11 +19,7 @@ automórficos y trimórficos menores que 1000.
 	76
 	376
 	625
-
-
-::
-
-	>>>  trimorficos()
+	>>> trimorficos()
 	0
 	1
 	4

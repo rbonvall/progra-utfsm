@@ -1,13 +1,12 @@
 Binarios
 --------
-
-El `sistema binario`_, es un sistema de numeración en los cuales
+El `sistema binario`_ es un sistema de numeración en los cuales
 los números se representan sólo utilizando 0 y 1.
 
 .. _sistema binario: http://es.wikipedia.org/wiki/Sistema_binario
 
-Realice una función llamada *binario(n)*, la cual entrada
-el número binario correspondiente para un número *n* entero decimal.
+Realice una función llamada ``binario(n)``, la cual entrada
+el número binario correspondiente para un número ``n`` entero.
 
 Para transformar un número decimal a binario se debe dividir el número
 por 2 y almacenar el resto, proceso que se repite hasta que el resultado
@@ -15,9 +14,7 @@ de dicha división sea 0.
 Finalmente, el número deseado es el recorrido en orden inverso de los
 restos almacenados.
 
-Por ejemplo, al transformar el número decimal 3 al binario, se obtiene:
-
-::
+Por ejemplo, al transformar el número decimal 3 al binario, se obtiene::
 
 	3 : 2 = 1 con resto = 1
 	1 : 2 = 0 con resto = 1
@@ -25,9 +22,7 @@ Por ejemplo, al transformar el número decimal 3 al binario, se obtiene:
 	Por lo tanto, 3 en binario es 11
 
 
-Para el número 7 por ejemplo:
-
-::
+Para el número 7, por ejemplo::
 
 	7 : 2 = 3 con resto = 1
 	3 : 2 = 1 con resto = 1
@@ -42,27 +37,22 @@ a entero decimal, se logra entender el procedimiento.
 Primero se invierte el número y se comienza multiplicar cada elemento
 por las potencia de 2:
 
-.. math:
+.. math::
 
-	Nro original: 1101
-	Nro invertido: 1011
-	Mult: 1 \times 2^{0} + 0 \times 2^{1} + 1 \times 2^{3} + 1 \times 2^{4} : 25
+    Nro original: 1101
+    Nro invertido: 1011
+    Mult: 1 \times 2^{0} + 0 \times 2^{1} + 1 \times 2^{3} + 1 \times 2^{4} : 25
 
-Desarrolle una función *decimal(n)* la cual haga el trabajo de transformar
-el binario a una representación de entero decimal.
+Desarrolle una función ``decimal(n)`` la cual haga el trabajo de transformar
+el binario a una representación de entero decimal::
 
-::
-
-	binario(10)
-	1010
-	binario(123)
-	1111011
-
-::
-
-	decimal(10111)
-	23
-	decimal(1101111)
-	111
+    >>> binario(10)
+    1010
+    >>> binario(123)
+    1111011
+    >>> decimal(10111)
+    23
+    >>> decimal(1101111)
+    111
 
 

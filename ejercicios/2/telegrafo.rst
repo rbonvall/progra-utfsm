@@ -14,7 +14,7 @@ y las letras del castellano
 (ñ, á, é, í, ó, ú) se consideran
 caracteres especiales.
 
-::
+.. testcase::
 
-	Mensaje: Feliz Aniversario!
+	Mensaje: `Feliz Aniversario!`
 	Su mensaje cuesta $260

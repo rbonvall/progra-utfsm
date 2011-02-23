@@ -24,53 +24,57 @@ que asocia a cada partido un resultado::
     ...     ('Suiza',    'Honduras'): (1, 2);
     ... }
 
-**Ejercicio 1:**
-escriba una función ``equipos(campeonato)``
-que entregue el conjunto de los equipos
-que participaron del campeonato::
+#. Escriba una función ``equipos(campeonato)``
+   que entregue el conjunto de los equipos
+   que participaron del campeonato::
 
     >>> equipos(campeonato)
     {'Chile', 'Honduras', 'Suiza', 'España'}
 
-**Ejercicio 2:**
-escriba una función ``nro_empates(campeonato)``
-que cuente cuántos partidos del campeonato
-terminaron en empate::
+#. Escriba una función ``nro_empates(campeonato)``
+   que cuente cuántos partidos del campeonato
+   terminaron en empate::
 
     >>> nro_empates(campeonato)
     2
 
-**Ejercicio 3:**
-cuando un equipo gana un partido, recibe 3 puntos;
-cuando empata, recibe 1 puntos, y cuando pierde, 0.
-Escriba una función ``puntos(equipo, campeonato)``
-que entregue cuántos puntos obtuvo el equipo
-en el campeonato::
+#. Cuando un equipo gana un partido, recibe 3 puntos;
+   cuando empata, recibe 1 punto, y cuando pierde, no recibe ninguno.
+   Escriba una función ``puntos(equipo, campeonato)``
+   que entregue cuántos puntos obtuvo el equipo
+   en el campeonato::
 
     >>> puntos('Chile', campeonato)
     7
     >>> puntos('Honduras', campeonato)
     3
 
-**Ejercicio 4:**
-la *diferencia de goles* de un equipo
-es la suma de los goles que hizo
-menos la suma de los goles que le hicieron.
-Escriba una función ``dg(equipo, campeonato)``
-que entregue la diferencia de goles
-del equipo en el campeonato::
-
+#. La diferencia de goles de un equipo
+   es la suma de los goles que hizo
+   menos la suma de los goles que le hicieron.
+   Escriba una función ``dg(equipo, campeonato)``
+   que entregue la diferencia de goles
+   del equipo en el campeonato::
 
     >>> dg('Chile', campeonato)
     5
     >>> dg('Honduras', campeonato)
     -3
 
-**Ejercicio 5:**
-escriba una función ``mejor_partido(campeonato)``
-que entregue cuál fue el partido con más goles::
+#. Escriba una función ``mejor_partido(campeonato)``
+   que entregue cuál fue el partido con más goles::
 
     >>> mejor_partido(campeonato)
     ('Chile', 'España')
 
+#. Escriba una función ``tabla_de_posiciones(campeonato)``
+   que retorne una lista de tuplas
+   ``(equipo, puntaje, diferencia_de_goles)``
+   ordenada por puntaje de mayor a menor.
+   Los equipos con el mismo puntaje
+   deben estar ordenados por diferencia de goles
+   de mayor a menor::
+
+    >>> tabla_de_posiciones(campeonato)
+    [('España', 6, 2), ('Chile', 6, 1), ('Suiza', 4, 0), ('Honduras', 1, -3)]
 

@@ -6,8 +6,8 @@ Una recta en el plano está descrita por la ecuación:
 
     y = mx + b,
 
-donde :math:`m` es la *pendiente*
-y :math:`b` es el *intercepto*.
+donde `m` es la *pendiente*
+y `b` es el *intercepto*.
 Todos los puntos de la recta
 satisfacen esta ecuación.
 
@@ -60,6 +60,9 @@ o en internet.
     >>> r2 = (-1, 4)
     >>> punto_de_interseccion(r1, r2)
     (1.0, 3.0)
+
+   Si las rectas son paralelas,
+   la función debe retornar ``None``.
 
 .. _intersectan: http://www.mieres.uniovi.es/egi/dao/apuntes/planos_y_coordenadas.html
 

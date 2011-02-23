@@ -4,15 +4,15 @@ Listas Ordenadas
 Desarrolle un programa que sea
 capaz de realizar las siguientes
 operaciones, considerando dos listas
-*A* y *B* con 10 elementos cada una.
+``A`` y ``B`` con 10 elementos cada una.
 
 * Ingrese los 10 valores de cada lista.
-* Ordene ascendentemente *A* y *B*
-* Mezcle ordenadamente los elementos de *A* y *B*
-  en una lista *C*, el cual no debe tener elementos
-  repeditos.
+* Ordene ascendentemente ``A`` y ``B``
+* Mezcle ordenadamente los elementos de ``A`` y ``B``
+  en una lista ``C``, el cual no debe tener elementos
+  repetidos.
 
-::
+.. testcase::
 
 	Ingrese valores de A:
 	2
