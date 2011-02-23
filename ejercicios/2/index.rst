@@ -35,6 +35,7 @@ Strings
 .. toctree::
 
     telegrafo
+    palabras-especiales
 
 Desafíos
 --------
@@ -82,12 +83,10 @@ Sin clasificar aún
     consulta-medica
     inventario
     sumas-filas-columnas
-    anagramas
     paises
     reporte
     supermercado
     contar-iniciales
-    palabras-panvocalicas
     escalas
     mayores-que
     asistencia
