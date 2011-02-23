@@ -1,8 +1,8 @@
 Cálculo del interés
 -------------------
 
-Desarrolle un programa que sea
-capaz de calcular el interes
+Desarrolle un programa que
+calcule el interés
 de una cierta cantidad de dinero,
 en un tiempo determinado,
 mostrando en cada paso
@@ -25,22 +25,22 @@ tener en cuenta la siguiente ecuación:
 
 	\text{Monto = Monto \cdot (1 + Tasa de interés)}
 
-Si tenemos un monto de *1000*
-una tasa de *0.05* y lo aplicamos
-a *5* años, el procedimiento sería el siguiente:
+Si tenemos un monto de 1000
+una tasa de 5% y lo aplicamos
+a 5 años, el procedimiento sería el siguiente:
 
 * Primer año:
 
 .. math::
 
-	monto = 1000 \cdot (1 + 0.05)
+    monto = 1000 \cdot (1 + 0.05)
     monto = 1050
 
 * Segundo año:
 
 .. math::
 
-	monto = 1050 \cdot (1 + 0.05)
+    monto = 1050 \cdot (1 + 0.05)
     monto = 1102.5
 
 y así sucesivamente,
@@ -48,9 +48,9 @@ notar que a medida que vamos avanzando,
 el monto que vamos considerando, es el obtenido en el procedimiento
 anterior.
 
-El output del programa para el ejemplo anterior debería ser:
+La salida del programa para el ejemplo anterior debería ser:
 
-::
+.. testcase::
 
 	1 1050.0
 	2 1102.5

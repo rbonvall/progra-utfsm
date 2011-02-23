@@ -16,9 +16,11 @@ Donde `N_C` es el promedio de certámenes,
 y `N_F` la nota final.
 
 Escriba un programa que pregunte al usuario las notas de los dos
-primeros certamen y la nota de laboratorio y muestre la nota que necesita el alumno para aprobar el ramo con nota final 60.
+primeros certamen y la nota de laboratorio,
+y muestre la nota que necesita el alumno
+para aprobar el ramo con nota final 60.
 
-::
+.. testcase::
 
     Ingrese nota certamen 1: `45`
     Ingrese nota certamen 2: `55`

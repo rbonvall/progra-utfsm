@@ -1,25 +1,23 @@
 Factorial
 -----------
 
-Para un numero natural N, Factorial es la multiplicación de todos los números 
-naturales desde 1 hasta N.
+El factorial de un número entero `n\ge 0`
+se define como el producto de los números naturales
+desde 1 hasta `n`:
 
 .. math::
 
-    N! = 1\cdot 2\cdot 3 \cdot \ldots \cdot (N-1)\cdot N
+    n! = 1\cdot 2\cdot 3 \cdot \cdots \cdot (n-1)\cdot n
 
-Realice un programa que reciba un numero entero positivo y entregue el factorial
-de aquel numero.
+Escriba un programa que entregue el factorial
+del número ingresado por el usuario:
 
-Considere todos los números ingresados como enteros positivos mayores a cero.
-
-
-::
+.. testcase::
 
     Ingrese numero: `6`
-    Factorial de 6: 720
+    6! = 720
 
-::
+.. testcase::
 
     Ingrese numero: `3`
-    Factorial de 3: 6 
+    3! = 6

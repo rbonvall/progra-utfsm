@@ -1,15 +1,11 @@
 Divisores
 ---------
 
-Escriba un programa que pida un número
-y pueda calcular todos sus divisores.
+Escriba un programa que entregue todos los divisores
+del número entero ingresado:
 
-::
+.. testcase::
 
-	Ingrese num: 200
+	Ingrese num: `200`
 	1 2 4 5 8 10 20 25 40 50 100 200
 
-::
-
-	Ingrese num: 6
-	1 2 3 6

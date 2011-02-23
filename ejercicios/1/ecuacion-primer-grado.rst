@@ -8,31 +8,31 @@ grado:
 
 	a\cdot x + b = 0
 
-y pueda escribir la solución.
+y que entregue la solución.
 
 Recuerde que una ecuación de primer grado puede:
 
-* Tener solución única.
-* No tener una solución única.
-* No tener solución.
+* tener solución única,
+* tener infinitas soluciones, o
+* no tener solución.
 
-::
+.. testcase::
 
-	Ingrese a: 0
-	Ingrese b: 3
+	Ingrese a: `0`
+	Ingrese b: `3`
 
-	Sin solución
+	Sin solucion
 
-::
+.. testcase::
 
-	Ingrese a: 4
-	Ingrese b: 2
+	Ingrese a: `4`
+	Ingrese b: `2`
 
-	Solución única: -0.5
+	Solucion unica: -0.5
 
-::
+.. testcase::
 
-	Ingrese a: 0
-	Ingrese b: 0
+	Ingrese a: `0`
+	Ingrese b: `0`
 
-	No hay solución única.
+	No hay solucion unica.

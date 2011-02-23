@@ -37,7 +37,9 @@ Ciclos
 
     multiplos
     tablas-de-multiplicar
+    dibujos-asteriscos
     pi
+    e
 
 Patrones comunes
 ----------------
@@ -77,7 +79,6 @@ Sin clasificar aún
 
     cifrado-cesar
     conversion-unidades-longitud
-    determinar-cero
     determinar-es-menor-mayor-cero
     determinar-pares-entre-1y10
     determinar-par
@@ -104,17 +105,13 @@ Sin clasificar aún
     validar-numero
     calculo-interes
     media-armonica
-    e
     edad
     segundos
     division
     comparador
     multiplo
-    tres-numeros
     ecuacion-primer-grado
     potencia-dos
     suma-entre-numeros
-    dibujar-rectangulo
-    dibujar-triangulo
     divisores
     n-multiplos

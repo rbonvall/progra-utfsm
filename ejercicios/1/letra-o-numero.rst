@@ -1,32 +1,26 @@
-Letra o Número
-----------------------
+Letra o número
+--------------
 
-Escriba un programa que determine si un carácter ingresado es Letra o Número.
-En caso que sea Letra determine si es Mayúscula o Minúscula.
+Escriba un programa que determine
+si un caracter ingresado es letra, número, o ninguno de los dos.
+En caso que sea letra, determine si es mayúscula o minúscula.
 
-Considere si el carácter ingresado no es letra o número.
+.. testcase::
 
-El programa debe señalar si *c*
-es número, letra mayúscula, letra minúscula,
-o ninguna de las anteriores.
-
-
-::
-
-    Ingrese carácter: `9`
+    Ingrese caracter: `9`
     Es numero.
 
-::
+.. testcase::
 
-    Ingrese carácter: `A`
-    Es letra Mayúscula.
+    Ingrese caracter: `A`
+    Es letra mayúscula.
 
-::
+.. testcase::
 
-    Ingrese carácter: `f`
-    Es letra Minúscula.
+    Ingrese caracter: `f`
+    Es letra minúscula.
 
-::
+.. testcase::
 
-    Ingrese carácter: `#`
-    No es letra o número. 
+    Ingrese caracter: `#`
+    No es letra ni número. 
