@@ -1,11 +1,11 @@
 Suma de naturales
 ------------------
 
-Realice un programa
-que sea capaz de obtener
-la suma de los primeros *n*
+Escriba un programa
+que entregue
+la suma de los primeros `n`
 números naturales,
-siendo el número ingresado
+siendo `n` ingresado
 por el usuario.
 
 Matemáticamente lo que se pide
@@ -14,21 +14,20 @@ la siguiente sumatoria.
 
 .. math::
 
-   Suma1\ =\ \sum\limits^{n}_{i=1} i\ =\ 1+2+3+4+5+6+\ldots+n
+   S_1 = \sum_{i=1}^}{n} i = 1+2+3+4+5+6+\cdots+n
 
 Además, obtenga el resultado
 de la siguiente fórmula.
 
 .. math::
 
-	Suma2\ =\ \frac{n\times(n+1)}{2}
+    S_2 \frac{n\times(n+1)}{2}
 
 El programa debe entregar
-el resultado diciendo si *Suma1* y *Suma2*
+el resultado diciendo si `S_1` y `S_2`
 son iguales o no.
 
-
-::
+.. testcase::
 
    Ingrese n: 3
    Suma1: 6

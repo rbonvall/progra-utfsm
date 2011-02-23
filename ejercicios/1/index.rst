@@ -13,6 +13,7 @@ Programas simples
 
     saludo
     circulos
+    conversion-unidades-longitud
     numero-invertido
     pitagoras
     parte-decimal
@@ -23,7 +24,7 @@ Estructuras condicionales
 -------------------------
 .. toctree::
 
-    valor-absoluto
+    par-o-impar
     bisiestos
     ordenamiento-basico
     calculadora
@@ -78,17 +79,10 @@ Sin clasificar aún
 .. toctree::
 
     cifrado-cesar
-    conversion-unidades-longitud
-    determinar-es-menor-mayor-cero
-    determinar-pares-entre-1y10
-    determinar-par
-    ecuacion-cuadratica
-    es-fibonacci
     lanzando-monedas
     letra-o-numero
     notas
     numero-deleitable
-    numero-fibonacci
     numero-mayor
     numeros-amistosos
     numeros-combinatorios
@@ -102,7 +96,6 @@ Sin clasificar aún
     tabla-valores
     transformador-binario
     triangulo-pascal
-    validar-numero
     calculo-interes
     media-armonica
     edad
@@ -111,7 +104,7 @@ Sin clasificar aún
     comparador
     multiplo
     ecuacion-primer-grado
-    potencia-dos
+    potencias-dos
     suma-entre-numeros
     divisores
     n-multiplos

@@ -1,13 +1,13 @@
 Triángulo de Pascal
 -------------------
 
-Desarrolle un programa que genere un *Triángulo
-de Pascal*, o sea, una disposición de números
+Desarrolle un programa que genere un triángulo
+de Pascal, o sea, una disposición de números
 enteros tales que cada uno sea la suma de los
 dos que están por encima de él, como se muestra
 a continuación:
 
-::
+.. testcase::
 
         1
        1 1

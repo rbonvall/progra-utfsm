@@ -2,7 +2,7 @@ Tabla de Valores
 ----------------
 
 Desarrolle un programa que a partir de tres
-enteros positivos ingresados, *a*, *b* y *n*,
+enteros positivos ingresados, `a`, `b` y `n`,
 genere una tabla de valores como se presenta
 a continuación:
 
@@ -16,15 +16,14 @@ a continuación:
    \end{eqnarray}
 
 La tabla debe considerar todos los números enteros
-en el rango `[a,b]`, donde *a* es el menor elemento
+en el rango `[a,b]`, donde `a` es el menor elemento
 ingresado (no necesariamente el primero).
 
+.. testcase::
 
-::
-
-   Ingrese a: 2
-   Ingrese b: 8
-   Ingrese n: 3
+   Ingrese a: `2`
+   Ingrese b: `8`
+   Ingrese n: `3`
    2 4 8 
    3 9 27 
    4 16 64 

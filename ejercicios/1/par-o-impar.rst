@@ -2,7 +2,7 @@ Determinar par
 --------------
 
 Escriba un programa que determine
-si un número `n` cualquiera,
+si el número entero
 ingresado por el usuario es par o no.
 
 .. testcase::
