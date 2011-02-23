@@ -25,3 +25,4 @@ o qué error ocurre
     >>> bool(14) or bool(-20)
     >>> float(str(int('5' * 4) / 3)[2])
 
+Compruebe sus respuestas en el computador.
