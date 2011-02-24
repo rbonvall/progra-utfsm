@@ -115,3 +115,5 @@ Sin clasificar aún
     distancias
     donantes
     mezcla-numeros
+    directorio-telefonico
+    edades
