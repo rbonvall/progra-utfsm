@@ -66,6 +66,7 @@ Diseño de algoritmos
 --------------------
 .. toctree::
 
+    indentacion
     digitos
     rol
     transformador-binario
