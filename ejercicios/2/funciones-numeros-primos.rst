@@ -10,7 +10,16 @@ En este ejercicio,
 usted deberá implementar algunos de esos programas como funciones,
 reutilizando componentes para evitar escribir código repetido.
 
-#. Escriba una función ``es_primo(n)``
+#. Escriba la función ``es_divisible(n, d)``
+   que indique si ``n`` es divisible por ``d``::
+
+       >>> es_divisible(15, 5)
+       True
+       >>> es_divisible(15, 6)
+       False
+
+#. Usando la función ``es_divisible``,
+   escriba una función ``es_primo(n)``
    que determine si un número es primo o no::
 
        >>> es_primo(17)
