@@ -40,6 +40,7 @@ Ciclos
 .. toctree::
 
     multiplos
+    suma-entre-numeros
     tablas-de-multiplicar
     divisores
     dibujos-asteriscos
@@ -58,6 +59,7 @@ Patrones comunes
     larga-corta
     piezas-domino
     factorial
+    numeros-combinatorios
     lanzar-dados
 
 Diseño de algoritmos
@@ -88,7 +90,6 @@ Sin clasificar aún
 .. toctree::
 
     lanzando-monedas
-    numeros-combinatorios
     que-nota-necesito
     situacion-ramo
     suma-digitos-cubo
@@ -96,7 +97,5 @@ Sin clasificar aún
     tabla-valores
     triangulo-pascal
     edad
-    comparador
     potencias-dos
-    suma-entre-numeros
     n-multiplos
