@@ -12,6 +12,7 @@ Listas
 ------
 .. toctree::
 
+    expresiones-listas
     estadisticos-localizacion
     polinomios
     problema-josefo
@@ -19,6 +20,8 @@ Listas
 Conjuntos
 ---------
 .. toctree::
+
+    expresiones-conjuntos
 
 Diccionarios
 ------------
@@ -28,14 +31,19 @@ Estructuras de datos anidadas
 -----------------------------
 .. toctree::
 
+    expresiones-estructura-datos
     acordes
 
-Strings
--------
+Procesamiento de texto
+----------------------
 .. toctree::
 
     telegrafo
     palabras-especiales
+
+Archivos de texto
+-----------------
+.. toctree::
 
 Desafíos
 --------
