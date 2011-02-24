@@ -10,20 +10,10 @@ por el usuario.
 
 .. testcase::
    
-   Ingrese n: 4
-   Ingrese número: 23
-   Ingrese número: -34
-   Ingrese número: 0
-   Ingrese número: 1
+   Ingrese n: `4`
+   Ingrese número: `23`
+   Ingrese número: `-34`
+   Ingrese número: `0`
+   Ingrese número: `1`
    El mayor es 23
-
-.. testcase::
-
-   Ingrese n: 5
-   Ingrese número: -34
-   Ingrese número: -12
-   Ingrese número: -1
-   Ingrese número: -100
-   Ingrese número: 0
-   El mayor es 0
 
