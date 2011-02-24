@@ -13,6 +13,7 @@ Programas simples
 
     saludo
     circulos
+    promedio
     conversion-unidades-longitud
     numero-invertido
     pitagoras
@@ -26,7 +27,9 @@ Estructuras condicionales
 
     par-o-impar
     bisiestos
+    division
     ordenamiento-basico
+    letra-o-numero
     calculadora
     set-de-tenis
     triangulos
@@ -38,6 +41,7 @@ Ciclos
 
     multiplos
     tablas-de-multiplicar
+    divisores
     dibujos-asteriscos
     pi
     e
@@ -47,6 +51,8 @@ Patrones comunes
 .. toctree::
 
     no-multiplos
+    suma-naturales
+    numero-mayor
     contar-combinaciones-dados
     histograma
     larga-corta
@@ -60,51 +66,37 @@ Diseño de algoritmos
 
     digitos
     rol
+    transformador-binario
+    ecuacion-primer-grado
     caballo-de-ajedrez
+    media-armonica
     es-numero-palindromo
     cachipun
+    calculo-interes
+    cifrado-cesar
     numeros-primos
     el-mejor-numero
     adivinar-numero
-    multiplicacion-rusa
-
-Desafíos
---------
-.. toctree::
-
+    suma-tres-cubos
     espiral
+    multiplicacion-rusa
+    numeros-amistosos
+    numero-deleitable
 
 Sin clasificar aún
 ------------------
 .. toctree::
 
-    cifrado-cesar
     lanzando-monedas
-    letra-o-numero
-    notas
-    numero-deleitable
-    numero-mayor
-    numeros-amistosos
     numeros-combinatorios
-    promedio
     que-nota-necesito
     situacion-ramo
     suma-digitos-cubo
     suma-fracciones
-    suma-naturales
-    suma-tres-cubos
     tabla-valores
-    transformador-binario
     triangulo-pascal
-    calculo-interes
-    media-armonica
     edad
-    segundos
-    division
     comparador
-    multiplo
-    ecuacion-primer-grado
     potencias-dos
     suma-entre-numeros
-    divisores
     n-multiplos

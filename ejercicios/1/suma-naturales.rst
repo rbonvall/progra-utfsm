@@ -29,7 +29,7 @@ son iguales o no.
 
 .. testcase::
 
-   Ingrese n: 3
-   Suma1: 6
-   Suma2: 6
+   Ingrese n: `3`
+   S1: 6
+   S2: 6
    Son iguales

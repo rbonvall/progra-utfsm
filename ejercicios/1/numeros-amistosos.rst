@@ -1,11 +1,11 @@
 Números amistosos
 -----------------
 
-Un par de números *m* y *n* son llamados **amistosos**
+Un par de números `m` y `n` son llamados **amistosos**
 (o se conocen como un **par amigable**), si la suma de
-todos los divisores de *m* (excluyendo *m*) es igual al
-número *n* y la suma de todos los divisores del número *n*
-(excluyendo *n*) es igual a *m* (`m \neq n`).
+todos los divisores de `m` (excluyendo `m`) es igual al
+número `n`, y la suma de todos los divisores del número `n`
+(excluyendo `n`) es igual a `m` (`m \neq n`).
 
 Por ejemplo, los números 220 y 284 son un par amigable
 porque los únicos números que dividen de forma exacta

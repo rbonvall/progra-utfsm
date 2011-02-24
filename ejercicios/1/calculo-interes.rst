@@ -10,12 +10,12 @@ el año y el monto recaudado hasta
 el momento.
 
 Recuerde que la forma de poder
-calcular el *interés simple*,
+calcular el interés simple,
 es la siguiente:
 
-* Contamos con un *monto inicial*.
-* Tenemos una cierta *tasa de interés*.
-* Se aplica a una cierta cantidad de *años*.
+* Contamos con un monto inicial.
+* Tenemos una cierta tasa de interés.
+* Se aplica a una cierta cantidad de años.
 
 Entonces, para poder calcular
 el interés en el primer año sólo debemos
@@ -23,7 +23,7 @@ tener en cuenta la siguiente ecuación:
 
 .. math::
 
-	\text{Monto = Monto \cdot (1 + Tasa de interés)}
+    \text{Monto} = \text{Monto}\cdot (1 + \text{Tasa de interés})
 
 Si tenemos un monto de 1000
 una tasa de 5% y lo aplicamos
