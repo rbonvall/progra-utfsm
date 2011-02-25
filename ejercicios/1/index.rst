@@ -85,6 +85,7 @@ Diseño de algoritmos
     multiplicacion-rusa
     numeros-amistosos
     numero-deleitable
+    metodo-newton
 
 Sin clasificar aún
 ------------------
