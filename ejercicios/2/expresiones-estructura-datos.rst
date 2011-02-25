@@ -1,3 +1,5 @@
+Expresiones con estructuras de datos anidadas
+=============================================
 
 Considere el siguiente trozo de programa::
 
