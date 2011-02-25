@@ -1,9 +1,9 @@
-Indentación
-===========
+Ojo con la indentación
+======================
 
 Sin usar el computador,
-rutee los siguientes programas
-e indique cuál es la salida de los siguientes programas.
+rutee los siguientes tres programas
+e indique cuál es la salida de cada uno de ellos.
 
 A continuación,
 compruebe sus respuestas
