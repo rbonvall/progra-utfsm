@@ -1,6 +1,6 @@
-\documentclass[12pt]{article}
+\documentclass[12pt,spanish]{article}
 \usepackage{beamerarticle}
-\usepackage[spanish]{babel}
+\usepackage{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
 \usepackage{xcolor}
@@ -16,6 +16,7 @@
 \usepackage{wrapfig}
 
 \hyphenation{sa-li-da}
+\hyphenation{va-li-dar}
 
 \setjobnamebeamerversion{02-diapos}
 \lstset{xleftmargin=3em}
@@ -88,6 +89,8 @@ Usted tiene 31 annos.
   es conveniente apegarse al formato de salida del caso de prueba,
   pues es una manera muy clara de entender el enunciado
   y de validar la solución.
+  Además, es el mismo formato que los estudiantes verán
+  en certámenes, controles y laboratorios.
 
   El código fuente de programas aparece siempre
   con la sintaxis resaltada para mayor claridad:
@@ -99,7 +102,8 @@ print 'Usted tiene', edad, 'annos'
   \end{lstlisting}
 
   Los ejemplos que usan la consola interactiva
-  pueden ser identificados por el símbolo \verb!>>>!:
+  pueden ser identificados por
+  la aparición del símbolo \verb!>>>!:
   \begin{lstlisting}[language=py,linewidth=.5\textwidth]
 >>> nacimiento = 1971
 >>> actual = 2010
