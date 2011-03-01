@@ -250,7 +250,8 @@ Más adelante veremos muchas más operaciones para trabajar sobre texto.
 Por ahora utilizaremos las más elementales.
 Otras operaciones que pueden serle útiles por el momento son:
 
-* obtener el `i`-ésimo caracter de un string (partiendo desde cero)::
+* obtener el `i`-ésimo caracter de un string (partiendo desde cero)
+  usando los corchetes::
 
     >>> nombre = 'Perico'
     >>> nombre[0]
@@ -261,6 +262,7 @@ Otras operaciones que pueden serle útiles por el momento son:
     'r'
 
 * comprarar strings alfabéticamente
+  con los operadores relacionales
   (lamentablemente no funciona con acentos y eñes)::
 
     >>> 'a' < 'abad' < 'abeja'
@@ -268,12 +270,20 @@ Otras operaciones que pueden serle útiles por el momento son:
     >>> 'zapato' <= 'alpargata'
     False
 
-* obtener el largo de un string::
+* obtener el largo de un string con la función ``len``::
 
     >>> len('papalelepipedo')
     14
     >>> len("")
     0
+
+* verificar si un string está dentro de otro
+  con el operador ``in``::
+
+   >>> 'pollo' in 'repollos'
+   True
+   >>> 'pollo' in 'gallinero'
+   False
 
 Precedencia
 -----------
