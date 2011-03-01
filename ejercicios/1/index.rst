@@ -17,6 +17,7 @@ Programas simples
     conversion-unidades-longitud
     numero-invertido
     pitagoras
+    hora-futura
     parte-decimal
     tiempo-de-viaje
     huevos-a-la-copa
