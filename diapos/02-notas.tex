@@ -27,9 +27,19 @@
 \begin{document}
   \maketitle
 
-  \diapo{conceptos}
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Mostrar cómo ejecutar un programa simple.
+    \item Mostrar cómo usar la consola interactiva.
+    \item Presentar los conceptos de expresión, asignación y tipos.
+    \item Presentar los operadores y sus propiedades.
+    \item Presentar las sentencias de entrada y salida.
+  \end{itemize}
+
+  \section*{Diapositivas}
 
   \diapo{prog-ejemplo}
+
   Esta diapositiva es importante
   porque introduce algunas convenciones
   que serán seguidas durante todo el semestre
@@ -41,7 +51,7 @@
     \item el código es el programa que puede ser copiado y pegado
       en un editor de texto para ser guardado y ejecutado.
   \end{itemize}
-  Presentar estas convenciones en detalle a los estudiantes.
+  Presente estas convenciones en detalle a los estudiantes.
 
   Antes de mostrar el programa en ejecución,
   explicar también los siguientes aspectos del ejemplo,
@@ -64,8 +74,7 @@
       y a continuación el valor que tiene \li!c! en ese momento.
   \end{itemize}
 
-  A continuación,
-  muestre en vivo cómo ingresar el programa en el editor de texto y ejecutarlo.
+  Muestre en vivo cómo ingresar el programa en el editor de texto y ejecutarlo.
   Hágalo de varias maneras:
   \begin{itemize}
     \item primero usando Bloc de Notas + doble clic en el ícono del programa,
@@ -75,13 +84,174 @@
       ingresando el programa línea por línea en la consola de Python.
   \end{itemize}
 
-  \diapo{ejemplos-expresiones}
-  Presente la definición de \textbf{expresión}:
-  una combinación de valores y operaciones
-  que al ser evaluadas entregan un valor como resultado.
+  \diapo{expresion}
+  
+  Explique a grandes rasgos qué hace cada expresión.
 
+  Explique la asignación \li!x = 3.5!.
 
+  En Python, una asignación es un nombre que se le asocia a un valor.
+  Mencione que el nombre es llamado \emph{variable},
+  y que su nombre puede tener letras, números y underscores.
 
+  A diferencia de C y Java,
+  la variable no tiene asociados ni un tipo ni una ubicación en la memoria.
+  Cada asignación crea o religa un nombre.
+
+  Las asignaciones siguen la sintaxis \li!nombre = valor!.
+  Algunas asignaciones inválidas
+  que pueden ser mostradas en la consola son:
+  \begin{itemize}
+    \item \li!x + 2 = 3!,
+    \item \li!7 = a!.
+  \end{itemize}
+  Estas sentencias arrojan un \emph{error de sintaxis},
+  que significa que el código no satisface las reglas del lenguaje.
+
+  Una vez asignada una variable,
+  es posible usarla en cualquier expresión.
+  Al evaluar la expresión,
+  tomará el valor que tiene la variable en ese momento.
+
+  \diapo{operadores-aritmeticos}
+  
+  Estos operadores son los mismos de matemáticas,
+  (salvo que la multiplicación es \li!*!
+  y la exponenciación es \li!**!)
+  así que lo único que es importante explicar cómo funciona
+  es el operador de módulo \li!%!.
+
+  Los usos más comunes del módulo son
+  comprobar divisibilidad y extraer dígitos de un entero.
+  Muestre algunos ejemplos de esto en la consola.
+
+  Respecto a los tipos, la regla es:
+  si al menos uno de los operandos es real,
+  entonces el resultado es real.
+  El caso más capcioso es la división.
+  Muestre en la consola que \li!15/4! es \li!3! y no \li!3.75!.
+  La división entera siempre trunca los decimales.
+
+  Muestre también en la consola
+  algunos ejemplos de precedencia de operadores.
+  Por ejemplo,
+  preguntar cuál es el resultado de \li!2 + 3 * 4!
+  (la multiplicación se hace primero)
+  y de \li!2 ** 3 ** 4!
+  (la exponenciación se asocia de derecha a izquierda),
+  y mostrar cómo cambiar la precedencia usando paréntesis.
+  
+  \diapo{operadores-logicos}
+
+  Los operadores lógicos son los mismos de matemáticas.
+
+  Si bien no es buena idea mencionarlo todavía,
+  es conveniente saber que estos operadores pueden ser usados
+  con operandos de otros tipos.
+  Los valores \li!0!, \li!''! y \li!None!, entre otros,
+  son considerados falsos,
+  y el resto son considerados verdaderos.
+
+  \diapo{funciones}
+
+  El uso de la función para obtener un valor
+  se llama \emph{llamar a la función}.
+
+  El valor pasado a la función
+  se llama \emph{argumento} o \emph{parámetro}
+  (la distinción entre ambos se verá en la unidad de funciones).
+
+  Las funciones matemáticas
+  deben ser importadas desde el módulo \li!math!.
+
+  Las funciones \li!min! y \li!max! aceptan
+  una cantidad arbitraria de parámetros.
+
+  \diapo{operadores-texto}
+
+  La operación representada por el \li!+! aplicado a strings
+  se llama \emph{concatenación}.
+  No puede ser una suma, pues no es una operación conmutativa.
+
+  Los caracteres se cuentan desde cero,
+  y por eso \li!"amarillo"[4]! es \li!"i"! y no \li!"r"!.
+  Los índices de un string \li!s! van desde \li!0!
+  hasta \li!len(s) - 1!.
+
+  \diapo{tipos}
+
+  El tipo de un valor
+  determina cuál es su dominio,
+  qué operaciones se le puede aplicar
+  y cómo es representado internamente por el computador.
+
+  El literal \li!6.02e23! está en notación científica.
+  Su valor es \(6.02\cdot 10^{23}\).
+
+  Mencione que los valores de tipo texto se llaman \emph{strings}
+  y los valores lógicos se llaman \emph{booleanos}.
+  Los nombres no son muy descriptivos,
+  pero son los que se usan en programación.
+
+  No hay diferencia entre los strings
+  representados con comillas simples y dobles:
+  \li!"hola" == 'hola'!.
+
+  Explique que las comillas no son parte del string.
+
+  Dos tipos elementales que no aparecen en la diapositiva
+  son el valor nulo \li!None! (que tiene su propio tipo).
+  y los números complejos (\li!complex!).
+  Si bien aparecen mencionados en el apunte oficial,
+  no se les dará mucha importancia en la asignatura.
+
+  La parte imaginaria de los números complejos
+  se denota con una jota: \li!2+3j!.
+  El constructor de \li!complex!
+  recibe como parámetros las partes real e imaginaria:
+  \li!z = complex(2, 3)!.
+
+  Puede mostrar en la consola algunos ejemplos
+  de operaciones con tipos incorrectos.
+  Por ejemplo:
+  \begin{itemize}
+    \item \li!'perro' * 'gato'!
+    \item \li!len(2)!
+    \item \li!2[0]!
+    \item \li!'hola'(2, 3)!
+    \item \li!(2+3j) < (1-2j)!
+  \end{itemize}
+  Estas operaciones arrojan una excepción
+  llamada \emph{error de tipo}.
+  Enseñe a los estudiantes a leer los mensajes de error.
+
+  \diapo{ejemplos-entrada}
+
+  La función \li!raw_input! siempre retorna un string.
+  Además, su parámetro es el mensaje que se mostrará al usuario.
+
+  Las funciones \li!int! y \li!float!
+  convierten el string a un valor entero y real,
+  respectivamente.
+
+  \diapo{ejemplos-salida}
+
+  La sentencia \li!print! muestra por pantalla
+  la representación en texto
+  de todos los valores que le son pasados.
+  El espacio que separa los valores
+  y el salto de línea al final
+  son introducidos automáticamente.
+
+  Todo lo que va en el mismo \li!print!
+  es impreso en la misma línea en la pantalla.
+
+  Si se pone una coma solitaria al final del \li!print!,
+  el salto de línea no es impreso.
+
+  En \url{http://progra.usm.cl/apunte/ejercicios/1/index.html#programas-simples}
+  puede encontrar ejercicios para resolver en la segunda mitad de la clase.
+  
 \end{document}
 
 
