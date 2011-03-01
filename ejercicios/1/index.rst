@@ -19,7 +19,6 @@ Programas simples
     pitagoras
     hora-futura
     parte-decimal
-    tiempo-de-viaje
     huevos-a-la-copa
 
 Estructuras condicionales
@@ -44,6 +43,7 @@ Ciclos
     suma-entre-numeros
     tablas-de-multiplicar
     divisores
+    tiempo-de-viaje
     dibujos-asteriscos
     pi
     e
