@@ -1,0 +1,117 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\input{../latex/definiciones.tex}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Estructuras condicionales}
+\author{
+  Programación \\ \url{http://progra.usm.cl}
+}
+\date{16 y 17 de marzo de 2011}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-if}
+    \textbf{Problema:}\\
+    Escriba un programa que pida al usuario
+    ingresar sus tres notas,
+    y lo felicite si su promedio es mayor a 80.
+    \vfill
+    \textbf{Casos de prueba:}\\
+    \lstinputlisting[language=testcase]{programas/caso-1-if.txt}
+    \lstinputlisting[language=testcase]{programas/caso-2-if.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-if}
+    \lstinputlisting{programas/promedio-felicitaciones.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-if-else}
+    \textbf{Problema:}\\
+    Escriba un programa que pida al usuario
+    ingresar sus tres notas,
+    e indique si reprobó o aprobó.
+    \vfill
+    \textbf{Casos de prueba:}\\
+    \lstinputlisting[language=testcase]{programas/caso-1-if-else.txt}
+    \lstinputlisting[language=testcase]{programas/caso-2-if-else.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-if-else}
+    \lstinputlisting{programas/promedio-aprobado.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-if-elif}
+    \textbf{Problema:}\\
+    Escriba un programa que pida al usuario
+    ingresar sus tres notas,
+    e indique si su promedio
+    es pésimo (\(<30\)),  mediocre (31 a 54),
+    aceptable (55 a 79) o excelente (\(\ge 80\)).
+    \vfill
+    \textbf{Casos de prueba:}\\
+    \lstinputlisting[language=testcase]{programas/caso-1-if-elif.txt}
+    \lstinputlisting[language=testcase]{programas/caso-2-if-elif.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-if-elif}
+    \lstinputlisting{programas/promedio-juicio.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ejercicio}
+
+    Un año es bisiesto si es divisible por 4,
+    excepto si es divisible por 100 y no por 400.
+    
+    Escriba un programa que indique
+    si un año es bisiesto.
+    \vfill
+    \lstinputlisting[language=testcase]{programas/caso-1-bisiesto.txt}
+    \lstinputlisting[language=testcase]{programas/caso-2-bisiesto.txt}
+    \lstinputlisting[language=testcase]{programas/caso-3-bisiesto.txt}
+    \lstinputlisting[language=testcase]{programas/caso-4-bisiesto.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{bisiesto-1}
+    \frametitle{Solución 1}
+    \lstinputlisting{programas/bisiesto1.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{bisiesto-2}
+    \frametitle{Solución 2}
+    \lstinputlisting{programas/bisiesto2.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{bisiesto-3}
+    \frametitle{Solución 3}
+    \lstinputlisting{programas/bisiesto3.py}
+  \end{frame}
+
+\end{document}
+
