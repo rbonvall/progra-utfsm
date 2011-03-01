@@ -15,10 +15,14 @@
 \usepackage{pgfpages}
 \usepackage{wrapfig}
 
+\hyphenation{re-fe-ren-cia}
+
 \setjobnamebeamerversion{01-diapos}
+
 
 \input{../latex/definiciones.tex}
 \input{../latex/notas-diapos.tex}
+
 
 \title{Introducción a la programación, algoritmos}
 \author{Programación \\ \url{http://progra.usm.cl}}
@@ -27,12 +31,177 @@
 \begin{document}
   \maketitle
 
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Entegar información administrativa de la asignatura.
+    \item Presentar los conceptos de programa y algoritmo.
+    \item Presentar algunos problemas interesantes
+      que pueden ser resueltos mediante programación.
+    \item Guiar a los alumnos para que diseñen un algoritmo simple.
+    \item Presentar un algoritmo simple en lenguaje natural,
+      diagrama de flujo, pseudocódigo y programa en Python.
+    \item Mostrar la ejecución del programa en Python.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
   \diapo{evaluaciones}
 
-  Más información sobre los certámenes:
+  Información adicional sobre evaluaciones
+  para ser mencionada:
   \begin{itemize}
-    \item los certámenes son a las 10:00.
+    \item los certámenes son a las 10,
+    \item todos pueden dar el recuperativo,
+      y reemplaza la peor nota,
+    \item los controles en línea
+      se suben a la plataforma con la cuenta que les será asignada,
+    \item la primera semana ya hay un control en línea,
+      cuyo objetivo es que los alumnos se familiaricen
+      con la escritura de programas
+      y con la plataforma para subirlos
+      (el control es muy fácil).
   \end{itemize}
+
+  \diapo{web}
+
+  Recordar a los estudiantes
+  visitar la página lo antes posible
+  para leer la información administrativa
+  y para comenzar a leer la materia.
+  
+  También sugerirles suscribirse al Twitter y al Facebook
+  si es que ocupan esas aplicaciones.
+  Deben poner «Programación USM» en el buscador de Facebook
+  para encontrar la página.
+
+  \diapo{conceptos}
+
+  Antes de presentar los conceptos hay una diapo en blanco
+  para que cada profesor haga el preludio del ramo a su manera.
+
+  Los tres conceptos importantes (problema, algoritmo y programa)
+  son presentados en las diapositivas con definiciones sencillas,
+  pensando en que los estudiantes las retengan más fácilmente.
+  Una vez explicados los conceptos de esta manera,
+  se puede profundizar en las características importantes de los algoritmos:
+  \begin{itemize}
+    \item deben tener inicio y final,
+    \item deben funcionar para todas las entradas posibles,
+    \item los pasos deben ser precisos y bien definidos,
+    \item están compuestos de entrada, proceso y salida.
+  \end{itemize}
+
+  La relación entre problema y algoritmo es:
+  un problema especifica para una entrada cuál debe ser la salida,
+  y el algoritmo indica cómo obtener esa salida.
+
+  Los ejemplos típicos de algoritmos son:
+  receta de cocina,
+  buscar una palabra en el diccionario (búsqueda binaria),
+  resolver ecuación cuadrática,
+  multiplicar números a mano.
+  \newpage
+
+  A continuación,
+  se presentará algunos problemas computacionales típicos
+  para ser analizados junto con los estudiantes.
+  Discutir acerca de si es posible crear algoritmos,
+  y si son sencillos de describir o no.
+
+  (La idea de partir presentando problemas interesantes
+  está sacada del libro \emph{Introduction to Algorithms},
+  de Cormen et~al).
+ 
+  \diapo{problema-ceros-recta}
+
+  Explicar antes qué es un cero de la función
+  (es el valor de \(x\) para el que \(y = 0\)).
+  En este caso, el algoritmo es muy sencillo:
+  sólo hay que calcular \(x_0 = -b/a\).
+  
+  \diapo{problema-ceros-funcion}
+
+  Para este ejemplo,
+  enfatizar que el algoritmo debe funcionar para cualquier función.
+  Incentivar a los estudiantes para que se les ocurra
+  una manera sistemática de hacerlo.
+  
+  Para este problema,
+  los algoritmos más comunes son los iterativos
+  que se van acercando cada vez más a los ceros exactos,
+  pero sin llegar a ellos.
+  Esto se puede explicar gráficamente en la pizarra.
+  Como referencia, puede tomarse estas animaciones:
+  \url{http://tinyurl.com/6cfc5w2} y
+  \url{http://tinyurl.com/24fzfkp}.
+
+  \diapo{problema-ordenamiento}
+
+  Este problema se explica por sí solo.
+  Nuevamente enfatizar que debe funcionar para todas las entradas posibles.
+
+  \diapo{problema-ciudades}
+
+  Típico ejemplo de problema de optimización.
+  Contar que, si bien los algoritmos pueden ser fáciles de describir,
+  son muy costosos de ejecutar,
+  ya que hay que probar todas las combinaciones posibles
+  para encontrar la mejor solución,
+  y que hay algoritmos más rápidos,
+  pero no encuentran necesariamente la mejor.
+
+  \diapo{problema-spam}
+
+  Éste es un buen ejemplo de un problema real
+  con el que quizás los estudiantes estén familiarizados.
+  Mencionar que se trata de algoritmos de aprendizaje,
+  que deben ser entrenados para entregar sus resultados.
+  
+  A grandes rasgos,
+  los típicos filtros de spam
+  funcionan correlacionando las frecuencias de las palabras
+  en correos deseados y no deseados,
+  y luego usando fórmulas estadísticas
+  para estimar la probabilidad de que un nuevo correo sea o no spam.
+
+  \diapo{problema-tsunami}
+
+  Este es un ejemplo de un problema de simulación.
+  Hay que tener un modelo de la tierra.
+  y usar las leyes de la física
+  para simular el comportamiento de todo el océano.
+
+  Es posible hacerlo (de hecho se hace)
+  pero es extremadamente costoso.
+
+  \diapo{ejercicio}
+
+  Proponga el ejercicio de diseñar un algoritmo
+  para determinar si un número entero es primo o compuesto.
+
+  Repase la definición de número primo:
+  es el que es divisible sólo por 1 y por sí mismo.
+  Esto debería dar pistas sobre el algoritmo obvio:
+  buscar un divisor que esté entre 2 y \(n - 1\).
+
+  \diapo{sol-natural}
+  \diapo{sol-diagrama}
+  \diapo{sol-pseudocodigo}
+
+  Presente las notaciones de lenguaje natural,
+  diagrama de flujo y pseudocódigo.
+  En cada caso, identifique claramente:
+  entrada y salida del algoritmo,
+  orden en que se hacen los pasos,
+  variables y tipos.
+
+  \diapo{sol-python}
+
+  Explique a grandes rasgos la solución en Python
+  (sin entrar en tanto detalle).
+  Muestre en vivo
+  cómo introducir el programa en el computador
+  y cómo ejecutarlo.
 
 \end{document}
 
