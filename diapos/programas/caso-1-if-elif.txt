@@ -1,0 +1,4 @@
+Nota 1: `32`
+Nota 2: `89`
+Nota 3: `91`
+Su promedio 71 es aceptable

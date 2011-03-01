@@ -1,0 +1,5 @@
+Nota 1: `70`
+Nota 2: `25`
+Nota 3: `39`
+Usted reprobo con 45
+

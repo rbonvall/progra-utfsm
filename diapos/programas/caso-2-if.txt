@@ -1,0 +1,5 @@
+Nota 1: `79`
+Nota 2: `91`
+Nota 3: `74`
+Felicitaciones!
+Su promedio es 81

@@ -1,0 +1,4 @@
+Nota 1: `45`
+Nota 2: `78`
+Nota 3: `68`
+Su promedio es 64
