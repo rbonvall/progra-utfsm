@@ -231,6 +231,11 @@ mientras una condición sea verdadera:
 .. image:: ../diagramas/while.png
    :alt: (Diagrama de flujo while)
 
+.. index:: iteración
+
+Cada una de las veces que el cuerpo del ciclo es ejecutado
+se llama **iteración**.
+
 La condición es evaluada antes de cada iteración.
 Si la condición es inicialmente falsa,
 el ciclo no se ejecutará ninguna vez.
