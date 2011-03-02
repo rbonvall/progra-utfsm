@@ -1,0 +1,194 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+
+\setjobnamebeamerversion{03-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Programas simples}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{14 y 15 de marzo de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Desarrollar programas lineales sencillos.
+    \item Reforzar los conceptos de
+      entrada, salida, expresiones, asignaciones, tipos y errores.
+    \item Enseñar algunas técnicas recurrentes de programación.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  \diapo{problema-gravitacion}
+
+  Éste es un ejercicio típico de evaluar una fórmula.
+  Con lo visto en la clase anterior,
+  todos deberían poder resolverlo.
+  Discutir cuál es la entrada, cuál es la salida,
+  y cuáles son los tipos de los valores
+  (en este caso son todos reales).
+
+  \diapo{gravitacion}
+
+  Las dos prácticas que son introducidas en este programa son
+  los usos de constantes y comentarios.
+
+  Python no tiene constantes como característica del lenguaje,
+  por lo que nada impide que el valor de \li!G! sea modificado.
+  De todos modos,
+  siempre es más claro asignar las constantes al principio del programa
+  y darles un nombre representativo.
+
+  En Python,
+  los comentarios comienzan con \li!#! y terminan al final de la línea.
+  Los comentarios son ignorados por el intérprete
+  y sirven como notas para los programadores que lean el programa.
+
+  El uso de paréntesis en el denominador de la expresión
+  no es necesario, ya que el operador \li!**! tiene mayor precedencia
+  que \li!*! y \li!/!. De todos modos, es más claro para el lector
+  usar los paréntesis.
+
+  \diapo{problema-serrucho}
+
+  La función continúa de la misma forma a lo largo de todo el eje real.
+  Los círculos rellenos indican el valor de la función en los extremos de los tramos.
+
+  Aquí el desafío es encontrar una expresión que describa la función,
+  ya que aún no hemos pasado el \li!if!.
+
+  El truco aquí es notar que, en todos los tramos,
+  la función es un pedazo de la recta de pendiente \(3/2\)
+  que pasa por el origen, desplazado verticalmente.
+
+  Más precisamente,
+  el desplazamiento vertical siempre es un múltiplo de 3:
+  el primer diente está desplazado 0 unidades,
+  el segundo 3 hacia abajo, el tercero 6, etcétera.
+
+  El número de orden del diente al que pertenece \(x\) es \(\lfloor x/2\rfloor\).
+
+  \diapo{serrucho}
+  
+  Las dos soluciones presentadas son equivalentes.
+  La primera calcula el resultado en una única expresión,
+  por lo que no es muy clara en una lectura inicial.
+
+  En la segunda solución,
+  la última asignación expresa casi literalmente
+  cuál es la función:
+  es una recta de cierta pendiente,
+  desplazada en tres veces el orden de cada diente.
+
+  Discutir si el programa entrega el resultado correcto
+  en las fronteras de cada tramo.
+
+  Técnicamente,
+  la solución no describe correctamente la función serrucho,
+  ya que el número de diente debe ser \(\lfloor x/2\rfloor\)
+  (redondeo hacia abajo),
+  mientras que la función \li!int! trunca los decimales
+  (redondeo hacia cero).
+  Por lo tanto,
+  el programa entrega la solución incorrecta
+  para valores negativos de \(x\).
+  Para corregir esto,
+  hay que usar la función \li!floor! que debe ser importada
+  del módulo \li!math!.
+
+  \diapo{problema-rimas}
+
+  Este ejercicio es útil para repasar las operaciones sobre strings.
+
+  \diapo{rima1}
+
+  Como \li!raw_input! retorna un string,
+  no es necesario ``castear'' el resultado.
+  De todos modos, no es incorrecto poner \li!str(raw_input(...))!.
+
+  La expresión lógica en el \li!print!
+  puede continuar en la línea siguiente
+  ya que quedó un paréntesis sin cerrar en la sentencia.
+  Ésta es la manera de separar una sentencia
+  en varias líneas en Python.
+  La segunda línea puede ser indentada libremente.
+
+  Es una buena oportunidad para repasar la diferencia
+  entre \li!=! (sentencia de asignación)
+  y \li!==! (operador de igualdad).
+
+  Esta solución no es la manera idomática
+  de resolver el problema en Python,
+  pero es parecida a cómo se haría en C,
+  por lo que no es mala idea presentarla.
+
+  El programa arroja un \emph{error de índice}
+  (lanzado por el operador \li![]!)
+  si alguna de las palabras tiene menos de cuatro letras.
+
+  \diapo{rima2}
+
+  Esta solución utiliza la propiedad del operador \li![]!
+  de que los índices negativos sirven para contar
+  desde el final del string hacia atrás.
+  \li!s[-1]! es siempre el último caracter del string.
+
+  En este programa no es necesario calcular el largo del string.
+
+  \diapo{rima3}
+
+  Aquí se usa el operador de rebanado (\emph{slice})
+  de los strings (ver \url{http://docs.python.org/library/stdtypes.html}, sección \emph{Sequence Types}).
+
+  \li!s[a:b]! significa ``desde el \li!a!-ésimo caracter hasta el \li!b!-ésimo caracter
+  del string \li!s!''.
+  Si se omite \li!a!, es desde el principio. Si se omite \li!b!, es hasta el final.
+  
+  Este operador será pasado en la materia del segundo certamen,
+  por lo que no es necesario que los estudiantes lo aprendan ahora.
+
+  Este programa funciona incluso si las palabras tienen menos de cuatro letras.
+
+  \diapo{problema-tazas}
+
+  Éste es un ejercicio de aritmética modular.
+  El desafío es resolverlo sin usar \li!for! ni \li!while!.
+
+  \diapo{diagrama-tazas}
+
+  Aquí conviene explicar de nuevo el enunciado usando el diagrama,
+  para que quede completamente claro.
+  Considerar los casos en que los índices se pasan de largo
+  del principio o del final del círculo.
+  No basta con restar \li!i! y sumar \li!j!.
+
+  \diapo{tazas}
+
+  Mencione que los ejercicios para recorrer elementos circularmente
+  suelen resolverse usando el operador de módulo.
+  Es una buena oportunidad para repasar este operador.
+
+  Más ejercicios para hacer en clases
+  pueden ser sacados de \url{http://progra.usm.cl/apunte/ejercicios/1/index.html#programas-simples}.
+
+\end{document}
+
+
