@@ -295,6 +295,12 @@ sumar ``m`` veces el valor de ``n``.
 Note que el ciclo no termina apenas el valor de ``m`` pasa a ser cero.
 La condición es evaluada una vez que la iteración completa ha terminado.
 
+En general,
+el ciclo ``while`` se utiliza cuando no es posible saber de antemano
+cuántas veces será ejecutado el ciclo,
+pero sí qué es lo que tiene que ocurrir
+para que se termine.
+
 Ciclo for con rango
 -------------------
 .. index:: for, variable de control
@@ -329,8 +335,7 @@ de los números del 0 al 20::
 
 .. index:: range, rango
 
-En general,
-un **rango** es una sucesión de números enteros equiespaciados.
+Un **rango** es una sucesión de números enteros equiespaciados.
 Incluyendo la presentada más arriba,
 hay tres maneras de definir un rango::
 
@@ -363,11 +368,10 @@ es posible hacer ciclos que van hacia atrás::
         print i
     print 'Feliz anno nuevo!'
 
-
-.. Una regla general para saber qué ciclo conviene usar es:
-.. el ``for`` se ocupa cuando se sabe de antemano cuántas iteraciones serán ejecutadas,
-.. y el ``while`` cuando esto no es conocido.
-
+En general,
+el ciclo ``for`` con rango
+se usa cuando el número de iteraciones
+es conocido antes de entrar al ciclo.
 
 .. El iterable de un ``for`` también puede ser un string.
 .. En este caso,
