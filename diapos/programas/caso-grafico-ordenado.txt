@@ -1,0 +1,7 @@
+Ingrese valor 1: `19`
+Ingrese valor 2: `11`
+Ingrese valor 3: `12`
+
+***********
+************
+*******************

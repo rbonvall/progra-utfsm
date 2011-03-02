@@ -1,0 +1,3 @@
+Palabra 1: `cuaderno`
+Palabra 2: `perno`
+True
