@@ -1,0 +1,161 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+
+\setjobnamebeamerversion{04-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Estructuras condicionales}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{16 y 17 de marzo de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Presentar las sentencias \li!if!, \li!if-elif! e \li!if-elif-else!.
+    \item Enseñar el uso de estructuras condicionales.
+    \item Resolver ejercicios con estructuras condicionales.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  Los tipos de sentencias condicionales
+  son presentados usando problemas sencillos
+  relacionados con el cálculo del promedio de notas de un alumno.
+  Al mostrar cada programa,
+  explique con detención cómo es usada la sentencia condicional respectiva.
+
+  \diapo{problema-if}
+
+  A esta altura, los estudiantes deberían ser capaces
+  de escribir por su cuenta
+  la parte del programa que lee la entrada y que calcula el promedio.
+  Es una buena oportunidad para ponerlos a prueba.
+
+  Hay que tener cuidado en cómo calcular el promeedio
+  para evitar errores al dividir y al redondear.
+  La solución en la diapo siguiente
+  aproxima el promedio al entero más cercano.
+
+  \diapo{solucion-if}
+
+  Aquí se introduce la sentencia \li!if!.
+
+  Mencionar que \emph{if} en inglés significa «si».
+
+  El \li!if! tiene una condición,
+  que es una expresión lógica.
+  Al llegar al \li!if!, la expresión es evaluada,
+  y su resultado decide si las sentencias son ejecutadas o no.
+
+  Éste es el primer ejemplo
+  en que es necesario indentar.
+  Explique que el primer \li!print! sí está dentro del \li!if!
+  mientras que el segundo no lo está.
+
+  Un error común es olvidar poner los dos puntos después de la condición.
+
+  No es legal que la línea que sigue al \li!if! no esté indentada.
+
+  El estándar es usar cuatro espacios para indentar.
+
+  \diapo{problema-if-else}
+
+  Nuevamente los estudiantes deberían ser capaces de desarrollar la primera parte por sí solos.
+
+  También podría ocurrírseles resolver el problema usando dos \li!if!s,
+  con condiciones \li!promedio < 55! y \li!promedio >= 55!.
+
+  \diapo{solucion-if-else}
+
+  Aquí se introduce la sentencia \li!if-else!.
+  
+  Mencionar que \emph{else} en inglés significa «o si no».
+
+  Todo \li!else! siempre está asociado a un \li!if!.
+  Ambos deben partir siempre en la misma columna.
+
+  \diapo{problema-if-elif}
+
+  Este problema también puede ser resuelto
+  usando varios \li!if!s.
+
+  \diapo{solucion-if-elif}
+
+  Aquí se introduce la sentencia \li!if-elif-else!.
+
+  No es legal en Python usar \li!else if ...:!,
+  y por eso la sentencia \li!elif! es necesaria.
+  Como es una contracción de \li!else if!,
+  en español vendría a ser algo como «o si no, si».
+
+  El uso de varios \li!elif!s encadenados
+  hace que el programa sea mucho más claro.
+  Si se usara varios \li!if!s desacoplados,
+  no sería evidente a primera vista
+  que el programa seguirá sólo una de las alternativas.
+
+  \diapo{ejercicio-bisiesto}
+
+  Este ejercicio está pensado para que lo resuelvan los estudiantes.
+
+  Tras leer el enunciado,
+  analizar cuál es la condición de la regla del año bisiesto
+  que hace que cada caso de prueba entregue el resultado mostrado.
+  
+  \diapo{bisiesto-1}
+
+  Primera manera de resolver el problema.
+  Se cubre el caso más específico primero,
+  y luego se va refinando hacia el caso más general.
+
+  Explicar cuál es el flujo de ejecución
+  para los casos de prueba presentados.
+
+  \diapo{bisiesto-2}
+
+  Segunda manera de resolver el problema.
+  Sirve para introducir sentencias de control anidadas.
+
+  En este caso, se cubre el caso más general primero,
+  y luego es refinado con otro \li!if!.
+
+  Nuevamente, explicar cuál es el flujo de ejecución
+  para los casos de prueba presentados.
+
+  \diapo{bisiesto-3}
+
+  Tercera manera de resolver el problema.
+  En este caso, una sola expresión lógica indica el camino a seguir.
+  
+  El año es bisiesto si es divisible por 400, o si es divisible por 4 y no por 100.
+
+  La expresión puede abarcar dos líneas de código
+  ya que hay un paréntesis abierto sin cerrar.
+  Ésta es la manera de continuar líneas en Python.
+
+  Además, se usa paréntesis para forzar la precedencia entre los operadores \li!and! y \li!or!.
+
+  Para el resto de la clase,
+  puede encontrar ejercicios para resolver en
+  \url{http://progra.usm.cl/apunte/ejercicios/1/index.html#estructuras-condicionales}.
+\end{document}
+
+
