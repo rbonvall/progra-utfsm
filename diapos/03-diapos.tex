@@ -11,20 +11,140 @@
 \usepackage{url}
 \usepackage{hyperref}
 
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
 \input{../latex/definiciones.tex}
 
 \usecolortheme{crane}
 \usefonttheme{serif}
 
 \title{Programas simples}
-\author{
-  Programación \\ \url{http://progra.usm.cl}
-}
+\author{Programación \\ \url{http://progra.usm.cl}}
 \date{14 y 15 de marzo de 2011}
 
 \begin{document}
   \begin{frame}
     \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-gravitacion}
+    \frametitle{Problema}
+    La fuerza de atracción gravitacional
+    entre dos planetas de masas \(m_1\) y \(m_2\)
+    separados por una distancia de \(r\) kilómetros
+    está dada por la fórmula:
+    \[ F = G\frac{m_1 m_2}{r^2}, \]
+    donde
+    \(G = 6.67428\cdot 10^{-11} [\text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}]\)
+    es la constante de gravitación universal.
+
+    Escriba un programa que pregunte las masas de los planetas y su distancia,
+    y entregue la fuerza de atracción entre ellos.
+  \end{frame}
+
+  \begin{frame}
+    \label{gravitacion}
+    \frametitle{Solución}
+    \lstinputlisting{programas/gravitacion.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-serrucho}
+    \frametitle{Problema}
+    Escriba un programa que pida al usuario un valor real \(x\),
+    y entregue \(y = s(x)\),
+    donde \(s(x)\) es la \emph{función serrucho}:
+
+    \begin{center}
+      \begin{tikzpicture}[scale=.8]
+        \draw[gray] (0, 0) grid (8.5, 3.5);
+        \draw[->, thick] (0, 0) -- (8.5, 0);
+        \draw[->, thick] (0, 0) -- (0, 3.5);
+        \foreach\x in {0,2,...,8} \draw[*-o, red, thick] (\x, 0) -- (\x + 2, 3);
+        \foreach\x in {0,...,8} \node at (\x, -.3) {\footnotesize \x};
+        \foreach\y in {1,...,3} \node at (-.3, \y) {\footnotesize \y};
+      \end{tikzpicture}
+    \end{center}
+
+    \lstinputlisting[language=testcase]{programas/caso-serrucho.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{serrucho}
+    \frametitle{Dos soluciones}
+    \lstinputlisting{programas/serrucho.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-rimas}
+    \frametitle{Problema}
+    Dos palabras riman si sus cuatro últimas letras son iguales.
+
+    Escriba un programa que pregunte dos palabras,
+    y muestre \li!True! o \li!False! dependiendo si riman o no.
+
+    \lstinputlisting[language=testcase]{programas/caso-1-rima.txt}
+    \lstinputlisting[language=testcase]{programas/caso-2-rima.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{rima1}
+    \frametitle{Primera solución}
+    \lstinputlisting{programas/rima1.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{rima1}
+    \frametitle{Solución con truco}
+    \lstinputlisting{programas/rima2.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{rima1}
+    \frametitle{Solución con más truco}
+    \lstinputlisting{programas/rima3.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-tazas}
+    \frametitle{Problema}
+    En una mesa hay 23 tazas formando un círculo.
+    Las tazas 4 y 18 tienen una moneda en su interior.
+
+    La moneda de la taza 4 es movida
+    \(i\) posiciones en el sentido de las agujas del reloj,
+    y la de la taza 18, \(j\) posiciones en el sentido contrario.
+
+    Escriba un programa que pida al usuario ingresar \(i\) y \(j\),
+    e imprima \li!True! o \li!False! dependiendo de si las monedas
+    quedaron o no en la misma taza.
+
+    \lstinputlisting[language=testcase]{programas/caso-tazas.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{diagrama-tazas}
+    \begin{center}
+      \begin{tikzpicture}[rotate=90]
+        \def\A{{-360/23}}
+        \foreach\i in {0,...,22}
+          \node[draw, fill=blue!20, circle, minimum size=2em] at (\i * \A:4cm) {\i};
+        \foreach\i in {4, 18}
+          \node[draw, fill=yellow, circle, minimum size=1em] at (\i * \A:4cm) {};
+        \draw[thick, ->] ( 4 * \A:3cm) arc ( 4 * \A: 7.5 * \A:3cm);
+        \draw[thick, ->] (18 * \A:3cm) arc (18 * \A: 12.5 * \A:3cm);
+        \node at ( 7 * \A : 2.6cm) {\(i\)};
+        \node at (12 * \A : 2.6cm) {\(j\)};
+      \end{tikzpicture}
+    \end{center}
+  \end{frame}
+
+  \begin{frame}
+    \label{tazas}
+    \frametitle{Solución}
+    \lstinputlisting{programas/tazas.py}
   \end{frame}
 
 \end{document}
