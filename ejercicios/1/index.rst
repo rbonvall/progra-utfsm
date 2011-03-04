@@ -47,6 +47,7 @@ Ciclos
     dibujos-asteriscos
     pi
     e
+    collatz
 
 Patrones comunes
 ----------------
