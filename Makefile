@@ -38,8 +38,7 @@ help:
 clean:
 	-rm -rf _build/*
 
-html: diagramas diapos
-	@cp -f diapos/*.pdf _static/
+html: diagramas
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) _build/html
 	@echo
 	@echo "Build finished. The HTML pages are in _build/html."

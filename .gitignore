@@ -2,4 +2,3 @@
 *.pyc
 _build/
 _static/jsMath
-_static/??-*.pdf
