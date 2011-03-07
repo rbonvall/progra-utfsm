@@ -8,7 +8,7 @@ se construye de la siguiente forma:
 * si es impar, se le multiplica tres y se le suma uno;
 * la sucesión termina al llegar a uno.
 
-La `conjetura de Collatz`_ dice al partir desde cualquier número,
+La `conjetura de Collatz`_ afirma que, al partir desde cualquier número,
 la secuencia siempre llegará a 1.
 A pesar de ser una afirmación a simple vista muy simple,
 no se ha podido demostrar si es cierta o no.
