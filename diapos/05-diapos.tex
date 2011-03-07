@@ -11,15 +11,26 @@
 \usepackage{url}
 \usepackage{hyperref}
 
+\usepackage{tikz}
+\usetikzlibrary{shapes,calc,arrows}
+
+\definecolor{lightbox}{HTML}{FFEEC1}
+\definecolor{tablerule}{HTML}{333333}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\newcolumntype{x}{>{\ttfamily}r<{}}
+\newcolumntype{z}{!{\color{tablerule}\vline}}
+%\newcolumntype{x}{r}
+
 \input{../latex/definiciones.tex}
+\input{../diagramas/incluir/flujo.tex}
 
 \usecolortheme{crane}
 \usefonttheme{serif}
 
 \title{Estructuras de repetición}
-\author{
-  Programación \\ \url{http://progra.usm.cl}
-}
+\author{Programación \\ \url{http://progra.usm.cl}}
 \date{21 y 22 de marzo de 2011}
 
 \begin{document}
@@ -27,5 +38,136 @@
     \maketitle
   \end{frame}
 
+  \begin{frame}
+    \frametitle{Problema 1: promedio de 3 números}
+
+    Escriba un programa que muestre el promedio de 3 números reales
+    ingresados por el usuario.
+    
+    \lstinputlisting[language=testcase]{programas/caso-promedio-sin-ciclo.txt}
+
+    \vfill
+    \textbf{Solución:}
+    \lstinputlisting{programas/promedio-sin-ciclo.py}
+  \end{frame}
+  
+
+  \begin{frame}
+    \frametitle{Problema 2: promedio de \(n\) números}
+
+    Escriba un programa que pregunte al usuario
+    cuántos números ingresará,
+    le pida que ingrese los números,
+    y entregue el promedio como salida.
+
+    \lstinputlisting[language=testcase]{programas/caso-promedio-n-numeros.txt}
+  \end{frame}
+  
+  
+  \begin{frame}
+    \frametitle{Solución usando ciclo \li!for!}
+
+    \lstinputlisting{programas/promedio-n-numeros.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ruteo}
+    \footnotesize
+    
+    \begin{columns}[t]
+      \column{0.40\textwidth}
+        \begin{tabular}{xzxzxzxzx}\toprule%
+          n &   suma & i &     x & promedio \\ \midrule
+          4 &        &   &       &          \\ 
+            &   0.0  &   &       &          \\
+            &        & 0 &       &          \\
+            &        &   &  43.1 &          \\
+            &  43.1  &   &       &          \\
+            &        & 1 &       &          \\
+            &        &   & 12.87 &          \\
+            & 55.97  &   &       &          \\
+            &        & 2 &       &          \\
+            &        &   &   5.0 &          \\
+            & 60.97  &   &       &          \\
+            &        & 3 &       &          \\
+            &        &   & 200.8 &          \\
+            & 261.77 &   &       &          \\
+            &        &   &       & 65.4425  \\
+          \bottomrule
+        \end{tabular}
+        
+      \column{0.50\textwidth}
+        \lstinputlisting%
+          [basicstyle=\tiny\ttfamily,backgroundcolor=\color{lightbox}]%
+          {programas/promedio-n-numeros.py}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ejemplos de rangos}
+    \lstinputlisting{programas/ejemplos-rangos.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 3: promedio de números hasta cierta suma}
+
+    Escriba un programa que pida al usuario que ingrese varios números.
+    Cuando la suma sea mayor que 10,
+    el programa debe terminar y entregar el promedio.
+
+    \lstinputlisting[language=testcase]{programas/caso-1-promedio-hasta-suma.txt}
+
+    \lstinputlisting[language=testcase]{programas/caso-2-promedio-hasta-suma.txt}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Solución usando ciclo \li!while!}
+    \lstinputlisting{programas/promedio-hasta-suma.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ruteo}
+    \footnotesize
+    
+    \begin{columns}
+      \column{0.40\textwidth}
+        \begin{tabular}{xzxzxzx}\toprule%
+           n &  suma &      x & promedio \\ \midrule
+           0 &       &        &          \\
+             &  0.0  &        &          \\
+             &       &    5.0 &          \\
+           1 &       &        &          \\
+             &  5.0  &        &          \\
+             &       &    1.2 &          \\
+           2 &       &        &          \\
+             &  6.2  &        &          \\
+             &       &    2.4 &          \\
+           3 &       &        &          \\
+             &  8.6  &        &          \\
+             &       &    3.3 &          \\
+           4 &       &        &          \\
+             & 11.9  &        &          \\
+             &       &        & 2.975    \\
+          \bottomrule
+        \end{tabular}
+
+      \column{0.50\textwidth}
+        \lstinputlisting%
+          [basicstyle=\tiny\ttfamily,backgroundcolor=\color{lightbox}]%
+          {programas/promedio-hasta-suma.py}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \includegraphics[scale=.8]{../diagramas/while-promedio.pdf}
+      \column{0.5\textwidth}
+        \lstinputlisting[basicstyle=\footnotesize\ttfamily,linerange=3-8]%
+          {programas/promedio-hasta-suma.py}
+        
+    \end{columns}
+    
+  \end{frame}
 \end{document}
 

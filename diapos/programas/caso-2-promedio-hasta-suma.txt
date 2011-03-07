@@ -1,0 +1,4 @@
+Ingrese varios numeros
+`9.5`
+`1.1`
+El promedio es 5.3

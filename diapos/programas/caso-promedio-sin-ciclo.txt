@@ -1,0 +1,4 @@
+Nota 1: `43`
+Nota 2: `22`
+Nota 3: `81`
+El promedio es 48.6666666667

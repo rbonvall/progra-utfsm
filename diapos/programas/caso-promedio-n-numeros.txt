@@ -1,0 +1,7 @@
+Cuantos numeros? `4`
+`43.1`
+`12.87`
+`5`
+`200.8`
+El promedio es 65.4425
+
