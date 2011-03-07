@@ -218,8 +218,9 @@ se está imprimiendo el mensaje ``El equivalente en Celsius es:``
 y a continuación, en la misma línea,
 el valor de la variable ``c``.
 
-Las comillas sólo sirven para representar un string en el código.
-Cuando un string es impreso usando ``print``,
+Las comillas sólo sirven para representar un string en el código,
+y no forman parte del string.
+Al imprimir el string usando ``print``
 las comillas no aparecen::
 
     >>> 'Hola'

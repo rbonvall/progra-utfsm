@@ -43,16 +43,15 @@ es una operación inválida::
         print n / m
     ZeroDivisionError: division by zero
 
-
 La segunda línea del mensaje
 indica cómo se llama el archivo donde está el error
 y en qué línea del archivo está.
 En este ejemplo,
 el error esta en la línea 3 de ``division.py``.
-
-La última línea muestra el nombre de la excepción.
-(en este caso, es ``ZeroDivisionError``)
+La última línea muestra el nombre de la excepción
+(en este caso es ``ZeroDivisionError``)
 y un mensaje explicando cuál es el error.
+
 Los errores y excepciones presentados aquí
 son los más básicos y comunes.
 
