@@ -14,3 +14,6 @@ Diapositivas y notas de clases
 * Clase 4:
   `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/04-diapos.pdf>`_,
   `notas  <http://csrg.inf.utfsm.cl/~rbonvall/diapos/04-notas.pdf>`_.
+* Clase 5:
+  `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/05-diapos.pdf>`_,
+  `notas  <http://csrg.inf.utfsm.cl/~rbonvall/diapos/05-notas.pdf>`_.
