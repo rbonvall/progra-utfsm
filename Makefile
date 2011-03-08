@@ -40,6 +40,7 @@ clean:
 
 html: diagramas
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) _build/html
+	sh scripts/fix-testcases.sh
 	@echo
 	@echo "Build finished. The HTML pages are in _build/html."
 
