@@ -1,0 +1,228 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+
+\setjobnamebeamerversion{05-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Estructuras de repetición}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{21 y 22 de marzo de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Presentar las sentencias \li!for! y \li!while!.
+    \item Enseñar el uso de ciclos y el criterio para elegir cuál usar.
+    \item Introducir el uso de ruteos.
+    \item Resolver ejercicios con ciclos.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  \diapo{problema-promedio-3-numeros}
+
+  Este es un problema sencillo que todos los estudiantes
+  deberían ser capaces de resolver hasta ahora.
+  Como la cantidad de valores a leer es fija,
+  es posible usar una variable para cada uno de ellos.
+  En este caso, son tres.
+  La solución está en la misma diapositiva.
+
+  \diapo{problema-promedio-n-numeros}
+
+  Lea el enunciado del problema y explique el caso de prueba.
+
+  A diferencia del problema anterior,
+  aquí no es posible tener una cantidad fija de variables,
+  ni una cantidad fija de sentencias de entrada.
+  Es necesario usar un ciclo
+  para leer la entrada
+  e ir acumulando la suma en cada iteración.
+
+  \diapo{solucion-promedio-n-numeros}
+
+  Aquí es introducido el \li!for! con rango.
+
+  La variable \li!suma! acumula la suma de los valores ingresados.
+  Cada valor leído es siempre asignado a una única variable \li!x!.
+  En cada iteración, el valor anterior de \li!x! se pierde.
+
+  Es indispensable inicializar la variable \li!suma! antes del ciclo.
+  Si no se hace, ocurrirá un \li!NameError!
+  al intentar evaluar la expresión \li!suma + x!.
+
+  Introduzca el concepto de \emph{iteración}:
+  es cada una de las veces que se ejecuta el ciclo.
+  En el ejemplo del caso de prueba,
+  el ciclo hace cuatro iteraciones.
+
+  El cuerpo del ciclo se escribe indentado
+  respecto a la línea del \li!for!.
+  Las sentencias que están indentadas a la misma altura del \li!for!
+  ya no pertenecen a él.
+
+  La variable \li!i! es la \emph{variable de control}
+  del ciclo \li!for!. En este ejemplo,
+  su valor no es usado dentro del ciclo,
+  por lo que su importancia no es evidente.
+  Explique que, de todos modos,
+  la variable \li!i! va tomando valores desde 0 hasta \(n - 1\).
+
+  Ejecute el programa en el computador,
+  para mostrar que en efecto resuelve el problema.
+
+  El \li!for! con rango es similar al \li!for! de Pascal,
+  pero no es la única manera de usarlo.
+  En lugar del \li!range!, es posible poner cualquier objeto iterable.
+  Por ejemplo: un string, una lista, un iterador y casi cualquier estructura de datos.
+  Estos usos los veremos en la materia del segundo certamen.
+
+  \diapo{ruteo-promedio-n-numeros}
+
+  Éste es el primer ruteo mostrado en las diapositivas del ramo.
+  El ruteo es una representación paso a paso
+  del estado del programa después de cada sentencia.
+
+  La convención para los ruteos es:
+  cada columna tiene los estados de una variable,
+  y cada fila del ruteo está asociada a una línea del programa.
+  Si dos valores son modificados en líneas diferentes del programa,
+  entonces van en filas distintas del ruteo.
+
+  Este ruteo usa la entrada del caso de prueba de la diapositiva con el enunciado.
+
+  A diferencia de los programas en C o Java,
+  aquí la variable de control no se ``pasa de largo''.
+  Si el \li!for! va de 0 a 3, entonces la variable nunca toma el valor 4.
+
+  \diapo{ejemplos-rangos}
+
+  La función \li!range! entrega la lista de valores incluidos en el rango
+  indicado por sus parámetros.
+  A pesar de que no hemos enseñando listas aún,
+  los ejemplos deberían ser bastante claros.
+
+  La regla que siempre se cumple para los rangos es:
+  el valor inicial siempre es incluido,
+  y el final nunca lo es.
+
+  (La razón para preferir estos rangos semiabiertos está justificada en el
+  \href{http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html}{manuscrito EWD831}
+  de Dijkstra).
+
+  La forma más usual de usar \li!range! es con un solo argumento.
+  \li!range(n)! va desde 0 hasta \li!n - 1!, de uno en uno.
+
+  Cuando tiene dos argumentos, se toman como los valores inicial y final.
+
+  Cuando tiene tres argumentos, el tercero de ellos indica
+  cada cuántos valores serán considerados.
+  Este argumento se llama el \emph{paso} del rango.
+
+  El caso en que el valor final es menor que el inicial
+  no es un error, sino un rango vacío.
+  Si se pone en un ciclo \li!for!,
+  entonces ninguna iteración será ejecutada.
+  Esto es útil en algunos algoritmos.
+
+  \diapo{uso-variable-control}
+
+  La variable de control toma cada uno de los valores del rango
+  a medida que las iteraciones del ciclo van siendo ejecutadas.
+  Estos valores pueden ser usados,
+  como los de cualquier otra variable del programa.
+  En este ejemplo,
+  se muestra una tabla de los cuadrados
+  de los números del 2 al 6.
+
+  \diapo{problema-promedio-hasta-cierta-suma}
+
+  Lea el enunciado del problema y explique el caso de prueba.
+
+  En este problema,
+  no sólo no es posible tener una cantidad fija de variables,
+  sino que tampoco se sabe antes de comenzar el ciclo
+  cuántas iteraciones serán ejecutadas.
+
+  La lógica es la misma que en el problema anterior:
+  hay que ir leyendo los valores y acumulando la suma
+  dentro del ciclo.
+  Lo que cambia es el control del término del ciclo:
+  en este caso, hay que usar un ciclo \li!while!
+  con la condición de término indicada en el enunciado.
+
+  \diapo{solucion-promedio-hasta-cierta-suma}
+
+  Aquí es introducido el ciclo \li!while!.
+
+  Muchas de las observaciones sobre el ciclo \li!for!
+  también se aplican para el \li!while!:
+  la variable \li!suma! acumula el total,
+  debe ser inicializada en cero,
+  cada pasada por el ciclo se llama iteración y
+  el cuerpo del ciclo se escribe indentado
+
+  Una diferencia es que ya no existe una variable de control.
+  El ciclo es ejecutado mientras la condición es verdadera.
+
+  Como la cantidad de valores no es conocida,
+  es necesario además llevar la cuenta a medida que van siendo ingresados,
+  para poder dividir por el total al calcular el promedio.
+  La variable \li!n! debe ser inicializada en cero,
+  e incrementada en uno en cada iteración.
+
+  La condición del \li!while! es evaluada al principio de cada iteración.
+  El ciclo podría ejecutarse cero veces,
+  lo que ocurre cuando la condición es falsa desde el principio.
+
+  Ejecute el programa en el computador,
+  para mostrar que en efecto resuelve el problema.
+
+  \diapo{ruteo-promedio-hasta-cierta-suma}
+
+  Este ruteo usa la entrada del caso de prueba de la diapositiva con el enunciado.
+
+  \diapo{diagrama-flujo-while}
+
+  Para mayor claridad en caso de dudas,
+  el diagrama de flujo representa cómo es ejecutada
+  la parte principal del programa,
+  que está presentada en la mitad derecha.
+
+  El diagrama de flujo para el \li!for! no fue incluido
+  porque es más engorroso.
+
+  Para el resto de la clase,
+  puede encontrar ejercicios para resolver en
+  \url{http://progra.usm.cl/apunte/ejercicios/1/index.html#ciclos}.
+  En estos ejercicios, puede introducir el uso de \li!break! y \li!continue!.
+  Intente hacer por lo menos un ejercicio con \li!if! dentro de un ciclo,
+  y otro con ciclos anidados.
+
+  Al hacer el resumen de la clase,
+  explique el criterio para elegir \li!for! o \li!while!.
+  El \li!for! se usa cuando se sabe justo antes del ciclo
+  cuántas iteraciones serán ejecutadas.
+  El \li!while! se usa cuando se sabe qué es lo que debe ocurrir
+  para detener las iteraciones.
+
+\end{document}
+
