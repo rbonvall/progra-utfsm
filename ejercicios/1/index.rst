@@ -56,12 +56,11 @@ Patrones comunes
     no-multiplos
     suma-naturales
     numero-mayor
+    productos
     contar-combinaciones-dados
     histograma
     larga-corta
     piezas-domino
-    factorial
-    numeros-combinatorios
     lanzar-dados
 
 Diseño de algoritmos
