@@ -21,6 +21,9 @@ Contenidos del primer certamen
 
 Contenidos del segundo certamen
 -------------------------------
+.. toctree::
+
+    funciones
 
 Contenidos del tercer certamen
 ------------------------------
