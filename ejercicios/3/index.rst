@@ -6,4 +6,5 @@ Arreglos
 .. toctree::
 
     arreglos-simples
+    cuadrado-magico
 
