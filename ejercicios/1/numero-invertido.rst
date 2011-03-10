@@ -14,6 +14,6 @@ con los dígitos en orden inverso:
 
 .. testcase::
 
-    Ingrese numero: `321`
-    321
+    Ingrese numero: `241`
+    142
 
