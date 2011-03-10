@@ -15,7 +15,7 @@ Por lo tanto, es conveniente conocerlas.
 
 En programación,
 se llama **patrón** a una solución
-que puede ser aplicable a un problema que ocurre a menudo.
+que es aplicable a un problema que ocurre a menudo.
 A continuación veremos algunos patrones comunes
 que ocurren en programación.
 
@@ -25,7 +25,7 @@ La suma y la multiplicación son operaciones binarias:
 operan sobre dos valores.
 
 Para sumar y multiplicar más valores,
-generalmente dentro de un ciclo que los genere,
+generalmente dentro de un ciclo que los vaya generando,
 hay que usar una variable
 para ir guardando el resultado parcial de la operación.
 Esta variable se llama **acumulador**.
@@ -33,6 +33,12 @@ Esta variable se llama **acumulador**.
 En el caso de la suma,
 el acumulador debe partir con el valor cero.
 Para la multiplicación, con el valor uno.
+En general,
+el acumulador debe ser inicializado
+con el `elemento neutro`_
+de la operación que será aplicada.
+
+.. _elemento neutro: http://es.wikipedia.org/wiki/Elemento_neutro
 
 Por ejemplo,
 el siguiente programa entrega
@@ -79,7 +85,7 @@ al que se le suele llamar **contador**.
 Tal como en el caso de la suma,
 debe ser inicializado en cero,
 y cada vez que aparezca lo que queremos contar,
-hay que sumarle uno.
+hay que incrementarlo en uno.
 
 Por ejemplo,
 el siguiente programa
@@ -168,10 +174,71 @@ de la siguiente manera::
         n = int(raw_input())
         mayor = max(mayor, n)
 
+Si sabemos de antemano que todos los números por revisar son positivos,
+podemos simplemente inicializar el acumulador en ``-1``.
+
 Por supuesto, para obtener el menor valor
 se hace de la misma manera,
 pero inicializando el acumulador con un número muy grande,
 y actualizándolo al encontrar un valor menor.
 
-[Por escribir el resto]
+
+Generar pares
+-------------
+Para generar pares de cosas en un programa,
+es necesario usar dos ciclos anidados
+(es decir, uno dentro del otro).
+
+Ambos ciclos, el exterior y el interior,
+van asignando valores a sus variables de control,
+y ambas son accesibles desde dentro del doble ciclo.
+
+Por ejemplo,
+todas las casillas de un tablero de ajedrez
+pueden ser identificadas mediante un par ``(fila, columna)``.
+Para recorrer todas las casillas del tablero,
+se puede hacer de la siguiente manera::
+
+    for i in range(1, 9):
+        for i in range(1, 9):
+            print 'Casilla', i, j
+
+Cuando los pares son desordenados
+(es decir, el par `(a, b)` es el mismo que el par `(b, a)`),
+el ciclo interior no debe partir desde cero,
+sino desde el valor que tiene la variable de control
+del ciclo interior.
+
+Por ejemplo,
+el siguiente programa muestra todas las piezas
+de un juego de dominó::
+
+    for i in range(7):
+        for j in range(i, 7):
+            print i, j
+
+Además, otros tipos de restricciones pueden ser necesarias.
+Por ejemplo,
+en un campeonato de fútbol,
+todos los equipos deben jugar entre ellos dos veces,
+una como local y una como visita.
+Por supuesto, no pueden jugar consigo mismos,
+por lo que es necesario excluir los pares compuestos
+por dos valores iguales.
+El siguiente programa muestra todos los partidos
+que se deben jugar en un campeonato con 6 equipos,
+suponiendo que los equipos están numerados del 0 al 5::
+
+    for i in range(6):
+        for j in range(6):
+            if i != j:
+                print i, j
+
+Otra manera de escribir el mismo código es::
+
+    for i in range(6):
+        for j in range(6):
+            if i == j:
+                continue
+            print i, j
 
