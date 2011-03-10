@@ -89,9 +89,8 @@ Ejecución de un programa
 ------------------------
 Una vez escrito el programa e instalado el intérprete,
 es posible ejecutar los programas.
-El siguiente video muestra cómo hacerlo:
-
-    [Video]
+Para hacerlo,
+haga doble clic en el ícono del programa.
 
 Uso de la consola
 -----------------
@@ -106,10 +105,6 @@ La consola permite ingresar un programa línea por línea.
 Además,
 sirve para evaluar expresiones y ver su resultado inmediatamente.
 Esto permite usarla como si fuera una calculadora.
-
-El siguiente video muestra cómo usar el intérprete interactivo:
-
-    [Video]
 
 La consola interactiva
 siempre muestra el símbolo ``>>>``,
@@ -148,14 +143,17 @@ son aplicaciones que hacen más fácil la tarea
 de escribir programas.
 
 Python viene con su propio entorno de desarrollo llamado **IDLE**.
-El siguiente video muestra cómo usar IDLE para desarrollar un programa
-y para usar la consola interactiva:
+IDLE viene con una consola y un editor de texto.
 
-    [Video]
-
-Otros buenos entornos de desarrollo más avanzados para Python son:
+Además, hay otros buenos entornos de desarrollo más avanzados para Python:
 
 * `PyScripter <http://code.google.com/p/pyscripter/downloads/list>`_,
 * `WingIDE 101 <http://www.wingware.com/downloads/wingide-101/3.2.12-1/binaries>`_
 
 Usted puede probar éstos y usar el que más le acomode durante el semestre.
+
+.. El siguiente video muestra cómo usar IDLE para desarrollar un programa
+.. y para usar la consola interactiva:
+.. 
+..     [Video]
+
