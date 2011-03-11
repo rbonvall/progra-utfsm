@@ -1,5 +1,5 @@
-Suma de cubos
--------------
+Suma de dígitos al cubo
+-----------------------
 
 Entre todos los enteros mayores a 1
 hay solamente cuatro que pueden ser
