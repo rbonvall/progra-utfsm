@@ -31,6 +31,7 @@ Estructuras condicionales
     ordenamiento-basico
     letra-o-numero
     calculadora
+    edad
     set-de-tenis
     triangulos
     indice-masa-corporal
@@ -40,12 +41,14 @@ Ciclos
 .. toctree::
 
     multiplos
+    potencias-dos
     suma-entre-numeros
     tablas-de-multiplicar
     divisores
     tiempo-de-viaje
     dibujos-asteriscos
     pi
+    suma-fracciones
     e
     collatz
 
@@ -75,6 +78,7 @@ Diseño de algoritmos
     caballo-de-ajedrez
     media-armonica
     es-numero-palindromo
+    palabras-palindromas
     cachipun
     calculo-interes
     cifrado-cesar
@@ -83,10 +87,12 @@ Diseño de algoritmos
     adivinar-numero
     suma-tres-cubos
     espiral
+    suma-digitos-cubo
     multiplicacion-rusa
     numeros-amistosos
     numero-deleitable
     metodo-newton
+    triangulo-pascal
 
 Sin clasificar aún
 ------------------
@@ -95,10 +101,5 @@ Sin clasificar aún
     lanzando-monedas
     que-nota-necesito
     situacion-ramo
-    suma-digitos-cubo
-    suma-fracciones
     tabla-valores
-    triangulo-pascal
-    edad
-    potencias-dos
     n-multiplos
