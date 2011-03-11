@@ -1,8 +1,8 @@
-Pi
+π
 --
 
 Desarolle un programa para estimar el valor
-de `\pi` usando la siguiente suma infinita:
+de π_ usando la siguiente suma infinita:
 
 .. math::
 
@@ -20,3 +20,5 @@ La entrada del programa debe ser un número entero
 
    n: `1000`
    3.140592653839794
+
+.. _π: http://es.wikipedia.org/wiki/N%C3%BAmero_%CF%80
