@@ -17,7 +17,7 @@ depende del día en que su programa será ejecutado.
 
 Para obtener la fecha actual,
 puede hacerlo usando la función ``localtime``
-que viene en el módulo ``time``.
+que viene en el módulo time_.
 Los valores se obtienen de la siguiente manera
 (suponiendo que hoy es 11 de marzo de 2011)::
 
@@ -35,3 +35,4 @@ si el cumpleaños ingresado
 ya pasó durante este año,
 o si todavía no ocurre.
 
+.. _time: http://docs.python.org/library/time.html
