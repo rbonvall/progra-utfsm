@@ -1,9 +1,9 @@
 Potencias de dos
 ----------------
 
-Escriba un programa que pueda generar todas
-las potencias de 2, desde 0 hasta un número ingresado
-por el usuario:
+Escriba un programa que genere todas
+las potencias de 2, desde la 0-ésima
+hasta la ingresada por el usuario:
 
 .. testcase::
 
