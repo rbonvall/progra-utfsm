@@ -31,3 +31,6 @@ hágalo con cuatro números:
 	Ingrese numero: `1`
         0 1 6 7
 
+Recuerde que su programa debe entregar la solución correcta
+para cualquier combinación de números,
+no sólo para los ejemplos mostrados aquí.
