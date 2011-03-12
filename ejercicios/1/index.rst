@@ -98,8 +98,4 @@ Sin clasificar aún
 ------------------
 .. toctree::
 
-    lanzando-monedas
     que-nota-necesito
-    situacion-ramo
-    tabla-valores
-    n-multiplos
