@@ -13,7 +13,7 @@ y calculen las siguientes operaciones:
 
    Además, se define `0! = 1`.
    
-#. La `potencia factorial creciente`_ `n^{\bar m}`,
+#. La `potencia factorial creciente`_ `n^{\overbar{m}}`,
    definida como:
 
    .. math::
@@ -36,7 +36,7 @@ y calculen las siguientes operaciones:
    .. math::
 
        S(n, k) = \frac{1}{k!}
-                 \sum_{i=0}^{k} (-1)^j \binom{k}{i} (k - i)^n
+                 \sum_{i=0}^{k} (-1)^j {k\choose i} (k - i)^n
 
 .. _factorial: http://mathworld.wolfram.com/Factorial.html
 .. _potencia factorial creciente: http://mathworld.wolfram.com/RisingFactorial.html

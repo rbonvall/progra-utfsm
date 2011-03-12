@@ -4,7 +4,7 @@ Transformador binario
 Escriba un programa que pueda transformar
 un número binario a un número decimal.
 
-Recuerde que para un número binario *101001*,
+Recuerde que para un número binario 101001,
 la transformación a decimal se realiza de la siguiente
 forma:
 
@@ -14,10 +14,10 @@ forma:
 
 .. testcase::
 
-    Numero binario: 110101
+    Numero binario: `110101`
     53
 
 .. testcase::
 
-    Numero binario: 110111
-    55 
+    Numero binario: `1100010`
+    98

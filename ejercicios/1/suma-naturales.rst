@@ -14,7 +14,7 @@ la siguiente sumatoria.
 
 .. math::
 
-   S_1 = \sum_{i=1}^}{n} i = 1+2+3+4+5+6+\cdots+n
+   S_1 = \sum_{i=1}^{n} i = 1+2+3+4+5+6+\cdots+n
 
 Además, obtenga el resultado
 de la siguiente fórmula.

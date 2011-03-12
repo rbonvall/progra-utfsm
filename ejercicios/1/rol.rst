@@ -5,7 +5,7 @@ Desarrolle un programa que
 calcule el dígito verificador
 de un rol UTFSM.
 
-Para calcular dicho dígito, se deben
+Para calcular el dígito verificador, se deben
 realizar los siguiente pasos:
 
 #. Obtener el rol sin guión ni dígito verificador.
@@ -20,18 +20,15 @@ realizar los siguiente pasos:
 
 #. Al resultado obtenido, es decir, 52, debemos sacarle el módulo 11, es decir:
 
-.. math::
-
-   52 % 11 = 8
+   .. math::
+   
+      52 % 11 = 8
 
 #. Con el resultado obtenido en el paso anterior, debemos restarlo de 11:
 
-.. math::
+   .. math::
+   
+      11 - 8 = 3
 
-   11 - 8 = 3
+#. Finalmente, el dígito verificador será el obtenido en la resta: 201012341-3.
 
-#. Finalmente, el dígito verificador será el obtenido en la resta.
-
-.. math::
-
-   201012341-3

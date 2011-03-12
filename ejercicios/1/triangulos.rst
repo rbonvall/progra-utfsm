@@ -13,7 +13,7 @@ que reciba como entrada los tres lados de un triángulo,
 e indique:
 
 * si acaso el triángulo es inválido; y
-* si no lo es, qué tipo de triángulo es:
+* si no lo es, qué tipo de triángulo es.
 
 .. testcase::
 

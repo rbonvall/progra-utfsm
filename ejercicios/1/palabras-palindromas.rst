@@ -13,7 +13,7 @@ Por ejemplo, «reconocer», «Neuquén» y «acurruca» son palíndromos.
 1. Escriba un programa que reciba como entrada una palabra
    e indique si es palíndromo o no.
    Para simplificar, suponga que la palabra no tiene acentos
-   y todas sus letras están en minúscula:
+   y todas sus letras son minúsculas:
 
    .. testcase::
 

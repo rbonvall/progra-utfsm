@@ -1,9 +1,11 @@
 Números palíndromos
 -------------------
 
-Un número natural es un **palíndromo**
+Un número natural es un palíndromo_
 si se lee igual de izquierda a derecha
 y de derecha a izquierda.
+
+.. _palíndromo: http://es.wikipedia.org/wiki/Pal%C3%ADndromo
 
 Por ejemplo,
 14941 es un palíndromo,

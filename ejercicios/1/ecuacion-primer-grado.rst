@@ -10,11 +10,11 @@ grado:
 
 y que entregue la solución.
 
-Recuerde que una ecuación de primer grado puede:
+Una ecuación de primer grado puede:
 
 * tener solución única,
 * tener infinitas soluciones, o
-* no tener solución.
+* no tener soluciones.
 
 .. testcase::
 

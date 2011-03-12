@@ -6,6 +6,6 @@ del número entero ingresado:
 
 .. testcase::
 
-	Ingrese num: `200`
+	Ingrese numero: `200`
 	1 2 4 5 8 10 20 25 40 50 100 200
 
