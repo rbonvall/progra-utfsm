@@ -19,6 +19,7 @@ Programas simples
     pitagoras
     hora-futura
     parte-decimal
+    que-nota-necesito
     huevos-a-la-copa
 
 Estructuras condicionales
@@ -94,8 +95,3 @@ Diseño de algoritmos
     metodo-newton
     triangulo-pascal
 
-Sin clasificar aún
-------------------
-.. toctree::
-
-    que-nota-necesito
