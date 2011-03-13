@@ -13,7 +13,7 @@ y calculen las siguientes operaciones:
 
    Además, se define `0! = 1`.
    
-#. La `potencia factorial creciente`_ `n^{\overbar{m}}`,
+#. La `potencia factorial creciente`_ `n^{\bar{m}}`,
    definida como:
 
    .. math::
