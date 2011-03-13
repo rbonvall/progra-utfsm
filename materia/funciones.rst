@@ -139,11 +139,23 @@ todas las veces que sea necesario::
     >>> factorial(n ** 2)
     362880
 
+.. index:: variable local
+
 Las variables que son creadas dentro de la función
 (incluyendo los parámetros y el resultado)
 se llaman **variables locales**,
 y sólo son visibles dentro de la función,
 no desde el resto del programa.
+
+.. index:: variable global
+
+Por otra parte,
+las variables creadas fuera de alguna función
+se llaman **variables globales**,
+y son visibles desde cualquier parte del programa.
+Sin embargo, su valor no puede ser modificado,
+ya que una asignación crearía una variable local
+del mismo nombre.
 
 En el ejemplo, las variables locales son ``n``, ``f`` e ``i``.
 Una vez que la llamada a la función termina,
@@ -156,132 +168,33 @@ estas variables dejan de existir::
       File "<console>", line 1, in <module>
     NameError: name 'f' is not defined
 
+Después de definir la función ``factorial``,
+podemos crear otra función llamada ``comb``
+para calcular números combinatorios::
 
-.. El programa completo para calcular el número combinatorio `C(m, n)`
-.. sería el siguiente:
-.. 
-.. .. literalinclude:: programas/comb-con-funcion.f95
-.. 
-.. En este programa,
-.. han sido definidas dos funciones:
-.. 
-.. * ``factorial`` recibe como parámetro un entero ``p``
-..   y entrega como resultado un entero ``f``.
-..   Además , tiene una tercera variable local ``i``.
-.. * ``comb`` recibe como parámetros dos enteros, ``m`` y ``n``,
-..   y entrega como resultado un entero ``c``.
-.. 
-.. Note que, gracias al uso de las funciones,
-.. el código del programa ahora tiene sólo tres líneas.
-.. 
-.. 
-.. Llamadas a funciones
-.. ~~~~~~~~~~~~~~~~~~~~
-.. .. index:: llamada a función
-.. 
-.. La operación de usar una función para obtener un valor
-.. se denomina **llamar a la función**.
-.. Se representa pasando los parámetros entre paréntesis
-.. a continuación del nombre de la función::
-.. 
-..     comb(5, 2)
-.. 
-.. Ya que la llamada entrega un valor como resultado,
-.. puede ser usada en cualquier parte de un programa
-.. en la que pueda ir una expresión::
-.. 
-..     print *, factorial(5)
-..     x = factorial(10)
-..     y = 2 * factorial(3)
-..     z = factorial(2 * x) + factorial(factorial(4))
-.. 
-.. Todas las siguientes llamadas tienen errores
-.. o están usadas en el contexto equivocado::
-.. 
-..     read *, factorial(x)    ! read requiere variable, no expresión
-..     x = factorial(2, 3)     ! factorial tiene un parámetro, no dos
-..     x = factorial('perro')  ! el parámetro debe ser entero, no string
-..     x = trim(factorial(5))  ! el resultado es entero, no string
-..     factorial(x)            ! llamadas no son sentencias
-.. 
-.. Subrutinas
-.. ----------
-.. .. index:: subrutina
-.. 
-.. Una **subrutina** es una sección de un programa
-.. que realiza varias sentencias
-.. de manera independiente al resto del programa.
-.. La diferencia con las funciones
-.. es que las subrutinas no entregan ningún valor como resultado.
-.. 
-.. Las subrutinas son útiles
-.. para agrupar secuencias de sentencias
-.. que deben ser ejecutadas en conjunto.
-.. Usar subrutinas suele hacer
-.. que los programas sean más fáciles de leer.
-.. 
-.. Definición de subrutinas
-.. ~~~~~~~~~~~~~~~~~~~~~~~~
-.. Al igual que las funciones,
-.. las subrutinas deben ser definidas
-.. en la sección ``contains`` del programa.
-.. 
-.. La sintaxis para definir una subrutina es::
-.. 
-..     subroutine nombre(parámetros)
-..         ! declaración de variables locales
-.. 
-..         ! código de la función
-..     end subroutine nombre
-.. 
-.. Por ejemplo,
-.. podemos definir una subrutina que pida al usuario
-.. llenar los elementos de un arreglo::
-.. 
-..     subroutine leer_datos(nr_datos):
-..         integer :: nr_datos, i
-.. 
-..         print *, 'Ingrese', nr_datos, 'datos'
-..         do i = 1, nr_datos
-..             read *, datos(i)
-..         end do
-..     end subroutine leer_datos
-.. 
-.. La subrutina guarda los valores
-.. en un arreglo llamado ``datos``,
-.. que debe haber sido declarado en el programa.
-.. La subrutina recibe como parámetro
-.. la cantidad de elementos del arreglo que serán llenadas.
-.. 
-.. Llamadas a subrutinas
-.. ~~~~~~~~~~~~~~~~~~~~~
-.. .. index:: llamada a subrutina, call
-.. 
-.. Al igual que las funciones,
-.. las subrutinas son llamadas
-.. pasando los parámetros entre paréntesis
-.. a continuación del nombre.
-.. 
-.. A diferencia de las funciones,
-.. las subrutinas no pueden ser usadas en una expresión,
-.. ya que no entregan un resultado.
-.. 
-.. La manera de llamar una subrutina en un programa
-.. es usando la sentencia **call** (en inglés: «llamar»).
-.. Por ejemplo,
-.. para usar la subrutina ``llenar_datos``,
-.. debe ser llamada de la siguiente manera::
-.. 
-..     call llenar_datos(10)
-.. 
-.. En el siguiente programa usamos la subrutina ``llenar_datos``
-.. para leer los valores, y además definimos otra subrutina
-.. llamada ``mostrar_datos`` que imprime los valores del arreglo.
-.. El programa como tal tiene tres líneas,
-.. que describen exactamente lo que hace:
-.. lee los datos a un arreglo, lo eleva al cuadrado y lo muestra en la pantalla.
-.. 
-.. .. literalinclude:: programas/cuadrado-arreglo.f95
-.. 
-.. .. include:: disqus.rst
-.. 
+    def comb(m, n):
+        fact_m = factorial(m)
+        fact_n = factorial(n)
+        fact_m_n = factorial(m - n)
+        c = fact_m / (fact_n * fact_m_n)
+        return c
+
+Esta función llama a ``factorial`` tres veces,
+y luego usa los resultados para calcular su resultado.
+La misma función puede ser escrita también de forma más sucinta::
+
+    def comb(m, n):
+        return factorial(m) / (factorial(n) * factorial(m - n))
+
+El programa completo es el siguiente:
+
+.. literalinclude:: ../_static/programas/combinatorios.py
+
+(Puede descargarlo aquí_).
+
+.. _aquí: ../_static/programas/combinatorios.py
+
+Note que, gracias al uso de las funciones,
+la parte principal del programa ahora tiene sólo cuatro líneas,
+y es mucho más fácil de entender.
+
