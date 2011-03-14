@@ -198,3 +198,67 @@ Note que, gracias al uso de las funciones,
 la parte principal del programa ahora tiene sólo cuatro líneas,
 y es mucho más fácil de entender.
 
+Múltiples valores de retorno
+----------------------------
+En Python, una función puede retornar más de un valor.
+
+Por ejemplo,
+la siguiente función
+recibe una cantidad de segundos,
+y retorna el equivalente
+en horas, minutos y segundos::
+
+    def convertir_segundos(segundos):
+        horas = segundos / (60 * 60)
+        minutos = (segundos / 60) % 60
+        segundos = segundos % 60
+        return horas, minutos, segundos
+
+Al llamar la función,
+se puede asignar un nombre a cada uno de los valores retornados::
+
+    >>> h, m, s = convertir_segundos(9814)
+    >>> h
+    2
+    >>> m
+    43
+    >>> s
+    34
+
+Técnicamente, la función está retornando una **tupla** de valores,
+un tipo de datos que veremos más adelante::
+
+    >>> convertir_segundos(9814)
+    (2, 43, 34)
+
+Funciones que no retornan nada
+------------------------------
+Una función puede realizar acciones
+sin entregar necesariamente un resultado.
+
+Por ejemplo,
+si un programa necesita imprimir cierta información muchas veces,
+conviene encapsular esta acción en una función que haga los ``print`` ::
+
+    def imprimir_datos(nombre, apellido, rol, dia, mes, anno):
+        print 'Nombre completo:', nombre, apellido
+        print 'Rol:', rol
+        print 'Fecha de nacimiento:', dia, '/', mes, '/', anno
+
+    imprimir_datos('Perico', 'Los Palotes', '201101001-1',  3, 1, 1993)
+    imprimir_datos('Yayita', 'Vinagre',     '201101002-2', 10, 9, 1992)
+    imprimir_datos('Fulano', 'De Tal',      '201101003-3', 14, 5, 1990)
+
+En este caso,
+cada llamada a la función ``imprimir_datos``
+muestra los datos en la pantalla, pero no entrega un resultado.
+Este tipo de funciones es conocido en programación
+como **procedimientos** o **subrutinas**,
+pero en Python son funciones como cualquier otra.
+
+Técnicamente, todas las funciones retornan valores.
+En el caso de las funciones que no tienen una sentencia ``return``,
+el valor de retorno siempre es ``None``.
+Pero como la llamada a la función no aparece en una asignación,
+el valor se pierde, y no tiene ningún efecto en el programa.
+
