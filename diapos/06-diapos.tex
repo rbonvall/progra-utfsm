@@ -27,5 +27,43 @@
     \maketitle
   \end{frame}
 
+  \begin{frame}
+    \frametitle{Sumar cosas}
+    Escriba un programa que entregue la suma
+    de los cuadrados de los números naturales
+    menores que mil:
+    \[
+      1^2 + 2^2 + 3^2 + \cdots + 999^2 + 1000^2.
+    \]
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Solución:}
+    \lstinputlisting{programas/sumar-cuadrados.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Sumar cosas}
+    Escriba un programa que entregue la suma
+    de los cuadrados de los números ingresados por el usuario.
+    El programa debe terminar
+    cuando se ingrese un cero:
+    \lstinputlisting[language=testcase]{programas/caso-sumar-cuadrados-ingresados.txt}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Solución:}
+    \lstinputlisting{programas/sumar-cuadrados-ingresados.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Patrón \emph{sumar cosas}:}
+    \lstinputlisting[
+      classoffset=0,morekeywords={ciclo},
+      classoffset=1,morekeywords={calcular},
+      basicstyle=\ttfamily\LARGE,
+    ]{programas/patron-sumar.py}
+  \end{frame}
+
 \end{document}
 
