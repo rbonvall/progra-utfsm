@@ -1,9 +1,6 @@
 Módulos
 =======
 
-Las funciones de Python que hemos estado usando hasta ahora
-(
-
 .. index:: módulo, biblioteca
 
 Un **módulo** (o **biblioteca**) es una colección de definiciones
@@ -110,4 +107,82 @@ El módulo turtle_ permite manejar una tortuga
 .. _datetime: http://docs.python.org/library/datetime.html
 .. _fractions: http://docs.python.org/library/fractions.html
 .. _turtle: http://docs.python.org/library/turtle.html
+
+Importación de nombres
+----------------------
+.. index:: import, módulo (uso)
+
+La sentencia ``import`` importa objetos desde un módulo
+para poder ser usados en el programa actual.
+
+Una manera de usar ``import`` es importar sólo los nombres específicos
+que uno desea utilizar en el programa::
+
+    from math import sin, cos
+    print sin(10)
+    print cos(20)
+
+En este caso, las funciones ``sin`` y ``cos`` no fueron creadas por nosotros,
+sino importadas del módulo de matemáticas, donde están definidas.
+
+La otra manera de usar ``import`` es importando el módulo completo,
+y accediendo a sus objetos mediante un punto::
+
+    import math
+    print math.sin(10)
+    print math.cos(10)
+
+Las dos formas son equivalentes.
+Como siempre, hay que optar por la que hace que el programa
+sea más fácil de entender.
+
+Creación de módulos
+-------------------
+.. index:: módulo (creación)
+
+Un módulo sencillo es simplemente un archivo con código en Python.
+El nombre del archivo indica cuál es el nombre del módulo.
+
+Por ejemplo, podemos crear un archivo llamado ``pares.py``
+que tenga funciones relacionadas con los números pares::
+
+    def es_par(n):
+        return n % 2 == 0
+
+    def es_impar(n):
+        return not es_par(n)
+
+    def pares_hasta(n):
+        return range(0, n, 2)
+
+En este caso, el nombre del módulo es ``pares``.
+Para poder usar estas funciones desde otro programa,
+el archivo ``pares.py`` debe estar en la misma carpeta
+que el programa.
+
+Por ejemplo,
+el programa ``mostrar_pares.py``
+puede ser escrito así::
+
+    from pares import pares_hasta
+
+    n = int(raw_input('Ingrese un entero: '))
+    print 'Los numeros pares hasta', n, 'son:'
+    for i in pares_hasta(n):
+        print i
+
+Y el programa ``ver_si_es_par.py``
+puede ser escrito así::
+
+    import pares
+    
+    n = int(raw_input('Ingrese un entero: '))
+    if pares.es_par(n):
+        print n, 'es par'
+    else:
+        print n, 'no es par'
+
+Como se puede ver,
+ambos programas pueden usar los objetos definidos en el módulo
+simplemente importándolos.
 
