@@ -94,6 +94,16 @@ El módulo turtle_ permite manejar una tortuga
 
     >>> from turtle import Turtle
     >>> t = Turtle()
+    >>> t.forward(10)
+    >>> t.left(45)
+    >>> t.forward(20)
+    >>> t.left(45)
+    >>> t.forward(30)
+    >>> for i in range(10):
+    ...     t.right(30)
+    ...     t.forward(10 * i)
+    ... 
+    >>> 
 
 .. _math: http://docs.python.org/library/math.html
 .. _random: http://docs.python.org/library/random.html
