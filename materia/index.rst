@@ -24,6 +24,7 @@ Contenidos del segundo certamen
 .. toctree::
 
     funciones
+    modulos
 
 Contenidos del tercer certamen
 ------------------------------
