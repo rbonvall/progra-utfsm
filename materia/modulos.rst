@@ -241,3 +241,9 @@ Si no hiciéramos esto,
 cada vez que otro programa importe una función
 se ejecutaría el programa completo.
 
+Haga la prueba: `descargue el programa`_ y ejecútelo.
+Luego, escriba otro programa que importe alguna de las funciones.
+A continuación, haga lo mismo,
+pero eliminando el ``if``.
+
+.. _descargue el programa: ../_static/programas/conversion_unidades.py
