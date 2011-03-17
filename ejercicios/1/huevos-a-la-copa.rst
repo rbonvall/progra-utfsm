@@ -28,8 +28,8 @@ alcanzar `T_y` °C está dado por la fórmula:
              {K\pi^2(4\pi/3)^{2/3}}
         \ln\left[
             0.76\frac{T_o - T_w}
-                     {T_y - T_w},
-        \right]
+                     {T_y - T_w}
+        \right],
 
 donde `M` es la masa del huevo,
 `\rho` su densidad,
