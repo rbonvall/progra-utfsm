@@ -108,6 +108,11 @@ El módulo turtle_ permite manejar una tortuga
 .. _fractions: http://docs.python.org/library/fractions.html
 .. _turtle: http://docs.python.org/library/turtle.html
 
+La lista completa de módulos de Python
+puede ser encontrada en la `documentación de la biblioteca estándar`_.
+
+.. _documentación de la biblioteca estándar: http://docs.python.org/library/index.html
+
 Importación de nombres
 ----------------------
 .. index:: import, módulo (uso)
