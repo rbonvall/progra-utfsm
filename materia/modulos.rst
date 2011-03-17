@@ -48,7 +48,7 @@ El módulo math_ contiene funciones y constantes matemáticas::
 El módulo random_ contiene funciones para producir números aleatorios
 (es decir, al azar)::
 
- >>> from random import choice, randrange, 
+ >>> from random import choice, randrange,
  >>> choice(['cara', 'sello'])
  'cara'
  >>> choice(['cara', 'sello'])
@@ -99,8 +99,8 @@ El módulo turtle_ permite manejar una tortuga
  >>> for i in range(10):
  ... t.right(30)
  ... t.forward(10 * i)
- ... 
- >>> 
+ ...
+ >>>
 
 .. _math: http://docs.python.org/library/math.html
 .. _random: http://docs.python.org/library/random.html
@@ -180,7 +180,7 @@ Y el programa ``ver_si_es_par.py``
 puede ser escrito así::
 
  import pares
- 
+
  n = int(raw_input('Ingrese un entero: '))
  if pares.es_par(n):
  print n, 'es par'
