@@ -29,6 +29,7 @@ Estructuras condicionales
     par-o-impar
     bisiestos
     division
+    palabra-mas-larga
     ordenamiento-basico
     letra-o-numero
     calculadora
