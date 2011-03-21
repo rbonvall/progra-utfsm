@@ -17,3 +17,8 @@ Diapositivas y notas de clases
 * Clase 5:
   `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/05-diapos.pdf>`_,
   `notas  <http://csrg.inf.utfsm.cl/~rbonvall/diapos/05-notas.pdf>`_.
+* Clase 6:
+  `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/06-diapos.pdf>`_,
+  `notas  <http://csrg.inf.utfsm.cl/~rbonvall/diapos/06-notas.pdf>`_.
+* Clase 7: ejercicios propuestos por el profesor.
+* Clase 8: ejercicios propuestos por el profesor.
