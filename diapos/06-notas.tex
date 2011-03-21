@@ -1,0 +1,208 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+
+\setjobnamebeamerversion{06-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Estructuras de repetición}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{21 y 22 de marzo de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  Enseñar los siguientes patrones típicos de programación:
+  \begin{itemize}
+    \item sumar cosas,
+    \item multiplicar cosas,
+    \item contar cosas,
+    \item encontrar el máximo y el mínimo,
+    \item generar pares de elementos.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  \diapo{problema-suma-cuadrados-menores-que-mil}
+  \diapo{solucion-suma-cuadrados-menores-que-mil}
+
+  Éste es el primero de dos ejercicios
+  que consisten en sumar cuadrados de números.
+
+  Como todos los programas en que hay que sumar elementos en un ciclo,
+  éste usa una variable inicializada en cero para ir acumulando el resultado.
+
+  Rutee unas pocas iteraciones para demostrar que en efecto
+  la variable va acumulando el resultado deseado.
+
+  En las diapositivas se utiliza la notación tradicional
+  para aumentar el valor de una variable:
+  \li!suma = suma + n!.
+  En Python también se puede usar la \emph{asignación aumentada}:
+  \li!suma += n!.
+  Puede introducir esta notación al resolver problemas en el computador durante la clase.
+
+  Olvidar inicializar la variable acumuladora es un error común.
+  Enfatice que hacerlo es imprescindible.
+  Si no es inicializada, el programa arrojará un error de valor en la primera iteración.
+
+  \diapo{problema-suma-cuadrados-hasta-cero}
+  \diapo{solucion-suma-cuadrados-hasta-cero}
+
+  Éste es el segundo ejercicio de sumar cuadrados de números.
+  Tiene dos diferencias importantes con el anterior:
+  \begin{itemize}
+    \item el número de iteraciones no es conocido de antemano,
+      por lo que hay que usar un ciclo \li!while!, y
+    \item el valor de \li!n! es leído desde la entrada estándar
+      dentro del ciclo.
+  \end{itemize}
+  
+  El uso de \li!while! infinito con \li!break! es necesario
+  ya que la variable \li!n! no ha sido creada
+  cuando la condición del \li!while! es evaluada por primera vez.
+  Una alternativa sería inicializar \li!n! con cualquier valor distinto de cero
+  antes del ciclo, y poner la condición \li+n != 0+ en el \li!while!.
+
+  Discuta con los estudiantes qué es lo que tienen en común ambos programas,
+  que es lo que se presentará a continuación como el patrón \emph{sumar cosas}.
+
+  \diapo{patron-sumar}
+
+  Explicación en pseudocódigo del patrón \emph{sumar cosas}.
+  Aclare que se trata de pseudocódigo,
+  por lo que \li!ciclo! y \li!calcular!  no deben entenderse literalmente,
+  sino que deben ser adaptados dependiendo del problema.
+
+  \diapo{patron-multiplicar}
+  \diapo{patron-contar}
+
+  Dos patrones relacionados son multiplicar y contar.
+  Puede preguntar a los estudiantes si se les ocurre como hacerlos
+  antes de mostrar las diapositivas.
+  En ambos casos, lo que cambia es el valor inicial del acumulador
+  y la actualización de él que es realizada al final del ciclo.
+
+  Como comentario al margen,
+  estos tres patrones son casos especiales
+  de las \href{http://en.wikipedia.org/wiki/Reduce_(higher-order_function)}{reducciones} de programación funcional,
+  que también pueden ser aplicadas en Python:
+  \begin{lstlisting}
+>>> from operator import add, mul
+>>> reduce(add, [3, 4, 5], 0)
+12
+>>> reduce(mul, [3, 4, 5], 1)
+60
+  \end{lstlisting}
+
+  \diapo{problema-maximo-positivos}
+  \diapo{solucion-1-maximo-positivos}
+  \diapo{solucion-2-maximo-positivos}
+
+  Éste es el primero de dos ejercicios
+  acerca de encontrar el máximo de una secuencia de valores.
+
+  La estrategia para encontrar el máximo es:
+  en cada iteración, recordar cuál es el máximo hasta el momento,
+  y actualizarlo si es que se encuentra un valor que sea mayor a él.
+
+  Algunos alumnos pueden sugerir usar la función \li!max!.
+  Esto no es conveniente, ya que requiere recibir todos los valores como argumentos.
+  Además, no es posible usarla si la cantidad de valores no es sabida de antemano,
+  a menos que se utilice listas, que aún no han sido enseñadas.
+
+  Para encontrar el mayor,
+  el acumulador debe ser inicializado en un valor que sea menor
+  a todos los posibles valores que serán examinados.
+  El valor inicial que se elija
+  de todos modos se perderá después de la primera iteración.
+  Como en este caso los números son positivos,
+  se ha elegido el valor \(-1\).
+
+  Otra estrategia posible de inicialización
+  es usar el primero de los valores por examinar.
+  En las diapositivas no se la utiliza,
+  pero sí está explicada en el apunte.
+
+  La diferencia entre las dos soluciones mostradas
+  es la actualización del valor mayor:
+  en la primera, se usa el \li!if! para decidir si actualizarlo o no,
+  mientras que la segunda tiene una expresión más breve.
+  La primera es la forma «à la C», pues este lenguaje no tiene una función \li!max!.
+
+  \diapo{problema-maximo-reales}
+  \diapo{solucion-maximo-reales}
+
+  Segundo ejercicio de encontrar el máximo.
+  Tiene dos diferencias importantes con el anterior:
+  \begin{itemize}
+    \item la cantidad de valores no es conocida,
+      por lo que hay que usar un ciclo \li!while!, y
+    \item los valores pueden ser negativos,
+      por lo que ya no sirve inicializar el acumulador en \(-1\).
+  \end{itemize}
+
+  La mala práctica suele ser inicializar el acumulador
+  en un valor «muy negativo», como \(-999999\).
+  Esta idea es poco robusta, pues no cubre todos los casos.
+  
+  El tipo \li!float! permite representar el valor infinito
+  (no sólo en Python, sino en cualquier lenguaje que soporte el tipo \li!float! estándar).
+  Por lo tanto,
+  la mejor estrategia es usar \(-\infty\),
+  representado como \li!-float('inf')! en Python,
+  para inicializar el acumulador.
+  
+  \diapo{patron-mayor}
+  \diapo{patron-menor}
+
+  Explicación en pseudocódigo de los patrones \emph{encontrar mayor} y \emph{encontrar menor}.
+  Después de mostrar el primero,
+  puede preguntar a los estudiantes si se les ocurre qué hay que modificar
+  para obtener el segundo.
+  
+  Un ejercicio para ver si entendieron puede ser:
+  ¿cómo inicializar las variables
+  si se desea encontrar el mínimo y el máximo
+  de notas de certámenes de la UTFSM?
+  (Respuesta: \(101\) y \(-1\)).
+
+  \diapo{problema-combinaciones-dados}
+  \diapo{solucion-combinaciones-dados}
+
+  Ejercicio sobre generación de pares de valores.
+  La técnica es usar dos ciclos anidados
+  que vayan generando los pares.
+  Dentro del ciclo interior,
+  ambas variables están disponibles para ser usadas.
+
+  Un error típico es equivocadamente usar la misma variable de control en ambos ciclos \li!for!.
+  Esto es más común en C o Java,
+  donde usualmente se debe repetir tres veces el nombre de la variable.
+
+  \diapo{patron-pares}
+
+  Explicación en pseudocódigo.
+  Este esquema debe ser modificado
+  para problemas en que los pares son desordenados (por ejemplo, fichas de dominó),
+  o cuando se debe excluir pares de valores repetidos (por ejemplo, parejas de personas).
+  Estas situaciones están explicadas en el apunte.
+
+\end{document}
+
