@@ -50,5 +50,3 @@ de acuerdo a la `planificación de la asignatura`_.
 * Sesión 21: ejercicios propuestos por el profesor.
 * Sesión 22: certamen 2.
 
-----
-
