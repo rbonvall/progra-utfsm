@@ -58,7 +58,7 @@ Además, el código resultante es mucho más dificil de entender,
 pues no es evidente a simple vista qué es lo que hace.
 
 Lo ideal sería que existiera una función llamada ``factorial``
-que hiciera el trabajo sucio, y que podamos usar de la siguiente manera::
+que hiciera el trabajo sucio, y que pudiéramos usar de la siguiente manera::
 
     factorial(m) / (factorial(m - n) * factorial(n))
 
@@ -252,7 +252,7 @@ conviene encapsular esta acción en una función que haga los ``print`` ::
 En este caso,
 cada llamada a la función ``imprimir_datos``
 muestra los datos en la pantalla, pero no entrega un resultado.
-Este tipo de funciones es conocido en programación
+Este tipo de funciones son conocidas en programación
 como **procedimientos** o **subrutinas**,
 pero en Python son funciones como cualquier otra.
 
