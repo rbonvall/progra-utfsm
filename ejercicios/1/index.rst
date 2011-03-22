@@ -88,6 +88,7 @@ Diseño de algoritmos
     el-mejor-numero
     adivinar-numero
     suma-tres-cubos
+    fibonacci
     espiral
     suma-digitos-cubo
     multiplicacion-rusa
