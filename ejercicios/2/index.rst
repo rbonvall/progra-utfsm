@@ -27,6 +27,8 @@ Diccionarios
 ------------
 .. toctree::
 
+    expresiones-diccionarios
+
 Estructuras de datos anidadas
 -----------------------------
 .. toctree::
