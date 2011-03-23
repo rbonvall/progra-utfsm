@@ -4,3 +4,5 @@ while True:
     if n == 0:
         break
     mayor = max(mayor, n)
+
+print 'El mayor es', mayor
