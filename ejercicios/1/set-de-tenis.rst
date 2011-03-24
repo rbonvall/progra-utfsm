@@ -17,8 +17,8 @@ Si el set está empatado a 6 juegos,
 el set se define en un último juego,
 en cuyo caso el resultado final es 7-6.
 
-Sabiendo que el jugador A ha ganado `m` juegos,
-y el jugador B, `n` juegos,
+Sabiendo que el jugador A ha ganado *m* juegos,
+y el jugador B, *n* juegos,
 al periodista le gustaría saber:
 
 * si A ganó el set, o

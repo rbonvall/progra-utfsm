@@ -1,7 +1,7 @@
 Triángulos
 ==========
 
-Los tres lados `a`, `b` y `c` de un triángulo
+Los tres lados *a*, *b* y *c* de un triángulo
 deben satisfacer la `desigualdad triangular`_:
 cada uno de los lados no puede ser más largo
 que la suma de los otros dos.

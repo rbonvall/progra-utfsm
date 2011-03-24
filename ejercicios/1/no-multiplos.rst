@@ -2,11 +2,11 @@ No múltiplos
 ------------
 
 Escriba un programa que muestre los números naturales menores o iguales
-que un número `n` determinado, que no sean múltiplos ni de 3 ni de 7.
+que un número *n* determinado, que no sean múltiplos ni de 3 ni de 7.
 
 .. testcase::
 
-    Ingrese número: `24`
+    Ingrese numero: `24`
     1
     2
     4
