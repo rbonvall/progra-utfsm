@@ -9,6 +9,7 @@ Funciones y módulos
     numeros-palindromos
     funciones-numeros-primos
     aprox-seno-coseno
+    tabla-verdad
 
 Listas
 ------
