@@ -8,6 +8,7 @@ Funciones y módulos
     numero-par
     numeros-palindromos
     funciones-numeros-primos
+    aprox-seno-coseno
 
 Listas
 ------
