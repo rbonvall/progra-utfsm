@@ -11,8 +11,8 @@ y ``False`` si es impar::
     False
     >>> par('hola')
     Traceback (most recent call last):
-    File "<console>", line 1, in <module>
-    File "<console>", line 2, in par
+      File "<console>", line 1, in <module>
+      File "<console>", line 2, in par
     TypeError: not all arguments converted during string formatting
 
 
