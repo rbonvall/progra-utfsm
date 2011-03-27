@@ -14,6 +14,10 @@ indique cuál es el resultado de las siguientes expresiones.
 A continuación,
 verifique sus respuestas en el computador.
 
+* ``a[2]``
+* ``b[9]``
+* ``c[1][2]``
+* ``e[0] == e[1]``
 * ``len(c)``
 * ``len(c[0])``
 * ``len(e)``
