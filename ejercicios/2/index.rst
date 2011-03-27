@@ -6,6 +6,7 @@ Funciones y módulos
 .. toctree::
 
     numero-par
+    numeros-palindromos
     funciones-numeros-primos
 
 Listas
