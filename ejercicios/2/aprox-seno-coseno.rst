@@ -6,7 +6,7 @@ mediante sumas infinitas:
 
 .. math::
 
-    \text{sen})(x) =
+    \text{sen}(x) =
       \frac{x^1}{1!} -
       \frac{x^3}{3!} +
       \frac{x^5}{5!} -
@@ -15,7 +15,7 @@ mediante sumas infinitas:
 
 .. math::
 
-    \text{cos})(x) =
+    \text{cos}(x) =
       \frac{x^0}{0!} -
       \frac{x^2}{2!} +
       \frac{x^4}{4!} -
