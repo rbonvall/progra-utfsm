@@ -1,0 +1,4 @@
+Ingrese a: `3.0`
+Ingrese b: `5.0`
+Ingrese c: `4.0`
+El triangulo es escaleno.
