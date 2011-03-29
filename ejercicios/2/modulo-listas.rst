@@ -1,9 +1,10 @@
-Módula de listas
+Módulo de listas
 ----------------
 
-Crear un módulo llamado ``listas.py`` que tenga las siguientes funciones:
+Desarrolle un módulo llamado ``listas.py``
+que contenga las siguientes funciones.
 
-* una función ``promedio(l)``,
+* Una función ``promedio(l)``,
   cuyo parámetro ``l`` sea una lista de números reales,
   y que entregue el promedio de los números::
 
@@ -12,7 +13,7 @@ Crear un módulo llamado ``listas.py`` que tenga las siguientes funciones:
     >>> promedio([1, 4, 9, 16])
     7.5
 
-* una función ``cuadrados(l)``,
+* Una función ``cuadrados(l)``,
   que entregue una lista con los cuadrados
   de los valores de ``l``::
 
@@ -21,7 +22,7 @@ Crear un módulo llamado ``listas.py`` que tenga las siguientes funciones:
     >>> cuadrados([3.4, 1.2])
     [11.559999999999999, 1.44]
 
-* una función ``mas_largo(palabras)``,
+* Una función ``mas_largo(palabras)``,
   cuyo parámetro ``palabras`` es una lista de strings,
   que entregue cuál es el string más largo::
 
@@ -30,3 +31,5 @@ Crear un módulo llamado ``listas.py`` que tenga las siguientes funciones:
     >>> mas_largo(['****', '**', '********', '**'])
     '********'
 
+  Si las palabras más largas son varias,
+  basta que entregue una de ellas.

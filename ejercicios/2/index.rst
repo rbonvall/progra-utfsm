@@ -10,6 +10,7 @@ Funciones y módulos
     funciones-numeros-primos
     aprox-seno-coseno
     tabla-verdad
+    modulo-listas
 
 Listas
 ------
@@ -78,7 +79,6 @@ Sin clasificar aún
     maquinaria
     matrices
     matriz
-    modulo-listas
     notas-certamenes
     numeros-romanos
     promedio-cuadrados
