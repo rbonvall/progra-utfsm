@@ -1,0 +1,31 @@
+\documentclass[11pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\titulo}{Control presencial 1, lunes 3--4}
+\input{../../latex/definiciones.tex}
+%\input{../../latex/encabezado-control.tex}
+\lstset{frame=single,language=testcase}
+
+\begin{document}
+  \thispagestyle{empty}
+
+  Escriba un programa cuya entrada sean
+  los valores del dólar observado de los últimos diez días,
+  y que entregue como salida
+  las cantidades de días en que el precio subió y en que bajó
+  con respecto al día anterior:
+
+  \lstinputlisting{caso-cp1-lunes-3-4.txt}
+
+  Los días que el precio se mantuvo igual no deben ser contados.
+\end{document}
+
