@@ -22,13 +22,13 @@ mediante sumas infinitas:
       \frac{x^6}{6!} +
       \cdots
 
-(Estas son las `series de Taylor`_ en torno a `x=0`
+(Éstas son las `series de Taylor`_ en torno a `x=0`
 de las funciones seno y coseno,
 que usted estudiará en Matemáticas 2).
 
 .. _series de Taylor: http://es.wikipedia.org/wiki/Serie_de_Taylor
 
-Los términos de la suma son cada vez más pequeños,
+Los términos de ambas sumas son cada vez más pequeños,
 por lo que tomando algunos de los primeros términos
 es posible obtener una buena aproximación.
 

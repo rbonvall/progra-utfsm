@@ -23,5 +23,6 @@ e imprima la tabla de verdad del predicado.::
     False False True  True
     False False False False
 
-Note que la función no retorna nada, sólo imprime la tabla.
+Note que la función ``tabla_verdad``
+no retorna nada, sólo imprime la tabla.
 

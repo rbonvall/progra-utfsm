@@ -30,9 +30,9 @@ por las que sus notas están separadas.
 Por ejemplo,
 los acordes mayores tienen tres notas
 separadas por 4 y 3 semitonos.
-Así es como el acorde de re mayor es:
+Así es como el acorde de re mayor está formado por las notas:
 
-    re mayor: re, fa♯, la,
+    re, fa♯ y la,
 
 pues entre re y fa♯ hay 4 semitonos,
 y entre fa♯ y la, 3.

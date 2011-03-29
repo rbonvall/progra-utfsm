@@ -68,7 +68,6 @@ Sin clasificar aún
     desviacion-estandar
     divisibles-nueve
     divisibles-once
-    factorial-reciproco
     fecha
     fechas
     gato
