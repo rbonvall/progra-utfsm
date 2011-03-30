@@ -11,6 +11,14 @@
 \usepackage{url}
 \usepackage{hyperref}
 
+\definecolor{lightbox}{HTML}{FFEEC1}
+\definecolor{tablerule}{HTML}{333333}
+\definecolor{novar}{HTML}{888888}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\newcolumntype{x}{>{\ttfamily}r<{}}
+\newcolumntype{z}{!{\color{tablerule}\vline}}
 \input{../latex/definiciones.tex}
 
 \usecolortheme{crane}
@@ -76,5 +84,58 @@
     \lstinputlisting{programas/factorial-fn.py}
   \end{frame}
 
+  \begin{frame}
+    \label{def-fn-factorial}
+    \begin{block}{Conceptos}
+      \begin{itemize}
+        \item Parámetros
+        \item Variables \textbf{locales} de \li!factorial!
+        \item Variables \textbf{globales}
+        \item Valor de retorno
+      \end{itemize}
+    \end{block}
+    \footnotesize
+    \lstinputlisting{programas/factorial-fn.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ruteo}
+    \label{ruteo-promedio-n-numeros}
+    \footnotesize
+
+    \begin{columns}[t]
+      \column{0.40\textwidth}
+        \begin{tabular}{xzx||xzxzx}\toprule%
+          \multicolumn{2}{c||}{Globales} &
+          \multicolumn{3}{c}{Locales} \\
+          n &  f & n & i & prod  \\ \midrule
+          4 &    &  \multicolumn{3}{c}{\cellcolor{novar}} \\
+            &    & 4 &   &       \\
+            &    &   &   & 1     \\
+            &    &   & 1 &       \\
+            &    &   &   & 1     \\
+            &    &   & 2 &       \\
+            &    &   &   & 2     \\
+            &    &   & 3 &       \\
+            &    &   &   & 6     \\
+            &    &   & 4 &       \\
+            &    &   &   & 24    \\
+            &    & \multicolumn{3}{c}{\cellcolor{novar}} \\
+            & 24 & \multicolumn{3}{c}{\cellcolor{novar}} \\
+          \bottomrule
+        \end{tabular}
+
+      \column{0.35\textwidth}
+        \tiny
+        \lstinputlisting[backgroundcolor=\color{lightbox}]%
+          {programas/factorial-fn.py}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ejercicio}
+    Escriba las funciones para que este programa funcione.
+
+  \end{frame}
 \end{document}
 
