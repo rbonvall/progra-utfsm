@@ -13,7 +13,7 @@
 
 \definecolor{lightbox}{HTML}{FFEEC1}
 \definecolor{tablerule}{HTML}{333333}
-\definecolor{novar}{HTML}{888888}
+\definecolor{novar}{HTML}{CCCCCC}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{colortbl}
@@ -100,7 +100,7 @@
 
   \begin{frame}
     \frametitle{Ruteo}
-    \label{ruteo-promedio-n-numeros}
+    \label{ruteo-fn-factorial}
     \footnotesize
 
     \begin{columns}[t]
@@ -133,9 +133,42 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Ejercicio}
-    Escriba las funciones para que este programa funcione.
-
+    \label{funciones-consola}
+    \frametitle{Probar funciones en la consola}
+    \lstinputlisting{programas/fn-factorial-consola.py}
   \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-binomial}
+    \frametitle{Ejercicio: coeficiente binomial}
+    Escriba un programa que calcule
+    el \emph{coeficiente binomial}:
+    \[
+      \binom{n}{k} = \frac{n!}{(n - k)!\;k!}
+    \]
+    \lstinputlisting[language=testcase]{programas/caso-binomial.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-binomial}
+    \frametitle{Solución}
+    \lstinputlisting{programas/binomial.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-contar-letras}
+    \frametitle{Ejercicio: contar letras}
+    Escriba la función \li!contar! para completar este programa:
+    \footnotesize
+    \lstinputlisting[linerange=9-14]{programas/contar-letras.py}
+    \lstinputlisting[language=testcase]{programas/caso-contar-letras.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-contar-letras}
+    \frametitle{Solución}
+    \lstinputlisting{programas/contar-letras.py}
+  \end{frame}
+
 \end{document}
 
