@@ -36,7 +36,9 @@ de acuerdo a la `planificación de la asignatura`_.
 
 ----
 
-* Sesión 10: por subir.
+* Sesión 10:
+  `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/10-diapos.pdf>`_,
+  notas por subir.
 * Sesión 11: por subir.
 * Sesión 12: por subir.
 * Sesión 13: por subir.
