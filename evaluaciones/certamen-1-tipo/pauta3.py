@@ -12,15 +12,12 @@ while abs(actual - anterior) > p:
 
     suma = suma + actual
 
-    print 'actual =', actual
-    print 'suma =', suma
-
     factorial = factorial * (n + 1) * (n + 2)
     n = n + 2
     signo = -signo
 
     anterior = actual
     actual = signo * (x ** n) / factorial
-    print signo, '* x **', n, '/', factorial
+    #print signo, '* x **', n, '/', factorial
 
 print suma

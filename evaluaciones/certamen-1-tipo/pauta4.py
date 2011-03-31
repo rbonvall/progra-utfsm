@@ -6,9 +6,9 @@ dias = 0
 while y >= 1:
     dx =  x * (a - b * y)
     dy = -y * (c - d * x)
-    x += dx
-    y += dy
-    print '%d\t%.2f\t%.2f' % (dias, x, y)
+    x = x + dx
+    y = y + dy
+    #print '%d\t%.2f\t%.2f' % (dias, x, y)
     dias += 1
 
 print 'Los conejos se extinguiran en', dias, 'dias'
