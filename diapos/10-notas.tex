@@ -38,15 +38,211 @@
   \section*{Diapositivas}
 
   \diapo{uso-funcion-abs}
+
+  Esta diapositiva presenta dos maneras de calcular
+  el valor absoluto de un número real \(x\):
+  implementando la definición matemática de \(\lvert x\rvert\),
+  y usando la función \li!abs! provista por Python.
+
+  Indique que el hecho de que la función ya exista
+  permite ahorrar trabajo, aunque se trate de una operación sencilla.
+  Lo mismo es aplicable a otras operaciones más difíciles de implementar,
+  como la raíz cuadrada.
+
   \diapo{uso-funcion-factorial}
+
+  
+
+  (Las últimas versiones de Python incluyen una función \li!factorial!
+  en el módulo \li!math!,
+  pero para efectos pedagógicos
+  omitiremos esta información).
+
   \diapo{def-fn-factorial}
-  \diapo{def-fn-factorial}
+
+  Éste es el programa completo
+  que calcula el factorial
+  usando una función.
+  Las últimas tres líneas son las mismas
+  en la parte derecha de la diapositiva anterior.
+
+  Una función es una sección de código que hace algo
+  de manera independiente al resto del programa.
+  En esencia,
+  una función es como un mini programa,
+  que tiene una entrada (los parámetros)
+  y una salida (el valor de retorno).
+
+  Las sentencias nuevas que son introducidas en esta diapositiva
+  son \li!def! y \li!return!.
+  La sentencia \li!return! indica cuál es el resultado de la función.
+  Cuando la ejecución alcanza la sentencia \li!return!,
+  la función termina inmediatamente.
+
+  \diapo{conceptos-funciones}
+
+  Introduzca los conceptos de
+  parámetro, variables locales y globales y valor de retorno
+  usando el ejemplo.
+
+  Los \emph{parámetros} son los nombres que son asociados
+  a los valores que son pasados a la función en cada llamada.
+  En el ejemplo,
+  la función \li!factorial! tiene un solo parámetro llamado \li!n!.
+  Una función puede tener más de un parámetro,
+  o no tener ninguno.
+
+  Al valor que es ligado al parámetro en una llamada se le llama \emph{argumento}.
+  Se suele usar los terminos «parámetro» y «argumento» indistintamente,
+  por lo que la diferencia no es tan relevante en la práctica.
+
+  Las \emph{variables locales}
+  son las variables que son definidas
+  dentro de la función.
+  En el ejemplo,
+  las variables locales son \li!n!, \li!prod! e \li!i!.
+  Los parámetros siempre están incluidos entre las variables locales.
+
+  Las variables locales dejan de existir cuando la llamada termina.
+  Sin embargo, no ocurre de la misma manera que en lenguajes como C o Pascal.
+  En Python, las variables son nombres (o referencias), no valores.
+  Después de la llamada, el nombre deja de existir,
+  pero el valor que estaba ligado a ella puede permanecer en la memoria.
+  En la implementación estándar de Python,
+  un objeto es eliminado de la memoria
+  sólo cuando no queda ningún nombre ligado a él
+  (el nombre técnico de esto es «recolección de basura por conteo de referencias»).
+
+  Las \emph{variables globales}
+  son las variables que están definidas fuera de una función.
+  En el ejemplo,
+  \li!n! y \li!f! son variables globales.
+
+  Los valores de las variables globales pueden ser usados
+  desde cualquier parte del programa, incluso desde dentro de una función.
+  Una diferencia importante con otros lenguajes es la siguiente:
+  al intentar asignar un valor a una variable global
+  desde dentro de una función, lo que realmente se está haciendo
+  es crear una variable local con el mismo nombre.
+  Para poder modificar una variable global en una función,
+  hay que declarar la variable usando la sentencia \li!global!,
+  pero esto rara vez es una buena idea en Python,
+  ya que existen técnicas más convenientes
+  para las circunstancias en las que en otros lenguajes
+  se usan variables globales.
+  Por lo mismo, la sentencia \li!global! no es parte de la materia.
+
+  Respecto al mecanismo de paso de parámetros:
+  en Python es mejor olvidarse de los conceptos de paso por valor y por referencia.
+  Los parámetros son en efecto referencias,
+  por lo que los argumentos son compartidos entre el programa y la función.
+  Sin embargo, al asignarle un valor al parámetro,
+  no se está modificando el objeto, sino que se está religando el nombre.
+  La única manera de modificar un objeto (en Python, todos los valores son objetos)
+  es mediante llamadas a métodos.
+  Por lo tanto, el paso de referencias no funciona de la misma manera que en Pascal.
+
+  El mecanismo de paso de parámetros usado por Python
+  se llama \href{http://effbot.org/zone/call-by-object.htm}{paso por objeto},
+  pero rara vez es necesario tener esto en consideración.
+  La regla que realmente hay que recordar es:
+  la asignación modifica nombres, no valores.
+
+  Cuando aparece una variable en una expresión dentro de una función,
+  primero el intérprete busca si se trata de una variable local.
+  Si no hay una variable local con ese nombre,
+  busca si hay una global.
+  Por esto,
+  si hay una variable local con el mismo nombre de una global,
+  la variable global no es accesible desde dentro de la función.
+
+  El \emph{valor de retorno} es el resultado de la función,
+  y es indicado con la sentencia \li!return!.
+  En este ejemplo se está retornando el valor de una variable,
+  pero en general se puede poner cualquier expresión
+  en el \li!return!.
+
   \diapo{ruteo-fn-factorial}
+
+  Ruteo del programa que calcula el factorial.
+  Para denotar que las variables locales existen
+  sólo durante la llamada,
+  se las ha pintado en gris cuando la función todavía no es ejecutada.
+
+  Técnicamente, las variables locales no son creadas todas
+  al momento de la llamada (como en C o Pascal),
+  sino en la primera asignación.
+  Pero por claridad,
+  en el ruteo aparecen creadas todas al mismo tiempo.
+
+  Hacer notar que hay dos variables llamadas \li!n!, una local y una global.
+
   \diapo{funciones-consola}
+
+  Éste es un consejo práctico para probar las funciones que uno desarrolla.
+  Uno puede copiar el código de la función desde el editor
+  y pegarlo en la consola.
+  A continuación,
+  uno puede llamar la función todas las veces que quiera,
+  y ver los resultados en vivo y en directo,
+  sin la necesidad de escribir un programa para eso.
+  Así es como se espera que los alumnos
+  prueben sus funciones para los controles en línea.
+
+  Todos los ejercicios con funciones de aquí en adelante
+  tendrán los casos de prueba presentados
+  como una sesión de consola.
+
   \diapo{ejercicio-binomial}
   \diapo{solucion-binomial}
+
+  Este ejercicio es una extensión del anterior,
+  ya que también utiliza la función \li!factorial!.
+  Sirve para mostrar que es posible llamar una función desde otra,
+  y que es posible reutilizar la misma función del ejemplo anterior.
+  (Lo ideal sería importar la función desde el programa anterior
+  para no tener que reescribirla.
+  En la próxima clase veremos cómo hacer eso).
+
+  En la solución,
+  hacer notar que el cuerpo del programa ocupa sólo tres líneas
+  gracias a las funciones que definimos.
+  Si quisiéramos escribir este programa sin usar funciones,
+  sería mucho más largo.
+  Además,
+  el programa es mucho más fácil de entender,
+  ya que el nombre de cada función deja claro cuál es el resultado que entrega.
+
   \diapo{ejercicio-contar-letras}
   \diapo{solucion-contar-letras}
+
+  Ejemplo de una función con dos parámetros.
+  Servirá además para repasar operaciones con strings.
+
+  La manera en que se recorre el string con las vocales:
+  \begin{lstlisting}
+vocales  = 'aeiou'
+for i in range(5):
+    v = vocales[i]
+    c = contar(v, oracion)
+  \end{lstlisting}
+  no es la manera típica de hacerlo en Python.
+  La forma idiomática es ésta:
+  \begin{lstlisting}
+for v in 'aeiou':
+    c = contar(v, oracion)
+  \end{lstlisting}
+
+  En rigor, la función es innecesaria,
+  ya que los strings tienen un método \li!count!:
+  \begin{lstlisting}
+>>> 'viva la programacion'.count('a')
+4
+  \end{lstlisting}
+
+
+
+  Todo esto se verá más adelante en la unidad sobre procesamiento de texto.
 
 \end{document}
 
