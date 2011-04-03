@@ -1,0 +1,5 @@
+Fila alfil: `7`
+Columna alfil: `6`
+Fila torre: `4`
+Columna torre: `3`
+Alfil captura
