@@ -17,10 +17,12 @@
 
 \setjobnamebeamerversion{11-diapos}
 
+\hyphenation{re-fe-ren-cia}
+
 \input{../latex/definiciones.tex}
 \input{../latex/notas-diapos.tex}
 
-\title{Funciones, módulos}
+\title{Módulos, funciones avanzadas}
 \author{Programación \\ \url{http://progra.usm.cl}}
 \date{6 y 7 de abril de 2011}
 
@@ -28,8 +30,224 @@
   \maketitle
 
   \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Introducir el concepto y el uso de los módulos.
+    \item Enseñar a crear un módulo.
+    \item Explicar algunos usos más avanzados de las funciones.
+  \end{itemize}
 
   \section*{Diapositivas}
+
+  \diapo{uso-modulos}
+
+  Un \emph{módulo} en Python
+  es un archivo que contiene definiciones
+  que pueden ser importadas desde un programa para ser usadas.
+
+  Python provee una vasta biblioteca de módulos
+  que están disponibles para ser usados desde cualquier programa.
+  Además, es posible instalar módulos externos
+  para propósitos específicos.
+
+  En esta diapositiva
+  se muestran las dos maneras principales de usar un módulo.
+  Además, se introduce dos de los módulos estándares de Python: \li!math! y \li!random!,
+  que proveen respectivamente funciones matemáticas y funciones para generar números aleatorios.
+
+  La primera manera de usar un módulo
+  es importar nombres específicos desde él
+  usando la sentencia
+  \begin{lstlisting}
+    from modulo import nombres
+  \end{lstlisting}
+  Los nombres van separados por comas.
+  Los alumnos ya deberían estar familiarizados con esta forma,
+  pues aparece usada varias veces en los apuntes de la primera unidad.
+
+  La segunda manera es importar el módulo completo,
+  y luego acceder a sus miembros usando el punto:
+  \li!modulo.objeto!.
+  Esta forma no ensucia el espacio de nombres global,
+  pues todos los nombres quedan encapsulados en el módulo.
+
+  Existe una tercera manera que es importar todos los nombres de un módulo
+  usando la sentencia:
+  \begin{lstlisting}
+    from modulo import *
+  \end{lstlisting}
+  Sin embargo, esta forma no es recomendada,
+  pues puede importar nombres que sobreescriban a otros que ya existan.
+  Por lo mismo, esta manera no hay que enseñarla.
+
+  Las funciones y constantes usadas en este ejemplo son:
+  \begin{itemize}
+    \item \li!math.exp(x)!: la exponencial \(e^x\);
+    \item \li!math.cos(x)!: el coseno \(\cos x\);
+    \item \li!math.pi!: la constante \(\pi\);
+    \item \li!random.randrange(a, b, c)!: entrega un entero aleatorio
+      en el rango definido por los valores \(a\), \(b\) y \(c\)
+      (en el ejemplo, un entero aleatorio entre 0 y 9, inclusive);
+    \item \li!random.choice(opciones)!: entrega uno de los valores de la lista de opciones
+      (las listas se pasarán más adelante,
+      pero por ahora basta saber que se delimitan con paréntesis cuadrados).
+  \end{itemize}
+
+  Muestre en la consola cómo al llamar las funciones \li!randrange! y \li!choice!
+  siempre se obtiene un resultado distinto.
+
+  \diapo{creacion-modulos}
+
+  Además de usar los módulos estándares de Python,
+  uno puede crear sus propios módulos con definiciones
+  para ser reutilizadas en varios programas,
+  o para organizar mejor una aplicación relativamente grande.
+
+  La manera más simple de crear un módulo
+  es escribir un archivo con extensión \verb!.py!
+  y dejarlo en la misma carpeta que el programa que lo usa.
+  En esta diapositiva se muestra un ejemplo:
+  el archivo \verb!programa.py! es un programa que muestra el área y el perimetro de un círculo,
+  usando funciones importadas desde un módulo llamado \verb!circulos!
+  que está definido a continuación.
+
+  El módulo define tres nombres (\li!pi!, \li!area! y \li!perimetro!),
+  de los cuales dos son importados desde \verb!programa.py!.
+
+  Enfatice que este módulo no sólo puede ser usado desde este programa,
+  sino desde cualquier otro que necesite estas funciones.
+
+  \diapo{programa-modulo}
+
+  Un archivo con extensión \verb!.py! puede ser un programa o un módulo.
+  Un programa a su vez puede tener sus propias definiciones de funciones
+  que podrían ser útiles en otro programa,
+  por lo que es deseable que puedan ser importadas.
+  El problema de importar objetos desde un programa
+  es que, al hacerlo, el programa también será ejecutado.
+
+  El truco para evitar que esto ocurra es utilizar el valor
+  de una variable llamada \li!__name__!
+  que está definida automáticamente al ejecutar cualquier programa o módulo.
+  Cuando el código es importado como un módulo,
+  el valor de esta variable es el nombre del módulo.
+  Cuando es ejecutado como un programa,
+  su valor es el string \li!'__main__'!.
+  Por lo tanto,
+  para marcar una sección de código que no debe ser ejecutada
+  al importar el archivo,
+  hay que ponerla dentro de un \li!if __name__ == '__main__'!.
+
+  En el ejemplo de la diapositiva
+  se presenta el mismo programa del primer ejercicio de la clase pasada,
+  salvo que el cuerpo del programa ha sido puesto dentro del \li!if!.
+  De esta manera, las funciones \li!factorial! y \li!coef_bin!
+  pueden ser importadas desde otros programas.
+
+  \diapo{mult-retornos}
+
+  Aquí comenzamos con los usos avanzados de funciones.
+
+  Una función puede retornar más de un valor.
+  Los valores de retorno deben ir separados por comas
+  en la sentencia \li!return!,
+  y deben ser recibidos usando varias variables,
+  como se muestra en el ejemplo en la consola.
+
+  Gracias a esta funcionalidad,
+  en Python no es necesario usar variables globales o parámetros por referencia
+  para que la función entregue más de un resultado,
+  que es lo que suele hacerse en otros lenguajes.
+
+  Técnicamente,
+  lo que la función está retornando es una tupla de valores.
+  Esto es parte de la materia de la próxima semana.
+
+  \diapo{sin-retorno}
+
+  En general, una función no debería tener efectos laterales,
+  como modificar variables globales o mostrar cosas por pantalla.
+  Toda la información que sale de la función
+  debería estar contenida en los valores de retorno.
+
+  Sin embargo,
+  a veces es deseable usar las funciones
+  como una manera de agrupar sentencias
+  que interesan sólo por sus efectos secundarios.
+  En este caso, la función puede no tener un valor de retorno.
+
+  En el ejemplo mostrado en la diapositiva,
+  se define una función con el único propósito
+  de mostrar los datos que recibe en un formato más legible.
+
+  Técnicamente, todas las funciones en Python tienen un valor de retorno.
+  Si la función se termina sin haber encontrado una sentencia \li!return!,
+  entonces el valor retornado será \li!None!.
+  Esto no es necesario mencionarlo en clases.
+
+  \diapo{parametros-por-omision}
+
+  Una función puede tener parámetros opcionales.
+  Una manera de hacerlo es asignando valores por omisión
+  a algunos de sus parámetros.
+  Cuando ellos no son pasados al momento de la llamada,
+  toman el valor por omisión.
+
+  En el ejemplo,
+  la función \li!f! suma los valores de sus parámetros.
+  Si sólo se pasa uno de ellos,
+  entonces se toma como si el otro tuviera el valor 2.
+
+  \diapo{func-parametros}
+
+  En Python las funciones son valores como cualquier otro.
+  Por ejemplo, se les puede crear un nuevo nombre
+  con una simple asignación: \li!f = factorial!.
+  Una de las ventajas que tiene esto
+  es que es posible crear funciones que reciben a otras funciones como parámetro.
+
+  En el ejemplo de la diapositiva,
+  se define una función \li!sumar!
+  que entrega la suma de todos los valores menores que \li!n!,
+  pero antes aplicándoles una función,
+  la que será referida con el nombre \li!f!.
+
+  El programa llama a la función \li!sumar! tres veces,
+  y en cada una de ellas pasa una función distinta como parámetro.
+  De esta forma, se puede usar una única función
+  para calcular la suma de los valores hasta 1000,
+  la suma de los cuadrados hasta 1000
+  y la suma de los cubos hasta 1000.
+
+  \diapo{func-recursivas}
+
+  Explique la definición de función recursiva:
+  es una función que se llama a sí misma.
+
+  Las funciones recursivas son útiles cuando un problema
+  puede ser descompuesto de modo que aparezca una variación del mismo problema
+  pero de un tamaño más pequeño.
+  El ejemplo típico es el cálculo del factorial,
+  que es presentado en la diapositiva.
+  El factorial de \(n\) puede ser expresado en función del factorial de \(n - 1\).
+  Explique en detalle esta descomposición.
+
+  Toda función recursiva debe tener una condición de término
+  para que su ejecución eventualmente termine.
+  Típicamente, la mayoría de las funciones recursivas
+  tienen un \li!if! que distingue entre el caso base
+  (para el que el resultado es conocido)
+  y el caso recursivo.
+  En el programa del factorial,
+  el caso base es \(0! = 1\).
+
+  En lenguajes procedurales como Python,
+  la recursión suele ser ineficiente en tiempo de ejecución,
+  por lo que no se debe abusar de ella.
+  Sin embargo, es útil para resolver ciertas clases de problemas
+  de manera clara y elegante.
+  El ejemplo clásico es el problema de las \href{http://en.wikipedia.org/wiki/Tower_of_Hanoi}{torres de Hanoi}.
+  Más adelante veremos ejercicios que conviene resolver usando recursión.
+
 
 \end{document}
 

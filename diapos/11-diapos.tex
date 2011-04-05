@@ -16,7 +16,7 @@
 \usecolortheme{crane}
 \usefonttheme{serif}
 
-\title{Funciones, módulos}
+\title{Módulos, funciones avanzadas}
 \author{
   Programación \\ \url{http://progra.usm.cl}
 }
@@ -25,6 +25,75 @@
 \begin{document}
   \begin{frame}
     \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Uso de módulos}
+    \label{uso-modulos}
+    Dos maneras de importar objetos:
+    \vfill
+    \footnotesize
+    \lstinputlisting[frame=single]{programas/modulo-from-import.py}
+    \lstinputlisting[frame=single]{programas/modulo-import.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Creación de módulos}
+    \label{creacion-modulos}
+    programa.py
+    {\footnotesize
+    \lstinputlisting[frame=single]{programas/programa-circulos.py}}
+    \vfill
+    circulos.py
+    {\footnotesize
+    \lstinputlisting[frame=single]{programas/circulos.py}}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Programas como módulos}
+    \label{programa-modulo}
+    comb.py
+    \footnotesize
+    \lstinputlisting[frame=single]{programas/comb.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Funciones con múltiples valores de retorno}
+    \label{mult-retornos}
+    \lstinputlisting[frame=single]{programas/conversion-segundos.py}
+    \lstinputlisting{programas/caso-conversion-segundos.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Funciones sin valor de retorno}
+    \label{sin-retorno}
+    \footnotesize
+    \lstinputlisting[frame=single]{programas/funcion-imprimir.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Parámetros con valores por omisión}
+    \label{parametros-por-omision}
+    \lstinputlisting[frame=single]{programas/parametros-omision.py}
+    \lstinputlisting{programas/caso-parametros-omision.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Funciones como parámetros}
+    \label{func-parametros}
+    \footnotesize
+    \lstinputlisting[frame=single]{programas/func-parametros.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Funciones recursivas}
+    \label{func-recursivas}
+    \begin{align*}
+        n! &= 1\cdot 2\cdot 3\cdot\;\cdots\;\cdot (n - 2)\cdot (n - 1)\cdot n \\
+           &=  (n - 1)! \cdot n
+    \end{align*}
+    \vfill
+    \lstinputlisting[frame=single]{programas/factorial-recursivo.py}
   \end{frame}
 
 \end{document}
