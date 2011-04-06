@@ -25,6 +25,8 @@ Contenidos del segundo certamen
 
     funciones
     modulos
+    listas
+    tuplas
 
 Contenidos del tercer certamen
 ------------------------------
