@@ -137,10 +137,6 @@ como una tupla de los equipos que lo juegan::
 
     partido1 = ('Milan', 'Bayern')
 
-Un producto de un supermercado
-puede ser representado como una tupla
-que tiene su código, su nombre
-
 Para representar puntos en el plano,
 se puede usar tuplas de dos elementos ``(x, y)``.
 Por ejemplo, podemos crear una función ``distancia``
