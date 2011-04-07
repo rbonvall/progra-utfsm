@@ -13,6 +13,6 @@ def cuadrado(x):
 def cubo(x):
     return x ** 3
 
-print suma(1000, identidad)
-print suma(1000, cuadrado)
-print suma(1000, cubo)
+print sumar(1000, identidad)
+print sumar(1000, cuadrado)
+print sumar(1000, cubo)
