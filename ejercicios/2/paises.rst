@@ -5,10 +5,9 @@ El diccionario ``paises`` asocia cada persona
 con el conjunto de los países que ha visitado::
 
     paises = {
-        Pepito': {'Chile', 'Argentina'},
-        Yayita': {'Francia', 'Suiza', 'Chile'},
-        John': {'Chile', 'Italia', 'Francia', 'Peru'},
-        ...
+        'Pepito': {'Chile', 'Argentina'},
+        'Yayita': {'Francia', 'Suiza', 'Chile'},
+        'John': {'Chile', 'Italia', 'Francia', 'Peru'},
     }
 
 Escriba una funcion ``cuantos_en_comun(a, b)``,

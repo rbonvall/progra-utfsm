@@ -27,9 +27,7 @@ El progama debe realizar lo siguiente:
   de `A` y `B` en un arreglo `C`.
 
 Recuerde que debe ingresar tambien,
-la cantidad de elementos que tendrán `A` y `B`.
-
-::
+la cantidad de elementos que tendrán `A` y `B`::
 
 	elementos de A: 3
 	A 1: 06 05 1992

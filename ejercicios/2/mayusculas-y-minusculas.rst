@@ -18,9 +18,7 @@ o sin son siglas deben ir todas en mayúsculas.
 
 Utilice  *conjuntos* para poder almacenar
 las siglas, nombres e instituciones,
-y corrija el siguiente texto.
-
-::
+y corrija el siguiente texto::
 
 	La universidad se DEBE fundamentalmente a federico santa maría carrera,
 	Quien con una impORtante Donación la hizo pSIble y a Agustín Edwards Mc Clure,

@@ -12,6 +12,13 @@ Funciones y módulos
     tabla-verdad
     modulo-listas
 
+Tuplas
+------
+.. toctree::
+
+    expresiones-tuplas
+    rectas
+
 Listas
 ------
 .. toctree::
@@ -38,6 +45,7 @@ Estructuras de datos anidadas
 .. toctree::
 
     expresiones-estructura-datos
+    paises
     acordes
 
 Procesamiento de texto
@@ -69,7 +77,6 @@ Sin clasificar aún
     desviacion-estandar
     divisibles-nueve
     divisibles-once
-    fecha
     fechas
     gato
     horario-clases
@@ -95,7 +102,6 @@ Sin clasificar aún
     consulta-medica
     inventario
     sumas-filas-columnas
-    paises
     reporte
     supermercado
     contar-iniciales
@@ -109,7 +115,6 @@ Sin clasificar aún
     subconjuntos
     partidos
     cumpleanos
-    rectas
     compatibilidad-personas
     personas
     loto
