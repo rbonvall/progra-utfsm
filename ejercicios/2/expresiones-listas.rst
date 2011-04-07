@@ -10,7 +10,7 @@ Considere las siguientes listas::
     >>> e = ['a', a, 2 * a]
 
 Sin usar el computador,
-indique cuál es el resultado de las siguientes expresiones.
+indique cuál es el resultado y el tipo de las siguientes expresiones.
 A continuación,
 verifique sus respuestas en el computador.
 

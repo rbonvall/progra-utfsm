@@ -10,12 +10,13 @@ Considere las siguientes asignaciones::
     >>> e = {2 + 3: 4, 5: 6 + 7, 8: 9, 10: 11 + 12}
 
 Sin usar el computador,
-indique cuál es el resultado de las siguientes expresiones.
+indique cuál es el resultado y el tipo de las siguientes expresiones.
 A continuación,
 verifique sus respuestas en el computador.
 
 * ``a['c']``
 * ``a[23]``
+* ``b[-2] or b[55]``
 * ``23 in a``
 * ``'a' in a``
 * ``5 in d[5]``

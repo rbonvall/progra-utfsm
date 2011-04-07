@@ -11,7 +11,7 @@ Considere las siguientes asignaciones::
     >>> f = [{2, 3}, {3, 4}, {4, 5}]
 
 Sin usar el computador,
-indique cuál es el resultado de las siguientes expresiones.
+indique cuál es el resultado y el tipo de las siguientes expresiones.
 A continuación,
 verifique sus respuestas en el computador.
 
