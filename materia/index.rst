@@ -27,6 +27,7 @@ Contenidos del segundo certamen
     modulos
     listas
     tuplas
+    diccionarios
 
 Contenidos del tercer certamen
 ------------------------------
