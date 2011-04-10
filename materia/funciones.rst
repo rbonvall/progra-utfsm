@@ -86,7 +86,7 @@ Una función tiene tres componentes importantes:
 * el **resultado** (o **valor de retorno**),
   que es el valor final que entrega la función.
 
-En escencia, una función es un mini programa.
+En esencia, una función es un mini programa.
 Sus tres componentes son análogos a
 la entrada, el proceso y la salida de un programa.
 
