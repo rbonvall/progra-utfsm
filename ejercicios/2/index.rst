@@ -77,7 +77,6 @@ Sin clasificar aún
     desviacion-estandar
     divisibles-nueve
     divisibles-once
-    fechas
     gato
     horario-clases
     lista-pares-impares
