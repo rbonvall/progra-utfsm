@@ -28,8 +28,393 @@
   \maketitle
 
   \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Enseñar el uso de listas y tuplas en Python.
+    \item Justificar por qué es necesario
+      usar listas y tuplas.
+  \end{itemize}
 
   \section*{Diapositivas}
+
+  \diapo{def-desviacion}
+
+  Para introducir el uso de listas,
+  usaremos como ejemplo el cálculo de la desviación estándar.
+  Es un concepto que los estudiantes de primer año
+  ya han visto en el curso de física.
+
+  Puede explicar el concepto de desviación estándar,
+  para que no parezca que se trata sólo de evaluar una fórmula.
+  La desviación estándar indica cuán dispersos están los datos.
+  Por ejemplo,
+  un alumno que aprueba con promedio 55 puede lograrlo
+  sacándose puros 55 (en este caso, la desviación es cero),
+  o sacándose un 10, un 55 y un 100 (en este caso, la desviación es 45).
+  El promedio no dice cuánto variaron las notas,
+  y para eso se usa la desviación estándar.
+
+  En la primera diapositiva,
+  hay un ejemplo de cálculo de la desviación
+  con tres datos.
+  Explique paso a paso cómo se calcula,
+  para que los estudiantes se familiaricen con el procedimiento.
+  En palabras,
+  lo que hay que hacer es lo siguiente:
+  calcular el promedio,
+  restar el promedio a cada uno de los datos,
+  sumar los cuadrados de la diferencia,
+  dividir por \(n - 1\) y sacar la raíz cuadrada.
+
+  Quizás algunos alumnos hayan visto antes
+  la fórmula de la desviación dividiendo por \(n\) en lugar de \(n - 1\),
+  y lo mencionen en clases.
+  Ambas fórmulas pueden ser usadas,
+  pero hay razones estadísticas para preferir la fórmula con \(n - 1\).
+
+  \diapo{ejercicio-desviacion}
+
+  El ejercicio es un programa que recibe una cantidad variable de datos,
+  y entrega la desviación estándar.
+  Discuta con los alumnos cómo hacerlo.
+
+  La dificultad radica en que hay que hacer dos recorridos por los datos:
+  uno para calcular el promedio, y otro para sumar las diferencias al cuadrado.
+  No se pueden fusionar en un único ciclo,
+  ya que el segundo necesita el resultado del primero.
+
+  El promedio se puede calcular a medida que se van leyendo los datos,
+  pero no se puede hacer lo mismo con la desviación,
+  ya que habría que volver a preguntar los datos.
+  La alternativa es guardar los datos en variables,
+  pero no sabemos de antemano cuántos datos son,
+  por lo que no es posible hacerlo.
+
+  Ésta es la motivación para introducir las listas.
+  Si se tienen todos los datos en una lista,
+  se puede hacer con ellos cualquier cosa
+  todas las veces que se quiera,
+  y refiriéndose a ellos mediante una única variable.
+
+  \diapo{programa-desviacion}
+
+  Programa para calcular la desviación estándar.
+  Explique los pasos del programa uno por uno.
+  Está organizado en cinco «párrafos»:
+  \begin{itemize}
+    \item Primero, se lee la cantidad de datos \li!n!.
+    \item Se piden los \li!n! datos y se van metiendo a la lista \li!datos!.
+      Las operaciones nuevas aquí son la creación de la lista vacía (\li![]!)
+      y el método para meter el dato a la lista (\li!append!).
+      Por ahora, mencione qué significa cada línea.
+      Después explicaremos qué es un método.
+    \item Se suman los datos, recorriendo la lista.
+      Lo nuevo acá es usar el \li!for! sin \li!range!,
+      para ir tomando los elementos uno por uno.
+    \item Se recorre nuevamente la lista,
+      ahora para ir sumando los cuadrados de las diferencias.
+    \item Finalmente se muestra el resultado.
+  \end{itemize}
+
+  \diapo{programa-desviacion-funciones}
+
+  Otra manera de resolver el mismo problema usando funciones.
+  La función \li!leer_datos(n)! pide \li!n! datos al usuario y retorna la lista de ellos.
+  Las funciones \li!promedio! y \li!desviacion! reciben una lista
+  y entregan respectivamente el promedio y la desviación estándar.
+
+  Como siempre que se usa funciones,
+  haga alarde de lo breve y fácil de entender (excepto por el tamaño de la letra)
+  que queda la parte principal del programa.
+
+  \diapo{listas-agregar}
+
+  Éste es el patrón típico para agregar valores dinámicamente a una lista:
+  se crea la lista vacía y luego se meten los valores uno por uno
+  usando el método \li!append!.
+
+  Ésta es la primera vez que los alumnos ven métodos en el ramo.
+  Una manera sencilla de explicar lo que es un método es la siguiente:
+  un método es una función que pertenece a la lista.
+  Cada lista tiene su propio método \li!append!,
+  que afecta a esa lista en particular.
+  Esta explicación no es del todo correcta,
+  pero para los propósitos del ramo es suficientemente precisa.
+
+  Los métodos, al igual que las funciones,
+  pueden retornar un valor o no hacerlo.
+  Esto último es más común que en las funciones,
+  ya que los métodos pueden tener como única misión
+  modificar el estado interno del objeto.
+  El método \li!append! es un ejemplo de esto.
+
+  En C y Pascal,
+  la manera de almacenar \(n\) valores es declarando un arreglo de tamaño \(n\) (o más)
+  y luego ir reemplazando los valores uno por uno.
+  En Python,
+  hacerlo así no es una buena práctica;
+  si se necesita una lista de 10 valores,
+  no hay que partir llenándola con diez ceros y luego reemplazarlos.
+
+  Internamente,
+  las listas de Python son arreglos de C.
+  La memoria no es agregada después de cada \li!append!,
+  sino que siempre hay memoria reservada de sobra.
+  Cuando la capacidad es excedida,
+  dinámicamente se reserva otro arreglo más grande y se copian los datos.
+  El algoritmo está bien optimizado,
+  por lo que para ejemplos razonablemente simples
+  no hay degradación notoria de rendimiento.
+
+  La lista vacía también puede ser creada
+  llamando a la función \li!list()! sin ningún argumento.
+
+  Las listas son el primer tipo de datos \emph{mutable} que vemos.
+  Los tipos que hemos enseñado hasta ahora (strings, números, booleanos)
+  son inmutables: sus valores nunca cambian (el número 8 no puede transformarse en el número 9).
+  Este nuevo comportamiento puede causar confusión entre los estudiantes.
+
+  \diapo{listas-indices}
+
+  Otra manera de crear una lista
+  es poniendo todos los valores iniciales entre corchetes
+  y separados por comas.
+  Esto es ideal para cuando se conocen de antemano los valores.
+
+  Al igual que los strings y que los arreglos de otros lenguajes,
+  los elementos de una lista se pueden obtener individualmente
+  a través de su índice.
+  Los índices parten desde cero.
+
+  Si en vez de índice se pone un rango (como \li!1:3! en el ejemplo),
+  no se obtiene un elemento de la lista, sino una 
+  Esta operación se llama \emph{rebanado} (en inglés: \emph{slice}).
+  Los índices del rebanado no se refieren a los elementos,
+  sino a los espacios entre elementos:
+  \begin{verbatim}
+    +------------+------------+------------+------------+
+    | 'azul'     | 'rojo'     | 'verde'    | 'amarillo' |
+    +------------+------------+------------+------------+
+    0            1            2            3            4\end{verbatim}
+  Por esto, \li!colores[1:3]! no incluye el elemento de índice \li!3!.
+
+  Los índices negativos sirven para referirse a los elementos
+  por su posición desde el final hacia atrás, partiendo de 1.
+
+  El método \li!index! opera al revés que el operador \li![]!:
+  a partir del valor entrega el índice.
+  Éste es un ejemplo de método que retorna algo, a diferencia del \li!append!.
+
+  La función \li!len! entrega el largo de la lista,
+  al igual que con los strings.
+
+  \diapo{listas-modificar}
+
+  Las listas pueden modificarse elemento por elemento.
+  Para modificar un elemento refiriéndose a él por su índice,
+  basta con asignarle un nuevo valor.
+  Para eliminar un elemento refiriéndose a él por su índice,
+  se usa la sentencia \li!del!.
+
+  El método \li!insert! permite insertar un elemento
+  en cualquier posición,
+  en contraste con \li!append! que siempre agrega al final.
+
+  La asignación \li!colores[0] = 'fucsia'!
+  técnicamente no es una asignación
+  (las asignaciones en Python no pueden modificar un objeto),
+  sino que es una conveniencia sintáctica
+  que se traduce por debajo a una llamada a un método.
+  Por supuesto, esto no hay que mencionarlo en clases,
+  pero es bueno saberlo para entender algunos casos rebuscados que puedan surgir
+  como consecuencia de cómo funcionan las asignaciones en Python
+  (que es diferente a C y Pascal).
+
+  \diapo{listas-operaciones}
+
+  Operaciones muy convenientes sobre listas:
+  \li!len! entrega el número de elementos,
+  \li!sum! suma los elementos,
+  el método \li!sort! ordena la lista,
+  el método \li!reverse! invierte el orden de los elementos,
+  y el operador \li!in! permite saber si un elemento está o no en la lista.
+
+  También hay un operador \li!not in! que entrega el resultado de \li!in! negado.
+
+  Los métodos \li!sort! y \li!reverse! no retornan nada,
+  sino que modifican la lista en su lugar.
+  Un error común es hacer algo como \li!ordenada = desordenada.sort()!.
+
+  \diapo{listas-iterar}
+
+  El tipo \li!list! es \emph{iterable}.
+  En la práctica, esto significa que se puede poner una lista en un ciclo \li!for!
+  para obtener sus valores uno por uno. De hecho, la función \li!range! que usamos hasta ahora
+  retorna una lista.
+
+  En el primer ejemplo,
+  para cada iteración del ciclo la variable de control toma como valor
+  uno de los elementos de la lista.
+
+  El segundo ejemplo muestra cómo recorrer listas \emph{à la Pascal},
+  refiriéndose a cada elemento por su índice.
+  En Python hay que evitar hacerlo de este modo siempre que sea posible.
+  En este ejemplo, se hace para poder recorrer las dos listas en paralelo.
+
+  Otra manera de recorrer listas en paralelo
+  es usando la función \li!zip!:
+  \begin{lstlisting}
+    for ramo, hora in zip(ramos, horas):
+        print 'Tengo', ramo, 'a las', hora
+  \end{lstlisting}
+  No es necesario que mencione esto.
+
+  \diapo{listas-copiar}
+
+  Aquí hay un ejemplo en el que la semántica de las asignaciones de Python
+  nos juega una mala pasada cuando pensamos como en C o Pascal.
+  En el primer ejemplo,
+  se crea una lista \li!a!, y se la asigna al nombre \li!b!.
+  La asignación no crea una copia de la lista,
+  sino que crea un nombre que se refiere a la lista original.
+  Por lo tanto, al modificar \li!b! también se modifica \li!a!.
+
+  Una manera de copiar los elementos a una nueva lista
+  es llamar a la función \li!list!
+  pasando la lista original como argumento.
+
+  Otra manera de obtener una copia de la lista
+  es hacer un rebanado con todos los elementos: \li!b = a[:]!.
+  Esta forma es un poco más críptica,
+  pero aparece muy frecuentemente en libros y documentación en la red.
+  Puede omitir mencionarla en clases.
+
+  \diapo{tuplas}
+
+  La segunda materia de la clase es el uso de \emph{tuplas}.
+  Las tuplas sirven para empaquetar valores
+  que por su naturaleza deben ir juntos.
+  Mencione esta definición a los alumnos.
+
+  Las tuplas sirven para el mismo propósito
+  que los registros de Pascal o las estructuras de C,
+  pero la manera de usarlas es diferente.
+  Los elementos de las tuplas se acceden por posición
+  y no por nombre.
+
+  Las tuplas son inmutables:
+  una vez creada, una tupla no se puede modificar.
+
+  Los ejemplos de la diapositiva son los siguientes.
+  \begin{itemize}
+    \item La posición de un alfil en un tablero de ajedrez
+      puede representarse empaquetando su fila y su columna.
+    \item Un alumno puede representarse
+      empaquetando su nombre, su apellido y su rol.
+    \item En un juego de naipes,
+      una carta está representada por su valor y su palo.
+    \item Una fecha se representa empaquetando
+      el año, el mes y el día.
+    \item Una tupla puede estar compuesta de otras tuplas.
+      Por ejemplo, un triángulo está compuesto de tres puntos,
+      que están compuestos de dos coordenadas.
+    \item Otro ejemplo de tuplas anidadas:
+      un personaje histórico tiene fechas de nacimiento y defunción.
+  \end{itemize}
+
+  Los paréntesis no son necesarios para crear una tupla,
+  basta con las comas.
+
+  La principal motivación para usar tuplas
+  es poder comunicar varios valores empaquetados entre funciones.
+  Esto evita tener que manejar todos los valores por separado.
+
+  \diapo{tuplas-desempaquetar}
+
+  Para desempaquetar los valores de una tupla,
+  se puede usar asignaciones con varios nombres.
+  En el segundo ejemplo,
+  se desempaqueta primero el personaje y luego las fechas.
+
+  También es posible obtener los valores a través de su índice.
+  Por ejemplo, el año de nacimiento es \li!personaje[1][0]!.
+
+  \diapo{tuplas-comparar}
+
+  Las tuplas se comparan usando el algoritmo de orden lexicográfico.
+  El orden de las tuplas está determinado por el primer elemento
+  que es diferente entre ambas tuplas.
+
+  En el primer ejemplo,
+  el orden está determinado por el primer elemento (\li!4 < 7!),
+  y en el segundo ejemplo,
+  por el segundo elemento (\li!5 > 2!).
+  Cuando los primeros elementos son todos iguales,
+  la tupla más corta es la menor.
+
+  Esto es muy conveniente para comparar fechas.
+  Si en la tupla se ponen los campos en el orden año-mes-día,
+  entonces se puede saber qué fecha ocurrió antes o después
+  simplemente usando los operadores relacionales.
+
+  \diapo{listas-de-tuplas}
+
+  Las listas de tuplas son el equivalente a los arreglos de registros.
+  En el ejemplo de la diapositiva,
+  se tiene una lista de ramos representados por su nombre, su sigla y su número de créditos.
+
+  Al iterar sobre un contenedor de tuplas,
+  se puede desempaquetar los valores directamente en el ciclo \li!for!,
+  como se muestra en el ejemplo.
+
+  \diapo{ejercicio-distancia}
+  \diapo{solucion-ejercicio-distancia}
+
+  Ejercicio con tuplas. La función debe recibir como parámetros
+  dos tuplas de tres elementos.
+
+  Repase la materia de funciones mientras explica el ejercicio.
+  Enfatice que la función debe retornar el resultado, y no imprimirlo.
+  Esta es una confusión recurrente entre los estudiantes.
+  La función tampoco debe solicitar la entrada del programa,
+  sino recibir todos sus datos como parámetros.
+
+  La solución no tiene ciencia:
+  sólo hay que desempaquetar los valores con cuidado.
+
+  \diapo{ejercicio-perimetro}
+  \diapo{solucion-ejercicio-perimetro}
+  \diapo{solucion-ejercicio-perimetro-2}
+
+  Ejercicio con lista de tuplas.
+  Si le queda tiempo para resolver este problema,
+  explique el enunciado en detalle.
+
+  Para resolverlo de manera conveniente,
+  hay que crear una función \li!distancia!
+  como la del problema anterior.
+  En este problema, los puntos tienen dos dimensiones en vez de tres,
+  pero el código es prácticamente el mismo.
+  En la solución,
+  se ha usado la sintaxis del desempaquetado para asignar
+  varios valores a la vez, por lo que el código tiene menos líneas.
+
+  Aquí se presenta dos maneras de escribir la función \li!perimetro!.
+  En la primera, se recorre la lista usando el índice,
+  y en cada iteración se calcula la distancia con el vértice siguiente.
+  Explique cuál es la razón para usar el operador módulo.
+
+  En la segunda solución,
+  se ha creado tres listas dentro de la función:
+  \begin{itemize}
+    \item una que tiene todos los vértices,
+    \item otra que tiene los mismos vértices, pero moviendo el primero de ellos al final, y
+    \item otra con las distancias entre los elementos correspondientes de las dos anteriores.
+  \end{itemize}
+  Aquí aparece el operador \li!+! usado para concatenar dos listas.
+  Note que para usar este operador se requiere que ambos operandos sean listas,
+  por lo que es necesario poner los corchetes alrededor de \li!vertices[0]!
+  para convertirlo en una lista de un elemento.
+  Con el rebanado no es necesario, ya que esta operación sí retorna una lista.
 
 \end{document}
 
