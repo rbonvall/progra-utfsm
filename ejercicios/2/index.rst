@@ -19,6 +19,7 @@ Tuplas
     expresiones-tuplas
     rectas
     fechas
+    supermercado
 
 Listas
 ------
@@ -48,6 +49,7 @@ Estructuras de datos anidadas
     expresiones-estructura-datos
     paises
     acordes
+    compatibilidad-personas
 
 Procesamiento de texto
 ----------------------
@@ -103,7 +105,6 @@ Sin clasificar aún
     inventario
     sumas-filas-columnas
     reporte
-    supermercado
     contar-iniciales
     escalas
     mayores-que
@@ -115,7 +116,6 @@ Sin clasificar aún
     subconjuntos
     partidos
     cumpleanos
-    compatibilidad-personas
     personas
     loto
     digitos-numero

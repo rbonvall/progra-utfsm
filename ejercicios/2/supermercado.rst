@@ -1,62 +1,89 @@
 Supermercado
 -------------
+Un supermercado utiliza tablas de datos
+para llevar la información de su inventario.
 
-Un supermercado tiene la información de sus productos en un
-archivo llamado *productos.txt.*
-Cada línea del archivo tiene tres datos:
+En un programa,
+cada tabla de datos es una lista de tuplas.
 
-* el código del producto (un numero entero),
-* el nombre del producto, y
-* el precio del producto.
+La lista ``productos``
+tiene el código, el nombre, el precio y la cantidad
+de unidades del producto en bodega::
 
-Los datos están separados por una coma (",").
+    productos = [
+        (41419, 'Fideos',        450, 210),
+        (70717, 'Cuaderno',      900, 119),
+        (78714, 'Jabon',         730, 708),
+        (30877, 'Desodorante',  2190,  79),
+        (47470, 'Yogur',          99, 832),
+        (50809, 'Palta',         500,  55),
+        (75466, 'Galletas',      235,   0),
+        (33692, 'Bebida',        700,  20),
+        (89148, 'Arroz',         900, 121),
+        (66194, 'Lapiz',         120, 900),
+        (15982, 'Vuvuzela',    12990,  40),
+        (41235, 'Chocolate',    3099,  48),
+    ]
 
-::
+La lista ``clientes``
+tiene el rut y el nombre de los clientes del supermercado::
 
-	1265,Reloj,5000
-	613,Cuaderno,900
-	9801,Vuvuzela,15000
-	321,Lapiz,400
-	5413,Martillo,3000
-	857,Paleta,6000
-	612,Pizza,1200
+    clientes = [
+        ('11652624-7', 'Perico Los Palotes'),
+        ( '8830268-0', 'Leonardo Farkas'),
+        ( '7547896-8', 'Fulanita de Tal'),
+    ]
 
+La lista ``ventas`` contiene las ventas realizadas,
+representadas por el número de boleta,
+la fecha de la venta y el rut del cliente::
 
-* Escriba una funcion *existe_producto(codigo)*
-  que indique si existe en el archivo el producto con el código dado:
+    ventas = [
+        (1, (2010,  9, 12),  '8830268-0'),
+        (2, (2010,  9, 19), '11652624-7'),
+        (3, (2010,  9, 30),  '7547896-8'),
+        (4, (2010, 10,  1),  '8830268-0'),
+        (5, (2010, 10, 13),  '7547896-8'),
+        (6, (2010, 11, 11), '11652624-7'),
+    ]
 
-::
+El detalle de cada venta
+se encuentra en la lista ``itemes``.
+Cada ítem tiene asociado
+un número de boleta,
+un código de producto
+y una cantidad::
 
-	>>> existe_producto(321)
-	True
-	>>> existe_producto(512)
-	False
+    itemes = [
+        (1, 89148,  3),
+        (2, 50809,  4),
+        (2, 33692,  2),
+        (2, 47470,  6),
+        (3, 30877,  1),
+        (4, 89148,  1),
+        (4, 75466,  2),
+        (5, 89148,  2),
+        (5, 47470, 10),
+        (6, 41419,  2),
+    ]
 
-*  Escriba una función *cuenta_menores_que(precio_maximo)*
-   que entregue la cantidad de productos cuyo precio es menor que *precio_maximo*:
+Por ejemplo, en la venta con boleta número 2,
+fueron vendidas 4 paltas, 2 bebidas y 6 yogures.
 
-::
+Escriba las siguienes funciones::
 
-
-	>>> cuenta_menores_que(1000)
-	2
-	>>> cuenta_menores_que(7500)
-	6
-	>>> cuenta_menores_que(300)
-	0
-
-* A partir del archivo *productos.txt*, escriba un programa que
-  cree un nuevo archivo llamado *nombres.txt*, que tenga sólo
-  los nombres de los productos.
-
-::
-
-	Reloj
-	Cuaderno
-	Vuvuzela
-	Lapiz
-	Martillo
-	Paleta
-	Pizza
-
+    >>> producto_mas_caro(productos)
+    'Vuvuzela'
+    >>> valor_total_bodega(productos)
+    1900570
+    >>> ingreso_total_por_ventas(itemes, productos)
+    13944
+    >>> producto_con_mas_ingresos(itemes, productos)
+    'Arroz'
+    >>> cliente_que_mas_pago(itemes, productos, clientes)
+    'Fulanita de Tal'
+    >>> total_ventas_del_mes(2010, 10, itemes, productos)
+    4160
+    >>> fecha_ultima_venta_producto(47470, itemes, ventas)
+    (2010, 10, 13)
 
