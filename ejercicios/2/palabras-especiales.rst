@@ -24,13 +24,13 @@ Palabras especiales
     >>> es_panvocalica('pedagogico')
     False
 
-#. Escriba una función ``cuenta_pv(oracion)`` que cuente cuántas palabras
+#. Escriba una función ``cuenta_panvocalicas(oracion)`` que cuente cuántas palabras
    panvocálicas tiene una oración::
 
-    >>> cuenta_pv('el abuelito mordisquea el aceituno con contundencia')
+    >>> cuenta_panvocalicas('el abuelito mordisquea el aceituno con contundencia')
     4
-    >>> cuenta_pv('la cincuentona estudiosa va a casa')
+    >>> cuenta_panvocalicas('la contertulia estudiosa va a casa')
     2
-    >>> cuenta_pv('los hipopotamos bailan al amanecer')
+    >>> cuenta_panvocalicas('los hipopotamos bailan al amanecer')
     0
 

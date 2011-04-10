@@ -1,8 +1,7 @@
 Desviación estándar
 -------------------
 
-Escriba un programa
-que contenga una función llamada ``desviacion_estandar(valores)``
+Desarrolle una función llamada ``desviacion_estandar(valores)``
 cuyo parámetro ``valores`` sea una lista de números reales.
 
 La función debe retornar

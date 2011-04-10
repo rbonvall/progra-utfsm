@@ -30,6 +30,7 @@ Listas
     polinomios
     mapear-filtrar
     producto-interno
+    desviacion-estandar
 
 Conjuntos
 ---------
@@ -79,7 +80,6 @@ Sin clasificar aún
     ahorcado
     asignacion-salas
     campeonato-futbol
-    desviacion-estandar
     divisibles-nueve
     divisibles-once
     gato
