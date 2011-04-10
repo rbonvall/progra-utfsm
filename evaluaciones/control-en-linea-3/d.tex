@@ -1,0 +1,44 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#5}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+  Cuando un mismo dígito aparece dos veces seguidas en un número,
+  se dice que son \emph{dígitos siameses}.
+
+  Escriba una función \li!tiene_siameses(n)!,
+  que retorne \li!True! o \li!False!
+  dependiendo si el entero \li!n! tiene o no dígitos siameses:
+
+  \lstinputlisting{d-caso1.py}
+
+  A continuación,
+  escriba un función \li!cuenta_siameses(m)!
+  que retorne la cantidad de números menores que \li!m!
+  que tienen dígitos siameses.
+
+  \lstinputlisting{d-caso2.py}
+
+  La función \li!cuenta_siameses!
+  debe llamar a \li!tiene_siameses!.
+  Ambas funciones deben estar en el mismo archivo,
+  y deben tener exactamente los nombres indicados en el enunciado.
+
+\end{document}
+

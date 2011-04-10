@@ -1,0 +1,44 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#5}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+
+  Escriba una función \li!tiene_digito(d, n)!
+  que retorne \li!True! o \li!False!
+  dependiendo si el dígito \li!d!
+  aparece o no en el número \li!n!:
+
+  \lstinputlisting{a-caso1.py}
+
+  A continuación,
+  escriba un función \li!digitos_en_comun(m, n)!
+  que retorne \li!True! o \li!False!
+  dependiendo si \li!m! y \li!n!
+  tienen dígitos en común.
+
+  \lstinputlisting{a-caso2.py}
+
+  La función \li!digitos_en_comun!
+  debe llamar a \li!tiene_digito!.
+  Ambas funciones deben estar en el mismo archivo,
+  y deben tener exactamente los nombres indicados en el enunciado.
+
+\end{document}
+

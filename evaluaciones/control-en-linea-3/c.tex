@@ -1,0 +1,43 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#5}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+
+  Escriba una función \li!cuenta_digito(d, n)!
+  que retorne la cantidad de veces
+  que aparece el dígito \li!d!
+  en el número \li!n!:
+
+  \lstinputlisting{c-caso1.py}
+
+  A continuación,
+  escriba un función \li!siguiente_con_digitos(d, c, m)!
+  que retorne el primer número mayor que \li!m!
+  en el que el dígito \li!d! aparece por lo menos \li!c! veces:
+
+  \lstinputlisting{c-caso2.py}
+
+  La función \li!siguiente_con_digitos!
+  debe llamar a \li!cuenta_digito!.
+  Ambas funciones deben estar en el mismo archivo,
+  y deben tener exactamente los nombres indicados en el enunciado.
+
+\end{document}
+

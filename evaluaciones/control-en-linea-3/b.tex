@@ -1,0 +1,48 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#5}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+
+  El proceso de sumar los dígitos de un número
+  puede seguir siendo aplicado sucesivamente
+  hasta obtener un número de sólo un dígito.
+  Por ejemplo:
+  \[ 9788916 \to 48 \to 12 \to 3. \]
+
+  Escriba una función \li!suma_digitos(n)!
+  que retorne la suma de los dígitos de \li!n!:
+
+  \lstinputlisting{b-caso1.py}
+  
+  A continuación,
+  escriba una función \li!reducir_a_digito(n)!
+  que retorne el dígito resultante
+  al sumar sucesivamente
+  los dígitos de los resultados:
+
+  \lstinputlisting{b-caso2.py}
+
+  La función \li!reducir_a_digito!
+  debe llamar a \li!suma_digitos!.
+  Ambas funciones deben estar en el mismo archivo,
+  y deben tener exactamente los nombres indicados en el enunciado.
+
+\end{document}
+
