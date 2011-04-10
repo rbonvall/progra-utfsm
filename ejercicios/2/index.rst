@@ -18,6 +18,7 @@ Tuplas
 
     expresiones-tuplas
     rectas
+    fechas
 
 Listas
 ------
@@ -125,8 +126,6 @@ Sin clasificar aún
     binarios
     cuenta-caracteres
     numero-letras
-    fecha-siguiente
-    dias-entre-fechas
     distancias
     donantes
     mezcla-numeros
