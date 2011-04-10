@@ -1,0 +1,7 @@
+Cuantos datos? `5`
+Dato 1: `5.8`
+Dato 2: `3.1`
+Dato 3: `2.7`
+Dato 4: `2.6`
+Dato 5: `6.1`
+La desviacion estandar es 1.73867765845

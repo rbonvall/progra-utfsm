@@ -27,5 +27,153 @@
     \maketitle
   \end{frame}
 
+  \begin{frame}
+    \frametitle{Desviación estándar}
+    \label{def-desviacion}
+    \begin{itemize}
+      \item Datos: \([5.8\quad 3.1\quad 2.7]\)
+      \item Promedio:
+        \[
+          \bar{x} =
+          \frac{1}{3}
+          (5.8 + 3.1 + 2.5) = 3.8
+        \]
+      \item Desviación estándar:
+        \begin{align*}
+          \sigma_x &=
+          \sqrt{
+            \frac{1}{2}
+            \Bigl(
+              (5.8 - 3.8)^2 +
+              (3.1 - 3.8)^2 +
+              (2.5 - 3.8)^2
+            \Bigr)
+          } \\[2ex]
+          &\approx 1.76
+        \end{align*}
+    \end{itemize}
+
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-desviacion}
+    \frametitle{Ejercicio}
+    Escriba un programa que pregunte \\
+    cuántos datos se ingresará, pida los datos, \\
+    y entregue la desviación estándar:
+    \lstinputlisting[language=testcase]{programas/caso-desviacion.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{programa-desviacion}
+    \frametitle{Solución}
+    \footnotesize
+    \lstinputlisting{programas/desviacion-1.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{programa-desviacion-funciones}
+    \frametitle{Solución con funciones}
+    \tiny
+    \lstinputlisting{programas/desviacion-2.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{listas-agregar}
+    \frametitle{Agregar cosas a una lista}
+    \lstinputlisting{programas/listas-append.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{listas-indices}
+    \frametitle{Índices}
+    \lstinputlisting{programas/listas-indices.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{listas-modificar}
+    \frametitle{Modificar elementos de una lista}
+    \lstinputlisting{programas/listas-modificar.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{listas-operaciones}
+    \frametitle{Operaciones sobre listas}
+    \lstinputlisting{programas/listas-operaciones.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{listas-iterar}
+    \frametitle{Iterar sobre listas}
+    \lstinputlisting{programas/listas-iterar.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{listas-copiar}
+    \frametitle{Copiado de listas (¡cuidado!)}
+    \lstinputlisting{programas/listas-copiar.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{tuplas}
+    \frametitle{Tuplas}
+    \lstinputlisting{programas/tuplas-ejemplos.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{tuplas-desempaquetar}
+    \frametitle{Desempaquetado de tuplas}
+    \lstinputlisting{programas/tuplas-desempaquetar.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{tuplas-comparar}
+    \frametitle{Comparación de tuplas}
+    \lstinputlisting{programas/tuplas-comparar.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{listas-de-tuplas}
+    \frametitle{Listas de tuplas}
+    \lstinputlisting{programas/lista-tuplas.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-distancia}
+    \frametitle{Ejercicio: distancias}
+    Escriba una función \li!distancia(p1, p2)!
+    que retorne la distancia entre los puntos \li!p1! y \li!p2!:
+    \lstinputlisting{programas/caso-distancia.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-ejercicio-distancia}
+    \frametitle{Solución}
+    \lstinputlisting{programas/distancia.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-perimetro}
+    \frametitle{Ejercicio}
+    Un polígono está determinado por la lista de sus vértices.
+
+    Escriba una función \li!perimetro(vertices)!
+    que entregue el perímetro del polígono
+    definido por la lista \li!vertices!:
+    \lstinputlisting{programas/caso-perimetro.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-ejercicio-perimetro}
+    \frametitle{Solución}
+    \lstinputlisting{programas/perimetro.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-ejercicio-perimetro-2}
+    \frametitle{Solución 2}
+    \lstinputlisting{programas/perimetro-2.py}
+  \end{frame}
+
 \end{document}
 
