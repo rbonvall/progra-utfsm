@@ -28,7 +28,8 @@ Listas
     expresiones-listas
     estadisticos-localizacion
     polinomios
-    problema-josefo
+    mapear-filtrar
+    producto-interno
 
 Conjuntos
 ---------
@@ -42,14 +43,15 @@ Diccionarios
 
     expresiones-diccionarios
 
-Estructuras de datos anidadas
------------------------------
+Uso de estructuras de datos
+---------------------------
 .. toctree::
 
     expresiones-estructura-datos
     paises
     acordes
     compatibilidad-personas
+    josefo
 
 Procesamiento de texto
 ----------------------
