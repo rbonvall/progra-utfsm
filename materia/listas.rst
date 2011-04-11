@@ -89,6 +89,16 @@ los elementos se cuentan desde el final hacia atrás::
     >>> primos
     [2, 3, 5, 7, 11, 13, 17]
 
+.. index:: método
+
+Un comentario al margen:
+``append`` es un **método**.
+Los métodos son funciones que están dentro de un objeto.
+Cada lista tiene su propia función ``append``.
+Es importante tener esta distinción clara,
+ya que hay operaciones que están implementadas como funciones
+y otras como métodos.
+
 ``sum(x)`` entrega la suma de los valores de la lista::
 
     >>> sum([1, 2, 1, -1, -2])
