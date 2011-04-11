@@ -103,7 +103,7 @@ Para iterar sobre las llaves, se usa ``d.values()``::
     4448139
 
 Para iterar sobre las llaves y los valores simultáneamente,
-usa el método ``d.items()``::
+se usa el método ``d.items()``::
 
     >>> for k, v in telefonos.items():
     ...     print 'El telefono de', k, 'es', v
