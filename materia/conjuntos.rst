@@ -83,7 +83,7 @@ Operaciones sobre conjuntos
     >>> 5 in {2, 3, 4}
     False
 
-  ``x not in s`` permite saber si ``x`` no está en ``s``::
+``x not in s`` permite saber si ``x`` no está en ``s``::
 
     >>> 10 not in {2, 3, 4}
     True
