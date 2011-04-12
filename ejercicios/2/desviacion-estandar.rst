@@ -31,6 +31,6 @@ Esto significa que hay que hacerlo siguiendo estos pasos:
     >>> desviacion_estandar([1.3, 1.3, 1.3])
     0.0
     >>> desviacion_estandar([4.0, 1.0, 11.0, 13.0, 2.0, 7.0])
-    4.459696053419884
+    4.88535225615
     >>> desviacion_estandar([1.5, 9.5])
-    4.0
+    5.65685424949
