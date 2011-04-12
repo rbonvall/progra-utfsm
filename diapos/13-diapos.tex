@@ -16,7 +16,7 @@
 \usecolortheme{crane}
 \usefonttheme{serif}
 
-\title{Conjuntos y diccionarios}
+\title{Diccionarios y conjuntos}
 \author{
   Programación \\ \url{http://progra.usm.cl}
 }
@@ -25,6 +25,85 @@
 \begin{document}
   \begin{frame}
     \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Diccionarios}
+    \label{dicc-telefonos}
+    \lstinputlisting{programas/diccionario-telefonos.py}
+    \begin{block}{Conceptos}
+      \begin{itemize}
+        \item Llave
+        \item Valor
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Agregar llaves y valores}
+    \label{dicc-agregar}
+    \lstinputlisting{programas/diccionario-modificar.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Operaciones sobre diccionarios}
+    \label{dicc-operaciones}
+    \lstinputlisting{programas/diccionario-operaciones.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ejercicio: contar letras}
+    \label{ejercicio-contar-letras}
+    Escriba una función \li!contar_letras(palabra)!
+    que reciba un string y retorne un diccionario
+    que indique cuántas veces aparece cada letra en el string:
+    \lstinputlisting{programas/caso-dicc-contar-letras.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Solución}
+    \label{solucion-contar-letras}
+    \lstinputlisting{programas/dicc-contar-letras.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Recorrer diccionarios}
+    \label{recorrer-diccionarios}
+    \footnotesize
+    \lstinputlisting{programas/diccionario-recorrer.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Conjuntos}
+    \label{conjuntos-crear}
+    \lstinputlisting{programas/conjuntos-crear.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Agregar y sacar cosas de conjuntos}
+    \label{conjuntos-modificar}
+    \lstinputlisting{programas/conjuntos-modificar.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Operaciones sobre conjuntos}
+    \label{conjuntos-operaciones}
+    \lstinputlisting{programas/conjuntos-operaciones.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ejercicio: letras en común}
+    \label{ejercicio-letras-comun}
+    Escriba una función \li!letras_en_comun(p, r)!
+    que retorne la cantidad de letras en común
+    que tienen las palabras \li!p! y \li!r!:
+    \lstinputlisting{programas/caso-letras-comun.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Solución}
+    \label{solucion-letras-comun}
+    \lstinputlisting{programas/letras-comun.py}
   \end{frame}
 
 \end{document}

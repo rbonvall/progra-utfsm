@@ -20,7 +20,7 @@
 \input{../latex/definiciones.tex}
 \input{../latex/notas-diapos.tex}
 
-\title{Conjuntos y diccionarios}
+\title{Diccionarios y conjuntos}
 \author{Programación \\ \url{http://progra.usm.cl}}
 \date{13 y 14 de abril de 2011}
 
@@ -28,8 +28,200 @@
   \maketitle
 
   \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Enseñar el uso de diccionarios y conjuntos en Python.
+  \end{itemize}
 
   \section*{Diapositivas}
 
+  \diapo{dicc-telefonos}
+
+  Un \emph{diccionario} es una estructura de datos
+  que sirve para asociar pares llave-valor.
+  Las llaves son usadas como índices
+  para acceder a los valores.
+
+  En el ejemplo,
+  se ha usado un diccionario
+  para asociar a cada persona su número de teléfono.
+  Para obtener el teléfono de alguien,
+  hay que usar el operador de índice \li![]!
+  aplicado sobre su nombre.
+  En este caso,
+  los nombres son las llaves,
+  y los teléfonos los valores.
+
+  En Python, los diccionarios se crean usando paréntesis de llave (\li!{}!),
+  y representando cada par llave-valor unido por dos puntos (\li!:!).
+
+  Los diccionarios no tienen equivalente en C y Pascal,
+  pero sí en otros lenguajes:
+  los hashes de Perl,
+  los arreglos asociativos de PHP,
+  los maps de C++
+  y los Hashtables de Java.
+  Internamente,
+  los diccionarios de Python están implementados como tablas hash,
+  al igual que en Java y a diferencia de C++, donde son árboles binarios.
+
+  La ventaja de las tablas hash
+  es que el tiempo de acceso para obtener un valor es \(O(1)\) amortizado
+  (es decir, prácticamente constante),
+  independientemente del tamaño del diccionario.
+  Esto ocurre ya que el mismo valor de la llave
+  indica dónde está el valor asociado en la memoria,
+  por lo que no es necesario recorrer una estructura de datos
+  para encontrarlo.
+
+  \diapo{dicc-agregar}
+
+  Para crear una nueva asociación en el diccionario,
+  basta con asignar el valor al diccionario indexado por la llave.
+  En las tres primeras asignaciones del ejemplo,
+  se ha asignado un número entero
+  a cada una de las letras \li!'a'!, \li!'x'! y \li!'m'!.
+
+  Es importante indicar que el diccionario no guarda los pares
+  en ningún orden específico.
+  A pesar que asignamos el valor asociado a \li!'x'! antes que el asociado a \li!'m'!,
+  al mostrar el diccionario aparece la \li!'m'! antes.
+  Uno jamás debe esperar que los elementos de un diccionario
+  estén en algún orden determinístico.
+
+  En las siguientes dos asignaciones,
+  se ha asociado a \li!'f'! un valor que ya estaba en el diccionario (5),
+  y se ha cambiado el valor asociado a la llave \li!'x'!.
+  Al mostrar el nuevo estado del diccionario,
+  queda claro que éste no puede contener llaves repetidas,
+  pero valores repetidos sí.
+
+  En resumen,
+  la asignación de un valor en un diccionario
+  puede cumplir uno de dos roles:
+  crear una asociación nueva (cuando la llave no existía),
+  o modificar una existente.
+
+  \diapo{dicc-operaciones}
+
+  El diccionario de este ejemplo
+  asocia a cada animal su cantidad de patas.
+
+  Un diccionario es un iterable que,
+  al ser recorrido, entrega sus llaves.
+  Una de las consecuencias de esto
+  es que, al convertir el diccionario en una lista,
+  se obtiene la lista de las llaves.
+
+  Para obtener la lista de los valores,
+  hay que usar el método \li!d.values()!.
+
+  El operador \li!in! sirve para buscar una llave en el diccionario,
+  no un valor.
+  Explique esto con detención usando el ejemplo como referencia:
+  el número 8 está en el diccionario (asociado al pulpo),
+  pero no es una llave, sino un valor,
+  por lo que \li!8 in patas! retorna falso.
+
+  La función \li!len! entrega cuántos pares llave-valor tiene el diccionario.
+  No cuenta las llaves y los valores por separado.
+
+  \diapo{ejercicio-contar-letras}
+  \diapo{solucion-contar-letras}
+
+  Un uso típico de los diccionarios
+  es crear una colección de contadores.
+  En este ejercicio,
+  no hay que contar una de las letras en la oración,
+  sino todas ellas.
+  Explique los ejemplos para que quede claro qué es lo que se pide.
+
+  La solución está basada en el típico patrón de contar cosas.
+  La diferencia es que hay un contador por cada letra.
+  Para cada letra, hay que revisar si ya ha sido agregada previamente al diccionario;
+  si no es así, hay que hacerlo asociándola al valor cero.
+  Si no se hiciera esto,
+  ocurriría un \emph{error de llave} (\li!KeyError!)
+  al intentar incrementar el valor asociado a una llave inexistente.
+
+  \diapo{recorrer-diccionarios}
+
+  Al igual que todas las estructuras de datos,
+  los diccionarios pueden ser recorridos usando el ciclo \li!for!.
+  Las maneras de hacerlo son tres:
+  \begin{enumerate}
+    \item recorrer las llaves (usando el diccionario directamente),
+    \item recorrer los valores (usando el método \li!d.values()!), y
+    \item recorrer los pares llave-valor (usando el método \li!d.items()!).
+  \end{enumerate}
+
+  Haga notar que, al recorrer las llaves,
+  de todas maneras podemos obtener el valor usando el operador de indexación
+  como en el primer ciclo,
+  pero al recorrer los valores no es posible obtener directamente la llave asociada.
+  Por eso, de cada capital sólo podemos decir que es linda, pero no a qué país pertenece.
+
+  \diapo{conjuntos-crear}
+
+  Los \emph{conjuntos} son colecciones desordenadas de elementos no repetidos.
+  Son muy similares a los conjuntos de matemáticas
+  que ya son familiares para los estudiantes.
+
+  Con la sintaxis de los conjuntos hay que tener cuidado.
+  El uso de llaves (\li!{! y \li!}!) para crear conjuntos
+  fue introducido recién en Python 2.7.
+  En versiones anteriores, esta manera no es válida.
+  Ojo que hay estudiantes que tienen instalada la versión 2.6 del intérprete,
+  especialmente los que ocupan Mac o Linux.
+
+  Por la misma razón,
+  al mostrar un conjunto en la consola,
+  aparece como una lista pasada a la función \li!set!.
+
+  En las versiones 3.x de Python,
+  este problema está solucionado,
+  y las llaves aparecen tanto al crear los conjuntos
+  como en su representación en la consola.
+  Por ahora, tenemos que lidiar con esta pequeña inconsistencia.
+
+  En los ejemplos,
+  muestre que en ningún caso aparecen los elementos repetidos en el conjunto,
+  y que el orden de los elementos no es relevante de ninguna manera.
+
+  \diapo{conjuntos-modificar}
+
+  Pregunta capciosa para los estudiantes:
+  ¿por qué los conjuntos vacíos se crean con \li!set()! y no con \li!{}!?
+  La respuesta es que \li!{}! es el diccionario vacío.
+
+  Modificar conjuntos es fácil:
+  se agregan elementos con el método \li!add!
+  y se eliminan con el método \li!remove!.
+  Además,
+  hay un método \li!discard! que también elimina un elemento,
+  pero no lanza un error si el elemento no estaba en el conjunto.
+
+  Al igual que en las demás estructuras de datos,
+  el operador \li!in! (junto con su hermano \li!not in!)
+  permite saber si un elemento está (o no) en el conjunto.
+
+  \diapo{conjuntos-operaciones}
+
+  Las operaciones son las mismas de teoría de conjuntos,
+  pero representadas por caracteres ASCII:
+  \begin{itemize}
+    \item \li!&! es la intersección,
+    \item \li!|! es la unión,
+    \item \li!-! es la diferencia,
+    \item \li!^! es la diferencia simétrica,
+    \item \li!<! significa «es subconjunto propio de».
+  \end{itemize}
+  Los demás operadores relacionales \li!>!, \li!<=! y \li!>=!
+  tienen también los significados obvios.
+
+  \diapo{ejercicio-letras-comun}
+  \diapo{solucion-letras-comun}
+
+  Un ejercicio muy sencillo: contar las letras en común que tienen dos palabras.
+  La solución consiste en meter las letras de las palabras a sendos conjuntos, y obtener su intersección.
 \end{document}
 
