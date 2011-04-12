@@ -73,7 +73,7 @@ en un programa::
      [0, 2, 1, -5, 0, 3]
 
 #. Escriba una función ``derivar_polinomio(p)``
-   que entregue la derivada de un polinomio::
+   que entregue la `derivada de un polinomio`_::
 
      >>> derivar_polinomio(r)
      [0, 0, -15, 0, 15]
@@ -83,4 +83,6 @@ en un programa::
 
      >>> multiplicar_polinomios(p, q)
      [4, -9, -30, -17]
+
+.. _derivada de un polinomio: http://www.youtube.com/watch?v=7XQMghs_6vg
 
