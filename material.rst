@@ -45,7 +45,9 @@ de acuerdo a la `planificación de la asignatura`_.
 * Sesión 12:
   `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/12-diapos.pdf>`_,
   `notas  <http://csrg.inf.utfsm.cl/~rbonvall/diapos/12-notas.pdf>`_.
-* Sesión 13: por subir.
+* Sesión 13:
+  `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/13-diapos.pdf>`_,
+  `notas  <http://csrg.inf.utfsm.cl/~rbonvall/diapos/13-notas.pdf>`_.
 * Sesión 14: por subir.
 * Sesión 15: por subir.
 * Sesión 16: ejercicios propuestos por el profesor.
