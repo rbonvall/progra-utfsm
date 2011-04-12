@@ -5,7 +5,7 @@ capitales = {
 }
 
 for pais in capitales:
-    print 'La capital de', pais, 'es', capital[pais]
+    print 'La capital de', pais, 'es', capitales[pais]
 
 for capital in capitales.values():
     print capital, 'es una linda ciudad'
