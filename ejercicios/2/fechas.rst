@@ -47,5 +47,5 @@ Una fecha puede ser representada como una tupla
       Dia: `20`
       Mes: `4`
       Anno: `2011`
-      Usted tiene 7676 dias de edad
+      Usted tiene 7646 dias de edad
 
