@@ -37,6 +37,7 @@ Conjuntos
 .. toctree::
 
     expresiones-conjuntos
+    conjunto-potencia
 
 Diccionarios
 ------------
