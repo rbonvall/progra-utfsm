@@ -8,7 +8,16 @@ Por ejemplo, el conjunto potencia de `{1, 2, 3}` es:
 
 .. math::
 
-    \bigl{\emptyset, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}\bigr}
+    \left\{
+      \emptyset,
+      \{1\},
+      \{2\},
+      \{3\},
+      \{1, 2\},
+      \{1, 3\},
+      \{2, 3\},
+      \{1, 2, 3\}
+    \right\}
 
 En Python,
 un conjunto no puede contener a otros conjuntos,
