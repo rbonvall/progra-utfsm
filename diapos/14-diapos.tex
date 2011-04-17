@@ -11,6 +11,12 @@
 \usepackage{url}
 \usepackage{hyperref}
 
+\usepackage{pifont}
+\newcommand{\T}{\ding{51}}
+%\newcommand{\F}{\ding{55}}
+\newcommand{\F}{}
+
+
 \input{../latex/definiciones.tex}
 
 \usecolortheme{crane}
@@ -119,6 +125,103 @@
     Escriba la función \li!alumno_mas_joven()! \\
     que retorne el nombre completo del alumno más joven:
     \lstinputlisting{programas/caso-alumno-mas-joven.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 2}
+    \label{problema-futbol-1}
+    Los resultados de un campeonato de fútbol \\
+    están almacenados en un diccionario:
+    \lstinputlisting[linerange=1-8]{programas/campeonato.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 2 (continuación)}
+    \label{problema-futbol-2}
+    \textbf{Ejercicio 1}
+    Escriba la función \li!obtener_lista_equipos!
+    que retorne la lista de los equipos
+    que participan en el campeonato:
+    \lstinputlisting{programas/caso-obtener-lista-equipos.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 2 (continuación)}
+    \label{problema-futbol-3}
+    \textbf{Ejercicio 2} \\
+    El equipo que gana un partido, recibe 3 puntos. \\
+    En caso de empate, ambos equipos reciben 1 punto. \\
+    \vspace{1ex}
+    Escriba la función \li!calcular_puntos(equipo)! \\
+    que retorne la cantidad de puntos obtenidos \\
+    por el equipo pasado como parámetro:
+    \lstinputlisting{programas/caso-calcular-puntos.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 2 (continuación)}
+    \label{problema-futbol-4}
+    \textbf{Ejercicio 3} \\
+    La \emph{diferencia de goles} de un equipo
+    es el total de los goles que anotó menos el total de goles que recibió. \\
+    \vspace{1ex}
+    Escriba la función \li!calcular_diferencia(equipo)! \\
+    que retorne la diferencia de goles
+    del equipo pasado como parámetro:
+    \lstinputlisting{programas/caso-calcular-diferencia.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 3}
+    \label{problema-asistencia-1}
+    La asistencia de los alumnos a clases \\
+    puede ser llevada en una tabla como ésta:
+    {\footnotesize
+    \begin{tabular}{|l|c|c|c|c|c|c|c|}\hline
+      Clase    & 1& 2& 3& 4& 5& 6& 7\\\hline\hline
+      Pepito   &\T&\T&\T&\F&\F&\F&\F\\\hline
+      Yayita   &\T&\T&\T&\F&\T&\F&\T\\\hline
+      Fulanita &\T&\T&\T&\T&\T&\T&\T\\\hline
+      Panchito &\T&\T&\T&\F&\T&\T&\T\\\hline
+    \end{tabular}
+    }
+
+    \vspace{1ex}
+    La tabla puede ser representada como una lista de listas con valores booleanos:
+    \footnotesize
+    \lstinputlisting[linerange=1-7]{programas/asistencia.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 3 (continuación)}
+    \label{problema-asistencia-2}
+    \textbf{Ejercicio 1} \\
+    Escriba la función \li!total_por_alumno(tabla)!
+    que reciba como parámetro la tabla de asistencia
+    y retorne una lista con el número de clases
+    asistidas por cada alumno:
+    \lstinputlisting{programas/caso-asistencia-total-alumno.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 3 (continuación)}
+    \label{problema-asistencia-3}
+    \textbf{Ejercicio 2} \\
+    Escriba la función \li!total_por_clase(tabla)!
+    que reciba como parámetro la tabla de asistencia
+    y retorne entregue una lista con el número de alumnos \\
+    que asistió a cada clase:
+    \lstinputlisting{programas/caso-asistencia-total-clase.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 3 (continuación)}
+    \label{problema-asistencia-4}
+    \textbf{Ejercicio 3} \\
+    Escriba la función \li!alumno_estrella(tabla)!
+    que reciba como parámetro la tabla de asistencia
+    y retorne el nombre del alumno que asistió a más clases:
+    \lstinputlisting{programas/caso-asistencia-estrella.py}
   \end{frame}
 
 \end{document}
