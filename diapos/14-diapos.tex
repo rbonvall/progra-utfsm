@@ -1,0 +1,125 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\input{../latex/definiciones.tex}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Estructuras de datos anidadas}
+\author{
+  Programación \\ \url{http://progra.usm.cl}
+}
+\date{18 y 19 de abril de 2011}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \label{repaso}
+    \frametitle{Repaso}
+    \small
+    \def\sep{-1ex}
+    \begin{columns}[T]
+      \column{0.5\textwidth}
+        Listas:
+        \begin{itemize}
+          \setlength{\itemsep}{\sep}
+          \item tienen orden
+          \item mutables
+          \item \li!list()!
+          \item \li![1, 2, 3]!
+        \end{itemize}
+      \column{0.5\textwidth}
+        Tuplas:
+        \begin{itemize}
+          \setlength{\itemsep}{\sep}
+          \item tienen orden
+          \item inmutables
+          \item \li!tuple()!
+          \item \li!(1, 2, 3)!
+        \end{itemize}
+    \end{columns}
+    \vfill
+    \begin{columns}[T]
+      \column{0.5\textwidth}
+        Diccionarios:
+        \begin{itemize}
+          \setlength{\itemsep}{\sep}
+          \item no tienen orden
+          \item pares llave-valor
+          \item llaves no repetidas
+          \item mutables
+          \item \li!dict()!
+          \item \li!\{1: 2, 3: 4\}!
+        \end{itemize}
+      \column{0.5\textwidth}
+        Conjuntos:
+        \begin{itemize}
+          \setlength{\itemsep}{\sep}
+          \item no tienen orden
+          \item elementos no repetidos
+          \item mutables
+          \item \li!set()!
+          \item \li!\{1, 2, 3\}!
+        \end{itemize}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 1}
+    \label{problema-alumnos-1}
+    Los datos de los alumnos de una universidad \\
+    están almacenados en un diccionario. \\
+    Las llaves son los roles,
+    y los valores son tuplas \\
+    con el nombre, el apellido
+    y la fecha de nacimiento: \\
+    \tiny
+    \lstinputlisting[linerange=1-10]{programas/alumnos.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 1 (continuación)}
+    \label{problema-alumnos-2}
+    Los inscritos de cada ramo están registrados \\
+    en otro diccionario. Las llaves son los nombres de los ramos,
+    y cada valor es el conjunto de los roles \\
+    de los alumnos que están tomando el ramo:
+    \tiny
+    \lstinputlisting[linerange=12-17]{programas/alumnos.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 1 (continuación)}
+    \label{problema-alumnos-3}
+    \textbf{Ejercicio 1} \\
+    Escriba la función \li!ramos_alumno(rol)! \\
+    que retorne la lista de los ramos que está tomando \\
+    el alumno con el rol entregado como parámetro:
+    \lstinputlisting{programas/caso-ramos-alumno.py}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Problema 1 (continuación)}
+    \label{problema-alumnos-4}
+    \textbf{Ejercicio 2} \\
+    Escriba la función \li!alumno_mas_joven()! \\
+    que retorne el nombre completo del alumno más joven:
+    \lstinputlisting{programas/caso-alumno-mas-joven.py}
+  \end{frame}
+
+\end{document}
+
