@@ -20,6 +20,7 @@ Tuplas
     rectas
     fechas
     supermercado
+    traslape
 
 Listas
 ------
