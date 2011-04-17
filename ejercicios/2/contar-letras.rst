@@ -50,6 +50,16 @@ Contar letras y palabras
     >>> contar_palabras('El sobre esta sobre el pupitre')
     {'sobre': 2, 'pupitre': 1, 'el': 2, 'esta': 1}
 
+#. Escriba una función ``palabras_repetidas(oracion)``
+   que retorne una lista con las palabras que están repetidas::
+
+    >>> palabras_repetidas('El partido termino cero a cero')
+    ['cero']
+    >>> palabras_repetidas('El sobre esta sobre el mueble')
+    ['el', 'sobre']
+    >>> palabras_repetidas('Ay, ahi no hay pan')
+    []
+
 Para obtener la lista de palabras de la oración,
 puede usar el método ``split`` de los strings::
 
