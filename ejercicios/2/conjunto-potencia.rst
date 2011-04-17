@@ -4,7 +4,7 @@ Conjunto potencia
 El `conjunto potencia`_ de un conjunto *S*
 es el conjunto de todos los subconjuntos de *S*.
 
-Por ejemplo, el conjunto potencia de `{1, 2, 3}` es:
+Por ejemplo, el conjunto potencia de `\{1, 2, 3\}` es:
 
 .. math::
 
