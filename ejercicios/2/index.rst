@@ -45,6 +45,7 @@ Diccionarios
 .. toctree::
 
     expresiones-diccionarios
+    contar-letras
 
 Uso de estructuras de datos
 ---------------------------
@@ -109,7 +110,6 @@ Sin clasificar aún
     inventario
     sumas-filas-columnas
     reporte
-    contar-iniciales
     escalas
     mayores-que
     asistencia
