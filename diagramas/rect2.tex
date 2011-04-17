@@ -1,0 +1,42 @@
+\documentclass{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations}
+
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}[scale=.4]
+
+  \def\gridsize{15}
+  \draw[gray] (-1, -1) grid (\gridsize, \gridsize);
+  \draw[thick,->] (-1, 0) -- (\gridsize, 0);
+  \draw[thick,->] (0, -1) -- (0, \gridsize);
+
+  \def\Rx{1} \def\Ry{8} \def\Rw{8} \def\Rh{5}
+  \draw[blue, thick, fill=blue!30, opacity=.8] (\Rx, \Ry) rectangle ++(\Rw, \Rh);%
+  \fill[blue] (\Rx, \Ry) circle (.2cm);
+  \node[blue] at ({\Rx + \Rw/2}, {\Ry + \Rh/2}) {A};
+
+  \def\Rx{7} \def\Ry{6} \def\Rw{3} \def\Rh{6}
+  \draw[green!60!black, thick, fill=green!60!black!30, opacity=.8] (\Rx, \Ry) rectangle ++(\Rw, \Rh);%
+  \fill[green!60!black] (\Rx, \Ry) circle (.2cm);
+  \node[green!60!black] at ({\Rx + \Rw/2}, {\Ry + \Rh/2}) {B};
+
+  \def\Rx{4} \def\Ry{2} \def\Rw{9} \def\Rh{3}
+  \draw[red!50!black, thick, fill=red!50!black!30, opacity=.8] (\Rx, \Ry) rectangle ++(\Rw, \Rh);%
+  \fill[red!50!black] (\Rx, \Ry) circle (.2cm);
+  \node[red!50!black] at ({\Rx + \Rw/2}, {\Ry + \Rh/2}) {C};
+
+  \foreach\i in {0,...,{\gridsize}} {
+      \node[gray] at (\i, -.5) {\i};
+      \node[gray] at (-.5, \i) {\i};
+  }
+
+
+\end{tikzpicture}
+\end{preview}
+
+\end{document}
+
