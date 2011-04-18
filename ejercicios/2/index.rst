@@ -54,6 +54,7 @@ Uso de estructuras de datos
     expresiones-estructura-datos
     paises
     acordes
+    campeonato
     compatibilidad-personas
     josefo
 
@@ -82,7 +83,6 @@ Sin clasificar aún
     adn
     ahorcado
     asignacion-salas
-    campeonato-futbol
     divisibles-nueve
     divisibles-once
     gato
