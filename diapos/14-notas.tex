@@ -1,0 +1,243 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+
+\setjobnamebeamerversion{14-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Estructuras de datos anidadas}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{18 y 19 de abril de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Enseñar el uso de estructuras de datos anidadas mediante ejemplos.
+    \item Mostrar cómo el uso de estructuras de datos anidadas
+      permite representar relaciones relativamente complejas en problemas reales.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  Esta clase no tiene materia nueva.
+  Los conceptos aplicados son los vistos en las clases de las últimas semanas.
+
+  La clase está preparada en torno a tres problemas con varios ejercicios
+  que deben ser propuestos a los estudiantes para que al menos intenten resolverlos.
+  Lo más probable es que no alcance a hacer todos los ejercicios durante la clase,
+  por lo que puede alterar el orden si le parece más razonable
+  darle prioridad a alguno de los problemas.
+
+  Las soluciones a los problemas no están en las diapositivas,
+  sino en archivos aparte para ser descargados.
+  De este modo, es más fácil probar las soluciones en el intérprete.
+
+  \diapo{repaso}
+
+  Comience repasando las estructuras de datos aprendidas en la semana anterior.
+  Indique las propiedades de cada una (aparecen en la diapositiva),
+  repase cómo crear una instancia de ellas,
+  y recuerde algunas de las operaciones y métodos más importantes.
+  Idealmente, ayúdese de la consola para hacer algunos ejemplos muy sencillos.
+
+  \diapo{problema-alumnos-1}
+  \diapo{problema-alumnos-2}
+
+  En estas diapositivas se presenta las estructuras de datos
+  que contienen la información para el problema de las asignaturas.
+  Describa detalladamente la estructura de ambas,
+  haciendo énfasis en los tipos de datos.
+
+  \diapo{problema-alumnos-3}
+
+  Lea el enunciado en voz alta.
+  Pregunte a los alumnos cuál debe ser el nombre de la función,
+  cuál debe ser el parámetro y su tipo,
+  y cuál es el tipo del valor de retorno.
+  Aunque esto aparezca casi explícitamente en el enunciado,
+  son muchos los alumnos que tienen problemas identificando esta información.
+
+  Discuta con los alumnos la estrategia para resolver el problema.
+  Lo que hay que hacer es recorrer el diccionario \li!inscritos!
+  buscando al alumno en cuestión,
+  y agregar el ramo a una lista cada vez que sea encontrado
+  entre los inscritos a un ramo.
+  La solución no es complicada,
+  y seguramente algunos alumnos podrán escribir código bien encaminado.
+
+  \diapo{problema-alumnos-4}
+
+  Lea el enunciado en voz alta,
+  y nuevamente discuta parámetros y valor de retorno.
+  Note que la función no retorna la tupla del alumno,
+  sino su nombre completo.
+
+  Como esta función no tiene parámetro,
+  entonces uno podría preguntarse de dónde obtiene la información.
+  La respuesta es que los datos están en variables globales,
+  por lo que cualquier función puede acceder a ellos
+  sin necesidad de pasárselos explícitamente.
+
+  El problema de entontrar al más joven
+  es equivalente a buscar la mayor fecha de nacimiento
+  (es decir, la más reciente).
+  La solución debe ser una variante del patrón «buscar mayor».
+  Una opción es inicializar el cumpleaños del más joven en una fecha muy antigua
+  (en el programa adjunto, se usa la fecha \li!(0, 0, 0)!).
+  Otra alternativa es meter todas las fechas de nacimiento a una lista
+  y ocupar la función \li!max!.
+
+  \diapo{problema-futbol-1}
+
+  En esta diapositiva se presenta la información
+  para el problema del campeonato de fútbol
+  en un único diccionario.
+  Nuevamente describa en detalle la estructura,
+  con énfasis en los tipos de datos contenidos.
+
+  \diapo{problema-futbol-2}
+
+  Lea el enunciado en voz alta.
+  Si bien en el diccionario de resultados
+  aparece toda la información sobre el campeonato,
+  la lista de equipos no aparece explícitamente.
+
+  Para obtener la lista,
+  hay que recorrer todos los partidos
+  para ver qué equipos fueron los que jugaron.
+  Como cada equipo participa en varios partidos,
+  habrá equipos repetidos,
+  por lo que es conveniente usar un conjunto para irlos guardando.
+
+  Note que ésta es una decisión del programador que desarrolla la función
+  que debe ser transparente para quien la usa.
+  La función no puede retornar el conjunto,
+  ya que el enunciado y el caso de prueba
+  indican explícitamente que se debe retornar una lista.
+  Enfatice esto, pues en los controles en línea un error muy común entre los alumnos
+  fue usar operaciones de strings en algoritmos numéricos
+  (por ejemplo, para extraer dígitos),
+  pero sin convertir el resultado final de vuelta al tipo \li!int!.
+  Es importante que al probar la función en la consola,
+  la sesión se vea exactamente igual que el caso de prueba del enunciado.
+
+  \diapo{problema-futbol-3}
+  \diapo{problema-futbol-4}
+
+  Los dos ejercicios siguientes son parecidos.
+  En ambos hay que recorrer el diccionario,
+  y ver si cada partido involucra al equipo en cuestión,
+  y si es así, si se trata del primer o del segundo equipo de la tupla.
+
+  Nuevamente,
+  sea claro en relación a los tipos de parámetros y retorno.
+
+  \diapo{problema-asistencia-1}
+
+  Lea el enunciado del problema en voz alta,
+  explique cómo debe interpretarse la tabla,
+  y cómo se traduce en una lista de listas
+  (el equivalente a un arreglo bidimensional de Pascal o C).
+
+  A diferencia de los diccionarios,
+  en los que la asociación llave-valor es explícita,
+  acá hay una asociación implícita dada por los índices del alumno y de la clase.
+  Por ejemplo,
+  la asistencia de Fulanita es la tercera lista de la tabla \li!asistencia!,
+  pues Fulanita es el tercer elemento de la lista de alumnos.
+
+  \diapo{problema-asistencia-2}
+
+  Lea el enunciado en voz alta y discuta los tipos de parámetros y retorno.
+  En este caso,
+  la función recibe la estructura de datos como parámetro,
+  y no accede a ella a través de la variable global.
+
+  Es un buen momento para repasar la diferencia entre parámetro
+  (el nombre con el que uno se refiere al dato dentro de la función)
+  y argumento
+  (el valor que es pasado a la función).
+  En el enunciado, el parámetro se llama \li!tabla! dentro de la función,
+  pero al momento de la llamada se le pasa como argumento la variable \li!asistencia!,
+  que es como se llama la estructura afuera de la función.
+
+  Al recorrer la tabla de asistencia,
+  se van obteniendo cada una de las listas que la componen.
+  Lo que hay que hacer es ir contando cuántas veces aparece \li!True!
+  en cada una de ellas, y agregar en orden los totales a la lista que será retornada.
+  En el programa adjunto,
+  se muestran varias maneras de hacerlo,
+  en orden creciente de sofisticación.
+
+  Las versiones 3 y 4 usan la función \li!sum! para contar el total de una lista.
+  Esto es posible ya que los valores booleanos \li!True! y \li!False!
+  valen 0 y 1 respectivamente en un contexto numérico.
+  Más aún, el tipo \li!bool! es una subclase de \li!int!,
+  por lo que los valores booleanos son enteros en toda su regla:
+  \begin{lstlisting}
+>>> isinstance(True, int)
+True
+  \end{lstlisting}
+
+  \diapo{problema-asistencia-3}
+
+  Lea el enunciado en voz alta.
+  Aunque este ejercicio parece similar al anterior,
+  es más difícil, pues para cada clase la información está distribuida
+  entre todas las listas de la tabla.
+  Por lo tanto, hay que ir recorriendo las filas en paralelo.
+
+  La solución adjunta opera \emph{à la Pascal}:
+  inicializa una lista de ceros, y recorre filas y columnas
+  usando dos \li!for! anidados, y actualizando en cada iteración
+  el contador asociado a la clase.
+
+  Una solución más sofisticada (y que es mejor no mencionar)
+  es usar la función \li!zip! para trasponer la tabla:
+  \begin{lstlisting}
+def total_por_clase(tabla):
+    return map(sum, zip(*tabla))
+  \end{lstlisting}
+  El asterisco significa «cada uno de los argumentos de la función
+  será tomado de la lista \li!tabla!».
+
+  \diapo{problema-asistencia-4}
+
+  Lea el enunciado en voz alta, y discuta los tipos de datos.
+
+  Esta función es sencilla de resolver usando la función \li!total_por_alumno!
+  desarrollada anteriormente, junto con operaciones ya provistas por Python.
+
+  Al discutir la estrategia para resolver este problema,
+  hay que dejar claro cuáles son cada uno de los pasos:
+  \begin{itemize}
+    \item calcular los totales por alumnos,
+    \item obtener el máximo de ellos, y
+    \item ver cuál alumno es el que tiene ese máximo de asistencias.
+  \end{itemize}
+  Si bien el ejercicio podría resolverse con un solo ciclo que vaya sumando
+  totales y llevando la cuenta de cuál es el alumno que lleva más,
+  es una buena práctica descomponer el problema en subproblemas más pequeños.
+  En muchos casos, uno se encuentra que estos subproblemas ya están resueltos,
+  como ocurre en este caso, en que se usa la función \li!total_por_alumno!,
+  la función \li!max! y el método \li!index! de las listas.
+
+\end{document}
+
