@@ -56,6 +56,7 @@ Uso de estructuras de datos
     acordes
     campeonato
     compatibilidad-personas
+    poker
     josefo
 
 Procesamiento de texto
@@ -115,7 +116,6 @@ Sin clasificar aún
     asistencia
     palabras-repetidas
     iguales-o-distintos
-    poker
     recorrido-diccionarios
     subconjuntos
     partidos
