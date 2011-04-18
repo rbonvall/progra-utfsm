@@ -2,13 +2,13 @@ Manos de póker
 --------------
 En los juegos de naipes,
 una carta tiene dos atributos:
-un valor (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K)
-y una pinta (♥, ♦, ♣, ♠).
+un valor (2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A)
+y un palo (♥, ♦, ♣, ♠).
 
 En un programa,
 el valor puede ser representado como un número
 del 1 al 13,
-y la pinta como un string:
+y el palo como un string:
 ♥ → ``'C'``,
 ♦ → ``'D'``,
 ♣ → ``'T'`` y
@@ -16,7 +16,7 @@ y la pinta como un string:
 
 Una carta puede ser representada
 como una tupla de dos elementos:
-el valor y la pinta::
+el valor y el palo::
 
     carta1 = (5, 'T')
     carta2 = (10, 'D')
@@ -36,7 +36,7 @@ un conjunto de cinco tuplas::
 
     mano = {(1, 'P'), (1, 'C'), (1, 'T'), (13, 'D'), (12, 'P')}
 
-#. Un *full* es una mano en que tres cartas tienen un valor común,
+#. Un *full* es una mano en que tres cartas tienen el mismo valor,
    y las otras dos tienen otro valor común.
    Escriba una función que indique si la mano es un full::
 
@@ -47,7 +47,7 @@ un conjunto de cinco tuplas::
     >>> es_full(mano_2)
     False
 
-#. Un *color* es una mano en que todas las cartas tienen la misma pinta.
+#. Un *color* es una mano en que todas las cartas tienen el mismo palo.
    Escriba una función que indique si la mano es un color::
 
     >>> mano_1 = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
@@ -68,7 +68,22 @@ un conjunto de cinco tuplas::
     >>> es_escalera(mano_2)
     False
 
-#. Escriba el resto de las funciones
-   para identificar `el resto de las manos`_ del póker.
+#. Una *escalera de color* es una escalera en la que todas las cartas
+   tienen el mismo palo.
+   Escriba una función que indique si la mano es una escalera de color::
 
-   .. _el resto de las manos: http://www.poquer.com.es/ranking.html
+    >>> mano_1 = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
+    >>> mano_2 = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
+    >>> mano_3 = {(4, 'D'), (7, 'D'), (3, 'D'), (6, 'D'), (5, 'D')}
+    >>> es_escalera_de_color(mano_1)
+    False
+    >>> es_escalera_de_color(mano_2)
+    False
+    >>> es_escalera_de_color(mano_3)
+    True
+
+#. Escriba las funciones
+   para identificar las demás `manos del póker`_.
+
+   .. _manos del póker: http://www.poquer.com.es/ranking.html
+
