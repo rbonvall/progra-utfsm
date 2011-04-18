@@ -36,7 +36,7 @@ def alumno_mas_joven():
     return n + ' ' + a
 
 # version 2
-def alumno_mas_joven()
+def alumno_mas_joven():
     cumples = []
     for n, a, c in alumnos.values():
         cumples.append(c)
