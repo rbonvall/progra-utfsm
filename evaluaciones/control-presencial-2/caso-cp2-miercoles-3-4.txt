@@ -1,0 +1,4 @@
+>>> son_amigos(220, 284)
+True
+>>> son_amigos(66, 122)
+False

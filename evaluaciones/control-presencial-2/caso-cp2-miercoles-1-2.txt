@@ -1,0 +1,4 @@
+>>> es_oblongo(56)
+True
+>>> es_oblongo(16)
+False

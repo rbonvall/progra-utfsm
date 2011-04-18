@@ -1,0 +1,35 @@
+\documentclass[11pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\titulo}{Control presencial 2, jueves 1--2}
+\input{../../latex/definiciones.tex}
+%\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+  \thispagestyle{empty}
+
+  Un número es \emph{abundante}
+  cuando la suma de sus divisores
+  (sin incluir al mismo número)
+  es mayor que el número.
+
+  Por ejemplo, 12 es abundante, ya que:
+  \[
+     \underbrace{1 + 2 + 3 + 4 + 6}_{\text{divisores de 12}} > 12
+  \]
+
+  Implemente una función que indique si un número es abundante:
+
+  \lstinputlisting{caso-cp2-jueves-1-2.txt}
+
+\end{document}
+

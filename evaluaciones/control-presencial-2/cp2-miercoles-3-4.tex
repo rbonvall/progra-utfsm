@@ -1,0 +1,35 @@
+\documentclass[11pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\titulo}{Control presencial 2, miercoles 3--4}
+\input{../../latex/definiciones.tex}
+%\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+  \thispagestyle{empty}
+
+  Dos números \(a\) y \(b\) son \emph{amigos}
+  cuando \(a\) es la suma de los divisores de \(b\) (sin incluir \(b\))
+  y \(b\) es la suma de los divisores de \(a\) (sin incluir \(a\)).
+
+  Por ejemplo, 220 y 284 son amigos porque:
+  \begin{align*}
+    284 &= \underbrace{1 + 2 + 4 +  5 +  10 + 11 + 20 + 22 + 44 + 55 + 110}_{\text{divisores de 220}} \\
+    220 &= \underbrace{1 + 2 + 4 + 71 + 142}_{\text{divisores de 284}}
+  \end{align*}
+
+  Implemente una función que indique si dos números son amigos o no:
+
+  \lstinputlisting{caso-cp2-miercoles-3-4.txt}
+
+\end{document}
+

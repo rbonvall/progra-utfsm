@@ -1,0 +1,4 @@
+>>> es_abundante(12)
+True
+>>> es_abundante(15)
+False
