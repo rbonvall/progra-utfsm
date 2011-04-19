@@ -1,8 +1,8 @@
-Sumas por file y columna
+Sumas por fila y columna
 ------------------------
 
 El archivo ``datos1.txt``
-tiene tres números enteros en cada fila:
+tiene tres números enteros en cada línea:
 
 .. code-block:: none
 
@@ -12,14 +12,14 @@ tiene tres números enteros en cada fila:
     54 23 1
     65 2 84
 
-1. Escriba una función ``suma_lineas(nombre_archivo)``
+1. Escriba la función ``suma_lineas(nombre_archivo)``
    que entregue una lista con las sumas
    de todas las líneas del archivo::
 
     >>> suma_lineas('datos1.txt')
     [155, 78, 98, 78, 151]
 
-2. Escriba una función ``suma_columnas(nombre_archivo)``
+2. Escriba la función ``suma_columnas(nombre_archivo)``
    que entregue una lista con las sumas
    de las tres columnas del archivo::
 
