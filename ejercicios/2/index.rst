@@ -72,6 +72,7 @@ Archivos de texto
 .. toctree::
 
     sumas-por-fila-y-columna
+    reporte-notas
 
 Desafíos
 --------
@@ -112,7 +113,6 @@ Sin clasificar aún
     secuencia-adn
     consulta-medica
     inventario
-    reporte
     escalas
     mayores-que
     asistencia
