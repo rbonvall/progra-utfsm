@@ -10,7 +10,7 @@
 \begin{tikzpicture}[scale=.4]
 
   \def\gridsize{15}
-  \draw[gray] (-1, -1) grid (\gridsize, \gridsize);
+  \draw[gray] (0, 0) grid (\gridsize, \gridsize);
   \draw[thick,->] (-1, 0) -- (\gridsize, 0);
   \draw[thick,->] (0, -1) -- (0, \gridsize);
 
@@ -29,7 +29,7 @@
   \fill[red!50!black] (\Rx, \Ry) circle (.2cm);
   \node[red!50!black] at ({\Rx + \Rw/2}, {\Ry + \Rh/2}) {C};
 
-  \foreach\i in {0,...,{\gridsize}} {
+  \foreach\i in {0,...,\gridsize} {
       \node[gray] at (\i, -.5) {\i};
       \node[gray] at (-.5, \i) {\i};
   }
