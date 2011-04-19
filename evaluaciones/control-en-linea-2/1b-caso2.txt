@@ -1,0 +1,5 @@
+Equipo: `zxc`
+Ganados: `3`
+Empatados: `5`
+Perdidos: `4`
+zxc tiene 14 puntos

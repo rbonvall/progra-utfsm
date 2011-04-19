@@ -1,0 +1,4 @@
+Edad de Edelmiro: `1`
+Edad de Froilana: `2`
+Edad de Prisciliano: `2`
+Froilana y Prisciliano tienen la misma edad

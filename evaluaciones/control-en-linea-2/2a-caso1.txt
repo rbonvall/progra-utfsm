@@ -1,0 +1,4 @@
+Edad de Edelmiro: `31`
+Edad de Froilana: `39`
+Edad de Prisciliano: `17`
+Todos tienen edades distintas

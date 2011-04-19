@@ -1,0 +1,3 @@
+Pies: `4`
+Pulgadas: `11`
+La estatura es 149.86 cm
