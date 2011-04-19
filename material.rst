@@ -52,7 +52,9 @@ de acuerdo a la `planificación de la asignatura`_.
   `diapos <http://csrg.inf.utfsm.cl/~rbonvall/diapos/14-diapos.pdf>`_,
   `notas  <http://csrg.inf.utfsm.cl/~rbonvall/diapos/14-notas.pdf>`_,
   `soluciones a los problemas <http://csrg.inf.utfsm.cl/~rbonvall/diapos/14-programas.zip>`_.
-* Sesión 15: por subir.
+* Sesión 15:
+    no se pasará materia nueva,
+    sino que se continuará con los problemas de la sesión anterior.
 * Sesión 16: ejercicios propuestos por el profesor.
 * Sesión 17: ejercicios propuestos por el profesor.
 * Sesión 18: por subir.
