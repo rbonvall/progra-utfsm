@@ -1,0 +1,17 @@
+>>> tiene_siameses(51189)
+True
+>>> tiene_siameses(51819)
+False
+>>> tiene_siameses(654321)
+False
+>>> tiene_siameses(6001122)
+True
+>>> cuenta_siameses(1000)
+180
+>>> cuenta_siameses(142857)
+54668
+>>> cuenta_siameses(100)
+9
+>>> cuenta_siameses(200)
+28
+

@@ -1,0 +1,16 @@
+>>> suma_digitos(142857)
+27
+>>> suma_digitos(345)
+12
+>>> suma_digitos(99999)
+45
+>>> suma_digitos(0)
+0
+>>> reducir_a_digito(9788916)
+3
+>>> reducir_a_digito(771)
+6
+>>> reducir_a_digito(11111)
+5
+>>> reducir_a_digito(0)
+0

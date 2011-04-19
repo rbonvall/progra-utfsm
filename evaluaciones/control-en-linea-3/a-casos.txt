@@ -1,0 +1,17 @@
+>>> tiene_digito(2, 9885)
+False
+>>> tiene_digito(7, 1478)
+True
+>>> tiene_digito(0, 20123)
+True
+>>> tiene_digito(0, 9876)
+False
+>>> digitos_en_comun(513, 699)
+False
+>>> digitos_en_comun(513, 691)
+True
+>>> digitos_en_comun(1023, 4506)
+True
+>>> digitos_en_comun(2222, 3330)
+False
+

@@ -1,0 +1,16 @@
+>>> cuenta_digito(7, 17278)
+2
+>>> cuenta_digito(9, 421116)
+0
+>>> cuenta_digito(0, 10009)
+3
+>>> cuenta_digito(8, 188888)
+5
+>>> siguiente_con_digitos(7, 2, 581)
+677
+>>> siguiente_con_digitos(4, 3, 4494)
+4544
+>>> siguiente_con_digitos(1, 5, 0)
+11111
+>>> siguiente_con_digitos(0, 0, 9000)
+9001
