@@ -47,6 +47,7 @@ Diccionarios
 
     expresiones-diccionarios
     contar-letras
+    recorrido-diccionarios
 
 Uso de estructuras de datos
 ---------------------------
@@ -54,6 +55,8 @@ Uso de estructuras de datos
 
     expresiones-estructura-datos
     paises
+    asistencia
+    cumpleanos
     acordes
     campeonato
     compatibilidad-personas
@@ -73,6 +76,7 @@ Archivos de texto
 
     sumas-por-fila-y-columna
     reporte-notas
+    becas-puntajes
 
 Desafíos
 --------
@@ -115,18 +119,12 @@ Sin clasificar aún
     inventario
     escalas
     mayores-que
-    asistencia
     palabras-repetidas
     iguales-o-distintos
-    recorrido-diccionarios
-    subconjuntos
-    partidos
-    cumpleanos
     personas
     loto
     digitos-numero
     rut
-    becas-puntajes
     calcular-raiz
     automorficos-trimorficos
     binarios
