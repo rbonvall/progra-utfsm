@@ -21,6 +21,7 @@ Tuplas
     fechas
     supermercado
     traslape
+    circunferencias
 
 Listas
 ------
