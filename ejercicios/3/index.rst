@@ -7,4 +7,5 @@ Arreglos
 
     arreglos-simples
     cuadrado-magico
+    sudoku
 
