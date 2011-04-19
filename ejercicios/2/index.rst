@@ -77,6 +77,7 @@ Archivos de texto
     sumas-por-fila-y-columna
     reporte-notas
     becas-puntajes
+    loto
 
 Desafíos
 --------
@@ -122,7 +123,6 @@ Sin clasificar aún
     palabras-repetidas
     iguales-o-distintos
     personas
-    loto
     digitos-numero
     rut
     calcular-raiz
