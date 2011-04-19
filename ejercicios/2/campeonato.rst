@@ -28,36 +28,33 @@ y el resultado es otra tupla con los goles que hizo cada equipo::
 #. El equipo que gana un partido recibe tres puntos y el que pierde, cero.
    En caso de empate, ambos equipos reciben un punto.
 
-   Escriba la función ``calcular_puntos(equipo)``
+   Escriba la función ``calcular_puntos(equipo, resultados)``
    que entregue la cantidad de puntos obtenidos por un equipo::
 
-    >>> calcular_puntos('Chile')
+    >>> calcular_puntos('Chile', resultados)
     6
-    >>> calcular_puntos('Suiza')
+    >>> calcular_puntos('Suiza', resultados)
     4
 
 #. La *diferencia de goles* de un equipo
    es el total de goles que anotó un equipo
    menos el total de goles que recibió.
 
-   Escriba la función ``calcular_diferencia_de_goles(equipo)``
+   Escriba la función ``calcular_diferencia_de_goles(equipo, resultados)``
    que entregue la diferencia de goles de un equipo::
 
-    >>> calcular_diferencia_de_goles('Chile')
+    >>> calcular_diferencia_de_goles('Chile', resultados)
     1
-    >>> calcular_diferencia_de_goles('Honduras')
+    >>> calcular_diferencia_de_goles('Honduras', resultados)
     -4
 
-#. Al terminar el campeonato,
-   los equipos son ordenados por puntaje de mayor a menor.
-   Entre los equipos que iten
-   se ordenan
-   Si dos equipos tienen el mismo puntaje y la misma diferencia de gol,
-   gana
-
-   Escriba la función ``posiciones(resultados)``
+#. Escriba la función ``posiciones(resultados)``
    que reciba como parámetro el diccionario de resultados,
-   y retorne una lista con los equipos ordenados según la posición que obtuvieron::
+   y retorne una lista con los equipos ordenados por puntaje de mayor a menor.
+   Los equipos que tienen el mismo puntaje
+   deben ser ordenados por diferencia de goles de mayor a menor.
+   Si tienen los mismos puntos y la misma diferencia de goles,
+   deben ser ordenados por los goles anotados::
 
      >>> posiciones(resultados)
      ['Espana', 'Chile', 'Suiza', 'Honduras']
