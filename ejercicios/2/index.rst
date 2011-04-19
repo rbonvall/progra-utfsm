@@ -55,6 +55,7 @@ Uso de estructuras de datos
 
     expresiones-estructura-datos
     paises
+    signo-zodiacal
     asistencia
     cumpleanos
     acordes
