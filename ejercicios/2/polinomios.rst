@@ -1,6 +1,6 @@
 Polinomios
 ----------
-Un polinomio_ es una función matemática
+Un polinomio_ de grado `n` es una función matemática
 de la forma:
 
 .. math::
@@ -21,6 +21,8 @@ Algunos ejemplos de polinomios son:
 * `r(x) = -1 - 5x^3 + 3x^5`,
 * `s(x) = 5x^{40} + 2x^{80}`.
 
+Los grados de estos polinomios son, respectivamente, 2, 1, 5 y 80.
+
 Evaluar un polinomio
 significa reemplazar `x` por un valor
 y obtener el resultado.
@@ -29,7 +31,7 @@ en el valor `x = 3`,
 obtenemos el resultado:
 
 .. math::
-   
+
    p(3) = 1 + 2\cdot 3 + 3^2 = 16
 
 Un polinomio puede ser representado
