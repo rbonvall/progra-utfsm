@@ -34,6 +34,26 @@ Palabras especiales
     >>> cuenta_panvocalicas('los hipopotamos bailan al amanecer')
     0
 
+#. Escriba la función ``tiene_letras_en_orden(palabra)``
+   que indique si las letras de la palabra están en orden alfabético::
+
+    >>> tiene_letras_en_orden('himnos')
+    True
+    >>> tiene_letras_en_orden('abenuz')
+    True
+    >>> tiene_letras_en_orden('zapato')
+    False
+
+#. Escriba la función ``tiene_letras_dos_veces(palabra)``
+   que indique si cada letra de la palabra aparece exactamente dos veces::
+
+    >>> tiene_letras_dos_veces('aristocraticos')
+    True
+    >>> tiene_letras_dos_veces('quisquilloso')
+    True
+    >>> tiene_letras_dos_veces('aristocracia')
+    False
+
 #. Escriba la función ``palabras_repetidas(oracion)``
    que entregue una lista de las palabras que están repetidas en la oración::
 
