@@ -33,6 +33,7 @@ Listas
     mapear-filtrar
     producto-interno
     desviacion-estandar
+    iguales-o-distintos
 
 Conjuntos
 ---------
@@ -79,6 +80,8 @@ Archivos de texto
     reporte-notas
     becas-puntajes
     loto
+    consulta-medica
+    inventario
 
 Desafíos
 --------
@@ -109,20 +112,10 @@ Sin clasificar aún
     promedio-cuadrados
     trios-pitagoricos
     contrasenas
-    dividir-frases
-    eliminar-elementos-comienzan-con
-    formateando-fechas
-    formatear-strings
     laminas
-    largo-listas
     mayusculas-y-minusculas.rst
     secuencia-adn
-    consulta-medica
-    inventario
-    escalas
     mayores-que
-    palabras-repetidas
-    iguales-o-distintos
     personas
     digitos-numero
     rut
