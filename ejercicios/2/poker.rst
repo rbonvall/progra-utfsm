@@ -38,6 +38,9 @@ un conjunto de cinco tuplas::
 
 #. Un *full* es una mano en que tres cartas tienen el mismo valor,
    y las otras dos tienen otro valor común.
+   Por ejemplo, A♠ A♥ 6♣ A♦ 6♦ es un full (tres ases y dos seis),
+   pero 2♣ A♥ Q♥ A♦ 6♦ no.
+
    Escriba una función que indique si la mano es un full::
 
     >>> mano_1 = {(1, 'P'), (1, 'C'), (6, 'T'), (1, 'D'), (6, 'D')}
@@ -48,6 +51,9 @@ un conjunto de cinco tuplas::
     False
 
 #. Un *color* es una mano en que todas las cartas tienen el mismo palo.
+   Por ejemplo, 8♠ K♠ 4♠ 9♠ 2♠ es un color (todas las cartas son picas),
+   pero Q♣ A♥ 5♥ 2♥ 2♦ no lo es.
+
    Escriba una función que indique si la mano es un color::
 
     >>> mano_1 = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
@@ -57,8 +63,10 @@ un conjunto de cinco tuplas::
     >>> es_color(mano_2)
     False
 
-#. Una *escalera* es una mano en que las cartas tienen valores consecutivos
-   (por ejemplo: 5, 6, 7, 8 y 9).
+#. Una *escalera* es una mano en que las cartas tienen valores consecutivos.
+   Por ejemplo, 4♠ 7♥ 3♥ 6♣ 5♣ es una escalera (tiene los valores 3, 4, 5, 6 y 7),
+   pero Q♣ 7♥ 3♥ Q♥ 5♣ no lo es.
+
    Escriba una función que indique si la mano es una escalera::
 
     >>> mano_1 = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
@@ -70,6 +78,9 @@ un conjunto de cinco tuplas::
 
 #. Una *escalera de color* es una escalera en la que todas las cartas
    tienen el mismo palo.
+   Por ejemplo, 4♦ 7♦ 3♦ 6♦ 5♦ es una escalera de color
+   (son sólo diamantes, y los valores 3, 4, 5, 6 y 7 son consecutivos).
+
    Escriba una función que indique si la mano es una escalera de color::
 
     >>> mano_1 = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
