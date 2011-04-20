@@ -43,15 +43,15 @@ un sudoku resuelto puede ser guardado en un arreglo de 9 × 9::
    Un sudoku sin resolver puede ser representado como un arreglo
    donde las casillas vacías se marcan con el número cero::
 
-    >>> sr = array([[0, 2, 0, 5, 0, 1, 0, 9, 0],
-    ...             [8, 0, 0, 2, 0, 3, 0, 0, 6],
-    ...             [0, 3, 0, 0, 6, 0, 0, 7, 0],
-    ...             [0, 0, 1, 0, 0, 0, 6, 0, 0],
-    ...             [5, 4, 0, 0, 0, 0, 0, 1, 9],
-    ...             [0, 0, 2, 0, 0, 0, 7, 0, 0],
-    ...             [0, 9, 0, 0, 3, 0, 0, 8, 0],
-    ...             [2, 0, 0, 8, 0, 4, 0, 0, 7],
-    ...             [0, 1, 0, 9, 0, 7, 0, 6, 0]])
+    sr = array([[0, 2, 0, 5, 0, 1, 0, 9, 0],
+                [8, 0, 0, 2, 0, 3, 0, 0, 6],
+                [0, 3, 0, 0, 6, 0, 0, 7, 0],
+                [0, 0, 1, 0, 0, 0, 6, 0, 0],
+                [5, 4, 0, 0, 0, 0, 0, 1, 9],
+                [0, 0, 2, 0, 0, 0, 7, 0, 0],
+                [0, 9, 0, 0, 3, 0, 0, 8, 0],
+                [2, 0, 0, 8, 0, 4, 0, 0, 7],
+                [0, 1, 0, 9, 0, 7, 0, 6, 0]])
 
    Escriba una función ``resolver(sudoku)``
    que reciba un sudoku sin resolver
