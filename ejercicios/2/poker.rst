@@ -98,3 +98,32 @@ un conjunto de cinco tuplas::
 
    .. _manos del póker: http://www.poquer.com.es/ranking.html
 
+#. Escriba un programa que pida al usuario ingresar cinco cartas,
+   y le indique qué tipo de mano es:
+
+   .. testcase::
+
+     Carta 1: `5D`
+     Carta 2: `QT`
+     Carta 3: `QD`
+     Carta 4: `10P`
+     Carta 5: `5C`
+     Doble pareja
+
+   .. testcase::
+
+     Carta 1: `KP`
+     Carta 2: `KT`
+     Carta 3: `8T`
+     Carta 4: `KC`
+     Carta 5: `2P`
+     Trio
+
+   .. testcase::
+
+     Carta 1: `4P`
+     Carta 2: `4C`
+     Carta 3: `QD`
+     Carta 4: `4D`
+     Carta 5: `QT`
+     Full
