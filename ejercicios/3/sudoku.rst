@@ -15,8 +15,16 @@ y entre todos satisfacen las condiciones señaladas.
 En un programa,
 un sudoku resuelto puede ser guardado en un arreglo de 9 × 9::
 
-    >>> from numpy import array
-    >>> # falta poner sudoku resuelto
+    from numpy import array
+    sr = array([[4, 2, 6, 5, 7, 1, 3, 9, 8],
+                [8, 5, 7, 2, 9, 3, 1, 4, 6],
+                [1, 3, 9, 4, 6, 8, 2, 7, 5],
+                [9, 7, 1, 3, 8, 5, 6, 2, 4],
+                [5, 4, 3, 7, 2, 6, 8, 1, 9],
+                [6, 8, 2, 1, 4, 9, 7, 5, 3],
+                [7, 9, 4, 6, 3, 2, 5, 8, 1],
+                [2, 6, 5, 8, 1, 4, 9, 3, 7],
+                [3, 1, 8, 9, 5, 7, 4, 6, 2]])
 
 1. Escriba la función ``solucion_es_correcta(sudoku)``
    que reciba como parámetro un arreglo de 9 × 9
