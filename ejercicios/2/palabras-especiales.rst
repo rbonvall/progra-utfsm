@@ -63,3 +63,16 @@ Palabras especiales
     ['el', 'sobre']
     >>> palabras_repetidas('Ay, ahi no hay pan')
     []
+
+#. Un **pangrama** es un texto que tiene todas las letras del alfabeto,
+   de la *a* a la *z*
+   (por las limitaciones de Python 2.7, excluiremos la *ñ*).
+   Escriba la función ``es_pangrama(texto)``
+   que indique si el texto es o no un pangrama::
+
+    >>> es_pangrama('Sylvia wagt quick den Jux bei Pforzheim.')
+    True
+    >>> es_pangrama('Cada vez que trabajo, Felix me paga un whisky.')
+    True
+    >>> es_pangrama('Cada vez que trabajo, Luis me invita a una cerveza.')
+    False
