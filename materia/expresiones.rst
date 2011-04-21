@@ -226,7 +226,7 @@ Operaciones de texto
 Los operadores ``+`` y ``*`` tienen otras interpretaciones
 cuando sus operandos son strings.
 
-.. index:: concatenación, + (concatenación)
+.. index:: concatenación (strings), + (concatenación)
 
 ``+`` es el operador de **concatenación** de strings:
 pega dos strings uno después del otro::
@@ -237,7 +237,7 @@ pega dos strings uno después del otro::
 La concatenación no es una suma.
 Ni siquiera es una operación conmutativa.
 
-.. index:: repetición, + (repetición)
+.. index:: repetición (strings), + (repetición)
 
 ``*`` es el operador de **repetición** de strings.
 Recibe un operando string y otro entero,
