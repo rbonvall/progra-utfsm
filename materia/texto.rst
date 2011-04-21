@@ -1,6 +1,8 @@
 Procesamiento de texto
 ======================
 
+.. index:: procesamiento de texto
+
 [Materia incompleta aún].
 
 Los strings son inmutables,
@@ -9,6 +11,8 @@ Todos retornan un nuevo valor, que en algunos casos se trata de otro string.
 
 Reemplazar secciones del string
 -------------------------------
+.. index:: replace, reemplazar string
+
 El método ``s.replace(antes, despues)`` busca en el string ``s``
 todas las apariciones del texto ``antes`` y las reemplaza por ``despues``::
 
@@ -30,6 +34,8 @@ no modifica el string, sino que retorna uno nuevo::
 
 Separar y juntar strings
 ------------------------
+.. index:: split, separar string
+
 ``s.split()`` separa el strings en varios strings,
 usando los espacios en blanco como separador.
 El valor retornado es una lista de strings::
@@ -84,7 +90,9 @@ O usando la función ``map``, más simplemente::
     a, b, c = map(int, entrada.split())
     print 'El triangulo es', tipo_triangulo(a, b, c)
 
-``s.join(lista_de_strings)`` pega todos los strings de la lista,
+.. index:: join, unir strings
+
+``s.join(lista_de_strings)`` une todos los strings de la lista,
 usando al string ``s`` como «pegamento»::
 
     >>> valores = map(str, range(10))
@@ -100,6 +108,8 @@ usando al string ``s`` como «pegamento»::
 
 Mayúsculas y minúsculas
 -----------------------
+.. index:: isupper, islower
+
 ``s.isupper()`` y ``s.islower()``
 indican si el string está, respectivamente, en mayúsculas o minúsculas::
 
@@ -113,6 +123,8 @@ indican si el string está, respectivamente, en mayúsculas o minúsculas::
     >>> u.isupper(), u.islower()
     (True, False)
 
+.. index:: upper, lower
+
 ``s.upper()`` y ``s.lower()`` entregan el string ``s`` convertido,
 respectivamente, a mayúsculas y minúsculas::
 
@@ -122,6 +134,8 @@ respectivamente, a mayúsculas y minúsculas::
     'HOLA'
     >>> t.lower()
     'hola'
+
+.. index:: swapcase
 
 ``s.swapcase()`` cambia las minúsculas a mayúsculas, respectivamente,
 a mayúsculas y minúsculas::
@@ -137,6 +151,8 @@ con acentos y eñes::
 
 Revisar contenidos del string
 -----------------------------
+.. index:: startswith, endswith
+
 ``s.startswith(t)`` y ``s.endswith(t)`` indican si el string ``s``
 comienza y termina, respectivamente, con el string ``t``::
 
@@ -160,6 +176,8 @@ indica si un string está contenido dentro de otro::
 
 Alineación de strings
 ---------------------
+.. index:: ljust, rjust, center
+
 Los métodos ``s.ljust(n)``, ``s.rjust(n)`` y ``s.center(n)``
 rellenan el string con espacios para que su largo sea igual a ``n``,
 de modo que el contenido quede alineado, respectivamente,
@@ -195,6 +213,8 @@ Este programa imprime lo siguiente:
 
 Interpolación de strings
 ------------------------
+.. index:: interpolación de strings, format
+
 El método ``format`` permite usar un string como una plantilla
 que se puede completar con distintos valores dependiendo de la situación.
 
@@ -242,12 +262,4 @@ para asociarlo al valor::
     'Fulana estudia en la PUCV'
     >>> s.format(universidad='UPLA', nombre='Yayita')
     'Yayita estudia en la UPLA'
-
-
-
-
-
-
-
-
 
