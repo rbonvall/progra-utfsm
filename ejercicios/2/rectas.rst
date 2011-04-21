@@ -24,7 +24,7 @@ o en internet.
 #. Escriba una función ``punto_en_recta(p, r)``
    que indique si el punto ``p`` está en la recta ``r``::
 
-    >>> recta = (2, -1)
+    >>> recta = (2, -1)     # esta es la recta y = 2x - 1
     >>> punto_en_recta((2, 3), recta)
     True
     >>> punto_en_recta((0, -1), recta)
@@ -48,13 +48,11 @@ o en internet.
     >>> p1 = (-2, 4)
     >>> p2 = (4, 1)
     >>> r = recta_que_pasa_por(p1, p2)
-    >>> punto_en_recta(p1, r)
-    True
-    >>> punto_en_recta(p2, r)
+    >>> punto_en_recta(p1, r) and punto_en_recta(p2, r)
     True
 
 #. Escriba una función ``punto_de_interseccion(r1, r2)``
-   que entregue el punto donde las dos rectas se `intersectan`_::
+   que entregue el punto donde las dos rectas se intersectan_::
 
     >>> r1 = (2, 1)
     >>> r2 = (-1, 4)
