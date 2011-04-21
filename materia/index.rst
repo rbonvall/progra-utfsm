@@ -29,6 +29,7 @@ Contenidos del segundo certamen
     tuplas
     diccionarios
     conjuntos
+    texto
 
 Contenidos del tercer certamen
 ------------------------------
