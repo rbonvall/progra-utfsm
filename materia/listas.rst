@@ -13,6 +13,8 @@ Cómo crear listas
 -----------------
 Las dos maneras principales de crear una lista son:
 
+.. index:: []
+
 * usar una lista literal, con los valores entre corchetes::
 
     >>> primos = [2, 3, 5, 7, 11]
@@ -25,6 +27,8 @@ Las dos maneras principales de crear una lista son:
     >>> ['hola ' + 'mundo', 24 * 7, True or False]
     ['hola mundo', 168, True]
 
+.. index:: list
+
 * usar la función ``list`` aplicada sobre un iterable::
 
     >>> list('hola')
@@ -36,6 +40,7 @@ Las dos maneras principales de crear una lista son:
 
 Operaciones sobre listas
 ------------------------
+.. index:: len (listas)
 
 ``len(l)`` entrega el largo de la lista;
 es decir, cuántos elementos tiene::
@@ -47,6 +52,8 @@ es decir, cuántos elementos tiene::
     3
     >>> len([])
     0
+
+.. index:: índice (listas)
 
 ``l[i]`` entrega el ``i``-ésimo valor de la lista.
 El valor ``i`` se llama **índice** del valor.
@@ -65,6 +72,8 @@ Además, es posible modificar el valor del ``i``-ésimo elemento::
     >>> colores
     ['azul', 'negro', 'verde', 'amarillo']
 
+.. index:: error de índice, IndexError
+
 Si el índice ``i`` indica un elemento que no está en la lista,
 ocurre un **error de índice**::
 
@@ -80,6 +89,8 @@ los elementos se cuentan desde el final hacia atrás::
     'amarillo'
     >>> colores[-4]
     'azul'
+
+.. index:: append
 
 ``l.append(x)`` agrega el elemento ``x`` al final de la lista::
 
@@ -99,6 +110,8 @@ Es importante tener esta distinción clara,
 ya que hay operaciones que están implementadas como funciones
 y otras como métodos.
 
+.. index:: sum
+
 ``sum(x)`` entrega la suma de los valores de la lista::
 
     >>> sum([1, 2, 1, -1, -2])
@@ -106,10 +119,14 @@ y otras como métodos.
     >>> sum([])
     0
 
+.. index:: concatenación (listas)
+
 ``l1 + l2`` concatena las listas ``l1`` y ``l2``::
 
     >>> list('perro') + [2, 3, 4]
     ['p', 'e', 'r', 'r', 'o', 2, 3, 4]
+
+.. index:: repetición (listas)
 
 ``l * n`` repite ``n`` veces la lista ``l``::
 
@@ -117,6 +134,8 @@ y otras como métodos.
     [3.14, 6.28, 9.42, 3.14, 6.28, 9.42]
     >>> [3.14, 6.28, 9.42] * 0
     []
+
+.. index:: in (listas), not in (listas)
 
 Para saber si un elemento ``x`` está en la lista ``l``,
 se usa ``x in l``.
@@ -132,6 +151,8 @@ La versión negativa de ``in`` es ``not in``::
     >>> 15 not in r
     True
 
+.. index:: rebanado (listas)
+
 ``l[i:j]`` es el operador de rebanado,
 que entrega una nueva lista
 que tiene desde el ``i``-ésimo
@@ -142,12 +163,16 @@ de la lista ``l``::
     >>> x[2:4]
     [8.4, 3.1]
 
+.. index:: count (listas)
+
 ``l.count(x)`` cuenta cuántas veces está
 el elemento ``x`` en la lista::
 
     >>> letras = list('paralelepipedo')
     >>> letras.count('p')
     3
+
+.. index:: index (listas)
 
 ``l.index(x)`` entrega cuál es el índice del valor ``x``::
 
@@ -159,12 +184,16 @@ el elemento ``x`` en la lista::
       File "<stdin>", line 1, in <module>
     ValueError: 'fucsia' is not in list
 
+.. index:: remove
+
 ``l.remove(x)`` elimina el elemento ``x`` de la lista::
 
     >>> l = [7, 0, 3, 9, 8, 2, 4]
     >>> l.remove(2)
     >>> l
     [7, 0, 3, 9, 8, 4]
+
+.. index:: del (listas)
 
 ``del l[i]`` elimina el ``i``-ésimo elemento de la lista::
 
@@ -173,12 +202,16 @@ el elemento ``x`` en la lista::
     >>> l
     [7, 0, 9, 8, 2, 4]
 
+.. index:: reverse
+
 ``l.reverse()`` invierte la lista::
 
     >>> l = [7, 0, 3, 9, 8, 2, 4]
     >>> l.reverse()
     >>> l
     [4, 2, 8, 9, 3, 0, 7]
+
+.. index:: sort, ordenar lista
 
 ``l.sort()`` ordena la lista::
 
