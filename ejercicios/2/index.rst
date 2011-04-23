@@ -11,6 +11,7 @@ Funciones y módulos
     aprox-seno-coseno
     tabla-verdad
     modulo-listas
+    ruteo-funciones
 
 Tuplas
 ------
