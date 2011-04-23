@@ -29,6 +29,7 @@ Listas
 .. toctree::
 
     expresiones-listas
+    mayores-promedio
     estadisticos-localizacion
     polinomios
     mapear-filtrar
