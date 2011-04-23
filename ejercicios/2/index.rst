@@ -36,6 +36,7 @@ Listas
     producto-interno
     desviacion-estandar
     iguales-o-distintos
+    torneo-tenis
 
 Conjuntos
 ---------
