@@ -1,7 +1,7 @@
 Mayores que
 -----------
 
-Escriba una función ``mayores_que(x, valores)``
+Escriba la función ``mayores_que(x, valores)``
 que cuente cuántos valores en la lista 
 ``valores`` son mayores que ``x``::
 

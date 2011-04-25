@@ -1,0 +1,34 @@
+Mayores que el promedio
+=======================
+
+Escriba un programa que pregunte al usuario
+cuántos datos ingresará,
+a continuación le pida que ingrese los datos uno por uno,
+y finalmente entregue como salida
+cuántos de los datos ingresados
+son mayores que el promedio.
+
+.. testcase::
+
+    Cuantos datos ingresara? `5`
+    Dato 1: `6.5`
+    Dato 2: `2.1`
+    Dato 3: `2.0`
+    Dato 4: `2.2`
+    Dato 5: `6.1`
+    2 datos son mayores que el promedio
+
+.. testcase::
+
+    Cuantos datos ingresara? `10`
+    Dato 1: `9.8`
+    Dato 2: `9.8`
+    Dato 3: `9.8`
+    Dato 4: `9.8`
+    Dato 5: `1.1`
+    Dato 6: `9.8`
+    Dato 7: `9.8`
+    Dato 8: `9.8`
+    Dato 9: `9.8`
+    Dato 10: `9.8`
+    9 datos son mayores que el promedio

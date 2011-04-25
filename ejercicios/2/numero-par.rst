@@ -1,7 +1,7 @@
 Número par
 ----------
 
-Escriba una función ``par(x)``
+Escriba la función ``par(x)``
 que retorne ``True`` si ``x`` es par,
 y ``False`` si es impar::
 

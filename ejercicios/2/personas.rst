@@ -29,7 +29,7 @@ podemos ver los datos de la primera persona::
 
 * *Ejercicio 1*
 
- Escriba una función que imprima el nombre de todas las personas.
+ Escriba la función que imprima el nombre de todas las personas.
  Para eso, recorra la lista con un ``for``,
  obtenga el nombre de la persona
  e imprímalo usando ``print``.
@@ -51,7 +51,7 @@ podemos ver los datos de la primera persona::
 
 * *Ejercicio 2*
 
- Escriba una función que imprima la fecha de nacimiento de todas las personas::
+ Escriba la función que imprima la fecha de nacimiento de todas las personas::
  
      >>> fechas(personas)
      24 de agosto de 1990
@@ -84,7 +84,7 @@ podemos ver los datos de la primera persona::
 
 * *Ejercicio 4*
 
- Escriba una función que retorne una lista de personas
+ Escriba la función que retorne una lista de personas
  que tengan cumpleaños el mismo día que usted::
  
      >>> mi_cumple(personas)

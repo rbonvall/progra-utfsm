@@ -22,19 +22,19 @@ mensual de $60.000.
 Con esta información, se pide que desarrolle los
 siguientes ejercicios.
 
-#. Escriba una función para guardar el contenido del archivo
+#. Escriba la función para guardar el contenido del archivo
    en una lista llamada ``obtener_puntajes(archivo)``.
 
-#. Escriba una función para obtener dos listas,
+#. Escriba la función para obtener dos listas,
    una con los alumnos aceptados y otra con los alumnos rechazados,
    llamada ``obtener_listas(alumnos)``
 
-#. Escriba una función llamada ``calcular_becas(alumnos)``
+#. Escriba la función llamada ``calcular_becas(alumnos)``
    para poder determinar la cantidad mensual
    que deberá desembolsar el Instituto debido a las becas que
    otorgará.
 
-#. Escriba una función llamada ``puntaje_promedio(alumnos)``
+#. Escriba la función llamada ``puntaje_promedio(alumnos)``
    para saber el promedio de los puntajes
    de las personas aceptadas en la universidad.
 

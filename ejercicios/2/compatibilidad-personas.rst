@@ -42,7 +42,7 @@ significa que los signos son compatibles::
     # Significa que mujer capricornio
     # no es compatible con hombre libra.
 
-Escriba una función ``compatibles(p1, p2)``
+Escriba la función ``compatibles(p1, p2)``
 que indique si dos personas son compatibles o no.
 
 .. _usted puede descargar aquí: ../../_static/signos.py

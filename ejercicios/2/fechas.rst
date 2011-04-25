@@ -4,7 +4,7 @@ Fechas
 Una fecha puede ser representada como una tupla
 ``(anno, mes, dia)``.
 
-1. Escriba una función ``dia_siguiente(f)``
+1. Escriba la función ``dia_siguiente(f)``
    que reciba como parámetro una fecha ``f``
    y entegue cuál es la fecha siguiente::
 
@@ -23,7 +23,7 @@ Una fecha puede ser representada como una tupla
                  31, 30, 31, 31,
                  30, 31, 30, 31]
 
-2. Escriba una función ``dias_entre(f1, f2)``
+2. Escriba la función ``dias_entre(f1, f2)``
    que retorne la cantidad de días
    que han transcurrido entre las fechas ``f1`` y ``f2``::
 

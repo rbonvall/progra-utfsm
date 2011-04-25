@@ -11,6 +11,7 @@ Funciones y módulos
     aprox-seno-coseno
     tabla-verdad
     modulo-listas
+    ruteo-funciones
 
 Tuplas
 ------
@@ -28,12 +29,14 @@ Listas
 .. toctree::
 
     expresiones-listas
+    mayores-promedio
     estadisticos-localizacion
     polinomios
     mapear-filtrar
     producto-interno
     desviacion-estandar
     iguales-o-distintos
+    torneo-tenis
 
 Conjuntos
 ---------

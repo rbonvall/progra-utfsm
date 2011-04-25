@@ -61,7 +61,7 @@ entre 5 y 14).
    Las láminas están numeradas desde 1 hasta 640,
    y se compran en sobres de cinco láminas al azar.
    
-   Escriba una función ``nuevo_sobre()``
+   Escriba la función ``nuevo_sobre()``
    que entregue una lista con las láminas que vienen
    en un sobre recién comprado::
 
@@ -80,7 +80,7 @@ entre 5 y 14).
    Pepito va al quiosco y compra algunos sobres,
    y los agrega a su lista.
 
-   Escriba una función ``agregar_laminas(lista_laminas, m)``,
+   Escriba la función ``agregar_laminas(lista_laminas, m)``,
    que agregue las láminas de ``m`` nuevos sobres
    a la ``lista_laminas``::
 
@@ -99,7 +99,7 @@ entre 5 y 14).
    Note que la función no retorna nada.
    Sólo modifica la lista que recibe como parámetro.
 
-#. Escriba una función ``faltantes(lista_laminas)``
+#. Escriba la función ``faltantes(lista_laminas)``
    que entregue el conjunto de las láminas que faltan para completar el álbum::
 
     >>> laminas_pepito = []
@@ -112,7 +112,7 @@ entre 5 y 14).
    pero como hay muchas láminas repetidas y otras que no salen,
    no es suficiente para completar el álbum.
 
-#. Escriba una función ``cuenta(lista_laminas)``
+#. Escriba la función ``cuenta(lista_laminas)``
    que entregue un diccionario que asocie a cada lámina
    el número de veces que está en la lista de láminas::
 
@@ -125,7 +125,7 @@ entre 5 y 14).
    A Pepito le interesa obtener las láminas que Yayita tiene repetidas
    y que a él le faltan, y viceversa.
    
-   Escriba una función ``cuales_me_sirven(lista_quiere, lista_tiene)``
+   Escriba la función ``cuales_me_sirven(lista_quiere, lista_tiene)``
    que entregue el conjunto de las láminas que le faltan a ``lista_quiere``
    y que ``lista_tiene`` tiene repetidas::
 
@@ -147,7 +147,7 @@ entre 5 y 14).
    Pepito quiere saber cuánto va a gastar en láminas
    para completar el álbum.
 
-   Escriba una función ``costo_laminas()``
+   Escriba la función ``costo_laminas()``
    que vaya comprando sobres hasta completar las 640 láminas distintas,
    y que retorne cuál fue el gasto total::
 
@@ -168,7 +168,7 @@ entre 5 y 14).
    por las láminas que él tiene
    y que ella no.
 
-   Escriba una función ``tengo_y_tu_no(mis_laminas, tus_laminas)``
+   Escriba la función ``tengo_y_tu_no(mis_laminas, tus_laminas)``
    que entregue el conjunto de láminas que
    están en ``mis_laminas`` y no en ``tus_laminas``::
 

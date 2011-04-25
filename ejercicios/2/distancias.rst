@@ -17,7 +17,7 @@ esta información puede representarse
 mediante un arreglo de ciudades
 y un arreglo bidimensional de distancias.
 
-* Escriba una función que pregunte al usuario
+* Escriba la función que pregunte al usuario
   la cantidad de ciudades y los nombres de las ciudades:
 
   .. code-block:: none
@@ -31,7 +31,7 @@ y un arreglo bidimensional de distancias.
       San Fernando
       Temuco
 
-* Escriba una función que pregunte al usuario
+* Escriba la función que pregunte al usuario
   las distancias entre cada par de ciudades:
 
   .. code-block:: none
@@ -48,7 +48,7 @@ y un arreglo bidimensional de distancias.
   si se pregunta Arica-Santiago, no debe preguntarse Santiago-Arica.
   Tampoco debe preguntarse la distancia desde una ciudad a sí misma.
 
-* Escriba una función que pida al usuario
+* Escriba la función que pida al usuario
   que ingrese una lista de ciudades,
   que representan un itinerario por realizar:
 
@@ -62,7 +62,7 @@ y un arreglo bidimensional de distancias.
      San Fernando
      Arica
 
-* Escriba una función ``kms`` que entregue como resultado
+* Escriba la función ``kms`` que entregue como resultado
   los kilómetros que hay que recorrer para visitar las ciudades en orden.
   Por ejemplo, para el itinerario de arriba,
   debe entregar como resultado `3005`.

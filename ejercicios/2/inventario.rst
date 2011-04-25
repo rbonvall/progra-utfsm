@@ -21,7 +21,7 @@ el siguiente puede ser el contenido del archivo:
     321/Lápiz/12
     5413/Tomate/5
 
-1. Escriba una función ``existe_producto(codigo)``
+1. Escriba la función ``existe_producto(codigo)``
    que indique si existe el producto
    con el código dado::
 
@@ -34,7 +34,7 @@ el siguiente puede ser el contenido del archivo:
     >>> existe_producto(0)
     False
 
-2. Escriba una función ``por_reabastecer()``
+2. Escriba la función ``por_reabastecer()``
    que cree un nuevo archivo llamado ``por_reabastecer.txt``
    que contenga los datos de todos los productos
    de los que queden menos de 10 unidades.

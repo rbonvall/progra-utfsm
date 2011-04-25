@@ -4,6 +4,7 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows,decorations}
+\newcommand\sh{$^\sharp$}
 
 \begin{document}
 \begin{preview}
@@ -30,12 +31,12 @@
       -- cycle;
   }
 
-  \node at (0.5, .5) {do};  \node at (1, 5.3) {do$^\sharp$};
-  \node at (1.5, .5) {re};  \node at (2, 5.3) {re$^\sharp$};
+  \node at (0.5, .5) {do};  \node at (1, 5.3) {do\sh};
+  \node at (1.5, .5) {re};  \node at (2, 5.3) {re\sh};
   \node at (2.5, .5) {mi};
-  \node at (3.5, .5) {fa};  \node at (4, 5.3) {fa$^\sharp$};
-  \node at (4.5, .5) {sol}; \node at (5, 5.3) {sol$^\sharp$};
-  \node at (5.5, .5) {la};  \node at (6, 5.3) {la$^\sharp$};
+  \node at (3.5, .5) {fa};  \node at (4, 5.3) {fa\sh};
+  \node at (4.5, .5) {sol}; \node at (5, 5.3) {sol\sh};
+  \node at (5.5, .5) {la};  \node at (6, 5.3) {la\sh};
   \node at (6.5, .5) {si};
 
 \end{tikzpicture}

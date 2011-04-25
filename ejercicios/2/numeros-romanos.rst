@@ -36,7 +36,7 @@ a las siguientes reglas:
   del total acumulado. Así, `IV = 4`, `XL = 40`
   y `CM = 900`.
 
-Escriba una función ``romano_a_arabigo``
+Escriba la función ``romano_a_arabigo``
 que reciba un string con un número en notación romana,
 y entregue el equivalente en la notación arábiga::
 

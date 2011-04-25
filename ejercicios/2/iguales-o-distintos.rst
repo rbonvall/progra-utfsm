@@ -1,7 +1,7 @@
 Iguales o distintos
 -------------------
 
-Escriba una función ``todos_iguales(lista)``
+Escriba la función ``todos_iguales(lista)``
 que indique si todos los elementos de una lista son iguales::
 
     >>> todos_iguales([6, 6, 6])

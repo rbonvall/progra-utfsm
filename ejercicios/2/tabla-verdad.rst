@@ -4,7 +4,7 @@ Tabla de verdad
 Un **predicado lógico** es una función cuyos parámetros son booleanos
 y su resultado también es booleano.
 
-Escriba una función ``tabla_de_verdad(predicado)``
+Escriba la función ``tabla_de_verdad(predicado)``
 que reciba como parámetro un predicado lógico de tres parámetros
 e imprima la tabla de verdad del predicado.::
 

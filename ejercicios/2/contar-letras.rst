@@ -1,7 +1,7 @@
 Contar letras y palabras
 ------------------------
 
-#. Escriba una función ``contar_letras(oracion)``
+#. Escriba la función ``contar_letras(oracion)``
    que retorne un diccionario
    asociando a cada letra
    la cantidad de veces que aparece en la oracion::
@@ -14,7 +14,7 @@ Contar letras y palabras
    de la letra correspondiente.
    Los espacios deben ser ignorados.
 
-#. Escriba una función ``contar_vocales(oracion)``
+#. Escriba la función ``contar_vocales(oracion)``
    que retorne un diccionario
    asociando a cada vocal
    la cantidad de veces que aparece en la oracion.
@@ -25,7 +25,7 @@ Contar letras y palabras
     >>> contar_vocales('El elefante avanza hacia Asia')
     {'a': 8, 'e': 4, 'i': 2, 'o': 0, 'u': 0}
 
-#. Escriba una función ``contar_iniciales(oracion)``
+#. Escriba la función ``contar_iniciales(oracion)``
    que retorne un diccionario
    asociando a cada letra
    la cantidad de veces que aparece al principio de una palabra::
@@ -35,14 +35,14 @@ Contar letras y palabras
     >>> contar_iniciales('Varias vacas vuelan sobre Venezuela')
     {'s': 1', 'v': 4}
 
-#. Escriba una función ``obtener_largo_palabras(oracion)``
+#. Escriba la función ``obtener_largo_palabras(oracion)``
    que retorne un diccionario
    asociando a cada palabra su cantidad de letras::
 
     >>> obtener_largo_palabras('el gato y el pato son amigos')
     {'el': 2, 'son': 3, 'gato': 4, 'y': 1, 'amigos': 6, 'pato': 4}
 
-#. Escriba una función ``contar_palabras(oracion)``
+#. Escriba la función ``contar_palabras(oracion)``
    que retorne un diccionario
    asociando a cada palabra la cantidad de veces
    que aparece en la oración::
@@ -50,7 +50,7 @@ Contar letras y palabras
     >>> contar_palabras('El sobre esta sobre el pupitre')
     {'sobre': 2, 'pupitre': 1, 'el': 2, 'esta': 1}
 
-#. Escriba una función ``palabras_repetidas(oracion)``
+#. Escriba la función ``palabras_repetidas(oracion)``
    que retorne una lista con las palabras que están repetidas::
 
     >>> palabras_repetidas('El partido termino cero a cero')

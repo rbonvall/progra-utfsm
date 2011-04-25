@@ -21,7 +21,7 @@ Si no los recuerda,
 puede buscarlos en su libro de matemáticas favorito
 o en internet.
 
-#. Escriba una función ``punto_en_recta(p, r)``
+#. Escriba la función ``punto_en_recta(p, r)``
    que indique si el punto ``p`` está en la recta ``r``::
 
     >>> recta = (2, -1)     # esta es la recta y = 2x - 1
@@ -32,11 +32,11 @@ o en internet.
     >>> punto_en_recta((1, 2), recta)
     False
 
-#. Escriba una función ``son_paralelas(r1, r2)``
+#. Escriba la función ``son_paralelas(r1, r2)``
    que indique si las rectas ``r1`` y ``r2`` son paralelas,
    es decir, no se intersectan en ningún punto.
 
-#. Escriba una función ``recta_que_pasa_por(p1, p2)``
+#. Escriba la función ``recta_que_pasa_por(p1, p2)``
    que entregue la recta que pasa por los puntos ``p1`` y ``p2``::
 
     >>> recta_que_pasa_por((-2, 4), (4, 1))
@@ -51,7 +51,7 @@ o en internet.
     >>> punto_en_recta(p1, r) and punto_en_recta(p2, r)
     True
 
-#. Escriba una función ``punto_de_interseccion(r1, r2)``
+#. Escriba la función ``punto_de_interseccion(r1, r2)``
    que entregue el punto donde las dos rectas se intersectan_::
 
     >>> r1 = (2, 1)
