@@ -213,6 +213,11 @@ al recorrer la lista en un ciclo ``for``::
     for nombre, apellido, rol, carrera in alumnos:
         print nombre, 'estudia', carrera
 
+O, ya que el apellido y el rol no son usados::
+
+    for nombre, _, _, carrera in alumnos:
+        print nombre, 'estudia', carrera
+
 Es posible crear tuplas de largo uno
 dejando una coma a continuación del único valor::
 
