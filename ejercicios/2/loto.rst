@@ -46,7 +46,7 @@ También se puede hacer así::
    escriba una función ``contar_numero_en_cartones(n)``
    que cuente cuántos cartones tienen el número ``n``.
 
-#. Escriba una función ``hay_ganadores(numeros)``,
+#. Escriba la función ``hay_ganadores(numeros)``,
    cuyo parámetro ``numeros``
    es el conjunto de los seis números de un sorteo,
    que indique si alguien se ganó el Loto::
@@ -56,7 +56,7 @@ También se puede hacer así::
      >>> hay_ganadores({14, 21, 1, 36, 9, 17})
      False
 
-#. Escriba una función ``n_aciertos(numeros, n)``,
+#. Escriba la función ``n_aciertos(numeros, n)``,
    que indique cuántas personas tuvieron ``n`` aciertos,
    donde ``numeros`` es el conjunto de los seis números de un sorteo::
 

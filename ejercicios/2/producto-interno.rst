@@ -13,7 +13,7 @@ entonces el producto interno entre ``a`` y ``b`` es::
 
     (5 * 1) + (1 * -2) + (6 * 8)
 
-1. Escriba una función ``producto_interno(a, b)``
+1. Escriba la función ``producto_interno(a, b)``
    que entregue el producto interno de ``a`` y ``b``::
 
       >>> a = [7, 1, 4, 9, 8]
@@ -23,7 +23,7 @@ entonces el producto interno entre ``a`` y ``b`` es::
 
 2. Dos listas de números son **ortogonales**
    si su producto interno es cero.
-   Escriba una función ``son_ortogonales(a, b)``
+   Escriba la función ``son_ortogonales(a, b)``
    que indique si ``a`` y ``b`` son ortogonales::
 
      >>> son_ortogonales([2, 1], [-3, 6])

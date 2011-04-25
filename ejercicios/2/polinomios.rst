@@ -74,7 +74,7 @@ en un programa::
      >>> sumar_polinomios(p, r)
      [0, 2, 1, -5, 0, 3]
 
-#. Escriba una función ``derivar_polinomio(p)``
+#. Escriba la función ``derivar_polinomio(p)``
    que entregue la `derivada de un polinomio`_::
 
      >>> derivar_polinomio(r)

@@ -88,7 +88,7 @@ El archivo se ve así:
 Note que las fechas están ordenadas de menos a más reciente,
 ya que las nuevas líneas siempre se van agregando al final.
 
-1. Escriba una función ``costo_total_paciente(rut)``
+1. Escriba la función ``costo_total_paciente(rut)``
    que entregue el costo total de las atenciones
    del paciente con el rut dado::
 
@@ -97,7 +97,7 @@ ya que las nuevas líneas siempre se van agregando al final.
     >>> costo_total_paciente('14350739-4')
     0
 
-2. Escriba una función ``pacientes_dia(dia, mes, ano)``
+2. Escriba la función ``pacientes_dia(dia, mes, ano)``
    que entregue una lista con los nombres de los pacientes
    que se atendieron el día señalado::
 
@@ -106,7 +106,7 @@ ya que las nuevas líneas siempre se van agregando al final.
     >>> pacientes_dia(23, 6, 2010)
     []
 
-3. Escriba una función ``separar_pacientes()``
+3. Escriba la función ``separar_pacientes()``
    que construya dos nuevos archivos:
 
    * ``jovenes.txt``, con los datos de los pacientes menores de 30 años;

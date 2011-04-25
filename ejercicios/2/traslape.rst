@@ -18,7 +18,7 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
     # el rectangulo de la figura
     rectangulo = (3, 2, 5, 6)
 
-#. Escriba una función ``ingresar_rectangulo()``
+#. Escriba la función ``ingresar_rectangulo()``
    que pida al usuario ingresar los datos de un rectángulo,
    y retorne la tupla con los datos ingresados.
    La función no tiene parámetros.
@@ -34,7 +34,7 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
 
    Con esta entrada, la función retornaría la tupla ``(3, 2, 5, 6)``.
 
-#. Escriba una función ``se_traslapan(r1, r2)``
+#. Escriba la función ``se_traslapan(r1, r2)``
    que reciba como parámetros dos rectángulos ``r1`` y ``r2``,
    y entregue como resultado si los rectángulos
    se traslapan o no.
@@ -98,7 +98,7 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
        El rectangulo 4 se traslapa con el rectangulo 1
        El rectangulo 4 se traslapa con el rectangulo 3
 
-#. Escriba una función ``contar_regiones_continuas(rectangulos)``
+#. Escriba la función ``contar_regiones_continuas(rectangulos)``
    que reciba como parámetro una lista de rectángulos,
    y retorne la cantidad de regiones continuas formadas
    por rectángulos traslapados.

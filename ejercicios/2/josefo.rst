@@ -13,7 +13,7 @@ el sobreviviente es la persona 10:
 
 .. _problema de Josefo: http://es.wikipedia.org/wiki/Problema_de_Flavio_Josefo
 
-Escriba una función que reciba los parámetros ``m`` y ``n``,
+Escriba la función que reciba los parámetros ``m`` y ``n``,
 y entregue como resultado quién es el sobreviviente::
 
     >>> sobreviviente(12, 3)

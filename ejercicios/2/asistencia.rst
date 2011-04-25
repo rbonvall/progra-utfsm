@@ -24,14 +24,14 @@ En un programa, esta informacion puede ser representada usando listas::
     ...  [True, True, True, False, True,  True,  True ]]
     >>>
 
-#. Escriba una función ``total_por_alumno(asistencia)``
+#. Escriba la función ``total_por_alumno(asistencia)``
    que entregue una lista con el número de clases
    asistidas por cada alumno::
 
     >>> total_por_alumno(asistencia)
     [3, 5, 7, 6]
 
-#. Escriba una función ``alumno_estrella(asistencia)``
+#. Escriba la función ``alumno_estrella(asistencia)``
    que indique qué alumno asistió más a clases::
 
     >>> alumno_estrella(asistencia)

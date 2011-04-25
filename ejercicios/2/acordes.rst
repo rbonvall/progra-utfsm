@@ -54,7 +54,7 @@ asociados a las separaciones entre notas consecutivas del acorde::
         '7': (4, 3, 3),
     }
 
-Escriba una función  ``acorde(nota, tipo)``
+Escriba la función  ``acorde(nota, tipo)``
 que entegue una lista de las notas del acorde en el orden correcto::
 
     >>> acorde('la', 'mayor')

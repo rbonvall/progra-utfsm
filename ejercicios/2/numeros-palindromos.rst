@@ -1,7 +1,7 @@
 Números palíndromos
 ===================
 
-Escriba una función ``invertir_digitos(n)``
+Escriba la función ``invertir_digitos(n)``
 que reciba un número entero ``n``
 y entregue como resultado
 el número ``n`` con los dígitos en el orden inverso::

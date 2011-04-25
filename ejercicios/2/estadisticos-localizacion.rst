@@ -7,7 +7,7 @@ La **media aritmética** (o promedio) de un conjunto de datos
 es la suma de los valores dividida por
 la cantidad de datos.
 
-Escriba una función ``media_aritmetica(datos)``,
+Escriba la función ``media_aritmetica(datos)``,
 donde ``datos`` es una lista de números,
 que entregue la media aritmética de los datos::
 
@@ -29,7 +29,7 @@ multiplicada por la cantidad de datos:
       \frac{1}{x_n} +
     }
 
-Escriba una función ``media_armonica(datos)``,
+Escriba la función ``media_armonica(datos)``,
 que entregue la media armónica de los datos::
 
     >>> media_armonica([6, 1, 4, 8])
@@ -51,7 +51,7 @@ la mediana es definida de la siguiente manera:
   la mediana es el promedio de los dos valores que quedan al centro
   al ordenar los datos de menor a mayor.
 
-Escriba una función ``mediana(datos)``,
+Escriba la función ``mediana(datos)``,
 que entregue la mediana de los datos::
 
     >>> mediana([5.0, 1.4, 3.2])
@@ -72,7 +72,7 @@ Moda
 La **moda** de un conjunto de datos
 es el valor que más se repite.
 
-Escriba una función ``modas(datos)``,
+Escriba la función ``modas(datos)``,
 donde ``datos`` es una lista,
 que entregue una lista con las modas de los datos::
 
