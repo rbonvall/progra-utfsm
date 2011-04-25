@@ -18,7 +18,7 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
     # el rectangulo de la figura
     rectangulo = (3, 2, 5, 6)
 
-1. Escriba una función ``ingresar_rectangulo()``
+#. Escriba una función ``ingresar_rectangulo()``
    que pida al usuario ingresar los datos de un rectángulo,
    y retorne la tupla con los datos ingresados.
    La función no tiene parámetros.
@@ -34,7 +34,7 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
 
    Con esta entrada, la función retornaría la tupla ``(3, 2, 5, 6)``.
 
-2. Escriba una función ``se_traslapan(r1, r2)``
+#. Escriba una función ``se_traslapan(r1, r2)``
    que reciba como parámetros dos rectángulos ``r1`` y ``r2``,
    y entregue como resultado si los rectángulos
    se traslapan o no.
@@ -58,8 +58,7 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
       >>> se_traslapan(a, c)
       False
 
-
-3. Escriba un programa
+#. Escriba un programa
    que pida al usuario ingresar varios rectángulos,
    y termine cuando se ingrese uno que se traslape
    con alguno de los ingresados anteriormente.
@@ -99,8 +98,39 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
        El rectangulo 4 se traslapa con el rectangulo 1
        El rectangulo 4 se traslapa con el rectangulo 3
 
+#. Escriba una función ``contar_regiones_continuas(rectangulos)``
+   que reciba como parámetro una lista de rectángulos,
+   y retorne la cantidad de regiones continuas formadas
+   por rectángulos traslapados.
 
+   Por ejemplo,
+   en el siguiente diagrama hay 15 rectángulos
+   que forman 6 regiones continuas de rectángulos traslapados:
 
+   .. image:: ../../diagramas/rect3.png
 
+   Los rectángulos de la figura son los siguientes::
 
+    rs = [
+        ( 4,  2, 9, 3),
+        (14, 10, 5, 1),
+        (14, 17, 3, 2),
+        (13,  7, 2, 2),
+        ( 8, 16, 4, 3),
+        (13, 14, 2, 4),
+        ( 1,  8, 8, 5),
+        ( 1,  1, 6, 4),
+        (16, 14, 3, 4),
+        (12,  6, 4, 6),
+        ( 7,  6, 3, 6),
+        ( 5, 15, 4, 3),
+        (14, 13, 3, 2),
+        (15,  3, 5, 4),
+        ( 2, 16, 3, 3),
+    ]
+
+   Puede usar esta lista para probar su función::
+
+     >>> contar_regiones_continuas(rs)
+     6
 
