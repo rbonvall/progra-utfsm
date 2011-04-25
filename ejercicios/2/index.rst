@@ -59,6 +59,7 @@ Uso de estructuras de datos
     signo-zodiacal
     asistencia
     cumpleanos
+    conjugador
     acordes
     campeonato
     compatibilidad-personas
