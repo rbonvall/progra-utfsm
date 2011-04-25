@@ -9,6 +9,55 @@ Los strings son inmutables,
 por lo que ninguno de sus métodos modifica el string.
 Todos retornan un nuevo valor, que en algunos casos se trata de otro string.
 
+Saltos de línea
+---------------
+.. index:: salto de línea
+
+Un string puede contener caracteres de **salto de línea**,
+que tienen el efecto equivalente al de presionar la tecla Enter.
+El caracter de salto de línea se representa con ``\n``::
+
+    >>> a = 'piano\nviolin\noboe'
+    >>> print a
+    piano
+    violin
+    oboe
+
+Los saltos de línea sólo son visibles al imprimir el string
+mediante la sentencia ``print``.
+Si uno quiere ver el valor del string en la consola,
+el salto de línea aparecerá representado como ``\n``::
+
+    >>> a
+    'piano\nviolin\noboe'
+    >>> print a
+    piano
+    violin
+    oboe
+
+Aunque dentro del string se representa como una secuencia de dos símbolos,
+el salto de línea es un único caracter::
+
+    >>> len('a\nb')
+    3
+
+.. index:: \
+
+En general,
+hay varios caracteres especiales que se representan
+comenzando con una barra invertida (``\``).
+Experimente, y determine qué significan los caracteres especiales
+``\t`` y ``\b``::
+
+    print 'abcde\tefg\thi\tjklm'
+    print 'abcde\befg\bhi\bjklm'
+
+Para incluir una barra invertida dentro de un string,
+hay que hacerlo con ``\\``::
+
+    >>> print 'c:\\>'
+    c:\>
+
 Reemplazar secciones del string
 -------------------------------
 .. index:: replace, reemplazar string
