@@ -30,6 +30,7 @@ Contenidos del segundo certamen
     diccionarios
     conjuntos
     texto
+    archivos
 
 Contenidos del tercer certamen
 ------------------------------
