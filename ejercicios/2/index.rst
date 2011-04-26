@@ -75,6 +75,7 @@ Procesamiento de texto
 
     telegrafo
     palabras-especiales
+    vocales-y-consonantes
 
 Archivos de texto
 -----------------
