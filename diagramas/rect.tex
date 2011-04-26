@@ -20,8 +20,8 @@
   \draw[blue, thick, fill=blue!30, opacity=.8] (\Rx, \Ry) rectangle ++(\Rw, \Rh);
   \fill[blue] (\Rx, \Ry) circle (.2cm);
   \foreach\i in {0,...,{\gridsize}} {
-      \node[gray] at (\i, -.5) {\i};
-      \node[gray] at (-.5, \i) {\i};
+      \node[gray, anchor=north] at (\i, -.1) {\i};
+      \node[gray, anchor=east] at (-.1, \i) {\i};
   }
   \node[anchor=east] at (\Rx, \Ry) {\((x, y)\)};
   \draw[|<->|, thick] (\Rx + \Rw + 0.5, \Ry) -- node[fill=white] {\(h\)} ++(0, \Rh);

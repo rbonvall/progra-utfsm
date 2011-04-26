@@ -25,8 +25,8 @@
   \drawrectangle{4}{2}{9}{3}{red!60!black}{C}
 
   \foreach\i in {0,...,\gridsize} {
-      \node[gray] at (\i, -.5) {\i};
-      \node[gray] at (-.5, \i) {\i};
+      \node[gray, anchor=north] at (\i, -.1) {\i};
+      \node[gray, anchor=east] at (-.1, \i) {\i};
   }
 
 \end{tikzpicture}
