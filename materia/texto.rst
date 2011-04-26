@@ -57,6 +57,10 @@ hay que hacerlo con ``\\``::
 
     >>> print 'c:\\>'
     c:\>
+    >>> print '\\o/  o\n |  /|\\\n/ \\ / \\'
+    \o/  o
+     |  /|\
+    / \ / \
 
 Reemplazar secciones del string
 -------------------------------
