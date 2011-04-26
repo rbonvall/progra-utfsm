@@ -170,38 +170,82 @@ Lo importante es comprender
 que los archivos son leídos línea por línea
 usando el ciclo ``for``.
 
-.. Escritura de archivos
-.. ---------------------
-.. Para escribir datos en un archivo,
-.. hay que abrirlo de la siguiente manera::
-.. 
-..     archivo = open(nombre, 'w')
-.. 
-.. El segundo parámetro indica el uso que se le dará al archivo.
-.. ``'w'`` significa "escribir" (*write* en inglés).
-.. 
-.. Una vez abierto el archivo,
-.. se puede escribir una línea de texto en él
-.. usando la función ``print``,
-.. indicando el archivo como un parámetro especial
-.. llamado ``file`` ("archivo" en inglés).
-.. 
-.. Por ejemplo,
-.. este programa crea el archivo
-.. usado en el ejemplo anterior::
-.. 
-..     a = open('himno.txt', 'w')
-..     print('Puro Chile', file=a)
-..     print('es tu cielo azulado', file=a)
-..     print('puras brisas', file=a)
-..     print('te cruzan también.', file=a)
-..     a.close()
-.. 
-.. Cada llamada a ``print`` agrega automáticamente
-.. el salto de línea al final.
-.. 
-.. Archivos de registros
-.. ---------------------
+Escritura en archivos
+---------------------
+Los ejemplos anteriores suponen que el archivo por leer existe,
+y está listo para ser abierto y leído.
+Ahora veremos cómo crear los archivos y cómo escribir datos en ellos,
+para que otro programa después pueda abrirlos y leerlos.
+
+Uno puede crear un archivo vacío
+abriéndolo de la siguiente manera::
+
+    archivo = open(nombre, 'w')
+
+El segundo parámetro de la función ``open``
+indica el uso que se le dará al archivo.
+``'w'`` significa «escribir» (*write* en inglés).
+
+Si el archivo señalado no existe, entonces será creado.
+Si ya existe, entonces será sobreescrito.
+Hay que tener cuidado entonces,
+pues esta operación elimina los datos del archivo que existía previamente.
+
+Una vez abierto el archivo,
+uno puede escribir datos en él
+usando el método ``write``::
+
+    a = open('prueba.txt', 'w')
+    a.write('Hola ')
+    a.write('mundo.')
+    a.close()
+
+Una vez ejecutado este programa,
+el archivo ``prueba.txt`` será creado
+(o sobreescrito, si ya existía).
+Al abrirlo en el Bloc de Notas,
+veremos este contenido::
+
+    Hola mundo.
+
+Para escribir varias líneas en el archivo,
+es necesario agregar explícitamente los saltos de línea
+en cada string que sea escrito.
+Por ejemplo,
+para crear el archivo ``himno.txt`` que usamos más arriba,
+podemos hacerlo así::
+
+    a = open('himno.txt', 'w')
+    a.write('Puro Chile\n')
+    a.write('es tu cielo azulado\n')
+    a.write('puras brisas\n')
+    a.write('te cruzan también.\n')
+    a.close()
+
+Además del modo ``'w'`` (*write*), también existe el modo ``'a'`` (*append*),
+que permite escribir datos al final de un archivo existente.
+Por ejemplo, el siguiente programa abre el archivo ``prueba.txt``
+que creamos más arriba, y agrega más texto al final de él::
+
+    a = open('prueba.txt', 'a')
+    a.write('\n')
+    a.write('Chao ')
+    a.write('pescao.')
+    a.close()
+
+Si abrimos el archivo ``prueba.txt`` en el Bloc de Notas,
+veremos esto::
+
+    Hola mundo.
+
+    Chao pescao.
+
+De haber abierto el archivo en modo ``'w'`` en vez de ``'a'``,
+el contenido anterior (la frase ``Hola mundo``)
+se habría borrado.
+
+.. Archivos de valores separados
+.. -----------------------------
 .. Una manera de usar archivos
 .. es para almacenar una secuencia de filas
 .. compuestas por varios datos.
