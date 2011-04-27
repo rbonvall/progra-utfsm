@@ -31,12 +31,13 @@ Listas
 
     expresiones-listas
     mayores-que
+    desviacion-estandar
     mayores-promedio
     estadisticos-localizacion
     polinomios
     mapear-filtrar
     producto-interno
-    desviacion-estandar
+    ordenamiento
     iguales-o-distintos
     torneo-tenis
 
