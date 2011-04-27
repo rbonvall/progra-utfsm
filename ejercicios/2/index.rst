@@ -62,6 +62,7 @@ Uso de estructuras de datos
 
     expresiones-estructura-datos
     paises
+    trios-pitagoricos
     signo-zodiacal
     asistencia
     cumpleanos
