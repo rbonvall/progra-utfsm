@@ -68,9 +68,10 @@ Uso de estructuras de datos
     conjugador
     acordes
     campeonato
-    compatibilidad-personas
+    personas
     poker
     josefo
+    compatibilidad-personas
 
 Procesamiento de texto
 ----------------------
