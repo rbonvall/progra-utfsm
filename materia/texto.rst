@@ -3,11 +3,39 @@ Procesamiento de texto
 
 .. index:: procesamiento de texto
 
-[Materia incompleta aún].
+Hasta ahora, hemos visto cómo
+los tipos de datos básicos (strings, enteros, reales, booleanos)
+y las estructuras de datos permiten
+representar y manipular información compleja y abstracta en un programa.
 
-Los strings son inmutables,
-por lo que ninguno de sus métodos modifica el string.
-Todos retornan un nuevo valor, que en algunos casos se trata de otro string.
+Sin embargo, en muchos casos
+la información no suele estar disponible ya organizada
+en estructuras de datos convenientes de usar,
+sino en documentos de texto.
+
+Por ejemplo,
+las páginas webs son archivos de puro texto,
+que describen la estructura de un documento
+en un lenguaje llamado HTML.
+Usted puede ver el texto de una página web
+buscando una instrucción «Ver código fuente»
+(o algo parecido) en el navegador.
+A partir de este texto,
+el navegador extrae la información necesaria
+para reconstruir la página que finalmente usted ve.
+
+Un texto siempre es un string,
+que puede ser tan largo y complejo como se desee.
+El procesamiento de texto consiste en manipular strings,
+ya sea para extraer información del string,
+para convertir un texto en otro,
+o para codificar información en un string.
+
+En Python,
+el tipo ``str`` provee muchos métodos convenientes
+para hacer procesamiento de texto,
+además de las operaciones más simples que ya aprendimos
+(como ``s + t``, ``s[i]`` y ``s in t``).
 
 Saltos de línea
 ---------------
