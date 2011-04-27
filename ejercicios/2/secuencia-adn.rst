@@ -24,9 +24,6 @@ Considere la siguiente secuencia::
     gatgaccgcatgcgaagcctgcggaccatgtacaaaatgtgggatgcagaacaaaactcc
     gtagtcagcgtgtgtaccacgctccaaaaggcaagcatggaggctgccgcggtagcaagt
 
-
-Recuerde la sentencia ``in``::
-
     >>> esta_en_adn("ttt", secuencia)
     True
     >>> esta_en_adn("aaaaaa", secuencia)
