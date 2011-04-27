@@ -104,16 +104,11 @@ Sin clasificar aún
     adn
     ahorcado
     asignacion-salas
-    divisibles-nueve
-    divisibles-once
     gato
     horario-clases
-    lista-pares-impares
-    lista-simples
     listas-ordenadas
     maquinaria
     notas-certamenes
-    trios-pitagoricos
     contrasenas
     laminas
     mayusculas-y-minusculas.rst
@@ -122,11 +117,3 @@ Sin clasificar aún
     binarios
     numero-letras
     distancias
-..
-    matrices
-    edades
-    matriz
-    promedio-cuadrados
-    rut
-    automorficos-trimorficos
-    directorio-telefonico
