@@ -11,6 +11,7 @@ Funciones y módulos
     aprox-seno-coseno
     tabla-verdad
     modulo-listas
+    numeros-romanos
     ruteo-funciones
 
 Tuplas
@@ -29,6 +30,7 @@ Listas
 .. toctree::
 
     expresiones-listas
+    mayores-que
     mayores-promedio
     estadisticos-localizacion
     polinomios
@@ -85,20 +87,17 @@ Archivos de texto
     reporte-notas
     becas-puntajes
     loto
+    cuenta-caracteres
     consulta-medica
     inventario
-
-Desafíos
---------
-.. toctree::
-
-    dardos
-
+    donantes
+    mezcla-numeros
 
 Sin clasificar aún
 ------------------
 .. toctree::
 
+    dardos
     adn
     ahorcado
     asignacion-salas
@@ -110,27 +109,21 @@ Sin clasificar aún
     lista-simples
     listas-ordenadas
     maquinaria
-    matrices
-    matriz
     notas-certamenes
-    numeros-romanos
-    promedio-cuadrados
     trios-pitagoricos
     contrasenas
     laminas
     mayusculas-y-minusculas.rst
     secuencia-adn
-    mayores-que
-    personas
-    digitos-numero
-    rut
     calcular-raiz
-    automorficos-trimorficos
     binarios
-    cuenta-caracteres
     numero-letras
     distancias
-    donantes
-    mezcla-numeros
-    directorio-telefonico
+..
+    matrices
     edades
+    matriz
+    promedio-cuadrados
+    rut
+    automorficos-trimorficos
+    directorio-telefonico
