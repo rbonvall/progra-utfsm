@@ -73,7 +73,8 @@ el salto de línea es un único caracter::
 
 En general,
 hay varios caracteres especiales que se representan
-comenzando con una barra invertida (``\``).
+comenzando con una barra invertida (``\``)
+seguida de una letra.
 Experimente, y determine qué significan los caracteres especiales
 ``\t`` y ``\b``::
 
