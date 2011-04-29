@@ -244,139 +244,129 @@ De haber abierto el archivo en modo ``'w'`` en vez de ``'a'``,
 el contenido anterior (la frase ``Hola mundo``)
 se habría borrado.
 
-.. Archivos de valores separados
-.. -----------------------------
-.. Una manera de usar archivos
-.. es para almacenar una secuencia de filas
-.. compuestas por varios datos.
-.. A esto se le llama **archivo de registros**,
-.. y es similar a guardar una tabla de datos.
-.. 
-.. La manera de hacerlo es
-.. asociando cada fila de la tabla a una línea del archivo,
-.. y usando un símbolo delimitador para separar los datos.
-.. 
-.. Por ejemplo,
-.. supongamos que queremos guardar en un archivo
-.. los datos de esta tabla:
-.. 
-..     =========== =========== ======= ======= ======= =======
-..     Nombre      Apellido    Nota 1  Nota 2  Nota 3  Nota 4
-..     ----------- ----------- ------- ------- ------- -------
-..     Perico      Los Palotes 2,1     3,4     5,5     6,4
-..     Yayita      Vinagre     4,0     4,0     4,1     3,7
-..     Marcelo     Bielsa      6,1     6,7     7,0     3,0
-..     ...         ...         ...     ...     ...     ...
-..     =========== =========== ======= ======= ======= =======
-.. 
-.. Si usamos el símbolo ``:`` como delimitador,
-.. el archivo, que llamaremos ``alumnos.txt`` queda así::
-.. 
-..     Perico:Los Palotes:2.1:3.4:5.5:6.4
-..     Yayita:Vinagre:4.0:4.0:4.1:3.7
-..     Marcelo:Bielsa:6.1:6.7:7.0:3.0
-.. 
-.. Para leer los datos del archivo,
-.. hay que hacerlo línea por línea,
-.. tal como lo hacíamos antes.
-.. Al leer cada línea, obtenemos un string.
-.. Por ejemplo,
-.. al leer la primera línea,
-.. lo que tenemos es::
-.. 
-..     'Perico:Los Palotes:2.1:3.4:5.5:6.4\n'
-.. 
-.. Para poder usar los datos,
-.. hay que descomponer los elementos del string
-.. (usando ``.strip(delimitador)``)
-.. y convertirlos al tipo apropiado.
-.. La manera de leer el archivo ``alumnos.txt``
-.. es la siguiente::
-.. 
-..     archivo_alumnos = open('alumnos.txt')
-..     for linea in archivo_alumnos:
-..         linea = linea.strip()
-..         l = linea.split(':')
-..         nombre = l[0]
-..         apellido = l[1]
-..         nota1 = float(l[2])
-..         nota2 = float(l[3])
-..         nota3 = float(l[4])
-..         nota4 = float(l[5])
-.. 
-..         # hacer algo con los datos
-.. 
-..     archivo_alumnos.close()
-.. 
-.. Es lo mismo que hacíamos antes,
-.. pero con un poco más de burocracia:
-.. antes de usar los datos,
-.. hay que extraerlos de la línea leída,
-.. que es un string.
-.. 
-.. Una manera más corta de hacer lo mismo
-.. es ésta::
-.. 
-..     archivo_alumnos = open('alumnos.txt')
-..     for linea in archivo_alumnos:
-..         l = linea.strip().split(':')
-..         nombre, apellido = l[0:2]
-..         n1, n2, n3, n4 = map(float, l[2:6])
-.. 
-..         # hacer algo
-.. 
-..     archivo_alumnos.close()
-.. 
-.. (Recordar que ``l[i:j]`` es una rebanada de la lista ``l``
-.. desde el elemento ``i`` hasta el ``j``, sin incluir el último,
-.. y que ``map(f, lst)`` aplica la función ``f``
-.. a cada elemento de la lista ``lst``).
-.. 
-.. Por ejemplo,
-.. si queremos imprimir el promedio de cada alumno,
-.. se hace así::
-.. 
-..     archivo_alumnos = open('alumnos.txt')
-..     for linea in archivo_alumnos:
-..         l = linea.strip().split(':')
-..         nombre, apellido = l[0:2]
-..         n1, n2, n3, n4 = map(float, l[2:6])
-..         promedio = (n1 + n2 + n3 + n4) / 4
-..         print(nombre, 'obtuvo promedio', promedio)
-..     archivo_alumnos.close()
-.. 
-.. Si queremos escribir los datos en un archivo de registro,
-.. hay que crear manualmente la línea,
-.. convirtiendo los datos a strings
-.. y pegándolos con el delimitador.
-.. 
-.. Por ejemplo,
-.. si queremos leer los datos del archivo de alumnos,
-.. y crear un nuevo archivo ``promedios.txt``
-.. que tenga sólo los promedios,
-.. habría que hacerlo de la siguiente manera::
-.. 
-..     archivo_alumnos = open('alumnos.txt')
-..     archivo_promedios = open('promedios.txt', 'w')
-..     for linea in archivo_alumnos:
-..         # extraer los datos
-..         l = linea.strip().split(':')
-..         nombre, apellido = l[0:2]
-..         n1, n2, n3, n4 = map(float, l[2:6])
-.. 
-..         # calcular el promedio
-..         promedio = (n1 + n2 + n3 + n4) / 4
-.. 
-..         # crear la línea para escribirla
-..         # en el archivo de promedios
-..         linea = nombre + ':' + apellido + ':' + str(promedio)
-.. 
-..         # escribir la línea en el nuevo archivo
-..         print(linea, file=archivo_promedios)
-.. 
-..     archivo_alumnos.close()
-..     archivo_promedios.close()
-.. 
+Archivos de valores con separadores
+-----------------------------------
+Una manera usual de almacenar datos con estructura de tabla
+en un archivo es la siguiente:
+cada línea del archivo representa una fila de la tabla,
+y los datos de una fila se ponen separados
+por algún símbolo especial.
+
+Por ejemplo,
+supongamos que queremos guardar en un archivo
+los datos de esta tabla:
+
+=========== =========== ======= ======= ======= =======
+Nombre      Apellido    Nota 1  Nota 2  Nota 3  Nota 4
+=========== =========== ======= ======= ======= =======
+Perico      Los Palotes 90      75      38      65
+Yayita      Vinagre     39      49      58      55
+Fulana      De Tal      96      100     36      71
+=========== =========== ======= ======= ======= =======
+
+Si usamos el símbolo ``:`` como separador,
+el archivo, que llamaremos ``alumnos.txt``, debería quedar así::
+
+    Perico:Los Palotes:90:75:38:65
+    Yayita:Vinagre:39:49:58:55
+    Fulanita:De Tal:96:100:36:71
+
+El formato de estos archivos se suele llamar CSV_,
+que en inglés son las siglas de *comma-separated values*
+(significa «valores separados por comas»,
+aunque técnicamente el separador puede ser cualquier símbolo).
+A pesar del nombre especial que reciben,
+los archivos CSV son archivos de texto como cualquier otro,
+y se pueden tratar como tales.
+
+.. _CSV: http://en.wikipedia.org/wiki/CSV_(file_format)
+
+Los archivos de valores con separadores
+son muy fáciles de leer y escribir, y por esto son muy usados.
+Como ejemplo práctico,
+si usted desea hacer un programa que analice los datos
+de una hoja de cálculo Excel,
+puede guardar el archivo con el formato CSV directamente en el Excel,
+y luego abrirlo desde su programa escrito en Python.
+
+Para leer los datos de un archivo de valores con separadores,
+debe hacerlo línea por línea,
+eliminar el salto de línea usando el método ``strip``
+y luego extraer los valores de la línea usando el método ``split``.
+Por ejemplo,
+al leer la primera línea del archivo de más arriba
+obtendremos el siguiente string::
+
+    'Perico:Los Palotes:90:75:38:65\n'
+
+Para separar los seis valores,
+lo podemos hacer así::
+
+    >>> linea.strip().split(':')
+    ['Perico', 'Los Palotes', '90', '75', '38', '65']
+
+Como se trata de un archivo de texto,
+todos los valores son strings.
+Una manera de convertir los valores a sus tipos apropiados
+es hacerlo uno por uno::
+
+    valores = linea.strip().split(':')
+    nombre   = valores[0]
+    apellido = valores[1]
+    nota1 = int(valores[2])
+    nota2 = int(valores[3])
+    nota3 = int(valores[4])
+    nota4 = int(valores[5])
+
+Una manera más breve
+es usar las rebanadas y la función ``map``::
+
+    valores = linea.strip().split(':')
+    nombre, apellido = valores[0:2]
+    nota1, nota2, nota3, nota4 = map(int, valores[2:6])
+
+O podríamos dejar las notas en una lista,
+en vez de usar cuatro variables diferentes::
+
+    notas = map(int, valores[2:6])
+
+Por ejemplo,
+un programa para imprimir el promedio de todos los alumnos
+se puede escribir así::
+
+    archivo_alumnos = open('alumnos.txt')
+    for linea in archivo_alumnos:
+        valores = linea.strip().split(':')
+        nombre, apellido = valores[0:2]
+        notas = map(int, valores[2:6])
+        promedio = sum(notas) / 4.0
+        print '{0} obtuvo promedio {1}'.format(nombre, promedio)
+    archivo_alumnos.close()
+
+Para escribir los datos en un archivo,
+hay que hacer el proceso inverso:
+convertir todos los datos al tipo string,
+pegarlos en un único string,
+agregar el salto de línea al final
+y escribir la línea en el archivo.
+
+Si los datos de la línea ya están en una lista o una tupla,
+podemos convertirlos a string usando la función ``map``
+y pegarlos usando el método ``join``::
+
+    alumno = ('Perico', 'Los Palotes', 90, 75, 38, 65)
+    linea = ':'.join(map(str, alumno)) + '\n'
+    archivo.write(linea)
+
+Otra manera es armar el string parte por parte::
+
+    linea = '{0}:{1}:{2}:{3}:{4}:{5}\n'.format(nombre, apellido,
+                                               nota1, nota2, nota3, nota4)
+    archivo.write(linea)
+
+Como siempre, usted debe preferir la manera
+que le parezca más simple de entender.
+
 .. Tarea
 .. ~~~~~
 .. Para cada alumno en el archivo ``alumnos.txt``,
