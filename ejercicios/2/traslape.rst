@@ -98,7 +98,8 @@ esto se traduce en una tupla ``(x, y, w, h)`` de cuatro elementos::
        El rectangulo 4 se traslapa con el rectangulo 1
        El rectangulo 4 se traslapa con el rectangulo 3
 
-#. Escriba la función ``contar_regiones_continuas(rectangulos)``
+#. (¡Difícil!).
+   Escriba la función ``contar_regiones_continuas(rectangulos)``
    que reciba como parámetro una lista de rectángulos,
    y retorne la cantidad de regiones continuas formadas
    por rectángulos traslapados.
