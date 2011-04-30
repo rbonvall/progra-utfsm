@@ -43,16 +43,31 @@ un sudoku resuelto puede ser guardado en un arreglo de 9 × 9::
    Un sudoku sin resolver puede ser representado como un arreglo
    donde las casillas vacías se marcan con el número cero::
 
-    sr = array([[0, 2, 0, 5, 0, 1, 0, 9, 0],
-                [8, 0, 0, 2, 0, 3, 0, 0, 6],
-                [0, 3, 0, 0, 6, 0, 0, 7, 0],
-                [0, 0, 1, 0, 0, 0, 6, 0, 0],
-                [5, 4, 0, 0, 0, 0, 0, 1, 9],
-                [0, 0, 2, 0, 0, 0, 7, 0, 0],
-                [0, 9, 0, 0, 3, 0, 0, 8, 0],
-                [2, 0, 0, 8, 0, 4, 0, 0, 7],
-                [0, 1, 0, 9, 0, 7, 0, 6, 0]])
+    s = array([[0, 2, 0, 5, 0, 1, 0, 9, 0],
+               [8, 0, 0, 2, 0, 3, 0, 0, 6],
+               [0, 3, 0, 0, 6, 0, 0, 7, 0],
+               [0, 0, 1, 0, 0, 0, 6, 0, 0],
+               [5, 4, 0, 0, 0, 0, 0, 1, 9],
+               [0, 0, 2, 0, 0, 0, 7, 0, 0],
+               [0, 9, 0, 0, 3, 0, 0, 8, 0],
+               [2, 0, 0, 8, 0, 4, 0, 0, 7],
+               [0, 1, 0, 9, 0, 7, 0, 6, 0]])
 
    Escriba una función ``resolver(sudoku)``
    que reciba un sudoku sin resolver
-   y retorne el sudoku resuelto.
+   y retorne el sudoku resuelto::
+
+    >>> resolver(s)
+    array([[4, 2, 6, 5, 7, 1, 3, 9, 8],
+           [8, 5, 7, 2, 9, 3, 1, 4, 6],
+           [1, 3, 9, 4, 6, 8, 2, 7, 5],
+           [9, 7, 1, 3, 8, 5, 6, 2, 4],
+           [5, 4, 3, 7, 2, 6, 8, 1, 9],
+           [6, 8, 2, 1, 4, 9, 7, 5, 3],
+           [7, 9, 4, 6, 3, 2, 5, 8, 1],
+           [2, 6, 5, 8, 1, 4, 9, 3, 7],
+           [3, 1, 8, 9, 5, 7, 4, 6, 2]])
+
+   Sugerencia: en vez de intentar resolver el sudoku completo,
+   intente resolver sólo algunas de las casillas
+   (las más sencillas).

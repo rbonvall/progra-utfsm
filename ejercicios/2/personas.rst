@@ -8,8 +8,8 @@ que vamos a utilizar.
 .. _el módulo con los datos: ../../_static/personas.py
 
 Para usar el módulo
-hay que guardarlo en la misma carpeta
-que se usará desde PyScripter,
+hay que descargarlo en la misma carpeta
+en la que se guardará el programa
 e importar los datos de esta forma::
 
     from personas import *
@@ -19,7 +19,8 @@ que contiene tuplas que representan los datos de una persona.
 Cada tupla tiene tres valores: el nombre, el apellido y la fecha de nacimiento.
 
 El nombre y el apellido son strings,
-y la fecha de nacimiento es una tupla de tres valores: el día, el mes y el año.
+y la fecha de nacimiento es una tupla de tres valores:
+el día, el mes y el año.
 
 Por ejemplo,
 podemos ver los datos de la primera persona::
@@ -27,15 +28,13 @@ podemos ver los datos de la primera persona::
     >>> personas[0]
     ('Martín', 'Soto', (24, 8, 1990))
 
-* *Ejercicio 1*
+#. Escriba una función que imprima el nombre de todas las personas.
+   Para eso, recorra la lista con un ``for``,
+   obtenga el nombre de la persona
+   e imprímalo usando ``print``.
+   La función no tiene que retornar nada::
 
- Escriba la función que imprima el nombre de todas las personas.
- Para eso, recorra la lista con un ``for``,
- obtenga el nombre de la persona
- e imprímalo usando ``print``.
- La función no tiene que retornar nada::
- 
-     >>> nombres(personas)
+     >>> imprimir_nombres(personas)
      Martín
      Gabriel
      Humberto
@@ -49,11 +48,10 @@ podemos ver los datos de la primera persona::
      Rolando
      Ricardo
 
-* *Ejercicio 2*
+#. Escriba una función que imprima la fecha de nacimiento
+   de todas las personas::
 
- Escriba la función que imprima la fecha de nacimiento de todas las personas::
- 
-     >>> fechas(personas)
+     >>> imprimir_fechas(personas)
      24 de agosto de 1990
      2 de junio de 1974
      14 de noviembre de 1973
@@ -65,10 +63,10 @@ podemos ver los datos de la primera persona::
      17 de mayo de 1977
      4 de febrero de 1972
      29 de enero de 1976
- 
- Para hacerlo más fácil,
- construya un diccionario con los nombres de los meses::
- 
+
+   Para hacerlo más fácil,
+   construya un diccionario con los nombres de los meses::
+
      meses = {
          1: 'enero',
          2: 'febrero',
@@ -76,36 +74,20 @@ podemos ver los datos de la primera persona::
          12: 'diciembre',
      }
 
-* *Ejercicio 3*
+#. Escriba una función llamada ``cuantas_personas(personas)``
+   que retorne la cantidad de personas en la lista.
 
- Realice una función llamada *cuantas_personas(lista)*
- para determinar la cantidad de personas que hay
- en la lista de personas.
+#. Escriba una función que retorne la lista de las personas
+   que tienen cumpleaños el mismo día que usted.
+   Por ejemplo::
 
-* *Ejercicio 4*
-
- Escriba la función que retorne una lista de personas
- que tengan cumpleaños el mismo día que usted::
- 
      >>> mi_cumple(personas)
-     ['Jonathan Sepúlveda']
+     ['Jonathan Sepulveda']
 
-* *Ejercicio 5*
+#. Escriba una función llamada ``cumples_repetidos(personas)``
+   que pueda determinar las personas en la lista que
+   tienen su cumpleaños el mismo día.
 
- Realice una función *cumples_repetidos(lista)*
- que pueda determinar las personas en la lista que
- tienen su cumpleaños el mismo día.
-
-
-* *Ejercicio 6*
-
- Realice una función *nombre_mas_comun(lista)*
- que sea capaz de determinar el nombre que más
- se repite en la lista de personas.
-
-* *Ejercicio 7*
-
- Realice una función *menor_mayor(lista)*
- para poder determinar a la persona más vieja y más joven
- de la lista.
+#. Escriba una función llamada ``nombre_mas_comun(personas)``
+   que entregue el nombre que más se repite.
 

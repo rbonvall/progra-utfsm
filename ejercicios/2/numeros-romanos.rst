@@ -1,11 +1,11 @@
-Números Romanos
+Números romanos
 ---------------
 
-Los números del antiguo sistema romano
-de notación aún se utiliza para
+Los números romanos
+aún son utilizados para
 algunos propósitos.
 
-Los símbolos básicos comunes y sus
+Los símbolos básicos y sus
 equivalencias decimales son:
 
 +---+------+
@@ -29,16 +29,15 @@ a las siguientes reglas:
 
 * Si una letra está seguida inmediatamente
   por una de igual o menor valor, su valor se
-  suma al total acumulado. Así, `XX = 20`, 
-  `XV = 15` y `VI = 6`.
+  suma al total acumulado. Así, XX = 20, XV = 15 y VI = 6.
 * Si una letra está seguida inmediatamente
   por una de mayor valor, su valor se sustrae
-  del total acumulado. Así, `IV = 4`, `XL = 40`
-  y `CM = 900`.
+  del total acumulado. Así, IV = 4, XL = 40
+  y CM = 900.
 
 Escriba la función ``romano_a_arabigo``
 que reciba un string con un número en notación romana,
-y entregue el equivalente en la notación arábiga::
+y entregue el entero equivalente::
 
     >>> romano_a_arabigo('MCMXIV')
     1914

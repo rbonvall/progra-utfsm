@@ -11,6 +11,7 @@ Funciones y módulos
     aprox-seno-coseno
     tabla-verdad
     modulo-listas
+    numeros-romanos
     ruteo-funciones
 
 Tuplas
@@ -29,12 +30,14 @@ Listas
 .. toctree::
 
     expresiones-listas
+    mayores-que
+    desviacion-estandar
     mayores-promedio
     estadisticos-localizacion
     polinomios
     mapear-filtrar
     producto-interno
-    desviacion-estandar
+    ordenamiento
     iguales-o-distintos
     torneo-tenis
 
@@ -59,15 +62,17 @@ Uso de estructuras de datos
 
     expresiones-estructura-datos
     paises
+    trios-pitagoricos
     signo-zodiacal
     asistencia
     cumpleanos
     conjugador
     acordes
     campeonato
-    compatibilidad-personas
+    personas
     poker
     josefo
+    compatibilidad-personas
 
 Procesamiento de texto
 ----------------------
@@ -85,52 +90,30 @@ Archivos de texto
     reporte-notas
     becas-puntajes
     loto
+    cuenta-caracteres
     consulta-medica
     inventario
-
-Desafíos
---------
-.. toctree::
-
-    dardos
-
+    donantes
+    mezcla-numeros
 
 Sin clasificar aún
 ------------------
 .. toctree::
 
+    dardos
     adn
     ahorcado
     asignacion-salas
-    divisibles-nueve
-    divisibles-once
     gato
     horario-clases
-    lista-pares-impares
-    lista-simples
     listas-ordenadas
     maquinaria
-    matrices
-    matriz
     notas-certamenes
-    numeros-romanos
-    promedio-cuadrados
-    trios-pitagoricos
     contrasenas
     laminas
     mayusculas-y-minusculas.rst
     secuencia-adn
-    mayores-que
-    personas
-    digitos-numero
-    rut
     calcular-raiz
-    automorficos-trimorficos
     binarios
-    cuenta-caracteres
     numero-letras
     distancias
-    donantes
-    mezcla-numeros
-    directorio-telefonico
-    edades
