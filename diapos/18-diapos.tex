@@ -28,6 +28,113 @@
   \end{frame}
 
   \begin{frame}
+    \label{saltos-linea}
+    \frametitle{Saltos de línea}
+    \lstinputlisting{programas/saltos-de-linea.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{reemplazar}
+    \frametitle{Reemplazar secciones de un string}
+    \lstinputlisting{programas/replace.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{partir-string-palabras}
+    \frametitle{Partir un string por palabras}
+    \lstinputlisting{programas/split-1.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{partir-string-separador}
+    \frametitle{Partir un string con separador}
+    \lstinputlisting{programas/split-2.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{unir-strings}
+    \frametitle{Unir una secuencia de strings}
+    \lstinputlisting{programas/join-1.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{unir-valores}
+    \frametitle{Unir una secuencia de valores (no strings)}
+    \lstinputlisting{programas/join-2.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{interpolacion-posicion}
+    \frametitle{Interpolación de valores por posición}
+    \lstinputlisting{programas/format-1.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{interpolacion-nombre}
+    \frametitle{Interpolación de valores por nombre}
+    \lstinputlisting{programas/format-2.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{mayusculas-minusculas}
+    \frametitle{Mayúsculas y minúsculas}
+    \lstinputlisting{programas/mayusculas-minusculas.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-adn-enunciado}
+    \frametitle{Problema: ADN}
+    Una cadena de ADN es una secuencia
+    de bases nitrogenadas llamadas
+    adenina, citosina, timina y guanina. \\[2ex]
+
+    En un programa,
+    una cadena se representa como un string
+    de caracteres \li!'a'!, \li!'c'!, \li!'t'! y \li!'g'!. \\[2ex]
+
+    A cada cadena,
+    le corresponde una cadena complementaria,
+    que se obtiene intercambiando las adeninas con las timinas,
+    y las citosinas con las guaninas:
+
+    \lstinputlisting[linerange=1-2]{programas/cadena-adn.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-adn-aleatorio}
+    \frametitle{Problema: ADN---Ejercicio 1}
+    Escriba la función \li!cadena_al_azar(n)!
+    que retorne una cadena aleatoria de ADN
+    de largo \li!n!:
+    \lstinputlisting[linerange=1-4]{programas/caso-adn-cadena-al-azar.py}
+
+    Pista:
+    \lstinputlisting[linerange=6-10]{programas/caso-adn-cadena-al-azar.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-adn-complementaria}
+    \frametitle{Problema: ADN---Ejercicio 2}
+    Escriba la función \li!cadena_complementaria(c)!
+    que entregue la cadena complementaria de \li!c!:
+    \lstinputlisting{programas/caso-adn-cadena-complementaria.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-reporte-promedios}
+    \frametitle{Problema: reporte de promedios}
+    Escriba un programa que haga lo siguiente:
+    \lstinputlisting[language=testcase]{programas/caso-reporte-promedios.txt}
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-cuenta-palabras}
+    \frametitle{Problema: cuenta de palabras}
+    Escriba la función \li!contar_palabras(oracion)!,
+    que retorne un diccionario indicando cuántas veces
+    aparece cada palabra en la oración:
+    \footnotesize
+    \lstinputlisting{programas/caso-cuenta-oracion.py}
   \end{frame}
 
 \end{document}

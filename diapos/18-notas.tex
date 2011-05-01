@@ -29,10 +29,297 @@
 
   \section*{Objetivos de la clase}
   \begin{itemize}
-    \item Objetivos.
+    \item Enseñar algunas operaciones típicas
+      sobre strings.
+    \item Mostrar aplicaciones reales de estas operaciones.
   \end{itemize}
 
   \section*{Diapositivas}
+
+  No todas las operaciones sobre texto
+  serán vistas en la clase,
+  ya que son muchas y el tiempo es poco.
+  En las diapositivas sólo aparecen
+  las que serán de utilidad en materias futuras
+  (especialmente para archivos de texto).
+
+  Algunas operaciones más
+  están cubiertas en \href{http://progra.usm.cl/materia/texto.html}{la página de la materia}.
+
+  Para ver todos los métodos que tiene el tipo string,
+  puede ingresar \li!dir(str)! en la consola.
+
+  \diapo{saltos-linea}
+
+  Los saltos de línea deben ser tenidos en cuenta
+  al leer y escribir en archivos,
+  por lo que es necesario mencionarlos en esta clase.
+
+  Un \emph{salto de línea}
+  es un caracter que indica que el texto inmediatamente a continuación
+  debe ser impreso en una nueva línea.
+  Para que esto sea más fácil de entender para los estudiantes,
+  puede decir que es el equivalente a presionar la tecla Enter.
+
+  En Python, dentro de un string, el salto de línea se representa
+  como \li!\n!, al igual que en C y Java.
+
+  A pesar de que su representación en el string usa dos símbolos,
+  el salto de línea es un único caracter.
+  Enfatice esto,
+  usando el ejemplo de abajo en la diapositiva como evidencia.
+
+  Los saltos de línea sólo aparecen como tales
+  al imprimir el string usando la sentencia \li!print!.
+  Al mostrar el string en la consola,
+  aparecerá representado como \li!\n!.
+
+  Además del salto de línea,
+  dentro de un string pueden ir otros caracteres especiales,
+  como la tabulación (\li!\t!), el retroceso (\li!\b!)
+  y las comillas escapadas (\li!\'!, \li!\"!), entre otros.
+  Éstos no serán considerados parte de la materia del ramo.
+
+  \diapo{reemplazar}
+
+  El método \li!replace!
+  reemplaza las ocurrencias de un substring por otro.
+  Explique los ejemplos uno por uno.
+
+  Si bien la operación es fácil de entender,
+  hay que tener claro que no modifica el string original,
+  sino que retorna uno nuevo.
+
+  \diapo{partir-string-palabras}
+
+  El método \li!split! llamado sin argumentos
+  separa el string en una lista de strings,
+  partiéndolo en los espacios en blanco.
+
+  Un caso de uso típico
+  es obtener las palabras de una oracion: \li!palabras = oracion.split()!.
+
+  Otro caso de uso típico
+  es parsear varios datos ingresados como entrada en una sola línea
+  mediante una única llamada a \li!raw_input!:
+  \li!datos = entrada.split()!.
+  En este caso, suele ser necesario convertir los datos al tipo apropiado.
+
+  En la diapositiva,
+  además se muestra como separar una oración por letras en vez de palabras.
+  Para esto, basta con usar la función \li!list!.
+
+  El método \li!split! usa regiones de espacios para partir la oración,
+  no espacios individuales.
+  Esto significa que \li!'a    b       c'.split()!
+  es lo mismo que \li!'a b c'.split()!.
+
+  Mencione que el valor de retorno del método \li!split!
+  siempre es de tipo lista (\li!list!).
+
+  \diapo{partir-string-separador}
+
+  La otra manera de usar el método \li!split!
+  es pasar explícitamente cuál es la cadena usada como separador.
+
+  En el ejemplo de la diapositiva, a modo de comparación,
+  se muestra el mismo string separado por espacios en blanco,
+  por el caracter \li!'a'! y por el string \li!'ac'!.
+  Explique en detalle de dónde vienen los resultados de cada uno
+  de los ejemplos.
+
+  A diferencia del \li!split! sin argumento,
+  el string es partido en las apariciones individuales del separador,
+  no por regiones.
+  Esto significa que \li+'a::b:c'.split(':')+
+  \textbf{no} es lo mismo que \li+'a:b::::c'.split(':')+.
+
+  Note que si el separador aparece al principio o al final del string,
+  o si aparece dos veces sin nada entre medio,
+  aparecerá un string vacío en la lista de ítemes.
+  Esto se puede ver en el segundo ejemplo.
+
+  El caso de uso típico de esta forma del método \li!split!
+  es parsear datos de un archivo CSV (materia de la próxima clase).
+
+  \diapo{unir-strings}
+
+  La operación inversa del \li!split! es el \li!join!,
+  que crea un único string a partir de una lista de strings,
+  pegándolos con un separador dado.
+
+  Hay que recordar siempre
+  que el método \li!join! debe ser invocado sobre el string separador,
+  y no sobre los valores a pegar.
+  Esto se debe a que es un método de la clase \li!str!, no de \li!list!.
+
+  En los ejemplos de la diapositiva,
+  las palabras de la lista son pegadas
+  usando un espacio, usando el string vacío (útil para concatenar strings)
+  y un string con más de un caracter.
+
+  \diapo{unir-valores}
+
+  El método \li!join! recibe como parámetro una lista de strings.
+  Si es llamado con una lista de valores de otro tipo,
+  ocurrirá un \li!TypeError!.
+
+  Pegar varios valores en un string es un caso de uso frecuente,
+  por lo que hay que tener cuidado de no cometer este error.
+  La manera más simple de evitarlo
+  es convertir a string todos los elementos de la lista
+  usando la función \li!map!.
+
+  La función \li!map(f, l)!
+  aplica la función \li!f! a todos los elementos de la lista \li!l!.
+  No modifica la lista, sino que retorna una nueva:
+\begin{lstlisting}
+>>> map(abs, [-3, 2, -1, 0])
+[3, 2, 1, 0]
+>>> map(str, range(3))
+['0', '1', '2']
+\end{lstlisting}
+  Explique la función \li!map! mostrando un par de ejemplos en la consola.
+  Es realmente conveniente,
+  ya que evita la necesidad de crear un ciclo sólo para convertir los valores.
+
+  \diapo{interpolacion-posicion}
+
+  La interpolación consiste en usar un string como una plantilla,
+  en la que se rellenan los valores usando el método \li!format!.
+  Es equivalente en funcionalidad a la familia de funciones \li!printf! de C.
+
+  (El nombre «interpolación» no es muy usado en Python,
+  pero sí es común en otros lenguajes como Perl y PHP).
+
+  Los campos a rellenar se representan usando números entre llaves.
+  Cada número se refiere a uno de los parámetros que se debe pasar
+  al método \li!format!. Los campos pueden aparecer más de una vez,
+  y pueden estar en cualquier orden dentro del string:
+\begin{lstlisting}
+>>> '{2}{0}{1}{0}'.format(3, 'ch', 'l')
+'l3ch3'
+\end{lstlisting}
+
+  \diapo{interpolacion-nombre}
+
+  Además de indicar los campos por posición,
+  también es posible hacerlo por nombre.
+  En este caso,
+  los parámetros del método \li!format!
+  deben ser pasados explícitamente por nombre.
+
+  Como información al margen que no es necesario mencionar en clases:
+  dentro de las llaves de los campos
+  es posible especificar cómo debe ser mostrado el valor
+  usando algunos modificadores.
+  Por ejemplo, para mostrar el valor de \(\pi\)
+  alineado a la sexta columna a la derecha
+  y mostrando sólo dos decimales,
+  puede hacerse así:
+\begin{lstlisting}
+>>> '{0:>6.2f}'.format(3.14159)
+'  3.14'
+\end{lstlisting}
+
+  \diapo{mayusculas-minusculas}
+
+  Los métodos \li!upper!, \li!lower! y \li!swapcase!
+  sirven para convertir el string a mayúsculas, a minúsculas
+  y para cambiar entre unas y otras, respectivamente.
+
+  El caso de uso típico de estos métodos
+  es normalizar strings para que todas las palabras repetidas
+  aparezcan de la misma forma en un texto.
+
+  \diapo{problema-adn-enunciado}
+  \diapo{problema-adn-aleatorio}
+
+  (Resuelva los ejercicios al ritmo de sus alumnos.
+  No es grave que no alcance a resolverlos todos).
+
+  (Los ejercicios no aparecen resueltos en las diapositivas,
+  sino en los archivos adjuntos,
+  para que sea más fácil probarlos y mostrarlos en funcionamiento).
+
+  Lea el enunciado del ejercicio en voz alta.
+
+  El primer ejercicio es crear una función
+  que retorne una cadena aleatoria.
+  Como pista, se muestra cómo obtener una única base
+  (\li!'a'!, \li!'t'!, \li!'c'! o \li!'g'!)
+  al azar, usando la función \li!choice! del módulo \li!random!.
+
+  Procure que no cause confusión el hecho que la misma función
+  retorna resultados distintos al llamarla varias veces con el mismo parámetro.
+
+  La solución consiste en ir generando bases individuales,
+  e ir metiéndolas a una lista.
+  Como el resultado debe ser una cadena,
+  al final hay que pegarlas con el método \li!join!.
+
+  \diapo{problema-adn-complementaria}
+
+  Lea el enunciado en voz alta, y explique lo que hay que hacer.
+  Hay (por lo menos) dos estrategias para resolver este problema:
+  \begin{enumerate}
+    \item hacer el reemplazo usando el método \li!replace!, y
+    \item crear una lista con las bases de la cadena complementaria,
+      y al final pegarla con el método \li!join!.
+  \end{enumerate}
+
+  Espere que a los alumnos se les ocurra alguna de estas estrategias
+  e impleméntela junto con ellos.
+
+  La primera estrategia presenta una dificultad:
+  no basta con reemplazar \li!'a'! por \li!'t'! y \li!'t'! por \li!'a'!,
+  ya que si se hace así al final quedará sólo una de las letras.
+  Lo que hay que hacer es primero reemplazar una de las letras por un caracter neutral.
+  Intente que los alumnos descubran este problema por sí solos.
+
+  El archivo adjunto presenta varias implementaciones para la solución de este ejercicio.
+
+  \diapo{problema-reporte-promedios}
+
+  Explique el ejercicio usando el ejemplo como referencia.
+  El algoritmo a usar no tiene nada de nuevo,
+  pero hay que preocuparse de los detalles:
+  \begin{itemize}
+    \item las notas se ingresan en una única línea,
+      por lo que hay que parsear la entrada
+      usando \li!split! y luego convertir a un tipo numérico;
+    \item el programa pregunta las notas
+      usando el nombre (sin apellido) del alumno,
+      por lo que hay que partir el nombre completo con \li!split!
+      y quedarse con el primero de los valores;
+    \item los reportes se muestran al final,
+      por lo que hay que guardar los datos usando listas.
+  \end{itemize}
+
+  Los formatos de la entrada y la salida
+  son una excelente oportunidad para usar el método \li!format!.
+
+  En la solución adjunta,
+  se usa los modificadores de los campos
+  para mostrar sólo dos decimales del promedio final.
+
+  \diapo{problema-cuenta-palabras}
+
+  Lea el enunciado en voz alta.
+
+  El problema principal radica en deshacerse de los signos de puntuación
+  y en normalizar el string para que todas las palabras iguales
+  aparezcan de la misma forma, todo esto antes de partir la oración en palabras.
+
+  De ahí en adelante,
+  el problema se reduce al patrón de crear un diccionario de contadores,
+  que ya hemos presentado en clases anteriores.
+
+  Si le sobra tiempo,
+  puede preguntar a los alumnos cómo harían para crear un diccionario
+  que cuente las letras en lugar de las palabras.
+  (Hay que normalizar a minúsculas, deshacerse de los espacios en blanco
+  además de la puntuación, y no usar \li!split!).
 
 \end{document}
 
