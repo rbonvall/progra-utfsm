@@ -79,7 +79,13 @@ de acuerdo a la `planificación de la asignatura`_.
   sino que se continuará con los problemas de la sesión anterior.
 * Sesión 16: ejercicios propuestos por el profesor.
 * Sesión 17: ejercicios propuestos por el profesor.
-* Sesión 18: por subir.
+
+* Sesión 18: diapos__, notas__, `soluciones a los problemas`__.
+
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-diapos.pdf
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-notas.pdf
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-programas.zip
+
 * Sesión 19: por subir.
 * Sesión 20: ejercicios propuestos por el profesor.
 * Sesión 21: ejercicios propuestos por el profesor.
