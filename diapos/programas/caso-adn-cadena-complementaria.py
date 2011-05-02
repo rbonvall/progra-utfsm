@@ -1,4 +1,3 @@
->>> cadena = 'cagcccatgaggcagggtgt'
+>>> cadena = 'cagcccatgaggcagggtg'
 >>> complementaria(cadena)
-'gtagggtaataagtaaaaaa'
-
+'gtcgggtactccgtcccac'

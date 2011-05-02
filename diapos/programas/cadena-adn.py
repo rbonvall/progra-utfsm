@@ -1,5 +1,5 @@
-cadena      = 'cagcccatgaggcagggtgt'
-complemento = 'gtagggtaataagtaaaaaa'
+cadena      = 'cagcccatgaggcagggtg'
+complemento = 'gtcgggtactccgtcccac'
 
 from random import choice
 
