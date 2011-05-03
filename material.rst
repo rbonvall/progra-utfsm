@@ -86,6 +86,12 @@ de acuerdo a la `planificación de la asignatura`_.
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-programas.zip
 
+* Sesión 19: diapos__, notas__, `soluciones a los problemas`__.
+
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/19-diapos.pdf
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/19-notas.pdf
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/19-programas.zip
+
 * Sesión 19: por subir.
 * Sesión 20: ejercicios propuestos por el profesor.
 * Sesión 21: ejercicios propuestos por el profesor.
