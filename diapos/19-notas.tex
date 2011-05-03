@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \usepackage{pgfpages}
 \usepackage{wrapfig}
+\hyphenation{va-ria-bles}
 
 \setjobnamebeamerversion{19-diapos}
 
@@ -29,10 +30,207 @@
 
   \section*{Objetivos de la clase}
   \begin{itemize}
-    \item Objetivos.
+    \item Explicar las diferencias fundamentales
+      entre almacenamientos volátil (RAM) y persistente (disco duro).
+    \item Enseñar a crear y leer archivos de texto en Python.
+    \item Introducir los archivos de texto con separadores (CSV)
+      para almacenar datos tabulares.
   \end{itemize}
 
   \section*{Diapositivas}
+
+  Comience la clase explicando la diferencia entre el almacenamiento volátil
+  (memoria RAM) y el almacenamiento persistente (disco duro, entre otros).
+
+  Simplísticamente, la memoria RAM es donde están los valores de todas las variables
+  que están siendo usadas por el programa.
+  Todos estos datos se pierden cuando el programa se termina,
+  o cuando el computador se apaga.
+
+  La motivación para usar almacenamiento persistente
+  es poder recuperar datos provistos por un programa
+  después de que éste ha terminado.
+  Los datos se almacenan en archivos.
+
+  En este ramo,
+  sólo pasaremos los archivos de texto,
+  que son muy fáciles de usar en Python.
+  Los archivos binarios deben ser leídos con ayuda del módulo \li!struct!,
+  pero esto no lo enseñaremos como parte de la materia.
+
+  \diapo{archivo-texto}
+
+  Esta diapositiva muestra un archivo de texto de ejemplo.
+  Explique que este archivo puede ser creado
+  usando un editor de texto como el Bloc de Notas
+  o el mismo IDLE.
+
+  La convención usual es que los archivos de texto tienen extensión \li!.txt!,
+  pero esto no es mandatorio.
+  De todos modos, conviene que en los programas que hagamos
+  siempre sigamos esta convención
+  para evitar confundir a los alumnos.
+
+  Si bien solemos visualizar el archivo como varias líneas,
+  en verdad un archivo es una única secuencia de caracteres,
+  entre los que puede haber saltos de línea (\li!'\n'!).
+
+  Debe quedar claro que al final de cada línea del archivo del ejemplo
+  hay un salto de línea, aunque no se vea al abrirlo en un editor.
+
+  \diapo{leer-archivo-texto}
+
+  Para leer datos de un archivo desde un programa,
+  primero hay que abrirlo usando la función \li!open!,
+  que recibe como parámetro el nombre del archivo.
+
+  Si el archivo está en el mismo directorio que el programa,
+  basta con poner el nombre del archivo como un string.
+  Si estuviera en otro lado, hay que poner la ruta completa
+  (puede ser absoluta o relativa).
+  Para simplificar, pongamos siempre los archivos en la misma carpeta.
+
+  Siempre que se abre un archivo,
+  hay que cerrarlo una vez que se ha terminado de usarlo.
+  Para esto, se usa el método \li!close!.
+
+  Hay varias maneras de leer datos de un archivo ya abierto.
+  La más simple es hacerlo línea por línea.
+  En Python, los archivos son objetos iterables,
+  por lo que pueden ser usados en un ciclo \li!for!.
+  En cada iteración,
+  se obtiene una nueva línea del archivo.
+  La línea leída siempre contiene el caracter de salto de línea al final,
+  que puede ser eliminado usando el método \li!strip!.
+
+  El programa del ejemplo
+  lee línea por línea el contenido del archivo,
+  la convierte a mayúsculas y luego la imprime.
+  La salida del programa es la que se muestra en la diapositiva.
+
+  Si no se hubiera usado \li!strip!,
+  el salto de línea hubiera permanecido,
+  y habría sido impreso además del salto de línea que agrega siempre
+  la sentencia \li!print!.
+  En este caso, en la salida habrían aparecido las líneas del archivo
+  separadas por líneas en blanco.
+
+  Es importante explicar que los archivos se leen secuencialmente,
+  y que una vez que un dato ha sido leído,
+  ya no puede volver a serlo.
+  (Técnicamente sí se puede, rebobinando el archivo con el método \li!seek!,
+  pero omitiremos este detalle por ahora).
+  Un error típico puede ser algo como lo siguiente:
+\begin{lstlisting}
+for linea in archivo:
+    print linea
+for linea in archivo:
+    print linea
+\end{lstlisting}
+   En este caso, el segundo \li!for! hará cero iteraciones,
+   ya que el iterable \li!archivo! no generará más datos.
+
+   Para leer una única línea desde el archivo,
+   se puede usar el método \li!readline!.
+   El método \li!read! sin parámetro lee todo el contenido del archivo
+   desde la posición actual.
+   También puede recibir un parámetro entero,
+   que indica cuántos bytes hay que leer.
+   Estas formas de lectura no las enseñaremos en la asignatura.
+
+  \diapo{crear-archivo-texto}
+
+  Para crear un archivo de texto y abrirlo para escritura,
+  hay que pasar como segundo parámetro a la función \li!open!
+  el string \li!'w'!.
+
+  Explique el efecto usual de abrir un archivo para escritura:
+  \begin{itemize}
+    \item si el archivo no existe, es creado;
+    \item si el archivo ya existe, es sobreescrito.
+  \end{itemize}
+
+  Para escribir texto en el archivo,
+  se usa el método \li!write!.
+  Los saltos de línea deben ser escritos explícitamente
+  (a diferencia de la sentencia \li!print!).
+
+  El método \li!write! sólo acepta strings como parámetros.
+  La llamada \li!archivo.write(10)! arrojará un error de tipo.
+
+  Al terminar de escribir,
+  hay que cerrar el archivo.
+
+  \diapo{agregar-a-archivo-texto}
+
+  Además del modo \li!'w'!, también existe el modo \li!'a'! (\emph{append})
+  que permite abrir un archivo existente
+  para escribir datos al final de él.
+
+  El ejemplo de la diapositiva abre el archivo creado en la diapositiva anterior,
+  y agrega un par de líneas adicionales al final de él.
+
+  \diapo{ejercicio-archivos-texto}
+
+  Lea el enunciado en voz alta y explíquelo.
+
+  Enfatice los pasos típicos de los ejercicios con archivos:
+  se abre el archivo, se lee línea por línea usando un \li!for!
+  y al final se cierra.
+
+  Para resolver este problema,
+  hay que usar tres contadores.
+  Para evitar contar los espacios,
+  puede eliminarlos usando el método \li!replace!.
+
+  \diapo{archivo-csv}
+
+  Los archivos con separadores (o archivos CSV)
+  son archivos de texto comúnes y corrientes
+  en los que se guardan datos tabulares.
+  Cada fila de la tabla es una línea del archivo,
+  y los valores de cada fila se ponen separados por algún caracter a elección.
+
+  En el ejemplo de la diapositiva,
+  el archivo tiene los datos de una tabla de alumnos
+  en los que cada fila tiene nombre, apellido y tres notas.
+
+  \diapo{leer-archivo-csv}
+
+  La lectura de archivos CSV se hace igual que para los archivos de texto ordinarios,
+  sólo que ahora interesa separar los datos usando el método \li!split!.
+
+  Al ocupar \li!split!, se obtiene una lista de valores.
+  En general, suele ser útil asignar estos valores a variables individuales
+  para poder convertirlas al tipo apropiado por separado.
+
+  Cuando hay muchos campos,
+  el operador de rebanado de las listas (\li!valores[inicio:final]!)
+  y la función \li!map!
+  pueden ayudar a hacer la asignación más brevemente.
+
+  Las precauciones usuales siguen vigentes:
+  hay que eliminar el salto de línea al leer cada línea,
+  y cerrar el archivo al final.
+
+  \diapo{crear-archivo-csv}
+
+  Para crear un archivo CSV,
+  se hace igual que para los archivos de texto ordinarios.
+  La parte que es propia de los archivos CSV
+  es crear el string con la línea a escribir.
+  Para esto, puede ser útil el método \li!join! de los strings,
+  pero en general no es necesario,
+  ya que se puede construir la línea manualmente,
+  o incluso escribir los valores y los separadores
+  directamente en el archivo.
+
+  \diapo{ejercicio-archivos-csv}
+
+  Lea el enunciado en voz alta y explique el ejercicio.
+
+  En la solución,
+  hay que tener tres archivos abiertos (uno para lectura y dos para escritura).
 
 \end{document}
 
