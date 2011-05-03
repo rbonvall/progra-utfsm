@@ -1,0 +1,5 @@
+Esteban [49, 18, 32]
+Luisa [68, 44, 99]
+Jean Paul [48, 38, 81]
+Gianfranco [54, 54, 50]
+Romina [100, 98, 92]

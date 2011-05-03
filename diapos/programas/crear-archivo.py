@@ -1,0 +1,7 @@
+archivo = open('quijote.txt', 'w')
+archivo.write('En un lugar de La Mancha\n')
+archivo.write('de cuyo nombre ')
+archivo.write('no quiero acordarme\n')
+archivo.write('no ha mucho tiempo ')
+archivo.write('que vivia un hidalgo\n')
+archivo.close()
