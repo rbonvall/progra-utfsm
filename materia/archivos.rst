@@ -67,7 +67,11 @@ se manipulará el archivo.
 Si el archivo no existe,
 ocurrirá un **error de entrada y salida** (``IOError``).
 
-La manera más simple de leer el contenido de un archivo
+Es importante recordar que la variable ``archivo``
+es una representación abstracta del archivo,
+y no los contenidos del mismo.
+
+La manera más simple de leer el contenido
 es hacerlo línea por línea.
 Para esto, basta con poner el archivo lógico en un ciclo for::
 
