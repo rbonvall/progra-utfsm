@@ -1,7 +1,9 @@
 Secuencia de ADN
 ----------------
 
-Realice una función con la que se pueda buscar
+
+
+Escriba una función con la que se pueda buscar
 una subsecuencia determinada en una gran
 secuencia de ADN, entregada por el usuario.
 
