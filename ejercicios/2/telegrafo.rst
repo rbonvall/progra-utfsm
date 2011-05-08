@@ -10,11 +10,11 @@ valor de $20 cada uno.
 Los espacios no tienen valor.
 
 Su mensaje debe ser un string,
-y las letras del castellano 
+y las letras del castellano
 (ñ, á, é, í, ó, ú) se consideran
 caracteres especiales.
 
 .. testcase::
 
 	Mensaje: `Feliz Aniversario!`
-	Su mensaje cuesta $260
+	Su mensaje cuesta $190
