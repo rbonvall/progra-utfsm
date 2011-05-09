@@ -17,7 +17,7 @@ Escriba un programa que cree un nuevo archivo llamado
 aprobado (promedio ≥ 4,0) o reprobado (promedio < 4,0)::
 
     Pepito aprobado
-    Yayita reprobado
+    Yayita aprobado
     Fulanita aprobado
     Moya reprobado
 
