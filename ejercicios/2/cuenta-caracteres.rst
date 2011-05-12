@@ -9,26 +9,26 @@ Desarrolle un programa que sea capaz de abrir el archivo de texto
 * Contar cantidad de caracteres en mayúsculas, por ejemplo::
 
     >>> mayusculas(texto)
-    242
+    81
 
 * Contar cantidad de caracteres en minúsculas, por ejemplo::
 
     >>> minusculas(texto)
-    1632
+    3481
 
 * Contar cantidad de caracteres especiales (ni mayúsculas ni minúsculas)::
 
     >>> especiales(texto)
-    132
+    136
 
 * Determinar el porcentaje de caracteres en minúsculas con respecto
   a todo el texto, por ejemplo::
 
-    62.3%
+    94.13%
 
 * Contar la cantidad de vocales que posee el texto, por ejemplo::
 
     >>> vocales(texto)
-    1043
+    1524
 
 * Eliminar todas las vocales del texto.
