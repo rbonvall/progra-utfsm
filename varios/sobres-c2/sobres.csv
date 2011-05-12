@@ -1,0 +1,73 @@
+Sala,Alumnos,Jefe sala,Ayudante,P,Revisor
+C-203,44,Leopoldo Altamirano,Charly Leiva,1,Renzo Stanley
+C-203,44,Leopoldo Altamirano,Charly Leiva,2,Roberto Bonvallet
+C-203,44,Leopoldo Altamirano,Charly Leiva,3,José Miguel Herrera
+C-203,44,Leopoldo Altamirano,Charly Leiva,4,Leopoldo Altamirano
+C-207,43,Roberto Bonvallet,Charly Leiva,1,César Moltedo
+C-207,43,Roberto Bonvallet,Charly Leiva,2,Katherine Rivera
+C-207,43,Roberto Bonvallet,Charly Leiva,3,Erick López
+C-207,43,Roberto Bonvallet,Charly Leiva,4,Héctor Allende
+P-207,42,Magda Silva,Sebastián Morales,1,Marco Tarifeño
+P-207,42,Magda Silva,Sebastián Morales,2,Roberto Bonvallet
+P-207,42,Magda Silva,Sebastián Morales,3,Erick López
+P-207,42,Magda Silva,Sebastián Morales,4,Héctor Allende
+P-301,42,Héctor Allende,Sebastián Morales,1,Héctor Allende
+P-301,42,Héctor Allende,Sebastián Morales,2,Roberto Bonvallet
+P-301,42,Héctor Allende,Sebastián Morales,3,Erick López
+P-301,42,Héctor Allende,Sebastián Morales,4,Mabel Bielenberg
+C-201,58,Juan Zamora,Cristian Aguilar,1,Mabel Bielenberg
+C-201,58,Juan Zamora,Cristian Aguilar,2,Roberto Bonvallet
+C-201,58,Juan Zamora,Cristian Aguilar,3,Nelson Vega
+C-201,58,Juan Zamora,Cristian Aguilar,4,César Moltedo
+C-204,55,José Miguel Herrera,Cristian Aguilar,1,Leslie Pérez
+C-204,55,José Miguel Herrera,Cristian Aguilar,2,Katherine Rivera
+C-204,55,José Miguel Herrera,Cristian Aguilar,3,Nelson Vega
+C-204,55,José Miguel Herrera,Cristian Aguilar,4,Leopoldo Altamirano
+C-226,56,Katherine Rivera,Luis Casanova,1,Mabel Bielenberg
+C-226,56,Katherine Rivera,Luis Casanova,2,Renzo Stanley
+C-226,56,Katherine Rivera,Luis Casanova,3,Juan Zamora
+C-226,56,Katherine Rivera,Luis Casanova,4,César Moltedo
+C-228,74,Nelson Vega,Luis Casanova,1,Katherine Rivera
+C-228,74,Nelson Vega,Luis Casanova,2,Renzo Stanley
+C-228,74,Nelson Vega,Luis Casanova,3,Juan Zamora
+C-228,74,Nelson Vega,Luis Casanova,4,Mabel Bielenberg
+C-229,45,Renzo Stanley,Marco Benzi,1,Magda Silva
+C-229,45,Renzo Stanley,Marco Benzi,2,Roberto Bonvallet
+C-229,45,Renzo Stanley,Marco Benzi,3,Leslie Pérez
+C-229,45,Renzo Stanley,Marco Benzi,4,Mabel Bielenberg
+C-232,28,Leslie Pérez,Marco Benzi,1,Leopoldo Altamirano
+C-232,28,Leslie Pérez,Marco Benzi,2,Katherine Rivera
+C-232,28,Leslie Pérez,Marco Benzi,3,Nelson Vega
+C-232,28,Leslie Pérez,Marco Benzi,4,Mabel Bielenberg
+C-233,28,Sebastián Mancilla,Claudio Price,1,Nelson Vega
+C-233,28,Sebastián Mancilla,Claudio Price,2,Katherine Rivera
+C-233,28,Sebastián Mancilla,Claudio Price,3,Leslie Pérez
+C-233,28,Sebastián Mancilla,Claudio Price,4,Magda Silva
+C-234,28,Marco Tarifeño,Claudio Price,1,Leopoldo Altamirano
+C-234,28,Marco Tarifeño,Claudio Price,2,Katherine Rivera
+C-234,28,Marco Tarifeño,Claudio Price,3,Nelson Vega
+C-234,28,Marco Tarifeño,Claudio Price,4,Magda Silva
+C-235,28,Juan Carlos Torres,Carlos Cavieres,1,Erick López
+C-235,28,Juan Carlos Torres,Carlos Cavieres,2,Renzo Stanley
+C-235,28,Juan Carlos Torres,Carlos Cavieres,3,Nelson Vega
+C-235,28,Juan Carlos Torres,Carlos Cavieres,4,Marco Tarifeño
+C-236,28,Erick López,Carlos Cavieres,1,Katherine Rivera
+C-236,28,Erick López,Carlos Cavieres,2,Roberto Bonvallet
+C-236,28,Erick López,Carlos Cavieres,3,Leslie Pérez
+C-236,28,Erick López,Carlos Cavieres,4,Héctor Allende
+C-237,28,Roberto Maldonado,Gastón Guerra,1,José Miguel Herrera
+C-237,28,Roberto Maldonado,Gastón Guerra,2,Renzo Stanley
+C-237,28,Roberto Maldonado,Gastón Guerra,3,Nelson Vega
+C-237,28,Roberto Maldonado,Gastón Guerra,4,Marco Tarifeño
+C-238,28,César Moltedo,Gastón Guerra,1,Juan Zamora
+C-238,28,César Moltedo,Gastón Guerra,2,Renzo Stanley
+C-238,28,César Moltedo,Gastón Guerra,3,José Miguel Herrera
+C-238,28,César Moltedo,Gastón Guerra,4,Marco Tarifeño
+C-239,28,Miguel Solís,Braulio Fernandois,1,José Miguel Herrera
+C-239,28,Miguel Solís,Braulio Fernandois,2,Katherine Rivera
+C-239,28,Miguel Solís,Braulio Fernandois,3,José Miguel Herrera
+C-239,28,Miguel Solís,Braulio Fernandois,4,Marco Tarifeño
+C-240,51,Mabel Bielenberg,Braulio Fernandois,1,Roberto Bonvallet
+C-240,51,Mabel Bielenberg,Braulio Fernandois,2,Renzo Stanley
+C-240,51,Mabel Bielenberg,Braulio Fernandois,3,Nelson Vega
+C-240,51,Mabel Bielenberg,Braulio Fernandois,4,Magda Silva
