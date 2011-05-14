@@ -1,0 +1,6 @@
+QUILPUE: max 30, min 7
+Valparaiso: max 24, min 10
+VINA DEL MAR: max 26, min 9
+Villa Alemana: max 22, min 9
+Limache: max 23, min 9
+OLMUE: max 29, min 5
