@@ -1,0 +1,137 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\input{../latex/definiciones.tex}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Arreglos numéricos}
+\author{
+  Programación \\ \url{http://progra.usm.cl}
+}
+\date{16 y 17 de mayo de 2011}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \label{intro-arreglos}
+    \frametitle{Arreglos}
+    \begin{itemize}
+      \item Descargar módulo \li!numpy! \\
+        en \url{http://tinyurl.com/bajar-numpy}
+        \vfill
+      \item Tipo de datos: \li!array!
+        \begin{itemize}
+          \item colección ordenada de datos,
+          \item tamaño fijo,
+          \item todos los elementos
+            tienen el mismo tipo.
+        \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \label{crear-arreglo-valores}
+    \frametitle{Crear arreglos usando valores}
+    Importar constructor:
+    \lstinputlisting[linerange=1-1]{programas/crear-arreglos-valores.py}
+    \vfill
+    Arreglo de enteros:
+    \lstinputlisting[linerange=3-3]{programas/crear-arreglos-valores.py}
+    \vfill
+    Arreglo de reales:
+    \lstinputlisting[linerange=5-6]{programas/crear-arreglos-valores.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{crear-arreglo-funciones}
+    \frametitle{Otras maneras de crear arreglos}
+    \lstinputlisting{programas/crear-arreglo-funciones.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{operaciones-arreglos}
+    \frametitle{Operaciones sobre arreglos}
+    \lstinputlisting{programas/operaciones-arreglos.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{comparacion-arreglos}
+    \frametitle{Comparación de arreglos}
+    \lstinputlisting{programas/arreglos-comparacion.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{modificar-arreglos}
+    \frametitle{Modificar arreglos}
+    \footnotesize
+    \lstinputlisting{programas/modificar-arreglos.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{arreglos-aleatorios}
+    \frametitle{Arreglos aleatorios}
+    \footnotesize
+    \lstinputlisting{programas/arreglos-aleatorios.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-crear-arreglos}
+    \frametitle{Ejercicios: creación de arreglos}
+    Crear los siguientes arreglos:
+    \begin{itemize}
+      \item \([5, 5, 5, 5, 5, \ldots, 5, 5, 5, 5, 5]\)\quad(cuarenta elementos)
+      \item \([0, 9, 9, 9, 9, \ldots, 9, 9, 9, 9, 0]\)\quad(cien elementos)
+      \item \([1, 2, 3, \ldots, 98, 99, 100, 99, 98, \ldots, 3, 2, 1]\)
+      \item \([1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]\)
+      \item \([0, 1, 2, 0, 1, 2, 0, 1, 2, \ldots]\)\quad(tres mil elementos)
+      \item Arreglo aleatorio de cien números entre \(-1\) y \(1\)
+      \item Arreglo aleatorio de cien números entre \(8.4\) y \(9.7\)
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-diferencias}
+    \frametitle{Ejercicio: diferencias finitas}
+    Escriba una función
+    que reciba como parámetro un arreglo
+    y retorne otro arreglo
+    con las diferencias entre elementos consecutivos
+    del arreglo original:
+    \lstinputlisting{programas/caso-diferencias-arreglo.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{vectorizacion}
+    \frametitle{Aplicación de funciones}
+    \lstinputlisting{programas/arreglos-vectorizacion.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-integral}
+    \frametitle{Ejercicio: aproximación de área}
+    Calcule el área de la región azul. \\
+    La línea roja es el gráfico
+    de la función \(y = e^x\).
+
+    \begin{center}
+      \includegraphics[scale=0.5]{integral}
+    \end{center}
+  \end{frame}
+
+\end{document}
+
