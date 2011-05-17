@@ -38,14 +38,167 @@
 
   \section*{Diapositivas}
 
+  Los arreglos que vimos en la clase anterior
+  son secuencias lineales de valores.
+
+  Los arreglos bidimensionales, por otra parte,
+  son tablas de valores.
+  Cada elemento de un arreglo bidimensional
+  está simultáneamente en una fila y en una columna.
+
+  Posiblemente,
+  muchos alumnos no hayan visto aún en algún curso de matemáticas
+  el concepto de matriz.
+  Mencione que «matriz» es simplemente otro nombre
+  para referirse a los arreglos bidimensionales.
+  Al menos en programación,
+  ambos términos pueden ser considerados sinónimos.
+
+  La mayoría de los conceptos enseñados en la clase anterior
+  son aplicables también a los arreglos bidimensionales.
+  Por ejemplo, las operaciones se hacen término a término,
+  se puede modificar elementos o regiones del arreglo, y
+  todos los elementos son del mismo tipo.
+
   \diapo{crear-arreglo-bidmensional}
+
+  La manera de crear un arreglo bidimensional
+  indicando sus valores explícitamente
+  es pasar una lista de listas
+  a la función \li!array!.
+  Cada una de las listas interiores
+  representa una fila de la matriz.
+  Las listas deben ser todas del mismo largo,
+  o si no ocurrirá un error de valor.
+
+  Todos los arreglos tienen un atributo \li!shape!
+  que indica su forma.
+  Es una tupla con los tamaños a lo largo de cada dimensión.
+  En el caso de los arreglos bidimensionales,
+  los valores de la tupla son los números de filas y de columnas.
+  Típicamente,
+  un algoritmo que debe recorrer los elementos de la matriz
+  comienza con \li!m, n = a.shape!.
+
+  El valor del atributo \li!size! es la cantidad de elementos
+  que tiene el arreglo, independiente de su forma.
+
+  Ojo con la función \li!len!, que no entrega el tamaño del arreglo,
+  sino el número de filas.
+
   \diapo{crear-arreglo-bidmensional-funciones}
+
+  Las funciones \li!zeros! y \li!ones!
+  también permiten crear arreglos de más de una dimensión.
+  Para esto, debe pasarse la tupla con la forma del arreglo
+  como argumento.
+
+  Esta regla se aplica también a la mayoría de las funciones
+  que reciben dimensiones de arreglos como parámetros.
+  Por ejemplo,
+  la función \li!numpy.random.random! también acepta
+  una tupla como parámetro.
+
   \diapo{cambiar-forma}
+
+  El método \li!reshape! de los arreglos
+  retorna un arreglo que tiene los mismos elementos
+  pero con otra forma.
+  El reordenamiento se hace siempre a lo largo de las filas.
+
+  El parámetro de \li!reshape! es una tupla
+  indicando la nueva forma del arreglo.
+  El número de elementos en la nueva forma
+  (es decir, el producto de los elementos de la tupla)
+  debe coincidir con el tamaño del arreglo.
+
+  Note que el arreglo original no es modificado,
+  sino que un arreglo nuevo es retornado.
+  Sin embargo, ambos arreglos comparten el buffer de datos,
+  por lo que al modificar uno de los arreglos,
+  los cambios se ven reflejados también en el otro.
+  En general esto es así en las operaciones de NumPy:
+  las operaciones de arreglos entregan vistas
+  a arreglos existentes, no copias de arreglos.
+
   \diapo{indices}
+
+  Los arreglos se indexan usando tuplas \li!i, j!
+  (al igual que Pascal,
+  y a diferencia de C, donde se ocupan dos pares de corchetes).
+  \li!a[i, j]! es el elemento en la fila \li!i! y la columna \li!j!.
+
+  En el primer ejemplo,
+  se obtiene el elemento en la posición \((2, 3)\).
+
+  En el segundo ejemplo,
+  se obtiene la fila 2 completa del arreglo.
+  Esto se hace indicando que el índice de las columnas
+  toma todos los valores posibles.
+  La sintaxis \li!:! significa «desde el principio hasta el final».
+  El ejemplo también podría haber sido escrito como \li!a[2, 0:4]!.
+
+  El tercer ejemplo entrega una región más complicada del arreglo.
+
   \diapo{ejercicio-crear-arreglo}
+
+  Resuelva estos ejercicios con calma y detalladamente,
+  hasta que quede claro cómo ocupar las operaciones enseñadas anteriormente.
+
+  Las soluciones a los problemas
+  están en los archivos anexos al material de clases.
+
   \diapo{transponer}
+
+  La transposición consiste en cambiar filas por columnas y viceversa.
+  El efecto de la operación es comparable a usar la diagonal como un espejo.
+
+  La transposición se obtiene usando el método \li!transpose!,
+  y entrega una vista al arreglo existente.
+
+  Por conveniencia,
+  NumPy permite obtener la transpuesta mediante la sintaxis \li!a.T!,
+  pero es preferible no enseñar esto
+  para mantener la consistencia en las operaciones,
+  y no obligar a los alumnos a estar pendientes
+  de cuáles operaciones son métodos y cuáles no.
+
   \diapo{diagonales}
+
+  La función \li!diag! permite obtener la diagonal de un arreglo bidimensional.
+  Además de la diagonal principal,
+  es posible obtener otras diagonales
+  pasando un segundo parámetro a la función.
+
+  No se muestra en el ejemplo,
+  pero la misma función \li!diag!
+  permite hacer la operación inversa:
+  al recibir un arreglo de una dimensión,
+  entrega un arreglo bidimensional
+  con sus elementos a lo largo de la diagonal.
+
   \diapo{cuadrado-magico}
+
+  Lea el enunciado del ejercicio en voz alta.
+  En el cuadrado mágico del ejemplo,
+  todas las filas, columnas y diagonales suman 34.
+  Para ilustrar la propiedad de los cuadrados mágicos,
+  haga algunas de las sumas para mostrar que son iguales.
+
+  Discuta con los estudiantes
+  las estrategias para resolver el problema,
+  y procure que ellos vayan proponiendo
+  las operaciones concretas a realizar.
+
+  La parte comparativamente más difícil
+  es obtener los elementos de la antidiagonal,
+  ya que no hay ninguna función para obtenerlos directamente.
+  Una posible idea (errónea) es obtener la diagonal
+  de la matriz transpuesta, pero esto no sirve,
+  ya que la transposición no altera la diagonal de la matriz.
+
+  El problema resuelto de varias maneras distintas
+  está en los archivos anexos.
 
 \end{document}
 
