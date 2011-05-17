@@ -42,7 +42,7 @@ print f
 print
 
 
-g = random(100) * 8.4 + (8.4 - 9.7)
+g = 8.4 + random(100) * (9.7 - 8.4)
 print g
 print
 
