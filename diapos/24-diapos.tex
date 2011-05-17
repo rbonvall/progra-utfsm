@@ -1,0 +1,146 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\input{../latex/definiciones.tex}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Arreglos bidimensionales}
+\author{
+  Programación \\ \url{http://progra.usm.cl}
+}
+\date{18 y 19 de mayo de 2011}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \label{crear-arreglo-bidmensional}
+    \frametitle{Arreglos bidimensionales}
+    \lstinputlisting{programas/arreglo-bidimensional-crear-valores.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{crear-arreglo-bidmensional-funciones}
+    \frametitle{Otras maneras de crear arreglos 2D}
+    \lstinputlisting{programas/arreglo-bidimensional-crear-funciones.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{cambiar-forma}
+    \frametitle{Cambiar la forma del arreglo}
+    \lstinputlisting{programas/arreglo-bidimensional-cambiar-forma.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{indices}
+    \frametitle{Elementos y secciones del arreglo}
+    \lstinputlisting{programas/arreglo-bidimensional-indices.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-crear-arreglo}
+    \frametitle{Ejercicio: crear arreglos}
+    Crear los siguientes arreglos:
+    \[
+      \begin{bmatrix}
+        9 & 9 & 9 & 9 & 9 \\
+        9 & 9 & 9 & 9 & 9 \\
+        9 & 9 & 0 & 9 & 9 \\
+        9 & 9 & 9 & 9 & 9 \\
+        9 & 9 & 9 & 9 & 9 \\
+      \end{bmatrix}
+      \begin{bmatrix}
+        8 & 8 & 8 & 8 & 8 \\
+        8 & 8 & 8 & 8 & 8 \\
+        8 & 8 & 8 & 8 & 8 \\
+        1 & 1 & 1 & 1 & 1 \\
+        8 & 8 & 8 & 8 & 8 \\
+      \end{bmatrix}
+      \begin{bmatrix}
+        8 & 8 & 8 & 8 & 8 \\
+        8 & 8 & 8 & 8 & 8 \\
+        8 & 8 & 8 & 8 & 8 \\
+        0 & 1 & 2 & 3 & 4 \\
+        8 & 8 & 8 & 8 & 8 \\
+      \end{bmatrix}
+    \]
+    \[
+      \begin{bmatrix}
+        5 & 5 & 5 & 5 & 5 \\
+        5 & 0 & 0 & 0 & 5 \\
+        5 & 0 & 0 & 0 & 5 \\
+        5 & 0 & 0 & 0 & 5 \\
+        5 & 5 & 5 & 5 & 5 \\
+      \end{bmatrix}
+      \begin{bmatrix}
+        0 & 1 & 2 & 3 & 4 \\
+        4 & 3 & 2 & 1 & 0 \\
+        0 & 1 & 2 & 3 & 4 \\
+        4 & 3 & 2 & 1 & 0 \\
+        0 & 1 & 2 & 3 & 4 \\
+      \end{bmatrix}
+      \begin{bmatrix}
+        1 & 2 & 3 & 1 & 2 \\
+        3 & 1 & 2 & 3 & 1 \\
+        2 & 3 & 1 & 2 & 3 \\
+        1 & 2 & 3 & 1 & 2 \\
+        3 & 1 & 2 & 3 & 1 \\
+      \end{bmatrix}
+    \]
+  \end{frame}
+
+  \begin{frame}
+    \label{transponer}
+    \frametitle{Transponer arreglo}
+    \lstinputlisting{programas/arreglo-bidimensional-transponer.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{diagonales}
+    \frametitle{Diagonales}
+    \lstinputlisting{programas/arreglo-bidimensional-diagonales.py}
+  \end{frame}
+
+  %\begin{frame}
+  %  \frametitle{Suma de elementos}
+  %  \lstinputlisting{programas/arreglo-bidimensional-sumar.py}
+  %\end{frame}
+
+  \begin{frame}
+    \label{cuadrado-magico}
+    \frametitle{Ejercicio: cuadrado mágico}
+    Una matriz es un \emph{cuadrado mágico}
+    si las sumas de cada fila, de cada columna
+    y de las dos diagonales son iguales.
+
+    Por ejemplo:
+    \[
+      m =
+      \begin{bmatrix}
+         4 & 15 & 14 &  1 \\
+         9 &  6 &  7 & 12 \\
+         5 & 10 & 11 &  8 \\
+        16 &  3 &  2 & 13 \\
+      \end{bmatrix}
+    \]
+    Escriba una función que indique \\
+    si una matriz es o no un cuadrado mágico:
+    \lstinputlisting{programas/caso-cuadrado-magico.py}
+  \end{frame}
+
+\end{document}
+
