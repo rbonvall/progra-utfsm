@@ -267,3 +267,25 @@ Con las listas, esto no ocurre::
     1960218, 0.70710678118654746, 0.83146961230254524, 0.9238795
     3251128674, 0.98078528040323043, 1.0]
 
+Arreglos aleatorios
+-------------------
+El módulo NumPy contiene a su vez otros módulos
+que proveen funcionalidad adicional
+a los arreglos y funciones básicos.
+
+El módulo ``numpy.random``
+provee funciones para crear **números aleatorios**
+(es decir, generados al azar),
+de las cuales la más usada es la función ``random``,
+que entrega un arreglo de números al azar
+distribuidos uniformemente entre 0 y 1::
+
+    >>> from numpy.random import random
+
+    >>> random(3)
+    array([ 0.53077263,  0.22039319,  0.81268786])
+    >>> random(3)
+    array([ 0.07405763,  0.04083838,  0.72962968])
+    >>> random(3)
+    array([ 0.51886706,  0.46220545,  0.95818726])
+
