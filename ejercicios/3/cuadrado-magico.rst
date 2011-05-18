@@ -18,25 +18,25 @@ con `n = 4`. Todas sus filas, columnas y diagonales suman 34:
    e indique si está conformado por los números consecutivos
    desde 1 hasta `n^2`::
 
-     >>> import numpy as np
-     >>> consecutivos(np.array([[3, 1, 5],
-     ...                        [4, 7, 2],
-     ...                        [9, 8, 6]]))
+     >>> from numpy import array
+     >>> consecutivos(array([[3, 1, 5],
+     ...                     [4, 7, 2],
+     ...                     [9, 8, 6]]))
      True
-     >>> consecutivos(np.array([[3, 1, 4],
-     ...                        [4, 0, 2],
-     ...                        [9, 9, 6]]))
+     >>> consecutivos(array([[3, 1, 4],
+     ...                     [4, 0, 2],
+     ...                     [9, 9, 6]]))
      False
 
 #. Escriba una función que reciba un arreglo
    e indique si se trata o no de un cuadrado mágico::
 
-     >>> es_magico(np.array([[3, 1, 5],
-     ...                     [4, 7, 2],
-     ...                     [9, 8, 6]]))
+     >>> es_magico(array([[3, 1, 5],
+     ...                  [4, 7, 2],
+     ...                  [9, 8, 6]]))
      False
-     >>> es_magico(np.array([[2, 7, 6],
-     ...                     [9, 5, 1],
-     ...                     [4, 3, 8]]))
+     >>> es_magico(array([[2, 7, 6],
+     ...                  [9, 5, 1],
+     ...                  [4, 3, 8]]))
      True
 
