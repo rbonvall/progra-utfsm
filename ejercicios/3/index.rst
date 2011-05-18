@@ -5,7 +5,7 @@ Arreglos
 --------
 .. toctree::
 
-    arreglos-simples
+    creacion-arreglos-2d
     cuadrado-magico
     sudoku
 
