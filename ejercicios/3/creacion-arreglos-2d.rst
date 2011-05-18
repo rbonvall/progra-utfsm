@@ -1,15 +1,15 @@
-Creación de arreglos sencillos
-==============================
+Creación de arreglos bidimensionales
+====================================
 
 La función ``arange`` retorna un arreglo
 con números en el rango indicado::
 
-    >>> import numpy as np
-    >>> a = np.arange(12)
+    >>> from numpy import arange
+    >>> a = arange(12)
     >>> a
     array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
 
-A partir del arreglo ``a``,
+A partir del arreglo ``a`` definido arriba,
 indique cómo obtener los siguientes arreglos
 de la manera más simple que pueda::
 
