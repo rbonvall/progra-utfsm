@@ -1,18 +1,6 @@
 Arreglos
 ========
 
-*Para la materia de arreglos,
-utilizaremos un módulo llamado ``numpy``,
-que no viene incluido con Python.*
-
-*Para poder usar este módulo,
-usted debe descargarlo del `sitio de descargas de NumPy`_
-e instalarlo en su computador.
-Baje el instalador apropiado
-para la versión de Python que tiene instalada.*
-
-.. _sitio de descargas de NumPy: 
-
 Las estructuras de datos que hemos visto hasta ahora
 (listas, tuplas, diccionarios, conjuntos)
 permiten manipular datos de manera muy flexible.
@@ -48,7 +36,7 @@ Los arreglos tienen algunas similitudes con las listas:
 Sin embargo,
 también tienen algunas restricciones:
 
-* todos los elementos deben tener el mismo tipo,
+* todos los elementos del arreglo deben tener el mismo tipo,
 * en general, el tamaño del arreglo es fijo
   (no van creciendo dinámicamente como las listas),
 * se ocupan principalmente para almacenar datos numéricos.
@@ -157,10 +145,13 @@ por lo que existen funciones especiales para crearlos:
 
     >>> zeros(6)
     array([ 0.,  0.,  0.,  0.,  0.,  0.])
+
     >>> ones(5)
     array([ 1.,  1.,  1.,  1.,  1.])
+
     >>> arange(3.0, 9.0)
     array([ 3.,  4.,  5.,  6.,  7.,  8.])
+
     >>> linspace(1, 2, 5)
     array([ 1.  ,  1.25,  1.5 ,  1.75,  2.  ])
 
