@@ -34,3 +34,7 @@ Contenidos del segundo certamen
 
 Contenidos del tercer certamen
 ------------------------------
+.. toctree::
+
+    arreglos
+
