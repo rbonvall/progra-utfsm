@@ -54,8 +54,10 @@
   \end{scope}
 
   \begin{scope}[yshift=-3.0cm, xshift=.5cm]
-    \draw [-latex', red!80!black, thick] (0, 0) -- node[below, xshift=2.8cm]{\(+\)} (5.1, 0);
-    \node[anchor=west] at (5.1, 0) {\(-14.803\)};
+    \draw [-latex', red!80!black, thick] (0, 0)
+        -- node[above, xshift=3.3cm]{\(+\)} ++(5.1, 0)
+        [out=0, in=90] to ++(.2cm, -.5cm);
+    \node[anchor=north] at ++(5.3, -.5) {\(-14.803\)};
   \end{scope}
 
 \end{tikzpicture}
