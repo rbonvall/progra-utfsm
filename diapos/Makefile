@@ -1,7 +1,9 @@
-TEXFILES = $(wildcard *.tex)
-PDFFILES = $(TEXFILES:.tex=.pdf)
+TEXDIAPOS = $(wildcard *-diapos.tex)
+TEXNOTAS  = $(wildcard *-notas.tex)
+PDFDIAPOS = $(TEXDIAPOS:.tex=.pdf)
+PDFNOTAS  = $(TEXNOTAS:.tex=.pdf)
 
-pdf: $(PDFFILES)
+pdf: $(PDFDIAPOS) $(PDFNOTAS)
 
 %.pdf: %.tex
 	@rubber --pdf $<
