@@ -5,7 +5,12 @@ Arreglos
 --------
 .. toctree::
 
+Arreglos bidimensionales
+------------------------
+.. toctree::
+
     creacion-arreglos-2d
     cuadrado-magico
     sudoku
+    matrices-especiales
 
