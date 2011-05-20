@@ -17,8 +17,7 @@ Algunos ejemplos de problemas
 que requieren manipular grandes secuencias de números son:
 la predicción del clima,
 la construcción de edificios,
-el análisis de indicadores financieros
-y 
+y el análisis de indicadores financieros
 entre muchos otros.
 
 .. index:: arreglo
@@ -288,4 +287,85 @@ distribuidos uniformemente entre 0 y 1::
     array([ 0.07405763,  0.04083838,  0.72962968])
     >>> random(3)
     array([ 0.51886706,  0.46220545,  0.95818726])
+
+Obtener elementos de un arreglo
+-------------------------------
+Cada elemento del arreglo tiene un índice,
+al igual que en las listas.
+El primer elemento tiene índice 0.
+Los elementos también pueden numerarse
+desde el final hasta el principio
+usando índices negativos.
+El último elemento tiene índice —1::
+
+    >>> a = array([6.2, -2.3, 3.4, 4.7, 9.8])
+
+    >>> a[0]
+    6.2
+    >>> a[1]
+    -2.3
+    >>> a[-2]
+    4.7
+    >>> a[3]
+    4.7
+
+Una seccion del arreglo puede ser obtenida
+usando el operador de rebanado ``a[i:j]``.
+Los índices ``i`` y ``j``
+indican el rango de valores que serán entregados::
+
+    >>> a
+    array([ 6.2, -2.3,  3.4,  4.7,  9.8])
+    >>> a[1:4]
+    array([-2.3,  3.4,  4.7])
+    >>> a[2:-2]
+    array([ 3.4])
+
+Si el primer índice es omitido,
+el rebanado comienza desde el principio del arreglo.
+Si el segundo índice es omitido,
+el rebanado termina al final del arreglo::
+
+    >>> a[:2]
+    array([ 6.2, -2.3])
+    >>> a[2:]
+    array([ 3.4,  4.7,  9.8])
+
+Un tercer índice puede indicar
+cada cuántos elementos
+serán incluídos en el resultado::
+
+    >>> a = linspace(0, 1, 9)
+    >>> a
+    array([ 0.   ,  0.125,  0.25 ,  0.375,  0.5  ,  0.625,  0.75 ,  0.875,  1.   ])
+    >>> a[1:7:2]
+    array([ 0.125,  0.375,  0.625])
+    >>> a[::3]
+    array([ 0.   ,  0.375,  0.75 ])
+    >>> a[-2::-2]
+    array([ 0.875,  0.625,  0.375,  0.125])
+    >>> a[::-1]
+    array([ 1.   ,  0.875,  0.75 ,  0.625,  0.5  ,  0.375,  0.25 ,  0.125,  0.   ])
+
+Una manera simple de recordar cómo funciona el rebanado
+es considerar que los índices no se refieren a los elementos,
+sino a los espacios entre los elementos:
+
+.. image:: ../diagramas/indices.png
+   :align: center
+
+::
+
+    >>> b = array([17.41, 2.19, 10.99, -2.29, 3.86, 11.10])
+    >>> b[2:5]
+    array([ 10.99,  -2.29,   3.86])
+    >>> b[:5]
+    array([ 17.41,   2.19,  10.99,  -2.29,   3.86])
+    >>> b[1:1]
+    array([], dtype=float64)
+    >>> b[1:5:2]
+    array([ 2.19, -2.29])
+
+
+
 
