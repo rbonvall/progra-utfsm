@@ -1,0 +1,67 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\input{../latex/definiciones.tex}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Productos matriciales}
+\author{
+  Programación \\ \url{http://progra.usm.cl}
+}
+\date{22 y 23 de mayo de 2011}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \label{repaso-arreglos}
+    \frametitle{Repaso de arreglos}
+    \lstinputlisting%[linerange=]
+        {programas/repaso-arreglos.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-interno}
+    \frametitle{Producto interno}
+    \includegraphics[width=\textwidth]{../diagramas/producto-interno.pdf}
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-interno-numpy}
+    \frametitle{Producto interno en NumPy}
+    \lstinputlisting[linerange=DOT-FIN\ DOT]
+        {programas/producto-interno.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-interno-numpy}
+    \frametitle{Ejercicio 1}
+    ¿Cuáles son los resultados
+    de las siguientes operaciones?
+    \lstinputlisting[linerange=EJERCICIO\ 1-FIN\ EJERCICIO\ 1]%
+        {programas/producto-interno.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejemplos-producto-interno}
+    \frametitle{Ejemplos de uso del producto interno}
+    \lstinputlisting[linerange=EJEMPLOS\ PRODUCTO\ INTERNO-FIN\ EJEMPLOS\ PRODUCTO\ INTERNO]%
+        {programas/producto-interno.py}
+  \end{frame}
+
+\end{document}
+
