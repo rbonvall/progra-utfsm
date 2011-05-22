@@ -100,6 +100,37 @@ que crean arreglos; por ejemplom la función ``random``::
            [ 0.35710483,  0.44033758],
            [ 0.04107107,  0.47408363]])
 
+Operaciones con arreglos bidimensionales
+----------------------------------------
+Al igual que los arreglos de una dimensión,
+las operaciones sobre las matrices
+se aplican término a término::
+
+    >>> a = array([[5, 1, 4],
+    ...            [0, 3, 2]])
+    >>> b = array([[2, 3, -1],
+    ...            [1, 0, 1]])
+
+    >>> a + 2
+    array([[7, 3, 6],
+           [2, 5, 4]])
+
+    >>> a ** b
+    array([[25,  1,  0],
+          [ 0,  1,  2]])
+
+Cuando dos matrices aparecen en una operación,
+ambas deben tener exactamente la misma forma::
+
+    >>> a = array([[5, 1, 4],
+    ...            [0, 3, 2]])
+    >>> b = array([[ 2,  3],
+    ...            [-1,  1],
+    ...            [ 0,  1]])
+    >>> a + b
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    ValueError: shape mismatch: objects cannot be broadcast to a single shape
 
 
 
