@@ -28,8 +28,40 @@ precios = array([678, 2500, 12400, 2310])
 unidades = array([2, 0, 0, 1])
 total = dot(precios, unidades)
 
+ponderaciones = array([20, 25, 25, 30]) * .01
+notas = array([55, 48, 39, 71])
+promedio = dot(ponderaciones, notas)
 
+x = linspace(0, 5, 100)
+alturas = exp(x)
+bases = (5.0 / 99.0) * ones(100)
+area = dot(alturas, bases)
 # FIN EJEMPLOS PRODUCTO INTERNO
 
+# MATRIZ VECTOR
+>>> a
+array([[-0.6,  4.8, -1.2],
+       [-2.0, -3.6, -2.1],
+       [ 1.7,  4.9,  0.0]])
 
+>>> x
+array([-0.6, -2.0,  1.7])
+
+>>> dot(a, x)
+array([-11.28,   4.83, -10.82])
+# FIN MATRIZ VECTOR
+
+# EJERCICIO 2
+>>> a = array([[0, 1],
+...            [1, 0]])
+>>> x = array([31, 49])
+>>> dot(a, x)
+?
+
+>>> a = array([[1, 2],
+...            [1, 0]])
+>>> x = array([2, 3])
+>>> dot(a, x)
+?
+# FIN EJERCICIO 2
 
