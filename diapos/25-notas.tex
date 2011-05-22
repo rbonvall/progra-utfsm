@@ -23,7 +23,7 @@
 
 \title{Productos matriciales}
 \author{Programación \\ \url{http://progra.usm.cl}}
-\date{18 y 19 de mayo de 2011}
+\date{23 y 24 de mayo de 2011}
 
 \begin{document}
   \maketitle
@@ -33,13 +33,256 @@
     \item Enseñar los productos
       vector-vector, matriz-vector y matriz-matriz.
     \item Enseñar cómo obtener estos productos usando NumPy.
-    \item Presentar aplicaciones de estos productos.
+    \item Mostrar algunas aplicaciones de estos productos.
   \end{itemize}
 
   \section*{Diapositivas}
 
   \diapo{repaso-arreglos}
 
+  Antes de comenzar con la materia de la clase de hoy,
+  haga un breve repaso sobre la materia de arreglos,
+  recordando lo siguiente.
+
+  Para poder usar arreglos,
+  hay que instalar el módulo NumPy,
+  e importar sus funciones al principio del programa
+  o de la sesión de consola
+  usando la sentencia al principio de la diapositiva.
+
+  La función \li!array! sirve para crear un arreglo
+  con los valores indicados.
+  En el primer ejemplo,
+  se crean dos arreglos \li!a! y \li!b! de una dimensión y de tamaño 3.
+  Las operaciones sobre arreglos se aplican elemento a elemento,
+  y los operandos pueden ser arreglo-escalar o arreglo-arreglo.
+  En el ejemplo,
+  \li!c! es el resultado de multiplicar por 2 todos los elementos de \li!a!,
+  y \li!d! es la suma elemento a elemento de \li!a! y \li!b!.
+  Los arreglos de una dimensión también se llaman \emph{vectores}.
+
+  Los arreglos de dos dimensiones
+  también son creados usando la función \li!array!,
+  pero pasando una lista de filas como argumento.
+  Las operaciones también se hacen elemento a elemento.
+  En el ejemplo,
+  \li!g! es el resultado de sustraer 4 a todos los elementos de \li!e!,
+  y  \li!h! tiene los elementos de \li!e!
+  elevados al elemento correspondiente de \li!f!.
+  Para operar sobre dos arreglos bidimensionales,
+  ambos deben tener la misma forma (cantidades de filas y columnas).
+  Los arreglos de dos dimensiones también se llaman \emph{matrices}.
+
+  En la materia de esta clase,
+  enseñaremos nuevas operaciones entre arreglos:
+  el producto interno, el producto matriz-vector y el producto matriz-matriz.
+  Estas operaciones se pueden implementar usando las operaciones elementales de arreglos,
+  pero son tan usadas en la práctica
+  que se justifica que estén ya implementadas eficientemente.
+  Para todas estas operaciones, se usa la función \li!dot!.
+
+  \diapo{producto-interno}
+
+  El \emph{producto interno} (o \emph{producto punto}, o \emph{producto escalar})
+  de dos vectores del mismo tamaño
+  se calcula multiplicando los vectores elemento a elemento,
+  y sumando los resultados.
+
+  Muestre en el diagrama
+  que \li!a! y \li!b! representan vectores de números reales de largo 5.
+  Los resultados de los productos término a término
+  son mostrados en gris, y el resultado final es mostrado más abajo.
+
+  Puede preguntar a los estudiantes
+  cómo implementar esta operación
+  usando la materia vista hasta ahora.
+  La solución es \li!sum(a * b)!.
+
+  \diapo{producto-interno-numpy}
+
+  Además de la solución \li!sum(a * b)!,
+  el producto interno puede ser calculado
+  usando la función \li!dot!.
+  La sesión de consola de ejemplo
+  muestra los mismos vectores del diagrama anterior,
+  e ilustra que el resultado de la llamada a \li!dot!
+  es el mismo que se obtiene usando \li!sum(a * b)!.
+
+  Puede mostrar algunos ejemplos de producto interno
+  en la consola para dejar más claro qué es lo que hace la operación.
+
+  \diapo{ejercicios-producto-interno}
+
+  Éstos son ejemplos sencillos
+  para verificar que los alumnos entendieron el concepto.
+  Pídales que digan los resultados de las operaciones.
+  Las soluciones son, respectivamente, 27 y 8.
+
+  \diapo{ejemplos-producto-interno}
+
+  En esta diapositiva se presenta algunos ejemplos prácticos
+  de uso del producto interno,
+  para justificar mejor por qué existe una función especial
+  para esta operación.
+
+  En el primer ejemplo,
+  se tiene un vector con los precios unitarios
+  de algunos productos.
+  Para obtener el valor total a pagar por una compra,
+  hay que obtener su producto interno
+  con el vector que tiene las cantidades que se comprará
+  de cada producto.
+  La asociación entre cada precio y cada cantidad
+  está dada por sus posiciones en el arreglo.
+  Cada índice corresponde a un producto.
+
+  En el segundo ejemplo,
+  se muestra cómo calcular un promedio de notas
+  en el que cada nota tiene distinta ponderación.
+  El arreglo en la primera expresión
+  tiene los porcentajes asignados para cada nota,
+  y luego es dividido por 100 para normalizarlo
+  (en general, para calcular promedios ponderados
+  debe cumplirse que \li!sum(ponderaciones) == 1!).
+  Teniendo las notas y las ponderaciones,
+  el promedio se obtiene como el producto interno
+  de ambos arreglos.
+
+  El tercer ejemplo
+  viene del ejercicio presentado en la clase de la semana pasada
+  que consistía en calcular el área de unos rectángulos
+  bajo la curva de la exponencial.
+  Puede hacer un diagrama en la pizarra para recordarlo.
+  Primero, se crea un arreglo \li!x!
+  que tiene 101 puntos equiespaciados entre 0 y 5
+  (es decir, hay 99 puntos intermedios entre ambos extremos,
+  y por lo tanto hay 100 subintervalos).
+  Luego,
+  se obtiene las alturas de cada rectángulo
+  evaluando todos los puntos excepto el último en la función \(e^x\)
+  (ya que la función es creciente
+  y por lo tanto es el lado izquierdo del rectángulo
+  el que toca la curva).
+  Los largos de las bases son todos iguales,
+  y son el largo del intervalo (5) dividido por la cantidad de subintervalos;
+  aquí se usa la función \li!ones! para crear un arreglo de valores iguales.
+  Finalmente, el área total de los rectángulos
+  es el producto interno entre los vectores de alturas y bases.
+
+  \diapo{producto-matriz-vector}
+
+  La segunda operación de la clase
+  es el producto matriz-vector.
+  Posiblemente haya algunos alumnos que ya conozcan esta operación,
+  pero lo más seguro es que la mayoría aún no la haya visto.
+  El producto matriz-vector
+  consiste en calcular los productos internos del vector
+  con todas las \emph{filas} de la matriz.
+
+  Discuta con los alumnos:
+  ¿qué condiciones deben satisfacer la forma de la matriz
+  y el largo del vector para que la operación pueda ser realizada?,
+  ¿qué tamaño tendrá el resultado?
+  Respuestas: el largo del vector
+  debe ser igual al número de columnas de la matriz,
+  y el vector resultado tiene tamaño igual
+  al número de filas.
+
+  \diapo{producto-matriz-vector-numpy}
+
+  En NumPy, el producto matriz-vector
+  también se obtiene usando la función \li!dot!.
+  Para que la operación funcione de la manera presentada
+  en la diapositiva anterior,
+  el primer argumento debe ser la matriz
+  y el segundo debe ser el vector.
+  Si se ponen en el orden incorrecto,
+  se obtendrá otro resultado
+  (a saber, los productos internos
+  entre \li!x! y las columnas de \li!a!).
+
+  \diapo{ejercicios-producto-matriz-vector}
+
+  Ejemplos sencillos
+  para verificar que los alumnos entendieron el concepto.
+  Pídales que digan los resultados de las operaciones.
+  Las soluciones son, respectivamente,
+  \li!array([49, 31])! (los mismos valores en orden inverso)
+  y \li!array([8, 2])!.
+
+  \diapo{ejercicio-nutrientes}
+  \diapo{caso-nutrientes}
+
+  (Este ejercicio está sacado del libro \emph{Linear Algebra and Its Applications}, de David~C.~Lay).
+
+  Lea en voz alta el ejercicio, explique el caso de prueba
+  y discuta con los alumnos las estrategias posibles
+  para resolver el problema.
+
+  La solución es simplemente el producto matriz-vector
+  entre la tabla de aportes por alimento
+  y el vector con las cantidades de cada elemento.
+  Intente que los estudiantes se den cuenta de esto por sí mismos.
+
+  El vector de cantidades debe ser ingresado por el usuario,
+  mientras que la tabla es constante y está incluida en el código.
+  Para ingresar las cantidades,
+  puede inicializarse un vector de ceros
+  y luego asignar sus elementos uno a uno,
+  o bien agregar las cantidades a una lista
+  y al final convertirla a un arreglo.
+
+  El código de una solución posible
+  está incluido en los programas adjuntos a la clase.
+  En clases, puede desarrollarla de otra manera,
+  o guiarse según las sugerencias de los alumnos.
+
+  \diapo{producto-matriz-matriz}
+
+  La tercera operación de la clase
+  es la multiplicación matricial.
+
+  Muestre en el diagrama
+  que el producto de dos matrices
+  se obtiene como los productos internos
+  de las filas de la primera matriz
+  y las columnas de la segunda.
+  Es casi lo mismo que el producto matriz-vector,
+  pero poniendo varios vectores pegados uno junto al otro.
+
+  Si le queda tiempo en la clase,
+  discuta que condiciones deben satisfacer las matrices,
+  y qué forma tiene el resultado.
+  (El número de columnas de la primera debe coincidir
+  con el número de filas de la segunda,
+  y el resultado tiene tantas filas como la primera
+  y tantas columnas como la segunda).
+
+  \diapo{producto-matriz-matriz-numpy}
+
+  El producto matriz-matriz también se obtiene con la función \li!dot!.
+  Al igual que para la operación anterior,
+  el orden de los operandos es importante.
+
+  \diapo{ejercicio-acero}
+
+  (Ejercicio sacado de \href{http://optimierung.mathematik.uni-kl.de/mamaeusch/veroeffentlichungen/ver_texte/matrizenrechnung_spanish.pdf}{este apunte}).
+
+  Si queda tiempo suficiente,
+  lea el enunciado del ejercicio,
+  y discuta con los estudiantes
+  la estrategia para resolverlo.
+  La solución consiste en multiplicar matricialmente ambas tablas,
+  y luego obtener los totales por columna.
+  La empresa que entrega el mayor beneficio
+  es la que está asociada a la columna con el menor total.
+
+  Discuta la interpretación del resultado del producto matricial.
+  Cada elemento de la matriz producto
+  indica cuánto se debería pagar por las materias primas
+  a una empresa dada en una semana dada.
+  Todos estos valores incluyen tanto el hierro como el carbón.
+  La matriz que se obtiene es de \(3\times 3\).
 
 \end{document}
 
