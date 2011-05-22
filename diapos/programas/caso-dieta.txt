@@ -1,0 +1,10 @@
+Ingrese cantidades de alimento en gramos
+Leche descremada: `27`
+Harina de soya: `39`
+Suero de leche: `23.3`
+
+Aporte nutritivo
+Proteinas: 32.639 gramos
+Carbohidratos: 44.542 gramos
+Grasa: 2.9863 gramos
+
