@@ -1,0 +1,73 @@
+
+\documentclass{article}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations,shapes}
+
+\def\P{\phantom{-}}
+\def\M{-}
+
+\begin{document}
+\begin{preview}
+\tikzstyle{n}=[]%[xshift=.5cm, yshift=.5cm]
+\tikzstyle{r}=[font=\footnotesize, anchor=west]%[xshift=.5cm, yshift=.5cm]
+\tikzstyle{m}=[execute at begin cell=\node\bgroup, execute at end cell=\egroup;]
+\tikzstyle{c}=[red!80!black, thick, rounded corners]
+\begin{tikzpicture}[scale=.6, xscale=2]
+
+  \begin{scope}
+    \node[n] at (-0.4, 1.5){\texttt{a =}};
+    \draw (0, 0) grid (3, 3);
+
+    \node at (0.5, 0.5) {\(\P1.7\)};
+    \node at (0.5, 1.5) {\(\M2.0\)};
+    \node at (0.5, 2.5) {\(\M0.6\)};
+
+    \node at (1.5, 0.5) {\(\P4.9\)};
+    \node at (1.5, 1.5) {\(\M3.6\)};
+    \node at (1.5, 2.5) {\(\P4.8\)};
+
+    \node at (2.5, 0.5) {\(\P0.0\)};
+    \node at (2.5, 1.5) {\(\M2.1\)};
+    \node at (2.5, 2.5) {\(\M1.2\)};
+
+    \draw[c] (0.1, 2.1) rectangle (2.9, 2.9);
+    \node (a1) at (2.8, 2.5) {};
+  \end{scope}
+
+  \begin{scope}[yshift=4cm, xshift=3.5cm]
+    \node[n] at (-0.4, 1.5){\texttt{x =}};
+    \draw (0, 0) grid (1, 3);
+
+    \node at (0.5, 0.5) {\(\P1.7\)};
+    \node at (0.5, 1.5) {\(\M2.0\)};
+    \node at (0.5, 2.5) {\(\M0.6\)};
+
+    \draw[c] (0.1, 0.1) rectangle (0.9, 2.9);
+    \node (x) at (0.5, 0.3) {};
+  \end{scope}
+
+  \begin{scope}[yshift=0cm, xshift=3.5cm, blue!50!black]
+    %\node[n] at (-0.4, 0.5){\texttt{x =}};
+    \draw (0, 0) grid (1, 3);
+
+    \node at (0.5, 0.5) {\(\M10.82\)};
+    \node at (0.5, 1.5) {\(\phantom{-0}4.83\)};
+    \node at (0.5, 2.5) {\(\M11.28\)};
+
+    \draw[c] (0.05, 2.1) rectangle (0.95, 2.9);
+    \node[anchor=center] (b1l) at (0.1, 2.5) {};
+    \node[anchor=center] (b1t) at (0.5, 2.8) {};
+  \end{scope}
+
+  \draw[-latex', c] (a1) -- (b1l);
+  \draw[-latex', c] (x) -- (b1t);
+
+
+\end{tikzpicture}
+\end{preview}
+\end{document}
+
