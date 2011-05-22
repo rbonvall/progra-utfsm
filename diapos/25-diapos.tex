@@ -48,7 +48,7 @@
   \end{frame}
 
   \begin{frame}
-    \label{producto-interno-numpy}
+    \label{ejercicios-producto-interno}
     \frametitle{Ejercicio 1}
     ¿Cuáles son los resultados
     de las siguientes operaciones?
@@ -61,6 +61,60 @@
     \frametitle{Ejemplos de uso del producto interno}
     \lstinputlisting[linerange=EJEMPLOS\ PRODUCTO\ INTERNO-FIN\ EJEMPLOS\ PRODUCTO\ INTERNO]%
         {programas/producto-interno.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-matriz-vector}
+    \frametitle{Producto matriz-vector}
+    \includegraphics[width=\textwidth]{../diagramas/matriz-vector.pdf}
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-matriz-vector-numpy}
+    \frametitle{Producto matriz-vector en NumPy}
+    \lstinputlisting[linerange=MATRIZ\ VECTOR-FIN\ MATRIZ\ VECTOR]
+        {programas/producto-interno.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicios-producto-matriz-vector}
+    \frametitle{Ejercicio 2}
+    ¿Cuáles son los resultados
+    de las siguientes operaciones?
+    \lstinputlisting[linerange=EJERCICIO\ 2-FIN\ EJERCICIO\ 2]%
+        {programas/producto-interno.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-nutrientes}
+    \frametitle{Ejercicio 3}
+    La siguiente tabla muestra cuántos gramos de nutrientes
+    son aportados por cada 100 gramos de ciertos alimentos:
+    \vspace{2ex}
+
+    {\footnotesize
+    \begin{tabular}{lp{6em}p{6em}p{4.5em}}
+      & \raggedright Leche descremada & \raggedright Harina de soya & {\raggedright Suero de leche} \\\hline
+      Proteínas     &  36 &   51 &   13  \\\hline
+      Carbohidratos &  52 &   34 &   74  \\\hline
+      Grasa         &   0 &    7 &  1.1  \\\hline
+    \end{tabular}}
+
+    \vspace{2ex}
+    El doctor Alan Howard está diseñando una nueva dieta,
+    y desea calcular su aporte nutritivo
+    en función de las cantidades recomendadas de alimentos.
+
+    \vspace{2ex}
+    Escriba un programa que pregunte la cantidades de leche, harina y suero
+    recomendadas por la dieta, y que muestre como salida
+    los aportes en cada uno de los nutrientes.
+  \end{frame}
+
+  \begin{frame}
+    \label{caso-nutrientes}
+    \frametitle{Ejercicio 3---caso de prueba}
+    \lstinputlisting[language=testcase]{programas/caso-dieta.txt}
   \end{frame}
 
 \end{document}
