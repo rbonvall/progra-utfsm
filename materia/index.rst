@@ -37,4 +37,5 @@ Contenidos del tercer certamen
 .. toctree::
 
     arreglos
+    arreglos-2d
 
