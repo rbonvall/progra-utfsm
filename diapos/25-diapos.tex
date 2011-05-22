@@ -117,5 +117,50 @@
     \lstinputlisting[language=testcase]{programas/caso-dieta.txt}
   \end{frame}
 
+  \begin{frame}
+    \label{producto-matriz-matriz}
+    \frametitle{Producto matriz-matriz}
+    \includegraphics[width=\textwidth]{../diagramas/matriz-matriz.pdf}
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-matriz-matriz-numpy}
+    \frametitle{Producto matriz-matriz en NumPy}
+    \lstinputlisting[linerange=MATRIZ\ MATRIZ-FIN\ MATRIZ\ MATRIZ]
+        {programas/producto-interno.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-acero}
+    \frametitle{Ejercicio 4}
+    Para producir acero,
+    la empresa VÖST Alpine necesita
+    hierro y carbón. Las demandas en toneladas por semana son:
+
+    \begin{center}
+      {\footnotesize
+      \begin{tabular}{lrr}
+        & Hierro & Carbón \\ \hline
+        Semana 1 &  9 &   8 \\\hline
+        Semana 2 &  5 &   7 \\\hline
+        Semana 3 &  6 &   4 \\\hline
+      \end{tabular}}
+      \vfill
+    \end{center}
+
+    Tres proveedores ofrecen estas materias primas. \\
+    ¿Cuál ofrece mayor beneficio?
+    \vfill
+
+    \begin{center}
+      {\footnotesize
+      \begin{tabular}{lrrr}
+        & Ruhr AG & Iron One & Hard Coal \\\hline
+        Hierro & \$540 & \$630 & \$530 \\\hline
+        Carbón & \$420 & \$410 & \$440 \\\hline
+      \end{tabular}}
+      \vspace{2ex}
+    \end{center}
+  \end{frame}
 \end{document}
 
