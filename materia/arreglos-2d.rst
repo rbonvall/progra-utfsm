@@ -48,6 +48,8 @@ o si no ocurre un error de valor::
       File "<stdin>", line 1, in <module>
     ValueError: setting an array element with a sequence.
 
+.. index:: shape
+
 Los arreglos tienen un atributo llamado ``shape``,
 que es una tupla con los tamaños de cada dimensión.
 En el ejemplo,
@@ -56,6 +58,8 @@ que tiene tres filas y cuatro columnas::
 
     >>> a.shape
     (3, 4)
+
+.. index:: size
 
 Los arreglos también tienen otro atributo llamado ``size``
 que indica cuántos elementos tiene el arreglo::
@@ -72,6 +76,8 @@ sino su cantidad de filas::
 
     >>> len(a)
     3
+
+.. index:: zeros (bidimensional), ones (bidimensional)
 
 Las funciones ``zeros`` y ``ones``
 también sirven para crear arreglos bidimensionales.
@@ -131,25 +137,6 @@ ambas deben tener exactamente la misma forma::
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     ValueError: shape mismatch: objects cannot be broadcast to a single shape
-
-El método ``reshape``
-entrega un arreglo que tiene los mismos elementos pero otra forma.
-El parámetro de ``reshape`` es una tupla
-indicando la nueva forma del arreglo::
-
-    >>> a = arange(12)
-    >>> a
-    array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-
-    >>> a.reshape((4, 3))
-    array([[ 0, 1, 2],
-           [ 3, 4, 5],
-           [ 6, 7, 8],
-           [ 9, 10, 11]])
-
-    >>> a.reshape((2, 6))
-    array([[ 0, 1, 2, 3, 4, 5],
-           [ 6, 7, 8, 9, 10, 11]])
 
 Obtener elementos de un arreglo bidimensional
 ---------------------------------------------
@@ -223,5 +210,79 @@ que hay en los índices::
     >>> a[2:3, 3:4]  # arreglo de dos dimensiones de 1 x 1
     array([[ 2.56]])
 
+Otras operaciones
+-----------------
+.. index:: trasposición, transpose
 
+La **trasposicion** consiste en cambiar las filas por las columnas y viceversa.
+Para trasponer un arreglo,
+se usa el método ``transpose``::
+
+    >>> a
+    array([[ 3.21,  5.33,  4.67,  6.41],
+           [ 9.54,  0.3 ,  2.14,  6.57],
+           [ 5.62,  0.54,  0.71,  2.56]])
+
+    >>> a.transpose()
+    array([[ 3.21,  9.54,  5.62],
+           [ 5.33,  0.3 ,  0.54],
+           [ 4.67,  2.14,  0.71],
+           [ 6.41,  6.57,  2.56]])
+
+.. index:: reshape
+
+El método ``reshape``
+entrega un arreglo que tiene los mismos elementos pero otra forma.
+El parámetro de ``reshape`` es una tupla
+indicando la nueva forma del arreglo::
+
+    >>> a = arange(12)
+    >>> a
+    array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+
+    >>> a.reshape((4, 3))
+    array([[ 0, 1, 2],
+           [ 3, 4, 5],
+           [ 6, 7, 8],
+           [ 9, 10, 11]])
+
+    >>> a.reshape((2, 6))
+    array([[ 0, 1, 2, 3, 4, 5],
+           [ 6, 7, 8, 9, 10, 11]])
+
+.. index:: diag
+
+La función ``diag`` aplicada a un arreglo bidimensional
+entrega la diagonal principal de la matriz
+(es decir, todos los elementos de la forma ``a[i, i]``)::
+
+    >>> a
+    array([[ 3.21,  5.33,  4.67,  6.41],
+           [ 9.54,  0.3 ,  2.14,  6.57],
+           [ 5.62,  0.54,  0.71,  2.56]])
+
+    >>> diag(a)
+    array([ 3.21,  0.3 ,  0.71])
+
+Además, ``diag`` recibe un segundo parámetro opcional
+para indicar otra diagonal que se desee obtener.
+Las diagonales sobre la principal son positivas,
+y las que están bajo son negativas::
+
+    >>> diag(a, 2)
+    array([ 4.67,  6.57])
+    >>> diag(a, -1)
+    array([ 9.54,  0.54])
+
+La misma función ``diag`` también cumple el rol inverso:
+al recibir un arreglo de una dimensión,
+retorna un arreglo bidimensional
+que tiene los elementos del parámetro en la diagonal::
+
+    >>> diag(arange(5))
+    array([[0, 0, 0, 0, 0],
+           [0, 1, 0, 0, 0],
+           [0, 0, 2, 0, 0],
+           [0, 0, 0, 3, 0],
+           [0, 0, 0, 0, 4]])
 
