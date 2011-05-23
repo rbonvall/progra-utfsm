@@ -132,5 +132,96 @@ ambas deben tener exactamente la misma forma::
       File "<stdin>", line 1, in <module>
     ValueError: shape mismatch: objects cannot be broadcast to a single shape
 
+El método ``reshape``
+entrega un arreglo que tiene los mismos elementos pero otra forma.
+El parámetro de ``reshape`` es una tupla
+indicando la nueva forma del arreglo::
+
+    >>> a = arange(12)
+    >>> a
+    array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+
+    >>> a.reshape((4, 3))
+    array([[ 0, 1, 2],
+           [ 3, 4, 5],
+           [ 6, 7, 8],
+           [ 9, 10, 11]])
+
+    >>> a.reshape((2, 6))
+    array([[ 0, 1, 2, 3, 4, 5],
+           [ 6, 7, 8, 9, 10, 11]])
+
+Obtener elementos de un arreglo bidimensional
+---------------------------------------------
+Para obtener un elemento de un arreglo,
+debe indicarse los índices de su fila ``i`` y su columna ``j``
+mediante la sintaxis ``a[i, j]``::
+
+
+    >>> a = array([[ 3.21,  5.33,  4.67,  6.41],
+                   [ 9.54,  0.30,  2.14,  6.57],
+                   [ 5.62,  0.54,  0.71,  2.56],
+                   [ 8.19,  2.12,  6.28,  8.76],
+                   [ 8.72,  1.47,  0.77,  8.78]])
+    >>> a[1, 2]
+    2.14
+
+    >>> a[4, 3]
+    8.78
+
+    >>> a[-1, -1]
+    8.78
+
+    >>> a[0, -1]
+    6.41
+
+También se puede obtener secciones rectangulares del arreglo
+usando el operador de rebanado con los índices::
+
+    >>> a[2:3, 1:4]
+    array([[ 0.54,  0.71,  2.56]])
+
+    >>> a[1:4, 0:4]
+    array([[ 9.54,  0.3 ,  2.14,  6.57],
+           [ 5.62,  0.54,  0.71,  2.56],
+           [ 8.19,  2.12,  6.28,  8.76]])
+
+    >>> a[1:3, 2]
+    array([ 2.14,  0.71])
+
+    >>> a[0:4:2, 3:0:-1]
+    array([[ 6.41,  4.67,  5.33],
+           [ 2.56,  0.71,  0.54]])
+
+    >>> a[::4, ::3]
+    array([[ 3.21,  6.41],
+           [ 8.72,  8.78]])
+
+
+Para obtener una fila completa,
+hay que indicar el índice de la fila,
+y poner ``:`` en el de las columnas
+(significa «desde el principio hasta el final»).
+Lo mismo para las columnas::
+
+    >>> a[2, :]
+    array([ 5.62,  0.54,  0.71,  2.56])
+
+    >>> a[:, 3]
+    array([ 6.41,  6.57,  2.56,  8.76,  8.78])
+
+Note que el número de dimensiones
+es igual a la cantidad de rebanados
+que hay en los índices::
+
+    >>> a[2, 3]      # valor escalar (arreglo de cero dimensiones)
+    2.56
+
+    >>> a[2:3, 3]    # arreglo de una dimensión de 1 elemento
+    array([ 2.56])
+
+    >>> a[2:3, 3:4]  # arreglo de dos dimensiones de 1 x 1
+    array([[ 2.56]])
+
 
 
