@@ -32,9 +32,9 @@ ponderaciones = array([20, 25, 25, 30]) * .01
 notas = array([55, 48, 39, 71])
 promedio = dot(ponderaciones, notas)
 
-x = linspace(0, 5, 100)
-alturas = exp(x)
-bases = (5.0 / 99.0) * ones(100)
+x = linspace(0, 5, 101)
+alturas = exp(x[:100])
+bases = (5.0 / 100) * ones(100)
 area = dot(alturas, bases)
 # FIN EJEMPLOS PRODUCTO INTERNO
 
@@ -65,3 +65,17 @@ array([-11.28,   4.83, -10.82])
 ?
 # FIN EJERCICIO 2
 
+# MATRIZ MATRIZ
+>>> a = array([[ 2,  8],
+               [-3,  7],
+               [-8, -5]])
+
+>>> b = array([[-3, -5, -6, -3],
+               [-9, -2,  3, -3]])
+
+>>> dot(a, b)
+array([[-78, -26,  12, -30],
+       [-54,   1,  39, -12],
+       [ 69,  50,  33,  39]])
+
+# FIN MATRIZ MATRIZ
