@@ -160,5 +160,43 @@
     \lstinputlisting[language=testcase]{programas/caso-parabola.txt}
   \end{frame}
 
+  \begin{frame}
+    \label{ejercicio-migracion}
+    \frametitle{Migración urbana}
+    Estudios demográficos muestran que anualmente
+    el 5\% de la población de una ciudad
+    se muda a los suburbios (y el 95\% se queda en la ciudad),
+    mientras que el 3\% de la población de los suburbios
+    se muda a la ciudad (y el 97\% se queda).
+    \vspace{2ex}
+
+    En el año 2011,
+    600 mil personas viven en la ciudad,
+    y 400 mil viven en los suburbios.
+    ¿Cuáles serán las poblaciones en el año 2012?
+    \pause
+    \[
+      \begin{array}{cc}
+        &
+        \begin{bmatrix} 600 \\ 400 \\ \end{bmatrix} \vspace{3ex} \\
+        \begin{bmatrix}
+          0.95 & 0.03 \\
+          0.05 & 0.97 \\
+        \end{bmatrix} &
+        \begin{bmatrix} \;c\; \\ \;s\; \\ \end{bmatrix}
+      \end{array}
+    \]
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-migracion}
+    Escriba un programa que pida al usuario \\
+    las poblaciones iniciales de la ciudad y los suburbios, \\
+    y muestre una tabla de las poblaciones \\
+    para los próximos 10 años.
+    \footnotesize
+    \lstinputlisting[language=testcase]{programas/caso-migracion.txt}
+  \end{frame}
+
 \end{document}
 
