@@ -1,0 +1,164 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\input{../latex/definiciones.tex}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Resolución de sistemas lineales}
+\author{
+  Programación \\ \url{http://progra.usm.cl}
+}
+\date{25 y 26 de mayo de 2011}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-matriz-vector}
+    \frametitle{Repaso: producto matriz-vector}
+    \includegraphics[width=\textwidth]{../diagramas/matriz-vector.pdf}
+  \end{frame}
+
+  \begin{frame}
+    \label{producto-matriz-vector-numpy}
+    \frametitle{Repaso: producto matriz-vector en NumPy}
+    \lstinputlisting[linerange=MATRIZ\ VECTOR-FIN\ MATRIZ\ VECTOR]
+        {programas/producto-interno.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-nutrientes}
+    \frametitle{Variación del ejercicio de la clase anterior}
+    La siguiente tabla muestra cuántos gramos de nutrientes
+    son aportados por cada 100 gramos de ciertos alimentos:
+    \vspace{2ex}
+
+    {\footnotesize
+    \begin{tabular}{lp{6em}p{6em}p{4.5em}}
+      & \raggedright Leche descremada & \raggedright Harina de soya & {\raggedright Suero de leche} \\\hline
+      Proteínas     &  36 &   51 &   13  \\\hline
+      Carbohidratos &  52 &   34 &   74  \\\hline
+      Grasa         &   0 &    7 &  1.1  \\\hline
+    \end{tabular}}
+
+    \begin{enumerate}
+      \vspace{2ex}
+      \item
+        Obtener el \textbf{aporte en nutrientes} al consumir \\
+        10 gramos de leche descremada,
+        50 gramos de harina de soya y
+        30 gramos de suero de leche.
+      \vspace{2ex}
+      \item
+        Obtener las \textbf{cantidades de alimentos} para consumir
+        33 gramos de proteínas,
+        45 gramos de carbohidratos y
+        3 gramos de grasa.
+    \end{enumerate}
+  \end{frame}
+
+  \begin{frame}
+    \label{diagramas-dieta}
+    \begin{columns}
+      \column{0.45\textwidth}
+        \begin{block}{Problema 1}
+          \vspace{2ex}
+          \includegraphics[width=.9\textwidth]{../diagramas/dieta-1.pdf}
+        \end{block}
+      \column{0.45\textwidth}
+        \begin{block}{Problema 2}
+          \vspace{2ex}
+          \includegraphics[width=.9\textwidth]{../diagramas/dieta-2.pdf}
+        \end{block}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-nutrientes}
+    \frametitle{Solución problema 1}
+    \lstinputlisting[linerange=CALCULAR\ NUTRIENTES-FIN\ CALCULAR\ NUTRIENTES]
+        {programas/ecuaciones-matriciales.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{solucion-alimentos}
+    \frametitle{Solución problema 2}
+    \lstinputlisting[linerange=CALCULAR\ ALIMENTOS-FIN\ CALCULAR\ ALIMENTOS]
+        {programas/ecuaciones-matriciales.py}
+  \end{frame}
+
+  \begin{frame}
+    \label{enunciado-feria}
+    \frametitle{Ejercicio: feria de entretenciones}
+    La entrada a una feria de entretenciones \\
+    vale \$500 para niños y \$1\,800 para adultos.
+    \vspace{2ex}
+
+    En cierto día,
+    2\,200 personas fueron a la feria, \\
+    y se recaudó \$2\,010\,000 en total.
+    \vspace{2ex}
+
+    ¿Cuántos niños y cuántos adultos asistieron?
+    \pause
+    \[
+      \begin{array}{cc}
+        &
+        \begin{bmatrix} n \\ a \\ \end{bmatrix} \vspace{3ex} \\
+        \begin{bmatrix} 1 & 1 \\ 500 & 1700 \\ \end{bmatrix} &
+        \begin{bmatrix} 2200  \\ 2010000    \\ \end{bmatrix}
+      \end{array}
+    \]
+  \end{frame}
+
+  \begin{frame}
+    \label{ejercicio-parabola}
+    \frametitle{Ejercicio: parábola}
+    Una parábola \(f(x) = ax^2 + bx + c\)
+    pasa por los puntos
+    \((3, 9)\), \((4, 5)\) y \((5, 12)\).
+    \vspace{2ex}
+
+    ¿Cuál es esa parábola? Es decir,
+    ¿cuánto valen \(a\), \(b\) y \(c\)?
+
+    \pause
+    \[
+      \begin{array}{cc}
+        &
+        \begin{bmatrix} a \\ b \\ c \\ \end{bmatrix} \vspace{3ex} \\
+        \begin{bmatrix}
+          3^2 & 3 & 1 \\
+          4^2 & 4 & 1 \\
+          5^2 & 5 & 1 \\
+        \end{bmatrix} &
+        \begin{bmatrix} 9 \\ 5 \\ 12  \\ \end{bmatrix}
+      \end{array}
+    \]
+
+  \end{frame}
+
+  \begin{frame}
+    \label{problema-parabola}
+    Escriba un programa que pida al usuario \\
+    ingresar las coordenadas de tres puntos, \\
+    y muestre cuál es la parábola que pasa por esos puntos:
+    \lstinputlisting[language=testcase]{programas/caso-parabola.txt}
+  \end{frame}
+
+\end{document}
+

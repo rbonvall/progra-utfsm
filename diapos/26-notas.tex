@@ -1,0 +1,200 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+\hyphenation{}
+
+\setjobnamebeamerversion{26-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Resolución de sistemas lineales}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{25 y 26 de mayo de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Enseñar cómo resolver sistemas lineales usando SciPy.
+    \item Plantear sistemas lineales sencillos
+      en forma matricial, para ser resueltos en el computador.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  En esta clase,
+  veremos cómo resolver sistemas lineales
+  de la forma \(Ax = b\),
+  donde \(A\) es una matriz dada,
+  \(b\) es un vector dado
+  y \(x\) es el vector cuyo valor se desea resolver.
+  Para esto, usaremos la función \li!solve!
+  que está provista por el módulo \li!numpy.linalg!.
+
+  El objetivo no es enseñar la teoría detras de los sistemas de ecuaciones,
+  sino mostrarlos como una manera de plantear un problema
+  de modo de resolverlo usando una técnica ya implementada.
+
+  Si en la clase pasada no alcanzó a cubrir todas las diapositivas,
+  retome esa materia desde donde quedó,
+  y luego continúe con la materia de esta clase.
+
+  \diapo{producto-matriz-vector}
+  \diapo{producto-matriz-vector-numpy}
+
+  Antes de comenzar, haga un repaso de la operación
+  de producto entre una matriz y un vector.
+  Enfatice que todos los elementos del resultado
+  son simplemente productos internos entre las filas de la matriz
+  y el vector.
+
+  El resultado de esta operación
+  es obtenido en NumPy usando la función \li!dot!,
+  pasándole como argumentos la matriz \(A\) y el vector \(x\).
+  Si la matriz \(A\) es de \(m\times n\),
+  entonces el vector \(x\) debe tener \(n\) elementos,
+  y el resultado \(b = Ax\) es un vector de \(m\) elementos.
+
+  \diapo{ejercicio-nutrientes}
+
+  Este ejercicio es una variación de uno de los problemas vistos
+  la clase pasada. La tabla asocia a cada alimento su aporte
+  en cada uno de los nutrientes.
+  Lea el enunciado en voz alta,
+  y discuta qué es lo que se pide obtener en ambas preguntas.
+
+  En la primera pregunta, la cantidad de alimentos está dada,
+  y se pide obtener el aporte por cada nutriente.
+  En la segunda es al revés: el aporte está dado,
+  y se pide obtener cuánto hay que consumir de cada alimento.
+  (Esta es la motivación original para el problema,
+  ya que las cantidades de comida de una dieta
+  están propuestas en función del aporte que se espera obtener).
+
+  Proponga a los estudiantes que formulen ambas preguntas
+  usando matrices y vectores.
+  Idealmente,
+  deberían poder plantear los problemas
+  de manera parecida a lo que se muestra en la próxima diapositiva.
+
+  \diapo{diagramas-dieta}
+
+  El diagrama de esta diapostiva
+  ilustra claramente cuáles son los datos que están dados,
+  y cuáles son las incógnitas en las dos preguntas planteadas.
+  En ambos casos,
+  cada elemento del vector \li!x! está asociado a un alimento
+  (es decir, a una columna de \li!a!)
+  y cada elemento del vector \li!b! está asociado a un nutriente
+  (es decir, a una fila de \li!a!).
+
+  Tómese su tiempo para explicar el diagrama,
+  qué significa cada valor
+  y a qué están asociadas las filas y las columnas.
+
+  Pregunte a los estudiantes
+  cómo resolverían cada uno de los problemas mediante un programa.
+  En el primer caso,
+  la solución es simplemente calcular el producto usando la función \li!dot!.
+  Para el segundo caso se necesita la nueva función que enseñaremos,
+  pero en principio se puede resolver usando métodos que algunos alumnos
+  ya podrían conocer, como aplicar operaciones elementales entre las filas
+  para despejar las incógnitas.
+
+  \diapo{solucion-nutrientes}
+
+  La solución al primer problema
+  consiste simplemente en obtener el producto entre la matriz y el vector
+  usando la función \li!dot!.
+
+  \diapo{solucion-alimentos}
+
+  La solución al segundo problema
+  es obtenida usando la función \li!solve!
+  que hay que importar desde el módulo \li!numpy.linalg!.
+
+  Enfatice cuál es el tipo de problemas que resuelve la función \li!solve!:
+  aquéllos que tienen la forma del segundo de los diagramas presentados anteriormente,
+  donde la incógnita es el vector que se está multiplicando por la matriz.
+
+  \diapo{enunciado-feria}
+
+  Ejercicio simple de planteo.
+  La idea es formular la solución en función de matrices y vectores
+  de una manera que pueda ser resuelta usando la función \li!solve!.
+  Proponga a los estudiantes que lo planteen.
+
+  Primero hay que identificar las dos incógnitas.
+  Para poder usar \li!solve!, ambas incógnitas deben aparecer
+  como elementos del vector \li!b!.
+
+  La estrategia para plantear el sistema
+  es identificar cuáles son los productos internos involucrados.
+  En este caso, hay uno para el total de personas
+  (en que las ponderaciones son 1 y 1)
+  y otro para el total recaudado
+  (donde las ponderaciones son los precios).
+
+  La respuesta al ejercicio de planteo está incluida en la diapositiva.
+
+  \diapo{ejercicio-parabola}
+
+  Otro ejercicio de planteo.
+  Nuevamente, hay que formular el problema
+  en función de matrices y vectores.
+  Otra vez, dé unos minutos a los estudiantes para que lo descubran por sí mismos.
+
+  La clave sigue siendo identificar
+  cuáles son los productos internos involucrados.
+  La evaluación del polinomio cuadrático \(f\)
+  es en efecto un producto interno
+  entre los coeficientes del polinomio
+  y las potencias de la variable \(x\).
+
+  Una pregunta que cabe discutir es:
+  ¿cómo se decide si asignar los coeficientes a la matriz \(A\)
+  y las potencias al vector \(b\), o viceversa?
+  Una regla simple para notarlo es
+  analizar cuáles son los datos que cambian en cada evaluación.
+  En este caso, son las potencias las que cambian (ya que \(x\) cambia),
+  y por lo tanto son las que deben ir en cada fila de la matriz.
+  Los coeficientes del polinomio son siempre los mismos,
+  y por lo tanto van en el vector \(b\).
+
+  La respuesta al ejercicio de planteo está incluida en la diapositiva.
+
+  \diapo{problema-parabola}
+
+  Ejercicio práctico para implementar una solución
+  para el problema planteado en el ejercicio anterior.
+
+  Lea el enunciado, explique el caso de prueba
+  y discuta las estrategias para resolverlo.
+
+  Al final,
+  las partes más engorrosas del programa son la entrada y la salida.
+  La parte del proceso es muy simple
+  ya que es sólo una llamada a la función \li!solve!.
+  La tarea del programador es crear las matrices con los elementos indicados
+  en el orden apropiado para poder usar el resolvedor ya disponible.
+
+  En los programas adjuntos,
+  se ilustra tres maneras distintas de llenar la matriz.
+
+\end{document}
+
