@@ -1,0 +1,7 @@
+Ingrese coordenadas x y de tres puntos.
+P1: `3 9`
+P2: `4 5`
+P3: `5 12`
+
+La parabola es:
+5.5 x2 + -42.5 x + 87
