@@ -116,5 +116,9 @@ de acuerdo a la `planificación de la asignatura`_.
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/25-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/25-programas.zip
 
-* Sesión 26: por subir.
+* Sesión 26: diapos__, notas__, `soluciones a los problemas`__.
+
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-diapos.pdf
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-notas.pdf
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-programas.zip
 
