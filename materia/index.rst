@@ -38,4 +38,5 @@ Contenidos del tercer certamen
 
     arreglos
     arreglos-2d
+    productos
 
