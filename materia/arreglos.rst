@@ -366,6 +366,33 @@ sino a los espacios entre los elementos:
     >>> b[1:5:2]
     array([ 2.19, -2.29])
 
+Algunos métodos convenientes
+----------------------------
+Los arreglos proveen algunos métodos útiles que conviene conocer.
 
+Los métodos ``min`` y ``max``,
+entregan respectivamente el mínimo y el máximo
+de los elementos del arreglo::
 
+    >>> a = array([4.1, 2.7, 8.4, pi, -2.5, 3, 5.2])
+    >>> a.min()
+    -2.5
+    >>> a.max()
+    8.4000000000000004
+
+Los métodos ``argmin`` y ``argmax``
+entregan respectivamente la posición del mínimo y del máximo::
+
+    >>> a.argmin()
+    4
+    >>> a.argmax()
+    2
+
+Los métodos ``sum`` y ``prod``
+entregan respectivamente la suma y el producto de los elementos::
+
+    >>> a.sum()
+    24.041592653589795
+    >>> a.prod()
+    -11393.086289208301
 
