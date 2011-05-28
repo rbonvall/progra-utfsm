@@ -122,3 +122,5 @@ de acuerdo a la `planificación de la asignatura`_.
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-programas.zip
 
+* Sesión 27: ejercicios propuestos por el profesor.
+* Sesión 28: ejercicios propuestos por el profesor.
