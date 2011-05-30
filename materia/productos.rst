@@ -43,10 +43,30 @@ Producto matriz-vector
 ----------------------
 El **producto matriz-vector**
 es el vector de los productos internos
+El producto matriz-vector puede ser visto
+simplemente como varios productos internos
+calculados de una sola vez.
+
+Esta operación también es obtenida
+usando la función ``dot``
 entre las filas de la matriz y el vector:
 
 .. image:: ../diagramas/matriz-vector.png
    :center:
+
+El producto matriz-vector puede ser visto
+simplemente como varios productos internos
+calculados de una sola vez.
+
+Esta operación también es obtenida
+usando la función ``dot``::
+
+    >>> a = array([[-0.6,  4.8, -1.2],
+                   [-2. , -3.6, -2.1],
+                   [ 1.7,  4.9,  0. ]])
+    >>> x = array([-0.6, -2. ,  1.7])
+    >>> dot(a, x)
+    array([-11.28,   4.83, -10.82])
 
 Producto matriz-matriz
 ----------------------
@@ -58,11 +78,30 @@ y las columnas de la segunda:
 .. image:: ../diagramas/matriz-matriz.png
    :center:
 
+Esta operación también es obtenida
+usando la función ``dot``::
 
-::
+    >>> a = array([[ 2,  8],
+                   [-3,  7],
+                   [-8, -5]])
+    >>> b array([[-3, -5, -6, -3],
+                 [-9, -2,  3, -3]])
+    >>> dot(a, b)
+    array([[-78, -26,  12, -30],
+           [-54,   1,  39, -12],
+           [ 69,  50,  33,  39]])
+
+La multiplicación de matrices
+puede ser vista como varios productos matriz-vector
+(usando como vectores todas las filas de la segunda matriz),
+calculados de una sola vez.
+
+En resumen,
+al usar la función ``dot``,
+la estructura del resultado
+depende de cuáles son los parámetros pasados::
 
     dot(vector, vector) → número
     dot(matriz, vector) → vector
     dot(matriz, matriz) → matriz
-
 
