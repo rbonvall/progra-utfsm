@@ -17,7 +17,7 @@ consiste en obtener cuál es el vector ``x``
 cuando ``A`` y ``b`` son dados:
 
 .. image:: ../diagramas/dieta-2.png
-   :center:
+   :align: center
 
 La ecuación matricial `Ax = b` es una manera abreviada
 de expresar un `sistema de ecuaciones lineales`:

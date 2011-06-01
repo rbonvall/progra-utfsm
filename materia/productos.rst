@@ -11,7 +11,7 @@ El **producto interno** entre dos vectores
 es la suma de los productos entre elementos correspondientes:
 
 .. image:: ../diagramas/producto-interno.png
-   :center:
+   :align: center
 
 El producto interno entre dos vectores
 se obtiene usando la función ``dot``
@@ -52,7 +52,7 @@ usando la función ``dot``
 entre las filas de la matriz y el vector:
 
 .. image:: ../diagramas/matriz-vector.png
-   :center:
+   :align: center
 
 El producto matriz-vector puede ser visto
 simplemente como varios productos internos
@@ -76,7 +76,7 @@ entre las filas de la primera matriz
 y las columnas de la segunda:
 
 .. image:: ../diagramas/matriz-matriz.png
-   :center:
+   :align: center
 
 Esta operación también es obtenida
 usando la función ``dot``::
