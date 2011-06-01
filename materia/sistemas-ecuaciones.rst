@@ -4,7 +4,7 @@ Resolución de sistemas lineales
 Repasemos el producto matriz-vector:
 
 .. image:: ../diagramas/dieta-1.png
-   :center:
+   :align: center
 
 Esta operación tiene dos operandos:
 una matriz y un vector.
