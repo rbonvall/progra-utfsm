@@ -13,4 +13,5 @@ Arreglos bidimensionales
     cuadrado-magico
     sudoku
     matrices-especiales
+    buscaminas
 
