@@ -20,7 +20,11 @@ cuando ``A`` y ``b`` son dados:
    :align: center
 
 La ecuación matricial `Ax = b` es una manera abreviada
-de expresar un `sistema de ecuaciones lineales`_:
+de expresar un `sistema de ecuaciones lineales`_.
+Por ejemplo,
+la ecuación del diagrama
+es equivalente al siguiente sistema de tres ecuaciones
+que tiene las tres incógnitas `w`, `y` y `z`:
 
 .. math::
 
