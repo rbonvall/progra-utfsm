@@ -1,0 +1,367 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+\hyphenation{}
+
+\setjobnamebeamerversion{29-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Interfaces gráficas}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{6 y 7 de junio de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Presentar la biblioteca Tkinter
+      para la creación de interfaces gráficas en Python.
+    \item Presentar los widgets básicos
+      para hacer entrada y salida:
+      \li!Entry!, \li!Label! y \li!Button!.
+    \item Explicar el patrón modelo-vista-controlador
+      que subyace a las interfaces gráficas de Tkinter.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  Existen muchas bibliotecas para crear interfaces gráficas en Python.
+  Tkinter es la «oficial»,
+  pues viene incorporada en la biblioteca estándar de Python.
+  La ventaja es que no suele ser necesario instalar nada para usarla,
+  excepto en algunas distribuciones de Linux, en las que debe ser instalada por separado.
+
+  En esta clase,
+  enseñaremos lo mínimo que hay que saber para crear una interfaz funcional simple.
+  Omitiremos muchos detalles y variantes,
+  para evitar introducir confusiones,
+  y nos enfocaremos en los conceptos importantes.
+
+  Antes de comenzar la materia,
+  explique a los estudiantes qué es una interfaz gráfica.
+  Simplemente es otra manera de hacer entrada y salida en un programa.
+  Recuerde a los estudiantes qué son la entrada y la salida del programa,
+  y mencione los mecanismos de entrada que hemos visto hasta ahora
+  (por teclado y por archivo)
+  así como los mecanismos de salida
+  (por pantalla y por archivo).
+
+  Durante la clase,
+  use las diapositivas para explicar los conceptos,
+  y muestre en vivo cómo se crean los programas,
+  usando la consola o los programas adjuntos.
+
+  \diapo{crear-ventana}
+
+  Esta diapositiva muestra lo mínimo que debe hacerse
+  para crear una interfaz gráfica:
+  crear la ventana principal
+  e iniciar el ciclo de eventos.
+
+  Primero hay que importar todos los objetos del módulo Tkinter.
+  El módulo está diseñado para ser usado de este modo.
+
+  A continuación,
+  hay que crear la ventana principal
+  llamando a su constructor llamado \li!Tk! (ojo con la mayúscula).
+  Por convención,
+  siempre llamaremos \li!w! a la variable
+  que asociaremos a la ventana recién creada
+  (se suele llamarla \li!window!, pero por brevedad mejor dejar sólo la \li!w!).
+
+  Al final del programa,
+  hay que iniciar el ciclo de eventos de la ventana
+  invocando su método \li!mainloop!.
+  Aquí es importante notar la diferencia fundamental
+  con respecto a las interfaces de consola.
+  Las interfaces gráficas están permanentemente en un ciclo infinito,
+  escuchando si ocurre algún evento (como el clic a un botón).
+  El instante en que se ejecuta el código no es sabido de antemano.
+  Esto requiere estructurar los programas de otra manera,
+  que es la que iremos explicando durante esta clase.
+
+  En general,
+  toda la parte del programa en que se crea la interfaz
+  va entre la creación de la ventana
+  y la llamada a \li!mainloop!.
+  Esto se ha indicado  con los puntos suspensivos en la diapositiva.
+  Mencione que esta es la plantilla en la que nos basaremos
+  para crear todos los programas que hagamos en adelante.
+
+  Muestre en la consola el programa sencillo que crea la ventana vacía,
+  y que el programa se queda «pegado» al ejecutar el \li!mainloop!,
+  hasta que uno cierra la ventana.
+
+  \diapo{widgets}
+
+  Los componentes de una interfaz gráfica
+  se llaman \emph{widgets}.
+  Un widget es simplemente cualquier cosa que podemos poner en una ventana.
+  En la clase de hoy,
+  aprenderemos a crear sólo tres widgets,
+  que son suficientes para crear programas simples:
+  \begin{itemize}
+    \item las \textbf{etiquetas} (\li!Label!)
+      sirven para mostrar datos en la interfaz,
+    \item los \textbf{botones} (\li!Button!)
+      sirven para hacer que algo ocurra en el programa, y
+    \item los \textbf{campos de entrada} (\li!Entry!)
+      sirven para ingresar datos al programa.
+  \end{itemize}
+
+  Para hacer una correspondencia con los programas con interfaz de consola,
+  el \li!Entry! es análogo al \li!raw_input!
+  y el \li!Label! al \li!print!.
+  Los botones no tienen un análogo,
+  pues en un programa con interfaz de consola
+  las funciones no son llamadas ante eventos del usuario.
+  El rol de los botones puede ser explicado
+  como el de un «llamador de funciones»:
+  cada vez que uno presione un botón,
+  se ejecutará la función que tiene asociada.
+
+  La diapositiva muestra
+  cómo se ve un programa que tiene un widget de cada tipo.
+  Un programa puede tener tantos widgets de cualquier tipo
+  como uno le indique.
+
+  \diapo{crear-widgets}
+
+  Cada uno de los tipos de widgets tiene un constructor,
+  que se llaman respectivamente \li!Label!, \li!Button! y \li!Entry!.
+  Al llamar al constructor,
+  el primer parámetro \emph{siempre} debe ser
+  la ventana en la que estará contenido el widget.
+  Éste es el único parámetro obligatorio.
+  Los demás parámetros son opcionales
+  y se pasan con la sintaxis de asignación de parámetros por nombre.
+  En el ejemplo,
+  el único parámetro opcional que es usado es \li!text!,
+  que sirve para indicar el texto que será mostrado en el widget.
+
+  Al crear el widget mediante su constructor,
+  \emph{no} es agregado a la ventana inmediatamente.
+  Debe ser agregado explícitamente
+  llamando a su método \li!pack!
+  (``empaquetar'' en inglés).
+  La llamada puede ser vista como una orden: «agrégate a la ventana».
+
+  Los widgets van apareciendo en el orden en que son empaquetados,
+  no en el que los constructores son creados.
+  Las llamadas a \li!pack! sin parámetros
+  siempre apila los widgets verticalmente,
+  de arriba hacia abajo.
+  En la próxima clase veremos cómo hacerlo de otras maneras.
+  Por ahora, sólo usaremos el comportamiento por omisión.
+
+  Explique con detención los conceptos importantes:
+  \begin{itemize}
+    \item primer parámetro debe ser la ventana padre,
+    \item hay que asignar el widget a una variable,
+    \item agregar el widget a la ventana
+      llamando al método \li!pack!.
+  \end{itemize}
+
+  El programa de la diapositiva
+  está incluído en los archivos adjuntos.
+  Muéstrelo en ejecución.
+  Demuestre que al hacer clic en los botones no ocurre absolutamente nada,
+  y anuncie que lo que haremos a continuación
+  es hacer que los botones hagan algo.
+
+  \diapo{controladores}
+
+  La interfaz que está creada en este programa
+  es exactamente la misma del ejemplo anterior,
+  sólo que se asoció acciones a los botones.
+  Las acciones deben ser encapsuladas en funciones
+  que reciben el nombre de \emph{controladores}.
+  Cada vez que se haga clic al botón,
+  la función será ejecutada.
+
+  Muestre las dos diferencias entre este programa y el anterior:
+  \begin{itemize}
+    \item se creó una función llamada \li!saludar!,
+      que imprime el mensaje \li!Hola! en la consola, y
+    \item se asoció comandos a los botones
+      usando el parámetro \li!command!.
+  \end{itemize}
+
+  El parámetro \li!command! permite especificar el controlador asociado al botón.
+  El controlador debe ser una función que no recibe parámetros.
+  Hay que tener cuidado de no llamar a la función al momento de crear el botón:
+  \begin{lstlisting}
+b1 = Button(w, text='Saludar', command=saludar())  # INCORRECTO
+b1 = Button(w, text='Saludar', command=saludar)    # CORRECTO
+  \end{lstlisting}
+
+  El segundo botón está asociado a la función \li!exit!,
+  que ya existe en Python y lo que hace es terminar el programa.
+
+  Muestre el código del programa y ejecútelo.
+  Muestre en vivo lo que ocurre al hacer clic en los botones.
+
+  \diapo{modelos}
+
+  Hasta aquí hemos visto como crear una interfaz estática.
+  Una interfaz también puede tener un estado
+  que va mutando a medida que ocurren eventos.
+
+  Un \emph{modelo} es un dato almacenado
+  que está asociado a la interfaz.
+  En cualquier momento,
+  se puede modificar el dato contenido en el modelo,
+  y también se puede obtener cuál es su valor actual.
+
+  En Tkinter, los modelos se llaman \emph{variables}
+  (que no son lo mismo que las variables de Python,
+  lo que puede llevar a confusión).
+  En nuestros programas,
+  usaremos sólo modelos de tipo strings,
+  que son creados usando el constructor \li!StringVar!.
+  Hay modelos de otros tipos,
+  pero las conversiones de datos entre strings y otros tipos
+  son tan fáciles que no vale la pena tener que memorizar
+  todos los tipos de modelos que hay (y que además tienen nombres confusos,
+  como \li!DoubleVar! para datos de tipo \li!float!).
+
+  Todos los datos de la interfaz
+  que cambian durante el programa
+  deben ser asociados a un modelo.
+  En el ejemplo de la diapositiva,
+  se muestra una interfaz que tiene dos \li!Label!s.
+  El primero tiene una leyenda estática,
+  que permanecerá igual durante todo el programa,
+  y que es indicada usando el parámetro \li!text!.
+  El segundo está asociado a un modelo creado anteriormente,
+  que debe ser indicado usando el parámetro \li!textvariable!.
+  En todo momento,
+  la leyenda mostrada en el \li!Label!
+  será el dato almacenado en el modelo \li!v!.
+  Al modificar el valor del modelo,
+  también cambiará la leyenda.
+
+  Para modificar el valor del modelo,
+  debe usarse su método \li!set!,
+  pasando como argumento el nuevo valor.
+  Para obtener su valor actual,
+  debe usarse el método \li!get! sin parámetros.
+
+  Los dos \li!Label!s se ven exactamente iguales en la interfaz,
+  pero difieren en que la leyenda del segundo puede ser modificada
+  durante el programa.
+
+  \diapo{ejercicio-mas-uno}
+
+  Lea y explique el enunciado de este ejercicio a los alumnos.
+  Puede partir ejecutando el programa (adjunto)
+  sin mostrar el código,
+  para dejar claro qué es lo que tiene que hacer.
+
+  Primero que todo,
+  haga que identifiquen:
+  \begin{itemize}
+    \item qué widgets hay que crear
+      (tres: un \li!Label! y dos \li!Button!s),
+    \item qué modelos hay que crear
+      (uno, para guardar el valor que se muestra en el \li!Label!),
+    \item qué controladores hay que crear
+      (dos: uno para cada botón)
+  \end{itemize}
+
+  Escriba el código en varias iteraciones
+  junto con los alumnos.
+  Primero,
+  haga la estructura básica de la interfaz:
+  crear la ventana, crear los widgets e iniciar el \li!mainloop!;
+  pruebe el programa para ver que se ve como en el ejemplo.
+  A continuación,
+  cree el modelo
+  y asócielo al \li!Label!.
+  Finalmente,
+  cree los controladores
+  y asócielos a los botones.
+  Es más claro escribir el código de esta manera
+  que hacerlo inmediatamente de principio a fin.
+
+  Ojo con el orden en que se definen las cosas en el código:
+  el controlador debe ser definido después que el modelo,
+  pues se necesita una referencia a éste para modificar su valor
+  desde dentro de la función.
+
+  \diapo{entrada}
+
+  Para ingresar datos al programa,
+  hay que usar un widget \li!Entry! asociado a un modelo.
+  En cualquier momento que se desee obtener el valor
+  que está ingresado en el \li!Entry!,
+  basta con llamar al método \li!get! de su modelo asociado.
+  Esto debe hacerse dentro de un controlador para que tenga sentido.
+
+  En el ejemplo,
+  aparecen dos controladores:
+  uno que muestra por consola el valor contenido en el campo de entrada,
+  y otro que cambia su valor a ``\li!Hola!''.
+  Estos controladores podrían ser asociados a botones,
+  que han sido omitidos en el ejemplo por simplicidad.
+
+  \diapo{resumen-conceptos}
+
+  Repaso de los conceptos importantes
+  que hay que tener en cuenta para crear una interfaz funcional en Tkinter:
+  los modelos son donde se guardan los datos asociados a la interfaz,
+  y los controladores son las acciones que son gatilladas por los eventos
+  capturados por la interfaz.
+
+  Esta terminología es la usada en el libro guía
+  \emph{Practical Programming: An introduction to Computer Science using Python},
+  y se refiere al conocido patrón \href{http://es.wikipedia.org/wiki/Modelo_Vista_Controlador}{modelo-vista-controlador}
+  de arquitectura de software.
+  En todas las interfaces que diseñemos de ahora en adelante,
+  tendremos que comenzar considerando cómo intervienen cada uno de estos componentes.
+
+  \diapo{ejercicio-transformar-texto}
+  \diapo{ejercicio-temperatura}
+  \diapo{ejercicio-estadisticos}
+
+  Para resolver los ejercicios,
+  comience identificando cuáles son la vista (los widgets),
+  los modelos y los controladores.
+  Luego implemente la vista (el ``esqueleto'' de la interfaz),
+  siga creando los modelos
+  y finalmente cree los controladores.
+
+  Avance al mismo ritmo que los estudiantes.
+  Dé prioridad a que los conceptos queden muy claros,
+  repasando los ejemplos anteriores si es necesario.
+  No es necesario que alcance a hacer todos los ejercicios.
+  Puede continuar en la próxima clase si es necesario.
+
+  Las soluciones a los problemas están incluídas
+  en los programas adjuntos como referencia.
+  Puede mostrarlos en ejecución
+  para que queden claros los requerimientos.
+  No muestre el código de las respuestas de inmediato;
+  desarrolle los programas progresivamente.
+  Deje los detalles para el final
+  (por ejemplo, el formato de salida del conversor de temperaturas,
+  o el título de la ventana).
+
+\end{document}
+
