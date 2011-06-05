@@ -4,11 +4,11 @@ w = Tk()
 
 # crear variable, asignarle un valor inicial,
 # y crear un controlador que modifica su valor
-data = IntVar()
-data.set(0)
+data = StringVar()
+data.set('0')
 def incrementar():
-    valor = data.get()
-    data.set(valor + 1)
+    valor = int(data.get())
+    data.set(str(valor + 1))
 
 # crear etiqueta, cuyo texto viene de la variable data
 l = Label(w, textvariable=data)
