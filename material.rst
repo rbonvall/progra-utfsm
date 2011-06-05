@@ -125,7 +125,8 @@ de acuerdo a la `planificación de la asignatura`_.
 * Sesión 27: ejercicios propuestos por el profesor.
 * Sesión 28: ejercicios propuestos por el profesor.
 
-* Sesión 29: diapos, notas, programas__.
+* Sesión 29: diapos__, notas, programas__.
 
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/29-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/29-programas.zip
 
