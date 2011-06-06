@@ -21,7 +21,6 @@ Productos matriciales
 ---------------------
 .. toctree::
 
-    conmutacion
     barman
     produccion-autos
     gas
