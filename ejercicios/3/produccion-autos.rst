@@ -1,5 +1,6 @@
 Producción de autos
 ===================
+.. Propuesto por Mabel Bielenberg
 
 Una fábrica de autos produce tres modelos:
 sedán, camioneta y económico.

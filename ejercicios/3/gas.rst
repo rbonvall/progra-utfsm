@@ -1,5 +1,6 @@
 Informe de producción de gas
 ============================
+.. Propuesto por Mabel Bielenberg
 
 En un informe anual de SansanoGas S.A.,
 el presidente informa a sus accionistas
