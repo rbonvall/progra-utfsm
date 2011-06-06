@@ -5,6 +5,8 @@ Arreglos
 --------
 .. toctree::
 
+    transmision-datos
+
 Arreglos bidimensionales
 ------------------------
 .. toctree::
@@ -15,3 +17,10 @@ Arreglos bidimensionales
     matrices-especiales
     buscaminas
 
+Productos matriciales
+---------------------
+.. toctree::
+
+    barman
+    produccion-autos
+    gas
