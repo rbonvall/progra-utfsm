@@ -3,9 +3,6 @@ Construcción de una dieta
 
     *Ejercicio sacado de* [Lay97]_.
 
-El problema de seleccionar la combinación adecuada de ingredientes
-para proveer una dieta efectiva y razonablemente segura
-
 La dieta Cambridge es una dieta que fue popular en la década de los 80,
 y fue el resultado de más de ocho años de trabajo clínico e investigación
 de un equipo de científicos liderados por el doctor Alan H. Howard
