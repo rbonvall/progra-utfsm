@@ -1,0 +1,346 @@
+\documentclass[10pt]{article}
+\usepackage{beamerarticle}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{pgfpages}
+\usepackage{wrapfig}
+\hyphenation{}
+
+\setjobnamebeamerversion{30-diapos}
+
+\input{../latex/definiciones.tex}
+\input{../latex/notas-diapos.tex}
+
+\title{Más sobre interfaces gráficas}
+\author{Programación \\ \url{http://progra.usm.cl}}
+\date{8 y 9 de junio de 2011}
+
+\begin{document}
+  \maketitle
+
+  \section*{Objetivos de la clase}
+  \begin{itemize}
+    \item Mostrar algunas configuraciones de estilo
+      que es posible aplicar a los widgets.
+    \item Enseñar dos maneras nuevas de posicionar widgets:
+      empaquetando hacia el lado (\li!pack(side='left')!)
+      y usando una grilla (\li!grid()!).
+    \item Introducir el uso de marcos (\emph{frames})
+      para organizar los widgets de una ventana.
+  \end{itemize}
+
+  \section*{Diapositivas}
+
+  En la clase de hoy presentaremos dos conceptos importantes nuevos:
+  las distintas maneras de agregar los widgets a la interfaz
+  (dependiendo de la geometría deseada)
+  y cómo agrupar widgets usando marcos.
+  Además,
+  veremos cómo modificar algunos atributos visuales de los widgets.
+
+  Para crear una interfaz completamente funcional,
+  es necesario usar modelos y controladores.
+  Sin embargo,
+  en la clase de hoy nos enfocaremos sólo
+  en aspectos de las vistas.
+  Los ejemplos y ejercicios que veremos hoy
+  son la cáscara de un programa.
+  Terminar estos programas introduciendo los modelos y controladores apropiados
+  puede ser un ejercicio futuro, o para el final de la clase si queda tiempo.
+
+  \diapo{repaso-estructura}
+
+  Primero que todo,
+  haga un resumen de los conceptos introducidos en la clase anterior.
+  Comience mostrando la estructura básica de un programa
+  que tiene una interfaz gráfica.
+
+  Los elementos que hay que destacar del programa mostrado son:
+  \begin{itemize}
+    \item la importación del módulo,
+    \item la creación de la ventana principal
+      usando el constructor \li!Tk!, y
+    \item el inicio del ciclo de eventos
+      mediante la llamada al método \li!mainloop!.
+  \end{itemize}
+  Todos los programas que usan Tkinter
+  siguen esta estructura,
+  y el resto de la interfaz debe ser construida
+  en la parte indicada con puntos suspensivos.
+  El ciclo de eventos
+  hace que el programa se quede esperando
+  acciones por parte del usuario,
+  que gatillan llamadas a funciones
+  que están asociadas a los widgets.
+
+  \diapo{repaso-widgets}
+
+  Repase el concepto de widget
+  (cada uno de los componentes de la interfaz),
+  y recuerde los tres widgets básicos
+  presentados en la clase anterior:
+  la etiqueta (\li!Label!),
+  el botón (\li!Button!)
+  y el campo de entrada (\li!Entry!).
+
+  Recuerde también cuál es el uso de cada uno.
+  La etiqueta es para mostrar datos
+  (análogo al \li!print!),
+  el campo de entrada es para que el usuario introduzca datos
+  (análogo al \li!raw_input!)
+  y el botón es un «llamador de funciones».
+
+  \diapo{repaso-crear-widgets}
+
+  Para agregar un widget a una interfaz,
+  hay que hacer las siguientes dos acciones:
+  \begin{itemize}
+    \item instanciar el widget,
+      pasando como primer parámetro la ventanta que lo contendrá, y
+    \item llamar al método \li!pack!
+      para que sea agregado a la ventana.
+  \end{itemize}
+  Al crear los widgets de esta manera,
+  serán apilados verticalmente en la ventana,
+  de arriba hacia abajo.
+
+  \diapo{estilo}
+  \diapo{configuraciones-estilo}
+
+  Al momento de instanciar un widget,
+  es posible especificar sus características
+  usando parámetros con nombre.
+  Aquí mostraremos algunos de los posibles parámetros
+  que sirven para modificar la apariencia de un widget.
+
+  El objetivo aquí es simplemente mostrar a los estudiantes
+  que es posible modificar la apariencia de la interfaz
+  para que lo tengan presente.
+  La lista de atributos presentados aquí
+  no es de ninguna manera completa.
+
+  Explique el programa de ejemplo,
+  y asocie a cada línea de código
+  su widget correspondiente en la interfaz mostrada.
+
+  \li!width! y \li!height!
+  especifican el ancho y la altura del widget
+  en unidades de texto.
+
+  \li!fg! y \li!bg!
+  especifican, respectivamente,
+  el color de las letras y del fondo.
+  El valor debe ser un string
+  con el nombre del color en inglés
+  o con el color en la notación de HTML
+  (por ejemplo, \li!'#5A27F0'!).
+
+  \li!font! especifica el tipo y el tamaño de letra.
+  El valor debe ser una tupla de dos valores:
+  el primero es el nombre de la familia
+  (por ejemplo \li!'Arial'!, \li!'Times'! o \li!'Courier'!),
+  y el segundo es un entero indicando el tamaño.
+  También se puede pasar una tupla de tres valores,
+  de los que el tercero es \li!'bold'! o \li!'italic'!
+  para indicar negrita o cursiva, respectivamente.
+
+  \li!borderwidth! especifica el ancho del borde del widget en pixeles.
+
+  Puede mostrar el programa adjunto
+  y hacer modificaciones en vivo
+  para dejar más claro cómo se usan los atributos,
+  y cuáles son sus valores posibles.
+
+  \diapo{pack-left}
+
+  En las interfaces que presentamos durante la clase pasada,
+  todos los widgets eran apilados verticalmente.
+  Ahora enseñaremos cómo hacerlo horizontalmente.
+  Basta con pasar el parámetro \li!side='left'!
+  en la llamada a \li!pack!.
+
+  El parámetro \li!side! especifica cuál es el lado del widget
+  que irá pegado al borde de la ventana,
+  o a los widgets puestos anteriormente.
+  Sus valores posibles son:
+  \li!'top'! (arriba),
+  \li!'bottom'! (abajo),
+  \li!'left'! (izquierda) y
+  \li!'right'! (derecha).
+  Si el parámetro no es especificado,
+  el valor por omisión es \li!'top'!.
+  En general, para interfaces sencillas
+  debe bastar con conocer el \li!'left'! y el \li!'top'!.
+
+  Explique el código, y deje bien clara cuál es la diferencia
+  entre este programa y los que hicimos antes.
+  El código está incluido en los programas adjuntos.
+  Puede mostrar el programa en ejecución,
+  y modificar la llamada a \li!pack!
+  para ilustrar en vivo cuál es la diferencia.
+
+  \diapo{grillas}
+
+  Además de \li!pack!,
+  que va pegando los widgets uno después del otro,
+  existe otro mecanismo para ubicar los componentes
+  dentro de la interfaz,
+  que es usando una grilla.
+
+  Para crear una grilla de widgets,
+  hay que agregarlos a la ventana usando el método \li!grid!,
+  e indicando en qué fila y columna (\li!row! y \li!column!)
+  de la grilla irá cada uno.
+
+  \li!pack! y \li!grid! son dos tipos diferentes de \emph{geometry managers},
+  y son excluyentes: todos los widgets que van en un mismo contenedor
+  deben ser agregados usando el mismo geometry manager.
+  Bajo ninguna circunstancia deben mezclarse ambos
+  dentro de un mismo contenedor.
+
+  Explique el código,
+  y muestre la correspondencia de cada línea
+  con la interfaz mostrada en la figura.
+  Enfatice que aquí no se está usando \li!pack!.
+  Puede mostrar el programa en ejecución,
+  y modificar las llamadas
+  para ilustrar en vivo cómo son agregados los widgets.
+
+  Aquí,
+  haga un resumen de los tres mecanismos posibles
+  para agregar un widget a la ventana:
+  \begin{itemize}
+    \item \li!widget.pack()! (apilar verticalmente),
+    \item \li!widget.pack(side='left')! (apilar horizontalmente), y
+    \item \li!widget.grid(row=i, column=j)! (grilla).
+  \end{itemize}
+
+  \diapo{ejemplo-marcos}
+
+  En las interfaces que hemos creado hasta ahora,
+  los widgets han estado siempre contenidos directamente
+  dentro de la ventana principal.
+
+  Muestre la interfaz de ejemplo,
+  y discuta sobre cuál es el geometry manager indicado para crearla.
+  La respuesta es que es una mezcla de ambos:
+  los campos del formulario están puestos en una grilla,
+  y los botones están apilados horizontalmente
+  sin estar alineados con la grilla.
+  Ya dijimos que no era posible mezclar \li!pack! y \li!grid!,
+  por lo que esta solución no es aceptable.
+
+  Aquí debe introducir el concepto de marco (\li!Frame!).
+  Un marco es un contenedor de widgets
+  que a su vez va contenido dentro de la ventana principal.
+  Los marcos sirven para agrupar widgets
+  e irlos agregando agrupadamente a la interfaz.
+
+  Muestre cómo la interfaz de la figura
+  puede separarse en dos partes:
+  la grilla superior
+  y la tira de botones inferior.
+  Ambas de estas partes, a su vez,
+  están apiladas verticalmente dentro de la ventana principal.
+
+  \diapo{marcos-0}
+
+  Muestre primero cómo crear la ventana principal
+  junto con los dos marcos que la componen.
+  Haga notar que los \li!Frame!s reciben como primer parámetro
+  la ventana principal, pues es en ella que estarán contenidos.
+  Haga corresponder a cada una de las variables creadas
+  su parte de la interfaz asociada en la figura.
+
+  \diapo{marcos-1}
+
+  A continuación,
+  muestre cómo agregar los campos del formulario
+  al primero de los marcos.
+  Haga notar que el primer parámetro de los widgets
+  debe ser el marco correspondiente,
+  y no la ventana principal.
+  Por brevedad,
+  no aparecen las llamadas a \li!grid! en la diapositiva,
+  pero es importante señalar que ellas deben ir en el programa,
+  o de otro modo los widgets no serían agregados a la interfaz.
+
+  \diapo{marcos-2}
+
+  A continuación,
+  muestre como agregar los botones
+  al segundo de los marcos.
+  Nuevamente haga notar que el primer parámetro de los widgets
+  debe ser el marco correspondiente,
+  y no la ventana principal o el marco anterior.
+
+  Dentro de este marco,
+  los botones son agregados usando \li!pack!,
+  lo que no entra en conflicto con la grilla del marco anterior
+  pues se trata de contenedores distintos.
+
+  \diapo{programa-marcos}
+
+  Finalmente muestre el programa terminado.
+  El código de la diapositiva está separado
+  en nueve «párrafos», agrupados por propósito.
+  Vaya mostrando uno por uno de los párrafos,
+  y explique qué hace cada uno.
+  En orden de arriba hacia abajo:
+  \begin{itemize}
+    \item se importa el módulo,
+    \item se crea la ventana principal,
+    \item se crea los dos marcos,
+    \item se crea los campos y etiquetas del formulario,
+    \item se crea los botones,
+    \item se agrega los campos y etiquetas a su marco usando una grilla,
+    \item se agrega los botones a su marco apilándolos horizontalmente,
+    \item se agrega los dos marcos a la ventana apilándolos verticalmente,
+    \item se inicia el ciclo de eventos.
+  \end{itemize}
+
+  Es importante hacer notar nuevamente
+  que al instanciar cada widget
+  hay que indicar cuál es su contenedor,
+  que puede ser un marco y la ventana principal.
+  Puede mostrar el programa en ejecución,
+  y hacer modificaciones para mostrar qué ocurre.
+
+  \diapo{ejercicio-edad}
+  \diapo{ejercicio-tabla}
+  \diapo{ejercicio-cachipun}
+
+  En estos tres ejercicios,
+  el objetivo es escribir el código
+  para crear una interfaz como la de cada figura.
+  Inicialmente,
+  no se preocupe de los controladores y los modelos,
+  sólo de la vista.
+
+  Primero que todo,
+  hay que determinar si es necesario usar marcos
+  para agrupar los widgets.
+  Luego, hay que determinar cuáles son los widgets que van en cada marcos,
+  y con qué geometry manager deben ser agregados.
+  Finalmente,
+  hay que decidir cómo empaquetar los marcos.
+
+  Las soluciones están incluidas
+  en los programas adjuntos al material de clase.
+  Si le queda tiempo,
+  puede completar alguna de las interfaces
+  con los modelos y controladores apropiados
+  para que quede completamente funcional.
+
+\end{document}
+
