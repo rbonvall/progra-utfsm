@@ -131,8 +131,9 @@ de acuerdo a la `planificación de la asignatura`_.
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/29-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/29-programas.zip
 
-* Sesión 30: diapos__, notas, programas__.
+* Sesión 30: diapos__, notas__, programas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/30-diapos.pdf
+  .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/30-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/30-programas.zip
 
