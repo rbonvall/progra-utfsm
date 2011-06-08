@@ -43,3 +43,4 @@ Interfaces gráficas
     tabla-multiplicar
     cachipun
     calculadora
+    buscaminas-grafico
