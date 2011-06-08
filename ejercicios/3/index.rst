@@ -31,3 +31,9 @@ Ecuaciones matriciales
 .. toctree::
 
     dieta
+
+Interfaces gráficas
+-------------------
+.. toctree::
+
+    calculadora
