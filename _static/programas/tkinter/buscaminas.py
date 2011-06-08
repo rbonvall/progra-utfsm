@@ -59,5 +59,6 @@ for i in range(ANCHO):
         # para poder referirse a el mas adelante.
         botones[i, j] = b
 
+w.title('Buscaminas')
 w.mainloop()
 

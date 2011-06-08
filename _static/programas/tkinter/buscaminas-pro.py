@@ -82,5 +82,7 @@ for i in range(ANCHO):
 
 f.pack()
 status.pack()
+
+w.title('Buscaminas')
 w.mainloop()
 
