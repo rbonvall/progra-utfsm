@@ -10,5 +10,5 @@ que debe ser implementada
 para que el botón haga lo que tiene que hacer.
 
 Complete el programa
-escribiendo el código de la función ``calcular``.
+escribiendo el código que falta en la función ``calcular``.
 
