@@ -36,4 +36,10 @@ Interfaces gráficas
 -------------------
 .. toctree::
 
+    contador
+    mayusculizador
+    conversor-temperatura
+    estadisticas-numeros
+    tabla-multiplicar
+    cachipun
     calculadora
