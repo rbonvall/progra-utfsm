@@ -1,6 +1,8 @@
 Calculadora
 ===========
-Descargue y pruebe `este programa`_ que crea una calculadora.
+Descargue y pruebe `este programa`_ que crea una calculadora:
+
+.. image:: ../../_static/capturas/calc.png
 
 .. _este programa: ../../_static/programas/tkinter/calculadora.py
 
