@@ -52,5 +52,6 @@ b.grid(row=3, column=2)
 visor.pack()
 frame_botones.pack()
 
+w.title('Calculadora')
 w.mainloop()
 
