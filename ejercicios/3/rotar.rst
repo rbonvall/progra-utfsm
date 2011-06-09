@@ -40,3 +40,15 @@ Rotar matrices
    y la astuta.
    Trate de hacerlo de las tres maneras.
 
+#. Escriba el  módulo ``rotar.py``
+   que contenga estas tres funciones.
+   Le será útil más adelante::
+
+      >>> from rotar import rotar90
+      >>> a = array([[6, 3, 8],
+      ...            [9, 2, 0]])
+      >>> rotar90(a)
+      array([[8, 0],
+             [3, 2],
+             [6, 9]])
+
