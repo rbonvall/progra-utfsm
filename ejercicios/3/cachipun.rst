@@ -1,4 +1,4 @@
-Cachipun
+Cachipún
 ========
 Escriba un programa para jugar cachipún contra el computador.
 La interfaz debe ser la siguiente:
