@@ -13,6 +13,7 @@ Arreglos bidimensionales
 
     creacion-arreglos-2d
     cuadrado-magico
+    rotar
     sudoku
     matrices-especiales
     buscaminas
