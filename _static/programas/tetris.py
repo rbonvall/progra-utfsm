@@ -50,7 +50,7 @@ def poner_pieza(pieza, juego, columna):
     # no debe retornar nada.
     pass
 
-def liberar_lineas(juego):
+def limpiar_filas(juego):
     # Esta funcion debe modificar el arreglo juego,
     # no debe retornar nada.
     pass
@@ -76,7 +76,7 @@ if __name__ == '__main__':
         else:
             j = int(opcion)
             poner_pieza(pieza, juego, j)
-            liberar_lineas(juego)
+            limpiar_filas(juego)
             pieza = pieza_al_azar()
 
         # Tarea: detectar cuando se termina el juego.
