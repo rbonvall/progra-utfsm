@@ -67,19 +67,18 @@ if __name__ == '__main__':
         print tstr(juego)
         print '0-9)  poner pieza'
         print 'r)    rotar pieza'
-        opcion = 'x'
-        while opcion not in 'r0123456789':
+        print 'q)    terminar el juego'
+        opcion = ''
+        while len(opcion) != 1 or opcion not in 'rq0123456789':
             opcion = raw_input('Ingrese su opcion: ')
 
         if opcion == 'r':
             pieza = rotar90(pieza)
+        elif opcion == 'q':
+            exit()
         else:
             j = int(opcion)
             poner_pieza(pieza, juego, j)
             limpiar_filas(juego)
             pieza = pieza_al_azar()
-
-        # Tarea: detectar cuando se termina el juego.
-        # if game over:
-        #     break
 
