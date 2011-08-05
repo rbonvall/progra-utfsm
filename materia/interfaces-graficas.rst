@@ -167,7 +167,55 @@ Ya veremos cómo empaquetarlos en otras direcciones.
 
 Controladores
 -------------
-(Por escribir)
+Al crear un botón de la siguiente manera::
+
+    b = Button(w, text='Saludar')
+
+no hay ninguna acción asociada a él.
+Al hacer clic en el botón, nada ocurrirá.
+
+Para que ocurra algo al hacer clic en el botón,
+hay que asociarle una acción.
+Un **controlador** es una función
+que será ejecutada al hacer clic en un botón.
+
+Los controladores deben ser funciones
+que no reciben ningún parámetro.
+
+Por ejemplo,
+supongamos que queremos que el programa
+imprima el mensaje ``Hola`` en la consola
+cada vez que se haga clic en el botón que dice «Saludar».
+Primero, hay que crear el controlador::
+
+    def saludar():
+        print 'Hola'
+
+Para asociar el controlador al botón,
+hay que pasarlo a través del parámetro ``command``
+(en inglés: «orden»)
+al momento de crear el botón::
+
+    b = Button(w, text='Saludar', command=saludar)
+
+Esta línea significa:
+crear el botón ``b``,
+contenido en la ventana ``w``,
+que tenga el texto ``'Saludar'``
+y que al hacer clic en él se ejecute la función ``saludar``.
+
+El siguiente es un programa completo
+que tiene dos botones:
+uno para saludar y otro para salir del programa.
+El controlador del segundo botón
+es la función ``exit``,
+que ya viene con Python:
+
+.. literalinclude:: ../diapos/programas/tkinter/05-controladores.py
+
+Ejecute el programa,
+y pruebe lo que ocurre al hacer clic
+en ambos botones.
 
 Modelos
 -------
