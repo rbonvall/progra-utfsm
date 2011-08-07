@@ -204,7 +204,7 @@ contenido en la ventana ``w``,
 que tenga el texto ``'Saludar'``
 y que al hacer clic en él se ejecute la función ``saludar``.
 
-El siguiente es un programa completo
+El siguiente ejemplo es un programa completo
 que tiene dos botones:
 uno para saludar y otro para salir del programa.
 El controlador del segundo botón
@@ -213,10 +213,124 @@ que ya viene con Python:
 
 .. literalinclude:: ../diapos/programas/tkinter/05-controladores.py
 
+El programa se ve así:
+
+.. image:: ../diapos/programas/tkinter/capturas/04.png
+
 Ejecute el programa,
 y pruebe lo que ocurre al hacer clic
 en ambos botones.
 
 Modelos
 -------
-(Por escribir)
+Mediante el uso de controladores,
+ya podemos hacer interfaces que hagan algo,
+pero que siguen teniendo una limitación:
+las interfaces sólo reaccionan a eventos que ocurren,
+pero no tienen memoria para recordar información.
+
+Un **modelo** es un dato almacenado
+que está asociado a la interfaz.
+Usando modelos, se puede lograr
+que la interfaz vaya cambiando su estado interno
+a medida que ocurren eventos.
+
+En general,
+a la hora de crear un programa con interfaz gráfica,
+debemos crear un modelo para cada dato
+que deba ser recordado durante el programa.
+
+Tkinter rovee varios tipos de modelos,
+pero para simplificar podemos limitarnos a usar
+sólo modelos de tipo string.
+Un modelo puede ser creado de la siguiente manera::
+
+    m = StringVar()
+
+Aquí,
+el modelo ``m`` es capaz de recordar un string
+
+Para modificar el valor del modelo ``m``,
+se debe usar el método ``set``,
+que recibe el valor como único parámetro::
+
+    m.set('hola')
+
+Para obtener el valor del modelo ``m``,
+se debe usar el método ``get``,
+que no recibe ningún parámetro::
+
+    s = m.get()
+
+En este ejemplo,
+la variable ``s`` toma el valor ``'hola'``.
+
+Como los modelos creados por ``StringVar``
+almacenan datos de tipo string,
+hay que tener cuidado de hacer las conversiones apropiadas
+si se desea usar datos numéricos::
+
+    a = StringVar()
+    b = StringVar()
+    a.set(5)                # es convertido a string
+    b.set(8)                # es convertido a string
+    print a.get() + b.get()             # imprime 58
+    print int(a.get()) + int(b.get())   # imprime 13
+
+Usted podría preguntarse
+cuál es la razón para usar modelos
+en vez de usar las variables propias de Python,
+—es decir, las que son creadas mediante asignaciones—
+para almacenar los datos.
+Los modelos tienen la ventaja
+que es posible asociarlos a elementos de la interfaz
+que responden automáticamente
+cuando el valor del modelo cambia.
+
+Por ejemplo,
+podemos asociar una etiqueta a un modelo.
+La etiqueta siempre mostrará en la interfaz
+el valor que tiene el modelo,
+incluso cuando éste cambie.
+
+Para asociar un modelo a una etiqueta,
+hay que usar el parámetro ``textvariable``::
+
+    x = StringVar()
+    l = Label(w, textvariable=x)
+    l.pack()
+
+Cada vez que cambie el valor del modelo ``x``,
+el texto de la etiqueta será actualizado inmediatamente.
+
+También podemos asociar un campo de entrada a un modelo.
+El valor asociado al modelo
+siempre será el texto que está ingresado en el campo.
+
+Para asociar un modelo a un campo de texto,
+también se usa el parámetro ``textvariable``::
+
+    x = StringVar()
+    e = Entry(w, textvariable=x)
+    e.pack()
+
+Cuando se obtenga el valor del modelo
+mediante la llamada ``x.get()``,
+el valor retornado será lo que el usuario haya ingresado
+en el campo hasta ese momento.
+
+Resumen
+-------
+Para diseñar un programa que tiene una interfaz gráfica,
+hay tres elementos importantes que hay que tener en consideración.
+
+#. Los elementos que componen la interfaz.
+   A esto se le suele denominar la **vista** del programa.
+#. Los **modelos** que mantienen el estado de la interfaz
+   en todo momento.
+#. Los **controladores** que reaccionan a eventos del usuario.
+
+Los controladores pueden interactuar con los modelos
+mediante sus métodos ``get`` y ``set``.
+Los cambios en los modelos
+pueden verse reflejados en la vista.
