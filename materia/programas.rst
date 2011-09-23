@@ -155,7 +155,7 @@ Usted puede probar éstos y usar el que más le acomode durante el semestre.
 El siguiente video muestra cómo usar IDLE para desarrollar un programa
 y para usar la consola interactiva:
 
-.. raw::
+.. raw:: html
 
     <iframe width="640" height="360" src="http://www.youtube.com/embed/Fz5pk0K54dE?rel=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
 
