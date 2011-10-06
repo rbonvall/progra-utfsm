@@ -28,6 +28,7 @@ for i in range(n_ues):
         elif voto == 'B':
             blancos = blancos + 1
 
+    print nombre + ':',
     print aceptar, 'aceptan,',
     print rechazar, 'rechazan,',
     print blancos, 'blancos,',

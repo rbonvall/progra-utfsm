@@ -11,7 +11,7 @@ else:
 
     if promedio < 3.0:
         print 'Reprobado'
-    elif promedio > 7.0:
+    elif promedio >= 7.0:
         print 'Aprobado'
     else:
         n_examen = float(raw_input('Examen: '))
