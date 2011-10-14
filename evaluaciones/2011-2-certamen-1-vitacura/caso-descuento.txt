@@ -1,0 +1,14 @@
+n: `3`
+Cantidad productos: `8`
+Precio producto 1: `400`
+Precio producto 2: `800`
+Precio producto 3: `500`
+Precio producto 4: `100`
+Precio producto 5: `400`
+Precio producto 6: `300`
+Precio producto 7: `200`
+Precio producto 8: `500`
+Total: 3200
+Descuento: 420
+Por pagar: 2780
+

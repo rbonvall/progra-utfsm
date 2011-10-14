@@ -1,0 +1,29 @@
+Numero de universidades: `3`
+
+Universidad: `USM`
+Voto: `A`
+Voto: `R`
+Voto: `A`
+Voto: `N`
+Voto: `X`
+USM: 2 aceptan, 1 rechazan, 0 blancos, 1 nulos.
+
+Universidad: `UChile`
+Voto: `A`
+Voto: `B`
+Voto: `A`
+Voto: `X`
+UChile: 2 aceptan, 0 rechazan, 1 blancos, 0 nulos.
+
+Universidad: `PUC`
+Voto: `A`
+Voto: `R`
+Voto: `R`
+Voto: `A`
+Voto: `X`
+PUC: 2 aceptan, 2 rechazan, 0 blancos, 0 nulos.
+
+Universidades que aceptan: 2
+Universidades que rechazan: 0
+Universidades con empate: 1
+
