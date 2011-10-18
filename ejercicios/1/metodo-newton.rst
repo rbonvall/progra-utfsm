@@ -40,7 +40,7 @@ El algoritmo debe detenerse cuando la estimación es
    El algoritmo debe detenerse cuando
    el cuadrado de la raíz cuadrada estimada
    difiera de `x` en menos de 0,0001.
-   
+
    (Este criterio de detención no es muy bueno).
 
 #. Escriba un programa que reciba como entrada el número real `x`

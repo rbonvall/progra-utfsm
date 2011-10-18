@@ -1,7 +1,7 @@
 Qué nota necesito
 -----------------
 Un alumno desea saber que nota necesita en el tercer certamen
-para aprobar un ramo. 
+para aprobar un ramo.
 
 El promedio del ramo se calcula con la siguiente formula.
 

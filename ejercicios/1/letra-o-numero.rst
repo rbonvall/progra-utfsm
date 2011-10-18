@@ -23,4 +23,4 @@ En caso que sea letra, determine si es mayúscula o minúscula.
 .. testcase::
 
     Ingrese caracter: `#`
-    No es letra ni número. 
+    No es letra ni número.
