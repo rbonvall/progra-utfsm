@@ -27,9 +27,9 @@ y corrija el siguiente texto::
 	ArteS y Oficios y un ColeGIO de ingenieros.
 	consiDERAndo las SUGerencias hechas por EDWARDS, en el sentido de asignarle
 	colaboradores para esa tarea, santa maría otorgó un testamento, cerrado en París,
-	con fecha 6 de eNero dE 1920.Reducidos a escRItura pública los estatutos de 
+	con fecha 6 de eNero dE 1920.Reducidos a escRItura pública los estatutos de
 	la Fundación fedeRIco sANta maRía constituida por LOS albaceas, Fueron Aprobados
-	POR Decreto Supremo del 27 de abril de 1926. 
+	POR Decreto Supremo del 27 de abril de 1926.
 
 	eXtracto de LA reseña histórica, utfsm.
 

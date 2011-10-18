@@ -37,7 +37,7 @@ sospechoso, es el siguiente:
 La informacíon inicial del programa
 se debe ingresar directamente en el
 código, es decir, nombres y cromosomas,
-en cambio la secuencia encontrda en 
+en cambio la secuencia encontrda en
 la escena del crimen, debe ser ingresada
 por el usuario.
 

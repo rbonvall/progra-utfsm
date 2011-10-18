@@ -7,7 +7,7 @@ la estructura de un documento.
 
 Como ejemplo,
 usted puede usar su navegador para ver el código de esta misma página
-haciendo clic con el botón derecho y buscando 
+haciendo clic con el botón derecho y buscando
 
 Para hacer una página web sencilla,
 usted puede crear un archivo como el siguiente:
@@ -30,7 +30,7 @@ Usted debería poder ver el texto ``Mi primera pagina``.
    se hace de la siguiente manera:
 
    .. code-block:: none
-   
+
        <table>
          <tr>
            <td> A </td>
