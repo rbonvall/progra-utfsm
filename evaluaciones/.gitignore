@@ -2,17 +2,3 @@
 *.aux
 *.log
 *.pyc
-certamen*
-control*
-recuperativo
-!certamen-1
-!certamen-1-tipo
-!certamen-2
-!certamen-2-tipo
-!certamen-3-vitacura
-!control-en-linea-1
-!control-en-linea-2
-!control-en-linea-3
-!control-presencial-1
-!control-presencial-2
-
