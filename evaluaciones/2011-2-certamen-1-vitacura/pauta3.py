@@ -6,9 +6,7 @@ u_rechazan = 0
 u_empates = 0
 
 for i in range(n_ues):
-
     nombre = raw_input('Universidad: ')
-
     voto = ''
 
     aceptar = 0
