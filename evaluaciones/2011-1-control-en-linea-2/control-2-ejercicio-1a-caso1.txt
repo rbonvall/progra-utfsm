@@ -1,0 +1,3 @@
+Pies: `5`
+Pulgadas: `9`
+La estatura es 175.26 cm

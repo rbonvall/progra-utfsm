@@ -1,0 +1,41 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#2, ejercicio 1}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+
+  En los campeonatos de fútbol,
+  cada equipo recibe tres puntos por cada partido ganado,
+  uno por cada empate, y ninguno por cada derrota.
+
+  Escriba un programa que reciba como entrada
+  el nombre del equipo,
+  la cantidad de partidos ganados,
+  los empatados y los perdidos,
+  y entregue la puntuación
+  con el formato mostrado en el ejemplo:
+
+  \begin{minipage}[t]{.5\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-1b-caso1.txt}
+  \end{minipage}
+
+  Su programa debe llamarse \textbf{puntaje.py}.
+
+\end{document}
+

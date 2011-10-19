@@ -1,0 +1,42 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#2, ejercicio 2}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+  En el \emph{blackjack} (un juego de naipes)
+  las cartas del 2 al 10 tienen el puntaje que indica su valor.
+  Las cartas J, Q y K tienen 10 puntos.
+  El as (A) puede tener 1 u 11 puntos.
+
+  Escriba un programa que reciba los valores de dos cartas,
+  e indique cuál es el máximo puntaje que pueden tener entre las dos.
+
+  \begin{minipage}[t]{.5\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2d-caso1.txt}
+  \end{minipage}
+  
+  \begin{minipage}[t]{.5\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2d-caso2.txt}
+  \end{minipage}
+
+  Su programa debe llamarse \textbf{blackjack.py}.
+
+
+\end{document}
+

@@ -1,0 +1,60 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\usepackage{wrapfig}
+
+\newcommand{\titulo}{Control en línea, semana \#2, ejercicio 2}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+  Escriba un programa que pida al usuario
+  ingresar la fila y la columna de una casilla del tablero de ajedrez,
+  e indique de qué color es la casilla,
+  o si está fuera del tablero.
+
+  \begin{wrapfigure}{r}{.2\textwidth}
+    \begin{tikzpicture}[scale=.4]
+      \foreach\row in {1,3,...,7}
+        \foreach\col in {1,3,...,7}
+          \fill[black!80] (\row, \col) rectangle (\row + 1, \col + 1);
+      \foreach\row in {0,2,...,7}
+        \foreach\col in {0,2,...,7}
+          \fill[black!80] (\row, \col) rectangle (\row + 1, \col + 1);
+      \draw (-.1, -.1) rectangle (8.1, 8.1);
+      \foreach\row in {1,...,8}
+        \node[anchor=east]  at (-.1, \row - .5) {\footnotesize\row};
+      \foreach\col in {1,...,8}
+        \node[anchor=north] at (\col - .5, -.1) {\footnotesize\col};
+    \end{tikzpicture}
+  \end{wrapfigure}
+
+  \begin{minipage}[t]{.5\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2c-caso1.txt}
+  \end{minipage}
+
+  \begin{minipage}[t]{.5\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2c-caso2.txt}
+  \end{minipage}
+
+  \begin{minipage}[t]{.5\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2c-caso3.txt}
+  \end{minipage}
+
+  Su programa debe llamarse \textbf{casillas.py}.
+
+\end{document}
+

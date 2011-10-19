@@ -152,8 +152,16 @@ Además, hay otros buenos entornos de desarrollo más avanzados para Python:
 
 Usted puede probar éstos y usar el que más le acomode durante el semestre.
 
-.. El siguiente video muestra cómo usar IDLE para desarrollar un programa
-.. y para usar la consola interactiva:
-.. 
-..     [Video]
+El siguiente video muestra cómo usar IDLE para desarrollar un programa
+y para usar la consola interactiva:
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="http://www.youtube.com/embed/Fz5pk0K54dE?rel=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
+
+Si desea trabajar con PyScripter en vez de IDLE,
+puede ver `este otro video`_
+con una demostración de cómo usarlo.
+
+.. _este otro video: http://www.youtube.com/watch?v=bzF5rDtQLS4
 
