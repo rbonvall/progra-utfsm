@@ -1,0 +1,5 @@
+Equipo: `Cobresal`
+Ganados: `12`
+Empatados: `7`
+Perdidos: `9`
+Cobresal tiene 43 puntos

@@ -1,0 +1,3 @@
+Carta 1: `8`
+Carta 2: `J`
+Puntaje: 18

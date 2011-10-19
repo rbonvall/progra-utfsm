@@ -1,0 +1,39 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#2, ejercicio 1}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+
+  Hasta el año 1971, la libra esterlina (la moneda del Reino Unido)
+  estaba dividida en 20 chelines. Cada chelín estaba compuesto de 12 peniques.
+
+  Desde ese año, la libra pasó a estar dividida simplemente en 100 nuevos peniques.
+
+  Escriba un programa que pregunte una cantidad de dinero
+  en libras y nuevos peniques,
+  y entregue el equivalente en libras, chelines y peniques.
+
+  \begin{minipage}[t]{.7\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-1d-caso1.txt}
+  \end{minipage}
+
+  Su programa debe llamarse \textbf{peniques.py}.
+
+\end{document}
+

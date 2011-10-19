@@ -1,0 +1,4 @@
+Carta 1: `4`
+Carta 2: `7`
+Carta 3: `11`
+No es escala

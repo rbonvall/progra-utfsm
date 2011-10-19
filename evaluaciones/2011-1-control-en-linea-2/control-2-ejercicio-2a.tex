@@ -1,0 +1,41 @@
+\documentclass[12pt,spanish,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea, semana \#2, ejercicio 2}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+
+\begin{document}
+
+  Escriba un programa que pregunte al usuario
+  las edades de Edelmiro, Froilana y Prisciliano,
+  e indique cuáles de ellos tienen la misma edad.
+
+  \begin{minipage}[t]{.8\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2a-caso1.txt}
+  \end{minipage}
+
+  \begin{minipage}[t]{.8\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2a-caso2.txt}
+  \end{minipage}
+
+  \begin{minipage}[t]{.8\textwidth}
+    \lstinputlisting[frame=single,language=testcase]{control-2-ejercicio-2a-caso3.txt}
+  \end{minipage}
+
+  Su programa debe llamarse \textbf{edades.py}.
+\end{document}
+

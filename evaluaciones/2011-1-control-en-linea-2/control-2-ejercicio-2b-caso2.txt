@@ -1,0 +1,4 @@
+Carta 1: `9`
+Carta 2: `8`
+Carta 3: `10`
+Es escala

@@ -1,0 +1,3 @@
+Fila: `9`
+Columna: `4`
+Fuera del tablero
