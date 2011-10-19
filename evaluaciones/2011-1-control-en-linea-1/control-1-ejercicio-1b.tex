@@ -1,0 +1,34 @@
+\documentclass[12pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Control en línea 1}
+\input{../../latex/definiciones.tex}
+\input{../../latex/encabezado-control.tex}
+\lstset{frame=single,language=testcase}
+
+\begin{document}
+
+  Escriba un programa que pida al usuario que ingrese
+  el año actual, el mes actual y el día actual (en ese orden),
+  y que muestre la fecha siguiendo el formato
+  ilustrado en el ejemplo:
+
+  \begin{minipage}[t]{.5\textwidth}
+    \lstinputlisting{control-1-ejercicio-1b-caso-1.txt}
+  \end{minipage}
+
+\end{document}
+
