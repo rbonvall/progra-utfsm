@@ -9,7 +9,7 @@ all: $(BIN)
 	gcc -Wall $< -o $@
 
 clean:
-	rm -v $(BIN)
+	@rm -v $(BIN)
 
 .PHONY: all clean
 
