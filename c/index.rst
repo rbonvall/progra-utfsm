@@ -9,3 +9,5 @@ para familiarizarse con el lenguaje C.
 
 .. toctree::
    :maxdepth: 1
+
+   estructura-programa
