@@ -82,7 +82,7 @@ El número 1 no es ni primo ni compuesto.
       2
       3
       17
-      
+
    .. testcase::
 
       Ingrese numero: `8575`

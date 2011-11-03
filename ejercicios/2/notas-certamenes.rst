@@ -64,7 +64,7 @@ del alumno *i*. El programa debe:
 	Promedio del curso C1: 56
 	Promedio del curso C2: 30
 	Promedio del curso C3: 60
-	Promedio Final Curso: 55 
+	Promedio Final Curso: 55
 	Aprobados: 4
 	Reprobados: 6
 	...

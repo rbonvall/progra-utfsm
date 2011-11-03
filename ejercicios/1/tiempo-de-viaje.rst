@@ -2,7 +2,7 @@ Tiempo de viaje
 ---------------
 
 Un viajero desea saber cuánto tiempo tomó
-un viaje que realizó. 
+un viaje que realizó.
 Él tiene la duración en minutos
 de cada uno de los tramos del viaje.
 

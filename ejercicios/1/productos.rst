@@ -12,14 +12,14 @@ y calculen las siguientes operaciones:
       n! = 1\cdot 2\cdot 3\cdot \cdots \cdot n.
 
    Además, se define `0! = 1`.
-   
+
 #. La `potencia factorial creciente`_ `n^{\bar{m}}`,
    definida como:
 
    .. math::
 
       n^{\bar m} = n (n + 1) (n + 2) \cdots (n + m - 1).
-      
+
 #. El `coeficiente binomial`_ `{n\choose k}`,
    definido como:
 

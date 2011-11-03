@@ -27,7 +27,7 @@ pero no el último, así que la función retorna números
 entre 5 y 14).
 
 .. La función ``choice(l)`` entrega un elemento aleatorio de ``l``::
-.. 
+..
 ..     >>> from random import choice
 ..     >>> choice(['cara', 'sello'])
 ..     'cara'
@@ -45,9 +45,9 @@ entre 5 y 14).
 ..     4
 ..     >>> choice('tijera papel piedra'.split())
 ..     'tijera'
-.. 
+..
 .. La función ``shuffle(l)`` «baraja» la lista ``l``::
-.. 
+..
 ..     >>> from random import shuffle
 ..     >>> a = [1, 5, 9, 12, 14]
 ..     >>> shuffle(a)
@@ -60,7 +60,7 @@ entre 5 y 14).
 #. Suponga que Pepito colecciona un álbum de láminas.
    Las láminas están numeradas desde 1 hasta 640,
    y se compran en sobres de cinco láminas al azar.
-   
+
    Escriba la función ``nuevo_sobre()``
    que entregue una lista con las láminas que vienen
    en un sobre recién comprado::
@@ -124,7 +124,7 @@ entre 5 y 14).
    que también colecciona el álbum.
    A Pepito le interesa obtener las láminas que Yayita tiene repetidas
    y que a él le faltan, y viceversa.
-   
+
    Escriba la función ``cuales_me_sirven(lista_quiere, lista_tiene)``
    que entregue el conjunto de las láminas que le faltan a ``lista_quiere``
    y que ``lista_tiene`` tiene repetidas::

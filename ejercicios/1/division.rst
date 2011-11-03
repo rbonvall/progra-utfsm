@@ -18,7 +18,7 @@ indicando si la división es exacta o no.
 
     Dividendo: `100`
     Divisor: `10`
-    
+
     La división es exacta.
     Cociente: 10
     Resto: 0

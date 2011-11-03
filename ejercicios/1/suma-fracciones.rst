@@ -17,12 +17,12 @@ en forma decimal:
 El programa debe mostrar tres columnas
 que contengan la siguiente información::
 
-      Potencia  Fraccion  Suma 
-      1         0.5       0.5 
-      2         0.25      0.75 
-      3         0.125     0.875 
-      4         0.0625    0.9375 
-      ...       ...       ... 
+      Potencia  Fraccion  Suma
+      1         0.5       0.5
+      2         0.25      0.75
+      3         0.125     0.875
+      4         0.0625    0.9375
+      ...       ...       ...
 
 El programa debe terminar cuando la fracción decimal sea menor
 o igual a 0.000001.

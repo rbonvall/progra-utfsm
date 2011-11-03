@@ -2,7 +2,7 @@ Mayores que
 -----------
 
 Escriba la función ``mayores_que(x, valores)``
-que cuente cuántos valores en la lista 
+que cuente cuántos valores en la lista
 ``valores`` son mayores que ``x``::
 
     >>> mayores_que(5, [7, 3, 6, 0, 4, 5, 10])

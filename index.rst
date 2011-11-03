@@ -1,5 +1,5 @@
-Programación UTFSM, 1er semestre de 2011
-========================================
+Programación UTFSM
+==================
 
 .. toctree::
    :maxdepth: 1

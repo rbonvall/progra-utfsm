@@ -30,7 +30,7 @@ Observaciones:
 
 * Utilice un string para anotar las soluciones.
 * Asigne el caracter "_" a cada elemento del string,
-  y cada vez que se adivine una letra, substituya 
+  y cada vez que se adivine una letra, substituya
   el caracter por la letra correspondiente.
 * El programa debe realizarse utilzando `funciones`
 * Considere las siguientes partes del cuerpo del `ahorcado`:
