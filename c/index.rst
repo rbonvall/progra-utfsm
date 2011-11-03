@@ -26,6 +26,7 @@ Tutorial
    :maxdepth: 1
 
    estructura-programa
+   edad
 
 Referencia
 ----------
