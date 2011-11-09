@@ -295,6 +295,35 @@ div.versioninfo {
     font-size: 0.9em;
 }
 
+div.panel {
+    /*background-color: yellow;*/
+    position: fixed;
+    left: 0;
+    width: 140px;
+}
+div.panel ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+div.panel ul li {
+    font-size: 4em;
+    margin: 2ex auto;
+}
+div.panel ul li a {
+    color: #BFD1D4;
+    text-decoration: none;
+    border-radius: 1em;
+}
+div.panel ul li a:link {
+    color: #BFD1D4;
+    background-color: gray;
+}
+div.panel ul li a:hover {
+    color: #BFD1D4;
+    background-color: maroon;
+}
+
 
 @media print {
     #disqus_thread {
