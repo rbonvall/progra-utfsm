@@ -41,12 +41,6 @@ div.document {
     width: 100%;
 }
 
-div.bodywrapper {
-    margin: 0 240px 0 0;
-    border-right: 1px solid #ccc;
-    width: 100%;
-}
-
 div.body {
     margin: 0;
     padding: 0.5em 20px 20px 20px;
