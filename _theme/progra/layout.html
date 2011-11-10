@@ -8,35 +8,30 @@
 {%- set reldelim2 = reldelim2 is not defined and '|' or reldelim2 %}
 
 {%- block relbar1 %}
-    <div class="panel">
-      <ul>
-        {%- block rootrellink %}
-        <li>
-          <a href="http://progra.usm.cl">☀</a>
-        </li>
-        {%- endblock %}
+  <div class="panel">
+    {%- block rootrellink %}
+    <p>
+      <a href="http://progra.usm.cl">progra.usm.cl</a>
+    </p>
+    {%- endblock %}
 
-        {%- for parent in parents %}
-        <li>
-          <a href="{{ parent.link|e }}" title="{{ parent.title }}">↑</a>
-        </li>
-        {%- endfor %}
+    {%- for parent in parents %}
+    <p>
+      <a href="{{ parent.link|e }}" title="{{ parent.title }}">{{ parent.title }}</a>
+    </p>
+    {%- endfor %}
 
-        {%- if prev %}
-        <li>
-          <a href="{{ prev.link|e }}" title="{{ prev.title }}"
-             {{ accesskey(prev.link) }}>←</a>
-        </li>
-        {%- endif %}
-        {%- if next %}
-        <li>
-          <a href="{{ next.link|e }}" title="{{ next.title }}"
-             {{ accesskey(next.link) }}>→</a>
-        </li>
-        {%- endif %}
-
-      </ul>
-    </div>
+    <p>
+      {%- if prev %}
+        <a href="{{ prev.link|e }}" title="{{ prev.title }}" class="arrow"
+           {{ accesskey(prev.link) }}>←</a>
+      {%- endif %}
+      {%- if next %}
+        <a href="{{ next.link|e }}" title="{{ next.title }}" class="arrow"
+           {{ accesskey(next.link) }}>→</a>
+      {%- endif %}
+    </p>
+  </div>
 {% endblock %}
 
 {%- block relbar2 %}

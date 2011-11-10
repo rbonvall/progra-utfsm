@@ -300,26 +300,19 @@ div.panel {
     position: fixed;
     left: 0;
     width: 140px;
-}
-div.panel ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-div.panel ul li {
-    font-size: 4em;
     margin: 2ex auto;
 }
-div.panel ul li a {
+div.panel a.arrow {
     color: #BFD1D4;
     text-decoration: none;
     border-radius: 1em;
+    font-size: 4em;
 }
-div.panel ul li a:link {
+div.panel a.arrow:link {
     color: #BFD1D4;
     background-color: gray;
 }
-div.panel ul li a:hover {
+div.panel a.arrow:hover {
     color: #BFD1D4;
     background-color: maroon;
 }
