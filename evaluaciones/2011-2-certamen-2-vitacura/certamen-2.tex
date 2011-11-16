@@ -34,6 +34,8 @@
       \foreach \x in {1,2,...,8} {
         \noindent
         \begin{minipage}[b]{19.8em}
+          \edef\dolisting{\noexpand\lstinputlisting[linerange=P\x-FIN\ P\x]{programas.py}}
+          \dolisting
           \lstinputlisting[linerange=P\x-FIN\ P\x]{programas.py}
           \framebox[18em]{\rule[6ex]{0pt}{0pt}}
           \vspace{0.7em}
