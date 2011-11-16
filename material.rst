@@ -1,10 +1,10 @@
 Diapositivas y notas de clases
 ==============================
 
-Las sesiones están numeradas
-de acuerdo a la `planificación de la asignatura`_.
+Revise la `planificación de la asignatura`_ de su campus
+para determinar cuál es el material que debe usar en cada sesión.
 
-.. _planificación de la asignatura: https://spreadsheets.google.com/ccc?key=0Ake0OLr39mnXdGVncUxOYVUtMkVsQjEwc2FWdnVKRlE&hl=es&authkey=CJaQqdYN
+.. _planificación de la asignatura: http://progra.usm.cl/Contenidos_de_la_asignatura.html
 
 ----
 
