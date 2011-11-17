@@ -1,58 +1,58 @@
 # P1
-s = {78, 15, 91, 15}
-print len(s)
+d = {'a': 'b', 'b': 'c'}
+print d['b']
 # FIN P1
 
 # P2
-d = {78: 15, 91: 15}
-print len(d)
+k = ['a', 'b', 'b', 'c']
+print k[1]
 # FIN P2
 
 # P3
-n = (17, 3, 1993)
-h = (14, 5, 2011)
-print n < h
+p = (3, 1, 2)
+q = (3, 1)
+print p < q
 # FIN P3
 
 # P4
-x, y = ((27, 3), 9)
+x, y = ((2, 8), 16)
 z, w = x
 print y + w
 # FIN P4
 
 # P5
-a = 'acabase'
-b = set(a)
-c = list(b)
-c.sort()
-print c[2]
+a = 'estanque'
+b = 'tan'
+c = b in a
+d = a[3] in b
+print c and d
 # FIN P5
 
 # P6
-t = 'papagayo'
-w = t.split('a')
-print w[3]
+print len({
+    0: ['a', 'bcd'],
+    1: ['ef', 'ghij', 'k'],
+    2: ['l'],
+}[1][1][1])
 # FIN P6
 
 # P7
-def f(a, b):
-    return a + 2 * b
+def f(x, y, z):
+    return x + y * z
 
-a = 5
-b = 2
-print f(b, a)
+w, i = (0, 1)
+a = f('w', 'i', 2)
+b = f( w ,  i , 2)
+print a * b
 # FIN P7
 
 
 # P8
-def f(a):
-    return x + a
+def f(d):
+    return d[1]
 
-def g(x):
-    return x + a
-
-x = 5
-a = 7
-print f(x) + g(x)
+a = f('pala')
+b = f({2: 3, 1: 4})
+print a * b
 # FIN P8
 
