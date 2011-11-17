@@ -1,0 +1,41 @@
+# CASO 1
+Elija producto: `A`
+Ingrese monedas:
+`100`
+`10`
+`50`
+`100`
+`100`
+Su vuelto:
+`50`
+`10`
+`10`
+`10`
+`10`
+# FIN CASO 1
+
+# CASO 2
+Elija producto: `B`
+Ingrese monedas:
+`100`
+`100`
+`100`
+`100`
+Su vuelto:
+`50`
+`10`
+# FIN CASO 2
+
+# CASO 3
+Elija producto: `C`
+Ingrese monedas:
+`100`
+`100`
+`50`
+`10`
+`100`
+`10`
+`10`
+`10`
+# FIN CASO 3
+
