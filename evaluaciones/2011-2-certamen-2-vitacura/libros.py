@@ -1,28 +1,24 @@
 # coding: utf-8
 
-def obtener_autor(titulo):
+def obtener_datos_libro(titulo):
     for libro in libros:
-        t, a, _ = libro
+        t, autor, anno = libro
         if titulo == t:
-            return a
+            return (t, autor, anno)
+
+def obtener_autor(titulo):
+    _, autor, _ = obtener_datos_libro(titulo)
+    return autor
 
 def obtener_idioma(titulo):
-    autor = obtener_autor(titulo)
+    _, autor, _ = obtener_datos_libro(titulo)
     _, _, idioma = datos_autores[autor]
     return idioma
 
-def obtener_anno_defuncion_autor(titulo):
-    autor = obtener_autor(titulo)
-    _, defuncion, _ = datos_autores[autor]
-    anno, mes, dia = defuncion
-    return anno
-
-def obtener_edad_autor(titulo):
-    autor = obtener_autor(titulo)
-    nacimiento, defuncion, _ = datos_autores[autor]
-    an, _, _ = nacimiento
-    ad, _, _ = defuncion
-    return ad - an
+def calcular_annos_antes_de_morir(titulo):
+    _, autor, anno_publicacion = obtener_datos_libro(titulo)
+    _, (anno_defuncion, _, _), _ = datos_autores[autor]
+    return (anno_defuncion - anno_publicacion)
 
 
 # PROGRAMA
@@ -45,8 +41,8 @@ datos_autores = {
 
 titulo = raw_input('Ingrese titulo del libro: ')
 print 'El libro fue escrito en', obtener_idioma(titulo),
-print 'por', obtener_autor(titulo),
-print 'que murió en el año', obtener_anno_defuncion_autor(titulo),
-print 'a la edad de', obtener_edad_autor(titulo), 'años.'
+print 'por', obtener_autor(titulo)
+print 'El autor fallecio', calcular_annos_antes_de_morir(titulo), 'años',
+print 'después de haber escrito el libro'
 # FIN PROGRAMA
 
