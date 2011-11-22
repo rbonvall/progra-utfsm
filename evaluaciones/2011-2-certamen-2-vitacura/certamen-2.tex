@@ -1,0 +1,110 @@
+\documentclass[11pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listingsutf8}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Certamen 2, sábado 19 de noviembre de 2011}
+\newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
+\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
+
+\input{../../latex/encabezado.tex}
+\input{../../latex/definiciones.tex}
+\lstset{inputencoding=utf8/latin1}
+
+\begin{document}
+
+  \begin{enumerate}[font=\Large\bfseries]
+
+    \item
+      \pond{25}
+      Indique qué es lo que imprimen los siguientes programas.
+
+      \foreach \x in {1,2,...,8} {
+        \noindent
+        \begin{minipage}[b]{19.8em}
+          \edef\dolisting{\noexpand\lstinputlisting[linerange=P\x-FIN\ P\x]{programas.py}}
+          \dolisting
+          \framebox[18em]{\rule[6ex]{0pt}{0pt}}
+          \vspace{0.7em}
+        \end{minipage}
+      }
+
+    \newpage
+    \item
+      \pond{25}
+      Escriba las funciones necesarias para que el siguiente programa funcione.
+      \lstinputlisting[linerange=PROGRAMA-FIN\ PROGRAMA, basicstyle=\small\ttfamily, frame=single]{libros.py}
+
+    \newpage
+    \item
+      \pond{25}
+      La ciudad de Pitonia tiene una alta congestión de vehículos
+      circulando por sus calles.
+      Las autoridades han decidido aplicar restricción vehicular
+      para descongestionar la ciudad en base a las patentes de los vehículos.
+
+      La patente de un vehículo es un string de cuatro letras y dos dígitos,
+      y la restricción depende sólo del \emph{penúltimo} dígito.
+      Por ejemplo, para la patente \li!GEEA78!,
+      el dígito \li!7! es el utilizado para evaluar la restricción.
+
+      La restricción vehícular de los días hábiles de la semana
+      se encuentra ingresada en el diccionario \li!digitos!,
+      cuyas llaves son los días de la semanas,
+      y cuyos valores son tuplas de cuatro enteros que representan
+      los dígitos con restricción de ese día.
+      \begin{enumerate}
+        \item Implemente la función \li!esta_con_restriccion(digitos, dia, patente)!,
+          que indique si el vehículo está o no con restricción.
+        \item Implemente la función \li!dias_con_restriccion(digitos, patente)!,
+          que retorne la lista de los días en que el vehículo no puede circular.
+        \item Implemente la función \li!dias_sin_restriccion(digitos, patente)!,
+          que retorne el conjunto de los días en que el vehículo sí puede circular.
+      \end{enumerate}
+      \lstinputlisting[linerange=CASO-FIN\ CASO]{restriccion.py}
+
+    \newpage
+    \item
+      \pond{25}
+      La empresa de telecomunicaciones Python Está Aquí
+      desea implementar un programa
+      para monitorear y controlar la asignación de antenas
+      para los teléfonos móviles de sus clientes
+      en una zona específica de la ciudad.
+      Para ello se considera la siguiente representación:
+      \begin{itemize}
+        \item la posición de cada antena es una tupla \li!(a, (x, y))!,
+          donde \li!a! es el nombre de la antena
+          y \li!(x, y)! es su ubicación en la zona, dada en kilómetros;
+        \item la posición de casa cliente es una tupla \li!(c, (x, y))!,
+          donde \li!c! es un identificador del cliente
+          y \li!(x, y)! su ubicación en la ciudad, dada en kilómetros.
+      \end{itemize}
+      El máximo radio de cobertura de una antena es de 3 kilómetros.
+
+      Implemente la función \li!mejor_antena(antenas, clientes, c)!,
+      cuyos parámetros son las listas de antenas y clientes,
+      junto con el identificador \li!c!
+      de un cliente en particular.
+      La función debe retornar el nombre de la antena
+      que entrega la mejor cobertura (la más cercana) al cliente.
+      Si existe más de una, elija cualquiera.
+      Si no hay antenas dentro del radio de cobertura,
+      debe retornar \li!None!.
+
+      \lstinputlisting[linerange=CASO-FIN\ CASO]{antenas.py}
+
+  \end{enumerate}
+\end{document}
+
