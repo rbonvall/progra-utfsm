@@ -39,18 +39,22 @@ div.document {
     padding-left: 3em;
     padding-right: 3em;
     max-width: 45em;
+    background-color: cyan;
 }
 
 div.body {
     margin: 0;
     /*padding: 0.5em 20px 20px 20px;*/
     width: 100%;
+    background-color: magenta;
 }
 
 div.documentwrapper {
+    background-color: yellow;
 }
 
 div.panel {
+    background-color: orange;
     position: fixed;
     left: 0;
     width: 140px;
