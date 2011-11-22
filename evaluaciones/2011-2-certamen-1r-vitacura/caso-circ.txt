@@ -1,0 +1,29 @@
+# CASO 1
+x1: `5`
+y1: `6`
+r1: `3.5`
+x2: `10`
+y2: `5`
+r2: `3`
+Se intersectan
+# FIN CASO 1
+
+# CASO 2
+x1: `3.5`
+y1: `5`
+r1: `2`
+x2: `10`
+y2: `4`
+r2: `3`
+No se intersectan
+# FIN CASO 2
+
+# CASO 3
+x1: `5`
+y1: `4.5`
+r1: `3`
+x2: `6`
+y2: `5`
+r2: `4.5`
+No se intersectan
+# FIN CASO 3
