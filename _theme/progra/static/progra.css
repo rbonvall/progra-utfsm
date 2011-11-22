@@ -34,7 +34,7 @@ div.document {
     text-align: left;
     /*background-image: url(contents.png);*/
     background-repeat: repeat-x;
-    margin-left: 140px;
+    margin-left: 200px;
     margin-right: 0;
     padding-left: 3em;
     padding-right: 3em;
@@ -57,7 +57,7 @@ div.panel {
     background-color: orange;
     position: fixed;
     left: 0;
-    width: 140px;
+    width: 200px;
     margin: 2ex auto;
 }
 div.panel a.arrow {
@@ -80,7 +80,7 @@ div.footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 140px;
+    width: 200px;
     margin: 2ex auto;
     /*color: #86989B;*/
     /*font-size: 0.8em;*/
