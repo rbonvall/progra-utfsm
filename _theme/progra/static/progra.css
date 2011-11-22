@@ -75,6 +75,22 @@ div.panel a.arrow:hover {
     background-color: maroon;
 }
 
+div.footer {
+    background-color: orange;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 140px;
+    margin: 2ex auto;
+    /*color: #86989B;*/
+    /*font-size: 0.8em;*/
+    /*text-align: right;*/
+}
+
+div.footer a {
+    color: #86989B;
+    text-decoration: underline;
+}
 
 div.related {
     font-size: smaller;
@@ -108,20 +124,6 @@ div.related ul li a {
 
 div.related ul li a:hover {
     color: #3CA8E7;
-}
-
-div.footer {
-    /*background-color: #E3EFF1;*/
-    color: #86989B;
-    padding: 3px 8px 3px 0;
-    clear: both;
-    font-size: 0.8em;
-    text-align: right;
-}
-
-div.footer a {
-    color: #86989B;
-    text-decoration: underline;
 }
 
 /* -- body styles ----------------------------------------------------------- */
