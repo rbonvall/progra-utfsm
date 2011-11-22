@@ -25,8 +25,7 @@ body {
     padding: 0;
     /*border: 1px solid #aaa;*/
 
-    margin: 0px auto 0px auto;
-    max-width: 45em;
+    margin: 0;
     /*width: 40em;*/
 }
 
@@ -35,20 +34,43 @@ div.document {
     text-align: left;
     /*background-image: url(contents.png);*/
     background-repeat: repeat-x;
+    margin-left: 140px;
+    margin-right: 0;
     padding-left: 3em;
     padding-right: 3em;
-    padding-top: 2ex;
-    width: 100%;
+    max-width: 45em;
 }
 
 div.body {
     margin: 0;
-    padding: 0.5em 20px 20px 20px;
-
+    /*padding: 0.5em 20px 20px 20px;*/
+    width: 100%;
 }
 
 div.documentwrapper {
 }
+
+div.panel {
+    position: fixed;
+    left: 0;
+    width: 140px;
+    margin: 2ex auto;
+}
+div.panel a.arrow {
+    color: #BFD1D4;
+    text-decoration: none;
+    border-radius: 1em;
+    font-size: 4em;
+}
+div.panel a.arrow:link {
+    color: #BFD1D4;
+    background-color: gray;
+}
+div.panel a.arrow:hover {
+    color: #BFD1D4;
+    background-color: maroon;
+}
+
 
 div.related {
     font-size: smaller;
@@ -288,29 +310,6 @@ div.versioninfo {
     line-height: 1.3em;
     font-size: 0.9em;
 }
-
-div.panel {
-    /*background-color: yellow;*/
-    position: fixed;
-    left: 0;
-    width: 140px;
-    margin: 2ex auto;
-}
-div.panel a.arrow {
-    color: #BFD1D4;
-    text-decoration: none;
-    border-radius: 1em;
-    font-size: 4em;
-}
-div.panel a.arrow:link {
-    color: #BFD1D4;
-    background-color: gray;
-}
-div.panel a.arrow:hover {
-    color: #BFD1D4;
-    background-color: maroon;
-}
-
 
 @media print {
     #disqus_thread {
