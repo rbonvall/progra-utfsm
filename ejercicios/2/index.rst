@@ -101,6 +101,8 @@ Sin clasificar aún
 ------------------
 .. toctree::
 
+    temperaturas
+    fookbace
     dardos
     adn
     ahorcado

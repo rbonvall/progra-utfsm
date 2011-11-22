@@ -96,4 +96,7 @@ Diseño de algoritmos
     numero-deleitable
     metodo-newton
     triangulo-pascal
+    torre-y-alfil
+    rango
+    van
 
