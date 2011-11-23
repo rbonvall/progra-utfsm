@@ -99,4 +99,7 @@ Diseño de algoritmos
     torre-y-alfil
     rango
     van
+    reglamento-evaluaciones
+    votaciones-confech
+    promocion-descuento
 
