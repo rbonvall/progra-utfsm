@@ -224,7 +224,7 @@ tt.descname, tt.descclassname, tt.xref {
 
 hr {
     border: 1px solid #abc;
-    margin: 2em;
+    margin: 2ex 1em;
 }
 
 a tt {
