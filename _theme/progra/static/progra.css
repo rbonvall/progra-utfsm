@@ -132,7 +132,6 @@ div.related ul li a:hover {
     font-size: 21px;
     padding: 0;
     font-weight: bold;
-    background-color: cyan;
 }
 .rootlink a:link { text-decoration: none; }
 .rootlink a:hover { text-decoration: underline; }
