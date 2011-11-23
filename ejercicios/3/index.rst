@@ -1,5 +1,5 @@
-Ejercicios para el certamen 3
-=============================
+Ejercicios, parte 3
+===================
 
 Arreglos
 --------

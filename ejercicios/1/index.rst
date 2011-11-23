@@ -1,5 +1,5 @@
-Ejercicios para el certamen 1
-=============================
+Ejercicios, parte 1
+===================
 
 Expresiones
 -----------

@@ -1,5 +1,5 @@
-Ejercicios para el certamen 2
-=============================
+Ejercicios, parte 2
+===================
 
 Funciones y módulos
 -------------------
