@@ -102,4 +102,7 @@ Diseño de algoritmos
     reglamento-evaluaciones
     votaciones-confech
     promocion-descuento
+    alzas-dolar
+    maquina-alimentos
+    interseccion-circunferencias
 
