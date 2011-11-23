@@ -16,4 +16,4 @@ Desarrolle un programa para poder determinar
 los otros tres números.
 
 Tenga en cuenta que los números se encuentran
-en el rango `[150,410]`.
+entre 150 y 410.

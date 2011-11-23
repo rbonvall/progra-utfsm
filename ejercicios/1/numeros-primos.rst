@@ -115,7 +115,7 @@ El número 1 no es ni primo ni compuesto.
       157 + 181
 
    Muestre sólo una de las maneras de escribir cada suma
-   (por ejemplo, si muestra `61 + 271`, no muestre `271 + 61`).
+   (por ejemplo, si muestra 61 + 271, no muestre 271 + 61).
 
 #. Escriba programas que respondan las siguientes preguntas:
 

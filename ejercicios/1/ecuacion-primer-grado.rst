@@ -4,9 +4,7 @@ Ecuación primer grado
 Escriba un programa que pida los coeficientes de una ecuación de primer
 grado:
 
-.. math::
-
-	a\cdot x + b = 0
+    *ax* + *b* = 0,
 
 y que entregue la solución.
 
