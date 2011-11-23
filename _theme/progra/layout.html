@@ -23,6 +23,14 @@
     <hr>
 
     <p>
+      <a href="{{ pathto('materia/index.html', 1) }}" title="Materia"> Materia </a>
+      <br>
+      <a href="{{ pathto('ejercicios/index.html', 1) }}" title="Ejercicios"> Ejercicios </a>
+    </p>
+
+    <hr>
+
+    <p>
       {%- if prev %}
         ←
         <a href="{{ prev.link|e }}" title="{{ prev.title }}"
