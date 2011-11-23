@@ -25,83 +25,134 @@ body {
     padding: 0;
     /*border: 1px solid #aaa;*/
 
-    margin: 0px auto 0px auto;
-    max-width: 45em;
+    margin: 0;
     /*width: 40em;*/
 }
 
 div.document {
     background-color: white;
     text-align: left;
-    /*background-image: url(contents.png);*/
-    background-repeat: repeat-x;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-top: 2ex;
-    width: 100%;
 }
 
-div.bodywrapper {
-    margin: 0 240px 0 0;
-    border-right: 1px solid #ccc;
-    width: 100%;
-}
+@media print {
 
-div.body {
-    margin: 0;
-    padding: 0.5em 20px 20px 20px;
+    body {
+        font-size: 12px;
+    }
+
+    div.panel, div.footer, #disqus_thread {
+        display: none;
+    }
 
 }
 
-div.documentwrapper {
-}
+@media screen {
 
-div.related {
-    font-size: smaller;
-}
+    div.document {
+        /*background-image: url(contents.png);*/
+        background-repeat: repeat-x;
+        margin-left: 200px;
+        margin-right: 0;
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-bottom: 5ex;
+        max-width: 45em;
+    }
 
-div.related ul {
-    /*background-image: url(navigation.png);*/
-    /*height: 2em;*/
-    /*border-top: 1px solid #ddd;*/
-    /*border-bottom: 1px solid #ddd;*/
-}
+    div.body {
+        margin: 0;
+        /*padding: 0.5em 20px 20px 20px;*/
+        width: 100%;
+    }
 
-div.related ul li {
-    margin: 0;
-    padding: 0;
-    height: 2em;
-    float: left;
-}
+    div.documentwrapper {
+    }
 
-div.related ul li.right {
-    float: right;
-    margin-right: 5px;
-}
+    div.panel {
+        position: fixed;
+        left: 0;
+        width: 200px;
+        margin: 2ex auto;
+    }
+    div.panel a.arrow {
+        color: #BFD1D4;
+        text-decoration: none;
+        border-radius: 1em;
+        font-size: 4em;
+    }
+    div.panel a.arrow:link {
+        color: #BFD1D4;
+        background-color: gray;
+    }
+    div.panel a.arrow:hover {
+        color: #BFD1D4;
+        background-color: maroon;
+    }
 
-div.related ul li a {
-    margin: 0;
-    padding: 0 5px 0 5px;
-    line-height: 1.75em;
-    color: #EE9816;
-}
+    div.footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+        margin: 2ex auto;
+        /*color: #86989B;*/
+        /*font-size: 0.8em;*/
+        /*text-align: right;*/
+    }
 
-div.related ul li a:hover {
-    color: #3CA8E7;
-}
+    div.footer a {
+        color: #86989B;
+        text-decoration: underline;
+    }
+    div.footer img {
+        padding: 5px;
+        vertical-align: top;
+    }
 
-div.footer {
-    /*background-color: #E3EFF1;*/
-    color: #86989B;
-    padding: 3px 8px 3px 0;
-    clear: both;
-    font-size: 0.8em;
-    text-align: right;
-}
+    div.related {
+        font-size: smaller;
+    }
 
-div.footer a {
-    color: #86989B;
-    text-decoration: underline;
+    div.related ul {
+        /*background-image: url(navigation.png);*/
+        /*height: 2em;*/
+        /*border-top: 1px solid #ddd;*/
+        /*border-bottom: 1px solid #ddd;*/
+    }
+
+    div.related ul li {
+        margin: 0;
+        padding: 0;
+        height: 2em;
+        float: left;
+    }
+
+    div.related ul li.right {
+        float: right;
+        margin-right: 5px;
+    }
+
+    div.related ul li a {
+        margin: 0;
+        padding: 0 5px 0 5px;
+        line-height: 1.75em;
+        color: #EE9816;
+    }
+
+    div.related ul li a:hover {
+        color: #3CA8E7;
+    }
+
+    .rootlink {
+        font-family: Gill Sans, Helvetica, Arial, sans-serif;
+        margin: 0;
+        font-size: 21px;
+        padding: 0;
+        font-weight: bold;
+    }
+    .rootlink a:link { text-decoration: none; }
+    .rootlink a:hover { text-decoration: underline; }
+
 }
 
 /* -- body styles ----------------------------------------------------------- */
@@ -191,7 +242,7 @@ tt.descname, tt.descclassname, tt.xref {
 
 hr {
     border: 1px solid #abc;
-    margin: 2em;
+    margin: 2ex 1em;
 }
 
 a tt {
@@ -295,9 +346,3 @@ div.versioninfo {
     font-size: 0.9em;
 }
 
-
-@media print {
-    #disqus_thread {
-        display: none;
-    }
-}
