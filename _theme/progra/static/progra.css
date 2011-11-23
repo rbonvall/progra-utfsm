@@ -39,22 +39,18 @@ div.document {
     padding-left: 3em;
     padding-right: 3em;
     max-width: 45em;
-    background-color: cyan;
 }
 
 div.body {
     margin: 0;
     /*padding: 0.5em 20px 20px 20px;*/
     width: 100%;
-    background-color: magenta;
 }
 
 div.documentwrapper {
-    background-color: yellow;
 }
 
 div.panel {
-    background-color: orange;
     position: fixed;
     left: 0;
     width: 200px;
@@ -76,7 +72,6 @@ div.panel a.arrow:hover {
 }
 
 div.footer {
-    background-color: orange;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -90,6 +85,10 @@ div.footer {
 div.footer a {
     color: #86989B;
     text-decoration: underline;
+}
+div.footer img {
+    padding: 5px;
+    vertical-align: top;
 }
 
 div.related {
