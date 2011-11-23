@@ -126,6 +126,17 @@ div.related ul li a:hover {
     color: #3CA8E7;
 }
 
+.rootlink {
+    font-family: Gill Sans, Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 21px;
+    padding: 0;
+    font-weight: bold;
+    background-color: cyan;
+}
+.rootlink a:link { text-decoration: none; }
+.rootlink a:hover { text-decoration: underline; }
+
 /* -- body styles ----------------------------------------------------------- */
 
 p {    
