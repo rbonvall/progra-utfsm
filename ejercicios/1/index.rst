@@ -68,11 +68,17 @@ Patrones comunes
     piezas-domino
     lanzar-dados
 
+Ruteos
+------
+.. toctree::
+
+    ojo-con-la-indentacion
+    ruteos-varios
+
 Diseño de algoritmos
 --------------------
 .. toctree::
 
-    indentacion
     digitos
     rol
     ecuacion-primer-grado
