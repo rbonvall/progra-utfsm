@@ -28,7 +28,7 @@
         <a href="{{ prev.link|e }}" title="{{ prev.title }}"
            {{ accesskey(prev.link) }}>anterior</a>
       {%- endif %}
-      |
+      {% if prev and next %} | {% endif %}
       {%- if next %}
         <a href="{{ next.link|e }}" title="{{ next.title }}"
            {{ accesskey(next.link) }}>siguiente</a>
