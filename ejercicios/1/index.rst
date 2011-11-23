@@ -75,15 +75,12 @@ Diseño de algoritmos
     indentacion
     digitos
     rol
-    transformador-binario
     ecuacion-primer-grado
     caballo-de-ajedrez
     media-armonica
     es-numero-palindromo
     palabras-palindromas
     cachipun
-    calculo-interes
-    cifrado-cesar
     numeros-primos
     el-mejor-numero
     adivinar-numero
@@ -93,7 +90,6 @@ Diseño de algoritmos
     suma-digitos-cubo
     multiplicacion-rusa
     numeros-amistosos
-    numero-deleitable
     metodo-newton
     triangulo-pascal
     torre-y-alfil
