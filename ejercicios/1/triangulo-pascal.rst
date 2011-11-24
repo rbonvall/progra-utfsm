@@ -4,19 +4,9 @@ Triángulo de Pascal
 Desarrolle un programa que dibuje un `triángulo
 de Pascal`_, o sea, una disposición de números
 enteros tales que cada uno sea la suma de los
-dos que están por encima de él, como se muestra
-a continuación:
+dos que están por encima de él:
 
-.. testcase::
-
-             1
-           1   1
-         1   2   1
-       1   3   3   1
-     1   4   6   4   1
-             .
-             .
-             .
+.. image:: ../../diagramas/pascal.png
 
 Genere las primeras 20 líneas.
 Considere que en la línea 20 aparecen
