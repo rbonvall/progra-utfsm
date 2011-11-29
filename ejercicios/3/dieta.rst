@@ -1,7 +1,7 @@
 Construcción de una dieta
 =========================
 
-    *Ejercicio sacado de* [Lay97]_.
+*Ejercicio sacado de* [Lay97]_.
 
 La dieta Cambridge es una dieta que fue popular en la década de los 80,
 y fue el resultado de más de ocho años de trabajo clínico e investigación

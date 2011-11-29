@@ -1,7 +1,7 @@
 Espiral
 =======
 
-    *Ejercicio sacado de* `Project Euler`_.
+*Ejercicio sacado de* `Project Euler`_.
 
 .. _Project Euler: http://projecteuler.net/index.php?section=problems&id=28
 

@@ -1,7 +1,7 @@
 Migración de poblaciones
 ========================
 
-    *Ejercicio sacado de* [Lay97]_.
+*Ejercicio sacado de* [Lay97]_.
 
 Estudios demográficos muestran que, cada año,
 el 5% de la población de una ciudad

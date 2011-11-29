@@ -1,7 +1,7 @@
 Método de Newton
 ================
 
-    *Ejercicio sacado de* [Abel96]_ (fuente_).
+*Ejercicio sacado de* [Abel96]_ (fuente_).
 
 .. _fuente: http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-4.html#%_toc_%_sec_1.1.7
 .. _método de Newton: http://es.wikipedia.org/wiki/M%C3%A9todo_de_Newton
