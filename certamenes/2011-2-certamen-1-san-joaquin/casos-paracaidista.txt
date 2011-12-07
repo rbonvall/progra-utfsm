@@ -1,0 +1,17 @@
+# CASO 1
+Distancia: `25.4`
+Angulo: `192.9`
+AREA VERDE
+# FIN CASO 1
+
+# CASO 2
+Distancia: `29.1`
+Angulo: `333.0`
+CEMENTO
+# FIN CASO 2
+
+# CASO 3
+Distancia: `40`
+Angulo: `60`
+PUBLICO
+# FIN CASO 3
