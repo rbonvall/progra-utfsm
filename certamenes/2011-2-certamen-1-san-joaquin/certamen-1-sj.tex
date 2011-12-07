@@ -15,6 +15,8 @@
 \usepackage{graphics}
 \usepackage{array}
 
+\usetikzlibrary{patterns}
+
 \newcommand{\titulo}{Certamen 1 [SJ, v1], miércoles 19 de diciembre de 2011}
 \newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
 \newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
@@ -69,10 +71,10 @@
       \def\rExtVerde{35}
       \def\rIntVerde{20}
       \def\rPileta{7}
-      \tikzstyle{cemento}=[fill=black!50]
-      \tikzstyle{pileta}=[fill=black!80]
+      \tikzstyle{cemento}=[fill=black!10]
+      \tikzstyle{pileta}=[fill=black!90]
       \tikzstyle{verde}=[fill=Green]
-      \tikzstyle{gente}=[fill=Yellow]
+      \tikzstyle{gente}=[pattern=north west lines, pattern color=Brown]
       \pond{25}
       Para celebrar el aniversario de la fundación de Kreisdorf,
       la alcaldesa ha organizado un espectáculo aéreo,
