@@ -2,6 +2,7 @@
 `S`
 `C`
 `C`
+`C`
 `S`
 `C`
 `S`
@@ -9,6 +10,7 @@ Usted gano
 # FIN CASO 1
 
 # CASO 2
+`S`
 `S`
 `C`
 `S`
