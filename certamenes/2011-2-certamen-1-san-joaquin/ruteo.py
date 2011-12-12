@@ -4,7 +4,7 @@ g = ''
 while i > j:
     i /= 2
     j *= 3
-    if j % 3 == 1:
+    if j % 2 == 0:
         j += 1
     g += '*'
 print g
