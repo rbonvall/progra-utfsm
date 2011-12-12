@@ -144,7 +144,8 @@
 
           % distancias
           \foreach\dist in {\rPlaza,\rExtVerde,\rIntVerde, \rPileta} {
-            \node[font=\tiny] at (247: \dist) {\dist};
+            \edef\ldist{\dist + 3.5}
+            \node[font=\tiny] at (247: \ldist) {\dist};
           }
 
         \end{tikzpicture}
