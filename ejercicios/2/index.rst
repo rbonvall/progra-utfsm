@@ -10,6 +10,7 @@ Funciones y módulos
     funciones-numeros-primos
     aprox-seno-coseno
     tabla-verdad
+    maximo-comun-divisor
     modulo-listas
     numeros-romanos
     ruteo-funciones
