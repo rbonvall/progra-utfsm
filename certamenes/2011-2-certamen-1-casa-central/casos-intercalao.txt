@@ -1,0 +1,21 @@
+# CASO 1
+`S`
+`C`
+`C`
+`C`
+`S`
+`C`
+`S`
+Usted gano
+# FIN CASO 1
+
+# CASO 2
+`S`
+`S`
+`C`
+`S`
+`S`
+`S`
+`S`
+Usted perdio
+# FIN CASO 2
