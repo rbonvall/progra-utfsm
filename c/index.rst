@@ -27,6 +27,7 @@ Tutorial
 
    estructura-programa
    edad
+   numeros-primos
 
 Referencia
 ----------
