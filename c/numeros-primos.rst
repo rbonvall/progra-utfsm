@@ -73,6 +73,9 @@ junto con sus equivalentes en Python::
     for (i = 40; i > 0; --i)        for i in range(40, 0, -1):
     for (i = 1; i <= N; ++i)        for i in range(1, N + 1):
 
+Las sentencias ``break`` y ``continue`` de Python
+también funcionan en C.
+
 Operadores de incremento y decremento
 -------------------------------------
 La expresión ``n++``
@@ -101,7 +104,7 @@ Valores lógicos
 ---------------
 En C no existe un tipo de datos
 para representar valores lógicos,
-a diferencia de Python que tiene el tipo ``bool``.
+como el tipo ``bool`` de Python.
 En C, **los valores lógicos son enteros**.
 El valor cero es interpretado como falso,
 y cualquier otro valor como verdadero.
@@ -167,13 +170,13 @@ en vez de verificar que ``x`` vale 2,
 Ejercicios
 ----------
 Modifique el programa de arriba para que,
-en vez de mostrar los *m* primeros números primos,
+en vez de mostrar una cierta cantidad de números primos,
 muestre todos los números primos menores que *m*.
 
 A continuación,
-modifíquelo para que,
-en vez de mostrar sólo los números primos,
-muestre todos los números,
+modifíquelo para que
+en lugar de mostrar sólo los números primos
+los muestre todos,
 indicando para cada uno de ellos
 si es primo o compuesto:
 
