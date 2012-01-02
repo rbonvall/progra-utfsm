@@ -16,6 +16,8 @@ dentro de una función llamada ``main``,
 y la última sentencia del programa
 debe ser ``return 0``.
 
+Escriba, compile y ejecute este programa.
+
 Declaración de variables
 ------------------------
 
