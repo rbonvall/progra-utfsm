@@ -28,6 +28,7 @@ Tutorial
    estructura-programa
    edad
    numeros-primos
+   calculadora
 
 Referencia
 ----------
