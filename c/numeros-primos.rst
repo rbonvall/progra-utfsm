@@ -51,7 +51,7 @@ Entre los paréntesis tiene tres partes
 separadas por punto y coma::
 
     for (inicializacion; condicion; actualizacion) {
-        ...
+        /* ... */
     }
 
 La inicialización se ejecuta una vez,
@@ -68,11 +68,11 @@ para decidir si se continúa o no ejecutando el ciclo.
 Algunos ejemplos de ciclos ``for`` en C,
 junto con sus equivalentes en Python::
 
-    for (i = 0; i < N; ++i)         for i in range(N):
-    for (i = 5; i < 10; ++i)        for i in range(5, 10):
-    for (i = 2; i < 30; i += 2)     for i in range(2, 30, 2):
-    for (i = 40; i > 0; --i)        for i in range(40, 0, -1):
-    for (i = 1; i <= N; ++i)        for i in range(1, N + 1):
+    for (i = 0; i < N; ++i)       /* for i in range(N):         */
+    for (i = 5; i < 10; ++i)      /* for i in range(5, 10):     */
+    for (i = 2; i < 30; i += 2)   /* for i in range(2, 30, 2):  */
+    for (i = 40; i > 0; --i)      /* for i in range(40, 0, -1): */
+    for (i = 1; i <= N; ++i)      /* for i in range(1, N + 1):  */
 
 Las sentencias ``break`` y ``continue`` de Python
 también funcionan en C.
@@ -124,6 +124,7 @@ el ciclo ``while`` de nuestro programa
 también podría haber sido escrito así::
 
     while (primos_por_mostrar) {
+        /* ... */
     }
 
 ya que esto también haría que el ciclo terminara
@@ -161,6 +162,7 @@ dentro de la condición de un ``if`` o de un ``while``,
 por lo que un programa como éste::
 
     if (x = 2) {
+        /* ... */
     }
 
 compilará y se ejecutará sin errores,
