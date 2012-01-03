@@ -1,6 +1,8 @@
 Calcular la edad del usuario
 ============================
 
+.. highlight:: c
+
 El siguiente programa
 le pide al usuario ingresar su año de nacimiento
 y el año actual.
@@ -8,7 +10,6 @@ A continuación,
 le muestra cuál es su edad:
 
 .. literalinclude:: programas/edad.c
-   :language: c
 
 Como siempre,
 el código del programa debe estar incluído

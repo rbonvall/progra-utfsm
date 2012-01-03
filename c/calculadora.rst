@@ -1,11 +1,12 @@
 Calculadora simple
 ==================
 
+.. highlight:: c
+
 El siguiente programa
 es una calculadora simple:
 
 .. literalinclude:: programas/calculadora.c
-   :language: c
 
 Al ejecutar el programa,
 primero uno ingresa la operación que será aplicada,

@@ -1,6 +1,8 @@
 Estructura de un programa en C
 ==============================
 
+.. highlight:: c
+
 En un programa en C,
 **todas las sentencias deben estar dentro de una función**.
 

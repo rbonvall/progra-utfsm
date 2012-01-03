@@ -1,12 +1,13 @@
 Números primos
 ==============
 
+.. highlight:: c
+
 El siguiente programa
 muestra la cantidad de números primos
 indicada por el usuario:
 
 .. literalinclude:: programas/primos.c
-   :language: c
 
 En este programa,
 vemos que es posible declarar varias variables del mismo tipo
