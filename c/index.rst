@@ -25,7 +25,7 @@ Tutorial
 .. toctree::
    :maxdepth: 1
 
-   estructura-programa
+   hola-mundo
    edad
    numeros-primos
    calculadora

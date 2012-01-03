@@ -1,5 +1,5 @@
-Estructura de un programa en C
-==============================
+Hola mundo
+==========
 
 .. highlight:: c
 
