@@ -67,8 +67,8 @@ para guardar un número entero.
 ¡Todo esto ocurre antes de que el programa sea siquiera ejecutado por primera vez!
 
 
-Entrada
--------
+Entrada con scanf
+-----------------
 
 Ya conocimos la función ``printf``,
 que sirve para imprimir un (único) string por pantalla.
