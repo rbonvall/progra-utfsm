@@ -119,3 +119,4 @@ para que imprima el siguiente haiku::
 
 Puede hacerlo con un único ``printf``
 o con varios.
+Averigüe cómo hacer para imprimir las comillas.
