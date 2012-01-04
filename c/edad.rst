@@ -138,7 +138,7 @@ Haga el ejercicio de darse cuenta de los errores::
 
     /* Incorrectos */
     printf("Usted tiene %d annos.");
-    printf("Usted tiene annos.", 18);
+    printf("Usted tiene annos.", edad);
     printf("Usted tiene annos.", 18);
     printf("Usted tiene", edad, "annos.");
     printf("Usted tiene edad annos.");
