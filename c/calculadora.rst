@@ -104,7 +104,7 @@ No hay que confundir un caracter
 con un string de largo uno:
 ``'a'`` y ``"a"`` son dos cosas distintas.
 
-.. _tabla ASCII: http://es.wikipedia.org/wiki/Código_ASCII
+.. _tabla ASCII: http://es.wikipedia.org/wiki/C%C3%B3digo_ASCII#Caracteres_imprimibles_ASCII
 
 Sentencia switch
 ----------------
