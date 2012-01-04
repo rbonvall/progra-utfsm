@@ -32,7 +32,7 @@ es lo que hace el programa cuando es ejecutado.
 
 La línea ``int main()`` es la que indica que
 el código que viene a continuación,
-entre los paréntesis de llava (``{`` y ``}``)
+entre los paréntesis de llave (``{`` y ``}``)
 es parte de esta función.
 
 Cuando la función ``main`` retorna un valor,
