@@ -163,6 +163,6 @@ y le muestre cuál es su promedio, con decimales:
 Para declarar una variable de tipo real,
 se debe indicar que el tipo es ``float``.
 
-Para mostrar un número real con decimales,
+Para leer y para mostrar un número real con decimales,
 se usa el descriptor de formato ``%f``.
 
