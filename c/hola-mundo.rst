@@ -3,12 +3,9 @@ Hola mundo
 
 .. highlight:: c
 
-En un programa en C,
-**todas las sentencias deben estar dentro de una función**.
-
-Todos los programas tienen una función principal
-cuyo nombre siempre debe ser ``main``.
-
+El siguiente es un programa
+que le muestra al usuario
+el mensaje «Hola mundo»:
 
 .. literalinclude:: programas/hola-mundo.c
    :language: c
