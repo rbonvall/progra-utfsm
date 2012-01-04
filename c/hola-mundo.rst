@@ -49,6 +49,29 @@ Como regla general,
 al final de la función ``main``
 siempre debe ir un ``return 0``, como en el ejemplo.
 
+Salida con printf
+-----------------
+La función ``printf`` muestra un mensaje en la pantalla.
+El mensaje debe ser un string.
+Los strings literales se representan entre comillas dobles::
+
+    "Hola mundo\n"
+
+A diferencia del ``print`` de Python,
+``printf`` no pone un salto de línea al final del mensaje.
+El salto de línea debe ser agregado explícitamente
+usando su representación ``\n``.
+Por ejemplo,
+el siguiente código
+imprime el mensaje «Hola mundo»
+en una única línea,
+y pone un salto de línea al final::
+
+    printf("Ho");
+    printf("la mu");
+    printf("ndo\n");
+
+
 Inclusión de cabeceras
 ----------------------
 Técnicamente,
