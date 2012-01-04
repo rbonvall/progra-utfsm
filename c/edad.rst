@@ -67,8 +67,8 @@ para guardar un número entero.
 ¡Todo esto ocurre antes de que el programa sea siquiera ejecutado por primera vez!
 
 
-Entrada con scanf
------------------
+Entrada con formato usando scanf
+--------------------------------
 
 Ya conocimos la función ``printf``,
 que sirve para imprimir un (único) string por pantalla.
@@ -112,8 +112,8 @@ es equivalente a la siguiente sentencia en Python:
     nacimiento = int(raw_input())
 
 
-Salida
-------
+Salida con formato usando printf
+--------------------------------
 La función ``printf`` imprime sólo strings, no enteros.
 Sin embargo,
 es posible insertar enteros dentro del string

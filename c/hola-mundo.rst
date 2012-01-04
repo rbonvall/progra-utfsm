@@ -49,8 +49,8 @@ Como regla general,
 al final de la función ``main``
 siempre debe ir un ``return 0``, como en el ejemplo.
 
-Salida con printf
------------------
+Salida usando printf
+--------------------
 La función ``printf`` muestra un mensaje en la pantalla.
 El mensaje debe ser un string.
 Los strings literales se representan entre comillas dobles::
