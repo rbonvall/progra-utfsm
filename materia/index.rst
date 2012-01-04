@@ -4,12 +4,6 @@ Materia
 .. toctree::
 
     introduccion
-
-Contenidos del primer certamen
-------------------------------
-
-.. toctree::
-
     algoritmos
     programas
     tipos
@@ -18,11 +12,6 @@ Contenidos del primer certamen
     errores
     sentencias-de-control
     patrones
-
-Contenidos del segundo certamen
--------------------------------
-.. toctree::
-
     funciones
     modulos
     listas
@@ -31,11 +20,6 @@ Contenidos del segundo certamen
     conjuntos
     texto
     archivos
-
-Contenidos del tercer certamen
-------------------------------
-.. toctree::
-
     arreglos
     arreglos-2d
     productos

@@ -1,10 +1,10 @@
 Diapositivas y notas de clases
 ==============================
 
-Las sesiones están numeradas
-de acuerdo a la `planificación de la asignatura`_.
+Revise la `planificación de la asignatura`_ de su campus
+para determinar cuál es el material que debe usar en cada sesión.
 
-.. _planificación de la asignatura: https://spreadsheets.google.com/ccc?key=0Ake0OLr39mnXdGVncUxOYVUtMkVsQjEwc2FWdnVKRlE&hl=es&authkey=CJaQqdYN
+.. _planificación de la asignatura: http://progra.usm.cl/Contenidos_de_la_asignatura.html
 
 ----
 
@@ -12,126 +12,109 @@ de acuerdo a la `planificación de la asignatura`_.
 
 ----
 
-* Sesión 1: diapos__, notas__.
+* Introducción a la programación: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/01-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/01-notas.pdf
 
-* Sesión 2: diapos__, notas__.
+* Uso de intérprete, expresiones y tipos: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/02-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/02-notas.pdf
 
-* Sesión 3: diapos__, notas__.
+* Programas simples: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/03-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/03-notas.pdf
 
-* Sesión 4: diapos__, notas__.
+* Estructuras condicionales: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/04-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/04-notas.pdf
 
-* Sesión 5: diapos__, notas__.
+* Estructuras de repetición: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/05-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/05-notas.pdf
 
-* Sesión 6: diapos__, notas__.
+* Patrones comunes: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/06-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/06-notas.pdf
 
-* Sesión 7: ejercicios propuestos por el profesor.
-* Sesión 8: ejercicios propuestos por el profesor.
-* Sesión 9: certamen 1.
-
 ----
 
-* Sesión 10: diapos__, notas__.
+* Funciones: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/10-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/10-notas.pdf
 
-* Sesión 11: diapos__, notas__.
+* Módulos, funciones avanzadas: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/11-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/11-notas.pdf
 
-* Sesión 12: diapos__, notas__.
+* Listas y tuplas: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/12-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/12-notas.pdf
 
-* Sesión 13: diapos__, notas__.
+* Diccionarios y conjuntos: diapos__, notas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/13-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/13-notas.pdf
 
-* Sesión 14: diapos__, notas__, `soluciones a los problemas`__.
+* Estructuras de datos anidadas: diapos__, notas__, `soluciones a los problemas`__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/14-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/14-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/14-programas.zip
 
-* Sesión 15:
-  no se pasará materia nueva,
-  sino que se continuará con los problemas de la sesión anterior.
-* Sesión 16: ejercicios propuestos por el profesor.
-* Sesión 17: ejercicios propuestos por el profesor.
-
-* Sesión 18: diapos__, notas__, `soluciones a los problemas`__.
+* Procesamiento de texto: diapos__, notas__, `soluciones a los problemas`__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/18-programas.zip
 
-* Sesión 19: diapos__, notas__, `soluciones a los problemas`__.
+* Archivos de texto: diapos__, notas__, `soluciones a los problemas`__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/19-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/19-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/19-programas.zip
 
-* Sesión 20: ejercicios propuestos por el profesor.
-* Sesión 21: ejercicios propuestos por el profesor.
-* Sesión 22: certamen 2.
-
 ----
 
-* Sesión 23: diapos__, notas__, `soluciones a los problemas`__.
+* Arreglos numéricos: diapos__, notas__, `soluciones a los problemas`__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/23-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/23-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/23-programas.zip
 
-* Sesión 24: diapos__, notas__, `soluciones a los problemas`__.
+* Arreglos bidimensionales: diapos__, notas__, `soluciones a los problemas`__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/24-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/24-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/24-programas.zip
 
-* Sesión 25: diapos__, notas__, `soluciones a los problemas`__.
+* Productos matriciales: diapos__, notas__, `soluciones a los problemas`__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/25-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/25-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/25-programas.zip
 
-* Sesión 26: diapos__, notas__, `soluciones a los problemas`__.
+* Resolución de sistemas lineales: diapos__, notas__, `soluciones a los problemas`__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/26-programas.zip
 
-* Sesión 27: ejercicios propuestos por el profesor.
-* Sesión 28: ejercicios propuestos por el profesor.
-
-* Sesión 29: diapos__, notas__, programas__.
+* Interfaces gráficas: diapos__, notas__, programas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/29-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/29-notas.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/29-programas.zip
 
-* Sesión 30: diapos__, notas__, programas__.
+* Más sobre interfaces gráficas: diapos__, notas__, programas__.
 
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/30-diapos.pdf
   .. __: http://csrg.inf.utfsm.cl/~rbonvall/diapos/30-notas.pdf

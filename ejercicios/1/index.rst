@@ -1,5 +1,5 @@
-Ejercicios para el certamen 1
-=============================
+Ejercicios, parte 1
+===================
 
 Expresiones
 -----------
@@ -68,22 +68,25 @@ Patrones comunes
     piezas-domino
     lanzar-dados
 
+Ruteos
+------
+.. toctree::
+
+    ojo-con-la-indentacion
+    ruteos-varios
+
 Diseño de algoritmos
 --------------------
 .. toctree::
 
-    indentacion
     digitos
     rol
-    transformador-binario
     ecuacion-primer-grado
     caballo-de-ajedrez
     media-armonica
     es-numero-palindromo
     palabras-palindromas
     cachipun
-    calculo-interes
-    cifrado-cesar
     numeros-primos
     el-mejor-numero
     adivinar-numero
@@ -93,7 +96,15 @@ Diseño de algoritmos
     suma-digitos-cubo
     multiplicacion-rusa
     numeros-amistosos
-    numero-deleitable
     metodo-newton
     triangulo-pascal
+    torre-y-alfil
+    rango
+    van
+    reglamento-evaluaciones
+    votaciones-confech
+    promocion-descuento
+    alzas-dolar
+    maquina-alimentos
+    interseccion-circunferencias
 

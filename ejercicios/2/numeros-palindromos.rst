@@ -12,7 +12,7 @@ el número ``n`` con los dígitos en el orden inverso::
 A continuación,
 escriba un programa que indique si el número ingresado
 es palíndromo o no,
-usando la función ``reverso``:
+usando la función ``invertir_digitos``:
 
 .. testcase::
 

@@ -7,7 +7,7 @@ from os.path import abspath
 sys.path.insert(0, abspath('.'))
 sys.path.insert(0, abspath('_modules'))
 
-templates_path = ['_templates']
+#templates_path = ['_templates']
 exclude_patterns = ['_build']
 
 extensions = [
@@ -34,13 +34,12 @@ pygments_style = 'sphinx'
 # -- Options for HTML output ---------------------------------------------------
 
 html_static_path = ['_static']
-#html_theme_path = ['_theme']
+html_theme_path = ['_theme']
 
-html_theme = 'sphinxdoc'
+html_theme = 'progra'
 html_theme_options = {
     'nosidebar': True,
 }
-html_style = 'progra.css'
 html_title = u'Programación'
 html_short_title = u'Programación'
 #html_logo = None
@@ -65,7 +64,7 @@ latex_paper_size = 'letter'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'progra.tex', u'Programación 1er semestre 2011', u'Roberto Bonvallet', 'manual'),
+  ('index', 'progra.tex', u'Programación', u'Roberto Bonvallet', 'manual'),
 ]
 
 latex_elements = {

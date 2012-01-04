@@ -19,6 +19,7 @@ cada elemento tiene una posición
 que se identifica mediante dos índices:
 el de su fila y el de su columna.
 
+.. _matrices: http://es.wikipedia.org/wiki/Matriz_(matem%C3%A1tica)
 
 Crear arreglos bidimensionales
 ------------------------------

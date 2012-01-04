@@ -7,7 +7,7 @@ Un puntaje dado puede ser obtenido
 con varias combinaciones posibles.
 Por ejemplo, el puntaje 4 se logra
 con las siguientes tres combinaciones:
-1-3, 2-2 y 3-1.
+1+3, 2+2 y 3+1.
 
 Escriba un programa que pregunte al usuario un puntaje,
 y muestre como resultado la cantidad de combinaciones de dados

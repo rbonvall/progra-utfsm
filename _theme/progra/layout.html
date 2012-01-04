@@ -1,0 +1,81 @@
+{% extends "basic/layout.html" %}
+
+{% block doctype %}
+<!doctype html>
+{% endblock %}
+
+{%- block relbar1 %}
+  <div class="panel">
+    {%- block rootrellink %}
+    <p class="rootlink">
+      <a href="http://progra.usm.cl">Programación</a>
+    </p>
+    {%- endblock %}
+
+    {#
+    {%- for parent in parents %}
+    <p>
+      <a href="{{ parent.link|e }}" title="{{ parent.title }}">{{ parent.title }}</a>
+    </p>
+    {%- endfor %}
+    #}
+
+    <hr>
+
+    <p>
+      <a href="{{ pathto('materia/index.html', 1) }}" title="Materia">Materia</a>
+      <br>
+      <a href="{{ pathto('ejercicios/index.html', 1) }}" title="Ejercicios">Ejercicios</a>
+    </p>
+
+    <hr>
+
+    <p>
+      {%- if prev %}
+        ←
+        <a href="{{ prev.link|e }}" title="{{ prev.title }}"
+           {{ accesskey(prev.link) }}>anterior</a>
+      {%- endif %}
+      {% if prev and next %} | {% endif %}
+      {%- if next %}
+        <a href="{{ next.link|e }}" title="{{ next.title }}"
+           {{ accesskey(next.link) }}>siguiente</a>
+        →
+      {%- endif %}
+    </p>
+  </div>
+{% endblock %}
+
+{%- block relbar2 %}
+{% endblock %}
+
+{% block footer %}
+  <div class="footer">
+    <a href="http://www.usm.cl" title="Universidad Técnica Federico Santa María">
+      <img width="70" src="{{ pathto('_static/utfsm.png', 1) }}">
+    </a>
+    <a href="http://www.inf.utfsm.cl" title="Departamento de Informática">
+      <img width="60" src="{{ pathto('_static/di.png', 1) }}">
+    </a>
+
+    {#
+    <br>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+      CC BY-NC-SA 3.0
+    </a>
+    #}
+  </div>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12778807-6']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+{% endblock %}
+
+{# vim: set ft=htmldjango sw=2: #}

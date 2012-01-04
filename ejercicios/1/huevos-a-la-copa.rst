@@ -1,7 +1,7 @@
 Huevos a la copa
 ================
 
-    *Ejercicio sacado de* [Lang09]_.
+*Ejercicio sacado de* [Lang09]_.
 
 Cuando un huevo es hervido en agua,
 las proteínas comienzan a coagularse

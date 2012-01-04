@@ -1,7 +1,7 @@
 Índice de masa corporal
 =======================
 
-    *Ejercicio sacado de* [Camp09]_.
+*Ejercicio sacado de* [Camp09]_.
 
 El riesgo de que una persona
 sufra enfermedades coronarias

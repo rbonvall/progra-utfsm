@@ -1,5 +1,5 @@
-Ejercicios para el certamen 2
-=============================
+Ejercicios, parte 2
+===================
 
 Funciones y módulos
 -------------------
@@ -10,6 +10,7 @@ Funciones y módulos
     funciones-numeros-primos
     aprox-seno-coseno
     tabla-verdad
+    maximo-comun-divisor
     modulo-listas
     numeros-romanos
     ruteo-funciones
@@ -101,6 +102,8 @@ Sin clasificar aún
 ------------------
 .. toctree::
 
+    temperaturas
+    fookbace
     dardos
     adn
     ahorcado
