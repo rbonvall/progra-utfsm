@@ -101,9 +101,7 @@ La distinción es importante:
 El operador ``&`` se lee como «la dirección de».
 Más adelante veremos qué significa esto.
 
-En resumen, la sentencia:
-
-.. code-block:: c
+En resumen, la sentencia::
 
     scanf("%d", &nacimiento);
 
@@ -128,9 +126,7 @@ deben ser pasados como parámetros adicionales a la función.
 
 Los siguientes ejemplos
 muestran usos correctos e incorrectos de ``printf``.
-Haga el ejercicio de darse cuenta de los errores:
-
-.. code-block:: c
+Haga el ejercicio de darse cuenta de los errores::
 
     /* Correctos */
     printf("Hola mundo\n");
@@ -147,8 +143,6 @@ Haga el ejercicio de darse cuenta de los errores:
     printf("Usted tiene", edad, "annos.");
     printf("Usted tiene edad annos.");
     printf("Usted tiene"); printf(edad); printf("annos.");
-
-.. x* ← para engañar a vim
 
 
 Ejercicio
