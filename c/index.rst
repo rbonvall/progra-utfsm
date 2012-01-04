@@ -20,3 +20,4 @@ de manera progresiva.
    edad
    numeros-primos
    calculadora
+   promedios-alumnos
