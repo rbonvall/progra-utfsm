@@ -143,6 +143,7 @@ Haga el ejercicio de darse cuenta de los errores::
     printf("Usted tiene", edad, "annos.");
     printf("Usted tiene edad annos.");
     printf("Usted tiene"); printf(edad); printf("annos.");
+    printf("Usted tiene %d annos y %d meses.", edad);
 
 
 Ejercicio
