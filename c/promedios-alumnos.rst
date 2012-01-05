@@ -10,6 +10,9 @@ y va mostrando los promedios de cada uno de ellos:
 
 .. literalinclude:: programas/promedios.c
 
+El especificador de formato ``%.1f`` sirve para mostrar un número ``float``
+con una cifra decimal.
+
 Por ejemplo,
 una ejecución del programa
 podría verse así:
