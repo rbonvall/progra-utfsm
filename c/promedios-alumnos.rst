@@ -220,8 +220,6 @@ cuyas declaraciones están en la cabecera ``string.h``:
     printf("%s\n", s);         /* imprime Hola mundo */
     printf("%d\n", strlen(s)); /* imprime 10 */
 
-
-
 Ciclo do-while
 --------------
 
@@ -252,11 +250,17 @@ La sintaxis del ciclo ``do while`` es::
 
 El punto y coma al final es obligatorio.
 
-Ejercicio
----------
+Ejercicios
+----------
 ¿Qué ocurre con el programa
 si intenta ingresar más de una palabra
 al ingresar el nombre de un alumno
 (por ejemplo el nombre completo: ``Perico Los Palotes``)?
 Haga la prueba.
+
+¿Qué ocurre si intenta ingresar un nombre
+que tenga más de 20 caracteres,
+como por ejemplo ``Periiiiiiiiiiiiiiiiico``)?
+Haga la prueba.
+
 
