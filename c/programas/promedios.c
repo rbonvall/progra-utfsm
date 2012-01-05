@@ -30,7 +30,7 @@ int main() {
             scanf("%d", &notas[i]);
         }
 
-        printf("El promedio de %s es %2.1f\n", nombre, promedio(notas, n));
+        printf("El promedio de %s es %.1f\n", nombre, promedio(notas, n));
 
         printf("Desea calcular mas promedios (si/no)? ");
         scanf("%s", &opcion[0]);
