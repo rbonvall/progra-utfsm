@@ -150,23 +150,53 @@ como el tipo ``str`` de Python.
 En C, **un string es simplemente
 un arreglo de caracteres**.
 
+Ya vimos que los arreglos deben tener un tamaño fijo.
+Sin embargo,
+en general uno no conoce de antemano
+el largo del texto que será almacenado.
+Esto en teoria podría ser un problema:
+¿cómo sabría el programa cuáles de los caracteres del arreglo
+son parte del texto,
+y cuáles son simplemente caracteres que están allí
+sólo porque el arreglo es más largo de lo que corresponde?
 
+La manera con la que C evita este problema
+es marcando el final del texto
+con un caracter especial representado como `\0`.
 
 Por ejemplo,
 después de ingresar el nombre ``Perico``,
 el contenido del arreglo ``nombre``
-será el siguiente:
+podría ser el siguiente:
 
 .. code-block:: none
 
               0   1   2   3   4   5   6   7   8  ...  19
             +---+---+---+---+---+---+---+---+---+---+---+
-    nombre: | P | e | r | i | c | o | \0|???|???|???|???|
+    nombre: | P | e | r | i | c | o | \0| x | m |...| q |
             +---+---+---+---+---+---+---+---+---+---+---+
+
+Lo que hay a continuación del caracter `\0` es irrelevante.
+Todas las operaciones de strings
+saben que el texto llega solamente hasta ahí.
 
 Como el texto ``"Perico"`` tiene seis caracteres,
 se utilizará siete casillas del arreglo
 para almacenarlo.
+En general,
+siempre debe declararse un arreglo de caracteres
+cuyo tamaño sea uno más
+que el más largo de los textos que se podría almacenar.
+
+Para leer un string como entrada
+usando la función ``scanf``,
+se debe usar el descriptor de formato ``%s``.
+Una diferencia importante con la lectura de otros tipos de variables
+es que se debe pasar como segundo parámetro del ``scanf``
+la dirección de memoria del primer elemento del arreglo,
+no la del arreglo propiamente tal::
+
+    scanf("%s", &nombre[0]);
 
 Todas las operaciones de strings
 están implementadas como funciones
