@@ -93,7 +93,8 @@ a la que se accede usando el índice entre corchetes::
     a[2] = (a[0] + a[1]) / 2.0;
 
 Es ilegal tratar de acceder a un elemento del arreglo
-cuyo índice no está dentro
+cuyo índice está fuera de los límites
+definidos por su tamaño.
 Lamentablemente,
 nunca se comprueba que los accesos sean válidos,
 ni al momento de compilar ni durante la ejecución del programa.
