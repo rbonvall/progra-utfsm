@@ -159,6 +159,33 @@ cuyas declaraciones están en la cabecera ``string.h``:
 Ciclo do-while
 --------------
 
+El **do while** es un ciclo similar al ``while``.
+El código es ejecutado mientras la condición es verdadera.
+La única diferencia es que la condición del ``do while``
+es evaluada al final de cada iteración,
+mientras que la del ``while`` es evaluada al principio.
+
+En otras palabras,
+esto significa que el ``do while`` hace algo una o más veces,
+mientras que el ``while`` lo hace cero o más veces.
+
+En nuestro programa de ejemplo
+es apropiado usar ``do while``,
+ya que no tiene sentido ejecutar el programa
+para no calcular ningún promedio.
+Por lo tanto,
+calculamos uno
+y al final decidimos si queremos continuar.
+
+La sintaxis del ciclo ``do while`` es::
+
+    do {
+        /* ... */
+    }
+    while (condicion);
+
+El punto y coma al final es obligatorio.
+
 Ejercicio
 ---------
 ¿Qué ocurre con el programa
