@@ -40,6 +40,71 @@ Escriba, compile y ejecute este programa.
 
 Arreglos
 --------
+Un **arreglo** es una región continua en la memoria del computador
+en la que se almacenan varios valores del mismo tipo.
+En C se usa los arreglos como colecciones de valores,
+tal como se hacía con las listas de Python.
+
+Un arreglo llamado ``notas`` de tipo ``int`` y tamaño ``10``
+se declara de la siguiente manera::
+
+    int notas[10];
+
+Los arreglos son mucho más limitados que las listas de Python.
+Todos los elementos de un arreglo deben ser del mismo tipo.
+El tamaño de un arreglo está fijo,
+y debe estar especificado al momento de compilar el programa.
+Por ejemplo,
+es ilegal hacer lo siguiente::
+
+    int n;
+    scanf("%d", &n);
+
+    float arreglo[n];   /* ilegal */
+
+Por lo tanto,
+lo que suele hacerse es declarar arreglos suficientemente grandes,
+y llevar la cuenta de cuántos elementos han sido asignados.
+Hay que tener en cuenta que,
+al igual que todas las variables,
+cada elemento del arreglo siempre tiene un valor,
+aunque no haya sido asignado explícitamente::
+
+    int a[5];
+    a[0] = 1000;
+    a[1] = 700;
+    printf("%d\n", a[2]); /* Esto algo va a imprimir,
+                             pero no sabemos que. */
+
+
+Cada elemento está identificado a través de su índice,
+que es su posición dentro del arreglo.
+Los índices parten de cero:
+si el arreglo tiene diez elementos,
+entonces los índices van de cero a nueve.
+Cada elemento del arreglo puede ser considerado
+por sí solo como una variable,
+a la que se accede usando el índice entre corchetes::
+
+    int a[10];
+    a[0] = 5;
+    a[1] = a[0] + 3;
+    a[0]++;
+    a[2] = (a[0] + a[1]) / 2.0;
+
+Es ilegal tratar de acceder a un elemento del arreglo
+cuyo índice no está dentro
+Lamentablemente,
+nunca se comprueba que los accesos sean válidos,
+ni al momento de compilar ni durante la ejecución del programa.
+Esto es una fuente de errores difíciles de detectar.
+Por ejemplo,
+al ejecutar este código
+el programa podría seguir funcionando,
+o también podría caerse estrepitosamente::
+
+    int a[10];
+    a[20] = 5;  /* ilegal */
 
 Strings
 -------
