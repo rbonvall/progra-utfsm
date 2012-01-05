@@ -189,7 +189,8 @@ El punto y coma al final es obligatorio.
 Ejercicio
 ---------
 ¿Qué ocurre con el programa
-si intenta ingresar el nombre completo de un alumno
-(por ejemplo: ``Perico Los Palotes``)?
+si intenta ingresar más de una palabra
+al ingresar el nombre de un alumno
+(por ejemplo el nombre completo: ``Perico Los Palotes``)?
 Haga la prueba.
 
