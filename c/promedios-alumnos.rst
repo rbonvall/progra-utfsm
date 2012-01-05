@@ -107,6 +107,41 @@ o también podría caerse estrepitosamente::
     int a[10];
     a[20] = 5;  /* ilegal */
 
+Funciones que reciben arreglos como parámetros
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+La función ``promedio`` recibe como primer parámetro
+el arreglo con los valores que se van a promediar.
+Lo ideal es que la función sirva para arreglos de cualquier tamaño,
+no sólo para los de tamaño 10 como el del ejemplo.
+
+En la declaración del parámetro,
+hay que especificar que se trata de un arreglo,
+pero no su tamaño.
+Para esto, hay que poner los corchetes pero no el tamaño::
+
+    int valores[]
+
+Sin embargo,
+cada vez que se llame a la función
+sí es importante conocer el tamaño del arreglo.
+De otro modo,
+sería imposible saber hasta qué valor promediar.
+Por lo tanto,
+es imprescindible pasar como parámetro adicional
+el tamaño del arreglo,
+que en esta función hemos llamado ``cantidad``.
+
+Note que aunque siempre estamos pasando
+el mismo arreglo ``notas`` a la función,
+``cantidad`` no necesariamente
+tiene el mismo valor cada vez.
+Esto no es importante para la función,
+que operará sólo con la cantidad de valores
+que se le indica.
+Eso sí, la cantidad debe ser siempre
+menor o igual que el tamaño verdadero del arreglo
+(en este caso, 10).
+
 Strings
 -------
 En C no existe un tipo de datos
