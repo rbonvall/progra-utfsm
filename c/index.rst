@@ -14,7 +14,7 @@ las características del lenguaje C
 de manera progresiva.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    hola-mundo
    edad
