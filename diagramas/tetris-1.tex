@@ -5,13 +5,13 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows,decorations,shapes}
+\PreviewEnvironment{tikzpicture}
 
 \newcommand\s[3]{%
   \fill[#3] (#1, #2) rectangle ({{#1} + 1}, {{#2} + 1});%
 }
 
 \begin{document}
-\begin{preview}
 \begin{tikzpicture}[yscale=-1, scale=.4]
 
   \begin{scope}
@@ -109,6 +109,5 @@
   \end{scope}
 
 \end{tikzpicture}
-\end{preview}
 \end{document}
 

@@ -5,13 +5,13 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
 
 \newcommand{\str}[1]{\emph{``#1''}}
 
 \begin{document}
 \input{incluir/flujo}
 
-\begin{preview}
     \begin{tikzpicture}[node distance=8ex, auto]
       \node [node]  (start) { inicio };
       \node [io, below of=start]      (read)  { Leer \(n\) };
@@ -52,7 +52,6 @@
       \path [conn] (pr) |- (m2);
 
     \end{tikzpicture}
-\end{preview}
 
 \end{document}
 

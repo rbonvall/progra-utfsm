@@ -4,6 +4,7 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows,decorations}
+\PreviewEnvironment{tikzpicture}
 
 \newcommand\drawrectangle[6]{
   \draw[#5, thick, fill=#5!30, opacity=.8] (#1, #2) rectangle ++(#3, #4);%
@@ -12,7 +13,6 @@
 }
 
 \begin{document}
-\begin{preview}
 \begin{tikzpicture}[scale=.2]
 
   \def\gridsize{20}
@@ -42,7 +42,6 @@
   %}
 
 \end{tikzpicture}
-\end{preview}
 
 \end{document}
 

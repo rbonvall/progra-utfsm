@@ -5,10 +5,10 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
 
 \begin{document}
 \input{incluir/flujo.tex}
-\begin{preview}
 \begin{tikzpicture}[node distance=12ex, auto]
     \node (start) { };
     \node [decision, below of=start] (dcs1) { condición 1 };
@@ -32,5 +32,4 @@
     \path [conn] (true3) -- +(1.5, 0);
     \path [conn] (false) -- (end);
 \end{tikzpicture}
-\end{preview}
 \end{document}

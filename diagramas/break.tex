@@ -5,10 +5,10 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
 
 \begin{document}
 \input{incluir/flujo.tex}
-\begin{preview}
 \begin{tikzpicture}[node distance=12ex, auto]
     \node (start) { };
     \node [decision, below of=start] (cond) { condición };
@@ -31,5 +31,4 @@
                  node[very near start] { sí }
                  +(-8em, 0);
 \end{tikzpicture}
-\end{preview}
 \end{document}

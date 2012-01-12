@@ -4,10 +4,10 @@
 \usepackage[spanish]{babel}
 \usepackage{tikz}
 %\usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
 
 \begin{document}
 %\input{flujo}
-\begin{preview}
 \tikzstyle{place}=[circle, draw, fill=black, inner sep=0pt, thick, minimum size=2mm]
 \begin{tikzpicture}
    \def\rectanglepath{-- ++(1cm,0cm)-- ++(0cm,1cm)-- ++(-1cm,0cm) -- cycle}
@@ -19,5 +19,4 @@
    \node [place] at (1.75,0.75) {};
    \node [place] at (1.75,0.25) {};
 \end{tikzpicture}
-\end{preview}
 \end{document}

@@ -5,13 +5,13 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
 
 \newcommand{\str}[1]{\emph{``#1''}}
 
 \begin{document}
 \input{incluir/flujo}
 
-\begin{preview}
   \begin{tikzpicture}[node distance=9ex, auto]
     % Place nodes
     \node [node] (start) {inicio};
@@ -55,6 +55,5 @@
     \path [conn] (neg-out.south)  |- (m);
     \path [conn] (zero-out.south) |- (m);
   \end{tikzpicture}
-\end{preview}
 
 \end{document}

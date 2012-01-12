@@ -6,6 +6,7 @@
 \usepackage{courier}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows,decorations,shapes,patterns}
+\PreviewEnvironment{tikzpicture}
 
 \newcommand\polytwo  [1]{-- ++(#1, 0) -- cycle}
 \newcommand\polyfour [3]{-- ++(#1, 0) -- ++(0, #2) \polytwo{#3}}
@@ -26,7 +27,6 @@
 \def\colL{green!80!black}
 
 \begin{document}
-\begin{preview}
 \begin{tikzpicture}[yscale=-1, scale=.6]
 
   \def\juego{
@@ -97,5 +97,4 @@
   \node[fcall] at ($ (from2)!.5!(to2) $) {\verb+liberar_lineas+};
 
 \end{tikzpicture}
-\end{preview}
 \end{document}

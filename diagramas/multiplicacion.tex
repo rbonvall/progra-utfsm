@@ -6,6 +6,7 @@
 \usepackage{tikz}
 \usefonttheme{serif}
 %\usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
 
 % nodo invisible
 \newcommand{\x}{\node[text=white]{0};}
@@ -17,7 +18,6 @@
 
 \begin{document}
 \begin{frame}[fragile]
-\begin{preview}
 \begin{tikzpicture}[scale=.6]
 
   \draw [white] (-1.5, -1.5) rectangle (11.5, 5.5);
@@ -179,6 +179,5 @@
   \draw <16> [->, out=180, in=-130] (d) to (r35);
 
 \end{tikzpicture}
-\end{preview}
 \end{frame}
 \end{document}
