@@ -1,10 +1,7 @@
-\documentclass{minimal}
+\documentclass{article}
 \usepackage[pdftex,active,tightpage]{preview}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
 \usepackage{tikz}
 \usepackage{mathpazo}
-\usetikzlibrary{calc,shapes,arrows}
 \PreviewEnvironment{tikzpicture}
 
 \newcounter{row}
@@ -62,6 +59,7 @@
     \setrow { }{1}{ }  {9}{ }{7}  { }{6}{ }
 
     \node[anchor=center] at (4.5, -0.5) {Sudoku resuelto};
+
     \begin{scope}[blue, font=\sffamily\slshape]
       \setcounter{row}{1}
       \setrow {4}{ }{6}  { }{7}{ }  {3}{ }{8}
@@ -76,6 +74,7 @@
       \setrow { }{6}{5}  { }{1}{ }  {9}{3}{ }
       \setrow {3}{ }{8}  { }{5}{ }  {4}{ }{2}
     \end{scope}
+
   \end{scope}
 
 \end{tikzpicture}
