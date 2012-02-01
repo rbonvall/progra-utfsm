@@ -182,7 +182,14 @@ de modo que soporte una nueva operación:
 obtener el `coeficiente binomial`_
 entre ``x`` e  ``y``.
 Esta operación debe ser indicada
-con el símbolo ``b``.
+con el símbolo ``b``:
+
+.. testcase::
+
+    Ingrese operacion: `b`
+    Ingrese x: `12`
+    Ingrese y: `5`
+    El resultado es 792.000000
 
 El coeficiente binomial es una operación
 entre números enteros.
