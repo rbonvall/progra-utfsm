@@ -43,7 +43,7 @@ También note que
 tanto en el ``if`` como en el ``else`` del final
 se ha omitido los paréntesis de llave (``{}``)
 ya que en ambos casos
-se incluye solamente una única sentencia.
+hay incluída solamente una única sentencia.
 
 
 Definición de funciones

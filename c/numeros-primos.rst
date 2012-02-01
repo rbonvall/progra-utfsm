@@ -41,10 +41,14 @@ sino que encerrándolo entre paréntesis de llave::
         /* ... */
     }
 
+(Aunque al compilador la indentación no le interesa,
+a los seres humanos sí les ayuda a entender mejor el código,
+por lo que no indentar es una pésima idea.)
+
 Al igual que en Python,
 el ``if`` puede ir seguido de un ``else``.
 El ``elif`` de Python no existe en C,
-pero puede escribirse como ``else if``.
+pues es legal escribir ``else if``.
 
 El ciclo ``for`` es un poco diferente.
 Entre los paréntesis tiene tres partes
