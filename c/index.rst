@@ -21,3 +21,4 @@ de manera progresiva.
    numeros-primos
    calculadora
    promedios-alumnos
+   datos-persona
