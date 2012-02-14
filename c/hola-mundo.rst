@@ -10,16 +10,18 @@ el mensaje «Hola mundo»:
 .. literalinclude:: programas/hola-mundo.c
    :language: c
 
-Escriba este programa en su entorno de desarrollo favorito.
+Escriba este programa en su editor favorito.
 ¡No copie y pegue, escríbalo a mano!
 Así se irá familiarizando con la sintaxis del lenguaje.
+Guarde el programa con el nombre ``hola.c``.
 
 Compile el programa.
 Si el programa no compila,
 entonces cometió algún error al transcribirlo.
 Lea el mensaje de error del compilador,
 descubra los errores,
-y arregle el programa.
+y arregle el programa todas las veces necesarias
+hasta que compile y se ejecute correctamente.
 
 Función main
 ------------
@@ -108,8 +110,8 @@ que requerirán sus respectivas cabeceras.
 .. _archivos de cabecera: http://es.wikipedia.org/wiki/Archivo_de_cabecera
 
 
-Ejercicio
----------
+Ejercicios
+----------
 Modifique el programa
 para que imprima el siguiente haiku::
 
@@ -120,3 +122,9 @@ para que imprima el siguiente haiku::
 Puede hacerlo con un único ``printf``
 o con varios.
 Averigüe cómo hacer para imprimir las comillas.
+
+¿Qué ocurre si la función tiene un nombre
+diferente de ``main``?
+¿Qué ocurre si omite la línea del ``include``?
+¿Qué ocurre si no pone el ``return 0``?
+
