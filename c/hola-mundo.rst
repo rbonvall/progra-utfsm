@@ -127,4 +127,4 @@ Averigüe cómo hacer para imprimir las comillas.
 diferente de ``main``?
 ¿Qué ocurre si omite la línea del ``include``?
 ¿Qué ocurre si no pone el ``return 0``?
-
+Haga la prueba.
