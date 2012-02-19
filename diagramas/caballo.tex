@@ -4,9 +4,9 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows,decorations}
+\PreviewEnvironment{tikzpicture}
 
 \begin{document}
-\begin{preview}
 \tikzstyle{knight}=[draw, shape=circle, fill=white]
 \tikzstyle{jump}=[->, thick]
 \tikzstyle{odd}=[black!40!red]
@@ -51,7 +51,6 @@
   \draw [jump, out= 90, in=180] (c1) to (\col + 1 - .5, \row + 2 - .5);
 
 \end{tikzpicture}
-\end{preview}
 
 \end{document}
 

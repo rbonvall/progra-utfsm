@@ -4,6 +4,7 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows,decorations}
+\PreviewEnvironment{tikzpicture}
 
 \def\grilla{%
   \draw[gray] (0, 0) grid (14, 10);
@@ -16,7 +17,6 @@
 }
 
 \begin{document}
-\begin{preview}
   \begin{tikzpicture}[scale=.25]
     \begin{scope}
       \grilla
@@ -34,6 +34,5 @@
       \circulo{6}{5}{4.5}
     \end{scope}
   \end{tikzpicture}
-\end{preview}
 \end{document}
 

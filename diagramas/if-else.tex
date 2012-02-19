@@ -5,10 +5,10 @@
 \usepackage{mathpazo}
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
 
 \begin{document}
 \input{incluir/flujo.tex}
-\begin{preview}
 \begin{tikzpicture}[node distance=12ex, auto]
     \node (start) { };
     \node [decision, below of=start] (dcs) { condición };
@@ -27,5 +27,4 @@
     \path [conn] (false.south) |-
                  ($ (true.south)!.5!(end.north) $);
 \end{tikzpicture}
-\end{preview}
 \end{document}
