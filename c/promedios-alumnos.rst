@@ -87,6 +87,8 @@ por sí solo como una variable,
 a la que se accede usando el índice entre corchetes::
 
     int a[10];
+    /* Todas las instrucciones a continuacion
+       son validas. */
     a[0] = 5;
     a[1] = a[0] + 3;
     a[0]++;
@@ -96,7 +98,7 @@ Es ilegal tratar de acceder a un elemento del arreglo
 cuyo índice está fuera de los límites
 definidos por su tamaño.
 Lamentablemente,
-nunca se comprueba que los accesos sean válidos,
+nunca se verifica que los índices utilizados sean válidos,
 ni al momento de compilar ni durante la ejecución del programa.
 Esto es una fuente de errores difíciles de detectar.
 Por ejemplo,
@@ -117,7 +119,7 @@ no sólo para los de tamaño 10 como el del ejemplo.
 En la declaración del parámetro,
 hay que especificar que se trata de un arreglo,
 pero no su tamaño.
-Para esto, hay que poner los corchetes pero no el tamaño::
+Para esto, hay que poner los corchetes sin el tamaño::
 
     int valores[]
 
@@ -127,9 +129,10 @@ sí es importante conocer el tamaño del arreglo.
 De otro modo,
 sería imposible saber hasta qué valor promediar.
 Por lo tanto,
-es imprescindible pasar como parámetro adicional
-el tamaño del arreglo,
-que en esta función hemos llamado ``cantidad``.
+es imprescindible pasar
+el tamaño del arreglo
+como parámetro adicional,
+que en esta función hemos bautizado como ``cantidad``.
 
 Note que aunque siempre estamos pasando
 el mismo arreglo ``notas`` a la función,
@@ -153,14 +156,14 @@ un arreglo de caracteres**.
 Ya vimos que los arreglos deben tener un tamaño fijo.
 Sin embargo,
 en general uno no conoce de antemano
-el largo del texto que será almacenado.
-Esto en teoria podría ser un problema:
-¿cómo sabría el programa cuáles de los caracteres del arreglo
+el largo de los textos que serán almacenado.
+Esto en teoría representa un problema:
+¿cómo sabe el programa cuáles de los caracteres del arreglo
 son parte del texto,
 y cuáles son simplemente caracteres que están allí
 sólo porque el arreglo es más largo de lo que corresponde?
 
-La manera con la que C evita este problema
+La manera con la que C resuelve este problema
 es marcando el final del texto
 con un caracter especial representado como `\0`.
 
@@ -257,6 +260,8 @@ si intenta ingresar más de una palabra
 al ingresar el nombre de un alumno
 (por ejemplo el nombre completo: ``Perico Los Palotes``)?
 Haga la prueba.
+Investigue cómo hacer para que el programa
+sea capaz de leer un nombre con espacios.
 
 ¿Qué ocurre si intenta ingresar un nombre
 que tenga más de 20 caracteres,

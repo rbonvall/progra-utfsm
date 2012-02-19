@@ -45,7 +45,9 @@ Las tres primeras sentencias del programa
 declaran las variables ``nacimiento``, ``actual`` y ``edad``
 para almacenar valores de tipo ``int`` (entero).
 
-En C, todas las declaraciones tienen la estructura ``tipo variable;``.
+En C, todas las declaraciones deben cumplir con esta sintaxis::
+
+    tipo variable;
 
 ¿Por qué es necesario declarar las variables?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,12 +83,12 @@ El primer parámetro de la función ``scanf``
 es un string que describe cuál es el formato
 en el que estará representado el valor a ingresar.
 En este ejemplo, el string ``"%d"``
-indica que el valor a ser leído
+indica que el valor que será leído
 debe ser interpretado como un número entero
 en representación decimal
 (dígitos del 0 al 9, posiblemente con un signo al principio).
 Por supuesto,
-hay muchos otros indicadores de formato.
+hay muchos otros descriptores de formato.
 
 El segundo parámetro debe indicar
 **en qué lugar de la memoria del computador
@@ -116,7 +118,7 @@ Salida con formato usando printf
 --------------------------------
 La función ``printf`` imprime sólo strings, no enteros.
 Sin embargo,
-es posible insertar enteros dentro del string
+es posible insertar enteros dentro del mensaje
 usando descriptores de formato idénticos a los de la función ``scanf``.
 
 En las posiciones del string en las que se desea mostrar un número entero,

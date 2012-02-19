@@ -26,7 +26,7 @@ hasta que compile y se ejecute correctamente.
 Función main
 ------------
 En un programa en C,
-todas las sentencias deben estar dentro de una función.
+todas las instrucciones deben estar dentro de una función.
 
 Todos los programas deben tener una función con nombre ``main``.
 El código que está dentro de la función ``main``
@@ -51,11 +51,15 @@ Como regla general,
 al final de la función ``main``
 siempre debe ir un ``return 0``, como en el ejemplo.
 
+En C, todas las sentencias deben obligatoriamente
+terminar con un punto y coma.
+
 Salida usando printf
 --------------------
 La función ``printf`` muestra un mensaje en la pantalla.
 El mensaje debe ser un string.
-Los strings literales se representan entre comillas dobles::
+Los strings literales se representan entre comillas dobles
+(¡nunca entre comillas simples!)::
 
     "Hola mundo\n"
 
@@ -65,7 +69,7 @@ El salto de línea debe ser agregado explícitamente
 usando su representación ``\n``.
 Por ejemplo,
 el siguiente código
-imprime el mensaje «Hola mundo»
+también imprime el mensaje «Hola mundo»
 en una única línea,
 y pone un salto de línea al final::
 
@@ -79,10 +83,10 @@ Inclusión de cabeceras
 Técnicamente,
 la función ``printf`` no es parte del lenguaje
 (como lo es el ``print`` de Python),
-sino que es parte de su `biblioteca estándar`_ de C.
+sino que es parte de la `biblioteca estándar`_ de C.
 
 La biblioteca estándar es una colección de funciones, constantes y tipos
-que son utilizados comúnmente en la mayoría de los programas.
+que son comúnmente usados en la mayoría de los programas.
 Basta con tener instalado el compilador de C
 para tener toda la biblioteca estándar a disposición.
 
