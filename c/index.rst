@@ -16,6 +16,11 @@ de manera progresiva.
 .. toctree::
    :maxdepth: 2
 
+   compilacion-consola
+
+.. toctree::
+   :maxdepth: 2
+
    hola-mundo
    edad
    numeros-primos
