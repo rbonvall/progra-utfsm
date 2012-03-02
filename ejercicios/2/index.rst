@@ -74,6 +74,8 @@ Uso de estructuras de datos
     poker
     josefo
     compatibilidad-personas
+    autores-libros
+    restriccion
 
 Procesamiento de texto
 ----------------------
