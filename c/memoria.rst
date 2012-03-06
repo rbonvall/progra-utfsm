@@ -71,6 +71,9 @@ es el `complemento a dos`_.
 .. _representación binaria: http://en.wikipedia.org/wiki/Binary_numeral_system
 .. _complemento a dos: http://en.wikipedia.org/wiki/Two's_complement
 
+.. TODO: explicar otros tipos enteros.
+.. Ver http://tsemba.org/c/inttypes.html.
+
 El operador ``sizeof`` entrega el tamaño en bytes de una variable o de un tipo.
 Para conocer los tamaños que tienen varios tipos de datos
 en la plataforma que está usando,
@@ -184,4 +187,10 @@ Esto significa que la pila está organizada más o menos así:
                        +--------+
             0xe4980f   |   '\n' |  c
                        +--------+
+
+.. TODO: explicar los rellenos.
+.. Explicación plausible: http://www.tenouk.com/Bufferoverflowc/Bufferoverflow3.html
+.. Ver también http://en.wikipedia.org/wiki/Data_structure_alignment
+
+.. Otro enlace interesante: http://eli.thegreenplace.net/2011/02/04/where-the-top-of-the-stack-is-on-x86/
 
