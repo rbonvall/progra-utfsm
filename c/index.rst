@@ -27,3 +27,8 @@ de manera progresiva.
    calculadora
    promedios-alumnos
    datos-persona
+
+.. toctree::
+   :maxdepth: 2
+
+   memoria
