@@ -32,3 +32,4 @@ de manera progresiva.
    :maxdepth: 2
 
    memoria
+   punteros
