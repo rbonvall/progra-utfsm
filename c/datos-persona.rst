@@ -73,8 +73,8 @@ después de ser preprocesado::
 
 Estructuras
 -----------
-Una **estructura** es un tipo de datos...
-
+Una **estructura** es un tipo de datos
+que agrupa varios valores en uno solo.
 
 A diferencia de los arreglos,
 los componentes de una estructura
@@ -113,6 +113,11 @@ poniendo su nombre después de un punto::
     f.dia = 21;
     f.mes = 5;
     f.anno = 1879;
+
+Note que las estructuras no se desempaquetan
+como las tuplas de Python.
+No es necesario ya que se puede acceder a los campos
+a través de su nombre, y no por su posición.
 
 Los campos de una estructura pueden ser de cualquier tipo,
 incluso arreglos u otra estructura.
@@ -161,18 +166,59 @@ Leer una línea completa
 -----------------------
 El descriptor de formato ``%s``
 indica a la función ``scanf``
-que debe leer un string de texto
+que debe leer un string.
+Lo que hace la función es leer texto
+hasta encontrarse con el primer caracter en blanco
+(como un espacio o un salto de línea).
+
+Esto no resulta útil cuando el string que interesa sí tiene espacios entre medio.
+En el caso de nuestro programa,
+necesitamos un nombre completo,
+en que el nombre y el apellido están separados por un espacio.
+
+Para leer el nombre completo del usuario,
+usamos el descriptor de formato ``%[^\n]``.
+Esto significa literalmente
+«leer todos los caracteres que no sean saltos de línea».
 
 
+Salidas estándar y de error
+---------------------------
+Cada vez que uno imprime cosas usando la función ``printf``,
+lo que realmente ocurre es que el texto es enviado
+a un flujo de datos denominado **salida estándar**.
+Podemos pensar en la salida estándar
+como un canal de comunicación entre nuestro programa y la consola.
 
+En todos los programas en C,
+la salida estándar está disponible para escribir cosas en ella.
+Pero además los programas tienen también
+otro flujo de datos, llamado **salida de error**,
+que está destinada exclusivamente para escribir en ella
+mensajes de error.
 
+Los nombres de las salidas estándar y de error en un programa
+son, respectivamente, ``stdin`` y ``stderr``.
 
+En nuestro programa,
+usamos la salida de error para imprimir un mensaje antes de abortar el programa
+cuando se ha ingresado una fecha inválida.
+Para esto, usamos la función ``fprintf``.
+Esta función es muy parecida a ``printf``,
+salvo que recibe como primer parámetro el flujo de datos
+en que se escribirá el mensaje.
+Más adelante utilizaremos ``fprintf`` para escribir datos en archivos.
 
-
-
-Salida de error
----------------
-
+Por omisión,
+ambas salidas están conectadas con la consola,
+por lo que los mensajes impresos en ambas
+aparecen mezclados unos con otros, sin distinción.
+La gracia es que es posible redirigir
+por separado a cualquiera de ellas
+hacia otros mecanismos de salida,
+como un archivo, o de frentón suprimirlos.
+Por lo tanto,
+es una buena práctica escribir los mensajes de error en ``stderr``.
 
 
 Ejercicios
