@@ -126,8 +126,8 @@ la estructura ``persona`` está compuesta
 de dos strings y una estructura ``fecha``.
 
 
-Inicialización de arreglos
---------------------------
+Inicialización de arreglos y estructuras
+----------------------------------------
 La función ``fecha_es_valida``
 utiliza el arreglo ``dias_mes``
 para tener a la mano
@@ -155,8 +155,13 @@ no es necesario especificar su tamaño.
 En nuestro programa,
 el arreglo ``dias_mes`` será de largo trece.
 
+La misma sintaxis se puede usar
+para inicializar los elementos de una estructura::
+
+    struct fecha hoy = {29, 2, 2011};
+
 La sintaxis de inicialización sólo puede ser usada
-en la declaración del arreglo, no más adelante::
+en la misma declaración, no más adelante en el programa::
 
     int a[5];
     a = {900, 100, 600, 300, 200};  /* Esto es ilegal. */
