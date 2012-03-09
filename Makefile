@@ -7,7 +7,7 @@ PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -q -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-DEPLOYDIR = $(HOME)/public_html/progra
+DEPLOYDIR = crux:progra.usm.cl/apunte
 OPEN = xdg-open
 
 .PHONY: all help clean html latex deploy diagramas diapos open
@@ -44,12 +44,5 @@ latex:
 	      "run these through (pdf)latex."
 
 deploy: html
-	@if [ $$(hostname | cut -d. -f2-) = csrg.inf.utfsm.cl ]; \
-	then \
-	    echo "Deploying to $(DEPLOYDIR)"; \
-	    rm -rf "$(DEPLOYDIR)"; \
-	    cp -R _build/html/ "$(DEPLOYDIR)"; \
-	else \
-	    echo "You must deploy from your csrg account"; \
-	fi
+	rsync -a _build/html/ $(DEPLOYDIR)
 
