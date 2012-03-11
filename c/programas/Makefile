@@ -6,7 +6,7 @@ CFLAGS = -Wall
 all: $(BIN)
 
 %: %.c
-	-gcc -Wall $< -o $@
+	-gcc -Wall -lm $< -o $@
 
 clean:
 	@rm -v $(BIN)
