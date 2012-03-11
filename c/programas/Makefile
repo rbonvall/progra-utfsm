@@ -9,7 +9,7 @@ all: $(BIN)
 %: %.c
 
 clean:
-	@rm -v $(BIN)
+	@rm -vf $(BIN)
 
 .PHONY: all clean
 
