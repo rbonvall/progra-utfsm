@@ -104,8 +104,8 @@ Las funciones de la mayoría de las cabeceras estándares
 están implementadas en una biblioteca llamada ``libc``.
 que es enlazada automáticamente al compilar cualquier programa.
 
-Por razones históricas que no es conveniente tratar de entender,
-las funciones matemáticas no están implementadas en ``libc``,
+Por `razones históricas`_ que podemos obviar,
+las funciones matemáticas no están implementadas en ``libc``
 sino en otra biblioteca llamada ``libm``,
 que no es enlazada automáticamente.
 
@@ -120,6 +120,7 @@ y comience a usar bibliotecas escritas por otros desarrolladores
 deberá siempre tener el cuidado de enlazarlas correctamente
 al momento de compilar usando la opción ``-lnombre_de_la_biblioteca``.
 
+.. _razones históricas: http://stackoverflow.com/questions/1033898/why-do-you-have-to-link-the-math-library-in-c
 
 Ejercicios
 ----------
