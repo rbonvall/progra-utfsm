@@ -174,6 +174,7 @@ para imprimir los valores en el archivo:
 * ``"%.2lf``
 * ``"% .2lf``
 * ``"%+.2lf``
+* ``"%10.2lf``
 * ``"%lf``
 * ``"%lg``
 
