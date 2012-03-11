@@ -2,11 +2,11 @@ CFILES = $(wildcard *.c)
 BIN = $(CFILES:.c=)
 CC = gcc
 CFLAGS = -Wall
+LDFLAGS = -lm
 
 all: $(BIN)
 
 %: %.c
-	-gcc -Wall -lm $< -o $@
 
 clean:
 	@rm -v $(BIN)
