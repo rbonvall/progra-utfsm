@@ -171,12 +171,12 @@ Interprete qué es lo que ocurre
 al usar los siguientes descriptores de formato
 para imprimir los valores en el archivo:
 
-* ``"%.2lf``
-* ``"% .2lf``
-* ``"%+.2lf``
-* ``"%10.2lf``
-* ``"%lf``
-* ``"%lg``
+* ``%.2lf``
+* ``% .2lf``
+* ``%+.2lf``
+* ``%10.2lf``
+* ``%lf``
+* ``%lg``
 
 Modifique el programa
 para que escriba una columna adicional
