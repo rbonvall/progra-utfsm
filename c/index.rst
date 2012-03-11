@@ -33,3 +33,8 @@ de manera progresiva.
 
    memoria
    punteros
+
+.. toctree::
+   :maxdepth: 2
+
+   tabla-trigonometrica
