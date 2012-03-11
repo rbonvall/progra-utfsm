@@ -35,8 +35,51 @@ puede usar la instrucción ``cat``:
 
     $ cat trig.txt
 
-Escritura de archivos
----------------------
+Escritura de archivos de texto
+------------------------------
+La escritura de datos en un archivo no puede hacerse directamente en él,
+sino que debe hacerse a través de operaciones sobre un **flujo**,
+que es una abstracción que permite al programa
+interactuar con dispositivos físicos.
+
+El tipo de datos para representar flujos en C se llama ``FILE``,
+que es una estructura definida en ``stdio.h``.
+Para crear un flujo de datos,
+primero hay que declarar un puntero a ``FILE``
+(como la variable ``a_trig`` de nuestro programa)
+y luego inicializarlo con el valor que retorna la función ``fopen``,
+que es la que abre el flujo para poder interactuar con él.
+
+El primer parámetro de ``fopen`` es el nombre del archivo,
+y el segundo es un string que describe el modo en que éste será abierto.
+Si el modo contiene una ``w``,
+significa que el archivo se abrirá para escribir datos en él.
+Si tiene una ``r``,
+es que se leerán datos de él.
+Además, hay `varios otros`_ modos posibles.
+
+.. _varios otros : http://c.conclase.net/librerias/?ansifun=fopen
+
+En nuestro ejemplo estamos creando un archivo de texto.
+Para escribir el texto, usamos la función ``fprintf``,
+pasando como primer parámetro el flujo con el que abrimos el archivo.
+
+A esta altura ya no debería sorprender que
+si hubiéramos abierto un archivo de texto para lectura,
+entonces leeríamos los datos usando una función llamada ``fscanf``.
+
+Por supuesto,
+siempre que se abre un archivo
+hay que cerrarlo después de terminar de usarlo.
+Para eso,
+usamos la función ``fclose``.
+
+La apertura de un archivo puede fallar por varios motivos.
+Por ejemplo, el disco duro podría estar lleno
+o uno podría no tener permisos para escribir en ese directorio.
+Cuando la apertura falla, entonces ``fopen`` retorna ``NULL``.
+Es importante verificar que la apertura fue exitosa
+antes de hacer cualquier lectura o escritura con el flujo.
 
 
 Tipos de datos de coma flotante
