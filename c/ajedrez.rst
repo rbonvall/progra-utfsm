@@ -1,14 +1,83 @@
 El peor ajedrez del mundo
 =========================
+
+.. highlight:: c
+
 El programa que analizaremos ahora es un sencillo juego de ajedrez.
 Este código es más largo que los que hemos visto hasta ahora,
 así que cópielo y péguelo en vez de tipearlo.
 
 .. literalinclude:: programas/ajedrez.c
 
+Cada pieza del ajedrez la representaremos con una letra:
+
+* P es el peón,
+* T es la torre,
+* C es el caballo,
+* A es el alfil,
+* D es la dama, y
+* R es el rey.
+
+Las piezas blancas serán letras mayúsculas,
+y las negras, minúsculas.
+
 
 Tipos enumerados
 ----------------
+Un **tipo enumerado** es un tipo de datos
+que puede respresentar sólo una lista de valores discretos
+indicados por el programador.
+
+Para crear un tipo enumerado,
+en C se usa la sentencia ``enum``,
+en la que se enumera cuáles son los valores posibles.
+Por ejemplo::
+
+    enum sexo {MASCULINO, FEMENINO};
+    enum semaforo {ROJO, AMARILLO, VERDE};
+    enum palo {CORAZON, PICA, TREBOL, DIAMANTE};
+
+Al principio de nuestro programa,
+creamos un tipo enumerado llamado ``enum color``,
+que podemos usar cuando necesitemos guardar algún color::
+
+    enum color {BLANCO, NEGRO, VACIO};
+
+El valor ``VACIO`` nos permite usar variables ``enum color``,
+por ejemplo, para almacenar el color que tiene la pieza
+que está en una casilla,
+siendo que podría no haber ninguna pieza en ella.
+
+La verdad es que en C los tipos enumerados son una farsa.
+Al declarar una variable de tipo ``enum color``,
+realmente estamos declarando una variable entera,
+y los valores ``BLANCO``, ``NEGRO`` y ``VACIO``
+son en realidad los enteros 0, 1, y 2.
+
+Al compilador le da lo mismo si uno mezcla los valores enumerados
+con los enteros, y no descubrirá ningún error que podamos haber cometido.
+Al final, usar un tipo enumerado sirve sólo
+para hacer que el código sea más fácil de comprender.
+Pero si cometemos alguna barbaridad como  ``color = -9000``,
+que probablemente es un error lógico de nuestro programa,
+el compilador hará oídos sordos.
+
+En nuestro programa,
+nosotros nos aprovechamos de la dualidad enum-entero
+para cambiar el turno después de cada jugada.
+Lo lógico habría sido hacerlo de este modo::
+
+    if (turno == BLANCO)
+        turno = NEGRO;
+    else if (turno == NEGRO)
+        turno = BLANCO;
+
+Pero nosotros sabemos que ``BLANCO`` y ``NEGRO`` son 0 y 1,
+por lo que podemos abreviarlo ingeniosamente
+(pero no más claramente)::
+
+    turno = 1 - turno;
+
 
 Arreglos bidimensionales
 ------------------------
