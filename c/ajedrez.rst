@@ -119,6 +119,33 @@ por lo que podemos abreviarlo ingeniosamente
 
 Arreglos bidimensionales
 ------------------------
+No debería ser ningún misterio que
+un **arreglo bidimensional** es un arreglo
+cuyos elementos están numerados por dos índices
+en lugar de uno.
+
+Es bastante evidente que,
+dada la forma que escogimos para representar las piezas,
+la mejor manera de representar un tablero de ajedrez en nuestro programa
+es usar un arreglo bidimensional de 8 × 8 caracteres::
+
+    char tablero[8][8];
+
+Esto hace que tengamos 64 variables de tipo ``char`` a nuestra disposición,
+indexadas desde ``tablero[0][0]`` hasta ``tablero[7][7]``.
+
+La manera de indexar correctamente un elemento del tablero
+es usar la sintaxis ``tablero[fila][columna]``.
+Es incorrecto usar la sintaxis ``tablero[fila, columna]``
+que se usa en otros lenguajes de programación.
+
+Por supuesto,
+se pueden crear arreglos de todas las dimensiones que uno quiera,
+que no necesariamente deben ser de los mismos tamaños::
+
+    int milimetros_lluvia[100][12][31][24];
+                      /* anno mes dia hora */
+
 
 Variables globales
 ------------------
