@@ -21,6 +21,44 @@ Cada pieza del ajedrez la representaremos con una letra:
 Las piezas blancas serán letras mayúsculas,
 y las negras, minúsculas.
 
+En cada turno,
+el programa mostrará la disposición del tablero,
+y pedirá a uno de los jugadores que ingrese su jugada:
+
+.. code-block:: none
+
+       0 1 2 3 4 5 6 7
+      +---------------+
+    a |t c . d r a . t|
+    b |p p p . p p p p|
+    c |. . . . . c . .|
+    d |. . . p . . . .|
+    e |. . A . P . a .|
+    f |. . . . . D . .|
+    g |P P P P . P P P|
+    h |T C A . R . C T|
+      +---------------+
+    Juega blanco: 
+
+La jugada se ingresa indicando la casilla donde está la pieza que se moverá,
+y la casilla a la que se moverá.
+Cada casilla se ingresa como sus coordenadas (una letra y un número),
+y ambas casillas van separadas por un espacio.
+Por ejemplo:
+
+.. code-block:: none
+
+    Juega blanco: f5 e6
+
+Nuestro juego de ajedrez es realmente malo.
+No hace cumplir las reglas,
+por lo que se puede mover las piezas como a uno se le dé la gana.
+¡Incluso el jugador blanco puede mover las piezas negras!
+
+Si uno ingresa jugadas que no tengan sentido,
+el programa puede fallar de maneras inesperadas.
+¡Inténtelo!
+
 
 Tipos enumerados
 ----------------
