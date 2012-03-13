@@ -1,11 +1,6 @@
 Compilación de programas en la consola
 ======================================
 
-
-
-
-
-
 Los sistemas operativos tipo Unix,
 como Linux o Mac OS,
 vienen de fábrica con entornos de consola.
@@ -16,12 +11,12 @@ Gnome Terminal, Konsole o XTerm, entre otros.
 En Windows usted puede instalar un entorno tipo Unix
 (por ejemplo Cygwin)
 para disponer de una consola funcional
-para probar los siguientes ejemplos.
+para probar los ejemplos de este apunte.
 
 En los ejemplos de sesiones de consola
 que se muestran a continuación,
-el signo ``$`` representa al **prompt**,
-que es lo que sea que aparezca en su terminal
+el signo ``$`` representa
+lo que sea que aparezca en su terminal
 para indicarle que ya puede ingresar una instrucción.
 El signo ``$`` no es parte del comando,
 y no debe ser escrito en el teclado.
@@ -166,3 +161,17 @@ make no hace nada:
     make: `test' está actualizado.
     $
 
+Ejecución de un programa
+------------------------
+Para ejecutar un programa,
+se debe escribir su nombre precedido de ``./``
+desde el mismo directorio donde quedó el ejecutable:
+
+.. code-block:: console
+
+    $ ./test
+    Felicidades! Usted ha ejecutado el programa test.
+
+Ahora que sabemos compilar y ejecutar programas,
+analizaremos varios programas en orden creciente de complejidad,
+e iremos presentando gradualmente las características de C.
