@@ -123,6 +123,23 @@ Arreglos bidimensionales
 Variables globales
 ------------------
 
+Funciones que no retornan nada
+------------------------------
+La sintaxis para crear una función en C
+exige indicar de qué tipo es su valor de retorno.
+Sin embargo, es posible crear una función que no retorne nada.
+
+Para esto, hay que poner que su tipo de retorno es ``void``,
+que se puede interpretar como «ningún tipo».
+
+Hay varias razones por la que una función podría no retornar nada:
+* la función hace entrada o salida (como ``imprimir_tablero``),
+* la función actúa sobre variables globales (como ``mover_pieza``),
+* la función debe «retornar» más de un valor,
+  por lo que se usan los parámetros para entregar los valores
+  (como ``leer_jugada``, explicado más adelante).
+
+
 Macros con parámetros
 ---------------------
 
