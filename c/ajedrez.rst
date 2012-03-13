@@ -142,6 +142,38 @@ Hay varias razones por la que una función podría no retornar nada:
 
 Macros con parámetros
 ---------------------
+Ya vimos que una macro es una sustitución textual que se hace en el código
+previo a la compilación.
+Las macros además pueden recibir parámetros,
+lo que las convierte en una especie de plantilla
+para hacer sustituciones en el programa.
+
+Como en nuestro programa del ajedrez tenemos que hacer varios ciclos
+que vayan de 0 a 7 para recorrer el tablero,
+decidimos crear una macro llamada ``FOR``
+que sea equivalente a hacer un ciclo ``for`` de 0 a 7 con alguna variable::
+
+    #define FOR(var)  for (var = 0; var < 8; ++var)
+
+Como parámetro, debemos pasarle a ``FOR`` el nombre de la variable
+que queremos usar como contador en nuestro ciclo.
+Note que no estamos pasando el valor de la variable:
+la sustitución es meramente textual.
+
+En esencia estamos modificando la sintaxis del lenguaje.
+En general **es una mala práctica hacer cosas como ésta**.
+Como la sustitución es puramente textual y nunca se verifica que tenga sentido,
+esto puede causar errores muy extraños si no se programa con cuidado.
+También estamos haciendo más difícil a otros programadores entender nuestro código,
+ya que ellos están familiarizados con la sintaxis del lenguaje
+pero no con nuestras construcciones.
+
+Uno puede ponerse muy creativo para crear macros.
+Casi nunca es buena idea ceder a la tentación.
+Sólo hay que hacerlo cuando en efecto se logra
+hacer que el programa resulte más legible.
+¿Cree usted que lo conseguimos con este ejemplo?
+
 
 Declaraciones de funciones
 --------------------------
