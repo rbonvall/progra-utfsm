@@ -38,3 +38,4 @@ de manera progresiva.
    :maxdepth: 2
 
    tabla-trigonometrica
+   ajedrez
