@@ -149,6 +149,54 @@ que no necesariamente deben ser de los mismos tamaños::
 
 Variables globales
 ------------------
+Las variables ``tablero`` y ``turno``
+no fueron declaradas dentro de ninguna función,
+sino al principio del programa.
+Ambas son, pues, **variables globales**,
+y por lo mismo pueden ser usadas
+desde cualquier parte del programa.
+
+Las variables globales existen desde que el programa comienza hasta que termina.
+Jamás son destruidas ni borradas durante la ejecución.
+
+En contraste,
+las variables declaradas dentro de una función
+son **variables locales**:
+sólo pueden ser usadas dentro de la función,
+son creadas al llamar la función
+y destruidas cuando la función retorna.
+
+Nuestro programa es más bien pequeño,
+y por lo tanto las variables globales no entorpecen el entendimiento.
+Al contrario:
+sabemos que sólo hay un juego en curso
+(que tiene un tablero y un jugador de turno),
+por lo que tener que pasar explícitamente el tablero y el turno a cada función
+haría que el código fuera más engorroso.
+En este caso es apropiado usar variables globales.
+
+Sin embargo,
+al desarrollar aplicaciones grandes,
+uno debe evitar usar las variables globales
+como medio de comunicación entre partes del programa.
+Idealmente,
+cada función debería recibir toda la información que necesita
+a través de sus parámetros,
+y entregar sus resultados como valor de retorno.
+
+Al usar información global,
+el comportamiento de un trozo de código puede ser diferente
+dependiendo del estado de variables que son asignadas
+en partes bien alejadas del código.
+Esto hace que los programas sean más difícil de entender
+(porque hay que figurarse en la cabeza cuál es el estado global),
+y los errores más difíciles de depurar.
+
+Si usamos sólo información local
+(variables locales, parámetros, valores de retorno)
+entonces todo el comportamiento de una sección de programa
+está determinado por información que se encuentra cercana a ella en el código.
+
 
 Funciones que no retornan nada
 ------------------------------
