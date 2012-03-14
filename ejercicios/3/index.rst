@@ -6,6 +6,7 @@ Arreglos
 .. toctree::
 
     transmision-datos
+    series-de-tiempo
 
 Arreglos bidimensionales
 ------------------------
