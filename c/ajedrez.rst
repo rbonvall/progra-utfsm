@@ -208,6 +208,7 @@ Para esto, hay que poner que su tipo de retorno es ``void``,
 que se puede interpretar como «ningún tipo».
 
 Hay varias razones por la que una función podría no retornar nada:
+
 * la función hace entrada o salida (como ``imprimir_tablero``),
 * la función actúa sobre variables globales (como ``mover_pieza``),
 * la función debe «retornar» más de un valor,
