@@ -380,3 +380,75 @@ usando el calificador ``const``::
 
 Conversiones de caracteres
 --------------------------
+Los valores de tipo ``char``
+en realidad son enteros.
+El mapeo entre símbolos y enteros está dado por el código ASCII_.
+
+Al igual como hicimos con los tipos enumerados,
+podemos mezclar libremente enteros y caracteres al hacer operaciones.
+Esto no es así en otros lenguajes con sistemas de tipos más fuertes_.
+Recordemos que en Python era un error sumar un entero a un caracter:
+
+.. code-block:: python
+
+    >>> 'a' + 3
+    Traceback (most recent call last):
+      File "<console>", line 1, in <module>
+    TypeError: cannot concatenate 'str' and 'int' objects
+
+.. _fuertes: http://en.wikipedia.org/wiki/Strong_typing
+
+Mientras que en C sí está permitido::
+
+    printf("%c", 'a' + 3);
+    /* esto imprime el caracter d */
+
+En este ejemplo,
+estamos sumando 3 al código ASCII de ``'a'``,
+y pasa que el resultado es el código ASCII de ``'d'``.
+Estamos usando la propiedad del código ASCII
+de que las letras minúsculas en orden alfabético
+tienen códigos correlativos.
+Lo mismo ocurre con las mayúsculas
+y con los dígitos del ``'0'`` al ``'9'``.
+
+Sin necesidad de recordar cuál es el código exacto de cada símbolo,
+es posible usar estas propiedades para hacer conversiones
+entre caracteres y enteros.
+Por ejemplo, para llevar un caracter entre ``'0'`` y ``'9'``
+a su entero correspondiente,
+basta con restarle el valor ``'0'``::
+
+    '0' - '0' == 0
+    '1' - '0' == 1
+    '2' - '0' == 2
+    etc.
+
+De manera análoga, podemos obtener la posición de una letra en el abecedario
+restándole el código de la letra *a*::
+
+    'a' - 'a' == 0
+    'b' - 'a' == 1
+    'c' - 'a' == 2
+    etc.
+
+Nosotros aprovechamos estas propiedades
+en la función ``leer_jugada``.
+El usuario ingresa las coordenadas de una casilla
+como un par de caracteres letra-dígito,
+mientras que el programa representa las casillas
+como pares entero-entero.
+Para convertir a entero,
+simplemente restamos ``'a'`` o ``'0'`` según corresponda.
+
+Otro truco muy usado para convertir un caracter
+de minúsculas a mayúsculas es el siguiente::
+
+    char may = min - 'a' + 'A';
+
+Este truco tiene su encanto,
+pero no es muy confiable (¿qué pasa si ``min`` ya está en mayúsculas?).
+Siempre es mejor usar la función ``toupper`` (provista por ``ctype.h``),
+como hicimos en ``inicializar_tablero``.
+
+``ctype.h`` provee varias otras funciones para operar sobre caracteres.
