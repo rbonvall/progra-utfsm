@@ -3,7 +3,7 @@ El lenguaje C
 
 .. http://en.wikibooks.org/wiki/C_Programming/Why_learn_C%3F
 .. http://c.learncodethehardway.org/book/learn-c-the-hard-wayli3.html
-
+.. http://c2.com/cgi/wiki?CeeLanguage
 
 
 Compilación y ejecución
