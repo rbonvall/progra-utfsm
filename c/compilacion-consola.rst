@@ -43,13 +43,15 @@ para manejarse en la consola:
     $
 
 
-Compilación usando gcc
+Compilación usando GCC
 ----------------------
-Gcc es el más popular de los compiladores de C.
-Gcc es libre y multiplataforma,
+GCC_ es el más popular de los compiladores de C.
+GCC es libre y multiplataforma,
 lo que asegura que puede instalarlo y usarlo
 casi en cualquier sistema,
 y sin necesidad de pagar una licencia.
+
+.. _GCC: http://gcc.gnu.org/
 
 Para compilar un programa llamado ``test.c``
 que está en el mismo directorio donde estamos parados,
@@ -59,7 +61,7 @@ hay que hacerlo así:
 
     $ gcc test.c -o test
 
-Esta instrucción indica a gcc
+Esta instrucción indica a GCC
 que debe compilar el archivo fuente ``test.c``,
 y crear un binario ejecutable llamado ``test``.
 
@@ -129,7 +131,7 @@ lo más probable es que en su sistema
     $
 
 Para indicar explícitamente a make
-que utilice el compilador gcc (o cualquier otro) para compilar,
+que utilice el compilador GCC (o cualquier otro) para compilar,
 se debe asignar el nombre del compilador
 a la variable de entorno ``CC``
 usando la instrucción ``export``:
