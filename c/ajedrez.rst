@@ -46,9 +46,9 @@ Cada casilla se ingresa como sus coordenadas (una letra y un número),
 y ambas casillas van separadas por un espacio.
 Por ejemplo:
 
-.. code-block:: none
+.. testcase::
 
-    Juega blanco: f5 e6
+    Juega blanco: `f5 e6`
 
 Nuestro juego de ajedrez es realmente malo.
 No hace cumplir las reglas,
