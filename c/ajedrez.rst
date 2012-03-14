@@ -253,6 +253,69 @@ hacer que el programa resulte más legible.
 
 Declaraciones de funciones
 --------------------------
+El compilador analiza el código del programa de arriba hacia abajo.
+Es necesario que todos los nombres (como variables, tipos y funciones)
+ya hayan sido declarados antes de que aparezcan en el código.
+
+Por esto mismo,
+cuando creábamos funciones,
+lo hacíamos antes de la función ``main``.
+De otro modo,
+el compilador no sabría que las funciones que llamamos desde ``main`` existen.
+
+En el caso de las funciones,
+hay que distinguir entre dos cosas:
+
+* la **declaración** de la función,
+  que consiste en especificar su nombre,
+  su tipo de retorno y los tipos de los parámetros
+  para que el compilador los conozca, y
+* la **definición** de la función,
+  que es especificar cuál es el código de la función.
+
+En el programa del ajedrez,
+las funciones están declaradas pero no definidas al principio del código.
+Gracias a esto, las podemos llamar desde ``main``.
+El compilador sabrá exactamente a qué nos referimos
+cuando decimos ``color_pieza`` o ``juego_terminado``,
+y podrá verificar que estos nombres están siendo usados
+correctamente.
+
+Aún así, las funciones deben estar definidas
+en alguna otra parte (única) del programa
+para que la compilación pueda ser completada.
+
+Para declarar las funciones,
+no es necesario explicitar los nombres de los parámetros,
+pero está permitido hacerlo.
+Las siguientes dos declaraciones son válidas::
+
+    float potencia(float, int);
+    float potencia(float base, int exponente);
+
+En C, se le llama **prototipo** a la declaración de una función.
+Los tipos de retorno y de los parámetros
+conforman la **firma** de la función.
+
+Las cabeceras ``.h`` que incluímos siempre en nuestros programas
+contienen sólo las declaraciones de las funciones que proveen,
+no las definiciones.
+Al compilar nuestro código,
+al compilador no le importa qué hacen esas funciones,
+sino solamente cuáles son sus firmas.
+Recién en la fase final de la compilación
+(llamada enlazado_)
+el compilador se encarga de averiguar
+dónde está el código (ya compilado) de esas funciones.
+
+.. _enlazado: http://en.wikipedia.org/wiki/Linker_(computing)
+
+Si una función está definida pero no declarada,
+entonces la definición actúa también como declaración.
+Si una función está declarada antes de ser definida,
+entonces las firmas del prototipo y de la definición
+deben coincidir.
+
 
 Paso de parámetros por referencia
 ---------------------------------
