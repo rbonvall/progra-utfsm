@@ -16,6 +16,7 @@ de manera progresiva.
 .. toctree::
    :maxdepth: 2
 
+   introduccion
    compilacion-consola
    hola-mundo
    edad
