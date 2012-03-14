@@ -37,12 +37,12 @@ entonces las medias móviles con retardo 3 son:
    Por ejemplo,
    si los valores de la serie son `\{5, 2, 2, 8, -4, -1, 2\}`
    entonces las diferencias finitas son:
-   `2 - 5`,
-   `2 - 2`,
-   `8 - 2`,
-   `-4 - 8`,
-   `-1 + 4` y
-   `2 + 1`.
+   `(2  - 5)`,
+   `(2  - 2)`,
+   `(8  - 2)`,
+   `(-4 - 8)`,
+   `(-1 + 4)` y
+   `(2  + 1)`.
 
    Escriba la función ``diferencias_finitas(serie)``
    que retorne el arreglo de las diferencias finitas de la serie::
