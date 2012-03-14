@@ -18,11 +18,11 @@ son la secuencia de todos los promedios de *p* valores consecutivos de la serie.
 Por ejemplo,
 si los valores de la serie son `\{5, 2, 2, 8, -4, -1, 2\}`
 entonces las medias móviles con retardo 3 son:
-`frac{5 + 2 + 2}{3}`,
-`frac{2 + 2 + 8}{3}`,
-`frac{2 + 8 - 4}{3}`,
-`frac{8 - 4 - 1}{3}` y
-`frac{-4 -1 + 2}{3}`.
+`\frac{5 + 2 + 2}{3}`,
+`\frac{2 + 2 + 8}{3}`,
+`\frac{2 + 8 - 4}{3}`,
+`\frac{8 - 4 - 1}{3}` y
+`\frac{-4 -1 + 2}{3}`.
 
 #. Escriba la función ``medias_moviles(serie, p)``
    que retorne el arreglo de las medias móviles con retardo *p* de la serie::
