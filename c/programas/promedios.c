@@ -20,7 +20,7 @@ int main() {
 
     do {
         printf("Ingrese nombre del alumno: ");
-        scanf("%s", &nombre[0]);
+        scanf("%s", nombre);
 
         printf("Cuantas notas tiene %s? ", nombre);
         scanf("%d", &n);
@@ -33,7 +33,7 @@ int main() {
         printf("El promedio de %s es %.1f\n", nombre, promedio(notas, n));
 
         printf("Desea calcular mas promedios (si/no)? ");
-        scanf("%s", &opcion[0]);
+        scanf("%s", opcion);
 
     } while (opcion[0] == 's' || opcion[0] == 'S');
 

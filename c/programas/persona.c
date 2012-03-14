@@ -36,10 +36,10 @@ int main() {
     struct persona p;
 
     printf("Nombre completo: ");
-    scanf("%[^\n]", &p.nombre[0]);
+    scanf("%[^\n]", p.nombre);
 
     printf("Rut: ");
-    scanf("%s", &p.rut[0]);
+    scanf("%s", p.rut);
 
     printf("Fecha de nacimiento (dia mes anno): ");
     scanf("%d", &p.fecha_nacimiento.dia);

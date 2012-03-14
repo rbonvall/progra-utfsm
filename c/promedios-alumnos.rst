@@ -195,11 +195,18 @@ Para leer un string como entrada
 usando la función ``scanf``,
 se debe usar el descriptor de formato ``%s``.
 Una diferencia importante con la lectura de otros tipos de variables
-es que se debe pasar como segundo parámetro del ``scanf``
-la dirección de memoria del primer elemento del arreglo,
-no la del arreglo propiamente tal::
+es que, al leer strings,
+el segundo parámetro del ``scanf`` no debe ir con el operador ``&``,
+sino que debe ser la variable desnuda::
 
-    scanf("%s", &nombre[0]);
+    scanf("%s", nombre);
+
+Hay una razón técnica muy precisa para esto
+que será más sencilla de comprender
+una vez que sepamos más sobre la organización de la memoria,
+pero por ahora aceptémoslo como un dogma:
+los strings se leen sin ``&``,
+valores de otros tipos con ``&``.
 
 Todas las operaciones de strings
 están implementadas como funciones
