@@ -7,6 +7,6 @@ void f(int *x) {
 int main() {
     int a = 11;
     f(&a);
-    printf("%d\n", a);
+    printf("%d\n", a);    /* imprime 9999 */
     return 0;
 }
