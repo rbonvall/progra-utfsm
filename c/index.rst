@@ -17,25 +17,13 @@ de manera progresiva.
    :maxdepth: 2
 
    compilacion-consola
-
-.. toctree::
-   :maxdepth: 2
-
    hola-mundo
    edad
    numeros-primos
    calculadora
    promedios-alumnos
    datos-persona
-
-.. toctree::
-   :maxdepth: 2
-
    memoria
    punteros
-
-.. toctree::
-   :maxdepth: 2
-
    tabla-trigonometrica
    ajedrez
