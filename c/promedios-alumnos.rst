@@ -175,9 +175,9 @@ podría ser el siguiente:
 .. code-block:: none
 
               0   1   2   3   4   5   6   7   8  ...  19
-            +---+---+---+---+---+---+---+---+---+---+---+
-    nombre: | P | e | r | i | c | o | \0| x | m |...| q |
-            +---+---+---+---+---+---+---+---+---+---+---+
+            ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+    nombre: │ P │ e │ r │ i │ c │ o │ \0│ x │ m │...│ q │
+            └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
 
 Lo que hay a continuación del caracter `\0` es irrelevante.
 Todas las operaciones de strings
