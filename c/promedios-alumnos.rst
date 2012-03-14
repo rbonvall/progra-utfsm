@@ -110,7 +110,7 @@ o también podría caerse estrepitosamente::
     a[20] = 5;  /* ilegal */
 
 Funciones que reciben arreglos como parámetros
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 La función ``promedio`` recibe como primer parámetro
 el arreglo con los valores que se van a promediar.
 Lo ideal es que la función sirva para arreglos de cualquier tamaño,
