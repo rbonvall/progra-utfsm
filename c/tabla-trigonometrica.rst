@@ -125,8 +125,8 @@ La biblioteca estándar de C provee la cabecera ``math.h``
 con funciones y constantes matemáticas.
 
 
-Descriptores de formato para números reales
--------------------------------------------
+.. Descriptores de formato para números reales
+.. -------------------------------------------
 
 Enlazado de bibliotecas
 -----------------------
