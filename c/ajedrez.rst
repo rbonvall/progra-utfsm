@@ -319,6 +319,64 @@ deben coincidir.
 
 Paso de parámetros por referencia
 ---------------------------------
+En C, cuando una función es llamada,
+sus parámetros reciben una copia de los valores
+que fueron pasados como argumentos.
+Todos los cambios que uno haga a los parámetros
+no se verán reflejados afuera de la función:
+
+.. literalinclude:: programas/paso-por-valor.c
+
+Se dice que C hace paso de parámetros **por valor**,
+en oposición a lenguajes donde el paso de parámetros es **por referencia**.
+
+En C se puede emular el paso por referencia
+para que sí se pueda modificar una variable definida fuera de la función.
+Para que esto funcione,
+no hay que pasar a la función el valor de la variable,
+sino su dirección de memoria.
+Por supuesto, el parámetro debe ser ahora un puntero
+(que es el tipo apropiado para guardar direcciones de memoria):
+
+.. literalinclude:: programas/paso-por-referencia.c
+
+Compare ambos programas y asegúrese de entender las diferencias.
+
+Note que la función debe derreferenciar el parámetro
+cada vez que haya que referirse a la variable original.
+
+Una razón común para usar paso por referencia
+es permitir que una función entregue más de un resultado.
+Por ejemplo,
+nuestra función ``leer_jugada`` le pide al usuario ingresar cuatro datos
+que debe usar el programa.
+Como en C no se pueden retornar 4 valores
+(a no ser que se los junte en una estructura),
+es mejor pasarle las variables por referencia.
+Esto es como decirle a la función «deja aquí los resultados».
+
+Otra razón para usar paso por referencia
+es evitar que se copien muchos datos
+cuando los parámetros son estructuras o arreglos grandes,
+incluso si no es necesario modificarlos dentro de la función::
+
+    struct grande {
+        int a, b, c;    /* 4 bytes cada uno */
+        float x, y;     /* 4 bytes cada uno */
+        char z[100];    /* 100 bytes */
+    } g;
+
+    fv(g);   /* se copian 120 bytes */
+    fr(&g);  /* se copian 4 bytes (taman~o de un puntero) */
+
+Se puede indicar al compilador
+que la función no modificará la variable original
+usando el calificador ``const``::
+
+    void fr(const struct grande *g) {
+        printf("%s\n", (*g).z);
+    }
+
 
 Conversiones de caracteres
 --------------------------
