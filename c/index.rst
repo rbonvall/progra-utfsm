@@ -28,3 +28,4 @@ de manera progresiva.
    punteros
    tabla-trigonometrica
    ajedrez
+   referencias
