@@ -28,4 +28,5 @@ de manera progresiva.
    punteros
    tabla-trigonometrica
    ajedrez
+   contar-palabras
    referencias
