@@ -165,7 +165,7 @@ sólo porque el arreglo es más largo de lo que corresponde?
 
 La manera con la que C resuelve este problema
 es marcando el final del texto
-con un caracter especial representado como `\0`.
+con un caracter especial representado como ``'\0'``.
 
 Por ejemplo,
 después de ingresar el nombre ``Perico``,
@@ -179,7 +179,7 @@ podría ser el siguiente:
     nombre: │ P │ e │ r │ i │ c │ o │ \0│ x │ m │...│ q │
             └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
 
-Lo que hay a continuación del caracter `\0` es irrelevante.
+Lo que hay a continuación del caracter ``'\0'`` es irrelevante.
 Todas las operaciones de strings
 saben que el texto llega solamente hasta ahí.
 
