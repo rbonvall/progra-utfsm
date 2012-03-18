@@ -33,18 +33,18 @@ Contemos cuántas veces aparecen los nombres del
 Quijote, de Sancho Panza y de Dulcinea en el libro::
 
     $ ./contar-palabras pg2000.txt Sancho Dulcinea Quijote
-     950     Sancho
-     165     Dulcinea
-     894     Quijote
+       950  Sancho
+       165  Dulcinea
+       894  Quijote
 
 Contemos también cuántas veces aparecen
 los artículos del idioma español en toda la obra::
 
     $ ./contar-palabras pg2000.txt el la los las
-    7957     el
-    10200    la
-    4680     los
-    3423     las
+      7957  el
+     10200  la
+      4680  los
+      3423  las
 
 .. _El Quijote de la Mancha: http://www.gutenberg.org/ebooks/2000.txt.utf8
 
