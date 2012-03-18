@@ -121,9 +121,26 @@ y a los ``double``, bueno, «de precisión doble».
 
 Biblioteca matemática
 ---------------------
-La biblioteca estándar de C provee la cabecera ``math.h``
-con funciones y constantes matemáticas.
+La cabecera ``math.h`` provee declaraciones
+de funciones y constantes matemáticas de la biblioteca estándar de C.
 
+Las constantes *e* y π están declaradas, respectivamente,
+como ``M_E`` y ``M_PI``.
+Además, también están disponibles otras constantes
+precalculadas como
+π/2 (``M_PI_2``) y la raíz de 2 (``M_SQRT2``).
+
+La mayoría de las funciones matemáticas viene en dos versiones:
+una para ``float`` y una para ``double``.
+Las primeras llevan una letra ``f`` al final de su nombre.
+
+Las funciones ``sin`` y ``cos`` que usamos en nuestro programa
+están declaradas en ``math.h``.
+Si ``theta`` hubiera sido declarada como ``float`` en vez de ``double``,
+habríamos tenido que usar las funciones ``sinf`` y ``cosf``.
+
+Para explorar todas las funciones que están disponibles,
+consulte el manual de ``math.h``.
 
 .. Descriptores de formato para números reales
 .. -------------------------------------------
