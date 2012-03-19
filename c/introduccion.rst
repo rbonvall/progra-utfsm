@@ -1,12 +1,58 @@
 El lenguaje C
 =============
 
-.. http://en.wikibooks.org/wiki/C_Programming/Why_learn_C%3F
-.. http://c.learncodethehardway.org/book/learn-c-the-hard-wayli3.html
-.. http://c2.com/cgi/wiki?CeeLanguage
+Aprender a programar
+no es lo mismo que aprender un lenguaje de programación.
+Los conceptos importantes de la programación
+que aparecen en un lenguaje
+generalmente son traspasables a otro.
 
+En términos de paradigmas de programación,
+C y Python pueden ser clasificados como lenguajes procedurales,
+y como tales comparten muchos de sus componentes fundamentales:
+expresiones, variables, sentencias, condicionales, ciclos, funciones,
+etcétera.
 
-Esta sección es el único «bla bla» de este apunte.
+Sintácticamente,
+ambos lenguajes se ven diferentes a simple vista,
+pero veremos que muchas de las diferencias son sólo cosméticas:
+
+.. code-block:: python
+
+    es_primo = True
+    for d in range(2, n):
+        if n % d == 0:
+            es_primo = False
+            break
+
+.. code-block:: c
+
+    es_primo = 1;
+    for (d = 2; d < n; d++) {
+        if (n % d == 0) {
+            es_primo = 0;
+            break;
+        }
+    }
+
+No todas las diferencias sintácticas son tan sutiles,
+y haremos énfasis en las que son más importantes.
+
+Más allá de las diferencias visibles en el código,
+ambos lenguajes son fundamentalmente diferentes
+en la manera que usan los recursos del computador.
+Estas diferencias no son apreciables
+con sólo mirar el código,
+sino que deben ser comprendidas desde el principio.
+La imagen mental que uno se forma sobre el programa que está escribiendo
+es mucho más importante al programar en C que en Python.
+
+Este apunte está diseñado para que usted pueda familiarizarse
+rápidamente con el lenguaje C
+después de haber aprendido Python.
+No nos detendremos mucho tiempo
+en aspectos que son similares a Python,
+sino que nos enfocaremos en las diferencias.
 
 
 Compilación versus interpretación
@@ -16,7 +62,7 @@ en cierto modo estamos haciendo trampa.
 El código Python no es ejecutado físicamente por el computador,
 sino por un **intérprete**, que es el programa que ejecuta los programas.
 El lenguaje C permite hacer «menos trampa»,
-ya que sí es un medio para dar instrucciones al procesador del computador.
+ya que sí es un medio para dar instrucciones al procesador.
 
 El **procesador** es el componente del computador
 que ejecuta las instrucciones de un programa.
@@ -51,9 +97,8 @@ que permiten describir algoritmos en términos más humanos y menos «ferreteros
 
 C y Python son lenguajes tales,
 pero difieren en la forma en que son ejecutados.
-
-
-
+Python es un lenguaje pensado para ser interpretado,
+mientras que C debe ser compilado.
 
 Un programa llamado **compilador** recibe como entrada el código C
 y genera como salida código **binario**
@@ -72,23 +117,25 @@ o una biblioteca con funciones que pueden ser llamadas desde un programa.
 A pesar de que el compilador actúa de intermediario
 entre nuestro código y el procesador,
 el lenguaje C sigue siendo de más bajo nivel que Python.
-Al programar en C
-tenemos acceso a detalles de la máquina
-que son transparentes desde Python.
-
-
-Python es un lenguaje de más alto nivel que C.
-Un programa en C no es 
-
+El programador tiene la libertad (y la responsabilidad)
+de lidiar con aspectos de la ejecución
+que no son accesibles desde Python.
+Principalmente,
+la administración de la memoria que usa el programa.
 
 
 Lecturas adicionales
 --------------------
+Aquí termina el «bla bla» de este apunte.
+De aquí en adelante,
+usted estará probando y analizando línea por línea
+programas enteros escritos en C.
+
 Para profundizar acerca de la relevancia del lenguaje C
 y las razones para estudiarlo,
 le sugerimos leer los siguientes enlaces.
 
-
 * `The Cartesian Dream of C <http://c.learncodethehardway.org/book/learn-c-the-hard-wayli3.html>`_.
 * `Why learn C <http://en.wikibooks.org/wiki/C_Programming/Why_learn_C%3F>`_ en el wikibook de C.
 * `C Language <http://c2.com/cgi/wiki?CeeLanguage>`_ en WikiWikiWeb.
+
