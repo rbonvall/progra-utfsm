@@ -64,6 +64,12 @@ Pruebe qué ocurre al ejecutar el programa si:
 
 .. highlight:: c
 
+Lectura de archivos de texto
+----------------------------
+
+Arreglos son punteros, punteros son arreglos
+--------------------------------------------
+
 Parámetros del programa por línea de comandos
 ---------------------------------------------
 Para que nuestro programa reciba parámetros
@@ -102,6 +108,11 @@ y los valores del arreglo ``argv`` serán::
     argv[4]  →  "verde"
     argv[5]  →  "amarillo patito"
 
+Aritmética de punteros
+----------------------
+
+Reserva de memoria dinámica
+---------------------------
 
 Ejercicios
 ----------
