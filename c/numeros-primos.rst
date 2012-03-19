@@ -101,9 +101,9 @@ Ambos operadores pueden ir antes o después de la variable::
     n++;
     ++n;
 
-Ambas modifican el valor de ``n`` de la misma manera.
-Más adelante veremos cuál es la diferencia
-entre estas dos formas.
+Ambas modifican el valor de ``n`` de la misma manera,
+pero existe una diferencia sutil entre ambos
+que por ahora omitiremos.
 
 Valores lógicos
 ---------------
