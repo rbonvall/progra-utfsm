@@ -62,6 +62,46 @@ Pruebe qué ocurre al ejecutar el programa si:
 
     $ ./contar-palabras no-existe.txt perro gato
 
+.. highlight:: c
+
+Parámetros del programa por línea de comandos
+---------------------------------------------
+Para que nuestro programa reciba parámetros
+al momento de ejecutarlo,
+debemos modificar la declaración de ``main``
+para que incluya dos parámetros::
+
+    int main(int argc, char **argv) {
+    }
+
+La variable ``argc`` tomará como valor
+la cantidad de argumentos pasados en la línea de comandos,
+*incluyendo el nombre del programa*.
+
+El puntero ``argv`` apunta a un arreglo de ``argc`` strings,
+que son precisamente estos parámetros.
+
+(Recordemos que un string es un arreglo de ``char``,
+y que un arreglo es en la práctica un puntero)
+Por eso ``argv`` es un puntero a puntero a ``char``).
+
+Por ejemplo,
+cuando ejecutamos el programa de la siguiente manera:
+
+.. code-block:: console
+
+    $ ./contar-palabras abc.txt azul rojo verde "amarillo patito"
+
+entonces ``argc`` tendrá el valor 6
+y los valores del arreglo ``argv`` serán::
+
+    argv[0]  →  "./contar-palabras"
+    argv[1]  →  "abc.txt"
+    argv[2]  →  "azul"
+    argv[3]  →  "rojo"
+    argv[4]  →  "verde"
+    argv[5]  →  "amarillo patito"
+
 
 Ejercicios
 ----------
