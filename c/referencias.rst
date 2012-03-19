@@ -12,16 +12,18 @@ Brian Kernighan, Dennis Ritchie.  *The C programming language*
 
 Conocido como K&R (por las iniciales de sus autores),
 *The C programming language* es la referencia clásica sobre C.
+Dennis Ritchie, uno de sus autores, fue el creador del lenguaje.
 
 K&R es considerado uno de los textos técnicos mejor escritos del siglo XX,
+y su estilo ha marcado la pauta de cómo redactar un libro sobre programación.
 Si bien está un poco viejito,
 y en algunos casos no refleja las prácticas modernas de desarrollo,
+seguirá siendo un clásico por mucho tiempo más.
 
-Léalo para entender cómo funciona código como el siguiente,
-y para saber por qué alguien escribiría algo así::
+Léalo para entender barbaridades como ésta::
 
-    while (*p++ = *q++);
-
+    while (*p++ = *q++)
+        ;
 
 
 Zed Shaw.  *Learn C the hard way*
