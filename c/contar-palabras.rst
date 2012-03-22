@@ -66,6 +66,39 @@ Pruebe qué ocurre al ejecutar el programa si:
 
 Lectura de archivos de texto
 ----------------------------
+Ya aprendimos a escribir en un archivo de texto,
+y ahora veremos cómo leer datos de él.
+
+Primero que todo,
+hay que abrir el archivo en modo lectura::
+
+    FILE *f = fopen("archivo.txt", "r");
+
+Por supuesto,
+hay que verificar que ``f`` no es ``NULL``
+para asegurarnos que el archivo sí pudo ser abierto.
+
+La manera más sencilla de leer datos desde el archivo
+es usar la función ``fscanf``
+de la misma manera que usamos ``scanf``
+para leer de la entrada estándar.
+Como en nuestro programa nos interesa leer palabra por palabra,
+usamos el descriptor de formato ``%s``.
+
+Para comprobar si ya se llegó al final del archivo,
+y por lo tanto ya no queda nada más que leer,
+se usa la función ``feof``.
+Una manera típica de leer todo el archivo
+es hacerlo  como lo hicimos en nuestro programa:
+un ciclo ``while`` que va verificando antes de cada lectura
+si quedan o no cosas por leer::
+
+    while (!feof(f)) {
+         fscanf(f, "%s", s);
+
+        /* ... */
+    }
+
 
 Arreglos son punteros, punteros son arreglos
 --------------------------------------------
