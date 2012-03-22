@@ -143,6 +143,83 @@ y los valores del arreglo ``argv`` serán::
 
 Aritmética de punteros
 ----------------------
+Un puntero es una dirección de memoria,
+y una dirección de memoria no es más que un entero.
+¿Estará permitido entonces aplicar operaciones aritméticas a los punteros
+para obtener otros punteros?
+
+En C sí es posible hacerlo.
+Sin embargo,
+los punteros tienen sus propias reglas para hacer aritmética.
+
+La única operación permitida es «puntero + entero»,
+y el resultado es un puntero del mismo tipo,
+
+.. falta explicar
+
+Para verificarlo con sus propios ojos,
+puede ejecutar el siguiente programa:
+
+.. literalinclude:: programas/contar-palabras.c
+
+Un ``char`` ocupa un byte en la memoria.
+Por lo tanto,
+``p + 1`` apuntará a un byte más que ``p``.
+
+Un ``float`` ocupa cuatro bytes.
+Luego,
+``q + 1`` apuntará a cuatro bytes más allá de ``q``.
+
+La aritmética de punteros es útil
+cuando hay arreglos involucrados.
+Si ``p`` apunta a ``arreglo[0]``,
+entonces ``p + 1`` apunta a ``arreglo[1]``,
+independientemente del tipo del arrego.
+
+En otras palabras,
+``p + 1`` siempre apunta a lo que hay en la memoria
+inmediatamente después de lo apuntado por ``p``.
+
+En nuestro contador de palabras,
+contamos desde el principio con un arreglo con todos los parámetros del programa.
+Pero las palabras que interesan
+están sólo desde el tercer parámetro en adelante.
+En vez de declarar un nuevo arreglo
+(con el consiguiente uso extra de memoria)
+y copiar allí las palabras,
+simplemente introducimos el puntero ``palabras``
+que apunta al tercer elemento de ``argv``.
+Hacer esto es muy fácil gracias a la aritmética de punteros::
+
+    palabras = argv + 2;
+
+Desde esta línea en adelante,
+``palabras`` y ``argv`` se ven como dos arreglos que comparten su memoria.
+``palabras[0]`` es lo mismo que ``argv[2]``:
+
+.. code-block:: none
+
+    ┌──────────┐      ┌──────────┐
+    │          │◂─────┼────●     │ argv
+    ├──────────┤      └──────────┘
+    │          │
+    ├──────────┤      ┌──────────┐
+    │          │◂─────┼────●     │ palabras
+    ├──────────┤      └──────────┘
+    │          │
+    ├──────────┤
+    │          │
+    ├──────────┤
+    │          │
+    ├──────────┤
+    │          │
+    └──────────┘
+
+En C siempre se cumple que ``a[i]`` es lo mismo que ``*(a + i)``.
+¿Puede darse cuenta de por qué?
+Esta relación debería resultarle natural
+después de estudiar arreglos, punteros y su aritmética.
+
 
 Reserva de memoria dinámica
 ---------------------------
