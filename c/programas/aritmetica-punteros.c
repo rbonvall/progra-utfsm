@@ -2,10 +2,10 @@
 
 int main() {
     char c;
-    int n;
+    float x;
 
-    char *p = &c;
-    int  *q = &n;
+    char  *p = &c;
+    float *q = &x;
 
     printf("p:     %p    q:     %p\n", p, q);
     printf("p + 1: %p    q + 1: %p\n", p + 1, q + 1);
