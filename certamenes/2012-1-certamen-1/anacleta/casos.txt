@@ -1,0 +1,26 @@
+# CASO 1
+Destino: `C`
+Autonomia: `5`
+Acampa en km 4
+Acampa en km 9
+Acampa en km 13
+Acampa en km 18
+Llega a C
+# FIN CASO 1
+
+# CASO 2
+Destino: `B`
+Autonomia: `7`
+Acampa en km 7
+Acampa en km 14
+Llega a B
+# FIN CASO 2
+
+# CASO 3
+Destino: `C`
+Autonomia: `7`
+Acampa en km 7
+Acampa en km 13
+Acampa en km 20
+Llega a C
+# FIN CASO 3
