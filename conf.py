@@ -11,12 +11,10 @@ sys.path.insert(0, abspath('_modules'))
 exclude_patterns = ['_build']
 
 extensions = [
-    'sphinx.ext.jsmath',
+    'sphinx.ext.mathjax',
     'testcase',
     'testcase_directive',
 ]
-
-jsmath_path = 'jsMath/easy/load.js'
 
 source_suffix = '.rst'
 master_doc = 'index'
