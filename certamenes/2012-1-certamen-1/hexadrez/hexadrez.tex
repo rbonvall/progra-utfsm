@@ -1,0 +1,20 @@
+\def\iStart{0} \def\iEnd{5}
+\def\jStart{0} \def\jEnd{5}
+\def\kStart{0} \def\kEnd{5}
+
+\begin{tikzpicture}[scale=.3, xscale=.7]
+  % --
+  \foreach\i in {\iStart, ..., \iEnd} {
+    \foreach\j in {\jStart, ..., \jEnd} {
+      \edef\x{3 * \i}
+      \edef\y{2 * \j + \i}
+      \draw (\x - 1, \y - 1) -- ++( 2,  0) -- ++( 1,  1) --
+          ++(-1,  1) -- ++(-2,  0) -- ++(-1, -1) -- cycle;
+    }
+  }
+  \foreach\j in {\jStart, ..., \jEnd} {
+    \edef\x{-3}
+    \edef\y{2 * \j - 1}
+    \node[anchor=east, rotate=18.439, font=\small] at (\x, \y) {\(j = \j\)};
+  }
+\end{tikzpicture}
