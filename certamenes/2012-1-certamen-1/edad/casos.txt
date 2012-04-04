@@ -1,0 +1,28 @@
+# CASO 1
+Ano: `1983`
+Mes: `5`
+Dia: `14`
+Edad: 28 anos, 11 meses, 26 dias.
+# FIN CASO 1
+
+# CASO 2
+Ano: `1983`
+Mes: `5`
+Dia: `7`
+Edad: 29 anos, 0 meses, 3 dias.
+# FIN CASO 2
+
+# CASO 3
+Ano: `1991`
+Mes: `12`
+Dia: `3`
+Edad: 20 anos, 5 meses, 7 dias.
+# FIN CASO 3
+
+# CASO 4
+Ano: `1991`
+Mes: `3`
+Dia: `27`
+Edad: 21 anos, 1 meses, 13 dias.
+# FIN CASO 4
+
