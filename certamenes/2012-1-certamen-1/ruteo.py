@@ -1,5 +1,4 @@
 m = 5
-n = 1
 y = ''
 for i in range(5):
     m -= 1
