@@ -7,7 +7,7 @@ if mes < 5 or (mes == 5 and dia < 10):
 else:
     edad_anos = 2011 - ano
 
-if dia < 10:
+if dia <= 10:
     edad_dias = 10 - dia
     if mes <= 5:
         edad_meses = 5 - mes
