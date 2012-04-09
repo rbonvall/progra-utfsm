@@ -6,4 +6,5 @@ Programación UTFSM
 
    materia/index
    ejercicios/index
+   c/index
 
