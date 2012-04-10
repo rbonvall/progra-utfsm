@@ -1,0 +1,30 @@
+# CASO 1
+Jugador X
+Carta 1: `12`
+Carta 2: `9`
+Jugador Y
+Carta 1: `4`
+Carta 2: `4`
+Gana Y
+# FIN CASO 1
+
+# CASO 2
+Jugador X
+Carta 1: `4`
+Carta 2: `7`
+Jugador Y
+Carta 1: `5`
+Carta 2: `13`
+Gana X
+# FIN CASO 2
+
+# CASO 3
+Jugador X
+Carta 1: `2`
+Carta 2: `2`
+Jugador Y
+Carta 1: `3`
+Carta 2: `3`
+Empate
+# FIN CASO 3
+

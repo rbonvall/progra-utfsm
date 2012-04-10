@@ -1,0 +1,30 @@
+# CASO 1
+Jugador A
+Carta 1: `7`
+Carta 2: `6`
+Jugador B
+Carta 1: `2`
+Carta 2: `4`
+Gana A
+# FIN CASO 1
+
+# CASO 2
+Jugador A
+Carta 1: `7`
+Carta 2: `6`
+Jugador B
+Carta 1: `2`
+Carta 2: `3`
+Empate
+# FIN CASO 2
+
+# CASO 3
+Jugador A
+Carta 1: `7`
+Carta 2: `5`
+Jugador B
+Carta 1: `2`
+Carta 2: `4`
+Gana B
+# FIN CASO 3
+
