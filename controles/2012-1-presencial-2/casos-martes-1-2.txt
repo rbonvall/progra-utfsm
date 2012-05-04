@@ -1,0 +1,29 @@
+# CASO 1
+Jugadora M
+Carta 1: `c`
+Carta 2: `p`
+Jugadora N
+Carta 1: `d`
+Carta 2: `d`
+Gana N
+# FIN CASO 1
+
+# CASO 2
+Jugadora M
+Carta 1: `c`
+Carta 2: `p`
+Jugadora N
+Carta 1: `d`
+Carta 2: `p`
+Gana M
+# FIN CASO 2
+
+# CASO 3
+Jugadora M
+Carta 1: `d`
+Carta 2: `t`
+Jugadora N
+Carta 1: `d`
+Carta 2: `p`
+Empate
+# FIN CASO 3
