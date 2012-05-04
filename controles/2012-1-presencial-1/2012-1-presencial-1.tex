@@ -1,0 +1,186 @@
+\documentclass[12pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{geometry}
+
+\input{../../latex/definiciones.tex}
+\lstset{frame=single}
+\lstset{language=testcase}
+
+\parskip 1ex
+\parindent 0pt
+
+\begin{document}
+  \pagestyle{empty}
+  \thispagestyle{empty}
+
+  \part*{Control 1, miércoles 1--2}
+  \newpage
+
+  En un juego de naipes entre dos jugadores,
+  cada uno de ellos recibe dos cartas numeradas del 1 al 13.
+  Cuando las dos cartas de un jugador tienen el mismo número,
+  decimos que él tiene una \emph{pareja}.
+  El juego lo gana el jugador que tiene una pareja.
+
+  Por supuesto,
+  podría ocurrir que ambos tienen una pareja.
+  En este caso hay un empate.
+
+  Cuando ninguno tiene una pareja,
+  gana el que tiene las cartas más cercanas entre ellas.
+  Si están igual de cercanas, es un empate.
+
+  Escriba un programa que pregunte las cartas,
+  y diga quién ganó.
+  Su programa debe verse como los de los ejemplos.
+
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 1-FIN\ CASO\ 1]%
+      {casos-miercoles-1-2.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 2-FIN\ CASO\ 2]%
+      {casos-miercoles-1-2.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 3-FIN\ CASO\ 3]%
+      {casos-miercoles-1-2.txt}
+  \end{minipage}
+
+  \newpage
+  \part*{Control 1, miércoles 3--4}
+  \newpage
+
+  En un juego de naipes entre dos jugadores,
+  cada uno de ellos recibe dos cartas numeradas del 1 al 13.
+  Cuando las dos cartas de un jugador son consecutivas
+  (por ejemplo un 5 y un 6)
+  decimos que él tiene una \emph{escalera}.
+  El juego lo gana el jugador que tiene una escalera.
+
+  Por supuesto,
+  podría ocurrir que ambos tienen una escalera.
+  En este caso hay un empate.
+
+  Cuando ninguno tiene una escalera,
+  gana el que tiene la carta menor.
+  Si ambos tienen la misma carta menor, es un empate.
+
+  Escriba un programa que pregunte las cartas,
+  y diga quién ganó.
+  Su programa debe verse como los de los ejemplos.
+
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 1-FIN\ CASO\ 1]%
+      {casos-miercoles-3-4.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 2-FIN\ CASO\ 2]%
+      {casos-miercoles-3-4.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 3-FIN\ CASO\ 3]%
+      {casos-miercoles-3-4.txt}
+  \end{minipage}
+
+  \newpage
+  \part*{Control 1, jueves 1--2}
+  \newpage
+
+  En un juego de naipes entre dos jugadoras,
+  cada una de ellas recibe dos cartas.
+  Cada carta puede ser
+  pica (\verb+p+),
+  corazón (\verb+c+),
+  trébol (\verb+t+) o
+  diamante (\verb+d+).
+  El juego lo gana la jugadora que tiene dos cartas iguales.
+
+  Por supuesto,
+  podría ocurrir que ambas tengan cartas iguales,
+  o que ninguna de ellas las tengan.
+  Cuando esto ocurre, gana la que tenga algun corazón.
+  Si este criterio no es suficiente para determinar a la ganadora,
+  es un empate.
+
+  Escriba un programa que pregunte las cartas,
+  y diga quién ganó.
+  Su programa debe verse como los de los ejemplos.
+
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 1-FIN\ CASO\ 1]%
+      {casos-jueves-1-2.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 2-FIN\ CASO\ 2]%
+      {casos-jueves-1-2.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 3-FIN\ CASO\ 3]%
+      {casos-jueves-1-2.txt}
+  \end{minipage}
+
+  \newpage
+  \part*{Control 1, jueves 3--4}
+  \newpage
+
+  En un juego de naipes entre dos jugadoras,
+  cada una de ellas recibe dos cartas.
+  Cada carta puede ser
+  pica (\verb+p+),
+  corazón (\verb+c+),
+  trébol (\verb+t+) o
+  diamante (\verb+d+).
+
+  El juego lo gana la jugadora que tenga más tréboles.
+  Si ambas tienen la misma cantidad de tréboles,
+  es un empate.
+
+  Escriba un programa que pregunte las cartas,
+  y diga quién ganó.
+  Su programa debe verse como los de los ejemplos.
+
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 1-FIN\ CASO\ 1]%
+      {casos-jueves-3-4.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 2-FIN\ CASO\ 2]%
+      {casos-jueves-3-4.txt}
+  \end{minipage}
+  \hspace{1em}
+  \begin{minipage}{0.25\textwidth}
+    \lstinputlisting%
+      [linerange=CASO\ 3-FIN\ CASO\ 3]%
+      {casos-jueves-3-4.txt}
+  \end{minipage}
+
+\end{document}
+

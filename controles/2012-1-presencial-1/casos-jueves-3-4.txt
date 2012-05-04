@@ -1,0 +1,29 @@
+# CASO 1
+Jugadora P
+Carta 1: `c`
+Carta 2: `t`
+Jugadora Q
+Carta 1: `t`
+Carta 2: `t`
+Gana Q
+# FIN CASO 1
+
+# CASO 2
+Jugadora P
+Carta 1: `t`
+Carta 2: `c`
+Jugadora Q
+Carta 1: `d`
+Carta 2: `t`
+Empate
+# FIN CASO 2
+
+# CASO 3
+Jugadora P
+Carta 1: `t`
+Carta 2: `p`
+Jugadora Q
+Carta 1: `c`
+Carta 2: `c`
+Gana P
+# FIN CASO 3
