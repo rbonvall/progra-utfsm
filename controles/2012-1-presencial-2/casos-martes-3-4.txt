@@ -1,0 +1,9 @@
+Cuantas notas? `6`
+Nota: `30`
+Nota: `40`
+Nota: `97`
+Nota: `50`
+Nota: `21`
+Nota: `60`
+Nota final:  45.0
+

@@ -1,0 +1,7 @@
+Articulo: `estampilla`
+Articulo: `sombrero`
+Articulo: `estampilla`
+Articulo: `estampilla`
+Articulo: `jarron`
+Deuda saldada.
+3 estampillas, 1 jarrones, 1 sombreros.

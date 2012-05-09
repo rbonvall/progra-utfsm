@@ -1,0 +1,7 @@
+Donacion: `5000`
+Donacion: `4000`
+Donacion: `6000`
+Donacion: `2000`
+Donacion: `6000`
+Se logro la meta!
+Gracias al donante 3 por aportar 6000

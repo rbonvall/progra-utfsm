@@ -1,0 +1,9 @@
+Viaje: `40`
+Viaje: `-70`
+Viaje: `-20`
+Viaje: `100`
+Viaje: `-50`
+De regreso en Santiago!
+Distancia recorrida: 280
+Viajes al norte: 2
+Viajes al sur: 3
