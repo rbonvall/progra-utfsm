@@ -9,7 +9,7 @@
 %\newcommand{\rol}   {\framebox[0.3\textwidth]{\onelinerule}}
 \newcommand{\rol}{%
   \begin{tikzpicture}[xscale=.4,yscale=.7]
-    \draw[gray!20] ( 0, 0) grid      ( 9, 1);
+    \draw[gray!40] ( 0, 0) grid      ( 9, 1);
     \draw          ( 0, 0) rectangle ( 9, 1);
     \draw          (10, 0) rectangle (11, 1);
     \draw (9 + .2, .5) -- (10 - .2, .5);
@@ -54,4 +54,13 @@
 \lstset{showstringspaces=false}
 \lstset{rangeprefix=\#\ }
 \lstset{includerangemarker=false}
+
+\newlist{certamen}{enumerate}{1}
+\setlist[certamen]{%
+  label=\arabic*.,
+  font=\LARGE\bfseries,%
+  labelindent=-.5in,%
+  leftmargin=0pt,%
+  labelsep=1em%
+}
 
