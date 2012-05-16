@@ -1,4 +1,4 @@
-\documentclass[11pt,spanish]{article}
+\documentclass[legalpaper, 11pt,spanish]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{babel}
 \usepackage{fullpage}
@@ -13,10 +13,12 @@
 \usepackage{tikz}
 \usepackage{fancyhdr}
 \usepackage{graphics}
+\usepackage{wrapfig}
+\usetikzlibrary{calc,patterns,arrows}
 
-\hyphenation{usua-rio usua-rios si-guen-te}
+\hyphenation{arre-glos dife-rencias tempe-ra-turas}
 
-\newcommand{\titulo}{Certamen 2 tipo}
+\newcommand{\titulo}{Certamen 3, sábado 18 de junio de 2011}
 \newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
 \newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
 
@@ -31,29 +33,40 @@
       \pond{25}
       Indique qué es lo que imprimen los siguientes programas.
 
-      \foreach \x in {1,2,...,8} {
+      \foreach \x in {1,2,...,6} {
         \noindent
         \begin{minipage}[b]{19.8em}
-          \lstinputlisting{p\x.py}
-          \framebox[18em]{\rule[6ex]{0pt}{0pt}}
+          \lstinputlisting[linerange=INICIO-]{p\x.py}
+          \framebox[18em]{\rule[9ex]{0pt}{0pt}}
           \vspace{0.7em}
         \end{minipage}
       }
 
-    \newpage
-    \item
-      \pond{25}
-      \input{estadisticas-equipo/pregunta.tex}
+      Dibuje la ventana que resulta al ejecutar
+      el siguiente programa.
+
+      \begin{minipage}[b]{19.8em}
+        \lstinputlisting{p8.py}
+      \end{minipage}
+      \hfil
+      \begin{minipage}[b]{16em}
+        \framebox[\textwidth]{\rule[30ex]{0pt}{0pt}}
+      \end{minipage}
 
     \newpage
     \item
       \pond{25}
-      \input{strip-n-split/parte1.tex}
+      \input{series-de-tiempo/pregunta.tex}
 
     \newpage
     \item
       \pond{25}
-      \input{strip-n-split/parte2.tex}
+      \input{marcador/pregunta.tex}
+
+    \newpage
+    \item
+      \pond{25}
+      \input{arreglo-imagen/pregunta.tex}
 
   \end{enumerate}
 \end{document}

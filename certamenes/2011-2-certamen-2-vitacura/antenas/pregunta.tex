@@ -1,0 +1,28 @@
+La empresa de telecomunicaciones Python Está Aquí
+desea implementar un programa
+para monitorear y controlar la asignación de antenas
+para los teléfonos móviles de sus clientes
+en una zona específica de la ciudad.
+Para ello se considera la siguiente representación:
+\begin{itemize}
+  \item la posición de cada antena es una tupla \li!(a, (x, y))!,
+    donde \li!a! es el nombre de la antena
+    y \li!(x, y)! es su ubicación en la zona, dada en kilómetros;
+  \item la posición de casa cliente es una tupla \li!(c, (x, y))!,
+    donde \li!c! es un identificador del cliente
+    y \li!(x, y)! su ubicación en la ciudad, dada en kilómetros.
+\end{itemize}
+El máximo radio de cobertura de una antena es de 3 kilómetros.
+
+Implemente la función \li!mejor_antena(antenas, clientes, c)!,
+cuyos parámetros son las listas de antenas y clientes,
+junto con el identificador \li!c!
+de un cliente en particular.
+La función debe retornar el nombre de la antena
+que entrega la mejor cobertura (la más cercana) al cliente.
+Si existe más de una, elija cualquiera.
+Si no hay antenas dentro del radio de cobertura,
+debe retornar \li!None!.
+
+\lstinputlisting[linerange=CASO-FIN\ CASO]{antenas/antenas.py}
+

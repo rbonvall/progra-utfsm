@@ -13,9 +13,12 @@
 \usepackage{tikz}
 \usepackage{fancyhdr}
 \usepackage{graphics}
+\usepackage{array}
+\usetikzlibrary{calc,patterns,arrows}
 
-\newcommand{\titulo}{Certamen 1 tipo}
+\newcommand{\titulo}{Recuperativo 1, miércoles 16 de noviembre de 2011}
 \newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
+\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
 
 \input{../../latex/encabezado.tex}
 \input{../../latex/definiciones.tex}
@@ -24,7 +27,9 @@
 
   \begin{enumerate}[font=\Large\bfseries]
 
-    \item
+    % Entender programas
+    \item%[1a.]
+      \pond{25}
       Indique qué es lo que imprimen los siguientes programas.
 
       \foreach \x in {1,2} {
@@ -36,6 +41,7 @@
         \end{minipage}
       }
 
+    %\item[1b.]
       Rutee el siguiente programa
       e indique qué es lo que imprime.
 
@@ -48,48 +54,30 @@
         \framebox[.8\textwidth]{\rule[10ex]{0pt}{0pt}}
       \end{minipage}
       \begin{minipage}[t]{.4\textwidth}\centering
-        \begin{tabular}{|p{4em}|p{4em}|p{4em}|}\hline
-            \cc{a} & \cc{b} & \cc{c} \\ \hline\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
+        \begin{tabular}{|*{4}{p{2.6em}|}}\hline
+            \cc{a} & \cc{b} & \cc{c} & \cc{n} \\ \hline\hline
+            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
+            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
+            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
+            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
+            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
          \end{tabular}
       \end{minipage}
 
     \newpage
     \item
-      \input{triangulos/pregunta.tex}
+      \pond{25}
+      \input{alzas-dolar/pregunta.tex}
 
     \newpage
     \item
-      \input{seno/pregunta.tex}
+      \pond{25}
+      \input{maquina-alimentos/pregunta.tex}
 
     \newpage
     \item
-      \input{lotka-volterra/pregunta.tex}
-
+      \pond{25}
+      \input{interseccion-circunferencias/pregunta.tex}
 
   \end{enumerate}
 \end{document}

@@ -14,8 +14,9 @@
 \usepackage{fancyhdr}
 \usepackage{graphics}
 
-\newcommand{\titulo}{Certamen 1 tipo}
+\newcommand{\titulo}{Certamen 1, sábado 2 de abril de 2011}
 \newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
+\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
 
 \input{../../latex/encabezado.tex}
 \input{../../latex/definiciones.tex}
@@ -24,7 +25,10 @@
 
   \begin{enumerate}[font=\Large\bfseries]
 
-    \item
+    % Entender programas
+    \item%[1a.]
+      \pond{25}
+
       Indique qué es lo que imprimen los siguientes programas.
 
       \foreach \x in {1,2} {
@@ -36,6 +40,7 @@
         \end{minipage}
       }
 
+    %\item[1b.]
       Rutee el siguiente programa
       e indique qué es lo que imprime.
 
@@ -49,47 +54,29 @@
       \end{minipage}
       \begin{minipage}[t]{.4\textwidth}\centering
         \begin{tabular}{|p{4em}|p{4em}|p{4em}|}\hline
-            \cc{a} & \cc{b} & \cc{c} \\ \hline\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
-            && \\\hline
+            \cc{j} & \cc{c} & \cc{p} \\ \hline\hline
+            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
+            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
+            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
+            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
+            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
          \end{tabular}
       \end{minipage}
 
     \newpage
     \item
-      \input{triangulos/pregunta.tex}
+      \pond{25}
+      \input{alfil-torre/pregunta}
 
     \newpage
     \item
-      \input{seno/pregunta.tex}
+      \pond{25}
+      \input{rango/pregunta}
 
     \newpage
     \item
-      \input{lotka-volterra/pregunta.tex}
-
+      \pond{25}
+      \input{van/pregunta}
 
   \end{enumerate}
 \end{document}
