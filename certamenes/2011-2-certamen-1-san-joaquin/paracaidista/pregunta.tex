@@ -1,0 +1,103 @@
+\def\rPlaza{47}
+\def\rExtVerde{35}
+\def\rIntVerde{20}
+\def\rPileta{7}
+\tikzstyle{cemento}=[fill=black!10]
+\tikzstyle{pileta}=[fill=black!90]
+\tikzstyle{verde}=[fill=Green]
+\tikzstyle{gente}=[pattern=north west lines, pattern color=Brown]
+Para celebrar el aniversario de la fundación de Kreisdorf,
+la alcaldesa ha organizado un espectáculo aéreo,
+que finalizará con el aterrizaje de un paracaidista
+en la plaza del pueblo.
+
+\begin{minipage}[T]{.6\textwidth}
+  La plaza es circular, y su radio es de \rPlaza{} metros.
+  En su centro hay una pileta
+  (\tikz\filldraw[pileta] (0, 0) circle (.6ex) ;)
+  de \rPileta{} metros de radio.
+  Además, hay cuatro áreas verdes
+  (\tikz\filldraw[verde]
+        ( 67 :       1.0ex) arc
+        ( 67 : 112 : 1.0ex) --
+        (      112 : 2.1ex) arc
+        (112 :  67 : 2.1ex) -- cycle ;),
+  en las posiciones indicadas en la figura;
+  los radios interno y externo de las áreas verdes
+  son, respectivamente, \rIntVerde{} y \rExtVerde{} metros.
+  El resto de la superficie es cemento.
+  \\[.6ex]
+  El público que irá a presenciar el espectáculo
+  se ubicará en el sector de la plaza
+  indicado en la figura
+  (\tikz\filldraw[gente]
+        (0, 0) -- (0:3ex) arc (0:30:3ex) -- cycle;).
+  \\[.6ex]
+  El paracaidista ha encargado el desarrollo de un programa
+  que le permita planificar su trayectoria
+  para evitar caer en un lugar peligroso.
+  El punto de aterrizaje
+  está definido por dos valores:
+  su distancia al centro de la plaza
+  y el ángulo con respecto a las coordenadas indicadas en la figura.
+
+\end{minipage}
+\hfill
+\begin{minipage}[T]{.3\textwidth}
+  \begin{tikzpicture}[scale=.046]
+    % plaza
+    \filldraw[cemento] (0, 0) circle (\rPlaza);
+
+    % lineas y ángulos
+    \tikzstyle{lineas}=[dashed, gray!50, thick]
+    \foreach\angulo in {0,45,...,315} {
+      \draw[lineas] (0, 0) -- (\angulo : \rPlaza);
+      \node[font=\tiny] at (\angulo: 52) {\angulo\(^{\circ}\)};
+    }
+    \draw[lineas] (0, 0) circle (\rExtVerde);
+    \draw[lineas] (0, 0) circle (\rIntVerde);
+
+    % gente
+    \fill[gente] (0, 0) -- (45 : \rPlaza) arc (45 : 90 : \rPlaza) -- cycle;
+
+    % pileta
+    \filldraw[pileta] (0, 0) circle (\rPileta);
+
+    % areas verdes
+    \foreach\i in {0,2,4,6} {
+      \filldraw[verde]
+        ({\i * 45} :                   \rIntVerde) arc
+        ({\i * 45} : {(\i + 1) * 45} : \rIntVerde) --
+        (            {(\i + 1) * 45} : \rExtVerde) arc
+        ({(\i + 1) * 45} : {\i * 45} : \rExtVerde) -- cycle;
+    }
+
+    % distancias
+    \foreach\dist in {\rPlaza,\rExtVerde,\rIntVerde, \rPileta} {
+      \edef\ldist{\dist + 3.5}
+      \node[font=\tiny] at (247: \ldist) {\dist};
+    }
+
+  \end{tikzpicture}
+\end{minipage}
+
+Escriba un programa que,
+a partir de la distancia y el ángulo de aterrizaje,
+le indique al paracaidista donde caerá.
+El programa debe imprimir
+\li!PILETA!, \li!AREA VERDE!, \li!PUBLICO!, \li!CEMENTO! o \li!FUERA DE LA PLAZA!.
+Si el paracaidista aterriza justo en la frontera entre dos regiones,
+elija cualquiera de ellas.
+
+\begin{minipage}[t]{.26\textwidth}
+  \lstinputlisting[language=testcase,frame=single,linerange=CASO\ 1-FIN\ CASO\ 1]{paracaidista/casos-paracaidista.txt}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.26\textwidth}
+  \lstinputlisting[language=testcase,frame=single,linerange=CASO\ 2-FIN\ CASO\ 2]{paracaidista/casos-paracaidista.txt}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.26\textwidth}
+  \lstinputlisting[language=testcase,frame=single,linerange=CASO\ 3-FIN\ CASO\ 3]{paracaidista/casos-paracaidista.txt}
+\end{minipage}
+
