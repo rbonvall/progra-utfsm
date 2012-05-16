@@ -1,0 +1,65 @@
+En un campo de batalla
+hay objetivos que se desea destruir (\frownie).
+Todos los objetivos están representados
+como tuplas \verb+(x, y)+
+indicando su posición en el campo.
+
+\begin{minipage}{0.65\textwidth}
+  A su vez,
+  en el campo hay varias posiciones amigas (\smiley)
+  que se desea proteger.
+  Las posiciones amigas también están representadas
+  como tuplas \verb+(x, y)+.
+  \\[1ex]
+  Durante la próxima misión,
+  se lanzarán varias bombas sobre el campo de batalla.
+  Cada bomba está representada
+  como una tupla \verb+(x, y, r)+,
+  donde \verb+x+ e \verb+y+ indican el punto de impacto
+  y \verb+r+ es el radio de acción de la bomba.
+  Al caer en el punto de impacto,
+  una bomba destruye todo lo que está
+  a una distancia menor o igual que \verb+r+.
+\end{minipage}
+\hfill
+\begin{minipage}{.25\textwidth}
+  \hfill
+  \begin{tikzpicture}[scale=.4, auto]
+    \tikzstyle{target}=[inner sep=2pt, circle, fill=gray!40]
+    \tikzstyle{friend}=[inner sep=2pt, circle, fill=gray!90]
+    \draw[dotted] (0, 0) grid (10, 10);
+    \draw (0, 0) rectangle (10, 10);
+    \node[friend] (f0) at (3.9, 2.1) {\smiley};
+    \node[friend] (f1) at (8.7, 0.3) {\smiley};
+    \node[friend] (f2) at (9.1, 8.2) {\smiley};
+    \node[friend] (f3) at (0.9, 9.5) {\smiley};
+    \node[target] (t0) at (5.5, 5.5) {\frownie};
+    \node[target] (t1) at (4.5, 4.5) {\frownie};
+    \node[target] (t2) at (1.4, 6.2) {\frownie};
+    \node[target] (t3) at (7.7, 8.4) {\frownie};
+    \node[target] (t4) at (9.1, 3.1) {\frownie};
+    \draw (5.1, 3.7) circle (3cm);
+    \draw[latex'-latex'] (5.1, 3.7) --
+        node [midway, below] {\(r\)}
+        +(30:3cm);
+    \node[inner sep=1pt, fill, circle] at (5.1, 3.7) {};
+  \end{tikzpicture}
+\end{minipage}
+
+\begin{enumerate}
+  \item Escriba la función \verb+contar_impactos(bomba, objetivos, amigos)+.
+    La función debe retornar dos valores:
+    la cantidad de objetivos destruidos por la bomba
+    y la cantidad de posiciones amigas destruidas por la bomba.
+    Los parámetros \verb+objetivos+ y \verb+amigos+
+    son listas de objetivos y posiciones amigas, respectivamente.
+
+  \item
+    Una bomba es útil si destruye por lo menos un objetivo
+    y no destruye ninguna posición amiga.
+
+    Escriba la función \verb+bombas_utiles(bombas, objetivos, amigos)+,
+    que recibe como primer parámetro una lista de bombas,
+    y retorna una nueva lista que contiene sólo las bombas que son útiles.
+\end{enumerate}
+

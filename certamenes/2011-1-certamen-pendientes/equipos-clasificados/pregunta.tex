@@ -1,0 +1,46 @@
+En un campeonato de fútbol de eliminación directa, los equipos se enfrentan de a pares.
+Para cada uno de los enfrentamientos se juegan dos partidos:
+uno \emph{de ida} y uno \emph{de vuelta}.
+El partido de ida se juega en el estadio del primer equipo,
+y el partido de vuelta en el del segundo.
+En cada partido, el equipo que juega en su propio estadio se llama \emph{local},
+y el otro es la \emph{visita}.
+
+Los resultados de los partidos están registrados en el archivo de texto \texttt{ronda1.txt},
+en el que cada línea tiene cuatro datos separados por el símbolo ``\verb+:+'':
+los dos equipos, el resultado de la ida y el resultado de la vuelta.
+
+Al final de los dos partidos,
+se suman los goles anotados por ambos equipos.
+El equipo que anotó más goles en total clasifica para la ronda siguiente,
+y el otro queda eliminado.
+
+Si ambos equipos anotaron la misma cantidad total de goles,
+el equipo que clasifica es el que anotó más goles jugando de visita.
+Si los equipos empatan tanto en goles totales como en goles de visita,
+entonces clasifica el que jugó de visita el partido de vuelta.
+
+Los equipos que clasifican a la ronda siguiente se enfrentan nuevamente de a pares.
+Los nuevos enfrentamientos se forman tomando los equipos clasificados de dos en dos,
+en el mismo orden en que aparecen en el archivo.
+
+Escriba un programa que,
+a partir de los resultados registrados en el archivo \texttt{ronda1.txt},
+determine cuáles equipos clasificaron,
+y genere un nuevo archivo llamado \texttt{ronda2.txt}
+con los partidos que se jugarán en la ronda siguiente.
+Siga el formato del ejemplo.
+
+El archivo \texttt{ronda1.txt} tiene una cantidad par de líneas,
+pero que usted no conoce de antemano.
+
+\begin{minipage}[t]{.28\textwidth}
+  Archivo \texttt{ronda1.txt}:
+  \lstinputlisting[frame=single]{equipos-clasificados/ronda1.txt}
+\end{minipage}
+\hspace{3em}
+\begin{minipage}[t]{.28\textwidth}
+  Archivo \texttt{ronda2.txt}:
+  \lstinputlisting[frame=single]{equipos-clasificados/ronda2.txt}
+\end{minipage}
+

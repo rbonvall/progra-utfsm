@@ -1,0 +1,25 @@
+La red social Cakeboof almacena la información de sus usuarios en una lista,
+cuyos valores son tuplas con el nombre, la ciudad y la fecha de nacimiento del usuario.
+La fecha de nacimiento es una tupla \texttt{(año, mes, día)}.
+El código de cada usuario está dado por su posición en la lista:
+\lstinputlisting[linerange=USUARIOS-FIN\ USUARIOS]{cakeboof/cakeboof.py}
+
+Para guardar la información sobre cuáles de sus usuarios son amigos entre sí,
+Cakeboof utiliza el arreglo bidimensional \li!amistades!.
+Si los usuarios \li+A+ y \li+B+ son amigos,
+entonces \li!amistades[A, B]! tiene el valor uno,
+y si no lo son, tiene el valor cero:
+\lstinputlisting[linerange=AMISTADES-FIN\ AMISTADES]{cakeboof/cakeboof.py}
+
+\begin{enumerate}
+  \item Escriba la función \li!obtener_amigos(i)!,
+    que retorne el conjunto de los amigos de \li!i!.
+  \item Escriba la función \li!tienen_amigos_en_comun(i, j)!,
+    que indique si \li!i! y \li!j! tienen amigos en común.
+  \item Escriba la función \li!recomendar_amigos(i)!,
+    que retorne el conjunto de los usuarios
+    que son amigos de un amigo de \li!i!,
+    pero que no son amigos de \li!i!.
+\end{enumerate}
+\lstinputlisting[language=py, linerange=CASO-FIN\ CASO]{cakeboof/cakeboof.py}
+
