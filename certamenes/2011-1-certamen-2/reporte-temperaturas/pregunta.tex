@@ -1,0 +1,34 @@
+Las temperaturas mínimas y máximas
+de algunas ciudades de la región
+están guardadas en un diccionario
+cuyas llaves son las ciudades
+y cuyos valores son tuplas \texttt{(minima, maxima)}.
+
+Se desea generar un archivo
+cuyo contenido sea un reporte como el del ejemplo de más abajo.
+Los nombres de las ciudades en las que hubo más de 25 grados
+deben aparecer en mayúsculas.
+El nombre del archivo debe incluir la fecha.
+El orden en que aparecen las ciudades
+dentro del archivo no importa.
+
+Escriba la función \li!crear_reporte(fecha, temperaturas)!,
+cuyos parámetros son
+la fecha (una tupla \texttt{(año, mes, día)})
+y el diccionario de temperaturas,
+y que genere el archivo de texto
+con el formato del ejemplo.
+
+La función \li!crear_reporte! no debe retornar nada.
+Recuerde que \li!s.upper()!
+entrega el string \li!s! en mayúsculas.
+
+\begin{minipage}[T]{.45\textwidth}
+  \lstinputlisting[linerange=CASO-]{reporte-temperaturas/pauta2.py}
+\end{minipage}
+\hfill
+\begin{minipage}[T]{.41\textwidth}
+  Archivo \texttt{reporte-2011-5-14.txt}:
+  \lstinputlisting[language=file]{reporte-temperaturas/reporte-2011-5-14.txt}
+\end{minipage}
+
