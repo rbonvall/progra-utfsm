@@ -1,10 +1,13 @@
 '''
-# CASO
+# CASO 1
 >>> contar_valores([5, 1, 5, 2, 3, 3, 5])
 [1, 1, 2, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0]
+# FIN CASO 1
+
+# CASO 2
 >>> tiene_trio([5, 1, 5, 2, 3, 3, 5])
 True
-# FIN CASO
+# FIN CASO 2
 '''
 
 def contar_valores(cartas):

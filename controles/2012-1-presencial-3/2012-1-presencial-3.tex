@@ -104,18 +104,30 @@
   Cuando un jugador tiene tres cartas con el mismo número,
   se dice que tiene un trío.
 
-  Escriba la función \li!contar_valores(cartas)!,
-  que reciba como parámetro una lista de cartas,
-  y retorne una lista de tamaño 13
-  con las cantidades de veces que aparece cada número.
+  \begin{enumerate}[
+    labelindent=-.5in,%
+    leftmargin=0pt,%
+    labelsep=1em%
+  ]
 
-  Escriba la función \li!tiene_trio(cartas)!
-  que retorne un valor booleano
-  indicando si la lista \li!cartas! tiene o no un trío.
+    \item
+      Escriba la función \li!contar_valores(cartas)!,
+      que reciba como parámetro una lista de cartas,
+      y retorne una lista de tamaño 13
+      con las cantidades de veces que aparece cada número.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{jueves-1-2.py}
 
-  \lstinputlisting[
-    linerange=CASO-FIN\ CASO,
-  ]{jueves-1-2.py}
+    \item
+      Escriba la función \li!tiene_trio(cartas)!
+      que retorne un valor booleano
+      indicando si la lista \li!cartas! tiene o no un trío.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{jueves-1-2.py}
+
+  \end{enumerate}
 
   \newpage
   \part*{Control 3, jueves 3--4}
