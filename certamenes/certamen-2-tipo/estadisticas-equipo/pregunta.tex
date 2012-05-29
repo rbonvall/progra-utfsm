@@ -1,0 +1,29 @@
+Los resultados de los campeonatos de fútbol desde 1990 en adelante
+están almacenados en los archivos \texttt{1990.txt}, \texttt{1991.txt},
+\ldots, \texttt{2009.txt} y \texttt{2010.txt}.
+
+Cada uno de los archivos
+tiene la información de todos los partidos de ese año,
+con el formato ilustrado
+en el siguiente ejemplo:
+
+\begin{minipage}{.5\textwidth}
+  \begin{lstlisting}[language=file]
+Huachipato-Puerto Montt:1-2
+Fernandez Vial-O'Higgins:3-3
+Rangers-Provincial Osorno:0-1
+Coquimbo Unido-Deportes Temuco:2-0
+  \end{lstlisting}
+\end{minipage}
+
+Escriba la función \li!estadisticas_equipo(nombre_equipo)!
+que reciba como parámetro el nombre de un equipo,
+y entregue como resultado
+una tupla con las cantidades de
+partidos ganados, empatados y perdidos
+por el equipo desde 1990:
+\begin{lstlisting}
+>>> estadisticas_equipo('Santiago Morning')
+(35, 24, 41)
+\end{lstlisting}
+

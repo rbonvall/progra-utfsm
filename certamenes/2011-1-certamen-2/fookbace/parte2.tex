@@ -1,0 +1,28 @@
+(Este ejercicio es una continuación del anterior).
+
+Para guardar la información sobre cuáles de sus usuarios son amigos entre sí,
+Fookbace utiliza el conjunto \li!amistades!,
+que contiene tuplas con los códigos de dos usuarios.
+Si la tupla \li!(a, b)! está dentro del conjunto,
+significa que los usuarios con códigos \li!a! y \li!b! son amigos.
+En todas las tuplas se cumple que \(\text{\li!a!} < \text{\li!b!}\).
+\lstinputlisting[linerange=AMIGOS-FIN\ AMIGOS]{fookbace/pauta3-4.py}
+\begin{enumerate}
+  \item Escriba la función \li!obtener_amigos(u)!,
+    que retorne el conjunto de los códigos
+    de los amigos de \li!u!.
+  \item Escriba la función \li!recomendar_amigos(u)!,
+    que retorne el conjunto de los códigos
+    de los usuarios que cumplen todas estas condiciones a la vez:
+    \begin{itemize}
+      \item son amigos de un amigo de \li!u!,
+      \item no son amigos de \li!u!,
+      \item viven en la misma ciudad que \li!u!, y
+      \item tienen menos de diez años de diferencia con \li!u!.
+    \end{itemize}
+\end{enumerate}
+En ambas funciones,
+el parámetro \li!u! es el código de un usuario,
+y el valor de retorno es un conjunto de códigos de usuarios.
+Recuerde que \li!c.add(x)! agrega el valor \li!x! al conjunto \li!c!.
+

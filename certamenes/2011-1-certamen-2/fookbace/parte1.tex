@@ -1,0 +1,19 @@
+La red social Fookbace almacena la información de sus usuarios
+en un diccionario.
+Las llaves son un código numérico entero asignado a cada usuario, y
+los valores son tuplas con el nombre, la ciudad y la fecha de nacimiento del usuario.
+La fecha de nacimiento es una tupla \texttt{(año, mes, día)}:
+\lstinputlisting[linerange=USUARIOS-FIN\ USUARIOS]{fookbace/pauta3-4.py}
+\begin{enumerate}
+  \item Escriba la función \li!misma_ciudad(u1, u2)!,
+    que indique si los usuarios con códigos \li!u1! y \li!u2!
+    viven en la misma ciudad.
+    \lstinputlisting[linerange=CASO\ MISMA\ CIUDAD-FIN\ CASO\ MISMA\ CIUDAD]{fookbace/pauta3-4.py}
+  \item Escriba la función \li!diferencia_edad(u1, u2)!,
+    que retorne la diferencia de edad entre los usuarios
+    cuyos códigos son \li!u1! y \li!u2!.
+    (Utilice sólo el año de nacimiento de los usuarios
+    para calcular la diferencia, no el mes ni el día).
+    \lstinputlisting[linerange=CASO\ DIFERENCIA\ EDAD-FIN\ CASO\ DIFERENCIA\ EDAD]{fookbace/pauta3-4.py}
+\end{enumerate}
+

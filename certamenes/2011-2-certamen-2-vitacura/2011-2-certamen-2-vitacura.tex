@@ -1,0 +1,60 @@
+\documentclass[11pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listingsutf8}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\newcommand{\titulo}{Certamen 2, sábado 19 de noviembre de 2011}
+\newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
+\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
+
+\input{../../latex/encabezado.tex}
+\input{../../latex/definiciones.tex}
+\lstset{inputencoding=utf8/latin1}
+
+\begin{document}
+
+  \begin{enumerate}[font=\Large\bfseries]
+
+    \item
+      \pond{25}
+      Indique qué es lo que imprimen los siguientes programas.
+
+      \foreach \x in {1,2,...,8} {
+        \noindent
+        \begin{minipage}[b]{19.8em}
+          \edef\dolisting{\noexpand\lstinputlisting[linerange=P\x-FIN\ P\x]{programas.py}}
+          \dolisting
+          \framebox[18em]{\rule[6ex]{0pt}{0pt}}
+          \vspace{0.7em}
+        \end{minipage}
+      }
+
+    \newpage
+    \item
+      \pond{25}
+      \input{funciones-libros/pregunta.tex}
+
+    \newpage
+    \item
+      \pond{25}
+      \input{dias-restriccion/pregunta.tex}
+
+    \newpage
+    \item
+      \pond{25}
+      \input{antenas/pregunta.tex}
+
+  \end{enumerate}
+\end{document}
+

@@ -1,0 +1,60 @@
+\documentclass[11pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+
+\hyphenation{usua-rio usua-rios}
+
+\newcommand{\titulo}{Certamen 2, sábado 14 de mayo de 2011}
+\newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
+\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
+
+\input{../../latex/encabezado.tex}
+\input{../../latex/definiciones.tex}
+
+\begin{document}
+
+  \begin{enumerate}[font=\Large\bfseries]
+
+    \item
+      \pond{25}
+      Indique qué es lo que imprimen los siguientes programas.
+
+      \foreach \x in {1,2,...,8} {
+        \noindent
+        \begin{minipage}[b]{19.8em}
+          \lstinputlisting{p\x.py}
+          \framebox[18em]{\rule[6ex]{0pt}{0pt}}
+          \vspace{0.7em}
+        \end{minipage}
+      }
+
+    \newpage
+    \item
+      \pond{25}
+      \input{reporte-temperaturas/pregunta.tex}
+
+    \newpage
+    \item
+      \pond{25}
+      \input{fookbace/parte1.tex}
+
+    \newpage
+    \item
+      \pond{25}
+      \input{fookbace/parte2.tex}
+
+  \end{enumerate}
+\end{document}
+

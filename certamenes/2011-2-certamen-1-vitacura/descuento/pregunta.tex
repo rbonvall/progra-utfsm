@@ -1,0 +1,38 @@
+El supermercado Pitón Market ha lanzado una promoción
+para todos sus clientes que posean la tarjeta Raw Input.
+La promoción consiste en aplicar un descuento
+por cada \(n\) productos que pasan por caja.
+
+\begin{minipage}[t]{.55\textwidth}
+  El primer descuento es de 20\%,
+  y se aplica sobre los primeros \(n\) productos ingresados.
+  Luego,
+  cada descuento es la mitad del anterior,
+  y es aplicado sobre los siguientes \(n\) productos.
+  \vspace{1ex}
+
+  Por ejemplo,
+  si \(n = 3\) y la compra es de 11 productos,
+  entonces los tres primeros tienen 20\% de descuento,
+  los tres siguientes 10\%,
+  los tres siguientes 5\%,
+  y los dos últimos no tienen descuento.
+  \vspace{1ex}
+
+  Escriba un programa que pida al usuario ingresar \(n\)
+  y la cantidad de productos,
+  y luego los precios de cada producto.
+  Al final,
+  el programa debe entregar el precio total,
+  el descuento total
+  y el precio final después de aplicar el descuento.
+  \vspace{1ex}
+
+  Si al aplicar el descuento el precio queda con decimales,
+  redondee el valor hacia abajo.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.35\textwidth}
+  \lstinputlisting[language=testcase,frame=single]{descuento/caso-descuento.txt}
+\end{minipage}
+

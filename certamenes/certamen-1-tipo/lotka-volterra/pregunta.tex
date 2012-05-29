@@ -1,0 +1,38 @@
+Las \emph{ecuaciones de Lotka-Volterra}
+describen cómo cambian las poblaciones de dos especies en un ecosistema,
+en el que una de ellas es depredadora de la otra.
+
+En un día cualquiera,
+\(y\) representa el número de depredadores (por ejemplo, lobos),
+\(x\) el número de presas (por ejemplo, conejos),
+y el cambio de estas cantidades de un día para el otro
+están dados por las ecuaciones:
+\begin{align*}
+  \Delta x &\approx \phantom{-}x(\alpha - \beta  y) \\
+  \Delta y &\approx           -y(\gamma - \delta x)
+\end{align*}
+donde \(\alpha\), \(\beta\), \(\gamma\) y \(\delta\)
+son parámetros que dependen de las características del ecosistema.
+
+Para que el modelo funcione,
+\(x\) e \(y\) deben ser tratados como números reales,
+no como enteros.
+
+Suponga que en un ecosistema inicialmente hay
+\(x = 300\) conejos e \(y = 400\) lobos,
+y que la dinámica del sistema es descrita por los valores
+\(\alpha = 3\cdot 10^{-2}\),
+\(\beta  = 4\cdot 10^{-5}\),
+\(\gamma = 5\cdot 10^{-2}\) y
+\(\delta = 6\cdot 10^{-6}\).
+
+Escriba un programa que calcule y muestre
+en cuántos días se extinguirán los conejos
+(es decir, \(y < 1\)).
+
+La salida debe verse así:
+
+\begin{minipage}[t]{.60\textwidth}
+  \lstinputlisting[language=testcase,frame=single]{lotka-volterra/caso4.txt}
+\end{minipage}
+

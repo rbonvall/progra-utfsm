@@ -1,0 +1,37 @@
+La banda de rock Strip'n Split
+ha concluído su gira mundial.
+La información de cada uno de sus conciertos
+está almacenada en una lista
+en orden cronológico.
+
+\begin{minipage}[t]{.45\textwidth}
+  Cada elemento de la lista
+  es un diccionario con tres llaves:
+  \li!'ciudad'!, \li!'publico'! y \li!'canciones'!.
+  El valor asociado a \li!'publico'!
+  es la cantidad de personas que asistió al concierto,
+  y el asociado a \li!'canciones'!
+  es la lista de las canciones que fueron tocadas
+  en ese concierto.
+
+  \begin{enumerate}
+    \item
+      Escriba una función llamada
+      \li!cuantos_escucharon(c)!,
+      que retorne la cantidad de personas
+      que escucharon la canción \li!c!.
+    \item
+      Escriba una función llamada
+      \li!mismo_concierto(c1, c2)!,
+      que retorne \li!True! o \li!False!
+      para indicar si las canciones \li!c1! y \li!c2!
+      fueron tocadas alguna vez en el mismo concierto.
+  \end{enumerate}
+\end{minipage}
+\hspace{2em}
+\begin{minipage}[t]{.55\textwidth}
+  \small
+  \lstinputlisting[linerange=CONCIERTOS-FIN\ CONCIERTOS]
+     {strip-n-split/pauta3-4.py}
+\end{minipage}
+
