@@ -29,25 +29,35 @@
   y estima la probabilidad de que haya un tsunami
   calculando qué porcentaje de esas mediciones
   supera un umbral definido para cada ciudad.
-  Por ejemplo,
-  el umbral de mareas para Valparaíso es 270.0.
 
-  El alcalde de Valparaíso decidió que se evacuaría la ciudad
-  si la probabilidad de tsunami supera el 32\%.
+  \begin{enumerate}[
+    labelindent=-.5in,%
+    leftmargin=0pt,%
+    labelsep=1em%
+  ]
+    \item
+      Escriba la función \li!probabilidad_tsunami(mareas, umbral)!,
+      cuyos parámetros son la lista de mediciones de mareas
+      y el umbral de una ciudad,
+      que retorne el porcentaje de probabilidad estimada
+      de que haya tsunami en esa ciudad.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{miercoles-1-2.py}
 
-  Escriba la función \li!probabilidad_tsunami(mareas, umbral)!,
-  cuyos parámetros son la lista de mediciones de mareas
-  y el umbral de una ciudad,
-  que retorne el porcentaje de probabilidad estimada
-  de que haya tsunami en esa ciudad.
+    \item
+      El alcalde de Valparaíso decidió que se evacuaría la ciudad
+      si la probabilidad de tsunami supera el 32\%.
+      El umbral de mareas para Valparaíso es 270.0.
 
-  Escriba la función \li!hay_que_evacuar(mareas)!,
-  que reciba como parámetro la lista de mediciones de mareas,
-  y que retorne un valor booleano
-  indicando si se debe o no evacuar Valparaíso.
-  \lstinputlisting[
-    linerange=CASO-FIN\ CASO,
-  ]{miercoles-1-2.py}
+      Escriba la función \li!hay_que_evacuar(mareas)!,
+      que reciba como parámetro la lista de mediciones de mareas,
+      y que retorne un valor booleano
+      indicando si se debe o no evacuar Valparaíso.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{miercoles-1-2.py}
+  \end{enumerate}
 
   \newpage
   \part*{Control 3, miércoles 3--4}
