@@ -67,21 +67,32 @@
   el doble (\li!'D'!), que vale dos puntos; y
   el triple (\li!'T'!), que vale tres puntos.
 
-  Escriba la función \li!calcular_puntaje(anotaciones)!,
-  cuyo parámetro es la lista de las anotaciones
-  de un equipo durante un partido,
-  que retorne el puntaje obtenido por el equipo.
+  \begin{enumerate}[
+    labelindent=-.5in,%
+    leftmargin=0pt,%
+    labelsep=1em%
+  ]
 
-  Escriba la función \li!ganador_partido(anotaciones_a, anotaciones_b)!,
-  que reciba como parámetros las listas de anotaciones
-  de los equipos A y B,
-  y que retorne el nombre del equipo ganador.
-  En caso de empate,
-  debe retornar \li!'Empate'!.
+    \item
+      Escriba la función \li!calcular_puntaje(anotaciones)!,
+      cuyo parámetro es la lista de las anotaciones
+      de un equipo durante un partido,
+      que retorne el puntaje obtenido por el equipo.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{miercoles-3-4.py}
 
-  \lstinputlisting[
-    linerange=CASO-FIN\ CASO,
-  ]{miercoles-3-4.py}
+    \item
+      Escriba la función \li!ganador_partido(anotaciones_a, anotaciones_b)!,
+      que reciba como parámetros las listas de anotaciones
+      de los equipos A y B,
+      y que retorne el nombre del equipo ganador.
+      En caso de empate,
+      debe retornar \li!'Empate'!.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{miercoles-3-4.py}
+  \end{enumerate}
 
   \newpage
   \part*{Control 3, jueves 1--2}

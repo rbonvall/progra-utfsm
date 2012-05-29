@@ -1,10 +1,13 @@
 '''
-# CASO
+# CASO 1
 >>> calcular_puntaje(['T', 'D', 'L', 'D'])
 8
+# FIN CASO 1
+
+# CASO 2
 >>> ganador_partido(['T', 'T'], ['D', 'L', 'L'])
 'A'
-# FIN CASO
+# FIN CASO 2
 '''
 
 def calcular_puntaje(anotaciones):
