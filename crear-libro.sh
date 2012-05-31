@@ -8,7 +8,7 @@ BOOK=_libro
 #    exit
 #fi
 
-find -name '*.rst' | while read page
+find materia ejercicios c -name '*.rst' | while read page
 do
     mkdir -p $BOOK/$(dirname $page)
 #    rstex.py $page $BOOK/${page%.rst}.tex
