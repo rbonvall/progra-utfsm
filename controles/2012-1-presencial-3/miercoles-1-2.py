@@ -1,10 +1,13 @@
 '''
-# CASO
+# CASO 1
 >>> probabilidad_tsunami([240, 255, 280, 265], 247)
 75.0
+# FIN CASO 1
+
+# CASO 2
 >>> hay_que_evacuar([240, 255, 280, 265])
 False
-# FIN CASO
+# FIN CASO 2
 '''
 
 def probabilidad_tsunami(mareas, umbral):
