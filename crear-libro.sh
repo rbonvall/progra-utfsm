@@ -8,9 +8,6 @@ BOOK=_libro
 #    exit
 #fi
 
-
-mkdir -p $LIBRO
-
 find -name '*.rst' | while read page
 do
     mkdir -p $BOOK/$(dirname $page)
