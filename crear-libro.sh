@@ -16,6 +16,12 @@ do
       /begin{enumerate}/ {
         s/\[.*\]$//
       }
+      /#.*↓/ {
+        d
+      }
+      /ñ[Aa][Nn][Dd]ú/ {
+        d
+      }
     ' -i $doc
     echo "\\input{${doc#*/}}" >> $CHAPTERS
 done
