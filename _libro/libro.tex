@@ -15,6 +15,44 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 
+\lstdefinelanguage{py}{%
+  classoffset=0,%
+    morekeywords={%
+      False,class,finally,is,return,None,continue,for,lambda,try,%
+      True,def,from,nonlocal,while,and,del,global,not,with,print,%
+      as,elif,if,or,yield,assert,else,import,pass,break,except,in,raise},%
+    keywordstyle=\color{black!80}\bfseries,%
+  classoffset=1,
+    morekeywords={int,float,str,abs,len,raw_input,exit,range,min,max,%
+      set,dict,tuple,list,bool,complex,round,sum,all,any,zip,map,filter,%
+      sorted,reversed,dir,file,frozenset,open,%
+      array,zeros,ones,arange,linspace,eye,diag,dot},
+    keywordstyle=\color{black!50}\bfseries,%
+  classoffset=0,%
+  sensitive=true,%
+  morecomment=[l]\#,%
+  morestring=[b]',%
+  morestring=[b]",%
+  stringstyle=\em,%
+}
+
+\lstdefinelanguage{testcase}{%
+  moredelim=[is][\bfseries]{`}{`},%
+  backgroundcolor=\color{gray!20},%
+}
+
+\lstdefinelanguage{file}{%
+  frame=single,%
+}
+
+\lstset{language=py}
+\lstset{basicstyle=\ttfamily}
+\lstset{columns=fixed}
+\lstset{upquote=true}
+\lstset{showstringspaces=false}
+\lstset{rangeprefix=\#\ }
+\lstset{includerangemarker=false}
+
 \title{Apuntes de programación}
 \author{Roberto Bonvallet}
 \date{\today}
