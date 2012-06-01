@@ -1,7 +1,9 @@
 #!/bin/bash
 
 BOOK=_libro
+CHAPTERS=$BOOK/capitulos.tex
 
+rm -rf $CHAPTERS
 find materia ejercicios c -name '*.rst' | while read page
 do
     mkdir -p $BOOK/$(dirname $page)
@@ -15,6 +17,7 @@ do
         s/\[.*\]$//
       }
     ' -i $doc
+    echo "\\input{${doc#*/}}" >> $CHAPTERS
 done
 
 
