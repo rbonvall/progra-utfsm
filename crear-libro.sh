@@ -11,6 +11,9 @@ do
       /multiplicacion\.gif/ {
         s/^/%/
       }
+      /begin{enumerate}/ {
+        s/\[.*\]$//
+      }
     ' -i $doc
 done
 
