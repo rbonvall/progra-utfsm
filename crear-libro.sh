@@ -7,6 +7,11 @@ do
     mkdir -p $BOOK/$(dirname $page)
     doc=$BOOK/${page%.rst}.tex
     pandoc -t latex $page > $doc
+    sed -e '
+      /multiplicacion\.gif/ {
+        s/^/%/
+      }
+    ' -i $doc
 done
 
 
