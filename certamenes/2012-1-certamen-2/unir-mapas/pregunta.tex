@@ -43,6 +43,7 @@ de ambos mapas.
   \def\caminosMapaAmbos{
     \camino{B}{D}
   }
+  \def\yLey{-2}
 
   % mapa 1
   \begin{scope}
@@ -50,7 +51,7 @@ de ambos mapas.
     \ciudadesMapaAmbos
     \caminosMapaUno
     \caminosMapaAmbos
-    \node[anchor=center] at (1.5, -1) {Mapa 1.};
+    \node[anchor=center] at (1.5, \yLey) {Mapa 1.};
   \end{scope}
 
   % mapa 2
@@ -59,7 +60,7 @@ de ambos mapas.
     \ciudadesMapaAmbos
     \caminosMapaDos
     \caminosMapaAmbos
-    \node[anchor=center] at (1.5, -1) {Mapa 2.};
+    \node[anchor=center] at (3.0, \yLey) {Mapa 2.};
   \end{scope}
 
   % mapa combinado
@@ -70,7 +71,7 @@ de ambos mapas.
     \caminosMapaUno
     \caminosMapaDos
     \caminosMapaAmbos
-    \node[anchor=center] at (1.5, -1) {Mapa combinado.};
+    \node[anchor=center] at (3.0, \yLey) {Mapa combinado.};
   \end{scope}
 \end{tikzpicture}
 
