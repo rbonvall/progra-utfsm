@@ -9,6 +9,7 @@ print a['a']
 # FIN P2
 
 # P3
+print 'Hola'
 # FIN P3
 
 # P4
@@ -17,10 +18,12 @@ print a[a['a']]
 # FIN P4
 
 # P5
+print 'Hola'
 # FIN P5
 
 # P6
-#FIN P6
+print 'Hola'
+# FIN P6
 
 # P7
 def f(x):
