@@ -7,7 +7,7 @@ y retorne un nuevo mapa que incluya
 todas las ciudades y todos los caminos
 de ambos mapas.
 
-\begin{tikzpicture}[scale=.6]
+\begin{tikzpicture}[xscale=.75, yscale=.6]
   \newcommand\ciudad[3]{%
     \node[draw, circle] (#1) at (#2, #3) {#1};%
   }
@@ -43,7 +43,7 @@ de ambos mapas.
   \def\caminosMapaAmbos{
     \camino{B}{D}
   }
-  \def\yLey{-2}
+  \def\yLey{-1.7}
 
   % mapa 1
   \begin{scope}
@@ -64,7 +64,7 @@ de ambos mapas.
   \end{scope}
 
   % mapa combinado
-  \begin{scope}[xshift=14cm]
+  \begin{scope}[xshift=16cm]
     \ciudadesMapaUno
     \ciudadesMapaDos
     \ciudadesMapaAmbos
