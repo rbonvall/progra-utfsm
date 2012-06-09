@@ -1,4 +1,4 @@
-*.swp
+.*.sw?
 *.pyc
 _build/
 _static/jsMath
