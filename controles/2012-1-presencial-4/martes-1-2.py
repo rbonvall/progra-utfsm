@@ -13,7 +13,7 @@
 
 '''
 
-def promedios_ninos(notas):
+def calcular_promedios(notas):
     promedios = {}
     for nino in notas:
         n = notas[nino]
