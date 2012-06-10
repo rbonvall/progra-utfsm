@@ -23,7 +23,7 @@ def calcular_promedios(notas):
 
 def clasificar_ninos(notas):
     c = {'Aprobados': 0, 'Reprobados': 0}
-    p = promedios_ninos(notas)
+    p = calcular_promedios(notas)
     for nino in p:
         if p[nino] >= 4.0:
             c['Aprobados'] += 1
