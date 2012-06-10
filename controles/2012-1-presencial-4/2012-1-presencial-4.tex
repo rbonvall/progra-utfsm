@@ -54,6 +54,37 @@
   \part*{Control 4, lunes 3--4}
   \newpage
 
+  Los precios de los productos de un supermercado
+  están almacenados en un diccionario como el siguente:
+  \lstinputlisting[
+    linerange=EJEMPLO\ PRECIOS-FIN\ EJEMPLO\ PRECIOS,
+  ]{lunes-3-4.py}
+
+  \begin{enumerate}
+    \item
+      Escriba la función \li!producto_mas_caro(precios)!,
+      que reciba como parámetro el diccionario de precios,
+      y retorne el nombre del producto más caro.
+      Si hay más de un producto más caro,
+      retorne cualquiera de ellos.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{lunes-3-4.py}
+
+    \item
+      Una compra puede ser representada como un diccionario
+      en que se asocia a cada producto
+      la cantidad de unidades que se comprará.
+
+      Escriba la función \li!monto_total(precios, compra)!,
+      que reciba como parámetros el diccionario de precios
+      y el diccionario de la compra,
+      y retorne el monto total a pagar por la compra.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{lunes-3-4.py}
+
+  \end{enumerate}
   \newpage
 
   \part*{Control 4, martes 1--2}
