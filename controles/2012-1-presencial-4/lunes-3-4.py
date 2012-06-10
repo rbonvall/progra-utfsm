@@ -32,3 +32,8 @@ precios = { 'aceite': 500,  'arroz': 2000,
             'cafe':  1500,  'te':     300 }
 # FIN EJEMPLO PRECIOS
 
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod(verbose=True)
+

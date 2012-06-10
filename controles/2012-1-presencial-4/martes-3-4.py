@@ -35,5 +35,7 @@ def porcentaje_respuesta_ciudad(respuestas, r, c):
     return 100.0 * total / len(respuestas[c])
 
 
-
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod(verbose=True)
 
