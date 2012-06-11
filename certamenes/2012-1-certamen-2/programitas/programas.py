@@ -1,12 +1,12 @@
 print '== P1 =='
 # P1
-a = [(1, 2, 3, 4), (5, 6, 7)]
+a = [(1, 2), (3, 4), (5, 6)]
 print len(a)
 # FIN P1
 
 print '== P2 =='
 # P2
-a = [1, 2]
+a = [[1], [2]]
 a.append([3, 4, 5])
 print len(a)
 # FIN P2
@@ -25,18 +25,28 @@ print a[a['a']]
 
 print '== P5 =='
 # P5
-print 'Por escribir'
+d = {'a': 'b', 'b': 'c', 'c': 'a'}
+a = ['d', 'e', 'a']
+for c in d:
+    if c in a:
+        print d[c]
 # FIN P5
 
 print '== P6 =='
 # P6
-print 'Por escribir'
+t = [(25, (1, 9)), (15, (2, 11))]
+s = 0
+for i in t:
+    a, b = i
+    c, d = b
+    s += c
+print s
 # FIN P6
 
 print '== P7 =='
 # P7
 def f(x):
-    x = 5
+    x = 18
     return x
 
 x = 10
