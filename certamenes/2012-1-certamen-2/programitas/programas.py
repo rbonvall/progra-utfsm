@@ -4,25 +4,27 @@ print len(a)
 # FIN P1
 
 # P2
-a = {'a': 'b', 'b': 'c', 'c': 'd'}
-print a['a']
+a = [1, 2]
+a.append([3, 4, 5])
+print len(a)
 # FIN P2
 
 # P3
-print 'Hola'
+a = {'a': 'b', 'b': 'c', 'c': 'a'}
+print a['a']
 # FIN P3
 
 # P4
-a = {'a': 'b', 'b': 'c', 'c': 'd'}
+a = {'a': 'b', 'b': 'c', 'c': 'a'}
 print a[a['a']]
 # FIN P4
 
 # P5
-print 'Hola'
+print 'Por escribir'
 # FIN P5
 
 # P6
-print 'Hola'
+print 'Por escribir'
 # FIN P6
 
 # P7
