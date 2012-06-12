@@ -19,8 +19,7 @@ print a['a']
 
 print '== P4 =='
 # P4
-a = {'a': 'b', 'b': 'c', 'c': 'a'}
-print a[a['a']]
+print len(set(range(5)) & set(range(3)))
 # FIN P4
 
 print '== P5 =='
