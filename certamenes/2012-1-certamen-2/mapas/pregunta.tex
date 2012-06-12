@@ -1,5 +1,5 @@
 Anacleta, ciclista apasionada,
-planifica su próximo recorrido
+planifica su próxima ruta
 usando mapas que descargó de internet.
 Cada mapa es un diccionario
 que asocia a cada ciudad
@@ -37,12 +37,16 @@ junto con el diccionario que le corresponde:
   \lstinputlisting[linerange=EJEMPLO-FIN\ EJEMPLO]{mapas/solucion.py}
 \end{minipage}
 
-Anacleta no se siente capacitada para hacer trayectos muy largos,
+Anacleta desea planificar una ruta
+(es decir, una secuencia de ciudades para visitar)
+y ver si es posible hacerla en mismo orden que a ella le interesa.
+No obstante,
+ella no se siente capacitada para hacer trayectos muy largos,
 por lo que en un día sólo le interesa ir de una ciudad a otra vecina.
 Sólo cuando se sienta especialmente vigorosa
 intentará seguir de largo para llegar a una próxima ciudad.
 
-\begin{enumerate}[leftmargin=0pt]
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
   \item
     Escriba la función \li!son_ciudades_vecinas(mapa, p, q)!
     que retorne un valor booleano
@@ -59,5 +63,13 @@ intentará seguir de largo para llegar a una próxima ciudad.
     (es decir, si se puede ir de \li!p! a \li!q!
     pasando a través de una sola otra ciudad).
     \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{mapas/solucion.py}
+  \item
+    Escriba la función \li!existe_ruta(mapa, ruta)!
+    que retorne un valor booleano
+    indicando si es posible hacer la \li!ruta! en el orden indicado.
+    El parámetro \li!ruta! es una lista de ciudades.
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{mapas/solucion.py}
 \end{enumerate}
+
+Conteste al reverso de esta misma hoja.
 
