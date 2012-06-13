@@ -16,12 +16,11 @@
 # FIN CASO 2
 
 # CASO 3
->>> cocinar_juntos([(2, 'omelette'), (2, 'te con leche')],
-...                dict(inventario))
+>>> cocinar_juntos([(2, 'omelette'), (2, 'te con leche')], inventario)
 True
 >>> cocinar_juntos([(1, 'omelette con queso'),
 ...                 (1, 'pan con queso'),
-...                 (500, 'vaso de leche')], dict(inventario))
+...                 (500, 'vaso de leche')], inventario)
 False
 
 # FIN CASO 3
