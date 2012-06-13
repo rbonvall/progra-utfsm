@@ -55,3 +55,40 @@ recetas = {
 }
 # FIN RECETAS
 
+
+def numero_de_porciones(plato, inv):
+    veces = float('inf')
+
+    for cant, ingr in recetas[plato]:
+        if inv[ingr]/cant < veces:
+            veces = inv[ingr]/cant
+    return veces
+
+def ingredientes(num_porciones, plato):
+    cantidades = {}
+
+    for cant, ingr in recetas[plato]:
+        cantidades[ingr] = cant * num_porciones
+
+    return cantidades
+
+
+def cocinar_juntos(pedido, inv):
+    for (num_porciones, plato) in pedido:
+
+        # si quedan suficientes ingredientes
+        if numero_de_porciones(plato, inv) >= num_porciones:
+
+            # actualizar inventario
+            ingr_usados = ingredientes(num_porciones, plato)
+            for ingr in ingr_usados:
+                inv[ingr] -= ingr_usados[ingr]
+        else:
+            return False
+    return True
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
+
