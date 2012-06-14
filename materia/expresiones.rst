@@ -57,7 +57,7 @@ Operadores aritméticos
 
 Las **operaciones aritméticas** son las que operan sobre valores numéricos
 y entregan otro valor numérico como resultado.
-Los valores numéricos son los que tienen tipo entero, real o complejo. entero, real o complejo.
+Los valores numéricos son los que tienen tipo entero, real o complejo.
 
 .. index:: + (suma), - (resta), /, %, ** , *
 .. index:: suma, resta, multiplicación, división, módulo, potencia
