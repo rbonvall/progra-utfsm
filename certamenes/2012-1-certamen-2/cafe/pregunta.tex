@@ -1,0 +1,54 @@
+Despues de llegar a su destino,
+Anacleta decidio abrir un café.
+Como ella anda en bicicleta
+no le gusta comprar comida de sobra,
+así que requiere que usted implemente un sistema de inventario
+que le permita calcular exactamente
+cuánta comida debe comprar para cada pedido.
+
+Este sistema usa dos diccionarios: \li!inventario! y \li!recetas!.
+Las llaves del diccionario \li!inventario!
+son los ingredientes de las recetas de Anacleta,
+y sus valores son las cantidades que actualmente tiene en stock en el café:
+\lstinputlisting[linerange=INVENTARIO-FIN\ INVENTARIO]{cafe/solucion.py}
+
+Las llaves del diccionario \li!recetas!
+son los nombres de los platos que vende Anacleta,
+y los valores son listas de tuplas \li!(cantidad, ingrediente)!
+que requiere cada plato:
+\lstinputlisting[linerange=RECETAS-FIN\ RECETAS]{cafe/solucion.py}
+Las recetas son siempre las mismas,
+por lo que \li!recetas! es una variable global.
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+  \item
+    Escriba la funcion \li!ingredientes(num_porciones, plato)!,
+    que retorne un diccionario que indique
+    cuánto se necesita de cada ingrediente
+    para cocinar \li!num_porciones! del \li!plato!.
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{cafe/solucion.py}
+
+  \item
+    Escriba la funcion \li!numero_de_porciones(plato, inv)!,
+    que retorne el número máximo de porciones del plato
+    que Anacleta puede cocinar usando el inventario \li!inv!.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{cafe/solucion.py}
+
+  \item
+    Escriba la funcion \li!cocinar_juntos(pedido, inv)!,
+    que retorne \li!True! si el pedido se puede cocinar
+    con el inventario en \li!inv!,
+    o \li!False! si no hay suficientes ingredientes.
+    Un pedido es una lista de tuplas \li!(numero_de_porciones, plato)!.
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{cafe/solucion.py}
+
+\end{enumerate}
+
+%Note que \li!dict(inventario)! crea
+%una copia del inventario a la función,
+%así que si modifica el diccionario \li!inv! dentro de la función
+%el diccionario \li!inventario! no se vera afectado.
+
+Conteste al reverso de esta misma hoja.
+
