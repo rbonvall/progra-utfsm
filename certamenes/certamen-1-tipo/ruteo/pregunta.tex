@@ -1,0 +1,54 @@
+Indique qué es lo que imprimen los siguientes programas.
+
+\foreach \x in {1,2} {
+  \noindent
+  \begin{minipage}[b]{.5\textwidth}
+    \lstinputlisting{ruteo/p\x.py}
+    \framebox[.8\textwidth]{\rule[10ex]{0pt}{0pt}}
+    \vspace{0.4em}
+  \end{minipage}
+}
+
+Rutee el siguiente programa
+e indique qué es lo que imprime.
+
+Cada vez que el valor de una variable cambie,
+ponga su valor en una nueva fila de la tabla.
+La tabla tiene filas de sobra.
+
+\begin{minipage}[T]{.5\textwidth}
+  \lstinputlisting{ruteo/ruteo.py}
+  \framebox[.8\textwidth]{\rule[10ex]{0pt}{0pt}}
+\end{minipage}
+\begin{minipage}[t]{.4\textwidth}\centering
+  \newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
+  \begin{tabular}{|p{4em}|p{4em}|p{4em}|}\hline
+      \cc{a} & \cc{b} & \cc{c} \\ \hline\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+      && \\\hline
+   \end{tabular}
+\end{minipage}
+

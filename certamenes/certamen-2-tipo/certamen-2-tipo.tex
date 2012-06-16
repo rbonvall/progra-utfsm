@@ -17,44 +17,27 @@
 \hyphenation{usua-rio usua-rios si-guen-te}
 
 \newcommand{\titulo}{Certamen 2 tipo}
-\newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
-\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
 
 \input{../../latex/encabezado.tex}
 \input{../../latex/definiciones.tex}
 
 \begin{document}
-
   \begin{enumerate}[font=\Large\bfseries]
-
     \item
       \pond{25}
-      Indique qué es lo que imprimen los siguientes programas.
-
-      \foreach \x in {1,2,...,8} {
-        \noindent
-        \begin{minipage}[b]{19.8em}
-          \lstinputlisting{p\x.py}
-          \framebox[18em]{\rule[6ex]{0pt}{0pt}}
-          \vspace{0.7em}
-        \end{minipage}
-      }
-
-    \newpage
+      \input{programitas/pregunta.tex}
+      \newpage
     \item
       \pond{25}
       \input{estadisticas-equipo/pregunta.tex}
-
-    \newpage
+      \newpage
     \item
       \pond{25}
       \input{strip-n-split/parte1.tex}
-
-    \newpage
+      \newpage
     \item
       \pond{25}
       \input{strip-n-split/parte2.tex}
-
   \end{enumerate}
 \end{document}
 

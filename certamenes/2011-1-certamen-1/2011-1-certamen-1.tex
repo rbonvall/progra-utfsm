@@ -15,69 +15,27 @@
 \usepackage{graphics}
 
 \newcommand{\titulo}{Certamen 1, sábado 2 de abril de 2011}
-\newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
-\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
 
 \input{../../latex/encabezado.tex}
 \input{../../latex/definiciones.tex}
 
 \begin{document}
-
   \begin{enumerate}[font=\Large\bfseries]
-
-    % Entender programas
-    \item%[1a.]
+    \item
       \pond{25}
-
-      Indique qué es lo que imprimen los siguientes programas.
-
-      \foreach \x in {1,2} {
-        \noindent
-        \begin{minipage}[b]{.5\textwidth}
-          \lstinputlisting{p\x.py}
-          \framebox[.8\textwidth]{\rule[10ex]{0pt}{0pt}}
-          \vspace{0.4em}
-        \end{minipage}
-      }
-
-    %\item[1b.]
-      Rutee el siguiente programa
-      e indique qué es lo que imprime.
-
-      Cada vez que el valor de una variable cambie,
-      ponga su valor en una nueva fila de la tabla.
-      La tabla tiene filas de sobra.
-
-      \begin{minipage}[T]{.5\textwidth}
-        \lstinputlisting{ruteo.py}
-        \framebox[.8\textwidth]{\rule[10ex]{0pt}{0pt}}
-      \end{minipage}
-      \begin{minipage}[t]{.4\textwidth}\centering
-        \begin{tabular}{|p{4em}|p{4em}|p{4em}|}\hline
-            \cc{j} & \cc{c} & \cc{p} \\ \hline\hline
-            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
-            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
-            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
-            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
-            && \\\hline && \\\hline && \\\hline && \\\hline && \\\hline
-         \end{tabular}
-      \end{minipage}
-
-    \newpage
+      \input{ruteo/pregunta}
+      \newpage
     \item
       \pond{25}
       \input{alfil-torre/pregunta}
-
-    \newpage
+      \newpage
     \item
       \pond{25}
       \input{rango/pregunta}
-
-    \newpage
+      \newpage
     \item
       \pond{25}
       \input{van/pregunta}
-
   \end{enumerate}
 \end{document}
 
