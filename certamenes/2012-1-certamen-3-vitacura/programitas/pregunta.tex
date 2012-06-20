@@ -1,0 +1,17 @@
+Indique qué es lo que imprimen los siguientes programas.
+
+\foreach \x in {1,2,...,8} {
+  \noindent
+  \begin{minipage}[b]{21.8em}
+    \edef\dolisting{%
+      \noexpand%
+      \lstinputlisting[linerange=P\x-FIN\ P\x]{programitas/programas.py}%
+    }
+    \dolisting
+    \framebox[20.4em]{%
+      \rule[8ex]{0pt}{0pt}%
+    }
+    \vspace{0.7em}
+  \end{minipage}
+}
+
