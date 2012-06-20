@@ -1,30 +1,32 @@
-print '== P1 =='
+from numpy import array
+separador = '========== P{} =========='
+
+print separador.format(1)
 # P1
-print "Hola"
+a = array([77, 11, 33, 22])
+b = a / 11
+print b
 # FIN P1
 
-print '== P2 =='
+print separador.format(2)
 # P2
-print "Hola"
+a = 'En un lugar de la Mancha'
+b = a.split()
+print map(len, b)
 # FIN P2
 
-print '== P3 =='
+print separador.format(3)
 # P3
-print "Hola"
+a = array([[77, 11, 33, 22],
+           [55, 33,  0, 33],
+           [88, 44, 44, 44]])
+b = a[:, 1]
+print b.sum()
 # FIN P3
 
-print '== P4 =='
+print separador.format(4)
 # P4
-print "Hola"
+a = '{2}{0}{2}{0}'
+x, y, z = 'total'.split('t')
+print a.format(x, y, z)
 # FIN P4
-
-print '== P5 =='
-# P5
-print "Hola"
-# FIN P5
-
-print '== P6 =='
-# P6
-print "Hola"
-# FIN P6
-
