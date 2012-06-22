@@ -12,8 +12,8 @@
 \usepackage{microtype}
 
 \input{../../latex/definiciones.tex}
-\lstset{language=py}
-\setlist[enumerate]{leftmargin=0pt}
+\lstset{language=testcase}
+\lstset{frame=single}
 
 \begin{document}
   \pagestyle{empty}
@@ -21,6 +21,40 @@
 
   \part*{Control 5, lunes 1--2}
   \newpage
+
+  \begin{minipage}[t]{0.45\textwidth}
+    El archivo \li!diccionario.txt!
+    contiene las definiciones de varias palabras
+    en el formato mostrado a la derecha.
+    \\[2ex]
+    Cada línea del archivo tiene una palabra y su definición,
+    separados por dos puntos.
+    Además, junto a cada palabra,
+    se indica si ésta es un sustantivo \li!(s)!
+    o un verbo \li!(v)!.
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \hfil\verb!diccionario.txt!\hfil
+    \small
+    \lstinputlisting[language=file]{diccionario.txt}
+  \end{minipage}
+
+  Escriba un programa que pregunte al usuario una palabra,
+  y entregue como salida su definición y su tipo de palabra.
+  Si la palabra no está en el diccionario,
+  el programa debe mostrar el mensaje
+  \texttt{La palabra no esta en el diccionario}.
+
+  Use los siguientes ejemplos como referencia.
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{lunes-1-2.py}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{lunes-1-2.py}
+  \end{minipage}
 
   \newpage
 
