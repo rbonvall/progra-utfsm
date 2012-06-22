@@ -71,5 +71,33 @@
   \part*{Control 5, martes 3--4}
   \newpage
 
+  \begin{minipage}[t]{0.48\textwidth}
+    Rosalinda Sansana mantiene su horario de este semestre
+    en un archivo llamado \li!horario.txt!,
+    siguiendo el formato mostrado a la derecha.
+    \\[2ex]
+    En cada línea del archivo aparece el nombre de un ramo
+    seguido de dos puntos.
+    A continuación,
+    aparecen todas las clases de ese ramo en la semana,
+    separados por comas.
+    Los nombres de los días están abreviados
+    por sus dos primeras letras.
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.42\textwidth}
+    \hfil\verb!horario.txt!\hfil
+    \lstinputlisting[language=file]{horario.txt}
+  \end{minipage}
+
+  Escriba un programa que le pregunte a Rosalinda
+  cuál es el día de hoy,
+  y le diga cuáles son las clases que debe asistir
+  y en qué bloques.
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO-FIN\ CASO]{martes-3-4.py}
+  \end{minipage}
+
 \end{document}
 

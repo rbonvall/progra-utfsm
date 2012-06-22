@@ -1,0 +1,5 @@
+Progra: lu 1-2, mi 3-4
+Mate: lu 3-4, ma 1-2, vi 5-6
+Fisica: ma 7-8, ju 9-10
+Quimica: ma 5-6, ju 1-2
+Filosofia: vi 1-2
