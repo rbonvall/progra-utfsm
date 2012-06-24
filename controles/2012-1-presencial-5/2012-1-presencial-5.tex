@@ -61,6 +61,44 @@
   \part*{Control 5, lunes 3--4}
   \newpage
 
+  \begin{minipage}[t]{0.45\textwidth}
+    Todos los buses del Transpythonia
+    llevan un registro de sus recorridos
+    en un archivo llamado \li!paradas.txt!,
+    con la estructura del ejemplo de la derecha.
+    \\[2ex]
+    Cada vez que el bus completa una vuelta del recorrido,
+    se agrega una nueva línea al archivo
+    indicando a qué hora pasó por cada paradero.
+    Todas las horas están separadas por dos guiones.
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \hfil\verb!paradas.txt!\hfil
+    \small
+    \lstinputlisting[language=file]{paradas.txt}
+  \end{minipage}
+
+  Transpythonia desea controlar que los buses de cada recorrido
+  no estén demorando más de un tiempo dado
+  en hacer el recorrido completo.
+
+  Escriba un programa que pregunte al usuario
+  el tiempo máximo permitido (en minutos),
+  y entregue como salida todas las vueltas
+  que se demoraron más que eso.
+
+  Use el siguiente ejemplo como referencia.
+  La salida debe mostrar:
+  el número de vuelta,
+  su hora de inicio
+  y su duración en minutos.
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO-FIN\ CASO]{lunes-3-4.py}
+  \end{minipage}
+
+
   \newpage
 
   \part*{Control 5, martes 1--2}
