@@ -1,21 +1,19 @@
-from numpy import array
-separador = '========== P{} =========='
+from numpy import array, ones
 
-print separador.format(1)
+print '=== P1 ==='
 # P1
-a = array([77, 11, 33, 22])
-b = a / 11
-print b
+a = array([11, 22, 33])
+b = array([11,  0, 22])
+print (a + b) / 11
 # FIN P1
 
-print separador.format(2)
+print '=== P2 ==='
 # P2
-a = 'En un lugar de la Mancha'
-b = a.split()
-print map(len, b)
+p = 'nn\nnn'
+print p
 # FIN P2
 
-print separador.format(3)
+print '=== P3 ==='
 # P3
 a = array([[77, 11, 33, 22],
            [55, 33,  0, 33],
@@ -24,12 +22,26 @@ b = a[:, 1]
 print b.sum()
 # FIN P3
 
-print separador.format(4)
+print '=== P4 ==='
 # P4
-a = '{2}{0}{2}{0}'
-x, y, z = 'total'.split('t')
-print a.format(x, y, z)
+a = 'En un lugar de la Mancha'
+b = a.split()
+print map(len, b)
 # FIN P4
+
+print '=== P5 ==='
+# P5
+a = ones((5, 5)).astype(int)
+a[0:4, 2:5] *= 0
+print a.sum()
+# FIN P5
+
+print '=== P6 ==='
+# P6
+a = 'a:b  c:d  e:f  g:h'
+b = a.split(':')
+print b[2]
+# FIN P6
 
 
 # PA
@@ -40,3 +52,7 @@ for x in am:
 am.close()
 ae.close()
 # FIN PA
+
+print '=== Archivo enigma.txt ==='
+print open('enigma.txt').read()
+
