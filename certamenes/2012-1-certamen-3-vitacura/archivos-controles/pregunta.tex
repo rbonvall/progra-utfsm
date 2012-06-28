@@ -1,0 +1,71 @@
+%Por supuesto,
+%el profesor Sansanales no llenará a mano la matriz de controles.
+%Durante el semestre,
+%él usa el Bloc de Notas para ir llenando un archivo
+El Ministerio de Educación exige todos los semestres a los profesores
+entregar un reporte con las notas de sus alumnos.
+
+\begin{minipage}[t]{.58\textwidth}
+  El reporte debe ser un archivo de texto plano
+  con una estructura como la mostrada
+  en el ejemplo de la derecha.
+  El nombre del archivo debe tener el año y el número de semestre
+  (que puede ser \li+1+ o \li+2+).
+  Por supuesto,
+  el profesor Sansanales quiere evitar el trabajo
+  de escribir el reporte a mano.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.38\textwidth}
+  \centering
+  \verb+notas-2012-1.txt+
+  \lstinputlisting[language=file,frame=single]{archivos-controles/notas-2012-1.txt}
+\end{minipage}
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+%  \item
+%    Escriba la función \li!cargar_notas(nombre_archivo, nr_controles, nr_alumnos)!
+%    que lea las notas de un archivo 
+%    y retorne un arreglo como el descrito en la pregunta anterior:
+%    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{archivos-controles/programa.py}
+
+  \item
+    Escriba la función \li!crear_reporte(notas, anno, semestre)!,
+    que reciba como parámetros el arreglo de notas
+    (como el usado en la pregunta anterior),
+    el año y el número de semestre,
+    y que escriba el archivo con el reporte de notas.
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{archivos-controles/programa.py}
+
+    La función no debe retornar nada; sólo debe crear el archivo.
+    Recuerde que los nombres de los alumnos
+    están en la lista global \li!alumnos!.
+
+  \item
+    Escriba la función \li!promedio_semestral(nombre_archivo)!,
+    que reciba como parámetro el nombre de un archivo
+    de reporte como el del ejemplo,
+    y retorne el promedio de todas las notas que están en él.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{archivos-controles/programa.py}
+
+    El archivo podría tener cualquier cantidad de alumnos
+    y cualquier cantidad de controles por alumno.
+    El promedio debe estar redondeado
+    al entero más cercano (recuerde la función \li!round(x)!).
+
+  \item
+    El profesor Sansanales ha hecho clases
+    desde el primer semestre de 1995 hasta ahora,
+    y ha conservado todos los reportes generados desde entonces.
+    Para evaluar su desempeño a lo largo del tiempo,
+    él quiere observar cómo ha variado el promedio de sus cursos
+    en todos estos años.
+
+    Escriba la función \li!resumen_promedios()! que,
+    a partir de los reportes de notas existentes,
+    retorne la lista con todos los promedios semestrales
+    desde que ha hecho clases.
+
+\end{enumerate}
+
