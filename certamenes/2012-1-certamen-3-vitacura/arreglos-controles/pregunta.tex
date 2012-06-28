@@ -1,0 +1,46 @@
+El profesor Sansanales desea desarrollar un programa en Python
+para ayudarse a calcular las notas finales a final de semestre.
+La planilla de notas de controles de su curso
+está representada como una matriz,
+donde cada fila contiene las notas de un alumno
+a lo largo del semestre:
+\lstinputlisting[linerange=CONTROLES-FIN\ CONTROLES]{arreglos-controles/programa.py}
+
+Los nombres de sus alumnos están almacenados
+en una lista global llamada \li!alumnos!,
+en el mismo orden en que están asociados a las filas de la matriz:
+\lstinputlisting[linerange=ALUMNOS-FIN\ ALUMNOS]{arreglos-controles/programa.py}
+
+Para cada control,
+el profesor premia al alumno que obtuvo la nota más alta
+otorgándole una estrellita.
+Si varios alumnos obtuvieron la nota más alta,
+todos ellos reciben estrellita.
+
+Cuando termine el semestre,
+el profesor decidirá un valor de \(n\),
+y premiará con 10 puntos en la nota final
+a los alumnos que hayan obtenido \(n\) o más estrellitas.
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+  \item
+    Escriba la función \li!contar_estrellitas(controles)!
+    que a partir de la matriz de notas de controles
+    retorne un arreglo con el total de estrellitas que obtuvo cada alumno:
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{arreglos-controles/programa.py}
+
+  \item
+    Escriba la función \li!notas_finales(controles, n)!
+    que entregue el arreglo de notas finales,
+    después de haber sumado los premios
+    por tener más de \(n\) estrellitas:
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{arreglos-controles/programa.py}
+
+  \item
+    Escriba la función \li!alumno_con_mas_estrellitas(controles)!
+    que retorne el nombre del alumno con más estrellitas:
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{arreglos-controles/programa.py}
+
+\end{enumerate}
+

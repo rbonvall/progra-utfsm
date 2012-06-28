@@ -1,0 +1,3 @@
+Prisciliano: 100 30 50 0 0
+Edelmiro: 25 100 35 50 90
+Froilana: 90 25 50 90 100

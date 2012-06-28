@@ -1,0 +1,32 @@
+Indique qué es lo que imprimen los siguientes programas.
+
+\foreach \x in {1,2,...,6} {
+  \noindent
+  \begin{minipage}[b]{21.8em}
+    \edef\dolisting{%
+      \noexpand%
+      \lstinputlisting[linerange=P\x-FIN\ P\x]{programitas/programas.py}%
+    }
+    \dolisting
+    \framebox[20.4em]{%
+      \rule[8ex]{0pt}{0pt}%
+    }
+    \vspace{0.7em}
+  \end{minipage}
+}
+
+Indique cómo queda el archivo \li!enigma.txt!
+después de ejecutar el siguiente programa.
+
+\begin{minipage}[T]{21.8em}
+  \lstinputlisting[linerange=PA-FIN\ PA]{programitas/programas.py}%
+  \framebox[20.4em]{%
+    \rule[16ex]{0pt}{0pt}%
+  }
+\end{minipage}
+\hfil
+\begin{minipage}[T]{8em}
+  \centering
+  \verb!misterio.txt!
+  \lstinputlisting[language=file,frame=single]{programitas/misterio.txt}%
+\end{minipage}
