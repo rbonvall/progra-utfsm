@@ -2,22 +2,33 @@ from numpy import array, ones
 
 print '=== P1 ==='
 # P1
-
+tres = array([1, 4, 2])
+seis = 2 * tres
+print seis
 # FIN P1
 
 print '=== P2 ==='
 # P2
-
+a = 'papanatas'
+a = a.replace('p', 'n')
+a = a.replace('n', 'p')
+print a
 # FIN P2
 
 print '=== P3 ==='
 # P3
-
+a = array([[ 0, 99, 33, 11],
+           [55, 33,  0, 33],
+           [88, 44, 22, 11]])
+b = a[1:, 2:]
+print b.sum()
 # FIN P3
 
 print '=== P4 ==='
 # P4
-
+w = ['Hoy', 'hay', 'pan']
+p = '\n'
+print p.join(w)
 # FIN P4
 
 print '=== P5 ==='
