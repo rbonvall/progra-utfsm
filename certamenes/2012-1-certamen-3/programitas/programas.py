@@ -44,5 +44,5 @@ ae.close()
 # FIN PA
 
 print '=== Archivo enigma.txt ==='
-print open('enigma.txt').rstrip().read()
+print open('enigma.txt').read().rstrip()
 
