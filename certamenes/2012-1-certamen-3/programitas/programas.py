@@ -32,6 +32,14 @@ print '=== P6 ==='
 
 
 # PA
+am = open('misterio.txt')
+ae = open('enigma.txt', 'w')
+for x in am:
+    xs = x.split()
+    ae.write(xs[0] + xs[1])
+    ae.write('\n')
+am.close()
+ae.close()
 
 # FIN PA
 
