@@ -1,0 +1,57 @@
+Una \emph{página web}
+es simplemente un archivo de texto
+que describe las distintas partes de un documento
+usando un lenguaje llamado HTML.
+
+\begin{minipage}[t]{0.7\textwidth}
+  \parskip=2ex
+  Las \emph{tablas} son uno de los componentes
+  que pueden ser parte de una página web.
+  En un archivo HTML,
+  el comienzo de una tabla
+
+  Una manera simple de crear una tabla
+  guardar una
+
+  \begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+    \item
+      Escriba la función \li!convertir_csv_a_html(tabla)!
+      que convierta un archivo CSV a otro HTML.
+      El parámetro es el nombre del archivo sin la extensión.
+
+      Por ejemplo,
+      para crear el archivo \verb!frutas.html!
+      a partir de los datos del archivo \verb!frutas.csv!
+      habría que llamar así a la función:
+      \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{tabla-html/programa.py}
+
+      La función no debe retornar nada; sólo debe crear el archivo.
+
+    \item
+      Escriba la función \li!buscar_valor(tabla, valor)!
+      que busque el \li!valor! en la \li!tabla! del archivo HTML,
+      y retorne una tupla con la fila y la columna
+      de la celda donde está el valor.
+
+  \end{enumerate}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth}
+  \centering
+  Tabla de frutas: \\[1ex]
+  \begin{tabular}{|l|r|r|}  \hline
+    Manzana &  7 & \$615 \\ \hline
+    Uva     & 10 & \$399 \\ \hline
+    Kiwi    &  2 & \$471 \\ \hline
+  \end{tabular}
+  \vspace{1ex}
+
+  Archivo \verb+frutas.html+:
+  \lstinputlisting[language=html,frame=single]{tabla-html/frutas.html}
+
+  Archivo \verb+frutas.csv+:
+  \lstinputlisting[frame=single]{tabla-html/frutas-ejemplo.csv}
+\end{minipage}
+
