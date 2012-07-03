@@ -8,7 +8,7 @@
 # CASO 2
 >>> leer_partidos('partidos-2012-07-02.txt')
 {('Bribones', 'Zopencos'): (43, 33), ('Zoquetes', 'Alcornoques'): (34, 10),
- ('Bellacos', 'Canallas'): (39, 25), ('Mentecatos', 'Tarugos'): (39, 27)}
+ ('Canallas', 'Bellacos'): (25, 39), ('Mentecatos', 'Tarugos'): (39, 27)}
 
 # FIN CASO 2
 
