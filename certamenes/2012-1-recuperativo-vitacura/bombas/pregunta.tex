@@ -66,5 +66,22 @@ indicando su posición en el campo.
     cuyo primer parámetro es una lista de bombas,
     que retorne una nueva lista que contenga sólo las bombas que son útiles.
 
+  \item
+    El módulo \li!random! provee la función \li!random!
+    que retorna un número al azar entre 0 y 1:
+\begin{lstlisting}
+>>> from random import random
+>>> random()
+0.23982804170484318
+>>> random()
+0.7492150316162312
+>>> random()
+0.7981306319510799
+\end{lstlisting}
+    Escriba la función \li!bomba_aleatoria()!
+    que retorne una bomba con radio de acción 0.5,
+    y cuyo punto de impacto sea un lugar al azar
+    dentro del cuadrado definido por los puntos~\((0, 0)\) y~\((10, 10)\).
+
 \end{enumerate}
 
