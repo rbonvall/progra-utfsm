@@ -37,7 +37,7 @@ def convertir_csv_a_html(tabla):
     archivo_html.write('<table>\n')
     for linea in archivo_csv:
         archivo_html.write('<tr>\n')
-        valores = linea.split()
+        valores = linea.split(',')
         for valor in valores:
             archivo_html.write('<td>{0}</td>\n'.format(valor))
         archivo_html.write('</tr>\n')
