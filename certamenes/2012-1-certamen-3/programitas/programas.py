@@ -1,4 +1,4 @@
-from numpy import array, ones
+from numpy import array, zeros
 
 print '=== P1 ==='
 # P1
@@ -33,12 +33,16 @@ print p.join(w)
 
 print '=== P5 ==='
 # P5
-
+a = zeros(900).astype(int)
+a[300:600:200] += 1
+print a.sum()
 # FIN P5
 
 print '=== P6 ==='
 # P6
-
+a = 'abeja:becerro:doberman'
+b = a.split('be')
+print b[1]
 # FIN P6
 
 
