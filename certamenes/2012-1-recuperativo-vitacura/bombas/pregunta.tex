@@ -49,20 +49,18 @@ a una distancia menor o igual que \li!r!.
 \begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
 
   \item
-    Escriba la función \li!contar_impactos(bomba, objetivos, amigos)!.
-    La función debe retornar dos valores:
-    la cantidad de objetivos destruídos por la \li!bomba!
-    y la cantidad de posiciones amigas destruídas por la bomba.
-    Los parámetros \li!objetivos! y \li!amigos! son, respectivamente,
-    una lista de objetivos y una lista de posiciones amigas.
+    Escriba la función \li!destruye(bomba, objetivo)!
+    que retorne \li!True! si la \li!bomba! destruye el \li!objetivo!
+    y \li!False! si no lo hace.
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{bombas/programa.py}
 
   \item
-    Una bomba es útil si destruye por lo menos un objetivo
-    y no destruye ninguna posición amiga.
-
-    Escriba la función \li!bombas_utiles(bombas, objetivos, amigos)!,
-    cuyo primer parámetro es una lista de bombas,
-    que retorne una nueva lista que contenga sólo las bombas que son útiles.
+    Escriba la función \li!obtener_impactos(bomba, objetivos)!
+    que retorne un arreglo de ceros y unos,
+    donde el cero indica que el objetivo correspondiente
+    no fue destruído por la bomba,
+    mientras que el uno indica que sí lo fue.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{bombas/programa.py}
 
   \item
     El módulo \li!random! provee la función \li!random!
@@ -73,13 +71,24 @@ a una distancia menor o igual que \li!r!.
 0.23982804170484318
 >>> random()
 0.7492150316162312
->>> random()
-0.7981306319510799
 \end{lstlisting}
     Escriba la función \li!bomba_aleatoria()!
     que retorne una bomba con radio de acción 0.5,
     y cuyo punto de impacto sea un lugar al azar
     dentro del cuadrado definido por los puntos~\((0, 0)\) y~\((10, 10)\).
+\begin{lstlisting}
+>>> bomba_aleatoria()
+(4.077187073042481, 2.47990170922632, 0.5)
+>>> bomba_aleatoria()
+(6.287830604803876, 3.159523224534051, 0.5)
+\end{lstlisting}
+
+  \item
+    Escriba la función \li!bombardear(objetivos)!
+    que lance bombas aleatorias hasta que todos los objetivos
+    hayan quedado destruídos.
+    La función debe retornar
+    la lista todas las bombas que fue necesario lanzar.
 
 \end{enumerate}
 
