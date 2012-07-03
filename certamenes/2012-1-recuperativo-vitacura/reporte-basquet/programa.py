@@ -14,10 +14,10 @@
 
 # CASO 3
 Fecha: `02/07/2012`
-Zopencos gano a Bribones por 33-43
+Bribones gano a Zopencos por 43-33
 Zoquetes gano a Alcornoques por 34-10
-Canallas gano a Bellacos por 25-39
-Tarugos gano a Mentecatos por 27-39
+Bellacos gano a Canallas por 39-25
+Mentecatos gano a Tarugos por 39-27
 
 # FIN CASO 3
 '''
@@ -54,7 +54,7 @@ def programa():
     for partido in resultados:
         p1, p2 = resultados[partido]
         e1, e2 = partido
-        if e1 < e2:  # hacer que siempre e1 sea el ganador
+        if p1 < p2:  # hacer que siempre e1 sea el ganador y e2 el perdedor
             e1, e2 = e2, e1
             p1, p2 = p2, p1
         print '{0} gano a {1} por {2}-{3}'.format(e1, e2, p1, p2)
