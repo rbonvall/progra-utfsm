@@ -1,27 +1,25 @@
 En un campo de batalla
-hay objetivos que se desea destruir (\frownie).
+hay objetivos que se desea destruir.
 Todos los objetivos están representados
 como tuplas \li!(x, y)!
 indicando su posición en el campo.
 
-\begin{minipage}{0.65\textwidth}
-  \parskip=1ex
+Durante la próxima misión
+se lanzará varias bombas sobre el campo de batalla.
+Cada bomba está representada
+como una tupla \li!(x, y, r)!,
+donde \li!x! e \li!y! indican el punto de impacto
+y \li!r! es el radio de acción de la bomba.
+Al caer en el punto de impacto,
+una bomba destruye todo lo que está
+a una distancia menor o igual que \li!r!.
 
-  A su vez,
-  en el campo hay varias posiciones amigas (\smiley)
-  que se desea proteger.
-  Las posiciones amigas también están representadas
-  como tuplas \li!(x, y)!.
-
-  Durante la próxima misión,
-  se lanzarán varias bombas sobre el campo de batalla.
-  Cada bomba está representada
-  como una tupla \li!(x, y, r)!,
-  donde \li!x! e \li!y! indican el punto de impacto
-  y \li!r! es el radio de acción de la bomba.
-  Al caer en el punto de impacto,
-  una bomba destruye todo lo que está
-  a una distancia menor o igual que \li!r!.
+\begin{minipage}{.70\textwidth}
+  En el mapa de la derecha están visualizados
+  los objetivos y la bomba siguientes:
+  \lstinputlisting[linerange=MAPA-FIN\ MAPA]{bombas/programa.py}
+  En este ejemplo,
+  la bomba destruye tres objetivos.
 \end{minipage}
 \hfill
 \begin{minipage}{.25\textwidth}
@@ -31,15 +29,15 @@ indicando su posición en el campo.
     \tikzstyle{friend}=[inner sep=2pt, circle, fill=gray!90]
     \draw[dotted] (0, 0) grid (10, 10);
     \draw (0, 0) rectangle (10, 10);
-    \node[friend] (f0) at (3.9, 2.1) {\smiley};
-    \node[friend] (f1) at (8.7, 0.3) {\smiley};
-    \node[friend] (f2) at (9.1, 8.2) {\smiley};
-    \node[friend] (f3) at (0.9, 9.5) {\smiley};
-    \node[target] (t0) at (5.5, 5.5) {\frownie};
-    \node[target] (t1) at (4.5, 4.5) {\frownie};
-    \node[target] (t2) at (1.4, 6.2) {\frownie};
-    \node[target] (t3) at (7.7, 8.4) {\frownie};
-    \node[target] (t4) at (9.1, 3.1) {\frownie};
+    \node[target] (f0) at (3.9, 2.1) {0};
+    \node[target] (f1) at (8.7, 0.3) {1};
+    \node[target] (f2) at (9.1, 8.2) {2};
+    \node[target] (f3) at (0.9, 9.5) {3};
+    \node[target] (f4) at (5.5, 5.5) {4};
+    \node[target] (f5) at (4.5, 4.5) {5};
+    \node[target] (f6) at (1.4, 6.2) {6};
+    \node[target] (f7) at (7.7, 8.4) {7};
+    \node[target] (f8) at (9.1, 3.1) {8};
     \draw (5.1, 3.7) circle (3cm);
     \draw[-latex'] (5.1, 3.7) --
         node [midway, below] {\(r\)}
