@@ -35,3 +35,9 @@ def convertir_csv_a_html(tabla):
     archivo_csv.close()
     archivo_html.close()
 
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
+
