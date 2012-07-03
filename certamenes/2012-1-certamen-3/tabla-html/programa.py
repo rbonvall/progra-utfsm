@@ -4,18 +4,29 @@
 
 # FIN CASO 1
 
+# CASO 1b
+>>> convertir_csv_a_html("test")
+
+# FIN CASO 1b
+
 # CASO 2
 >>> obtener_tamano("frutas.html")
 (3, 3)
 
 # FIN CASO 2
 
-# CASO 3
->>> buscar_valor("frutas", "Kiwi")
-3
->>> buscar_valor("frutas", "Naranja")
-None
+# CASO 2b
+>>> obtener_tamano("test.html")
+(7, 5)
 
+# FIN CASO 2b
+
+# CASO 3
+#>>> buscar_valor("frutas", "Kiwi")
+#3
+#>>> buscar_valor("frutas", "Naranja")
+#None
+#
 # FIN CASO 3
 '''
 
