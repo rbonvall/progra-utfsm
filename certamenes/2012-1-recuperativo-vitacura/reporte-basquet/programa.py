@@ -1,6 +1,9 @@
 '''
+# CASO 1
 >>> calcular_puntos('DLLDTL')
 10
+
+# FIN CASO 1
 '''
 
 
