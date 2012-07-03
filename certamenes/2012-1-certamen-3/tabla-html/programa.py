@@ -46,6 +46,19 @@ def convertir_csv_a_html(tabla):
     archivo_csv.close()
     archivo_html.close()
 
+def obtener_tamano(archivo_html):
+    n_filas = 0
+    n_columnas = 0
+    archivo = open(archivo_html)
+    for linea in archivo:
+        linea = linea.strip()        # por si acaso, pero no es necesario
+        if linea == '<tr>':
+            n_filas += 1
+            n_columnas = 0
+        elif linea[0:4] == '<td>':   # o tambien '<td>' in linea
+            n_columnas += 1
+    archivo.close()
+    return (n_filas, n_columnas)
 
 
 if __name__ == "__main__":
