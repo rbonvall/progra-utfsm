@@ -5,12 +5,10 @@
 
 # FIN CASO 1
 
->>> leer_partidos('partidos.txt')
 # CASO 2
-{('Bribones', 'Zopencos'): (43, 33),
- ('Zoquetes', 'Alcornoques'): (34, 10),
- ('Bellacos', 'Canallas'): (39, 25),
- ('Mentecatos', 'Tarugos'): (39, 27)}
+>>> leer_partidos('partidos-2012-07-02.txt')
+{('Bribones', 'Zopencos'): (43, 33), ('Zoquetes', 'Alcornoques'): (34, 10),
+ ('Bellacos', 'Canallas'): (39, 25), ('Mentecatos', 'Tarugos'): (39, 27)}
 
 # FIN CASO 2
 '''
