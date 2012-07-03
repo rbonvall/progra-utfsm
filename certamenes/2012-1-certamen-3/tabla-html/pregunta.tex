@@ -87,9 +87,12 @@ usando un lenguaje llamado HTML.
     la misma cantidad de celdas,
 
   \item
-    Escriba la función \li!buscar_valor(tabla, valor)!
-    que busque el \li!valor! en la \li!tabla! del archivo HTML,
-    y retorne una tupla con la fila y la columna
-    de la celda donde está el valor.
+    Escriba la función \li!obtener_precio(fruta)! que
+    retorne el precio de la fruta pasada como parámetro:
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{tabla-html/programa.py}
+
+    La función debe buscar los datos en el archivo \verb!frutas.csv!.
+    Si la fruta no está en el archivo,
+    la función debe retornar \li!None!.
 
 \end{enumerate}

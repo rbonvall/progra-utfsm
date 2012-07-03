@@ -22,12 +22,15 @@
 # FIN CASO 2b
 
 # CASO 3
-#>>> buscar_valor("frutas", "Kiwi")
-#3
-#>>> buscar_valor("frutas", "Naranja")
-#None
-#
+>>> obtener_precio("Kiwi")
+471
+
 # FIN CASO 3
+
+# CASO 3b
+>>> obtener_precio("Arandano")
+
+# FIN CASO 3b
 '''
 
 def convertir_csv_a_html(tabla):
@@ -59,6 +62,17 @@ def obtener_tamano(archivo_html):
             n_columnas += 1
     archivo.close()
     return (n_filas, n_columnas)
+
+def obtener_precio(fruta):
+    archivo = open('frutas.csv')
+    precio = None
+    for linea in archivo:
+        f, _, p = linea.split(',')
+        if f == fruta:
+            precio = int(p.replace('$', ''))
+            break
+    archivo.close()
+    return precio
 
 
 if __name__ == "__main__":
