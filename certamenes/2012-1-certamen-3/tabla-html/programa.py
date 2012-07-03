@@ -5,12 +5,18 @@
 # FIN CASO 1
 
 # CASO 2
+>>> obtener_tamano("frutas.html")
+(3, 3)
+
+# FIN CASO 2
+
+# CASO 3
 >>> buscar_valor("frutas", "Kiwi")
 3
 >>> buscar_valor("frutas", "Naranja")
 None
 
-# FIN CASO 2
+# FIN CASO 3
 '''
 
 def convertir_csv_a_html(tabla):
