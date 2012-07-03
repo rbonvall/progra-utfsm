@@ -11,6 +11,15 @@
  ('Bellacos', 'Canallas'): (39, 25), ('Mentecatos', 'Tarugos'): (39, 27)}
 
 # FIN CASO 2
+
+# CASO 3
+Fecha: `02/07/2012`
+Zopencos gano a Bribones por 33-43
+Zoquetes gano a Alcornoques por 34-10
+Canallas gano a Bellacos por 25-39
+Tarugos gano a Mentecatos por 27-39
+
+# FIN CASO 3
 '''
 
 
@@ -35,6 +44,20 @@ def leer_partidos(nombre_archivo):
         i += 1
     archivo.close()
     return partidos
+
+
+def programa():
+    fecha = raw_input('Fecha: ')
+    dia, mes, ano = fecha.split('/')
+    nombre_archivo = 'partidos-{0}-{1}-{2}.txt'.format(ano, mes, dia)
+    resultados = leer_partidos(nombre_archivo)
+    for partido in resultados:
+        p1, p2 = resultados[partido]
+        e1, e2 = partido
+        if e1 < e2:  # hacer que siempre e1 sea el ganador
+            e1, e2 = e2, e1
+            p1, p2 = p2, p1
+        print '{0} gano a {1} por {2}-{3}'.format(e1, e2, p1, p2)
 
 
 if __name__ == "__main__":
