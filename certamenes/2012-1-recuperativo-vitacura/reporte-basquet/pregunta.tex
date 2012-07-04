@@ -1,0 +1,68 @@
+En el básquetbol existen tres diferentes tipos de anotaciones:
+\begin{itemize}
+  \item el tiro libre (\li!L!), que vale un punto,
+  \item el doble (\li!D!), que vale dos puntos, y
+  \item el triple (\li!T!), que vale tres puntos.
+\end{itemize}
+
+\begin{minipage}[t]{0.52\textwidth}
+  \parskip=1ex
+  Las anotaciones hechas por todos los equipos
+  durante los partidos de un día
+  están registradas en un archivo
+  llamado \texttt{partidos-\textit{año}-\textit{mes}-\textit{día}.txt}.
+
+  En cada línea del archivo aparece el nombre de un equipo
+  seguido de dos puntos y un espacio (\verb+: +),
+  y a continuación las anotaciones del equipo durante el partido.
+
+  Los equipos que jugaron un partido entre ellos
+  aparecen en líneas consecutivas.
+  Los partidos están separados entre ellos
+  por una línea en blanco.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.43\textwidth}
+  \centering
+  Archivo \verb+partidos-2012-07-02.txt+
+  \small
+  \lstinputlisting[language=file,frame=single]{reporte-basquet/partidos-2012-07-02.txt}
+\end{minipage}
+
+Por ejemplo,
+del archivo mostrado arriba a la derecha
+podemos inferir que el 2 de julio de 2012
+Mentecatos derrotó a Tarugos por un marcador de 39--27.
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+  \item
+    Escriba la función \li!calcular_puntos(anotaciones)!
+    que reciba como parámetro un string de anotaciones
+    y retorne el total de puntos correspondiente.
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{reporte-basquet/programa.py}
+
+  \item
+    Escriba la función \li!leer_partidos(nombre_archivo)!
+    que lea los datos de los partidos del archivo recibido como parámetro,
+    y retorne un diccionario
+    que asocie a cada partido (tupla de equipos)
+    su resultado (tupla de puntajes).
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{reporte-basquet/programa.py}
+
+  \item
+    Escriba un programa que pregunte al usuario una fecha,
+    y le muestre los resultados de ese día,
+    tal como en el siguiente caso de ejemplo:
+
+    \begin{minipage}[t]{0.6\textwidth}
+      \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3,
+                       frame=single,
+                       language=testcase]{reporte-basquet/programa.py}
+    \end{minipage}
+
+    La fecha debe ser ingresada
+    en el formato \texttt{día/mes/año}.
+
+\end{enumerate}

@@ -1,0 +1,173 @@
+\documentclass[12pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\input{../../latex/definiciones.tex}
+\lstset{language=testcase}
+\lstset{frame=single}
+
+\begin{document}
+  \pagestyle{empty}
+  \thispagestyle{empty}
+
+  \part*{Control 5, lunes 1--2}
+  \newpage
+
+  \begin{minipage}[t]{0.45\textwidth}
+    El archivo \li!diccionario.txt!
+    contiene las definiciones de varias palabras
+    en el formato mostrado a la derecha.
+    \\[2ex]
+    Cada línea del archivo tiene una palabra y su definición,
+    separados por dos puntos.
+    Además, junto a cada palabra,
+    se indica si ésta es un sustantivo \li!(s)!
+    o un verbo \li!(v)!.
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \hfil\verb!diccionario.txt!\hfil
+    \small
+    \lstinputlisting[language=file]{diccionario.txt}
+  \end{minipage}
+
+  Escriba un programa que pregunte al usuario una palabra,
+  y entregue como salida su definición y su tipo de palabra.
+  Si la palabra no está en el diccionario,
+  el programa debe mostrar el mensaje
+  «\texttt{La palabra no esta en el diccionario}».
+
+  Use los siguientes ejemplos como referencia.
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{lunes-1-2.py}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{lunes-1-2.py}
+  \end{minipage}
+
+  \newpage
+
+  \part*{Control 5, lunes 3--4}
+  \newpage
+
+  \begin{minipage}[t]{0.45\textwidth}
+    Todos los buses del Transpythonia
+    llevan un registro de sus recorridos
+    en un archivo llamado \li!paradas.txt!,
+    con la estructura del ejemplo de la derecha.
+    \\[2ex]
+    Cada vez que el bus completa una vuelta del recorrido,
+    se agrega una nueva línea al archivo
+    indicando a qué hora pasó por cada paradero.
+    Todas las horas están separadas por dos guiones.
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \hfil\verb!paradas.txt!\hfil
+    \small
+    \lstinputlisting[language=file]{paradas.txt}
+  \end{minipage}
+
+  Transpythonia desea controlar que los buses de cada recorrido
+  no estén demorando más de un tiempo dado
+  en hacer el recorrido completo.
+
+  Escriba un programa que pregunte al usuario
+  el tiempo máximo permitido (en minutos)
+  en hacer una vuelta,
+  y entregue como salida todas las vueltas
+  que se demoraron más que eso.
+
+  Use el siguiente ejemplo como referencia.
+  La salida debe mostrar:
+  el número de vuelta,
+  su hora de inicio
+  y su duración en minutos.
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO-FIN\ CASO]{lunes-3-4.py}
+  \end{minipage}
+
+  \newpage
+
+  \part*{Control 5, martes 1--2}
+  \newpage
+
+  \begin{minipage}[t]{0.45\textwidth}
+    Todos los recorridos del Transpythópolis
+    tienen registrado en un archivo llamado \li!paradas.txt!
+    las horas en que el bus va a pasar por cada paradero.
+    \\[2ex]
+    Cada línea del archivo representa
+    una vuelta completa al recorrido.
+    Las horas en la que pasa por cada paradero
+    están separadas por dos guiones.
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \hfil\verb!paradas.txt!\hfil
+    \small
+    \lstinputlisting[language=file]{paradas.txt}
+  \end{minipage}
+
+  En cada paradero se instalará un computador
+  en el que los usuarios podrán ingresar
+  el paradero en que se encuentran (numerados desde 1)
+  y la hora actual.
+  El programa mostrará
+  hace cuántos minutos pasó el bus en cada vuelta pasada,
+  y dentro de cuántos minutos volverá a pasar.
+
+  Escriba el programa que se instalará en los paraderos.
+  Use el ejemplo como referencia:
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO-FIN\ CASO]{martes-1-2.py}
+  \end{minipage}
+
+  \newpage
+
+  \part*{Control 5, martes 3--4}
+  \newpage
+
+  \begin{minipage}[t]{0.48\textwidth}
+    Rosalinda Sansana mantiene su horario de este semestre
+    en un archivo llamado \li!horario.txt!,
+    siguiendo el formato mostrado a la derecha.
+    \\[2ex]
+    En cada línea del archivo aparece el nombre de un ramo
+    seguido de dos puntos.
+    A continuación,
+    aparecen todas las clases de ese ramo en la semana,
+    separados por comas.
+    Los nombres de los días están abreviados
+    por sus dos primeras letras.
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.42\textwidth}
+    \hfil\verb!horario.txt!\hfil
+    \lstinputlisting[language=file]{horario.txt}
+  \end{minipage}
+
+  Escriba un programa que le pregunte a Rosalinda
+  cuál es el día de hoy,
+  y le diga cuáles son las clases que debe asistir
+  y en qué bloques.
+
+  \begin{minipage}[t]{0.6\textwidth}
+    \lstinputlisting[linerange=CASO-FIN\ CASO]{martes-3-4.py}
+  \end{minipage}
+
+\end{document}
+
