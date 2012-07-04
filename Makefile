@@ -1,11 +1,6 @@
 # You can set these variables from the command line.
-SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-PAPER         =
-
-PAPEROPT_a4     = -D latex_paper_size=a4
-PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -q -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
+ALLSPHINXOPTS = -q -d _build/doctrees .
 
 DEPLOYDIR = crux:progra.usm.cl/apunte
 OPEN = xdg-open
