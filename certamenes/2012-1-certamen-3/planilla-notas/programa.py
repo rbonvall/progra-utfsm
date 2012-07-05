@@ -18,6 +18,13 @@ array([[ 8, 12, 11],
        [ 6, 14, 10]])
 
 # FIN CASO 2
+
+# EJEMPLO ROUND
+>>> a = array([54.8, 91.1, 54.2])
+>>> a.round()
+array([ 55.,  91.,  54.])
+
+# FIN EJEMPLO ROUND
 '''
 
 from numpy import array
