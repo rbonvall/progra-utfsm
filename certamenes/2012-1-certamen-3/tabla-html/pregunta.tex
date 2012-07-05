@@ -1,9 +1,11 @@
 Una \emph{página web}
 es simplemente un archivo de texto
-usando un lenguaje llamado HTML\@.
+escrito en un lenguaje llamado HTML\@.
 Este lenguaje consiste en etiquetas
 que van intercaladas en el texto
 para describir las distintas partes de un documento.
+
+\newcommand\lh{\li[language=html]}
 
 \begin{minipage}[t]{0.7\textwidth}
   \parskip=1ex
@@ -23,7 +25,6 @@ para describir las distintas partes de un documento.
   \vspace{1ex}
   \hfill
 
-  \newcommand\lh{\li[language=html]}
   En un archivo HTML,
   el inicio de una tabla se marca con la etiqueta \lh!<table>!,
   y el final con \lh!</table>!.
@@ -31,9 +32,9 @@ para describir las distintas partes de un documento.
   y termina con \lh!</tr>!.
   El contenido de cada celda va encerrado entre las etiquetas
   \lh!<td>! y \lh!</td>!.
-  Por ejemplo,
-  nuestra tabla de frutas se escribiría en HTML
-  como se muestra en el ejemplo de arriba a la derecha.
+
+  Nuestra tabla de frutas se escribiría en HTML
+  como se muestra en el ejemplo de la derecha.
   Si uno abre este archivo en un navegador web,
   la tabla aparecería tal como se ve más arriba.
 
@@ -78,8 +79,6 @@ para describir las distintas partes de un documento.
     con el número de filas y el número de columnas
     que tiene una tabla HTML.
     \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{tabla-html/programa.py}
-
-    \newcommand\lh{\li[language=html]}
 
     Suponga que, al igual que en el archivo de ejemplo,
     las etiquetas \lh!<table>!, \lh!</table>!, \lh!<tr>! y \lh!</tr>!
