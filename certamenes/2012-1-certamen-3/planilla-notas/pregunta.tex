@@ -25,5 +25,21 @@ de cada pregunta:
     que retorne el arreglo con las notas de los estudiantes:
     \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{planilla-notas/programa.py}
 
+  \item
+    Cuando hay resultados muy malos en alguna de las preguntas,
+    a veces los profesores deciden «inflar» los puntajes
+    usando un factor~\(f\).
+    Si~\(p\) es el puntaje obtenido en la pregunta por un estudiante
+    y~\(n\) es el puntaje máximo de la pregunta,
+    entonces su puntaje «inflado» será:
+    \[
+        f\cdot p + (1 - f)\cdot n.
+    \]
+    Escriba la función \li!inflar(puntajes, totales, pregunta, f)!
+    que modifique la matriz de \li!puntajes!
+    inflando los puntajes de la \li!pregunta!
+    en el \li!factor! indicado.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{planilla-notas/programa.py}
+
 \end{enumerate}
 
