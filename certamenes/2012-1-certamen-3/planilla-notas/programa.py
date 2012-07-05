@@ -25,6 +25,12 @@ array([[ 8, 12, 11],
 array([ 55.,  91.,  54.])
 
 # FIN EJEMPLO ROUND
+
+# CASO 3
+>>> contar_puntajes_completos(ponderaciones, totales, puntajes)
+array([3, 2, 1])
+
+# FIN CASO 3
 '''
 
 from numpy import array
@@ -54,6 +60,11 @@ def calcular_notas(ponderaciones, totales, puntajes):
 def inflar(puntajes, totales, pregunta, f):
     j = pregunta - 1
     puntajes[:, j] = f  * puntajes[:, j] + (1 - f) * totales[j]
+
+
+def contar_puntajes_completos(ponderaciones, totales, puntajes):
+    return (puntajes == totales).sum(0)
+
 
 
 if __name__ == "__main__":
