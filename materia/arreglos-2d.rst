@@ -287,3 +287,52 @@ que tiene los elementos del parámetro en la diagonal::
            [0, 0, 0, 3, 0],
            [0, 0, 0, 0, 4]])
 
+Reducciones por fila y por columna
+----------------------------------
+Algunas operaciones pueden aplicarse tanto al arreglo completo
+como a todas las filas o a todas las columnas.
+
+Por ejemplo,
+``a.sum()`` entrega la suma de todos los elementos del arreglo.
+Además,
+se le puede pasar un parámetro para hacer
+que la operación se haga por filas o por columnas::
+
+    >>> a = array([[ 4.3,  2.9,  9.1,  0.1,  2. ],
+    ...            [ 8. ,  4.5,  6.4,  6. ,  4.3],
+    ...            [ 7.8,  3.1,  3.4,  7.8,  8.4],
+    ...            [ 1.2,  1.5,  9. ,  6.3,  6.8],
+    ...            [ 7.6,  9.2,  3.3,  0.9,  8.6],
+    ...            [ 5.3,  6.7,  4.6,  5.3,  1.2],
+    ...            [ 4.6,  9.1,  1.5,  3. ,  0.6]])
+    >>> a.sum()
+    174.4
+    >>> a.sum(0)
+    array([ 38.8,  37. ,  37.3,  29.4,  31.9])
+    >>> a.sum(1)
+    array([ 18.4,  29.2,  30.5,  24.8,  29.6,  23.1,  18.8])
+
+El parámetro indica a lo largo de qué dimensión se hará la suma.
+El ``0`` significa «sumar a lo largo de las filas».
+Pero hay que tener cuidado,
+¡por que lo que se obtiene son las sumas de las columnas!
+Del mismo modo, ``1`` significa «a lo largo de las columnas,
+y lo que se obtiene es el arreglo
+con las sumas de cada fila.
+
+Las operaciones ``a.min()`` y ``a.max()``
+funcionan del mismo modo::
+
+    >>> a.min()
+    0.1
+    >>> a.min(0)
+    array([ 1.2,  1.5,  1.5,  0.1,  0.6])
+    >>> a.min(1)
+    array([ 0.1,  4.3,  3.1,  1.2,  0.9,  1.2,  0.6])
+
+``a.argmin()`` y ``a.argmax()`` también::
+
+    >>> a.argmin(0)
+    array([3, 3, 6, 0, 6])
+    >>> a.argmin(1)
+    array([3, 4, 1, 0, 3, 4, 4])
