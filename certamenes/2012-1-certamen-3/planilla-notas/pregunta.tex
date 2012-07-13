@@ -1,0 +1,57 @@
+Los profesores de la asignatura de Programología están hartos
+de calcular manualmente las notas de cada certamen.
+Para apurar un poco más el proceso
+decidieron implementar un programa que los ayude en esta tarea.
+
+Los certámenes consisten de varias preguntas.
+Cada pregunta tiene un puntaje máximo posible y una ponderación.
+La ponderación es el porcentaje de la nota final
+que aporta cada pregunta.
+La nota del certamen será un entero ente 0 y 100.
+
+Para cada certamen,
+se poblará una matriz en que cada columna está asociada a una pregunta
+y cada fila contiene los puntajes de un alumno.
+Además,
+se creará arreglos con las ponderaciones y los puntajes máximos
+de cada pregunta:
+\lstinputlisting[linerange=PLANILLA-FIN\ PLANILLA]{planilla-notas/programa.py}
+
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+  \item
+    Escriba la función \li!calcular_notas(ponderaciones, totales, puntajes)!
+    que retorne el arreglo con las notas de los estudiantes:
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{planilla-notas/programa.py}
+
+    Para redondear las notas use el método \li!round!:
+    \lstinputlisting[linerange=EJEMPLO\ ROUND-FIN\ EJEMPLO\ ROUND]{planilla-notas/programa.py}
+
+  \item
+    Cuando hay resultados muy malos en alguna de las preguntas,
+    a veces los profesores deciden «inflar» los puntajes
+    usando un factor~\(f\).
+    Si~\(p\) es el puntaje obtenido en la pregunta por un estudiante
+    y~\(n\) es el puntaje máximo de la pregunta,
+    entonces su puntaje «inflado» será:
+    \[
+        f\cdot p + (1 - f)\cdot n.
+    \]
+    Escriba la función \li!inflar(puntajes, totales, pregunta, f)!
+    que modifique la matriz de \li!puntajes!
+    inflando los puntajes de la \li!pregunta!
+    en el \li!factor! indicado.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{planilla-notas/programa.py}
+
+  \item
+    Para evaluar la dificultad de las preguntas del certamen,
+    los profesores suelen contar cuántos estudiantes obtuvieron puntaje completo
+    en cada pregunta.
+
+    Escriba la función \li!contar_puntajes_completos(ponderaciones, totales, puntajes)!
+    que haga precisamente esto.
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{planilla-notas/programa.py}
+
+\end{enumerate}
+
