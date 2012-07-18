@@ -24,7 +24,7 @@ print b + c
 
 print '=== P4 ==='
 # P4
-texto = '*-**-***'
+texto = 'a-aa-aaa'
 cosas = texto.split('-')
 print '\n'.join(cosas)
 
@@ -33,11 +33,10 @@ print '\n'.join(cosas)
 print '=== P5 ==='
 # P5
 s = [(15, 'cm'), (12, 'km'),
-     ( 9,  'm'), (17, 'cm'),
-     (22, 'nm'), (11,  'm')]
+     ( 9,  'm'), (17, 'cm')]
 t = ''
 for c, u in s:
-    t += u[-1]
+    t += u
 print t
 # FIN P5
 
@@ -68,9 +67,9 @@ print '=== P8 ==='
 # P8
 def f(a, b):
     return a
-def g(x, y, z):
+def g(x, y):
     return y
-a, b, x, y, z = (1, 2, 3, 4, 5)
-print g(f(a, x), f(x, b), f(b, z))
+a, b, x, y = (1, 2, 3, 4)
+print g(f(a, x), f(x, b))
 # FIN P8
 
