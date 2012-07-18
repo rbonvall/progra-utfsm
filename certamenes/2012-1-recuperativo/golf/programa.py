@@ -1,3 +1,19 @@
+'''
+# CASO 1
+>>> leer_valores('pares.txt')
+array([5, 3, 3, 4, 3, 5, 3, 3, 5, 4, 3, 3, 4, 4, 3, 5, 4, 4])
+
+# FIN CASO 1
+
+# CASO 2
+>>> obtener_marcador()
+{'Jack Nicolas': -1, 'Arnoldo Palmeras': 2, 'Tiguerio Gutierrez': 0}
+
+# FIN CASO 2
+
+'''
+
+
 from numpy import zeros
 
 def leer_valores(nombre_archivo):
@@ -25,5 +41,8 @@ def obtener_marcador():
     return marcador
 
 
-print obtener_marcador()
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True,
+                    optionflags=doctest.NORMALIZE_WHITESPACE)
 
