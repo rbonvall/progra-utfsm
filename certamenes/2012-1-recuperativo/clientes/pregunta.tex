@@ -1,0 +1,52 @@
+La empresa Recuperativix necesita desarrollar un programa
+para manipular listas de clientes.
+Cada lista de clientes siempre contiene tuplas
+con el nombre, el apellido, la fecha de nacimiento y el email de cada cliente.
+La fecha de nacimiento es una tupla con el año, el mes y el día, en ese orden.
+\lstinputlisting[linerange=CLIENTES-FIN\ CLIENTES]{clientes/programa.py}
+
+La parte de la dirección de email
+que va después del último punto se llama TLD,
+y está asociada al país de origen del cliente.
+Por ejemplo,
+el TLD del email de Luisa González es \verb+cl+,
+e indica que ella es chilena.
+
+El programa que se está desarrollando
+tiene dos variables globales:
+el diccionario \li!paises!,
+que asocia a cada TLD el país correspondiente,
+y la lista \li!meses!,
+que tiene los nombres de los doce meses del año.
+\lstinputlisting[linerange=PAISES-FIN\ PAISES]{clientes/programa.py}
+\lstinputlisting[linerange=MESES-FIN\ MESES]{clientes/programa.py}
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+  \item
+    Escriba la función \li!contar_paises(clientes)!
+    que retorne un diccionario que asocie a cada país
+    la cantidad de clientes que provienen de él.
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{clientes/programa.py}
+
+  \item
+    Escriba la función \li!persona_mas_joven(clientes)!
+    que retorne el nombre completo
+    del cliente más joven de la lista.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{clientes/programa.py}
+
+  \item
+    Al comienzo de cada mes,
+    Recuperativix desea enviar un email
+    felicitando a todas las personas que tienen cumpleaños durante el mes.
+
+    Escriba la función \li!obtener_mails_cumpleaneros(clientes, mes)!
+    que retorne el conjunto de las direcciones de email
+    de los \li!clientes! que tienen cumpleaños en el \li!mes! indicado.
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{clientes/programa.py}
+
+    Note que el valor del parámetro debe ser el nombre del mes,
+    no su número.
+
+\end{enumerate}
+
