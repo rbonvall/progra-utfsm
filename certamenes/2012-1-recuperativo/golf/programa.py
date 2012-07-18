@@ -13,6 +13,11 @@ array([6, 3, 3, 4, 3, 6, 2, 2, 6, 4, 3, 3, 3, 5, 3, 6, 4, 4])
 
 # FIN CASO 2
 
+# CASO 3
+>>> obtener_ganador()
+'Jack Nicolas'
+
+# FIN CASO 3
 '''
 
 
@@ -41,6 +46,18 @@ def obtener_marcador():
         marcador[jugador] = (golpes - pares).sum()
     archivo_jugadores.close()
     return marcador
+
+
+def obtener_ganador():
+    marcador = obtener_marcador()
+
+    menor = float('inf')
+    for jugador in marcador:
+        puntaje = marcador[jugador]
+        if puntaje < menor:
+            ganador = jugador
+            menor = puntaje
+    return ganador
 
 
 if __name__ == "__main__":
