@@ -2,6 +2,8 @@
 # CASO 1
 >>> leer_valores('pares.txt')
 array([5, 3, 3, 4, 3, 5, 3, 3, 5, 4, 3, 3, 4, 4, 3, 5, 4, 4])
+>>> leer_valores('golpes-arnoldo-palmeras.txt')
+array([6, 3, 3, 4, 3, 6, 2, 2, 6, 4, 3, 3, 3, 5, 3, 6, 4, 4])
 
 # FIN CASO 1
 
