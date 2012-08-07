@@ -6,6 +6,7 @@ turtle.title('Laberinto')
 turtle.shape('turtle')
 turtle.color('brown')
 turtle.width(5)
+turtle.speed('fastest')
 
 f = 30
 
