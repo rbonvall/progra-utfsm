@@ -10,6 +10,7 @@ turtle.speed('slowest')
 
 f = 30
 
+raw_input()
 ruta = raw_input('Ruta: ')
 n = len(ruta)
 for i in range(n):
