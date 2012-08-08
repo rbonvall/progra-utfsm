@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import turtle
 
 turtle.title('Laberinto')
