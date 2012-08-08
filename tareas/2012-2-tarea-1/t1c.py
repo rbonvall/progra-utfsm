@@ -7,7 +7,7 @@ turtle.width(5)
 turtle.speed('fastest')
 
 f = 30
-
+x0, y0 = -200, 200
 
 fila = ':)'
 y = 0
@@ -17,7 +17,7 @@ while len(fila) > 0:
     for x in range(n):
         if fila[x] == 'x' or fila[x] == 'X':
             turtle.up()
-            turtle.goto(f * x, f * y)
+            turtle.goto(f * x + x0, f * y + y0)
             turtle.seth(90)
             turtle.down()
             for i in range(4):
@@ -26,7 +26,7 @@ while len(fila) > 0:
     y -= 1
 
 turtle.up()
-turtle.goto(-f / 2, +f / 2)
+turtle.goto(-f / 2 + x0, +f / 2 + y0)
 turtle.seth(0)
 turtle.down()
 turtle.color('navy')
