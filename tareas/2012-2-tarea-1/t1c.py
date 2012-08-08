@@ -41,14 +41,18 @@ ruta = raw_input('Ruta: ')
 n = len(ruta)
 i = 0
 distancia = 0
-while i < n - 1:
+while i < n:
     d = ruta[i]
-    s = ruta[i + 1]
 
     if   d == 'E': turtle.seth(0)
     elif d == 'N': turtle.seth(90)
     elif d == 'O': turtle.seth(180)
     elif d == 'S': turtle.seth(270)
+
+    if i + 1 < n:
+        s = ruta[i + 1]
+    else:
+        s = ':)'
 
     if   ((d == 'E' and s == 'S') or
           (d == 'S' and s == 'O') or
