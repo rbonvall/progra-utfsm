@@ -1,0 +1,74 @@
+\section{Cartones de Loto}
+
+Para los siguientes ejercicios, descarge el archivo
+\href{../../\_static/juegos.txt}{juegosttxt}. Este archivo tiene una
+lista de todos los cartones jugados para un sorteo de Loto. Cada línea
+del archivo tiene la lista de números jugados en un cartón.
+
+Este archivo se puede abrir con cualquier editor de texto para ver su
+contenido, pero para resolver los problemas, hay que escribir funciones
+que analicen los datos.
+
+Todas las funciones deben hacer lo siguiente:
+
+\begin{itemize}
+\item
+  abrir el archivo con \lstinline!archivo = open('juegos.txt')!;
+\item
+  leer los datos y analizarlos,
+\item
+  cerrar el archivo con \lstinline!archivo.close()!.
+\end{itemize}
+
+Como cada línea del archivo es un string, hay que convertirlo a un
+conjunto de números para poder analizarlos, de la siguiente manera:
+
+\begin{lstlisting}
+numeros_carton = set()
+for n in linea.split():
+    numeros_carton.add(int(n))
+\end{lstlisting}
+
+También se puede hacer así:
+
+\begin{lstlisting}
+numeros_carton = set(map(int, linea.split()))
+\end{lstlisting}
+
+\begin{enumerate}
+\item
+  ¿Cuántos cartones de Loto fueron jugados?
+
+  (Para responder la pregunta, escriba una función
+  \lstinline!contar_cartones! que cuente los cartones del archivo).
+\item
+  De todos los cartones jugados, ¿cuántos escogieron el número 7?
+
+  Para responder la pregunta, escriba una función
+  \lstinline!contar_numero_en_cartones(n)! que cuente cuántos cartones
+  tienen el número \lstinline!n!.
+\item
+  Escriba la función \lstinline!hay_ganadores(numeros)!, cuyo parámetro
+  \lstinline!numeros! es el conjunto de los seis números de un sorteo,
+  que indique si alguien se ganó el Loto:
+
+\begin{lstlisting}
+>>> hay_ganadores({13, 33, 5, 38, 1, 19})
+True
+>>> hay_ganadores({14, 21, 1, 36, 9, 17})
+False
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!n_aciertos(numeros, n)!, que indique
+  cuántas personas tuvieron \lstinline!n! aciertos, donde
+  \lstinline!numeros! es el conjunto de los seis números de un sorteo:
+
+\begin{lstlisting}
+>>> n_aciertos({13, 33, 5, 38, 1, 19}, 4)
+17
+>>> n_aciertos({20, 39, 6, 27, 12, 4}, 3)
+229
+>>> n_aciertos({1, 2, 3, 4, 5, 6}, 5)
+2
+\end{lstlisting}
+\end{enumerate}

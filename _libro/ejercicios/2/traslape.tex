@@ -1,0 +1,101 @@
+\section{Traslape de rectángulos}
+
+Un rectángulo que está en el plano \emph{xy} cuyos lados son paralelos a
+los ejes cartesianos puede ser representado mediante cuatro datos:
+
+\begin{itemize}
+\item
+  la coordenada \emph{x} de su vértice inferior izquierdo,
+\item
+  la coordenada \emph{y} de su vértice inferior izquierdo.
+\item
+  su ancho \emph{w}, y
+\item
+  su altura \emph{h}.
+\end{itemize}
+
+\includegraphics{../../diagramas/rect.png}
+
+En un programa en Python, esto se traduce en una tupla
+\lstinline!(x, y, w, h)! de cuatro elementos:
+
+\begin{lstlisting}
+# el rectangulo de la figura
+rectangulo = (3, 2, 5, 6)
+\end{lstlisting}
+
+\begin{enumerate}
+\item
+  Escriba la función \lstinline!ingresar_rectangulo()! que pida al
+  usuario ingresar los datos de un rectángulo, y retorne la tupla con
+  los datos ingresados. La función no tiene parámetros. Al ejecutar la
+  función, la sesión debe verse así:
+
+  Con esta entrada, la función retornaría la tupla
+  \lstinline!(3, 2, 5, 6)!.
+\item
+  Escriba la función \lstinline!se_traslapan(r1, r2)! que reciba como
+  parámetros dos rectángulos \lstinline!r1! y \lstinline!r2!, y entregue
+  como resultado si los rectángulos se traslapan o no.
+
+  Por ejemplo, en el siguiente diagrama, los rectángulos A y B se
+  traslapan, mientras que los rectángulos A y C no se traslapan:
+
+  \includegraphics{../../diagramas/rect2.png}
+
+\begin{lstlisting}
+>>> a = (1, 8, 8, 5)
+>>> b = (7, 6, 3, 6)
+>>> c = (4, 2, 9, 3)
+>>> se_traslapan(a, b)
+True
+>>> se_traslapan(b, c)
+False
+>>> se_traslapan(a, c)
+False
+\end{lstlisting}
+\item
+  Escriba un programa que pida al usuario ingresar varios rectángulos, y
+  termine cuando se ingrese uno que se traslape con alguno de los
+  ingresados anteriormente. La salida debe indicar cuáles son los
+  rectángulos que se traslapan.
+\item
+  (¡Difícil!). Escriba la función
+  \lstinline!contar_regiones_continuas(rectangulos)! que reciba como
+  parámetro una lista de rectángulos, y retorne la cantidad de regiones
+  continuas formadas por rectángulos traslapados.
+
+  Por ejemplo, en el siguiente diagrama hay 15 rectángulos que forman 6
+  regiones continuas de rectángulos traslapados:
+
+  \includegraphics{../../diagramas/rect3.png}
+
+  Los rectángulos de la figura son los siguientes:
+
+\begin{lstlisting}
+rs = [
+    ( 4,  2, 9, 3),
+    (14, 10, 5, 1),
+    (14, 17, 3, 2),
+    (13,  7, 2, 2),
+    ( 8, 16, 4, 3),
+    (13, 14, 2, 4),
+    ( 1,  8, 8, 5),
+    ( 1,  1, 6, 4),
+    (16, 14, 3, 4),
+    (12,  6, 4, 6),
+    ( 7,  6, 3, 6),
+    ( 5, 15, 4, 3),
+    (14, 13, 3, 2),
+    (15,  3, 5, 4),
+    ( 2, 16, 3, 3),
+]
+\end{lstlisting}
+
+  Puede usar esta lista para probar su función:
+
+\begin{lstlisting}
+>>> contar_regiones_continuas(rs)
+6
+\end{lstlisting}
+\end{enumerate}
