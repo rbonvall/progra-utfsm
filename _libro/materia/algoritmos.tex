@@ -33,12 +33,12 @@ cuadráticas.
 
 Una
 \href{http://es.wikipedia.org/wiki/Ecuaci\%C3\%B3n\_de\_segundo\_grado}{ecuación
-cuadrática} es una ecuación de la forma `ax\^{}2 + bx + c = 0`, donde
-`a`, `b` y `c` son datos dados, con `ane 0`, y `x` es la incógnita cuyo
+cuadrática} es una ecuación de la forma \(ax^2 + bx + c = 0\), donde
+\(a\), \(b\) y \(c\) son datos dados, con \(a\ne 0\), y \(x\) es la incógnita cuyo
 valor que se desea determinar.
 
-Por ejemplo, `2x\^{}2 - 5x + 2 = 0` es una ecuación cuadrática con `a =
-2`, `b = -5` y `c = 2`. Sus soluciones son `x\_1 = 1/2` y `x\_2 = 2`,
+Por ejemplo, \(2x^2 - 5x + 2 = 0\) es una ecuación cuadrática con \(a =
+2\), \(b = -5\) y \(c = 2\). Sus soluciones son \(x_1 = 1/2\) y \(x_2 = 2\),
 como se puede comprobar fácilmente al reemplazar estos valores en la
 ecuación. El problema es cómo obtener estos valores en primer lugar.
 
@@ -46,14 +46,14 @@ El problema computacional de resolver una ecuación cuadrática puede ser
 planteado así:
 
 \begin{quote}
-Dados `a`, `b` y `c`, entontrar los valores reales de `x` que satisfacen
-`ax\^{}2 + bx + c = 0`.
+Dados \(a\), \(b\) y \(c\), encontrar los valores reales de \(x\) que satisfacen
+\(ax^2 + bx + c = 0\).
 \end{quote}
 
-La entrada del algoritmo, pues, son los valores `a`, `b` y `c`, y la
-salida son las raíces reales `x` (que pueden ser cero, una o dos) de la
-ecuación. En un programa computacional, los valores de `a`, `b` y `c`
-deberían ser ingresados usando el teclado, y las soluciones `x` deberían
+La entrada del algoritmo, pues, son los valores \(a\), \(b\) y \(c\), y la
+salida son las raíces reales \(x\) (que pueden ser cero, una o dos) de la
+ecuación. En un programa computacional, los valores de \(a\), \(b\) y \(c\)
+deberían ser ingresados usando el teclado, y las soluciones \(x\) deberían
 ser mostradas a continuación en la pantalla.
 
 Al estudiar álgebra aprendemos un algoritmo para resolver este problema.
@@ -69,13 +69,12 @@ describir los pasos en la misma manera en que hablamos a diario. Por
 ejemplo:
 
 \begin{quote}
-Teniendo los valores de `a`, `b` y `c`, calcular el discriminante `D =
-b\^{}2 - 4ac`. Si es discriminante es negativo, entonces la ecuación no
+Teniendo los valores de \(a\), \(b\) y \(c\), calcular el discriminante
+\(\Delta = b^2 - 4ac\). Si es discriminante es negativo, entonces la ecuación no
 tiene soluciones reales. Si es discriminante es igual a cero, entonces
-la ecuación tiene una única solución real, que es `x = -b/2a`. Si el
+la ecuación tiene una única solución real, que es \(x = -b/2a\). Si el
 discriminante es positivo, entonces la ecuación tiene dos soluciones
-reales, que son `x\_1 = (-b - sqrt\{D\})/2a` y `x\_2 = (-b +
-sqrt\{D\})/2a`.
+reales, que son \(x_1 = (-b - \sqrt{D})/2a\) y \(x_2 = (-b + \sqrt{D})/2a\).
 \end{quote}
 
 Esta manera de expresar un algoritmo no es ideal, ya que el lenguaje
@@ -93,10 +92,10 @@ natural es:
 \end{itemize}
 
 Aún así, es posible identificar los pasos del algoritmo. Por ejemplo,
-hay que evaluar la expresión `b\^{}2 - 4ac`, y ponerle el nombre `D` a
+hay que evaluar la expresión \(b^2 - 4ac\), y ponerle el nombre \(\Delta\) a
 su resultado. Esto se llama \textbf{asignación}, y es un tipo de
 instrucción que aparece en casi todos los algoritmos. Después de eso, el
-algoritmo puede usar el nombre `D` para referirse al valor calculado.
+algoritmo puede usar el nombre \(\Delta\) para referirse al valor calculado.
 
 \subsubsection{Diagrama de flujo}
 
@@ -104,7 +103,7 @@ Un \textbf{diagrama de flujo} es una representación gráfica de un
 algoritmo. Los pasos son representados por varios tipos de bloques, y el
 flujo de ejecución es indicado por flechas que conectan los bloques:
 
-\includegraphics{../diagramas/cuadratica.png}
+%\includegraphics{../diagramas/cuadratica.png}
 
 El inicio y el final del algoritmo son representados con bloques
 circulares. El algoritmo siempre debe ser capaz llegar desde uno hasta
@@ -115,7 +114,7 @@ La entrada y la salida de datos son representadas con romboides, que en
 la figura de arriba están pintados de verde.
 
 Los diamantes representan condiciones en las que el algoritmo sigue uno
-de dos caminos. que están etiquetados con \emph{sí} o \emph{no},
+de dos caminos que están etiquetados con \emph{sí} o \emph{no},
 dependiendo si la condición es verdadera o falsa.
 
 También puede haber ciclos, representados por flechas que regresan a
@@ -138,27 +137,27 @@ está pensado para ser leído por humanos.
 Una manera de escribir el algoritmo para la ecuación cuadrática en
 pseudocódigo es la siguiente:
 
-\begin{lstlisting}
-leer a
-leer b
-leer c
-
-discriminante = b² - 4ac
-
-si discriminante < 0:
-    escribir 'La ecuación no tiene soluciones reales'
-
-o si no, si discriminante = 0:
-    x = -b / 2a
-    escribir 'La solución única es', x
-
-o si no:
-    x1 = (-b - √discriminante) / 2a
-    x2 = (-b + √discriminante) / 2a
-    escribir 'Las dos soluciones reales son:'
-    escribir x1
-    escribir x2
-\end{lstlisting}
+%\begin{verbatim}
+%leer a
+%leer b
+%leer c
+%
+%discriminante = b² - 4ac
+%
+%si discriminante < 0:
+%    escribir 'La ecuación no tiene soluciones reales'
+%
+%o si no, si discriminante = 0:
+%    x = -b / 2a
+%    escribir 'La solución única es', x
+%
+%o si no:
+%    x1 = (-b - √discriminante) / 2a
+%    x2 = (-b + √discriminante) / 2a
+%    escribir 'Las dos soluciones reales son:'
+%    escribir x1
+%    escribir x2
+%\end{verbatim}
 
 Las líneas que comienzan con \lstinline!leer! y \lstinline!escribir!
 denotan, respectivamente, la entrada y la salida del programa. Los
