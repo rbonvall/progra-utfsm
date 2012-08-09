@@ -9,20 +9,6 @@ do
     mkdir -p $BOOK/$(dirname $page)
     doc=$BOOK/${page%.rst}.tex
     pandoc -t latex --listings $page > $doc
-    sed -e '
-      /multiplicacion\.gif/ {
-        s/^/%/
-      }
-      /begin{enumerate}/ {
-        s/\[.*\]$//
-      }
-      /#.*↓/ {
-        d
-      }
-      /ñ[Aa][Nn][Dd]ú/ {
-        d
-      }
-    ' -i $doc
     echo "\\input{${doc#*/}}" >> $CHAPTERS
 done
 
