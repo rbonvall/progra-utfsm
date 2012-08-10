@@ -141,27 +141,24 @@ else:
 
 El último \lstinline!else! es opcional.
 
-Por ejemplo, la tasa de impuesto a pagar por una persona según su sueldo
-puede estar dada por la siguiente tabla:
+\begin{table}
+  \centering
+  \begin{tabular}{lr}
+    \toprule
+      Sueldo & Tasa de impuesto \\
+    \midrule
+      menos de \(1000\)                 &  0\% \\
+      \(1000 \le \text{sueldo} < 2000\) &  5\% \\
+      \(2000 \le \text{sueldo} < 4000\) & 10\% \\
+      \(4000\) o más                    & 12\% \\
+    \bottomrule
+  \end{tabular}
+  \caption{Ejemplo: tasa de impuesto en función del sueldo recibido.}
+  \label{tbl:tasa-impuesto}
+\end{table}
 
-\ctable[pos = H, center, botcap]{ll}
-{% notes
-}
-{% rows
-\FL
-\textbf{sueldo} & \textbf{tasa de impuesto}
-\\\noalign{\medskip}
----------------------- & --------------------
-\\\noalign{\medskip}
-menos de 1000 & 0\%
-\\\noalign{\medskip}
-1000 ≤ sueldo \textless{} 2000 & 5\%
-\\\noalign{\medskip}
-2000 ≤ sueldo \textless{} 4000 & 10\%
-\\\noalign{\medskip}
-4000 o más & 12\%
-\LL
-}
+Por ejemplo, la tasa de impuesto a pagar por una persona según su sueldo
+puede estar dada por la tabla~\ref{tbl:tasa-impuesto}.
 
 Entonces, el programa que calcula el impuesto a pagar es el siguiente:
 
