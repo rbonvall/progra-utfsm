@@ -230,113 +230,38 @@ while m > 0:
 print 'El producto de m y n es', p
 \end{lstlisting}
 
-Para ver cómo funciona este programa, hagamos un ruteo con la entrada
-\lstinline!m! = 4 y \lstinline!n! = 7:
+\begin{table}
+  \centering
+  \begin{tabular}{*{3}{r}}
+    \toprule
+      \lstinline!p! & \lstinline!m! & \lstinline!n! \\
+    \midrule
+         &  4 &   \\
+         &    & 7 \\
+       0 &    &   \\
+         &  3 &   \\
+       7 &    &   \\
+         &  2 &   \\
+      14 &    &   \\
+         &  1 &   \\
+      21 &    &   \\
+         &  0 &   \\
+      28 &    &   \\
+    \bottomrule
+  \end{tabular}
+  \caption{%
+    Ruteo del programa de ejemplo.
+    La tabla muestra cómo cambian los valores de cada variable
+    durante la ejecución del programa.
+  }
+  \label{tbl:ruteo-while}
+\end{table}
 
-\begin{quote}
-\ctable[pos = H, center, botcap]{lll}
-{% notes
-}
-{% rows
-\FL
-\parbox[b]{0.11\columnwidth}{\raggedright
-\lstinline!p!
-} & \parbox[b]{0.11\columnwidth}{\raggedright
-\lstinline!m!
-} & \parbox[b]{0.11\columnwidth}{\raggedright
-\lstinline!n!
-}
-\ML
-\parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-4
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-7
-\end{quote}
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-0
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-3
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-7
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-2
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-14
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-1
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-21
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-0
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.11\columnwidth}{\raggedright
-\begin{quote}
-28
-\end{quote}
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-} & \parbox[t]{0.11\columnwidth}{\raggedright
-}
-\LL
-}
-\end{quote}
+Para ver cómo funciona este programa, hagamos un ruteo con la entrada
+\lstinline!m! = 4 y \lstinline!n! = 7.
+La tabla~\ref{rbl:ruteo-while} muestra cómo cambian
+los valores de todas las variables
+a medida que las sentencias van siendo ejecutadas.
 
 En cada iteración, el valor de \lstinline!m! decrece en 1. Cuando llega
 a 0, la condición del \lstinline!while! deja de ser verdadera por lo que
