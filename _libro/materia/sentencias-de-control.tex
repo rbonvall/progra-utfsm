@@ -322,24 +322,24 @@ consecutivos del rango.
 Si el valor inicial es omitido, se supone que es 0. Si el incremento es
 omitido, se supone que es 1.
 
-Con algunos ejemplos quedará más claro:
+\begin{table}
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+      Rango                        & Valores que incluye \\
+    \midrule
+      \lstinline!range(9)!         & 0, 1, 2, 3, 4, 5, 6, 7, 8 \\
+      \lstinline!range(3, 13)!     & 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 \\
+      \lstinline!range(3, 13, 2)!  & 3, 5, 7, 9, 11 \\
+      \lstinline!range(11, 4)!     & Ningún valor \\
+      \lstinline!range(11, 4, -1)! & 11, 10, 9, 8, 7, 6, 5 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Ejemplos de rangos.}
+  \label{tbl:ejemplos-range}
+\end{table}
 
-\ctable[pos = H, center, botcap]{ll}
-{% notes
-}
-{% rows
-\FL
-\lstinline!range(9)! & 0, 1, 2, 3, 4, 5, 6, 7, 8
-\\\noalign{\medskip}
-\lstinline!range(3, 13)! & 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
-\\\noalign{\medskip}
-\lstinline!range(3, 13, 2)! & 3, 5, 7, 9, 11
-\\\noalign{\medskip}
-\lstinline!range(11, 4)! & ningún valor
-\\\noalign{\medskip}
-\lstinline!range(11, 4, -1)! & 11, 10, 9, 8, 7, 6, 5
-\LL
-}
+Con los ejemplos de la tabla~\ref{tbl:ejemplos-range} quedará más claro.
 
 Usando un incremento negativo, es posible hacer ciclos que van hacia
 atrás:
