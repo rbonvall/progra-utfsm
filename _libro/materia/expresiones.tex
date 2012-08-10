@@ -204,6 +204,22 @@ La expresión \lstinline!0 < x <= 10! es equivalente a
 
 \subsubsection{Operaciones lógicas}
 
+\begin{table}
+  \centering
+  \begin{tabular}{*{5}{l}}
+    \toprule
+    p     & q       & p and q & p or q & not p \\
+    \midrule
+    True  & True    & True    & True   & False \\
+    True  & False   & False   & True   &       \\
+    False & True    & False   & True   & True  \\
+    False & False   & False   & False  &       \\
+    \bottomrule
+  \end{tabular}
+  \caption{Resultados posibles de los operadores booleanos.}
+  \label{tbl:operadores-booleanos}
+\end{table}
+
 Los \textbf{operadores lógicos} son los que tienen operandos y resultado
 de tipo lógico.
 
@@ -228,29 +244,10 @@ False
 False
 \end{lstlisting}
 
-La siguiente tabla muestra todos los resultados posibles de las
+La tabla~\ref{tbl:operadores-booleanos} muestra todos los resultados posibles de las
 operaciones lógicas. Las primeras dos columnas representan los valores
 de los operandos, y las siguientes tres, los resultados de las
 operaciones.
-
-\ctable[pos = H, center, botcap]{lllll}
-{% notes
-}
-{% rows
-\FL
-\lstinline!p! & \lstinline!q! & \lstinline!p and q! & \lstinline!p or q! & \lstinline!not p!
-\\\noalign{\medskip}
---------- & --------- & ----------- & ---------- & ---------
-\\\noalign{\medskip}
-\lstinline!True! & \lstinline!True! & \lstinline!True! & \lstinline!True! & \lstinline!False!
-\\\noalign{\medskip}
-\lstinline!True! & \lstinline!False! & \lstinline!False! & \lstinline!True! & 
-\\\noalign{\medskip}
-\lstinline!False! & \lstinline!True! & \lstinline!False! & \lstinline!True! & \lstinline!True!
-\\\noalign{\medskip}
-\lstinline!False! & \lstinline!False! & \lstinline!False! & \lstinline!False! & 
-\LL
-}
 
 \subsubsection{Operaciones de texto}
 
