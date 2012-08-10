@@ -1,4 +1,4 @@
-\section{Procesamiento de texto}
+\chapter{Procesamiento de texto}
 
 Hasta ahora, hemos visto cómo los tipos de datos básicos (strings,
 enteros, reales, booleanos) y las estructuras de datos permiten
@@ -25,7 +25,7 @@ para hacer procesamiento de texto, además de las operaciones más simples
 que ya aprendimos (como \lstinline!s + t!, \lstinline!s[i]! y
 \lstinline!s in t!).
 
-\subsection{Saltos de línea}
+\section{Saltos de línea}
 
 Un string puede contener caracteres de \textbf{salto de línea}, que
 tienen el efecto equivalente al de presionar la tecla Enter. El caracter
@@ -82,7 +82,7 @@ c:\>
 / \ / \
 \end{lstlisting}
 
-\subsection{Reemplazar secciones del string}
+\section{Reemplazar secciones del string}
 
 El método \lstinline!s.replace(antes, despues)! busca en el string
 \lstinline!s! todas las apariciones del texto \lstinline!antes! y las
@@ -108,7 +108,7 @@ string, sino que retorna uno nuevo:
 'Quiero arroz con pollo'
 \end{lstlisting}
 
-\subsection{Separar y juntar strings}
+\section{Separar y juntar strings}
 
 \lstinline!s.split()! separa el strings en varios strings, usando los
 espacios en blanco como separador. El valor retornado es una lista de
@@ -176,7 +176,7 @@ usando al string \lstinline!s! como «pegamento»:
 '0 --> 1 --> 2 --> 3 --> 4 --> 5 --> 6 --> 7 --> 8 --> 9'
 \end{lstlisting}
 
-\subsection{Mayúsculas y minúsculas}
+\section{Mayúsculas y minúsculas}
 
 \lstinline!s.isupper()! y \lstinline!s.islower()! indican si el string
 está, respectivamente, en mayúsculas o minúsculas:
@@ -220,7 +220,7 @@ Lamentablemente, ninguno de estos métodos funcionan con acentos y eñes:
 ñANDú
 \end{lstlisting}
 
-\subsection{Revisar contenidos del string}
+\section{Revisar contenidos del string}
 
 \lstinline!s.startswith(t)! y \lstinline!s.endswith(t)! indican si el
 string \lstinline!s! comienza y termina, respectivamente, con el string
@@ -248,7 +248,7 @@ True
 False
 \end{lstlisting}
 
-\subsection{Alineación de strings}
+\section{Alineación de strings}
 
 Los métodos \lstinline!s.ljust(n)!, \lstinline!s.rjust(n)! y
 \lstinline!s.center(n)! rellenan el string con espacios para que su
@@ -281,7 +281,7 @@ for n, (a, m, d), c, e in datos:
 
 Este programa imprime lo siguiente:
 
-\subsection{Interpolación de strings}
+\section{Interpolación de strings}
 
 El método \lstinline!format! permite usar un string como una plantilla
 que se puede completar con distintos valores dependiendo de la

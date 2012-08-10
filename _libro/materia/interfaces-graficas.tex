@@ -1,4 +1,4 @@
-\section{Interfaces gráficas}
+\chapter{Interfaces gráficas}
 
 Todo programa necesita contar con algún mecanismo para recibir la
 entrada y entregar la salida. Ya hemos visto dos maneras de hacer
@@ -46,7 +46,7 @@ programa:
 from Tkinter import *
 \end{lstlisting}
 
-\subsection{Creación de la ventana}
+\section{Creación de la ventana}
 
 El siguiente programa es la interfaz gráfica más simple que se puede
 crear:
@@ -81,7 +81,7 @@ Todos los programas con interfaz gráfica deben seguir esta estructura:
 la creación de la ventana al principio del programa y la llamada al
 ciclo de eventos al final del programa.
 
-\subsection{Creación de widgets}
+\section{Creación de widgets}
 
 Un \textbf{widget} es cualquier cosa que uno puede poner en una ventana.
 Por ahora, veremos tres tipos de widgets sencillos, que son suficientes
@@ -147,7 +147,7 @@ Los widgets van siendo apilados verticalmente, desde arriba hacia abajo,
 en el mismo orden en que van siendo apilados. Ya veremos cómo
 empaquetarlos en otras direcciones.
 
-\subsection{Controladores}
+\section{Controladores}
 
 Al crear un botón de la siguiente manera:
 
@@ -196,7 +196,7 @@ El programa se ve así:
 Ejecute el programa, y pruebe lo que ocurre al hacer clic en ambos
 botones.
 
-\subsection{Modelos}
+\section{Modelos}
 
 Mediante el uso de controladores, ya podemos hacer interfaces que hagan
 algo, pero que siguen teniendo una limitación: las interfaces sólo
@@ -289,7 +289,7 @@ Cuando se obtenga el valor del modelo mediante la llamada
 \lstinline!x.get()!, el valor retornado será lo que el usuario haya
 ingresado en el campo hasta ese momento.
 
-\subsection{Resumen}
+\section{Resumen}
 
 Para diseñar un programa que tiene una interfaz gráfica, hay tres
 elementos importantes que hay que tener en consideración.

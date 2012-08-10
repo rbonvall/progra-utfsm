@@ -1,4 +1,4 @@
-\section{Sentencias de control}
+\chapter{Sentencias de control}
 
 Un programa es una sucesión de \textbf{sentencias} que son ejecutadas
 secuencialmente.
@@ -50,7 +50,7 @@ sentencia de control, que contiene a otras tres sentencias.
 
 Para indentar, utilizaremos siempre cuatro espacios.
 
-\subsection{Condicional if}
+\section{Condicional if}
 
 La sentencia \textbf{if} («si») ejecuta las instrucciones sólo si se
 cumple una condición. Si la condición es falsa, no se hace nada:
@@ -75,7 +75,7 @@ if nota >= 55:
 
 Ejecute este programa, probando varias veces con valores diferentes.
 
-\subsection{Condicional if-else}
+\section{Condicional if-else}
 
 La sentencia \textbf{if-else} («si-o-si-no») decide qué instrucciones
 ejecutar dependiendo si una condición es verdadera o falsa:
@@ -118,7 +118,7 @@ print 'Listo'
 La última sentencia no está indentada, por lo que no es parte del
 condicional, y será ejecutada siempre.
 
-\subsection{Condicional if-elif-else}
+\section{Condicional if-elif-else}
 
 La sentencia \textbf{if-elif-else} depende de dos o más condiciones, que
 son evaluadas en orden. La primera que es verdadera determina qué
@@ -197,7 +197,7 @@ print 'Usted debe pagar', tasa * sueldo, 'de impuesto'
 Esta manera es menos clara, porque no es evidente a primera vista que
 sólo una de las condiciones será verdadera.
 
-\subsection{Ciclo while}
+\section{Ciclo while}
 
 El ciclo \textbf{while} («mientras») ejecuta una secuencia de
 instrucciones mientras una condición sea verdadera:
@@ -276,7 +276,7 @@ En general, el ciclo \lstinline!while! se utiliza cuando no es posible
 saber de antemano cuántas veces será ejecutado el ciclo, pero sí qué es
 lo que tiene que ocurrir para que se termine.
 
-\subsection{Ciclo for con rango}
+\section{Ciclo for con rango}
 
 El ciclo \textbf{for con rango} ejecuta una secuencia de sentencias una
 cantidad fija de veces.
@@ -353,7 +353,7 @@ print 'Feliz anno nuevo!'
 En general, el ciclo \lstinline!for! con rango se usa cuando el número
 de iteraciones es conocido antes de entrar al ciclo.
 
-\subsection{Salir de un ciclo}
+\section{Salir de un ciclo}
 
 Además de las condiciones de término propias de los ciclos
 \lstinline!while! y \lstinline!for!, siempre es posible salir de un
@@ -375,7 +375,7 @@ for d in range(2, n):
         break
 \end{lstlisting}
 
-\subsection{Saltar a la siguiente iteración}
+\section{Saltar a la siguiente iteración}
 
 La sentencia \textbf{continue} se usa para saltar a la iteración
 siguiente sin llegar al final de la que está en curso.

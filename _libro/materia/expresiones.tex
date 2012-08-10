@@ -1,4 +1,4 @@
-\section{Expresiones}
+\chapter{Expresiones}
 
 Una \textbf{expresión} es una combinación de valores y operaciones que,
 al ser evaluados, entregan un valor.
@@ -27,7 +27,7 @@ Una expresión está compuesta de otras expresiones, que son evaluadas
 recursivamente hasta llegar a sus componentes más simples, que son los
 literales y las variables.
 
-\subsection{Operadores}
+\section{Operadores}
 
 Un \textbf{operador} es un símbolo en una expresión que representa una
 operación aplicada a los valores sobre los que actúa.
@@ -44,7 +44,7 @@ operación de adición. Sus operandos son \lstinline!2.0! y \lstinline!x!.
 Las operaciones más comunes se pueden clasificar en: aritméticas,
 relacionales, lógicas y de texto.
 
-\subsubsection{Operadores aritméticos}
+\subsection{Operadores aritméticos}
 
 Las \textbf{operaciones aritméticas} son las que operan sobre valores
 numéricos y entregan otro valor numérico como resultado. Los valores
@@ -148,7 +148,7 @@ también pero con el signo cambiado:
 4
 \end{lstlisting}
 
-\subsubsection{Operaciones relacionales}
+\subsection{Operaciones relacionales}
 
 Las \textbf{operaciones relacionales} sirven para comparar valores. Sus
 operandos son cualquier cosa que pueda ser comparada, y sus resultados
@@ -202,7 +202,7 @@ False
 La expresión \lstinline!0 < x <= 10! es equivalente a
 \lstinline!(0 < x) and (x <= 10)!
 
-\subsubsection{Operaciones lógicas}
+\subsection{Operaciones lógicas}
 
 \begin{table}
   \centering
@@ -249,7 +249,7 @@ operaciones lógicas. Las primeras dos columnas representan los valores
 de los operandos, y las siguientes tres, los resultados de las
 operaciones.
 
-\subsubsection{Operaciones de texto}
+\subsection{Operaciones de texto}
 
 Los operadores \lstinline!+! y \lstinline!*! tienen otras
 interpretaciones cuando sus operandos son strings.
@@ -323,7 +323,7 @@ False
 \end{lstlisting}
 \end{itemize}
 
-\subsection{Precedencia}
+\section{Precedencia}
 
 La \textbf{precedencia de operadores} es un conjunto de reglas que
 especifica en qué orden deben ser evaluadas las operaciones de una
@@ -442,7 +442,7 @@ no hemos visto, pueden ser consultados en
 \href{http://docs.python.org/reference/expressions.html\#summary}{la
 sección sobre expresiones} de la documentación oficial de Python.
 
-\subsubsection{¿Cómo aprenderse las reglas de precedencia?}
+\subsection{¿Cómo aprenderse las reglas de precedencia?}
 
 La respuesta es: mejor no aprendérselas. Las reglas de precedencia son
 muchas y no siempre son intuitivas,
@@ -455,7 +455,7 @@ Un buen programador siempre se preocupa de que su código sea fácil de
 entender por otras personas, ¡e incluso por él mismo en unas semanas más
 adelante!
 
-\subsection{Llamadas a función}
+\section{Llamadas a función}
 
 Los operadores forman un conjunto bastante reducido de operaciones. Más
 comúnmente, las operaciones más generales son representadas como
