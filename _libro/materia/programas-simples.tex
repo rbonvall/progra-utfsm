@@ -29,8 +29,16 @@ Como ejemplo, consideremos el siguiente programa, que pide al usuario
 ingresar una temperatura en grados Fahrenheit y entrega como resultado
 el equivalente en grados Celsius:
 
-\href{../\_static/programas/temperatura.py}{Descargue} el programa y
-ejecútelo para convencerse de que funciona correctamente.
+\begin{lstlisting}
+f = float(raw_input('Ingrese temperatura en Fahrenheit: '))
+c = (f - 32.0) * (5.0 / 9.0)
+print 'El equivalente en Celsius es:', c
+
+raw_input()
+\end{lstlisting}
+
+Escriba este programa en el computador
+y ejecútelo para convencerse de que funciona correctamente.
 
 \subsection{Expresiones y variables}
 
@@ -46,8 +54,9 @@ y \lstinline!+! es el operador de adición.
 En el programa de conversión de temperaturas aparece la expresión
 \lstinline!(f - 32.0) * (5.0 / 9.0)!, cuyo resultado depende de cuál es
 el valor de \lstinline!f! al momento de la evaluación. A diferencia de
-los valores literales, \(f\) es una \textbf{variable}. que tiene un valor
-específico que puede ser distinto cada vez que la expresión es evaluada.
+los valores literales, \lstinline!f! es una \textbf{variable}, que tiene
+un valor específico que puede ser distinto cada vez que la expresión es
+evaluada.
 
 En esta expresión, \lstinline!*! es el operador de multiplicación y
 \lstinline!/! el de división.
@@ -66,7 +75,7 @@ resultado de una expresión. El nombre asociado al valor se llama
 La sintaxis de una asignación es la siguiente:
 
 \begin{lstlisting}
-variable = expresión
+variable = expresion
 \end{lstlisting}
 
 Por ejemplo, el programa de conversión de temperaturas tiene la
@@ -123,7 +132,7 @@ nombre = raw_input('Ingrese su nombre')
 \end{lstlisting}
 
 Las siguientes no son asignaciones válidas, pues no respetan la sintaxis
-\lstinline!nombre = expresión! (tarea: identifique los errores):
+\lstinline!nombre = expresion! (tarea: identifique los errores):
 
 \begin{lstlisting}
 n + 1 = 5
@@ -187,7 +196,7 @@ print 'El equivalente en Celsius es:', c
 \end{lstlisting}
 
 En este caso, se está imprimiendo el mensaje
-\lstinline!El equivalente en Celsius es:! y a continuación, en la misma
+\texttt{El equivalente en Celsius es:} y a continuación, en la misma
 línea, el valor de la variable \lstinline!c!.
 
 Las comillas sólo sirven para representar un string en el código, y no

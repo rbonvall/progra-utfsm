@@ -48,8 +48,7 @@ relacionales, lógicas y de texto.
 
 Las \textbf{operaciones aritméticas} son las que operan sobre valores
 numéricos y entregan otro valor numérico como resultado. Los valores
-numéricos son los que tienen tipo entero, real o complejo. entero, real
-o complejo.
+numéricos son los que tienen tipo entero, real o complejo.
 
 Las siguientes son algunas operaciones aritméticas básicas, junto con el
 operador que las representa en Python:
@@ -416,29 +415,17 @@ final, que es \lstinline!False!:
 
 \begin{lstlisting}
 15 + 59 * 75 / 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
-#                         ↓
 15 + 59 * 75 / 9 < 2 **   9    and (15 + 59) * 75 % n == 1
-#                    ↓
 15 + 59 * 75 / 9 < 512         and (15 + 59) * 75 % n == 1
-#       ↓
 15 +  4425   / 9 < 512         and (15 + 59) * 75 % n == 1
-#            ↓
 15 +        491  < 512         and (15 + 59) * 75 % n == 1
-#                                      ↓
 15 +        491  < 512         and    74     * 75 % n == 1
-#                                            ↓
 15 +        491  < 512         and          5550  % n == 1
-#                                                   ↓
 15 +        491  < 512         and          5550  % 2 == 1
-#                                                 ↓
 15 +        491  < 512         and                0   == 1
-#  ↓
   506            < 512         and                0   == 1
-#                ↓
                 True           and                0   == 1
-#                                                     ↓
                 True           and                  False
-#                               ↓
                               False
 \end{lstlisting}
 
