@@ -1,4 +1,4 @@
-\section{Datos de una persona}
+\chapter{Datos de una persona}
 
 El siguiente programa le pide al usuario ingresar su nombre completo, su
 rut y su fecha de nacimiento.
@@ -10,7 +10,7 @@ revisando que el mes esté entre 1 y 12, y que el día tenga sentido para
 ese mes. Para simplificar, nos hemos echado los años bisiestos al
 bolsillo.
 
-\subsection{Macros de preprocesador}
+\section{Macros de preprocesador}
 
 La primera cosa extraña que vemos en este programa son las líneas que
 comienzan con \lstinline!#define!. Estas líneas son instrucciones para
@@ -46,7 +46,7 @@ para ver cómo queda el código después de ser preprocesado:
 $ cpp personas.c
 \end{lstlisting}
 
-\subsection{Estructuras}
+\section{Estructuras}
 
 Una \textbf{estructura} es un tipo de datos que agrupa varios valores en
 uno solo.
@@ -97,7 +97,7 @@ arreglos u otra estructura. En el ejemplo, la estructura
 \lstinline!persona! está compuesta de dos strings y una estructura
 \lstinline!fecha!.
 
-\subsection{Inicialización de arreglos y estructuras}
+\section{Inicialización de arreglos y estructuras}
 
 La función \lstinline!fecha_es_valida! utiliza el arreglo
 \lstinline!dias_mes! para tener a la mano cuántos días tiene cada mes.
@@ -140,7 +140,7 @@ int a[5];
 a = {900, 100, 600, 300, 200};  /* Esto es ilegal. */
 \end{lstlisting}
 
-\subsection{Leer una línea completa}
+\section{Leer una línea completa}
 
 El descriptor de formato \lstinline!%s! indica a la función
 \lstinline!scanf! que debe leer un string. Lo que hace la función es
@@ -155,7 +155,7 @@ Para leer el nombre completo del usuario, usamos el descriptor de
 formato \lstinline!%[^\n]!. Esto significa literalmente «leer todos los
 caracteres que no sean saltos de línea».
 
-\subsection{Salidas estándar y de error}
+\section{Salidas estándar y de error}
 
 Cada vez que uno imprime cosas usando la función \lstinline!printf!, lo
 que realmente ocurre es que el texto es enviado a un flujo de datos
@@ -185,7 +185,7 @@ cualquiera de ellas hacia otros mecanismos de salida, como un archivo, o
 de frentón suprimirlos. Por lo tanto, es una buena práctica escribir los
 mensajes de error en \lstinline!stderr!.
 
-\subsection{Ejercicios}
+\section{Ejercicios}
 
 ¿Qué imprime el siguiente programa? Pruebe el programa y explique el
 resultado.

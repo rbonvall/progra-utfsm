@@ -1,4 +1,4 @@
-\section{Escribir tabla trigonométrica}
+\chapter{Escribir tabla trigonométrica}
 
 El siguiente programa crea un archivo llamado \lstinline!trig.txt! que
 contiene una tabla con los senos y los cosenos de números reales entre 0
@@ -22,7 +22,7 @@ está trabajando en la consola, puede usar la instrucción
 $ cat trig.txt
 \end{lstlisting}
 
-\subsection{Escritura de archivos de texto}
+\section{Escritura de archivos de texto}
 
 La escritura de datos en un archivo no puede hacerse directamente en él,
 sino que debe hacerse a través de operaciones sobre un \textbf{flujo},
@@ -62,7 +62,7 @@ escribir en ese directorio. Cuando la apertura falla, entonces
 la apertura fue exitosa antes de hacer cualquier lectura o escritura con
 el flujo.
 
-\subsection{Tipos de datos de coma flotante}
+\section{Tipos de datos de coma flotante}
 
 En nuestro programa decidimos declarar la variable \lstinline!theta!
 como \lstinline!double!, que es otro tipo de datos asociado a los
@@ -94,7 +94,7 @@ representaciones de coma flotante. A los valores \lstinline!float! se le
 llama «de precisión simple» y a los \lstinline!double!, bueno, «de
 precisión doble».
 
-\subsection{Biblioteca matemática}
+\section{Biblioteca matemática}
 
 La cabecera \lstinline!math.h! provee declaraciones de funciones y
 constantes matemáticas de la biblioteca estándar de C.
@@ -117,7 +117,7 @@ hubiera sido declarada como \lstinline!float! en vez de
 Para explorar todas las funciones que están disponibles, consulte el
 manual de \lstinline!math.h!.
 
-\subsection{Enlazado de bibliotecas}
+\section{Enlazado de bibliotecas}
 
 ¿Por qué hubo que agregar el \lstinline!-lm! al compilar?
 
@@ -150,7 +150,7 @@ incluso por usted misma), deberá siempre tener el cuidado de enlazarlas
 correctamente al momento de compilar usando la opción
 \lstinline!-lnombre_de_la_biblioteca!.
 
-\subsection{Ejercicios}
+\section{Ejercicios}
 
 Interprete qué es lo que ocurre al usar los siguientes descriptores de
 formato para imprimir los valores en el archivo:

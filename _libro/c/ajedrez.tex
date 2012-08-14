@@ -1,4 +1,4 @@
-\section{El peor ajedrez del mundo}
+\chapter{El peor ajedrez del mundo}
 
 El programa que analizaremos ahora es un sencillo juego de ajedrez. Este
 código es más largo que los que hemos visto hasta ahora, así que cópielo
@@ -54,7 +54,7 @@ por lo que se puede mover las piezas como a uno se le dé la gana.
 Si uno ingresa jugadas que no tengan sentido, el programa puede fallar
 de maneras inesperadas. ¡Inténtelo!
 
-\subsection{Tipos enumerados}
+\section{Tipos enumerados}
 
 Un \textbf{tipo enumerado} es un tipo de datos que puede respresentar
 sólo una lista de valores discretos indicados por el programador.
@@ -113,7 +113,7 @@ claramente):
 turno = 1 - turno;
 \end{lstlisting}
 
-\subsection{Arreglos bidimensionales}
+\section{Arreglos bidimensionales}
 
 No debería ser ningún misterio que un \textbf{arreglo bidimensional} es
 un arreglo cuyos elementos están numerados por dos índices en lugar de
@@ -144,7 +144,7 @@ int milimetros_lluvia[100][12][31][24];
                   /* anno mes dia hora */
 \end{lstlisting}
 
-\subsection{Variables globales}
+\section{Variables globales}
 
 Las variables \lstinline!tablero! y \lstinline!turno! no fueron
 declaradas dentro de ninguna función, sino al principio del programa.
@@ -183,7 +183,7 @@ de retorno) entonces todo el comportamiento de una sección de programa
 está determinado por información que se encuentra cercana a ella en el
 código.
 
-\subsection{Funciones que no retornan nada}
+\section{Funciones que no retornan nada}
 
 La sintaxis para crear una función en C exige indicar de qué tipo es su
 valor de retorno. Sin embargo, es posible crear una función que no
@@ -206,7 +206,7 @@ Hay varias razones por la que una función podría no retornar nada:
   explicado más adelante).
 \end{itemize}
 
-\subsection{Macros con parámetros}
+\section{Macros con parámetros}
 
 Ya vimos que una macro es una sustitución textual que se hace en el
 código previo a la compilación. Las macros además pueden recibir
@@ -240,7 +240,7 @@ idea ceder a la tentación. Sólo hay que hacerlo cuando en efecto se
 logra hacer que el programa resulte más legible. ¿Cree usted que lo
 conseguimos con este ejemplo?
 
-\subsection{Declaraciones de funciones}
+\section{Declaraciones de funciones}
 
 El compilador analiza el código del programa de arriba hacia abajo. Es
 necesario que todos los nombres (como variables, tipos y funciones) ya
@@ -299,7 +299,7 @@ actúa también como declaración. Si una función está declarada antes de
 ser definida, entonces las firmas del prototipo y de la definición deben
 coincidir.
 
-\subsection{Paso de parámetros por referencia}
+\section{Paso de parámetros por referencia}
 
 En C, cuando una función es llamada, sus parámetros reciben una copia de
 los valores que fueron pasados como argumentos. Todos los cambios que
@@ -351,7 +351,7 @@ void fr(const struct grande *g) {
 }
 \end{lstlisting}
 
-\subsection{Conversiones de caracteres}
+\section{Conversiones de caracteres}
 
 Los valores de tipo \lstinline!char! en realidad son enteros. El mapeo
 entre símbolos y enteros está dado por el código ASCII\_.
