@@ -126,20 +126,12 @@ texto con un caracter especial representado como \lstinline!'\0'!.
 Por ejemplo, después de ingresar el nombre \lstinline!Perico!, el
 contenido del arreglo \lstinline!nombre! podría ser el siguiente:
 
-\begin{lstlisting}
-0   1   2   3   4   5   6   7   8  ...  19
-\end{lstlisting}
-
-\begin{quote}
-┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
-\end{quote}
-
-\begin{quote}
-\begin{description}
-\item[nombre: │ P │ e │ r │ i │ c │ o │ 0│ x │ m │\ldots{}│ q │]
-└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
-\end{description}
-\end{quote}
+\begin{verbatim}
+                0   1   2   3   4   5   6   7   8  ...  19
+              +---+---+---+---+---+---+---+---+---+---+---+
+      nombre: | P | e | r | i | c | o | \0| x | m |...| q |
+              +---+---+---+---+---+---+---+---+---+---+---+
+\end{verbatim}
 
 Lo que hay a continuación del caracter \lstinline!'\0'! es irrelevante.
 Todas las operaciones de strings saben que el texto llega solamente

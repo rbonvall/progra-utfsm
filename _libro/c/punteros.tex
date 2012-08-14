@@ -16,55 +16,38 @@ punteros involucrados.
 Cuando una variable de tipo puntero tiene almacenada una dirección de
 memoria, se dice que «apunta» al valor que está en esa dirección.
 
-\begin{lstlisting}
-┌──────────┐
-\end{lstlisting}
-
-\begin{quote}
-\begin{description}
-\item[0x3ad900 │ 398 │ int n]
-├──────────┤
-\item[0x3ad904 │ ???????? │]
-├──────────┤
-\item[0x3ad908 │ 0x3ad900 │ int \emph{p ├──────────┤ 0x3ad90c │ 0x3ad904
-│ float}q]
-├──────────┤
-\item[0x3ad910 │ 2.717 │ float x]
-└──────────┘
-\end{description}
-\end{quote}
+\begin{verbatim}
+           +----------+
+0x3ad900   |      398 |  int n
+           +----------+
+0x3ad904   | ???????? |
+           +----------+
+0x3ad908   | 0x3ad900 |  int *p
+           +----------+
+0x3ad90c   | 0x3ad904 |  float *q
+           +----------+
+0x3ad910   |    2.717 |  float x
+           +----------+
+\end{verbatim}
 
 En general no importa cuál es valor exacto de un puntero, sino que basta
 con comprender qué es lo que hay «al otro lado». Por esto, en los
 diagramas de la memoria se suele preferir usar flechas en lugar de las
 direcciones explícitas:
 
-\begin{lstlisting}
-┌──────────┐
-\end{lstlisting}
-
-\begin{quote}
-\begin{description}
-\item[int n │ 398 │◂────┐]
-├──────────┤ │ │ ???????? │ │ ├──────────┤ │
-\end{description}
-\end{quote}
-
-\begin{quote}
-\begin{description}
-\item[int *p │ ●────┼─────┘]
-├──────────┤
-\end{description}
-\end{quote}
-
-\begin{quote}
-\begin{description}
-\item[float *q │ ●────┼────┐]
-├──────────┤ │
-\item[float x │ 2.717 │◂───┘]
-└──────────┘
-\end{description}
-\end{quote}
+\begin{verbatim}
+          +----------+
+   int n  |      398 |<----+
+          +----------+     |
+          | ???????? |     |
+          +----------+     |
+  int *p  |     *----+-----+
+          +----------+
+float *q  |     *----+----+
+          +----------+    |
+ float x  |    2.717 |<---+
+          +----------+
+\end{verbatim}
 
 Un valor especial llamado \lstinline!NULL! puede ser asignado a
 cualquier puntero para indicar aún no está apuntando a ninguna parte de
@@ -96,7 +79,7 @@ p = NULL;   /* valido */
 p = &a;     /* valido */
 p = &b;     /* valido */
 p = &z;     /* invalido (z no es un entero) */
-p = 142857; /* invalido (142857 no es una dirección de memoria) */
+p = 142857; /* invalido (142857 no es una direccion de memoria) */
 
 q = &b;     /* valido */
 q = p;      /* valido */

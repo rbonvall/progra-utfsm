@@ -129,14 +129,14 @@ $ ./contar-palabras abc.txt azul rojo verde "amarillo patito"
 entonces \lstinline!argc! tendrá el valor 6 y los valores del arreglo
 \lstinline!argv! serán:
 
-\begin{lstlisting}
+\begin{verbatim}
 argv[0]  →  "./contar-palabras"
 argv[1]  →  "abc.txt"
 argv[2]  →  "azul"
 argv[3]  →  "rojo"
 argv[4]  →  "verde"
 argv[5]  →  "amarillo patito"
-\end{lstlisting}
+\end{verbatim}
 
 \subsection{Aritmética de punteros}
 
@@ -184,21 +184,21 @@ ven como dos arreglos que comparten su memoria. \lstinline!palabras[0]!
 es lo mismo que \lstinline!argv[2]!:
 
 \begin{lstlisting}
-┌──────────┐      ┌──────────┐
-│          │◂─────┼────●     │ argv
-├──────────┤      └──────────┘
-│          │
-├──────────┤      ┌──────────┐
-│          │◂─────┼────●     │ palabras
-├──────────┤      └──────────┘
-│          │
-├──────────┤
-│          │
-├──────────┤
-│          │
-├──────────┤
-│          │
-└──────────┘
++----------+      +----------+
+|          |<-----+----*     | argv
++----------+      +----------+
+|          |
++----------+      +----------+
+|          |<-----+----*     | palabras
++----------+      +----------+
+|          |
++----------+
+|          |
++----------+
+|          |
++----------+
+|          |
++----------+
 \end{lstlisting}
 
 En C siempre se cumple que \lstinline!a[i]! es lo mismo que

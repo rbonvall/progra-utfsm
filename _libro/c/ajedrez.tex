@@ -26,27 +26,21 @@ Las piezas blancas serán letras mayúsculas, y las negras, minúsculas.
 En cada turno, el programa mostrará la disposición del tablero, y pedirá
 a uno de los jugadores que ingrese su jugada:
 
-\begin{lstlisting}
-0 1 2 3 4 5 6 7
-\end{lstlisting}
+\begin{verbatim}
+       0 1 2 3 4 5 6 7
+      +---------------+
+    a |t c . d r a . t|
+    b |p p p . p p p p|
+    c |. . . . . c . .|
+    d |. . . p . . . .|
+    e |. . A . P . a .|
+    f |. . . . . D . .|
+    g |P P P P . P P P|
+    h |T C A . R . C T|
+      +---------------+
+    Juega blanco: 
 
-\begin{quote}
-\ctable[pos = H, center, botcap]{l}
-{% notes
-}
-{% rows
-\FL
-\LL
-}
-\end{quote}
-
-\begin{quote}
-a \textbar{}t c . d r a . t\textbar{} b \textbar{}p p p . p p p
-p\textbar{} c \textbar{}. . . . . c . .\textbar{} d \textbar{}. . . p .
-. . .\textbar{} e \textbar{}. . A . P . a .\textbar{} f \textbar{}. . .
-. . D . .\textbar{} g \textbar{}P P P P . P P P\textbar{} h \textbar{}T
-C A . R . C T\textbar{} +---------------+ Juega blanco:
-\end{quote}
+\end{verbatim}
 
 La jugada se ingresa indicando la casilla donde está la pieza que se
 moverá, y la casilla a la que se moverá. Cada casilla se ingresa como
