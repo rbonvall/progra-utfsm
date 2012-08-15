@@ -1,10 +1,10 @@
-import turtle
+from turtle import *
 
-turtle.title('Laberinto')
-turtle.shape('turtle')
-turtle.color('navy')
-turtle.width(2)
-turtle.speed('slowest')
+title('Laberinto')
+shape('turtle')
+color('navy')
+width(2)
+speed('slowest')
 
 f = 30
 
@@ -13,11 +13,11 @@ ruta = raw_input('Ruta: ')
 n = len(ruta)
 for i in range(n):
     d = ruta[i]
-    if   d == 'E': turtle.seth(0)
-    elif d == 'N': turtle.seth(90)
-    elif d == 'O': turtle.seth(180)
-    elif d == 'S': turtle.seth(270)
-    turtle.forward(f)
+    if   d == 'E': seth(0)
+    elif d == 'N': seth(90)
+    elif d == 'O': seth(180)
+    elif d == 'S': seth(270)
+    forward(f)
 
 print 'Distancia recorrida:', len(ruta)
 raw_input()

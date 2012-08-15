@@ -1,10 +1,10 @@
-import turtle
+from turtle import *
 
-turtle.title('Laberinto')
-turtle.shape('turtle')
-turtle.color('brown')
-turtle.width(5)
-turtle.speed('fastest')
+title('Laberinto')
+shape('turtle')
+color('brown')
+width(5)
+speed('fastest')
 
 f = 30
 x0, y0 = -200, 200
@@ -16,22 +16,22 @@ while len(fila) > 0:
     n = len(fila)
     for x in range(n):
         if fila[x] == 'x' or fila[x] == 'X':
-            turtle.up()
-            turtle.goto(f * x + x0, f * y + y0)
-            turtle.seth(90)
-            turtle.down()
+            up()
+            goto(f * x + x0, f * y + y0)
+            seth(90)
+            down()
             for i in range(4):
-                turtle.forward(f)
-                turtle.right(90)
+                forward(f)
+                right(90)
     y -= 1
 
-turtle.up()
-turtle.goto(-f / 2 + x0, +f / 2 + y0)
-turtle.seth(0)
-turtle.down()
-turtle.color('navy')
-turtle.width(2)
-turtle.speed('slowest')
+up()
+goto(-f / 2 + x0, +f / 2 + y0)
+seth(0)
+down()
+color('navy')
+width(2)
+speed('slowest')
 
 raiz2 = 2 ** 0.5
 
@@ -42,10 +42,10 @@ distancia = 0
 while i < n:
     d = ruta[i]
 
-    if   d == 'E': turtle.seth(0)
-    elif d == 'N': turtle.seth(90)
-    elif d == 'O': turtle.seth(180)
-    elif d == 'S': turtle.seth(270)
+    if   d == 'E': seth(0)
+    elif d == 'N': seth(90)
+    elif d == 'O': seth(180)
+    elif d == 'S': seth(270)
 
     if i + 1 < n:
         s = ruta[i + 1]
@@ -56,8 +56,8 @@ while i < n:
           (d == 'S' and s == 'O') or
           (d == 'O' and s == 'N') or
           (d == 'N' and s == 'E')):
-        turtle.right(45)
-        turtle.forward(f * raiz2)
+        right(45)
+        forward(f * raiz2)
         distancia += raiz2
         i += 2
 
@@ -65,13 +65,13 @@ while i < n:
           (d == 'S' and s == 'E') or
           (d == 'O' and s == 'S') or
           (d == 'N' and s == 'O')):
-        turtle.left(45)
-        turtle.forward(f * raiz2)
+        left(45)
+        forward(f * raiz2)
         distancia += raiz2
         i += 2
 
     else:
-        turtle.forward(f)
+        forward(f)
         distancia += 1
         i += 1
 

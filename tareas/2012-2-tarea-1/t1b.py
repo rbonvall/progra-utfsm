@@ -1,10 +1,10 @@
-import turtle
+from turtle import *
 
-turtle.title('Laberinto')
-turtle.shape('turtle')
-turtle.color('brown')
-turtle.width(5)
-turtle.speed('fastest')
+title('Laberinto')
+shape('turtle')
+color('brown')
+width(5)
+speed('fastest')
 
 f = 30
 x0, y0 = -200, 200
@@ -16,32 +16,32 @@ while len(fila) > 0:
     n = len(fila)
     for x in range(n):
         if fila[x] == 'x' or fila[x] == 'X':
-            turtle.up()
-            turtle.goto(f * x + x0, f * y + y0)
-            turtle.seth(90)
-            turtle.down()
+            up()
+            goto(f * x + x0, f * y + y0)
+            seth(90)
+            down()
             for i in range(4):
-                turtle.forward(f)
-                turtle.right(90)
+                forward(f)
+                right(90)
     y -= 1
 
-turtle.up()
-turtle.goto(-f / 2 + x0, +f / 2 + y0)
-turtle.seth(0)
-turtle.down()
-turtle.color('navy')
-turtle.width(2)
-turtle.speed('slowest')
+up()
+goto(-f / 2 + x0, +f / 2 + y0)
+seth(0)
+down()
+color('navy')
+width(2)
+speed('slowest')
 
 ruta = raw_input('Ruta: ')
 n = len(ruta)
 for i in range(n):
     d = ruta[i]
-    if   d == 'E': turtle.seth(0)
-    elif d == 'N': turtle.seth(90)
-    elif d == 'O': turtle.seth(180)
-    elif d == 'S': turtle.seth(270)
-    turtle.forward(f)
+    if   d == 'E': seth(0)
+    elif d == 'N': seth(90)
+    elif d == 'O': seth(180)
+    elif d == 'S': seth(270)
+    forward(f)
 
 print 'Distancia recorrida:', len(ruta)
 raw_input()
