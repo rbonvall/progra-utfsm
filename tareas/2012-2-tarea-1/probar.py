@@ -2,7 +2,8 @@
 
 # Este es el programa que se va a probar
 
-NOMBRE_PROGRAMA = 't1b.py'
+NOMBRE_PROGRAMA = 't1-normal.py'
+#NOMBRE_PROGRAMA = 't1-dificil.py'
 
 # No modifique nada de aqui para abajo!
 
