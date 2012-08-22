@@ -1,0 +1,73 @@
+Fila,Sala,Alumnos,Jefe de sala,Pregunta,Corrector,Paralelo,Apellido,Profesor
+2,C-226,44,Marcelo Ávalos,1,Mabel Bielenberg,1,,Renzo Stanley
+2,C-226,44,Marcelo Ávalos,2,Leopoldo Altamirano,1,,Renzo Stanley
+2,C-226,44,Marcelo Ávalos,3,César Moltedo,1,,Renzo Stanley
+2,C-226,44,Marcelo Ávalos,4,,1,,Renzo Stanley
+3,C-227,75,Mabel Bielenberg,1,José Miguel Herrera,"2,14",,Mabel Bielenberg
+3,C-227,75,Mabel Bielenberg,2,Renzo Stanley,"2,14",,Mabel Bielenberg
+3,C-227,75,Mabel Bielenberg,3,Héctor Allende,"2,14",,Mabel Bielenberg
+3,C-227,75,Mabel Bielenberg,4,,"2,14",,Mabel Bielenberg
+4,M-101,33,Erick López,1,Leopoldo Altamirano,3,,Erick López
+4,M-101,33,Erick López,2,Magda Silva,3,,Erick López
+4,M-101,33,Erick López,3,José Miguel Herrera,3,,Erick López
+4,M-101,33,Erick López,4,,3,,Erick López
+5,B-101,45,César Moltedo,1,Leopoldo Altamirano,4,,César Moltedo
+5,B-101,45,César Moltedo,2,Renzo Stanley,4,,César Moltedo
+5,B-101,45,César Moltedo,3,Héctor Allende,4,,César Moltedo
+5,B-101,45,César Moltedo,4,,4,,César Moltedo
+6,C-239,27,Diego Acuña,1,Mabel Bielenberg,5,A-K,Héctor Allende
+6,C-239,27,Diego Acuña,2,Magda Silva,5,A-K,Héctor Allende
+6,C-239,27,Diego Acuña,3,Erick López,5,A-K,Héctor Allende
+6,C-239,27,Diego Acuña,4,,5,A-K,Héctor Allende
+7,C-204,25,Héctor Allende,1,César Moltedo,5,L-Z,Héctor Allende
+7,C-204,25,Héctor Allende,2,Mabel Bielenberg,5,L-Z,Héctor Allende
+7,C-204,25,Héctor Allende,3,Erick López,5,L-Z,Héctor Allende
+7,C-204,25,Héctor Allende,4,,5,L-Z,Héctor Allende
+8,C-203,40,José Miguel Herrera,1,Héctor Allende,6,,José Miguel Herrera
+8,C-203,40,José Miguel Herrera,2,Magda Silva,6,,José Miguel Herrera
+8,C-203,40,José Miguel Herrera,3,Erick López,6,,José Miguel Herrera
+8,C-203,40,José Miguel Herrera,4,,6,,José Miguel Herrera
+9,M-102,39,Manuel Sánchez,1,Magda Silva,7,,César Moltedo
+9,M-102,39,Manuel Sánchez,2,Mabel Bielenberg,7,,César Moltedo
+9,M-102,39,Manuel Sánchez,3,Erick López,7,,César Moltedo
+9,M-102,39,Manuel Sánchez,4,,7,,César Moltedo
+10,M-303,37,Margarita Astudillo,1,Renzo Stanley,8,,Magda Silva
+10,M-303,37,Margarita Astudillo,2,Leopoldo Altamirano,8,,Magda Silva
+10,M-303,37,Margarita Astudillo,3,César Moltedo,8,,Magda Silva
+10,M-303,37,Margarita Astudillo,4,,8,,Magda Silva
+11,C-225,41,Charly Leiva,1,Roberto Bonvallet,9,,Erick López
+11,C-225,41,Charly Leiva,2,Leopoldo Altamirano,9,,Erick López
+11,C-225,41,Charly Leiva,3,Héctor Allende,9,,Erick López
+11,C-225,41,Charly Leiva,4,,9,,Erick López
+12,C-229,46,Yonathan Dossow,1,Héctor Allende,10,,Magda Silva
+12,C-229,46,Yonathan Dossow,2,Renzo Stanley,10,,Magda Silva
+12,C-229,46,Yonathan Dossow,3,César Moltedo,10,,Magda Silva
+12,C-229,46,Yonathan Dossow,4,,10,,Magda Silva
+13,M-103,37,Renzo Stanley,1,Magda Silva,11,,Renzo Stanley
+13,M-103,37,Renzo Stanley,2,Mabel Bielenberg,11,,Renzo Stanley
+13,M-103,37,Renzo Stanley,3,José Miguel Herrera,11,,Renzo Stanley
+13,M-103,37,Renzo Stanley,4,,11,,Renzo Stanley
+14,C-369,23,Claudio Price,1,Renzo Stanley,12,A-J,Roberto Bonvallet
+14,C-369,23,Claudio Price,2,Mabel Bielenberg,12,A-J,Roberto Bonvallet
+14,C-369,23,Claudio Price,3,César Moltedo,12,A-J,Roberto Bonvallet
+14,C-369,23,Claudio Price,4,,12,A-J,Roberto Bonvallet
+15,C-368,32,Roberto Bonvallet,1,César Moltedo,12,K-Z,Roberto Bonvallet
+15,C-368,32,Roberto Bonvallet,2,Mabel Bielenberg,12,K-Z,Roberto Bonvallet
+15,C-368,32,Roberto Bonvallet,3,José Miguel Herrera,12,K-Z,Roberto Bonvallet
+15,C-368,32,Roberto Bonvallet,4,,12,K-Z,Roberto Bonvallet
+16,C-240,46,Paulina Álvarez,1,Roberto Bonvallet,13,,Héctor Allende
+16,C-240,46,Paulina Álvarez,2,Leopoldo Altamirano,13,,Héctor Allende
+16,C-240,46,Paulina Álvarez,3,Erick López,13,,Héctor Allende
+16,C-240,46,Paulina Álvarez,4,,13,,Héctor Allende
+17,B-112,20,,1,César Moltedo,15,A-H,José Miguel Herrera
+17,B-112,20,,2,Mabel Bielenberg,15,A-H,José Miguel Herrera
+17,B-112,20,,3,Roberto Bonvallet,15,A-H,José Miguel Herrera
+17,B-112,20,,4,,15,A-H,José Miguel Herrera
+18,M-104,21,Jonathan Antognini,1,Renzo Stanley,15,I-Z,José Miguel Herrera
+18,M-104,21,Jonathan Antognini,2,Roberto Bonvallet,15,I-Z,José Miguel Herrera
+18,M-104,21,Jonathan Antognini,3,César Moltedo,15,I-Z,José Miguel Herrera
+18,M-104,21,Jonathan Antognini,4,,15,I-Z,José Miguel Herrera
+19,M-302,70,Magda Silva,1,Erick López,"16,17",,Leopoldo Altamirano
+19,M-302,70,Magda Silva,2,Magda Silva,"16,17",,Leopoldo Altamirano
+19,M-302,70,Magda Silva,3,José Miguel Herrera,"16,17",,Leopoldo Altamirano
+19,M-302,70,Magda Silva,4,,"16,17",,Leopoldo Altamirano

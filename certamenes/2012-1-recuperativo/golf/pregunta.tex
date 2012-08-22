@@ -1,0 +1,70 @@
+En un torneo de golf,
+cada jugador debe intentar meter la bola
+en cada uno de los 18 hoyos del campo
+usando la menor cantidad de golpes posible.
+
+Cada uno de los hoyos tiene asignado un \emph{par},
+que es la cantidad de golpes
+en que se espera que un jugador consiga el hoyo.
+El par de un hoyo suele ser 3, 4 o 5,
+pero podría ser cualquier valor.
+
+Al final del día,
+cada jugador debe entregar una tarjeta
+indicando cuántos golpes hizo en cada hoyo.
+Esta tarjeta antes se hacía en papel,
+pero hoy en día los jugadores simplemente envían por correo electrónico
+un archivo de texto de 18 líneas,
+cada una de las cuales tiene un número entero.
+El nombre del archivo debe ser
+\texttt{golpes-\textit{nombre}-\textit{apellido}.txt},
+reemplazando con el nombre y el apellido del jugador en minúsculas.
+
+\begin{minipage}[t]{.65\textwidth}
+  La organización del torneo usa dos archivos adicionales
+  para calcular el marcador del juego.
+  El archivo \texttt{pares.txt} también tiene 18 líneas,
+  cada una de las cuales tiene el par del hoyo correspondiente.
+  El archivo \texttt{jugadores.txt} tiene los nombres de los jugadores
+  que participan del torneo.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.30\textwidth}
+  Archivo \texttt{jugadores.txt}:
+  \lstinputlisting[language=file,frame=single]{golf/jugadores.txt}
+\end{minipage}
+
+Para calcular el puntaje final de un jugador,
+se suman las diferencias entre el par de cada hoyo
+y el número de golpes que necesitó para completarlo.
+Un puntaje negativo es mejor que uno positivo,
+porque significa que necesitó menos golpes en total.
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+  \item
+    Escriba la función \li!leer_valores(nombre_archivo)!,
+    que recibe como parámetro el nombre de un archivo
+    que tiene 18 enteros (uno por línea),
+    y retorne un arreglo con esos valores.
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{golf/programa.py}
+
+    (De este ejemplo podemos deducir
+    que el puntaje final de Arnoldo Palmeras fue \(+2\)).
+
+  \item
+    Escriba la función \li!obtener_marcador()!,
+    que retorne un diccionario
+    que asocie a cada jugador su puntaje final.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{golf/programa.py}
+
+  \item
+    Escriba la función \li!obtener_ganador()!,
+    que retorne el nombre del ganador del torneo.
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{golf/programa.py}
+
+    Si hay varios jugadores empatados en el primer lugar,
+    elija a cualquiera (¡pero sólo a uno!) de ellos.
+
+\end{enumerate}
+
