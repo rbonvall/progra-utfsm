@@ -1,6 +1,10 @@
 Tarea 1: la tortuga urbana
 ==========================
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/oCDmNaGMEi4?rel=0" frameborder="0" allowfullscreen></iframe>
+
 Objetivos del aprendizaje
 -------------------------
 * Mover la tortuga.
@@ -25,6 +29,7 @@ y a continuación 1
     >
     Ruta: `SSEESESEEEENENNONN`
     Distancia recorrida: 18
+
 
 
 Entrega
