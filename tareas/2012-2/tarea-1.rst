@@ -25,6 +25,11 @@ que permita darle instrucciones a una tortuga
 para que dibuje el plano de una ciudad,
 y a continuación recorra una ruta a través de ella.
 
+Para familiarizarse con las funciones que manejan la tortuga,
+revise el paltario_ que hemos preparado.
+
+.. _paltario: turtle.html
+
 El siguiente es un ejemplo de ejecución del programa:
 
 .. code-block:: none
@@ -38,6 +43,10 @@ El siguiente es un ejemplo de ejecución del programa:
     >
     Ruta: `SSEESESEEEENENNONN`
     Distancia recorrida: 18
+
+La imagen final resultante es la siguiente:
+
+.. image:: ../../_static/urbana-1.png
 
 Al principio,
 el usuario ingresa el plano escribiendo varias líneas,
@@ -54,8 +63,8 @@ la tortuga debe regresar a la posición al frente de la primera cuadra de la ciu
 y el programa debe preguntar al usuario cuál es la ruta que debe recorrer la tortuga.
 
 La ruta que debe ingresar el usuario
-es una secuencia de caracteres ``N``, ``S``, ``E`` u ``O``,
-todos en mayúscula,
+es una secuencia de caracteres ``N``, ``S``, ``E`` u ``O``
+(todos en mayúsculas)
 que indican que la tortuga debe moverse, respectivamente,
 hacia el norte, el sur, el este o el oeste.
 Una vez ingresada la ruta,
