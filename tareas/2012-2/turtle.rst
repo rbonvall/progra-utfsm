@@ -50,4 +50,30 @@ se usa la función ``down()``::
     down()
     forward(100)
 
+La función ``goto(x, y)`` lleva a la tortuga
+al punto `(x, y)` en el plano,
+independientemente de cuál es su posición actual::
+
+    goto(-200, 0)
+    goto(-200, 200)
+    goto(0, 200)
+    goto(-100, 100)
+
+La función ``seth(a)`` cambia la orientación de la tortuga.
+Pruebe y verifique a qué dirección queda apuntando la tortuga
+al hacer las siguientes llamadas::
+
+    seth(0)
+    seth(90)
+    seth(180)
+    seth(270)
+
+Con estas funciones ya puede resolver la `tarea 1`_.
+
+Si quiere aprender más sobre ``turtle``
+y quizás buscar otras funciones que le podrían servir,
+revise la `documentación oficial` del módulo.
+
+.. _tarea 1: tarea-1.html
+.. _documentación oficial: http://docs.python.org/library/turtle.html
 
