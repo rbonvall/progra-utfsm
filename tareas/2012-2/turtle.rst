@@ -72,7 +72,7 @@ Con estas funciones ya puede resolver la `tarea 1`_.
 
 Si quiere aprender más sobre ``turtle``
 y quizás buscar otras funciones que le podrían servir,
-revise la `documentación oficial` del módulo.
+revise la `documentación oficial`_ del módulo.
 
 .. _tarea 1: tarea-1.html
 .. _documentación oficial: http://docs.python.org/library/turtle.html

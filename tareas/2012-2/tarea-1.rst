@@ -9,6 +9,7 @@ Objetivos de aprendizaje
 ------------------------
 Después de resolver la tarea 1, usted será capaz de:
 
+* implementar un programa que requiera entradas y salidas;
 * diseñar e implementar programas simples
   usando algunas sentencias elementales de Python
   (asignaciones, ``if``, ``for`` y ``while``);
@@ -26,9 +27,9 @@ para que dibuje el plano de una ciudad,
 y a continuación recorra una ruta a través de ella.
 
 Para familiarizarse con las funciones que manejan la tortuga,
-revise el paltario_ que hemos preparado.
+revise la `documentación`_ que hemos preparado.
 
-.. _paltario: turtle.html
+.. _documentación: turtle.html
 
 El siguiente es un ejemplo de ejecución del programa:
 
@@ -92,7 +93,7 @@ Sólo debe ir la parte del RUT hasta antes de la raya.
 Por ejemplo: ``tarea-1-18000123.py``.
 
 Al principio del archivo se debe poner un comentario
-indicando los roles y los RUT de los integrantes del equipo,
+indicando los RUT de los integrantes del equipo,
 como en el siguiente ejemplo::
 
     # Integrantes:
