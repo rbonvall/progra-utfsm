@@ -82,6 +82,8 @@ Entrega
 -------
 La fecha de entrega es el **domingo 16 de septiembre** a las **23:00**.
 
+La tarea debe ser resuelta en **equipos de dos o tres personas**.
+
 Sólo uno de los integrantes del equipo debe subir la tarea
 en la sección **Entrega de tareas** de la plataforma Moodle_,
 ingresando al campus que corresponda.
