@@ -1,5 +1,7 @@
 .*.sw?
 *.pyc
 *.zip
+*.tgz
+*.tar.gz
 _build/
 _static/jsMath
