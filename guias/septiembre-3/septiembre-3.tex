@@ -1,0 +1,61 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{fullpage}
+
+\input{../../latex/definiciones.tex}
+
+\lstset{language=testcase,frame=single}
+
+\begin{document}
+  \thispagestyle{empty}
+  \section*{Lunes 3 de septiembre}
+
+  Los \emph {números de Fibonacci} son
+  la siguiente sucesión de números enteros:
+  \[
+      0,   1,    1,    2,    3,
+      5,   8,   13,   21,   34,
+     55,  89,  144,  233,  377,
+    610, 987, 1597, 2584, 4181, \ldots
+  \]
+  Los primeros términos de la sucesión son 0 y 1,
+  y de ahí en adelante cada término es la suma de los dos anteriores.
+
+  Escriba los siguientes programas:
+  \begin{enumerate}[leftmargin=0pt]
+
+    \item
+      \begin{minipage}[t]{0.7\textwidth}
+        \small
+        \lstinputlisting[linerange=C1-FIN\ C1]{casos.txt}
+      \end{minipage}
+
+    \item
+      \begin{minipage}[t]{0.7\textwidth}
+        \small
+        \lstinputlisting[linerange=C2-FIN\ C2]{casos.txt}
+      \end{minipage}
+
+    \item
+      \begin{minipage}[t]{0.7\textwidth}
+        \small
+        \lstinputlisting[linerange=C3-FIN\ C3]{casos.txt}
+      \end{minipage} \\
+      \begin{minipage}[t]{0.7\textwidth}
+        \small
+        \lstinputlisting[linerange=C4-FIN\ C4]{casos.txt}
+      \end{minipage}
+
+
+  \end{enumerate}
+
+\end{document}
+
