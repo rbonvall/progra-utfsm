@@ -1,0 +1,4 @@
+Ingrese a: `3.9`
+Ingrese b: `6.0`
+Ingrese c: `1.2`
+No es un triangulo valido.

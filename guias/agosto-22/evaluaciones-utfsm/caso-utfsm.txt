@@ -1,0 +1,30 @@
+C1: `1.8`
+C2: `0.9`
+Reprobado
+
+C1: `0.5`
+C2: `2.0`
+C3: `2.5`
+Reprobado
+
+C1: `1.5`
+C2: `3.5`
+C3: `4.5`
+Examen: `5.1`
+Aprobado
+
+C1: `1.5`
+C2: `3.5`
+C3: `4.5`
+Examen: `4.9`
+Reprobado
+
+C1: `8.3`
+C2: `8.4`
+C3: `8.5`
+Aprobado
+
+C1: `9.3`
+C2: `9.4`
+Aprobado
+
