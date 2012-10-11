@@ -3,5 +3,8 @@
 *.zip
 *.tgz
 *.tar.gz
+*.pdf
+*.aux
+*.log
 _build/
 _static/jsMath
