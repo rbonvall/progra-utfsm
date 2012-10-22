@@ -1,0 +1,1 @@
+include ../../certamenes/latex.mk
