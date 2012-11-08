@@ -1,0 +1,41 @@
+\documentclass{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathpazo}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\input{incluir/flujo.tex}
+\begin{tikzpicture}[node distance=7ex, auto]
+    \node (start) {};
+    \node [stmt, below of=start] (init-n) { \(n = 0\) };
+    \node [stmt, below of=init-n] (init-suma) { \(\text{suma} = 0.0\) };
+    \node [decision, below of=init-n, node distance=18ex] (cond) { ¿\(\text{suma} < 10.0\)? };
+    \node [io, below of=cond, shift={(6em, 0)}] (read) { Leer \(x\) };
+    \node [stmt, below of=read] (n)   { \(n = n + 1\) };
+    \node [stmt, below of=n]    (sum) { \(\text{suma} = \text{suma} + x\) };
+
+    \path [conn] (start) -- (init-n);
+    \path [conn] (init-n) -- (init-suma);
+    \path [conn] (init-suma) -- (cond);
+    \path [conn] (cond) -|
+                 node[very near start] { sí }
+                 (read);
+    \path [conn] (read) -- (n);
+    \path [conn] (n) -- (sum);
+    \path [conn] (cond) --
+                 node[very near start] { no }
+                 ++(0, -26ex);
+
+    \path [conn] (sum.east) -- 
+                 ++(1em, 0) |-
+                 ($ (init-suma.south)!.3!(cond.north) $);
+%    \path [conn] (cond) --
+%                 node[very near start] { no }
+%                 (end);
+\end{tikzpicture}
+\end{document}

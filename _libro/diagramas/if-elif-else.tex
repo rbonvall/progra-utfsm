@@ -1,0 +1,35 @@
+\documentclass{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\input{incluir/flujo.tex}
+\begin{tikzpicture}[node distance=12ex, auto]
+    \node (start) { };
+    \node [decision, below of=start] (dcs1) { condición 1 };
+    \node [decision, below of=dcs1] (dcs2)  { condición 2 };
+    \node [decision, below of=dcs2] (dcs3)  { condición 3 };
+    \node [stmt, right of=dcs1, node distance=8em] (true1) { caso 1 };
+    \node [stmt, right of=dcs2, node distance=8em] (true2) { caso 2 };
+    \node [stmt, right of=dcs3, node distance=8em] (true3) { caso 3 };
+    \node [stmt, below of=dcs3] (false) { caso falso };
+    \node [below of=false] (end) { };
+
+    \path [conn] (start) -- (dcs1);
+    \path [conn] (dcs1) -- node [near start] { no } (dcs2);
+    \path [conn] (dcs2) -- node [near start] { no } (dcs3);
+    \path [conn] (dcs3) -- node [near start] { no } (false);
+    \path [conn] (dcs1) -- node [near start] { sí } (true1);
+    \path [conn] (dcs2) -- node [near start] { sí } (true2);
+    \path [conn] (dcs3) -- node [near start] { sí } (true3);
+    \path [conn] (true1) -- +(1.5, 0) |- ($ (false.south)!.5!(end)$);
+    \path [conn] (true2) -- +(1.5, 0);
+    \path [conn] (true3) -- +(1.5, 0);
+    \path [conn] (false) -- (end);
+\end{tikzpicture}
+\end{document}

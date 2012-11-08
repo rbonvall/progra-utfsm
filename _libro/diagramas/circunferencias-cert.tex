@@ -1,0 +1,38 @@
+\documentclass{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations}
+\PreviewEnvironment{tikzpicture}
+
+\def\grilla{%
+  \draw[gray] (0, 0) grid (14, 10);
+  \draw[-latex'] (0, 0) to (15, 0);
+  \draw[-latex'] (0, 0) to (0, 11);
+}
+\newcommand\circulo[3]{%
+  \node[inner sep=1pt, fill, circle] (p1) at (#1, #2) {};
+  \draw[very thick] (p1) circle (#3 cm);
+}
+
+\begin{document}
+  \begin{tikzpicture}[scale=.25]
+    \begin{scope}
+      \grilla
+      \circulo{ 5}{6}{3.5}
+      \circulo{10}{5}{3}
+    \end{scope}
+    \begin{scope}[xshift=16cm]
+      \grilla
+      \circulo{3.5}{5}{2}
+      \circulo{10}{4}{3}
+    \end{scope}
+    \begin{scope}[xshift=32cm]
+      \grilla
+      \circulo{5}{4.5}{3}
+      \circulo{6}{5}{4.5}
+    \end{scope}
+  \end{tikzpicture}
+\end{document}
+

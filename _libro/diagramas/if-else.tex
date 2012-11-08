@@ -1,0 +1,30 @@
+\documentclass{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes,arrows}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\input{incluir/flujo.tex}
+\begin{tikzpicture}[node distance=12ex, auto]
+    \node (start) { };
+    \node [decision, below of=start] (dcs) { condición };
+    \node [stmt, below of=dcs] (true) { caso verdadero };
+    \node [stmt, right of=true, node distance=7em] (false) { caso falso };
+    \node [below of=true] (end) { };
+
+    \path [conn] (start) -- (dcs);
+    \path [conn] (dcs) --
+                 node[very near start] { sí }
+                 (true);
+    \path [conn] (true) -- (end);
+    \path [conn] (dcs.east) -|
+                 node[very near start] { no }
+                 (false.north);
+    \path [conn] (false.south) |-
+                 ($ (true.south)!.5!(end.north) $);
+\end{tikzpicture}
+\end{document}

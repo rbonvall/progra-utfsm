@@ -1,0 +1,37 @@
+\documentclass{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\begin{tikzpicture}[scale=.5]
+
+  \newcommand\circulo[5]{
+    \node[fill=#4, inner sep=1pt] (p1) at (#1, #2) {};
+    \draw[very thick, #4] (p1) circle (#3 cm);
+    \edef\dist{.5 + #3}
+    \node[#4] at ([shift=(130:\dist)] p1) {#5};
+  }
+
+  \draw[gray] (0, 0) grid (20, 16);
+  \foreach\x in {0,...,20}
+    \node[gray, anchor=north] at (\x, -.1) {\x};
+  \foreach\y in {0,...,16}
+    \node[gray, anchor=east] at (-.1, \y) {\y};
+
+  \circulo{5}{4}{3}{blue!30!black}{A}
+  \circulo{8}{6}{2}{blue!50!black}{B}
+
+  \circulo{8.4}{12.7}{3}{red!30!black}{C}
+  \circulo{8}{12}{2}{red!50!black}{D}
+
+  \circulo{16}{7.8}{2.7}{green!30!black}{E}
+  \circulo{15.5}{2.7}{2.1}{green!50!black}{F}
+
+\end{tikzpicture}
+
+\end{document}
+

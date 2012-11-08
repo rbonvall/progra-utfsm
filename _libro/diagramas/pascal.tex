@@ -1,0 +1,42 @@
+\documentclass[dvipsnames]{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows}
+\PreviewEnvironment{tikzpicture}
+
+\begin{document}
+\begin{tikzpicture}[xscale=1.2, yscale=0.8]
+
+  % Thanks to Paul Gaborit for this code.
+  % http://www.texample.net/tikz/examples/pascals-triangle-and-sierpinski-triangle/
+
+  % Pascal's triangle
+  % row #0 => value is 1
+  \node (p-0-0) at (0,0) {1};
+  \foreach \row in {1,...,6} {
+     % col #0 => value is 1
+    \node (p-\row-0) at (-\row/2,-\row) {1};
+    \pgfmathsetmacro{\value}{1};
+    \foreach \col in {1,...,\row} {
+      % iterative formula : val = precval * (row-col+1)/col
+      % (+ 0.5 to bypass rounding errors)
+      \pgfmathtruncatemacro{\value}{\value*((\row-\col+1)/\col)+0.5};
+      \global\let\value=\value
+      % position of each value
+      \coordinate (pos) at (-\row/2+\col,-\row);
+      \node (p-\row-\col) at (pos) {\value};
+      % for arrows and plus sign
+      \ifnum \col<\row
+        \node[Red, above=0mm of p-\row-\col]{+};
+        \pgfmathtruncatemacro{\prow}{\row-1}
+        \pgfmathtruncatemacro{\pcol}{\col-1}
+        \draw[Red, -latex'] (p-\prow-\pcol) -- (p-\row-\col);
+        \draw[Red, -latex'] (p-\prow-\col) -- (p-\row-\col);
+      \fi
+    }
+  }
+
+\end{tikzpicture}
+\end{document}
+

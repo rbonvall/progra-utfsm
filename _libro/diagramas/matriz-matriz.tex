@@ -1,0 +1,63 @@
+
+\documentclass{article}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations,shapes}
+\PreviewEnvironment{tikzpicture}
+
+\def\P{\phantom{-}}
+\def\M{-}
+
+\begin{document}
+\tikzstyle{n}=[]%[xshift=.5cm, yshift=.5cm]
+\tikzstyle{r}=[font=\footnotesize, anchor=west]%[xshift=.5cm, yshift=.5cm]
+\tikzstyle{m}=[execute at begin cell=\node\bgroup, execute at end cell=\egroup;]
+\tikzstyle{c}=[red!80!black, thick, rounded corners]
+\begin{tikzpicture}[scale=.5, xscale=1.5]
+
+  \begin{scope}
+    \node[n] at (-0.5, 1.5){\texttt{a =}};
+    \draw (0, 0) grid (2, 3);
+
+    \node at (0.5, 2.5) {\(\P2\)}; \node at (1.5, 2.5) {\(\P8\)};
+    \node at (0.5, 1.5) {\(\M3\)}; \node at (1.5, 1.5) {\(\P7\)};
+    \node at (0.5, 0.5) {\(\M8\)}; \node at (1.5, 0.5) {\(\M5\)};
+
+    \draw[c] (0.1, 1.1) rectangle (1.9, 1.9);
+    \node (a1) at (1.8, 1.5) {};
+  \end{scope}
+
+  \begin{scope}[yshift=4cm, xshift=2.5cm]
+    \node[n] at (-0.5, 1){\texttt{b =}};
+    \draw (0, 0) grid (4, 2);
+
+    \node at (0.5, 1.5) {\(\M3\)}; \node at (1.5, 1.5) {\(\M5\)}; \node at (2.5, 1.5) {\(\M6\)}; \node at (3.5, 1.5) {\(\M3\)};
+    \node at (0.5, 0.5) {\(\M9\)}; \node at (1.5, 0.5) {\(\M2\)}; \node at (2.5, 0.5) {\(\P3\)}; \node at (3.5, 0.5) {\(\M3\)};
+
+    \draw[c] (1.1, 0.1) rectangle (1.9, 1.9);
+    \node (x) at (1.5, 0.3) {};
+  \end{scope}
+
+  \begin{scope}[yshift=0cm, xshift=2.5cm, blue!50!black]
+    %\node[n] at (-0.4, 0.5){\texttt{x =}};
+    \draw (0, 0) grid (4, 3);
+
+    \node at (0.5, 2.5) {\(\M78\)}; \node at (1.5, 2.5) {\(\M26\)}; \node at (2.5, 2.5) {\(\P12\)}; \node at (3.5, 2.5) {\(\M30\)};
+    \node at (0.5, 1.5) {\(\M54\)}; \node at (1.5, 1.5) {\(\P 1\)}; \node at (2.5, 1.5) {\(\P39\)}; \node at (3.5, 1.5) {\(\M12\)};
+    \node at (0.5, 0.5) {\(\P69\)}; \node at (1.5, 0.5) {\(\P50\)}; \node at (2.5, 0.5) {\(\P33\)}; \node at (3.5, 0.5) {\(\P39\)};
+
+    \draw[c] (1.05, 1.1) rectangle (1.95, 1.9);
+    \node[anchor=center] (b1l) at (1.1, 1.5) {};
+    \node[anchor=center] (b1t) at (1.5, 1.8) {};
+  \end{scope}
+
+  \draw[-latex', c, out=10,   in=170] (a1) to (b1l);
+  \draw[-latex', c, out=-100, in=100] (x) to (b1t);
+
+
+\end{tikzpicture}
+\end{document}
+
