@@ -74,7 +74,7 @@ Teniendo los valores de \(a\), \(b\) y \(c\), calcular el discriminante
 tiene soluciones reales. Si es discriminante es igual a cero, entonces
 la ecuación tiene una única solución real, que es \(x = -b/2a\). Si el
 discriminante es positivo, entonces la ecuación tiene dos soluciones
-reales, que son \(x_1 = (-b - \sqrt{D})/2a\) y \(x_2 = (-b + \sqrt{D})/2a\).
+reales, que son \(x_1 = (-b - \sqrt{\Delta})/2a\) y \(x_2 = (-b + \sqrt{\Delta})/2a\).
 \end{quote}
 
 Esta manera de expresar un algoritmo no es ideal, ya que el lenguaje
@@ -101,9 +101,16 @@ algoritmo puede usar el nombre \(\Delta\) para referirse al valor calculado.
 
 Un \textbf{diagrama de flujo} es una representación gráfica de un
 algoritmo. Los pasos son representados por varios tipos de bloques, y el
-flujo de ejecución es indicado por flechas que conectan los bloques:
+flujo de ejecución es indicado por flechas que conectan los bloques,
+tal como se muestra en la figura~\ref{fig:diagrama-flujo-cuadratica}.
 
-%\includegraphics{../diagramas/cuadratica.png}
+\begin{figure}
+  \centering
+  \input{diagramas/cuadratica}
+  \caption{Diagrama de flujo del algoritmo para resolver
+    la ecuación cuadrática \(ax^2 + bx + c = 0\).}
+  \label{fig:diagrama-flujo-cuadratica}
+\end{figure}
 
 El inicio y el final del algoritmo son representados con bloques
 circulares. El algoritmo siempre debe ser capaz llegar desde uno hasta
@@ -135,34 +142,39 @@ código que finalmente se escribirá en el computador, el pseudocódigo
 está pensado para ser leído por humanos.
 
 Una manera de escribir el algoritmo para la ecuación cuadrática en
-pseudocódigo es la siguiente:
+pseudocódigo es la que se muestra en la figura~\ref{fig:pseudocodigo-cuadratica}.
 
-%\begin{verbatim}
-%leer a
-%leer b
-%leer c
-%
-%discriminante = b² - 4ac
-%
-%si discriminante < 0:
-%    escribir 'La ecuación no tiene soluciones reales'
-%
-%o si no, si discriminante = 0:
-%    x = -b / 2a
-%    escribir 'La solución única es', x
-%
-%o si no:
-%    x1 = (-b - √discriminante) / 2a
-%    x2 = (-b + √discriminante) / 2a
-%    escribir 'Las dos soluciones reales son:'
-%    escribir x1
-%    escribir x2
-%\end{verbatim}
+\begin{figure}
+  \centering
+  \begin{verse}
+    \textbf{leer} \(a\)\\
+    \textbf{leer} \(b\)\\
+    \textbf{leer} \(c\)
 
-Las líneas que comienzan con \lstinline!leer! y \lstinline!escribir!
+    \(\text{discriminante} = b^2 - 4ac\)
+
+    \textbf{si} \(\text{discriminante} < 0\):\\
+        \textbf{escribir} ``La ecuación no tiene soluciones reales''
+
+    \textbf{o si no, si} \(\text{discriminante} = 0\):\\
+        \(x = -b / 2a\)\\
+        \textbf{escribir} ``La solución única es'', \(x\)
+
+    \textbf{o si no}:\\
+        \(x_1 = (-b - \sqrt{\text{discriminante}}) / 2a\)\\
+        \(x_2 = (-b + \sqrt{\text{discriminante}}) / 2a\)\\
+        \textbf{escribir} ``La primera solución real es:'', \(x_1\)\\
+        \textbf{escribir} ``La segunda solución real es:'', \(x_2\)
+  \end{verse}
+  \caption{Pseudocódigo del algoritmo para resolver
+    la ecuación cuadrática \(ax^2 + bx + c = 0\).}
+  \label{fig:pseudocodigo-cuadratica}
+\end{figure}
+
+Las líneas que comienzan con \textbf{leer} y \textbf{escribir}
 denotan, respectivamente, la entrada y la salida del programa. Los
-diferentes casos son representados usando sentencias \lstinline!si! y
-\lstinline!o si no!. Las asignaciones siguen la misma notación que en el
+diferentes casos son representados usando sentencias \textbf{si} y
+\textbf{o si no}. Las asignaciones siguen la misma notación que en el
 caso de los diagramas de flujo.
 
 La notación de pseudocódigo es bien liberal. Uno puede mezclar notación
@@ -183,6 +195,7 @@ En esta asignatura, usaremos el lenguaje de programación
 
 El código en Python para resolver la ecuación cuadrática es el
 siguiente:
+\lstinputlisting[language=py]{../_static/programas/cuadratica.py}
 
 A partir de ahora, usted aprenderá a entender, escribir y ejecutar
 códigos como éste.
