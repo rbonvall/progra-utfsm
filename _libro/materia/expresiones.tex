@@ -1,7 +1,7 @@
 \chapter{Expresiones}
 
 Una \textbf{expresión} es una combinación de valores y operaciones que,
-al ser evaluados, entregan un valor.
+al ser evaluados, entregan un valor como resultado.
 
 Algunos elementos que pueden formar parte de una expresión son: valores
 \textbf{literales} (como \lstinline!2!, \lstinline!"hola"! o
@@ -172,7 +172,7 @@ Algunas operaciones relacionales son:
   el \textbf{menor o igual que} \lstinline!<=!;
 \end{itemize}
 
-Algunos ejemplos en la consola interactiva:
+Algunos ejemplos en la consola:
 
 \begin{lstlisting}
 >>> a = 5
@@ -188,7 +188,7 @@ True
 True
 \end{lstlisting}
 
-Los operadores relacionales pueden ser encadenados, como se usa en
+Los operadores relacionales pueden ser encadenados, tal como se acostumbra en
 matemáticas, de la siguiente manera:
 
 \begin{lstlisting}
@@ -200,10 +200,12 @@ False
 \end{lstlisting}
 
 La expresión \lstinline!0 < x <= 10! es equivalente a
-\lstinline!(0 < x) and (x <= 10)!
+\lstinline!(0 < x) and (x <= 10)!.
 
 \subsection{Operaciones lógicas}
 
+% TODO: encerrar celdas en \lstinline.
+% Revisar este tip: http://tex.stackexchange.com/a/59788/341
 \begin{table}
   \centering
   \begin{tabular}{*{5}{l}}
@@ -466,7 +468,7 @@ Al igual que en matemáticas, las funciones tienen un nombre, y reciben
 después del nombre. La operación de usar la función para obtener un
 resultado se llama \textbf{llamar la función}.
 
-Ya conocemos la función \lstinline!raw_input()!, que entrega como
+Ya conocemos la función \lstinline!raw_input!, que entrega como
 resultado el texto ingresado por el usuario mediante el teclado.
 
 La función \lstinline!abs! entrega el valor absoluto de su argumento:
