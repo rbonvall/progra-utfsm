@@ -1,0 +1,77 @@
+(Esta pregunta es la continuación de la anterior).
+
+Escriba la función \li!combinar_mapas(ma, mb)!,
+que reciba como parámetros dos mapas
+como los descritos en la pregunta anterior,
+y retorne un nuevo mapa que incluya
+todas las ciudades y todos los caminos
+de ambos mapas.
+
+\begin{tikzpicture}[xscale=.75, yscale=.6]
+  \newcommand\ciudad[3]{%
+    \node[draw, circle] (#1) at (#2, #3) {#1};%
+  }
+  \newcommand\camino[2]{%
+    \draw (#1) -- (#2);%
+  }
+  \def\ciudadesMapaUno{
+    \ciudad{A}{0}{2}
+    \ciudad{H}{1}{0}
+  }
+  \def\caminosMapaUno{
+    \camino{A}{B}
+    \camino{A}{H}
+    \camino{D}{H}
+    \camino{E}{H}
+  }
+  \def\ciudadesMapaDos{
+    \ciudad{F}{5}{4}
+    \ciudad{G}{5}{2}
+  }
+  \def\caminosMapaDos{
+    \camino{B}{F}
+    \camino{D}{E}
+    \camino{D}{F}
+    \camino{D}{G}
+    \camino{F}{G}
+  }
+  \def\ciudadesMapaAmbos{
+    \ciudad{B}{2}{4}
+    \ciudad{D}{3}{2}
+    \ciudad{E}{3}{0}
+  }
+  \def\caminosMapaAmbos{
+    \camino{B}{D}
+  }
+  \def\yLey{-1.7}
+
+  % mapa 1
+  \begin{scope}
+    \ciudadesMapaUno
+    \ciudadesMapaAmbos
+    \caminosMapaUno
+    \caminosMapaAmbos
+    \node[anchor=center] at (1.5, \yLey) {Mapa 1.};
+  \end{scope}
+
+  % mapa 2
+  \begin{scope}[xshift=5cm]
+    \ciudadesMapaDos
+    \ciudadesMapaAmbos
+    \caminosMapaDos
+    \caminosMapaAmbos
+    \node[anchor=center] at (3.0, \yLey) {Mapa 2.};
+  \end{scope}
+
+  % mapa combinado
+  \begin{scope}[xshift=16cm]
+    \ciudadesMapaUno
+    \ciudadesMapaDos
+    \ciudadesMapaAmbos
+    \caminosMapaUno
+    \caminosMapaDos
+    \caminosMapaAmbos
+    \node[anchor=center] at (3.0, \yLey) {Mapa combinado.};
+  \end{scope}
+\end{tikzpicture}
+

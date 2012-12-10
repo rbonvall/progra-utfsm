@@ -1,0 +1,11 @@
+Cuantos dias? `4`
+Dia 1: `491.4`
+Dia 2: `493.2`
+Dia 3: `488.1`
+Dia 4: `494.9`
+El promedio fue 491.9
+Hubo 3 precios mayores que 490
+Hubo 2 alzas
+El precio mayor fue 494.9
+La mayor de las alzas fue 6.8
+

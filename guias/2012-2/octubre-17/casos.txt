@@ -1,0 +1,47 @@
+# PARTIDO ANOCHE
+>>> from eliminatoria import partidos
+>>> p = ('Chile', 'Argentina')
+>>> partidos[p]
+((2012, 10, 16), (1, 2))
+
+# FIN PARTIDO ANOCHE
+
+# PARTIDO FUTURO
+>>> p = ('Colombia', 'Peru')
+>>> partidos[p]
+((2013, 6, 10), None)
+
+# FIN PARTIDO FUTURO
+
+# CONTAR
+>>> contar_partidos(partidos)
+72
+# FIN CONTAR
+
+# EQUIPOS
+>>> obtener_equipos(partidos)
+['Argentina', 'Bolivia', 'Chile', 'Colombia', 'Ecuador',
+'Paraguay', 'Peru', 'Uruguay', 'Venezuela']
+# FIN EQUIPOS
+
+# FECHAS
+>>> obtener_fechas(partidos)
+[(2011, 10, 7), (2011, 10, 11), (2011, 11, 11), (2011, 11, 15), ...]
+# FIN FECHAS
+
+# PUNTOS
+>>> calcular_puntos(partidos, 'Chile')
+12
+# FIN PUNTOS
+
+# DIFERENCIA
+>>> calcular_diferencia(partidos, 'Chile')
+-4
+# FIN DIFERENCIA
+
+# ORDENAR
+>>> ordenar_equipos(partidos)
+['Argentina', 'Ecuador', 'Colombia', 'Venezuela', 'Uruguay',
+'Chile', 'Bolivia', 'Peru', 'Paraguay']
+# FIN ORDENAR
+

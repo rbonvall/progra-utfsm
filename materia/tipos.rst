@@ -64,7 +64,7 @@ Esto puede conducir a resultados algo sorpresivos::
 Los números reales literales
 se escriben separando la parte entera de la decimal
 con un punto.
-Las partes entera y decimal pueden ser omitida
+Las partes entera y decimal pueden ser omitidas
 si alguna de ellas es cero::
 
     >>> 881.9843000

@@ -1,0 +1,89 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{fullpage}
+
+\input{../../latex/definiciones.tex}
+
+\lstset{language=file,frame=single}
+
+\begin{document}
+  \thispagestyle{empty}
+  \section*{Miércoles 7 de noviembre}
+
+  El archivo \texttt{curso.txt} contiene los datos
+  de los estudiantes de un curso.
+  Cada línea corres\-ponde a un estudiante,
+  y contiene varios datos separados por dos puntos («\verb+:+»)
+  como en el siguiente ejemplo:
+  \begin{verbatim}Martin:Soto:1990/8/24:39:86:22:56:30\end{verbatim}
+
+  Los dos primeros datos son el nombre y el apellido.
+  A continuación está la fecha de nacimiento
+  en formato \texttt{año/mes/día}.
+  Finalmente, están las cinco notas obtenidas por el estudiante.
+
+  \begin{enumerate}[leftmargin=0pt]
+
+    \item
+      Escriba un programa llamado \texttt{clasificar.py} que,
+      a partir de los datos de \texttt{curso.txt}, genere dos archivos
+      llamados \texttt{aprobados.txt} y \texttt{reprobados.txt},
+      que tengan los datos de los estudiantes aprobados y reprobados,
+      respectivamente,
+      usando el formato \texttt{nombre:apellido:promedio}.
+      Por ejemplo,
+      las primeras líneas de \texttt{aprobados.txt} serían éstas:
+      \lstinputlisting[linerange=-5]{aprobados.txt}
+
+    \item
+      Escriba un programa que
+      cree un nuevo archivo llamado \texttt{promedios.txt},
+      que tenga los promedios y el estado de aprobación
+      de los estudiantes.
+
+      Las primeras líneas del archivo debe verse así:
+      \lstinputlisting[linerange=-10]{promedios.txt}
+
+      Note que los promedios están alineados a la derecha.
+      Puede usar la siguiente plantilla para lograr esto
+      usando el método \li!.format(...)!:
+      \begin{lstlisting}[language=py,frame=none]
+plantilla = '{0:20} {1:>4} {2}\n'
+      \end{lstlisting}
+
+      \newpage
+
+    \item
+      Escriba el programa \texttt{reporte.py}
+      que muestre la siguiente información por pantalla:
+      \lstinputlisting[language=testcase]{reporte.txt}
+
+    \item
+      Escriba el programa \texttt{pagina\_web.py}
+      que genere el archivo \texttt{curso.html},
+      cuyo contenido sea como el siguiente:
+      \lstinputlisting[basicstyle=\small\ttfamily]{ejemplo.html}
+      (Por brevedad aquí sólo se muestra los primeros dos estudiantes;
+      usted debe agregarlos todos).
+      Los datos listados son:
+      el nombre completo,
+      las notas de los cinco certámenes
+      y el promedio final (encerrado entre \verb+<b>+ y \verb+</b>+).
+
+      El archivo generado es una página web.
+      Arrástrelo a su navegador favorito
+      para verificar que fue creado correctamente.
+
+  \end{enumerate}
+
+
+\end{document}
+

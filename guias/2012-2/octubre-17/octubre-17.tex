@@ -1,0 +1,148 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{fullpage}
+
+\input{../../latex/definiciones.tex}
+
+\lstset{language=py}
+
+\begin{document}
+  \thispagestyle{empty}
+  \section*{Miércoles 17 de octubre}
+
+  Es posible que usted haya notado
+  que la selección chilena de fútbol
+  está participando de la eliminatoria
+  para el próximo mundial.
+  Hoy vamos a escribir código
+  para analizar algunas estadísticas de esta competencia.
+  (No es necesario que le guste o que sepa algo de fútbol;
+  la programación nos entrega ya suficiente entretención).
+
+  La eliminatoria es un torneo en el que participan
+  nueve equipos, cada uno representando a un país sudamericano.
+  En cada partido juegan dos equipos.
+  El equipo que juega en su propio país se llama el \emph{local}
+  y el otro se llama la \emph{visita}.
+  Siempre se nombra primero al equipo local;
+  por ejemplo,
+  el partido Chile--Argentina es el que se jugó en Santiago,
+  no el que se jugó en Buenos Aires.
+
+  Para representar los datos de un torneo como éste,
+  usaremos un diccionario cuyas llaves son los partidos.
+  Cada partido es una tupla con los nombres de ambos equipos;
+  por ejemplo, \li!('Chile', 'Argentina')!.
+
+  El valor asociado a cada llave es una tupla que tiene dos valores:
+  la fecha del partido y su resultado.
+  La fecha, a su vez, es una tupla \li!(anno, mes, dia)!,
+  y el resultado es una tupla \li!(gl, gv)!
+  con los goles que anotó cada equipo.
+  Si el partido aún no se juega,
+  el resultado aparece reemplazado por el valor \li!None!.
+
+  Como ejemplo, veamos los datos del partido de anoche:
+  \lstinputlisting[linerange=PARTIDO\ ANOCHE-FIN\ PARTIDO\ ANOCHE]{casos.txt}
+
+  Veamos también un partido del próximo año:
+  \lstinputlisting[linerange=PARTIDO\ FUTURO-FIN\ PARTIDO\ FUTURO]{casos.txt}
+
+  El diccionario de partidos está almacenado
+  en la variable \li!partidos!,
+  en un módulo llamado \li!eliminatoria.py!.
+
+  Su equipo debe desarrollar un módulo llamado \li!torneos.py!,
+  que contenga las funciones requeridas a continuación.
+  Todas las funciones reciben como primer parámetro
+  el diccionario de partidos.
+
+  Los ejemplos suponen que el diccionario \li!partidos!
+  ya ha sido importado del módulo \li!eliminatoria.py!.
+  \newpage
+
+  \begin{enumerate}[leftmargin=0pt]
+
+    \item
+      La función \li!contar_partidos(partidos)!
+      debe retornar la cantidad total de partidos
+      que hay en el torneo.
+      \lstinputlisting[linerange=CONTAR-FIN\ CONTAR]{casos.txt}
+
+    \item
+      La función \li!obtener_equipos(partidos)!
+      debe retornar una lista con todos los equipos
+      que participan en el torneo,
+      sin repetir y en orden alfabético.
+      \lstinputlisting[linerange=EQUIPOS-FIN\ EQUIPOS]{casos.txt}
+
+    \item
+      La función \li!obtener_fechas(partidos)!
+      debe retornar una lista con todas las fechas
+      en que hay partidos,
+      sin repetir y en orden cronológico.
+      \lstinputlisting[linerange=FECHAS-FIN\ FECHAS]{casos.txt}
+
+    \item
+      El equipo que gana un partido recibe tres puntos,
+      y el que pierde no recibe ninguno.
+      Si hay un empate,
+      ambos reciben un punto.
+      La función \li!calcular_puntos(partidos, equipo)!
+      debe retornar la cantidad total de puntos
+      obtenidos por el \li!equipo! en el torneo.
+      \lstinputlisting[linerange=PUNTOS-FIN\ PUNTOS]{casos.txt}
+
+    \item
+      La \emph{diferencia de goles} de un equipo
+      es el total de goles que anotó
+      menos el total de los que le anotaron.
+      La función \li!calcular_diferencia(partidos, equipo)!
+      debe retornar la diferencia de goles
+      del \li!equipo! en el torneo.
+      \lstinputlisting[linerange=DIFERENCIA-FIN\ DIFERENCIA]{casos.txt}
+
+    \item
+      Para decidir qué equipos clasifican al mundial,
+      ellos son ordenados por puntaje.
+      En caso de que dos equipos tengan el mismo puntaje,
+      el que tiene la mejor diferencia de goles tiene preferencia.
+
+      La función \li!ordenar_equipos(partidos)!
+      debe entregar la lista de equipos ordenada
+      según este criterio.
+      \lstinputlisting[linerange=ORDENAR-FIN\ ORDENAR]{casos.txt}
+
+      \textbf{Palta:}
+      para ordenar los equipos por puntaje y luego por diferencia de gol,
+      podemos aprovechar que las tuplas son ordenadas siempre
+      en orden lexicográfico.
+      Los pasos para lograr este ordenamiento son los siguientes:
+      \begin{enumerate}
+        \item
+          crear una lista de tuplas \li!(puntaje, diferencia, equipo)!,
+        \item
+          ordenar esta lista,
+        \item
+          sacar ordenadamente el último elemento de cada tupla,
+          e ir metiéndolos en una nueva lista.
+      \end{enumerate}
+      Como la primera lista tiene tuplas,
+      éstas serán ordenadas primero por puntaje
+      y luego por diferencia de gol.
+      Por lo tanto,
+      al extraer los equipos en el mismo orden,
+      tendremos lo que estábamos buscando.
+  \end{enumerate}
+
+\end{document}
+

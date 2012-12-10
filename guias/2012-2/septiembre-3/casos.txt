@@ -1,0 +1,36 @@
+# C1
+Ingrese n: `9`
+Los primeros 9 numeros de Fibonacci son:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+# FIN C1
+
+# C2
+Ingrese m: `10`
+Los numeros de Fibonacci menores que 10 son:
+0
+1
+1
+2
+3
+5
+8
+# FIN C2
+
+# C3
+Ingrese m: `6765`
+6765 es un numero de Fibonacci
+# FIN C3
+
+# C4
+Ingrese m: `142857`
+142857 no es un numero de Fibonacci
+# FIN C4
+

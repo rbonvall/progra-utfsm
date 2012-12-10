@@ -1,0 +1,20 @@
+# DISTANCIA
+>>> a = (0, 4)
+>>> b = (4, 1)
+>>> distancia(a, b)
+5.0
+# FIN DISTANCIA
+
+# LADOS
+>>> mi_poligono = [(1, 1), (5, 8), (3, 2)]
+>>> numero_de_lados(mi_poligono)
+3
+# FIN LADOS
+
+# PERIMETRO
+>>> a = [(-1, 1), (-2, 4), (5, 5), (4, 1)]
+>>> calcular_perimetro(a)
+19.356451097651515
+# FIN PERIMETRO
+
+

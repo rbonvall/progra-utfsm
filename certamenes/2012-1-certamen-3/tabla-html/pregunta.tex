@@ -1,0 +1,101 @@
+Una \emph{página web}
+es simplemente un archivo de texto
+escrito en un lenguaje llamado HTML\@.
+Este lenguaje consiste en etiquetas
+que van intercaladas en el texto
+para describir las distintas partes de un documento.
+
+\newcommand\lh{\li[language=html]}
+
+\begin{minipage}[t]{0.7\textwidth}
+  \parskip=1ex
+  Las \emph{tablas} son uno de los componentes
+  que pueden ser parte de una página web.
+  Por ejemplo,
+  la siguiente es una tabla de tres filas,
+  cada una de las cuales tiene tres celdas:
+
+  \vspace{1ex}
+  \hfil
+  \begin{tabular}{|l|r|r|}  \hline
+    Manzana &  7 & \$615 \\ \hline
+    Uva     & 10 & \$399 \\ \hline
+    Kiwi    &  2 & \$471 \\ \hline
+  \end{tabular}
+  \vspace{1ex}
+  \hfill
+
+  En un archivo HTML,
+  el inicio de una tabla se marca con la etiqueta \lh!<table>!,
+  y el final con \lh!</table>!.
+  Cada fila comienza con la etiqueta \lh!<tr>!
+  y termina con \lh!</tr>!.
+  El contenido de cada celda va encerrado entre las etiquetas
+  \lh!<td>! y \lh!</td>!.
+
+  Nuestra tabla de frutas se escribiría en HTML
+  como se muestra en el ejemplo de la derecha.
+  Si uno abre este archivo en un navegador web,
+  la tabla aparecería tal como se ve más arriba.
+
+  Evidentemente,
+  escribir una tabla directamente en HTML resulta muy tedioso.
+  Una estrategia más sencilla es crear la tabla en una planilla de cálculo
+  (como MS Excel)
+  y guardarla en formato CSV (valores separados por comas).
+  Al hacer esto,
+  la tabla queda guardada en un archivo como el mostrado abajo a la derecha.
+
+  Aunque no tengan la extensión \verb!.txt!,
+  los archivos HTML y CSV sí son de texto plano,
+  y por lo tanto es sencillo y conveniente escribir programas
+  que lean y escriban en estos formatos.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth}
+  Archivo \verb+frutas.html+:
+  \lstinputlisting[language=html,frame=single]{tabla-html/frutas-ejemplo.html}
+
+  Archivo \verb+frutas.csv+:
+  \lstinputlisting[frame=single]{tabla-html/frutas.csv}
+\end{minipage}
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+
+  \item
+    Escriba la función \li!convertir_csv_a_html(tabla)!
+    que convierta un archivo CSV a otro HTML\@.
+    El parámetro es el nombre del archivo sin la extensión.
+    Por ejemplo,
+    la siguiente llamada crea el archivo \verb!frutas.html!
+    a partir de los datos del archivo \verb!frutas.csv!:
+    \lstinputlisting[linerange=CASO\ 1-FIN\ CASO\ 1]{tabla-html/programa.py}
+
+    La función no debe retornar nada; sólo debe crear el archivo.
+
+  \item
+    Escriba la función \li!obtener_tamano(archivo_html)!
+    que retorne una tupla \li!(m, n)!
+    con el número de filas y el número de columnas
+    que tiene una tabla HTML.
+    \lstinputlisting[linerange=CASO\ 2-FIN\ CASO\ 2]{tabla-html/programa.py}
+
+    Suponga que, al igual que en el archivo de ejemplo,
+    las etiquetas \lh!<table>!, \lh!</table>!, \lh!<tr>! y \lh!</tr>!
+    siempre ocupan una línea completa,
+    y que las etiquetas \lh!<td>! y \lh!</td>!
+    están en la misma línea del valor al que rodean.
+    Ademas,
+    suponga que todas las filas tienen
+    la misma cantidad de celdas.
+
+  \item
+    Escriba la función \li!obtener_precio(fruta)! que
+    retorne el precio de la fruta pasada como parámetro:
+    \lstinputlisting[linerange=CASO\ 3-FIN\ CASO\ 3]{tabla-html/programa.py}
+
+    La función debe buscar los datos en el archivo \verb!frutas.csv!.
+    Si la fruta no está en el archivo,
+    la función debe retornar \li!None!.
+
+\end{enumerate}

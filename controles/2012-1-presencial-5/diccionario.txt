@@ -1,0 +1,6 @@
+avion (s): vehiculo que vuela.
+comer (v): ingerir alimentos.
+hacha (s): herramienta cortadora.
+perro (s): animal de cuatro patas.
+saltar (v): despegarse del piso.
+taza (s): vasija con asa.

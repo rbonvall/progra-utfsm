@@ -1,0 +1,155 @@
+\documentclass[12pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{enumitem}
+
+\input{../../latex/definiciones.tex}
+\lstset{language=py}
+\setlist[enumerate]{
+  labelindent=-.5in,%
+  leftmargin=0pt,%
+  labelsep=1em%
+}
+
+\parskip 1ex
+\parindent 0pt
+
+\begin{document}
+  \pagestyle{empty}
+  \thispagestyle{empty}
+
+  \part*{Control 3, miércoles 1--2}
+  \newpage
+
+  La Asociación de Tsunamología mide el nivel de las mareas
+  en varias ciudades del país,
+  y estima la probabilidad de que haya un tsunami
+  calculando qué porcentaje de esas mediciones
+  supera un umbral definido para cada ciudad.
+
+  \begin{enumerate}
+    \item
+      Escriba la función \li!probabilidad_tsunami(mareas, umbral)!,
+      cuyos parámetros son la lista de mediciones de mareas
+      y el umbral de una ciudad,
+      que retorne el porcentaje de probabilidad estimada
+      de que haya tsunami en esa ciudad.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{miercoles-1-2.py}
+
+    \item
+      El alcalde de Valparaíso decidió que se evacuaría la ciudad
+      si la probabilidad de tsunami supera el 32\%.
+      El umbral de mareas para Valparaíso es 270.0.
+
+      Escriba la función \li!hay_que_evacuar(mareas)!,
+      que reciba como parámetro la lista de mediciones de mareas,
+      y que retorne un valor booleano
+      indicando si se debe o no evacuar Valparaíso.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{miercoles-1-2.py}
+  \end{enumerate}
+  \newpage
+
+  \part*{Control 3, miércoles 3--4}
+  \newpage
+  En el básquetbol hay tres tipos de anotaciones:
+  el tiro libre (\li!'L'!), que vale un punto;
+  el doble (\li!'D'!), que vale dos puntos; y
+  el triple (\li!'T'!), que vale tres puntos.
+
+  \begin{enumerate}
+    \item
+      Escriba la función \li!calcular_puntaje(anotaciones)!,
+      cuyo parámetro es la lista de las anotaciones
+      de un equipo durante un partido,
+      que retorne el puntaje obtenido por el equipo.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{miercoles-3-4.py}
+
+    \item
+      Escriba la función \li!ganador_partido(anotaciones_a, anotaciones_b)!,
+      que reciba como parámetros las listas de anotaciones
+      de los equipos A y B,
+      y que retorne el nombre del equipo ganador.
+      En caso de empate,
+      debe retornar \li!'Empate'!.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{miercoles-3-4.py}
+  \end{enumerate}
+  \newpage
+
+  \part*{Control 3, jueves 1--2}
+  \newpage
+  El carioca es un juego de naipes típico de Chile.
+  Cada jugador recibe una mano de varias cartas,
+  numeradas del 1 al 13.
+
+  Cuando un jugador tiene tres cartas con el mismo número,
+  se dice que tiene un trío.
+
+  \begin{enumerate}
+    \item
+      Escriba la función \li!contar_valores(cartas)!,
+      que reciba como parámetro una lista de cartas,
+      y retorne una lista de tamaño 13
+      con las cantidades de veces que aparece cada número.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{jueves-1-2.py}
+
+    \item
+      Escriba la función \li!tiene_trio(cartas)!
+      que retorne un valor booleano
+      indicando si la lista \li!cartas! tiene o no un trío.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{jueves-1-2.py}
+
+  \end{enumerate}
+  \newpage
+
+  \part*{Control 3, jueves 3--4}
+  \newpage
+
+  Un vendedor sale de Santiago
+  para hacer varios viajes.
+  Los viajes hacia el norte
+  se representan con kilometrajes positivos,
+  y hacia el sur con kilometrajes negativos.
+
+  \begin{enumerate}
+    \item
+      Escriba la función \li!distancia_recorrida(viajes)!,
+      que reciba como parámetro la lista de viajes,
+      y que retorne la distancia total recorrida por el vendedor.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{jueves-3-4.py}
+
+    \item
+      Escriba la función \li!llego_de_regreso(viajes)!,
+      que reciba como parámetro la lista de viajes,
+      y que retorne un valor booleano
+      que indique si después de los viajes
+      el vendedor llegó o no de regreso al lugar de partida.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{jueves-3-4.py}
+  \end{enumerate}
+
+\end{document}
+

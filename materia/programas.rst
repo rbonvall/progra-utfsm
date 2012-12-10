@@ -78,7 +78,7 @@ y su sistema operativo.
 .. _página de descargas de Python: http://www.python.org/download/
 ..
 
-La versión que debe instalar es la **2.7.1**, no la 3.1.3.
+La versión que debe instalar es la **2.7.3**, no la 3.2.3.
 
 No use los instaladores que dicen ``x86-64``
 a no ser que esté seguro que su computador

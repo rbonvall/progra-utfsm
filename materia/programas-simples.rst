@@ -64,7 +64,7 @@ aparece la expresión ``(f - 32.0) * (5.0 / 9.0)``,
 cuyo resultado depende de cuál es el valor de ``f``
 al momento de la evaluación.
 A diferencia de los valores literales,
-`f` es una **variable**.
+`f` es una **variable**
 que tiene un valor específico que puede ser distinto
 cada vez que la expresión es evaluada.
 
@@ -269,7 +269,7 @@ no quedan más sentencias para ejecutar,
 por lo que el programa se cierra.
 
 Existen otras maneras de ejecutar programas
-con las que este problema no ocurre..
+con las que este problema no ocurre.
 Por ejemplo, al ejecutar un programa desde una IDE,
 generalmente la salida aparece en una ventana que no se cierra.
 

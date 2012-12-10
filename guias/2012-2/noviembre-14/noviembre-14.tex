@@ -1,0 +1,65 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{fullpage}
+\usepackage{graphicx}
+
+\input{../../latex/definiciones.tex}
+
+\lstset{language=file,frame=single}
+
+\begin{document}
+  \thispagestyle{empty}
+  \section*{Miércoles 14 de noviembre}
+
+  El profesor Rogelio Bombal desea publicar una página web
+  con los cumpleaños de los alumnos de Programística.
+
+  Escriba el programa \texttt{cumples.py},
+  que genere el archivo \texttt{cumples.html}.
+  El contenido de este archivo debe seguir la estructura
+  del ejemplo de más abajo.
+  (Por limitaciones de espacio,
+  aquí aparecen sólo los cumpleaños de los dos primeros meses.
+  Su programa debe incluírlos todos).
+
+  \begin{minipage}[T]{.40\textwidth}
+    \includegraphics[width=\textwidth]{cumples.png}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[T]{.55\textwidth}
+    Archivo \texttt{cumples.html}:
+    \lstinputlisting[basicstyle=\small\ttfamily]{ejemplo.html}
+  \end{minipage}
+
+  \newpage
+
+  \emph{(Opcional, sin nota).}
+  Modifique su programa para que
+  las personas que tienen cumpleaños el mismo día
+  sean mostrados en la misma línea:
+
+  \lstinputlisting[basicstyle=\small\ttfamily]{ejemplo-opcional.html}
+
+  Los nombres deben aparecer separados por comas,
+  excepto antes del último,
+  que debe estar precedido por «y».
+
+  \emph{(Opcional, sin nota).}
+  Modifique su programa para que el nombre de cada persona
+  sea un enlace para enviarle un mail.
+  Para esto, el nombre debe ser escrito en el archivo
+  como en el siguiente ejemplo:
+  \begin{lstlisting}
+<a href="mailto:a.vega@uvxyz.cl">Andrea Vega</a>
+  \end{lstlisting}
+
+\end{document}
+

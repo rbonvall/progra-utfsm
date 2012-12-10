@@ -1,0 +1,118 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{parskip}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\input{../../latex/definiciones.tex}
+
+%\lstset{language=testcase,frame=single}
+\lstset{language=py}
+
+\begin{document}
+  \thispagestyle{empty}
+  \pagestyle{empty}
+  \section*{Lunes 1 de octubre}
+
+%  \emph{%
+%    Para la actividad de hoy
+%    es prerrequisito haber leído los siguientes capítulos de la materia:
+%    Funciones, Módulos, Listas y Tuplas.
+%  }
+
+  \begin{minipage}[T]{0.7\textwidth}
+    \parskip=2ex
+    Un punto \((x, y)\) del plano
+    puede ser representado en un programa
+    como una tupla de dos valores \li!(x, y)!.
+    Un polígono puede ser representado como la lista de sus vértices.
+
+    Por ejemplo,
+    el polígono de la derecha
+    quedaría representado de la siguiente manera:
+    \begin{lstlisting}
+p = [(40, 40), (50, 0), (20, 10),
+     (10, -10), (-10, 0), (0, 30)]
+    \end{lstlisting}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[T]{0.25\textwidth}
+    \begin{tikzpicture}[scale=0.5]
+      \draw[dotted] (-2, -2) grid (6, 5);
+      \draw[-latex'] (-2, 0) -- (6, 0);
+      \draw[-latex'] (0, -2) -- (0, 5);
+      \draw[very thick, Blue]
+            ( 4, 4) --
+            ( 5, 0) --
+            ( 2, 1) --
+            ( 1, -1) --
+            (-1, 0) --
+            ( 0, 3) --
+            cycle;
+    \end{tikzpicture}
+  \end{minipage}
+
+  En la actividad de hoy,
+  su equipo debe desarrollar un módulo llamado \texttt{poligonos.py},
+  que contenga las siguientes funciones para manipular polígonos.
+
+  \begin{enumerate}[leftmargin=0pt]
+
+    \item La función \li!numero_de_lados(p)!
+      retorna la cantidad de lados que tiene el polígono \li!p!:
+      \lstinputlisting[linerange=LADOS-FIN\ LADOS]{casos.txt}
+
+    \item La función \li!distancia(a, b)!
+      retorna la distancia entre los puntos \li!a! y \li!b! del plano.
+      \lstinputlisting[linerange=DISTANCIA-FIN\ DISTANCIA]{casos.txt}
+
+    \item La función \li!calcular_perimetro(poligono)!
+      retorna el perímetro del \li!poligono!.
+      \lstinputlisting[linerange=PERIMETRO-FIN\ PERIMETRO]{casos.txt}
+
+    \item La función \li!dibujar(poligono)!
+      dibuja el \li!poligono! usando la tortuga.
+      (Las funciones \li!up()!, \li!down()! y \li!goto(x, y)!
+      del módulo \verb!turtle! le serán útiles).
+
+      \includegraphics[width=\textwidth]{p1}
+
+    \item La función \li!trasladar(poligono, dx, dy)!
+      traslada el \li!poligono! completo,
+      moviéndolo \li!dx! unidades horizontalmente
+      y \li!dy! unidades verticalmente.
+
+    \item La función \li!escalar(poligono, factor)!
+      escala el tamaño del \li!poligono!
+      en el \li!factor! indicado.
+
+      \includegraphics[width=\textwidth]{p2}
+
+    \item
+      \emph{(Opcional).}
+      La función \li!crear_poligono_regular(n, a)!
+      retorna un polígono regular de \li!n! lados
+      de largo \li!a!.
+
+    \item
+      \emph{(Opcional).}
+      La función \li!encerrar(poligono)!
+      dibuja un rectángulo que encierra al \li!poligono!.
+
+      \includegraphics[width=\textwidth]{p3}
+
+  \end{enumerate}
+
+
+
+
+\end{document}
+

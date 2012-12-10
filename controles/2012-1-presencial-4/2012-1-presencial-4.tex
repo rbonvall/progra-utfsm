@@ -1,0 +1,161 @@
+\documentclass[12pt,spanish,a5paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\input{../../latex/definiciones.tex}
+\lstset{language=py}
+\setlist[enumerate]{leftmargin=0pt}
+
+\begin{document}
+  \pagestyle{empty}
+  \thispagestyle{empty}
+
+  \part*{Control 4, lunes 1--2}
+  \newpage
+
+  El carioca es un juego de naipes típico de Chile.
+  Cada jugador recibe una mano de varias cartas,
+  numeradas del 1 al 13.
+
+  Cuando un jugador tiene tres cartas con el mismo número,
+  se dice que tiene un trío.
+
+  \begin{enumerate}
+    \item
+      Escriba la función \li!contar_valores(cartas)!,
+      que reciba como parámetro una lista de cartas,
+      y retorne un diccionario que asocie a cada carta
+      la cantidad de veces que aparece.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{lunes-1-2.py}
+
+    \item
+      Escriba la función \li!tiene_trio(cartas)!
+      que retorne un valor booleano
+      indicando si la lista \li!cartas! tiene o no un trío.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{lunes-1-2.py}
+
+  \end{enumerate}
+  \newpage
+
+  \part*{Control 4, lunes 3--4}
+  \newpage
+
+  Los precios de los productos de un supermercado
+  están almacenados en un diccionario como el siguente:
+  \lstinputlisting[
+    linerange=EJEMPLO\ PRECIOS-FIN\ EJEMPLO\ PRECIOS,
+  ]{lunes-3-4.py}
+
+  \begin{enumerate}
+    \item
+      Escriba la función \li!producto_mas_caro(precios)!,
+      que reciba como parámetro el diccionario de precios,
+      y retorne el nombre del producto más caro.
+      Si hay más de un producto más caro,
+      retorne cualquiera de ellos.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{lunes-3-4.py}
+
+    \item
+      Una compra puede ser representada como un diccionario
+      en que se asocia a cada producto
+      la cantidad de unidades que se comprará.
+
+      Escriba la función \li!monto_total(precios, compra)!,
+      que reciba como parámetros el diccionario de precios
+      y el diccionario de la compra,
+      y retorne el monto total a pagar por la compra.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{lunes-3-4.py}
+
+  \end{enumerate}
+  \newpage
+
+  \part*{Control 4, martes 1--2}
+  \newpage
+
+  Una escuelita mantiene el registro de notas de los niños
+  en un diccionario como el siguiente:
+  \lstinputlisting[
+    linerange=EJEMPLO\ NOTAS-FIN\ EJEMPLO\ NOTAS,
+  ]{martes-1-2.py}
+
+  \begin{enumerate}
+
+    \item
+      Escriba la función \li!calcular_promedios(notas)!
+      que reciba como parámetro el diccionario de notas,
+      y retorne un diccionario que asocie a cada niño su promedio.
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{martes-1-2.py}
+
+    \item
+      Escriba la función \li!clasificar_ninos(notas)!
+      que reciba como parámetro el diccionario de notas
+      y retorne un diccionario cuyas únicas dos llaves sean
+      \li!'Aprobados'! y \li!'Reprobados'!.
+      Los valores del diccionario deben ser, respectivamente,
+      las cantidades de niños aprobados y reprobados.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{martes-1-2.py}
+
+  \end{enumerate}
+
+  \newpage
+
+  \part*{Control 4, martes 3--4}
+  \newpage
+
+  Se hizo una encuesta en varias ciudades.
+  La encuesta consistía en una única pregunta,
+  cuyas posibles respuestas eran \li!A!, \li!B! y \li!C!.
+  Las respuestas de los encuestados de cada ciudad
+  están almacenadas en un diccionario como el siguiente:
+  \lstinputlisting[
+    linerange=EJEMPLO\ RESPUESTAS-FIN\ EJEMPLO\ RESPUESTAS,
+  ]{martes-3-4.py}
+
+  \begin{enumerate}
+
+    \item
+      Escriba la función \li!resultados_encuesta(respuestas)!
+      que reciba como parámetro el diccionario de respuestas,
+      y retorne un diccionario asociando a cada respuesta
+      el total de encuestados que la contestó:
+      \lstinputlisting[
+        linerange=CASO\ 1-FIN\ CASO\ 1,
+      ]{martes-3-4.py}
+
+    \item
+      Escriba la función \li!porcentaje_respuesta_ciudad(respuestas, r, c)!,
+      que reciba como parámetros el dicconario de respuestas,
+      una respuesta \li!r! y una ciudad \li!c!.
+      La función debe retornar el porcentaje de encuestados que respondió
+      la respuesta \li!r! en la ciudad \li!c!.
+      \lstinputlisting[
+        linerange=CASO\ 2-FIN\ CASO\ 2,
+      ]{martes-3-4.py}
+
+
+  \end{enumerate}
+
+\end{document}
+

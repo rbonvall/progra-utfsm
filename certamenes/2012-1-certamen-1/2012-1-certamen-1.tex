@@ -1,4 +1,4 @@
-\documentclass[11pt,spanish,dvipsnames]{article}
+\documentclass[11pt,spanish]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{babel}
 \usepackage{fullpage}
@@ -6,76 +6,32 @@
 \usepackage{mathpazo}
 \usepackage{enumitem}
 \usepackage{courier}
-\usepackage{xcolor}
 \usepackage{textcomp}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{fancyhdr}
-\usepackage{graphics}
-\usepackage{array}
-\usetikzlibrary{arrows}
 
 \newcommand{\titulo}{Certamen 1, jueves 10 de mayo de 2012}
-\newcommand{\cc}[1]{\hfil\texttt{#1}\hfil}
-\newcommand{\pond}[1]{[{\small\textbf{#1\%}}]}
 
 \input{../../latex/encabezado.tex}
 \input{../../latex/definiciones.tex}
 
 \begin{document}
-
   \begin{certamen}
     \item
       \pond{25}
-      Indique qué es lo que imprimen los siguientes programas.
-
-      \foreach \x in {1,2} {
-        \noindent
-        \begin{minipage}[b]{.5\textwidth}
-          \lstinputlisting{p\x.py}
-          \framebox[.97\textwidth]{\rule[10ex]{0pt}{0pt}}
-          \vspace{1.6ex}
-        \end{minipage}
-      }
-
-      Rutee el siguiente programa
-      e indique qué es lo que imprime.
-
-      Cada vez que el valor de una variable cambie,
-      ponga su valor en una nueva fila de la tabla.
-      La tabla tiene filas de sobra.
-
-      \begin{minipage}[T]{.5\textwidth}
-        \lstinputlisting{ruteo.py}
-        \framebox[.8\textwidth]{\rule[20ex]{0pt}{0pt}}
-      \end{minipage}
-      \begin{minipage}[t]{.4\textwidth}\centering
-        \begin{tabular}{|*{4}{p{2.6em}|}}\hline
-            \cc{m} & \cc{y} & \cc{i} & \cc{x} \\ \hline\hline
-            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
-            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
-            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
-            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
-            &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline &&& \\\hline
-         \end{tabular}
-      \end{minipage}
-
-    \newpage
-    \item%
+      \input{ruteo/pregunta}
+      \newpage
+    \item
       \pond{25}
       \input{basquet-2/pregunta}
-
-    \newpage
-    \item%
+      \newpage
+    \item
       \pond{25}
       \input{edad/pregunta}
-
-    \newpage
-    \item%
+      \newpage
+    \item
       \pond{25}
       \input{anacleta/pregunta}
-
   \end{certamen}
 \end{document}
 
