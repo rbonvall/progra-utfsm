@@ -1,15 +1,3 @@
-\documentclass{minimal}
-\usepackage[pdftex,active,tightpage]{preview}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{mathpazo}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usetikzlibrary{calc,shapes,arrows}
-\PreviewEnvironment{tikzpicture}
-
-\begin{document}
-\input{incluir/flujo.tex}
 \begin{tikzpicture}[node distance=7ex, auto]
     \node (start) {};
     \node [stmt, below of=start] (init-n) { \(n = 0\) };
@@ -38,4 +26,4 @@
 %                 node[very near start] { no }
 %                 (end);
 \end{tikzpicture}
-\end{document}
+
