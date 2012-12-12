@@ -55,7 +55,10 @@ Para indentar, utilizaremos siempre cuatro espacios.
 La sentencia \textbf{if} («si») ejecuta las instrucciones sólo si se
 cumple una condición. Si la condición es falsa, no se hace nada:
 
-\includegraphics{../diagramas/if.png}
+\begin{center}
+  \input{diagramas/if}
+\end{center}
+
 
 La sintaxis es la siguiente:
 
@@ -80,7 +83,10 @@ Ejecute este programa, probando varias veces con valores diferentes.
 La sentencia \textbf{if-else} («si-o-si-no») decide qué instrucciones
 ejecutar dependiendo si una condición es verdadera o falsa:
 
-\includegraphics{../diagramas/if-else.png}
+\begin{center}
+  \input{diagramas/if-else}
+\end{center}
+
 
 La sintaxis es la siguiente:
 
@@ -124,7 +130,9 @@ La sentencia \textbf{if-elif-else} depende de dos o más condiciones, que
 son evaluadas en orden. La primera que es verdadera determina qué
 instrucciones serán ejecutadas:
 
-\includegraphics{../diagramas/if-elif-else.png}
+\begin{center}
+  \input{diagramas/if-elif-else}
+\end{center}
 
 La sintaxis es la siguiente:
 
@@ -202,7 +210,9 @@ sólo una de las condiciones será verdadera.
 El ciclo \textbf{while} («mientras») ejecuta una secuencia de
 instrucciones mientras una condición sea verdadera:
 
-\includegraphics{../diagramas/while.png}
+\begin{center}
+  \input{diagramas/while}
+\end{center}
 
 Cada una de las veces que el cuerpo del ciclo es ejecutado se llama
 \textbf{iteración}.
@@ -361,7 +371,9 @@ ciclo en medio de una iteración usando la sentencia \textbf{break}. Lo
 lógico es que sea usada dentro de un \lstinline!if!, para evitar que el
 ciclo termine prematuramente en la primera iteración:
 
-\includegraphics{../diagramas/break.png}
+\begin{center}
+  \input{diagramas/break}
+\end{center}
 
 Por ejemplo, en el programa para determinar si un número es primo o no,
 la búsqueda de divisores puede ser terminada prematuramente apenas se
@@ -380,7 +392,9 @@ for d in range(2, n):
 La sentencia \textbf{continue} se usa para saltar a la iteración
 siguiente sin llegar al final de la que está en curso.
 
-\includegraphics{../diagramas/continue.png}
+\begin{center}
+  \input{diagramas/continue}
+\end{center}
 
 Por ejemplo, el siguiente programa muestra el seno, el coseno y la
 tangente de los números del 1 al 30, pero omitiendo los que terminan en
