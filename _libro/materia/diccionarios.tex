@@ -60,7 +60,8 @@ Se puede agregar una llave nueva simplemente asignándole un valor:
 \begin{lstlisting}
 >>> telefonos['Susanita'] = 4448139
 >>> telefonos
-{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 5551428, 'Yayita': 5550012}
+{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 5551428,
+'Yayita': 5550012}
 \end{lstlisting}
 
 Note que el orden en que quedan las llaves en el diccionario no es
@@ -72,10 +73,12 @@ tener llaves repetidas:
 
 \begin{lstlisting}
 >>> telefonos
-{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 5551428, 'Yayita': 5550012}
+{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 5551428,
+'Yayita': 5550012}
 >>> telefonos['Jaimito'] = 4448139
 >>> telefonos
-{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 4448139, 'Yayita': 5550012}
+{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 4448139,
+'Yayita': 5550012}
 \end{lstlisting}
 
 Los valores sí pueden estar repetidos. En el ejemplo anterior, Jaimito y
@@ -148,7 +151,8 @@ diccionario:
 diccionario \lstinline!d!:
 
 \begin{lstlisting}
->>> patas = {'gato': 4, 'humano': 2, 'pulpo': 8, 'perro': 4, 'ciempies': 100}
+>>> patas = {'gato': 4, 'humano': 2, 'pulpo': 8,
+...          'perro': 4, 'ciempies': 100}
 >>> 'perro' in patas
 True
 >>> 'gusano' in patas

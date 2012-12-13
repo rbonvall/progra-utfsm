@@ -93,7 +93,7 @@ En el ejemplo del factorial, el parámetro es el entero al que queremos
 calcularle el factorial, el código es el ciclo que hace las
 multiplicaciones, y el resultado es el valor calculado.
 
-\subsection{Definición de funciones}
+\section{Definición de funciones}
 
 Las funciones en Python son creadas mediante la sentencia
 \lstinline!def!:
@@ -184,8 +184,25 @@ def comb(m, n):
 \end{lstlisting}
 
 El programa completo es el siguiente:
+\begin{lstlisting}
+def factorial(n):
+    p = 1
+    for i in range(1, n + 1):
+        p *= i
+    return p
 
-(Puede descargarlo \href{../\_static/programas/combinatorios.py}{aquí}).
+
+def comb(m, n):
+    return factorial(m) / (factorial(n) * factorial(m - n))
+
+
+m = int(raw_input('Ingrese m: '))
+n = int(raw_input('Ingrese n: '))
+c = comb(m, n)
+print '(m n) =', c
+\end{lstlisting}
+
+
 
 Note que, gracias al uso de las funciones, la parte principal del
 programa ahora tiene sólo cuatro líneas, y es mucho más fácil de

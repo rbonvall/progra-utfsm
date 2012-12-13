@@ -131,7 +131,7 @@ reemplazará.
 
 ¿Qué hacer cuando no exista un valor inicial que sea menor a todas las
 entradas posibles? Una solución es poner un número «muy negativo», y
-rezar para que el usuario no ingrese uno menor que él. Esta no es la
+rezar para que el usuario no ingrese uno menor que él. Ésta no es la
 mejor solución, ya que no cubre todos los casos posibles:
 
 \begin{lstlisting}
@@ -150,7 +150,7 @@ for i in range(9):         # preguntar los nueve siguientes
     mayor = max(mayor, n)
 \end{lstlisting}
 
-La otra buena solución es usar explícitamente el valor \(-infty\), que en
+La otra buena solución es usar explícitamente el valor \(-\infty\), que en
 Python puede representarse usando el tipo \lstinline!float! de la
 siguiente manera:
 

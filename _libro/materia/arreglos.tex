@@ -45,7 +45,7 @@ Los arreglos son los equivalentes en programación de las
 \textbf{matrices} y \textbf{vectores} de las matemáticas. Precisamente,
 una gran motivación para usar arreglos es que hay mucha teoría detrás de
 ellos que puede ser usada en el diseño de algoritmos para resolver
-problemas verdaderamente interesantes.
+problemas interesantes.
 
 \section{Crear arreglos}
 
@@ -72,8 +72,8 @@ conviene importarlas todas de una vez usando la siguiente sentencia:
 from numpy import *
 \end{lstlisting}
 
-(Si no recuerda cómo usar el \lstinline!import!, puede repasar la
-materia sobre \href{modulos.html}{módulos}).
+(Si no recuerda cómo usar el \lstinline!import!, puede repasar el
+capítulo sobre módulos).
 
 El tipo de datos de los arreglos se llama \lstinline!array!. Para crear
 un arreglo nuevo, se puede usar la función \lstinline!array! pasándole
@@ -193,10 +193,8 @@ retornan un arreglo de valores booleanos:
 >>> a = array([5.1, 2.4, 3.8, 3.9])
 >>> b = array([4.2, 8.7, 3.9, 0.3])
 >>> c = array([5, 2, 4, 4]) + array([1, 4, -2, -1]) / 10.0
-
 >>> a < b
 array([False,  True,  True, False], dtype=bool)
-
 >>> a == c
 array([ True,  True,  True,  True], dtype=bool)
 \end{lstlisting}
@@ -220,7 +218,7 @@ True
 
 NumPy provee muchas funciones matemáticas que también operan elemento a
 elemento. Por ejemplo, podemos obtener el seno de 9 valores
-equiespaciados entre 0 y \emph{π}/2 con una sola llamada a la función
+equiespaciados entre \(0\) y \(\pi/2\) con una sola llamada a la función
 \lstinline!sin!:
 
 \begin{lstlisting}
@@ -239,8 +237,8 @@ array([ 0.        ,  0.19509032,  0.38268343,
 \end{lstlisting}
 
 Como puede ver, los valores obtenidos crecen desde 0 hasta 1, que es
-justamente como se comporta la función seno en el intervalo {[}0,
-\emph{π}/2{]}.
+justamente como se comporta la función seno en el intervalo
+\(\left[0, \pi/2\right]\).
 
 Aquí también se hace evidente otra de las ventajas de los arreglos: al
 mostrarlos en la consola o al imprimirlos, los valores aparecen
@@ -265,7 +263,6 @@ números al azar distribuidos uniformemente entre 0 y 1:
 
 \begin{lstlisting}
 >>> from numpy.random import random
-
 >>> random(3)
 array([ 0.53077263,  0.22039319,  0.81268786])
 >>> random(3)
@@ -339,7 +336,9 @@ Una manera simple de recordar cómo funciona el rebanado es considerar
 que los índices no se refieren a los elementos, sino a los espacios
 entre los elementos:
 
-\includegraphics{../diagramas/indices.png}
+\begin{center}
+  \input{diagramas/indices}
+\end{center}
 
 \begin{lstlisting}
 >>> b = array([17.41, 2.19, 10.99, -2.29, 3.86, 11.10])

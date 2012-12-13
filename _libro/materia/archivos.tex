@@ -15,8 +15,9 @@ los cuales el más importante es el
 \href{http://es.wikipedia.org/wiki/Disco\_duro}{disco duro}.
 
 Los datos en el disco duro están organizados en
-\href{http://es.wikipedia.org/wiki/Archivo\_(informática)}{archivos}. Un
-\textbf{archivo} es una secuencia de datos almacenados en un medio
+%\href{http://es.wikipedia.org/wiki/Archivo\_(informática)}{archivos}.
+archivos.
+Un \textbf{archivo} es una secuencia de datos almacenados en un medio
 persistente que están disponibles para ser utilizados por un programa.
 Todos los archivos tienen un nombre y una ubicación dentro del sistema
 de archivos del sistema operativo.
@@ -72,11 +73,11 @@ archivo.close()
 Por ejemplo, supongamos que tenemos el archivo \lstinline!himno.txt! que
 tiene el siguiente contenido:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 Puro Chile
 es tu cielo azulado
 puras brisas
-te cruzan también.
+te cruzan tambien.
 \end{lstlisting}
 
 El archivo tiene cuatro líneas. Cada línea termina con un salto de línea
@@ -94,6 +95,12 @@ archivo.close()
 
 El ciclo for es ejecutado cuatro veces, una por cada línea del archivo.
 La salida del programa es:
+\begin{lstlisting}[language=testcase]
+P
+e
+p
+t
+\end{lstlisting}
 
 Otro ejemplo: el siguiente programa imprime cuántos símbolos hay en cada
 línea:
@@ -106,14 +113,31 @@ archivo.close()
 \end{lstlisting}
 
 La salida es:
+\begin{lstlisting}[language=testcase]
+11
+20
+13
+19
+\end{lstlisting}
 
 Note que el salto de línea (el ``enter'') es considerado en la cuenta:
 
-\begin{lstlisting}
-+---+---+---+---+---+---+---+---+---+---+---+
-| P | u | r | o |   | C | h | i | l | e | \n| = 11 símbolos
-+---+---+---+---+---+---+---+---+---+---+---+
-\end{lstlisting}
+\begin{tabular}{|*{11}{c|}l}
+  \cline{1-11}
+  \lstinline!P! &
+  \lstinline!u! &
+  \lstinline!r! &
+  \lstinline!o! &
+  \lstinline! ! &
+  \lstinline!C! &
+  \lstinline!h! &
+  \lstinline!i! &
+  \lstinline!l! &
+  \lstinline!e! &
+  \lstinline!\n! &
+  = 11 símbolos \\
+  \cline{1-11}
+\end{tabular}
 
 Para obtener el string sin el salto de línea, se puede usar el método
 \lstinline!strip!, que elimina todos los símbolos de espaciado al
@@ -135,6 +159,12 @@ archivo.close()
 \end{lstlisting}
 
 entonces la salida es:
+\begin{lstlisting}[language=testcase]
+10
+19
+12
+18
+\end{lstlisting}
 
 Lo importante es comprender que los archivos son leídos línea por línea
 usando el ciclo \lstinline!for!.
@@ -174,7 +204,7 @@ Una vez ejecutado este programa, el archivo \lstinline!prueba.txt! será
 creado (o sobreescrito, si ya existía). Al abrirlo en el Bloc de Notas,
 veremos este contenido:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 Hola mundo.
 \end{lstlisting}
 
@@ -188,7 +218,7 @@ a = open('himno.txt', 'w')
 a.write('Puro Chile\n')
 a.write('es tu cielo azulado\n')
 a.write('puras brisas\n')
-a.write('te cruzan también.\n')
+a.write('te cruzan tambien.\n')
 a.close()
 \end{lstlisting}
 
@@ -209,7 +239,7 @@ a.close()
 Si abrimos el archivo \lstinline!prueba.txt! en el Bloc de Notas,
 veremos esto:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 Hola mundo.
 
 Chao pescao.
@@ -229,25 +259,20 @@ especial.
 Por ejemplo, supongamos que queremos guardar en un archivo los datos de
 esta tabla:
 
-\ctable[pos = H, center, botcap]{llllll}
-{% notes
-}
-{% rows
-\FL
-Nombre & Apellido & Nota 1 & Nota 2 & Nota 3 & Nota 4
-\ML
-Perico & Los Palotes & 90 & 75 & 38 & 65
-\\\noalign{\medskip}
-Yayita & Vinagre & 39 & 49 & 58 & 55
-\\\noalign{\medskip}
-Fulana & De Tal & 96 & 100 & 36 & 71
-\LL
-}
+\begin{tabular}{llrrrr}
+  \toprule
+    Nombre & Apellido & Nota 1 & Nota 2 & Nota 3 & Nota 4 \\
+  \midrule
+    Perico & Los Palotes & 90 & 75 & 38 & 65 \\
+    Yayita & Vinagre & 39 & 49 & 58 & 55 \\
+    Fulana & De Tal & 96 & 100 & 36 & 71 \\
+  \bottomrule
+\end{tabular}
 
 Si usamos el símbolo \lstinline!:! como separador, el archivo, que
 llamaremos \lstinline!alumnos.txt!, debería quedar así:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 Perico:Los Palotes:90:75:38:65
 Yayita:Vinagre:39:49:58:55
 Fulanita:De Tal:96:100:36:71

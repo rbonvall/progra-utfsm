@@ -115,9 +115,9 @@ espacios en blanco como separador. El valor retornado es una lista de
 strings:
 
 \begin{lstlisting}
->>> oracion = 'El veloz murcielago hindu  comia feliz  cardillo y kiwi'
+>>> oracion = 'El veloz  murcielago hindu'
 >>> oracion.split()
-['El', 'veloz', 'murcielago', 'hindu', 'comia', 'feliz', 'cardillo', 'y', 'kiwi']
+['El', 'veloz', 'murcielago', 'hindu']
 \end{lstlisting}
 
 Además, es posible pasar un parámetro al método \lstinline!split! que
@@ -138,8 +138,18 @@ indica cuál será el separador a usar (en vez de los espacios en blanco):
 Esto es muy útil para pedir al usuario que ingrese datos en un programa
 de una manera más conveniente, y no uno por uno. Por ejemplo, antes
 hacíamos programas que funcionaban así:
+\begin{lstlisting}[language=testcase]
+Ingrese a: `2.3`
+Ingrese b: `1.9`
+Ingrese c: `2.3`
+El triangulo es isoceles.
+\end{lstlisting}
 
 Ahora podemos hacerlos así:
+\begin{lstlisting}[language=testcase]
+Ingrese lados del triangulo: `2.3 1.9 2.3`
+El triangulo es isoceles.
+\end{lstlisting}
 
 En este caso, el código del programa podría ser:
 
@@ -213,13 +223,13 @@ respectivamente, a mayúsculas y minúsculas:
 'hOLA'
 \end{lstlisting}
 
-Lamentablemente, ninguno de estos métodos funcionan con acentos y eñes:
-
-\begin{lstlisting}
->>> print 'ñandú'.upper()
-ñANDú
-\end{lstlisting}
-
+%Lamentablemente, ninguno de estos métodos funcionan con acentos y eñes:
+%
+%\begin{lstlisting}
+%>>> print 'ñandú'.upper()
+%ñANDú
+%\end{lstlisting}
+%
 \section{Revisar contenidos del string}
 
 \lstinline!s.startswith(t)! y \lstinline!s.endswith(t)! indican si el
@@ -280,6 +290,11 @@ for n, (a, m, d), c, e in datos:
 \end{lstlisting}
 
 Este programa imprime lo siguiente:
+\begin{lstlisting}[language=testcase]
+Pepito     1991 12  5 Osorno      ***
+Yayita     1990  1 31 Arica        *
+Fulanito   1992 10 29 Porvenir    ****
+\end{lstlisting}
 
 \section{Interpolación de strings}
 

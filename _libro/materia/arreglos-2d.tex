@@ -78,7 +78,6 @@ columnas que tendrá la matriz:
 array([[ 0.,  0.],
        [ 0.,  0.],
        [ 0.,  0.]])
-
 >>> ones((2, 5))
 array([[ 1.,  1.,  1.,  1.,  1.],
        [ 1.,  1.,  1.,  1.,  1.]])
@@ -107,11 +106,9 @@ matrices se aplican término a término:
 ...            [0, 3, 2]])
 >>> b = array([[2, 3, -1],
 ...            [1, 0, 1]])
-
 >>> a + 2
 array([[7, 3, 6],
        [2, 5, 4]])
-
 >>> a ** b
 array([[25,  1,  0],
       [ 0,  1,  2]])
@@ -138,24 +135,21 @@ Para obtener un elemento de un arreglo, debe indicarse los índices de su
 fila \lstinline!i! y su columna \lstinline!j! mediante la sintaxis
 \lstinline!a[i, j]!:
 
-::
-
-\begin{quote}
-\begin{description}
-\item[\textgreater{}\textgreater{}\textgreater{} a = array({[}{[} 3.21,
-5.33, 4.67, 6.41{]},]
-{[} 9.54, 0.30, 2.14, 6.57{]}, {[} 5.62, 0.54, 0.71, 2.56{]}, {[} 8.19,
-2.12, 6.28, 8.76{]}, {[} 8.72, 1.47, 0.77, 8.78{]}{]})
-\end{description}
-
-\textgreater{}\textgreater{}\textgreater{} a{[}1, 2{]} 2.14
-
-\textgreater{}\textgreater{}\textgreater{} a{[}4, 3{]} 8.78
-
-\textgreater{}\textgreater{}\textgreater{} a{[}-1, -1{]} 8.78
-
-\textgreater{}\textgreater{}\textgreater{} a{[}0, -1{]} 6.41
-\end{quote}
+\begin{lstlisting}
+>>> a = array([[ 3.21,  5.33,  4.67,  6.41],
+               [ 9.54,  0.30,  2.14,  6.57],
+               [ 5.62,  0.54,  0.71,  2.56],
+               [ 8.19,  2.12,  6.28,  8.76],
+               [ 8.72,  1.47,  0.77,  8.78]])
+>>> a[1, 2]
+2.14
+>>> a[4, 3]
+8.78
+>>> a[-1, -1]
+8.78
+>>> a[0, -1]
+6.41
+\end{lstlisting}
 
 También se puede obtener secciones rectangulares del arreglo usando el
 operador de rebanado con los índices:
@@ -163,19 +157,15 @@ operador de rebanado con los índices:
 \begin{lstlisting}
 >>> a[2:3, 1:4]
 array([[ 0.54,  0.71,  2.56]])
-
 >>> a[1:4, 0:4]
 array([[ 9.54,  0.3 ,  2.14,  6.57],
        [ 5.62,  0.54,  0.71,  2.56],
        [ 8.19,  2.12,  6.28,  8.76]])
-
 >>> a[1:3, 2]
 array([ 2.14,  0.71])
-
 >>> a[0:4:2, 3:0:-1]
 array([[ 6.41,  4.67,  5.33],
        [ 2.56,  0.71,  0.54]])
-
 >>> a[::4, ::3]
 array([[ 3.21,  6.41],
        [ 8.72,  8.78]])
@@ -188,7 +178,6 @@ hasta el final»). Lo mismo para las columnas:
 \begin{lstlisting}
 >>> a[2, :]
 array([ 5.62,  0.54,  0.71,  2.56])
-
 >>> a[:, 3]
 array([ 6.41,  6.57,  2.56,  8.76,  8.78])
 \end{lstlisting}
@@ -199,10 +188,8 @@ que hay en los índices:
 \begin{lstlisting}
 >>> a[2, 3]      # valor escalar (arreglo de cero dimensiones)
 2.56
-
->>> a[2:3, 3]    # arreglo de una dimensión de 1 elemento
+>>> a[2:3, 3]    # arreglo de una dimension de 1 elemento
 array([ 2.56])
-
 >>> a[2:3, 3:4]  # arreglo de dos dimensiones de 1 x 1
 array([[ 2.56]])
 \end{lstlisting}
@@ -218,7 +205,6 @@ y viceversa. Para trasponer un arreglo, se usa el método
 array([[ 3.21,  5.33,  4.67,  6.41],
        [ 9.54,  0.3 ,  2.14,  6.57],
        [ 5.62,  0.54,  0.71,  2.56]])
-
 >>> a.transpose()
 array([[ 3.21,  9.54,  5.62],
        [ 5.33,  0.3 ,  0.54],
@@ -234,13 +220,11 @@ tupla indicando la nueva forma del arreglo:
 >>> a = arange(12)
 >>> a
 array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-
 >>> a.reshape((4, 3))
 array([[ 0, 1, 2],
        [ 3, 4, 5],
        [ 6, 7, 8],
        [ 9, 10, 11]])
-
 >>> a.reshape((2, 6))
 array([[ 0, 1, 2, 3, 4, 5],
        [ 6, 7, 8, 9, 10, 11]])
@@ -255,7 +239,6 @@ forma \lstinline!a[i, i]!):
 array([[ 3.21,  5.33,  4.67,  6.41],
        [ 9.54,  0.3 ,  2.14,  6.57],
        [ 5.62,  0.54,  0.71,  2.56]])
-
 >>> diag(a)
 array([ 3.21,  0.3 ,  0.71])
 \end{lstlisting}
