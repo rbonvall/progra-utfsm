@@ -157,7 +157,6 @@ for linea in archivo:
     print len(linea.strip())
 archivo.close()
 \end{lstlisting}
-
 entonces la salida es:
 \begin{lstlisting}[language=testcase]
 10
@@ -366,11 +365,12 @@ linea = ':'.join(map(str, alumno)) + '\n'
 archivo.write(linea)
 \end{lstlisting}
 
-Otra manera es armar el string parte por parte:
+Otra manera es armar el string usando una plantilla:
 
 \begin{lstlisting}
 linea = '{0}:{1}:{2}:{3}:{4}:{5}\n'.format(nombre, apellido,
-                                           nota1, nota2, nota3, nota4)
+                                           nota1, nota2,
+                                           nota3, nota4)
 archivo.write(linea)
 \end{lstlisting}
 

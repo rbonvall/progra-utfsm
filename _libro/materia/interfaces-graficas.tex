@@ -3,16 +3,13 @@
 Todo programa necesita contar con algún mecanismo para recibir la
 entrada y entregar la salida. Ya hemos visto dos maneras de hacer
 entrada:
-
 \begin{itemize}
 \item
   entrada por teclado (\lstinline!raw_input!), y
 \item
   entrada por archivo (\lstinline!for linea in archivo: ...!);
 \end{itemize}
-
 y dos maneras de hacer salida:
-
 \begin{itemize}
 \item
   salida por consola (\lstinline!print!), y
@@ -41,7 +38,6 @@ aprendiendo de a poco.
 Python incluye un módulo llamado \lstinline!Tkinter! que provee todas
 las funciones necesarias, que deben ser importadas al principio del
 programa:
-
 \begin{lstlisting}
 from Tkinter import *
 \end{lstlisting}
@@ -50,7 +46,6 @@ from Tkinter import *
 
 El siguiente programa es la interfaz gráfica más simple que se puede
 crear:
-
 \begin{lstlisting}
 from Tkinter import *
 w = Tk()
@@ -60,7 +55,7 @@ w.mainloop()
 Haga la prueba: copie este programa en el editor de texto, guárdelo y
 ejecútelo. Debería aparecer una ventana vacía:
 
-\includegraphics{../diapos/programas/tkinter/capturas/01.png}
+\includegraphics[scale=.5]{../diapos/programas/tkinter/capturas/01.png}
 
 La sentencia \lstinline!w = Tk()! crea la ventana principal del
 programa, y la asigna a la variable \lstinline!w!. Toda interfaz gráfica
@@ -142,6 +137,24 @@ b.pack()
 
 Como referencia, el programa que crea la ventana de la imagen es el
 siguiente (¡pruébelo!):
+\begin{lstlisting}
+from Tkinter import *
+
+w = Tk()
+
+l = Label(w, text='Etiqueta')
+l.pack()
+
+b = Button(w, text='Boton')
+b.pack()
+
+e = Entry(w)
+e.pack()
+
+w.mainloop()
+\end{lstlisting}
+
+
 
 Los widgets van siendo apilados verticalmente, desde arriba hacia abajo,
 en el mismo orden en que van siendo apilados. Ya veremos cómo
@@ -150,11 +163,9 @@ empaquetarlos en otras direcciones.
 \section{Controladores}
 
 Al crear un botón de la siguiente manera:
-
 \begin{lstlisting}
 b = Button(w, text='Saludar')
 \end{lstlisting}
-
 no hay ninguna acción asociada a él. Al hacer clic en el botón, nada
 ocurrirá.
 
@@ -167,7 +178,6 @@ Los controladores deben ser funciones que no reciben ningún parámetro.
 Por ejemplo, supongamos que queremos que el programa imprima el mensaje
 \lstinline!Hola! en la consola cada vez que se haga clic en el botón que
 dice «Saludar». Primero, hay que crear el controlador:
-
 \begin{lstlisting}
 def saludar():
     print 'Hola'
@@ -176,7 +186,6 @@ def saludar():
 Para asociar el controlador al botón, hay que pasarlo a través del
 parámetro \lstinline!command! (en inglés: «orden») al momento de crear
 el botón:
-
 \begin{lstlisting}
 b = Button(w, text='Saludar', command=saludar)
 \end{lstlisting}
@@ -188,6 +197,26 @@ hacer clic en él se ejecute la función \lstinline!saludar!.
 El siguiente ejemplo es un programa completo que tiene dos botones: uno
 para saludar y otro para salir del programa. El controlador del segundo
 botón es la función \lstinline!exit!, que ya viene con Python:
+
+\begin{lstlisting}
+from Tkinter import *
+
+def saludar():
+    print 'Hola'
+
+w = Tk()
+
+l = Label(w, text='Hola progra')
+l.pack()
+
+b1 = Button(w, text='Saludar', command=saludar)
+b1.pack()
+
+b2 = Button(w, text='Salir', command=exit)
+b2.pack()
+
+w.mainloop()
+\end{lstlisting}
 
 El programa se ve así:
 
