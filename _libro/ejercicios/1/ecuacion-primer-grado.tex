@@ -1,21 +1,28 @@
 \section{Ecuación primer grado}
 
 Escriba un programa que pida los coeficientes de una ecuación de primer
-grado:
+grado \(ax + b = 0\). y que entregue la solución.
 
-\begin{quote}
-\emph{ax} + \emph{b} = 0,
-\end{quote}
+Una ecuación de primer grado puede
+tener solución única, tener infinitas soluciones o no tener soluciones.
 
-y que entregue la solución.
+\begin{lstlisting}[language=testcase]
+Ingrese a: `0`
+Ingrese b: `3`
 
-Una ecuación de primer grado puede:
+Sin solucion
+\end{lstlisting}
 
-\begin{itemize}
-\item
-  tener solución única,
-\item
-  tener infinitas soluciones, o
-\item
-  no tener soluciones.
-\end{itemize}
+\begin{lstlisting}[language=testcase]
+Ingrese a: `4`
+Ingrese b: `2`
+
+Solucion unica: -0.5
+\end{lstlisting}
+
+\begin{lstlisting}[language=testcase]
+Ingrese a: `0`
+Ingrese b: `0`
+
+No hay solucion unica.
+\end{lstlisting}
