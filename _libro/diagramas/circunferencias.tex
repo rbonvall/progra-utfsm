@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=.5]
+\begin{tikzpicture}[scale=.3]
 
   \newcommand\circulo[5]{
     \node[fill=#4, inner sep=1pt] (p1) at (#1, #2) {};
@@ -8,10 +8,10 @@
   }
 
   \draw[gray] (0, 0) grid (20, 16);
-  \foreach\x in {0,...,20}
-    \node[gray, anchor=north] at (\x, -.1) {\x};
-  \foreach\y in {0,...,16}
-    \node[gray, anchor=east] at (-.1, \y) {\y};
+%  \foreach\x in {0,...,20}
+%    \node[gray, anchor=north] at (\x, -.1) {\x};
+%  \foreach\y in {0,...,16}
+%    \node[gray, anchor=east] at (-.1, \y) {\y};
 
   \circulo{5}{4}{3}{blue!30!black}{A}
   \circulo{8}{6}{2}{blue!50!black}{B}

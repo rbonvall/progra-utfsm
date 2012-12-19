@@ -1,9 +1,7 @@
 \section{Supermercado}
 
 Un supermercado utiliza tablas de datos para llevar la información de su
-inventario.
-
-En un programa, cada tabla de datos es una lista de tuplas.
+inventario.  En un programa, cada tabla de datos es una lista de tuplas.
 
 La lista \lstinline!productos! tiene el código, el nombre, el precio y
 la cantidad de unidades del producto en bodega:
@@ -27,7 +25,6 @@ productos = [
 
 La lista \lstinline!clientes! tiene el rut y el nombre de los clientes
 del supermercado:
-
 \begin{lstlisting}
 clientes = [
     ('11652624-7', 'Perico Los Palotes'),
@@ -39,7 +36,6 @@ clientes = [
 La lista \lstinline!ventas! contiene las ventas realizadas,
 representadas por el número de boleta, la fecha de la venta y el rut del
 cliente:
-
 \begin{lstlisting}
 ventas = [
     (1, (2010,  9, 12),  '8830268-0'),
@@ -54,18 +50,11 @@ ventas = [
 El detalle de cada venta se encuentra en la lista \lstinline!itemes!.
 Cada ítem tiene asociado un número de boleta, un código de producto y
 una cantidad:
-
 \begin{lstlisting}
 itemes = [
-    (1, 89148,  3),
-    (2, 50809,  4),
-    (2, 33692,  2),
-    (2, 47470,  6),
-    (3, 30877,  1),
-    (4, 89148,  1),
-    (4, 75466,  2),
-    (5, 89148,  2),
-    (5, 47470, 10),
+    (1, 89148,  3), (2, 50809,  4), (2, 33692,  2),
+    (2, 47470,  6), (3, 30877,  1), (4, 89148,  1),
+    (4, 75466,  2), (5, 89148,  2), (5, 47470, 10),
     (6, 41419,  2),
 ]
 \end{lstlisting}
@@ -74,7 +63,6 @@ Por ejemplo, en la venta con boleta número 2, fueron vendidas 4 paltas,
 2 bebidas y 6 yogures.
 
 Escriba las siguienes funciones:
-
 \begin{lstlisting}
 >>> producto_mas_caro(productos)
 'Vuvuzela'

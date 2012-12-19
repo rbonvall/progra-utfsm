@@ -6,8 +6,8 @@
   \def\Rx{3}
   \def\Ry{2}
   \draw[gray] (0, 0) grid (\gridsize, \gridsize);
-  \draw[thick,->] (-1, 0) -- (\gridsize, 0);
-  \draw[thick,->] (0, -1) -- (0, \gridsize);
+  \draw[thick,-latex'] (-1, 0) -- (\gridsize, 0);
+  \draw[thick,-latex'] (0, -1) -- (0, \gridsize);
   \draw[blue, thick, fill=blue!30, opacity=.8] (\Rx, \Ry) rectangle ++(\Rw, \Rh);
   \fill[blue] (\Rx, \Ry) circle (.2cm);
   \foreach\i in {0,...,{\gridsize}} {
