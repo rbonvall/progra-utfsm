@@ -5,44 +5,44 @@ datos personales de sus pacientes. Cada línea del archivo tiene el rut,
 el nombre y la edad de un paciente, separados por un símbolo
 «\lstinline!:!». Así se ve el archivo:
 
-\begin{lstlisting}
-12067539-7:Anastasia López:32
-15007265-4:Andrés Morales:26
-8509454-8:Pablo Muñoz:45
+\begin{lstlisting}[language=file]
+12067539-7:Anastasia Lopez:32
+15007265-4:Andres Morales:26
+8509454-8:Pablo Munoz:45
 7752666-8:Ignacio Navarro:49
 8015253-1:Alejandro Pacheco:51
 9217890-0:Patricio Pimienta:39
 9487280-4:Ignacio Rosas:42
 12393241-2:Ignacio Rubio:33
-11426761-9:Romina Pérez:35
+11426761-9:Romina Perez:35
 15690109-1:Francisco Ruiz:26
-6092377-9:Alfonso San Martín:65
+6092377-9:Alfonso San Martin:65
 9023365-3:Manuel Toledo:38
-10985778-5:Jesús Valdés:38
-13314970-8:Abel Vázquez:30
-7295601-k:Edison Muñoz:60
+10985778-5:Jesus Valdes:38
+13314970-8:Abel Vazquez:30
+7295601-k:Edison Munoz:60
 5106360-0:Andrea Vega:71
-8654231-5:Andrés Zambrano:55
+8654231-5:Andres Zambrano:55
 10105321-0:Antonio Almarza:31
-13087677-3:Jorge Álvarez:28
+13087677-3:Jorge Alvarez:28
 9184011-1:Laura Andrade:47
-12028339-1:Jorge Argandoña:29
+12028339-1:Jorge Argandona:29
 10523653-0:Camila Avaria:40
-12187197-1:Felipe Ávila:36
+12187197-1:Felipe Avila:36
 5935556-2:Aquiles Barriga:80
 14350739-4:Eduardo Bello:29
-6951420-0:Cora Benítez:68
+6951420-0:Cora Benitez:68
 11370775-5:Hugo Berger:31
-11111756-k:Cristóbal Bórquez:34
+11111756-k:Cristobal Borquez:34
 \end{lstlisting}
 
 Además, cada vez que alguien se atiende en la consulta, la visita es
 registrada en el archivo \lstinline!atenciones.txt!, agregando una línea
 que tiene el rut del paciente, la fecha de la visita (en formato
-\lstinline!dia-mes-año!) y el precio de la atención, también separados
+\texttt{dia-mes-año}) y el precio de la atención, también separados
 por «\lstinline!:!». El archivo se ve así:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 8015253-1:4-5-2010:69580
 12393241-2:6-5-2010:57274
 10985778-5:8-5-2010:73206
@@ -102,7 +102,7 @@ nuevas líneas siempre se van agregando al final.
 
 \begin{lstlisting}
 >>> pacientes_dia(2, 6, 2010)
-['Pablo Muñoz', 'Alfonso San Martín']
+['Pablo Munoz', 'Alfonso San Martin']
 >>> pacientes_dia(23, 6, 2010)
 []
 \end{lstlisting}
@@ -121,11 +121,11 @@ nuevas líneas siempre se van agregando al final.
 
   Por ejemplo, el archivo \lstinline!jovenes.txt! debe verse así:
 
-\begin{lstlisting}
-15007265-4:Andrés Morales:26
+\begin{lstlisting}[language=file,inputencoding=utf8/latin1]
+15007265-4:Andres Morales:26
 15690109-1:Francisco Ruiz:26
-13087677-3:Jorge Álvarez:28
-12028339-1:Jorge Argandoña:29
+13087677-3:Jorge Alvarez:28
+12028339-1:Jorge Argandona:29
 14350739-4:Eduardo Bello:29
 \end{lstlisting}
 \item
@@ -133,7 +133,7 @@ nuevas líneas siempre se van agregando al final.
   nuevo archivo llamado \lstinline!ganancias.txt! que tenga el total de
   ganancias por cada mes en el siguiente formato:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 5-2010:933159
 6-2010:1120967
 7-2010:124903

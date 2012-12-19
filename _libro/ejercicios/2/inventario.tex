@@ -4,18 +4,15 @@ Una tienda tiene la información de sus productos en un archivo llamado
 \lstinline!productos.txt!. Cada línea del archivo tiene tres datos:
 
 \begin{itemize}
-\item
-  el código del producto (un número entero),
-\item
-  el nombre del producto, y
-\item
-  la cantidad de unidades del producto que quedan en bodega.
+  \item el código del producto (un número entero),
+  \item el nombre del producto, y
+  \item la cantidad de unidades del producto que quedan en bodega.
 \end{itemize}
 
-Los datos están separados por un símbolo \lstinline!/!. Por ejemplo, el
+Los datos están separados por un símbolo «\lstinline!/!». Por ejemplo, el
 siguiente puede ser el contenido del archivo:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 1265/Reloj/26
 613/Cuaderno/87
 9801/Vuvuzela/3
@@ -23,7 +20,7 @@ siguiente puede ser el contenido del archivo:
 5413/Tomate/5
 \end{lstlisting}
 
-\begin{enumerate}[1.]
+\begin{enumerate}
 \item
   Escriba la función \lstinline!existe_producto(codigo)! que indique si
   existe el producto con el código dado:
@@ -45,10 +42,9 @@ False
 
   En este caso, el archivo \lstinline!por_reabastecer.txt! debe quedar
   así:
-\end{enumerate}
-
-\begin{lstlisting}
+\begin{lstlisting}[language=file]
 9801/Vuvuzela/3
 5413/Tomate/5
 \end{lstlisting}
 
+\end{enumerate}
