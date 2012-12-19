@@ -1,13 +1,11 @@
 \section{Funciones de números primos}
 
-En los ejercicios para la materia del primer certamen, usted debió
-\href{../1/numeros-primos.html}{desarrollar programas sobre números
-primos}.
-
+Para el ejercicio~\ref{sec:primos} usted debió
+desarrollar programas sobre números primos.
 Muchos de estos programas sólo tenían pequeñas diferencias entre ellos,
 por lo que había que repetir mucho código al escribirlos. En este
 ejercicio, usted deberá implementar algunos de esos programas como
-funciones, reutilizando componentes para evitar escribir código
+funciones, reusando componentes para evitar escribir código
 repetido.
 
 \begin{enumerate}
@@ -23,7 +21,8 @@ False
 \end{lstlisting}
 \item
   Usando la función \lstinline!es_divisible!, escriba una función
-  \lstinline!es_primo(n)! que determine si un número es primo o no:
+  \lstinline!es_primo(n)! que determine si el número \lstinline!n!
+  es primo o no:
 
 \begin{lstlisting}
 >>> es_primo(17)
@@ -33,16 +32,18 @@ False
 \end{lstlisting}
 \item
   Usando la función \lstinline!es_primo!, escriba la función
-  \lstinline!i_esimo_primo(i)! que entregue el `i`-ésimo número primo.
+  \lstinline!i_esimo_primo(i)! que entregue el \lstinline!i!-ésimo número primo:
 
-  \begin{quote}
-  \textgreater{}\textgreater{}\textgreater{} i\_esimo\_primo(1) 2
-  \textgreater{}\textgreater{}\textgreater{} i\_esimo\_primo(20) 71
-  \end{quote}
+\begin{lstlisting}
+>>> i_esimo_primo(1)
+2
+>>> i_esimo_primo(20)
+71
+\end{lstlisting}
 \item
   Usando las funciones anteriores, escriba la función
   \lstinline!primeros_primos(m)! que entregue una lista de los primeros
-  `m` números primos:
+  \lstinline!m! números primos:
 
 \begin{lstlisting}
 >>> primeros_primos(10)
@@ -51,7 +52,7 @@ False
 \item
   Usando las funciones anteriores, escriba la función
   \lstinline!primos_hasta(m)! que entregue una lista de los primos
-  menores o iguales que `m`:
+  menores o iguales que \lstinline!m!:
 
 \begin{lstlisting}
 >>> primos_hasta(19)
@@ -60,18 +61,25 @@ False
 \item
   Cree un módulo llamado \lstinline!primos.py! que contenga todas las
   funciones anteriores.
-
   Al ejecutar \lstinline!primos.py! como un programa por sí solo, debe
   mostrar, a modo de prueba, los veinte primeros números primos. Al
   importarlo como un módulo, esto no debe ocurrir.
 \item
-  Un `primo de Mersenne`\_ es un número primo de la forma `2\^{}p - 1`.
-  Una propiedad conocida de los primos de Mersenne es que `p` debe ser
+  Un \emph{primo de Mersenne} es un número primo de la forma \(2^p - 1\).
+  Una propiedad conocida de los primos de Mersenne es que \(p\) debe ser
   también un número primo.
 
   Escriba un programa llamado \lstinline!mersenne.py! que pregunte al
-  usuario un número `n`, y muestre como salida los primeros `n` primos
+  usuario un entero \(n\), y muestre como salida los primeros \(n\) primos
   de Mersenne:
+\begin{lstlisting}[language=testcase]
+Cuantos primos de Mersenne: `5`
+3
+7
+31
+127
+8191
+\end{lstlisting}
 
   Su programa debe importar el módulo \lstinline!primos! y usar las
   funciones que éste contiene.
