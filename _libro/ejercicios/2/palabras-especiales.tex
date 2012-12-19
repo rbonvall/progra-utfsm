@@ -2,7 +2,7 @@
 
 \begin{enumerate}
 \item
-  Dos palabras son \textbf{anagramas} si tienen las mismas letras pero
+  Dos palabras son \emph{anagramas} si tienen las mismas letras pero
   en otro orden. Por ejemplo, «torpes» y «postre» son anagramas,
   mientras que «aparta» y «raptar» no lo son, ya que «raptar» tiene una
   \emph{r} de más y una \emph{a} de menos.
@@ -17,7 +17,7 @@ True
 False
 \end{lstlisting}
 \item
-  Las palabras \textbf{panvocálicas} son las que tienen las cinco
+  Las palabras \emph{panvocálicas} son las que tienen las cinco
   vocales. Por ejemplo: centrifugado, bisabuelo, hipotenusa.
 
   Escriba la función \lstinline!es_panvocalica(palabra)! que indique si
@@ -34,12 +34,13 @@ False
   cuántas palabras panvocálicas tiene una oración:
 
 \begin{lstlisting}
->>> cuenta_panvocalicas('el abuelito mordisquea el aceituno con contundencia')
-4
 >>> cuenta_panvocalicas('la contertulia estudiosa va a casa')
 2
 >>> cuenta_panvocalicas('los hipopotamos bailan al amanecer')
 0
+oracion = 'el abuelito mordisquea el aceituno con contundencia'
+>>> cuenta_panvocalicas(oracion)
+4
 \end{lstlisting}
 \item
   Escriba la función \lstinline!tiene_letras_en_orden(palabra)! que
@@ -78,11 +79,11 @@ False
 []
 \end{lstlisting}
 \item
-  Un \textbf{pangrama} es un texto que tiene todas las letras del
-  alfabeto, de la \emph{a} a la \emph{z} (por las limitaciones de Python
-  2.7, excluiremos la \emph{ñ}). Escriba la función
-  \lstinline!es_pangrama(texto)! que indique si el texto es o no un
-  pangrama:
+  Un \emph{pangrama} es un texto que tiene todas las letras del
+  alfabeto, de la \emph{a} a la \emph{z}
+  (por las limitaciones de Python 2.7 excluiremos la \emph{ñ}).
+  Escriba la función \lstinline!es_pangrama(texto)!
+  que indique si el texto es o no un pangrama:
 
 \begin{lstlisting}
 >>> es_pangrama('Sylvia wagt quick den Jux bei Pforzheim.')

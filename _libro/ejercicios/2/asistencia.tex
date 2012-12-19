@@ -3,100 +3,18 @@
 La asistencia de los alumnos a clases puede ser llevada en una tabla
 como la siguiente:
 
-\begin{quote}
-\ctable[pos = H, center, botcap]{llllllll}
-{% notes
-}
-{% rows
-\FL
-\parbox[b]{0.15\columnwidth}{\raggedright
-Clase
-} & \parbox[b]{0.06\columnwidth}{\raggedright
-1
-} & \parbox[b]{0.06\columnwidth}{\raggedright
-2
-} & \parbox[b]{0.06\columnwidth}{\raggedright
-3
-} & \parbox[b]{0.06\columnwidth}{\raggedright
-4
-} & \parbox[b]{0.06\columnwidth}{\raggedright
-5
-} & \parbox[b]{0.06\columnwidth}{\raggedright
-6
-} & \parbox[b]{0.06\columnwidth}{\raggedright
-7
-}
-\ML
-\parbox[t]{0.15\columnwidth}{\raggedright
-Pepito
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-}
-\\\noalign{\medskip}
-\parbox[t]{0.15\columnwidth}{\raggedright
-Yayita
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-}
-\\\noalign{\medskip}
-\parbox[t]{0.15\columnwidth}{\raggedright
-Fulanita
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-}
-\\\noalign{\medskip}
-\parbox[t]{0.15\columnwidth}{\raggedright
-Panchito
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-} & \parbox[t]{0.06\columnwidth}{\raggedright
-✓
-}
-\LL
-}
-\end{quote}
+\begin{tabular}{l*{7}{c}}
+  \toprule
+    Clase    & 1  & 2  & 3  & 4  & 5  & 6  & 7  \\
+  \midrule
+    Pepito   & \checkmark & \checkmark & \checkmark &    &    &    &    \\
+    Yayita   & \checkmark & \checkmark & \checkmark &    & \checkmark &    & \checkmark \\
+    Fulanita & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+    Panchito & \checkmark & \checkmark & \checkmark &    & \checkmark & \checkmark & \checkmark \\
+  \bottomrule
+\end{tabular}
 
 En un programa, esta informacion puede ser representada usando listas:
-
 \begin{lstlisting}
 >>> alumnos = ['Pepito', 'Yayita', 'Fulanita', 'Panchito']
 >>> asistencia = [

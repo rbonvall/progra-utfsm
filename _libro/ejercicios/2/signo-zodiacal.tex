@@ -1,12 +1,9 @@
 \section{Signo zodiacal}
 
-El signo zodiacal de una persona está determinado por su día de
-nacimiento.
-
+El signo zodiacal de una persona está determinado por su día de nacimiento.
 El diccionario \lstinline!signos! asocia a cada signo el período del año
 que le corresponde. Cada período es una tupla con la fecha de inicio y
 la fecha de término, y cada fecha es una tupla \lstinline!(mes, dia)!:
-
 \begin{lstlisting}
 signos = {
    'aries':       (( 3, 21), ( 4, 20)),
@@ -31,7 +28,6 @@ Escriba la función \lstinline!determinar_signo(fecha_de_nacimiento)! que
 reciba como parámetro la fecha de nacimiento de una persona,
 representada como una tupla \lstinline!(anno, mes, dia)!, y que retorne
 el signo zodiacal de la persona:
-
 \begin{lstlisting}
 >>> determinar_signo((1990, 5, 7))
 'tauro'

@@ -1,41 +1,40 @@
 \section{Acordes}
 
 En teoría musical, la escala cromática está formada por doce notas:
-
 \begin{lstlisting}
 notas = ['do', 'do#', 're', 're#', 'mi', 'fa',
          'fa#', 'sol', 'sol#', 'la', 'la#', 'si']
 \end{lstlisting}
-
-El signo ♯ se lee «sostenido».
-
-Cada nota corresponde a una tecla del piano. Los sostenidos son las
-teclas negras:
-
-\begin{quote}
-\includegraphics{../../diagramas/piano.png}
-\end{quote}
-
+%
+\begin{figure}
+  \centering
+  \input{diagramas/piano}
+  \caption{Correspondencia entre notas y teclas del piano.}
+  \label{fig:piano}
+\end{figure}
+%
+(El signo \(\sharp\) se lee «sostenido»).
+Cada nota corresponde a una tecla del piano,
+como se muestra en la figura~\ref{fig:piano}.
+Los sostenidos son las teclas negras.
 La escala es circular, y se extiende infinitamente en ambas direcciones.
 Esto signfica que después de si viene nuevamente do.
 
 Cada par de notas consecutivas está separada por un semitono. Por
-ejemplo, entre re y sol♯ hay 6 semitonos.
+ejemplo, entre re y sol\({}^\sharp\) hay 6 semitonos.
 
-Un \href{http://es.wikipedia.org/wiki/Acorde}{acorde} es una combinación
+Un \emph{acorde} es una combinación
 de notas que suenan bien al unísono.
 
 Existen varios tipos de acordes, que difieren en la cantidad de
 semitonos por las que sus notas están separadas.
-
 Por ejemplo, los acordes mayores tienen tres notas separadas por 4 y 3
 semitonos. Así es como el acorde de re mayor está formado por las notas:
-
 \begin{quote}
-re, fa♯ y la,
+re, fa\({}^\sharp\) y la,
 \end{quote}
-
-pues entre re y fa♯ hay 4 semitonos, y entre fa♯ y la, 3.
+pues entre re y fa\({}^\sharp\) hay 4 semitonos,
+y entre fa\({}^\sharp\) y la, 3.
 
 Algunos tipos de acordes están presentados en el siguiente diccionario,
 asociados a las separaciones entre notas consecutivas del acorde:
@@ -71,7 +70,6 @@ de las notas del acorde en el orden correcto:
 
 Si el tipo no es entregado, la función debe suponer que el acorde es
 mayor:
-
 \begin{lstlisting}
 >>> acorde('si')
 ['si', 're#', 'fa#']
