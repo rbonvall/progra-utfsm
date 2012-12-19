@@ -13,11 +13,12 @@ a los elementos de la lista:
 [25, 4, 81]
 \end{lstlisting}
 
-Escriba la función \lstinline!filtrar(f, valores)! cuyos parametros sean
+A continuación,
+escriba la función \lstinline!filtrar(f, valores)! cuyos parametros sean
 una función \lstinline!f! que retorne un valor booleano y una lista
 \lstinline!valores!, y que retorne una nueva lista que tenga todos los
 elementos de \lstinline!valores! para los que la función \lstinline!f!
-retorne \lstinline!True!:
+retorna \lstinline!True!:
 
 \begin{lstlisting}
 >>> def es_larga(palabra):
@@ -30,7 +31,6 @@ retorne \lstinline!True!:
 
 Las funciones no deben modificar la lista original, sino retornar una
 nueva:
-
 \begin{lstlisting}
 >>> filtrar(es_larga, p)
 ['arroz', 'mochila']
@@ -39,5 +39,5 @@ nueva:
 \end{lstlisting}
 
 (En Python, estas funciones ya existen, y se llaman \lstinline!map! y
-\lstinline!filter!. Ignore esta información y escriba las funciones por
+\lstinline!filter!. Haga como que no lo sabe y escriba las funciones por
 su cuenta).
