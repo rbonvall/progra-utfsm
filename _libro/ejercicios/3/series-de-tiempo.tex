@@ -1,28 +1,31 @@
 \section{Series de tiempo}
 
-\emph{Este problema apareció en el certamen 3 del primer semestre de
-2011.}
+%\emph{Este problema apareció en el certamen 3 del primer semestre de
+%2011.}
 
-Una \textbf{serie de tiempo} es una secuencia de valores numéricos
+Una \emph{serie de tiempo} es una secuencia de valores numéricos
 obtenidos al medir algún fenómeno cada cierto tiempo. Algunos ejemplos
 de series de tiempo son: el precio del dólar en cada segundo, el nivel
-medio mensual de concentración de `CO\_2` en el aire y las temperaturas
+medio mensual de concentración de CO\({}_2\) en el aire y las temperaturas
 máximas anuales de una ciudad. En un programa, los valores de una serie
 de tiempo se pueden guardar en un arreglo.
 
-Las \textbf{medias móviles} con retardo \emph{p} de una serie de tiempo
-son la secuencia de todos los promedios de \emph{p} valores consecutivos
-de la serie.
-
-Por ejemplo, si los valores de la serie son `\{5, 2, 2, 8, -4, -1, 2\}`
-entonces las medias móviles con retardo 3 son: `frac\{5 + 2 + 2\}\{3\}`,
-`frac\{2 + 2 + 8\}\{3\}`, `frac\{2 + 8 - 4\}\{3\}`, `frac\{8 - 4 -
-1\}\{3\}` y `frac\{-4 -1 + 2\}\{3\}`.
-
 \begin{enumerate}
 \item
-  Escriba la función \lstinline!medias_moviles(serie, p)! que retorne el
-  arreglo de las medias móviles con retardo \emph{p} de la serie:
+  Las \emph{medias móviles} con retardo \(p\) de una serie de tiempo
+  son la secuencia de todos los promedios de \(p\) valores consecutivos
+  de la serie.
+
+  Por ejemplo, si los valores de la serie son \(\{5, 2, 2, 8, -4, -1, 2\}\)
+  entonces las medias móviles con retardo 3 son:
+  \(\frac{5 + 2 + 2}{3}\),
+  \(\frac{2 + 2 + 8}{3}\),
+  \(\frac{2 + 8 - 4}{3}\),
+  \(\frac{8 - 4 - 1}{3}\) y
+  \(\frac{-4 -1 + 2}{3}\).
+
+    Escriba la función \lstinline!medias_moviles(serie, p)! que retorne el
+    arreglo de las medias móviles con retardo \(p\) de la serie:
 
 \begin{lstlisting}
 >>> s = array([5, 2, 2, 8, -4, -1, 2])
@@ -30,12 +33,18 @@ entonces las medias móviles con retardo 3 son: `frac\{5 + 2 + 2\}\{3\}`,
 array([ 3,  4,  2,  1, -1])
 \end{lstlisting}
 \item
-  Las \textbf{diferencias finitas} de una serie de tiempo son la
+  Las \emph{diferencias finitas} de una serie de tiempo son la
   secuencia de todas las diferencias entre un valor y el anterior.
 
-  Por ejemplo, si los valores de la serie son `\{5, 2, 2, 8, -4, -1,
-  2\}` entonces las diferencias finitas son: `(2 - 5)`, `(2 - 2)`, `(8 -
-  2)`, `(-4 - 8)`, `(-1 + 4)` y `(2 + 1)`.
+  Por ejemplo, si los valores de la serie son
+  \(\{5, 2, 2, 8, -4, -1, 2\}\)
+  entonces las diferencias finitas son:
+  \((2 - 5)\),
+  \((2 - 2)\),
+  \((8 - 2)\),
+  \((-4 - 8)\),
+  \((-1 + 4)\) y
+  \((2 + 1)\).
 
   Escriba la función \lstinline!diferencias_finitas(serie)! que retorne
   el arreglo de las diferencias finitas de la serie:

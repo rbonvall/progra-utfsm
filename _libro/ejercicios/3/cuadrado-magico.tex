@@ -1,23 +1,28 @@
 \section{Cuadrado mágico}
 
-Un `cuadrado mágico`\_ es una disposición de números naturales en una
+\begin{figure}
+  \centering
+  \input{diagramas/cuadrado-magico}
+  \caption{Cuadrado mágico de \(4\times 4\).}
+  \label{fig:magico}
+\end{figure}
+
+Un \emph{cuadrado mágico} es una disposición de números naturales en una
 tabla cuadrada, de modo que las sumas de cada columna, de cada fila y de
 cada diagonal son iguales.
+Por ejemplo, todas las filas, columnas y diagonales
+del cuadrado mágico de la figura~\ref{fig:magico} suman 34.
+
 
 Los cuadrados mágicos más populares son aquellos que tienen los números
-consecutivos desde el 1 hasta `n\^{}2`, donde `n` es el número de filas
+consecutivos desde el 1 hasta \(n^2\), donde \(n\) es el número de filas
 y de columnas del cuadrado.
-
-Por ejemplo, el siguiente es un cuadrado mágico con `n = 4`. Todas sus
-filas, columnas y diagonales suman 34:
-
-\includegraphics{../../diagramas/cuadrado-magico.png}
 
 \begin{enumerate}
 \item
   Escriba una función que reciba un arreglo cuadrado de enteros de
-  `ntimes n`, e indique si está conformado por los números consecutivos
-  desde 1 hasta `n\^{}2`:
+  \(n \times n\), e indique si está conformado por los números consecutivos
+  desde 1 hasta \(n^2\):
 
 \begin{lstlisting}
 >>> from numpy import array
