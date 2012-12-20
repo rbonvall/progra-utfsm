@@ -3,7 +3,7 @@
 Una \textbf{expresión} es una combinación de valores y operaciones que,
 al ser evaluados, entregan un valor como resultado.
 
-Algunos elementos que pueden formar parte de una expresión son: valores
+Algunos elementos que pueden formar parte de una expresión son: va\-lores
 \textbf{lite\-rales} (como \lstinline!2!, \lstinline!"hola"! o
 \lstinline!5.7!), \textbf{variables}, \textbf{operadores} y
 \textbf{llamadas a funciones}.
@@ -54,18 +54,12 @@ Las siguientes son algunas operaciones aritméticas básicas, junto con el
 operador que las representa en Python:
 
 \begin{itemize}
-\item
-  la \textbf{suma} \lstinline!+!;
-\item
-  la \textbf{resta} \lstinline!-!;
-\item
-  la \textbf{multiplicación} \lstinline!*!;
-\item
-  la \textbf{división} \lstinline!/!;
-\item
-  el \textbf{módulo} \lstinline!%! (resto de la división);
-\item
-  la \textbf{potencia} \lstinline!**! («elevado a»).
+\item la \textbf{suma} \lstinline!+!;
+\item la \textbf{resta} \lstinline!-!;
+\item la \textbf{multiplicación} \lstinline!*!;
+\item la \textbf{división} \lstinline!/!;
+\item el \textbf{módulo} \lstinline!%! (resto de la división);
+\item la \textbf{potencia} \lstinline!**! («elevado a»).
 \end{itemize}
 
 En general, si los operandos son de tipo entero, el resultado también
@@ -105,15 +99,12 @@ Si uno de los operandos es complejo, el resultado también será complejo:
 
 El operador de módulo entrega el resto de la división entre sus
 operandos:
-
 \begin{lstlisting}
 >>> 7 % 3
 1
 \end{lstlisting}
-
-Un uso bastante común del operador de módulo es usarlo para determinar
+El operador de módulo es usado comúnmente para determinar
 si un número es divisible por otro:
-
 \begin{lstlisting}
 >>> 17 % 5   # 17 no es divisible por 5
 2
@@ -123,23 +114,15 @@ si un número es divisible por otro:
 
 Una relación entre \lstinline!/! y \lstinline!%! que siempre se cumple
 para los números enteros es:
-
 \begin{lstlisting}
 (a / b) * b + (a % b) == a
 \end{lstlisting}
 
 Hay dos operadores aritméticos unarios:
-
-\begin{itemize}
-\item
-  el \textbf{positivo} \lstinline!+!, y
-\item
-  el \textbf{negativo} \lstinline!-!.
-\end{itemize}
-
+el \textbf{positivo} \lstinline!+!, y
+el \textbf{negativo} \lstinline!-!.
 El positivo entrega el mismo valor que su operando, y el negativo
 también pero con el signo cambiado:
-
 \begin{lstlisting}
 >>> n = -4
 >>> +n
@@ -153,27 +136,25 @@ también pero con el signo cambiado:
 Las \textbf{operaciones relacionales} sirven para comparar valores. Sus
 operandos son cualquier cosa que pueda ser comparada, y sus resultados
 siempre son valores lógicos.
-
 Algunas operaciones relacionales son:
 
 \begin{itemize}
-\item
-  el \textbf{igual a} \lstinline!==! (no confundir con el \lstinline!=!
-  de las asignaciones);
-\item
-  el \textbf{distinto a} \lstinline"!=";
-\item
-  el \textbf{mayor que} \lstinline!>!;
-\item
-  el \textbf{mayor o igual que} \lstinline!>=!;
-\item
-  el \textbf{menor que} \lstinline!<!;
-\item
-  el \textbf{menor o igual que} \lstinline!<=!;
+  \item
+    el \textbf{igual a} \lstinline!==! (no confundir con el \lstinline!=!
+    de las asignaciones);
+  \item
+    el \textbf{distinto a} \lstinline"!=";
+  \item
+    el \textbf{mayor que} \lstinline!>!;
+  \item
+    el \textbf{mayor o igual que} \lstinline!>=!;
+  \item
+    el \textbf{menor que} \lstinline!<!;
+  \item
+    el \textbf{menor o igual que} \lstinline!<=!;
 \end{itemize}
 
 Algunos ejemplos en la consola:
-
 \begin{lstlisting}
 >>> a = 5
 >>> b = 9
@@ -190,7 +171,6 @@ True
 
 Los operadores relacionales pueden ser encadenados, tal como se acostumbra en
 matemáticas, de la siguiente manera:
-
 \begin{lstlisting}
 >>> x = 4
 >>> 0 < x <= 10
@@ -198,7 +178,6 @@ True
 >>> 5 <= x <= 20
 False
 \end{lstlisting}
-
 La expresión \lstinline!0 < x <= 10! es equivalente a
 \lstinline!(0 < x) and (x <= 10)!.
 
@@ -210,12 +189,12 @@ La expresión \lstinline!0 < x <= 10! es equivalente a
   \centering
   \begin{tabular}{*{5}{l}}
     \toprule
-    p     & q       & p and q & p or q & not p \\
+      \lstinline!p!     & \lstinline!q!       & \lstinline!p and q! & \lstinline!p or q! & \lstinline!not p! \\
     \midrule
-    True  & True    & True    & True   & False \\
-    True  & False   & False   & True   &       \\
-    False & True    & False   & True   & True  \\
-    False & False   & False   & False  &       \\
+      \lstinline!True!  & \lstinline!True!    & \lstinline!True!    & \lstinline!True!   & \lstinline!False! \\
+      \lstinline!True!  & \lstinline!False!   & \lstinline!False!   & \lstinline!True!   &                   \\
+      \lstinline!False! & \lstinline!True!    & \lstinline!False!   & \lstinline!True!   & \lstinline!True!  \\
+      \lstinline!False! & \lstinline!False!   & \lstinline!False!   & \lstinline!False!  &                   \\
     \bottomrule
   \end{tabular}
   \caption{Resultados posibles de los operadores booleanos.}
@@ -224,21 +203,16 @@ La expresión \lstinline!0 < x <= 10! es equivalente a
 
 Los \textbf{operadores lógicos} son los que tienen operandos y resultado
 de tipo lógico.
-
 En Python, hay tres operaciones lógicas:
 
 \begin{itemize}
-\item
-  la conjunción lógica \textbf{and} (en español: «y»),
-\item
-  la disyunción lógica \textbf{or} (en español: «o»), y
-\item
-  la negación lógica \textbf{not} (en español: «no»).
+ \item la conjunción lógica \textbf{and} (en español: «y»),
+ \item la disyunción lógica \textbf{or} (en español: «o»), y
+ \item la negación lógica \textbf{not} (en español: «no»).
 \end{itemize}
 
 Los operadores \lstinline!and! y \lstinline!or! son binarios, mientras
 que \lstinline!not! es unario:
-
 \begin{lstlisting}
 >>> True and False
 False
@@ -255,15 +229,12 @@ operaciones.
 
 Los operadores \lstinline!+! y \lstinline!*! tienen otras
 interpretaciones cuando sus operandos son strings.
-
 \lstinline!+! es el operador de \textbf{concatenación} de strings: pega
 dos strings uno después del otro:
-
 \begin{lstlisting}
 >>> 'perro' + 'gato'
 'perrogato'
 \end{lstlisting}
-
 La concatenación no es una suma. Ni siquiera es una operación
 conmutativa.
 
@@ -357,25 +328,20 @@ han sido listados en orden de menor a mayor precedencia:
 Esto significa, por ejemplo, que las multiplicaciones se evalúan antes
 que las sumas, y que las comparaciones se evalúan antes que las
 operaciones lógicas:
-
 \begin{lstlisting}
 >>> 2 + 3 * 4
 14
 >>> 1 < 2 and 3 < 4
 True
 \end{lstlisting}
-
 Operaciones dentro de un mismo nivel son evaluadas en el orden en que
 aparecen en la expresión, de izquierda a derecha:
-
 \begin{lstlisting}
 >>> 15 * 12 % 7    # es igual a (15 * 12) % 7
 5
 \end{lstlisting}
-
 La única excepción a la regla anterior son las potencias, que son
 evaluadas de derecha a izquierda:
-
 \begin{lstlisting}
 >>> 2 ** 3 ** 2    # es igual a 2 ** (3 ** 2)
 512
@@ -383,7 +349,6 @@ evaluadas de derecha a izquierda:
 
 Para forzar un orden de evaluación distinto a la regla de precedencia,
 debe usarse paréntesis:
-
 \begin{lstlisting}
 >>> (2 + 3) * 4
 20
@@ -395,7 +360,6 @@ debe usarse paréntesis:
 
 Otra manera de forzar el orden es ir guardando los resultados
 intermedios en variables:
-
 \begin{lstlisting}
 >>> n = 12 % 7
 >>> 15 * n
@@ -403,11 +367,9 @@ intermedios en variables:
 \end{lstlisting}
 
 Como ejemplo, consideremos la siguiente expresión:
-
 \begin{lstlisting}
 15 + 59 * 75 / 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
 \end{lstlisting}
-
 y supongamos que la variable \lstinline!n! tiene el valor 2. Aquí
 podemos ver cómo la expresión es evaluada hasta llegar al resultado
 final, que es \lstinline!False!:
@@ -543,8 +505,8 @@ adelante:
 \end{lstlisting}
 
 La lista completa de funciones matemáticas que pueden ser importadas
-está en la \href{http://docs.python.org/library/math.html}{descripción
-del módulo math} en la documentación de Python.
+está en la descripción
+del módulo \lstinline!math! en la documentación de Python.
 
 Más adelante también aprenderemos a crear nuestras propias funciones.
 Por ahora, sólo necesitamos saber cómo llamarlas.

@@ -5,7 +5,6 @@ muchos tipos de errores que pueden estar presentes en un programa.
 
 No todos los errores pueden ser detectados por el computador. Por
 ejemplo, el siguiente programa tiene un error lógico bastante evidente:
-
 \begin{lstlisting}
 n = int(raw_input('Escriba un numero: '))
 doble = 3 * n
@@ -87,9 +86,7 @@ SyntaxError: assignment to keyword
 
 Un \textbf{error de nombre} ocurre al usar una variable que no ha sido
 creada con anterioridad.
-
 El nombre de la excepción es \lstinline!NameError!:
-
 \begin{lstlisting}
 >>> x = 20
 >>> 5 * x
@@ -108,7 +105,6 @@ antes de usarla.
 En general, todas las operaciones en un programa pueden ser aplicadas
 sobre valores de tipos bien específicos. Un \textbf{error de tipo}
 ocurre al aplicar una operación sobre operandos de tipo incorrecto.
-
 El nombre de la excepción es \lstinline!TypeError!.
 
 Por ejemplo, no se puede multiplicar dos strings:
@@ -137,7 +133,6 @@ error, y finalmente corregirlo.
 
 El \textbf{error de valor} ocurre cuando los operandos son del tipo
 correcto, pero la operación no tiene sentido para ese valor.
-
 El nombre de la excepción es \lstinline!ValueError!.
 
 Por ejemplo, la función \lstinline!int! puede convertir un string a un
@@ -162,9 +157,7 @@ adecuados.
 
 \section{Error de división por cero}
 
-El \textbf{error de division por cero} ocurre al intentar dividir por
-cero.
-
+El \textbf{error de division por cero} ocurre al intentar dividir por cero.
 El nombre de la excepción es \lstinline!ZeroDivisionError!:
 
 \begin{lstlisting}
@@ -179,7 +172,6 @@ ZeroDivisionError: division by zero
 El \textbf{error de desborde} ocurre cuando el resultado de una
 operación es tan grande que el computador no puede representarlo
 internamente.
-
 El nombre de la excepción es \lstinline!OverflowError!:
 
 \begin{lstlisting}

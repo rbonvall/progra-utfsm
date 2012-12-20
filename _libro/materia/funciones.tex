@@ -5,9 +5,7 @@ Supongamos que necesitamos escribir un programa que calcule el
   número combinatorio
 %}
 \(C(m, n)\), definido como:
-
-\[C(m, n) = \frac{m!}{(m - n)! n!},\]
-
+\[C(m, n) = \frac{m!}{(m - n)!\,n!},\]
 donde \(n!\) (el \href{http://es.wikipedia.org/wiki/Factorial}{factorial}
 de \(n\)) es el producto de los números enteros desde 1 hasta \(n\):
 
@@ -141,7 +139,7 @@ las veces que sea necesario:
 \end{lstlisting}
 
 Las variables que son creadas dentro de la función (incluyendo los
-parámetros y el resultado) se llaman \textbf{variables locales}, y sólo
+pará\-me\-tros y el resultado) se llaman \textbf{variables locales}, y sólo
 son visibles dentro de la función, no desde el resto del programa.
 
 Por otra parte, las variables creadas fuera de alguna función se llaman
@@ -211,7 +209,6 @@ entender.
 \section{Múltiples valores de retorno}
 
 En Python, una función puede retornar más de un valor.
-
 Por ejemplo, la siguiente función recibe una cantidad de segundos, y
 retorna el equivalente en horas, minutos y segundos:
 
@@ -248,7 +245,6 @@ un tipo de datos que veremos más adelante:
 
 Una función puede realizar acciones sin entregar necesariamente un
 resultado.
-
 Por ejemplo, si un programa necesita imprimir cierta información muchas
 veces, conviene encapsular esta acción en una función que haga los
 \lstinline!print!

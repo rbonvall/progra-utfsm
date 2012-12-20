@@ -112,14 +112,11 @@ print 'El mayor es', mayor
 \end{lstlisting}
 
 Otra manera de hacerlo es reemplazando esta parte:
-
 \begin{lstlisting}
 if n > mayor:
     mayor = n
 \end{lstlisting}
-
 por ésta:
-
 \begin{lstlisting}
 mayor = max(mayor, n)
 \end{lstlisting}
@@ -162,7 +159,7 @@ for i in range(10):
 \end{lstlisting}
 
 Si sabemos de antemano que todos los números por revisar son positivos,
-podemos simplemente inicializar el acumulador en \lstinline!-1!.
+podemos simplemente inicializar el acumulador en \(-1\).
 
 Por supuesto, para obtener el menor valor se hace de la misma manera,
 pero inicializando el acumulador con un número muy grande, y
@@ -172,7 +169,6 @@ actualizándolo al encontrar un valor menor.
 
 Para generar pares de cosas en un programa, es necesario usar dos ciclos
 anidados (es decir, uno dentro del otro).
-
 Ambos ciclos, el exterior y el interior, van asignando valores a sus
 variables de control, y ambas son accesibles desde dentro del doble
 ciclo.

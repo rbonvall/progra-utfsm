@@ -2,9 +2,7 @@
 
 Un programa es una sucesión de \textbf{sentencias} que son ejecutadas
 secuencialmente.
-
 Por ejemplo, el siguiente programa tiene cuatro sentencias:
-
 \begin{lstlisting}
 n = int(raw_input('Ingrese n: '))
 m = int(raw_input('Ingrese m: '))
@@ -67,8 +65,7 @@ if condicion:
     sentencias
 \end{lstlisting}
 
-Por ejemplo, el siguente programa felicita a alguien que aprobó la
-asignatura:
+Por ejemplo, el siguente programa felicita a alguien que aprobó el ramo:
 
 \begin{lstlisting}
 nota = int(raw_input('Ingrese su nota: '))
@@ -127,7 +124,7 @@ condicional, y será ejecutada siempre.
 \section{Condicional if-elif-else}
 
 La sentencia \textbf{if-elif-else} depende de dos o más condiciones, que
-son evaluadas en orden. La primera que es verdadera determina qué
+son eva\-lua\-das en orden. La primera que es verdadera determina qué
 instrucciones serán ejecutadas:
 
 \begin{center}
@@ -167,7 +164,6 @@ El último \lstinline!else! es opcional.
 
 Por ejemplo, la tasa de impuesto a pagar por una persona según su sueldo
 puede estar dada por la tabla~\ref{tbl:tasa-impuesto}.
-
 Entonces, el programa que calcula el impuesto a pagar es el siguiente:
 
 \begin{lstlisting}
@@ -367,7 +363,7 @@ de iteraciones es conocido antes de entrar al ciclo.
 
 Además de las condiciones de término propias de los ciclos
 \lstinline!while! y \lstinline!for!, siempre es posible salir de un
-ciclo en medio de una iteración usando la sentencia \textbf{break}. Lo
+ciclo en medio de una iteración usando la sentencia \lstinline!break!. Lo
 lógico es que sea usada dentro de un \lstinline!if!, para evitar que el
 ciclo termine prematuramente en la primera iteración:
 

@@ -2,10 +2,8 @@
 
 Un \textbf{conjunto} es una colección desordenada de valores no
 repetidos.
-
 Los conjuntos de Python son análogos a los conjuntos matemáticos. El
 tipo de datos que representa a los conjuntos se llama \lstinline!set!.
-
 El tipo \lstinline!set! es mutable: una vez que se ha creado un
 conjunto, puede ser modificado.
 
@@ -16,18 +14,16 @@ Las dos maneras principales de crear un conjunto son:
 \begin{itemize}
 \item
   usar un conjunto literal, entre llaves:
-
 \begin{lstlisting}
 >>> colores = {'azul', 'rojo', 'blanco', 'blanco'}
 >>> colores
 {'rojo', 'azul', 'blanco'}
 \end{lstlisting}
-
   Note que el conjunto no incluye elementos repetidos, y que los
   elementos no quedan en el mismo orden en que fueron agregados.
+
 \item
   usar la función \lstinline!set! aplicada sobre un iterable:
-
 \begin{lstlisting}
 >>> set('abracadabra')
 {'a', 'r', 'b', 'c', 'd'}
@@ -38,7 +34,7 @@ Las dos maneras principales de crear un conjunto son:
 \end{lstlisting}
 
   El conjunto vacío debe ser creado usando \lstinline!set()!, ya que
-  \lstinline!{}! representa el diccionario vacío.
+  \lstinline!{}! representa al diccionario vacío.
 \end{itemize}
 
 Los elementos de un conjunto deben ser inmutables. Por ejemplo, no es

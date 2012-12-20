@@ -3,15 +3,11 @@
 Un programa es una secuencia de \textbf{sentencias}. Una sentencia
 representa una instrucción bien definida que es ejecutada por el
 computador. En Python, cada línea del código representa una sentencia.
-
 Hay que distinguir entre:
-
 \begin{enumerate}
-\item
-  \textbf{sentencias simples}: son una única instrucción; y
-\item
-  \textbf{sentencias de control}: contienen varias otras sentencias, que
-  a su vez pueden ser simples o de control.
+  \item \textbf{sentencias simples}: son una única instrucción; y
+  \item \textbf{sentencias de control}: contienen varias otras sentencias, que
+    a su vez pueden ser simples o de control.
 \end{enumerate}
 
 Las sentencias simples son ejecutadas secuencialmente, una después de la
@@ -41,7 +37,7 @@ y ejecútelo para convencerse de que funciona correctamente.
 \section{Expresiones y variables}
 
 Una \textbf{expresión} es una combinación de valores y operaciones que
-son evaluados durante la ejecución del algoritmo para obtener un
+son eva\-luados durante la ejecución del algoritmo para obtener un
 resultado.
 
 Por ejemplo, \lstinline!2 + 3! es una expresión aritmética que, al ser
@@ -49,7 +45,7 @@ evaluada, siempre entrega el valor \lstinline!5! como resultado. En esta
 expresión, \lstinline!2! y \lstinline!3! son \textbf{valores literales}
 y \lstinline!+! es el operador de adición.
 
-En el programa de conversión de temperaturas aparece la expresión
+En nuestro programa de conversión de temperaturas aparece la expresión
 \lstinline!(f - 32.0) * (5.0 / 9.0)!, cuyo resultado depende de cuál es
 el valor de \lstinline!f! al momento de la evaluación. A diferencia de
 los valores literales, \lstinline!f! es una \textbf{variable}, que tiene
@@ -98,11 +94,9 @@ siguiente manera:
 
 Bajo esta interpretación, es perfectamente posible una asignación como
 ésta:
-
 \begin{lstlisting}
 i = i + 1
 \end{lstlisting}
-
 Primero la expresión \lstinline!i + 1! es evaluada, entregando como
 resultado el sucesor del valor actual de \lstinline!i!. A continuación,
 la variable \lstinline!i! toma el nuevo valor. Por ejemplo, si
@@ -129,8 +123,8 @@ r = 2 * abs(x - x0)
 nombre = raw_input('Ingrese su nombre')
 \end{lstlisting}
 
-Las siguientes no son asignaciones válidas, pues no respetan la sintaxis
-\lstinline!nombre = expresion!:
+En contraste, las siguientes no son asignaciones válidas,
+pues no respetan la sintaxis \lstinline!nombre = expresion!:
 
 \begin{lstlisting}[language={}]
 n + 1 = 5
@@ -245,11 +239,11 @@ Por ejemplo, al ejecutar el programa \lstinline!temperatura.py! tal como
 está arriba, el usuario verá el mensaje
 \lstinline!Ingrese temperatura...! y a continuación ingresará el valor.
 Una vez que el programa entrega como resultado el equivalente en grados
-Celcius, no quedan más sentencias para ejecutar, por lo que el programa
+Celsius, no quedan más sentencias para ejecutar, por lo que el programa
 se cierra.
 
 Existen otras maneras de ejecutar programas con las que este problema no
-ocurre.. Por ejemplo, al ejecutar un programa desde una IDE,
+ocurre. Por ejemplo, al ejecutar un programa desde una IDE,
 generalmente la salida aparece en una ventana que no se cierra.
 
 Una solución para evitar que la ventana se cierre es agregar un

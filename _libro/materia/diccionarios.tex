@@ -10,9 +10,9 @@ un valor es a través de su llave.
 
 \section{Cómo crear diccionarios}
 
-Los diccionarios literales se crean usando llaves (\lstinline!{! y
-\lstinline!}!). La llave y el valor van separados por dos puntos:
-
+Los diccionarios literales se crean usando paréntesis de llave
+(\lstinline!{! y \lstinline!}!).
+La llave y el valor van separados por dos puntos:
 \begin{lstlisting}
 >>> telefonos = {'Pepito': 5552437, 'Jaimito': 5551428, 'Yayita': 5550012}
 \end{lstlisting}
@@ -65,7 +65,7 @@ Se puede agregar una llave nueva simplemente asignándole un valor:
 \end{lstlisting}
 
 Note que el orden en que quedan las llaves en el diccionario no es
-necesariamente el mismo orden en que fueron agregadas.
+necesa\-ria\-mente el mismo orden en que fueron agregadas.
 
 Si se asigna un valor a una llave que ya estaba en el diccionario, el
 valor anterior se sobreescribe. Recuerde que un diccionario no puede
@@ -180,5 +180,4 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 \end{lstlisting}
 
-Típicamente, se usa números, tuplas y strings como llaves de los
-diccionarios.
+Típicamente, las llaves de los diccionarios suelen ser números, tuplas y strings.
