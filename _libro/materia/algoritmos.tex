@@ -2,7 +2,6 @@
 
 Un \textbf{algoritmo} es una secuencia de pasos para resolver un
 problema.
-
 Los pasos deben estar muy bien definidos, y tienen que describir sin
 ambigüedades cómo llegar desde el inicio hasta el final.
 
@@ -117,18 +116,17 @@ circulares. El algoritmo siempre debe ser capaz llegar desde uno hasta
 el otro, sin importar por qué camino lo hace. Un algoritmo no puede
 «quedarse pegado» en la mitad.
 
-La entrada y la salida de datos son representadas con romboides, que en
-la figura de arriba están pintados de verde.
+La entrada y la salida de datos son representadas con romboides,
 
 Los diamantes representan condiciones en las que el algoritmo sigue uno
 de dos caminos que están etiquetados con \emph{sí} o \emph{no},
-dependiendo si la condición es verdadera o falsa.
+dependiendo de si la condición es verdadera o falsa.
 
 También puede haber ciclos, representados por flechas que regresan a
 bloques anteriores. En este ejemplo, no hay ciclos.
 
-Otras sentencias van dentro de rectángulos, que en la figura están
-pintados de azul. En este ejemplo, las sentencias son asignaciones,
+Otras sentencias van dentro de rectángulos.
+En este ejemplo, las sentencias son asignaciones,
 representadas en la forma \lstinline!nombre = valor!.
 
 Los diagramas de flujo no son usados en la práctica para programar, pero
@@ -141,9 +139,6 @@ basada en ciertas convenciones notacionales. Si bien es muy parecido al
 código que finalmente se escribirá en el computador, el pseudocódigo
 está pensado para ser leído por humanos.
 
-Una manera de escribir el algoritmo para la ecuación cuadrática en
-pseudocódigo es la que se muestra en la figura~\ref{fig:pseudocodigo-cuadratica}.
-
 \begin{figure}
   \centering
   \begin{verse}
@@ -154,22 +149,25 @@ pseudocódigo es la que se muestra en la figura~\ref{fig:pseudocodigo-cuadratica
     \(\text{discriminante} = b^2 - 4ac\)
 
     \textbf{si} \(\text{discriminante} < 0\):\\
-        \textbf{escribir} ``La ecuación no tiene soluciones reales''
+    \qquad\textbf{escribir} ``La ecuación no tiene soluciones reales''
 
     \textbf{o si no, si} \(\text{discriminante} = 0\):\\
-        \(x = -b / 2a\)\\
-        \textbf{escribir} ``La solución única es'', \(x\)
+    \qquad\(x = -b / 2a\)\\
+    \qquad\textbf{escribir} ``La solución única es'', \(x\)
 
     \textbf{o si no}:\\
-        \(x_1 = (-b - \sqrt{\text{discriminante}}) / 2a\)\\
-        \(x_2 = (-b + \sqrt{\text{discriminante}}) / 2a\)\\
-        \textbf{escribir} ``La primera solución real es:'', \(x_1\)\\
-        \textbf{escribir} ``La segunda solución real es:'', \(x_2\)
+    \qquad\(x_1 = (-b - \sqrt{\text{discriminante}}) / 2a\)\\
+    \qquad\(x_2 = (-b + \sqrt{\text{discriminante}}) / 2a\)\\
+    \qquad\textbf{escribir} ``La primera solución real es:'', \(x_1\)\\
+    \qquad\textbf{escribir} ``La segunda solución real es:'', \(x_2\)
   \end{verse}
   \caption{Pseudocódigo del algoritmo para resolver
     la ecuación cuadrática \(ax^2 + bx + c = 0\).}
   \label{fig:pseudocodigo-cuadratica}
 \end{figure}
+
+Una manera de escribir el algoritmo para la ecuación cuadrática en
+pseudocódigo es la que se muestra en la figura~\ref{fig:pseudocodigo-cuadratica}.
 
 Las líneas que comienzan con \textbf{leer} y \textbf{escribir}
 denotan, respectivamente, la entrada y la salida del programa. Los
@@ -178,7 +176,7 @@ diferentes casos son representados usando sentencias \textbf{si} y
 caso de los diagramas de flujo.
 
 La notación de pseudocódigo es bien liberal. Uno puede mezclar notación
-de matemáticas con frases en español, siempre que quede absolutamente
+de matemáticas y frases en español, siempre que quede absolutamente
 claro para el lector qué representa cada una de las líneas del
 algoritmo.
 
