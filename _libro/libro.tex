@@ -71,16 +71,36 @@
 \lstset{rangeprefix=\#\ }
 \lstset{includerangemarker=false}
 
-\title{Apuntes de programación}
+\title{Apuntes de Programaci\'on}
 \author{
-  Roberto Bonvallet \\
-  Departamento de Informática \\
-  Universidad Técnica Federico Santa María
+  Roberto Bonvallet %\\
+%  Departamento de Informática \\
+%  Universidad Técnica Federico Santa María
 }
-\date{2012}
+\date{2013}
+
+\newcommand*{\titleTH}{%
+  \begingroup
+    \raggedleft
+    \vspace*{\baselineskip}
+    {\Large         \theauthor}\\[0.167\textheight]
+    {\HUGE\bfseries \thetitle }\\[\baselineskip]
+    \vfill
+    {\Large Editorial USM}\par
+    \vspace*{3\baselineskip}
+  \endgroup%
+}
+
 
 \begin{document}
-  \maketitle
+  \frontmatter
+  %\maketitle
+  \begin{titlingpage}
+    \titleTH
+  \end{titlingpage}
+  \input{colofon}
+
+  \mainmatter
   \part{Materia}
   \include{materia}
   \part{Ejercicios}
