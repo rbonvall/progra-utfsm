@@ -79,25 +79,10 @@
 }
 \date{2013}
 
-\newcommand*{\titleTH}{%
-  \begingroup
-    \raggedleft
-    \vspace*{\baselineskip}
-    {\Large         \theauthor}\\[0.167\textheight]
-    {\HUGE\bfseries \thetitle }\\[\baselineskip]
-    \vfill
-    {\Large Editorial USM}\par
-    \vspace*{3\baselineskip}
-  \endgroup%
-}
-
-
 \begin{document}
   \frontmatter
-  %\maketitle
-  \begin{titlingpage}
-    \titleTH
-  \end{titlingpage}
+  \input{titulo}
+  \newpage
   \input{colofon}
 
   \mainmatter
