@@ -47,11 +47,11 @@ mano = {(1, 'P'), (1, 'C'), (1, 'T'), (13, 'D'), (12, 'P')}
 
   Escriba la función que indique si la mano es un full:
 \begin{lstlisting}
->>> mano_1 = {(1, 'P'), (1, 'C'), (6, 'T'), (1, 'D'), (6, 'D')}
->>> mano_2 = {(2, 'T'), (1, 'C'), (12, 'C'), (1, 'D'), (6, 'D')}
->>> es_full(mano_1)
+>>> a = {(1, 'P'), (1, 'C'), (6, 'T'), (1, 'D'), (6, 'D')}
+>>> b = {(2, 'T'), (1, 'C'), (12, 'C'), (1, 'D'), (6, 'D')}
+>>> es_full(a)
 True
->>> es_full(mano_2)
+>>> es_full(b)
 False
 \end{lstlisting}
 
@@ -66,11 +66,11 @@ False
 
   Escriba la función que indique si la mano es un color:
 \begin{lstlisting}
->>> mano_1 = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
->>> mano_2 = {(12, 'T'), (1, 'C'), (5, 'C'), (2, 'C'), (2, 'D')}
->>> es_color(mano_1)
+>>> a = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
+>>> b = {(12, 'T'), (1, 'C'), (5, 'C'), (2, 'C'), (2, 'D')}
+>>> es_color(a)
 True
->>> es_color(mano_2)
+>>> es_color(b)
 False
 \end{lstlisting}
 
@@ -84,11 +84,11 @@ False
 
   Escriba la función que indique si la mano es una escalera:
 \begin{lstlisting}
->>> mano_1 = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
->>> mano_2 = {(12, 'T'), (7, 'C'), (3, 'C'), (12, 'C'), (5, 'T')}
->>> es_escalera(mano_1)
+>>> a = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
+>>> b = {(12, 'T'), (7, 'C'), (3, 'C'), (12, 'C'), (5, 'T')}
+>>> es_escalera(a)
 True
->>> es_escalera(mano_2)
+>>> es_escalera(b)
 False
 \end{lstlisting}
 
@@ -101,14 +101,14 @@ False
 
   Escriba la función que indique si la mano es una escalera de color:
 \begin{lstlisting}
->>> mano_1 = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
->>> mano_2 = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
->>> mano_3 = {(4, 'D'), (7, 'D'), (3, 'D'), (6, 'D'), (5, 'D')}
->>> es_escalera_de_color(mano_1)
+>>> a = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
+>>> b = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
+>>> c = {(4, 'D'), (7, 'D'), (3, 'D'), (6, 'D'), (5, 'D')}
+>>> es_escalera_de_color(a)
 False
->>> es_escalera_de_color(mano_2)
+>>> es_escalera_de_color(b)
 False
->>> es_escalera_de_color(mano_3)
+>>> es_escalera_de_color(c)
 True
 \end{lstlisting}
 

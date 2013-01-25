@@ -86,11 +86,14 @@ False
   que indique si el texto es o no un pangrama:
 
 \begin{lstlisting}
->>> es_pangrama('Sylvia wagt quick den Jux bei Pforzheim.')
+>>> a = 'Sylvia wagt quick den Jux bei Pforzheim.'
+>>> b = 'Cada vez que trabajo, Felix me paga un whisky.'
+>>> c = 'Cada vez que trabajo, Luis me invita a una cerveza.'
+>>> es_pangrama(a)
 True
->>> es_pangrama('Cada vez que trabajo, Felix me paga un whisky.')
+>>> es_pangrama(b)
 True
->>> es_pangrama('Cada vez que trabajo, Luis me invita a una cerveza.')
+>>> es_pangrama(c)
 False
 \end{lstlisting}
 \end{enumerate}
