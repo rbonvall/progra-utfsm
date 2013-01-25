@@ -15,17 +15,17 @@
   \node[n] at (5.5, 0.5) {11.10};
 
   \foreach\i in {0,...,5} {
-    \draw[very thick, blue!80!black] ({\i + .1}, 1) -- ({\i + .9}, 1);
-    \node[idx, blue!80!black] at ({\i + .5}, 1.5) {\i};
+    \draw[very thick, Blue] ({\i + .1}, 1) -- ({\i + .9}, 1);
+    \node[idx, Blue] at ({\i + .5}, 1.5) {\i};
   }
   \foreach\i in {0,...,6} {
-    \draw[very thick, red!80!black] (\i, -0.2) -- (\i, 1);
-    \node[idx, red!80!black] at (\i, -.5) {\i};
+    \draw[very thick, Red!50!white] (\i, -0.2) -- (\i, 1);
+    \node[idx, Red!50!white] at (\i, -.5) {\i};
   }
 
-  \node[anchor=west] at (6.8,  1.4) { a[\textcolor{blue!80!black}{\textbf{i}}] };
-  \node[anchor=west] at (6.8,  0.5) { a[\textcolor{red!80!black}{\textbf{i}}:\textcolor{red!80!black}{\textbf{j}}] };
-  \node[anchor=west] at (6.8, -0.4) { a[\textcolor{red!80!black}{\textbf{i}}:\textcolor{red!80!black}{\textbf{j}}:k] };
+  \node[anchor=west] at (6.8,  1.4) { a[\textcolor{Blue}{\textbf{i}}] };
+  \node[anchor=west] at (6.8,  0.5) { a[\textcolor{Red!50!white}{\textbf{i}}:\textcolor{Red!50!white}{\textbf{j}}] };
+  \node[anchor=west] at (6.8, -0.4) { a[\textcolor{Red!50!white}{\textbf{i}}:\textcolor{Red!50!white}{\textbf{j}}:k] };
 
 \end{tikzpicture}
 
