@@ -33,7 +33,7 @@ print 'Listo'
 Al ejecutarlo, el intérprete lanzará una excepción, pues la división por
 cero es una operación inválida:
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 Traceback (most recent call last):
   File "division.py", line 3, in <module>
     print n / m
@@ -62,7 +62,7 @@ excepción.
 
 A continuación veremos algunos ejemplos de errores de sintaxis
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> 2 * (3 + 4))
   File "<stdin>", line 1
     2 * (3 + 4))
@@ -70,13 +70,13 @@ A continuación veremos algunos ejemplos de errores de sintaxis
 SyntaxError: invalid syntax
 \end{lstlisting}
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> n + 2 = 7
   File "<stdin>", line 1
 SyntaxError: can't assign to operator
 \end{lstlisting}
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> True = 1000
   File "<stdin>", line 1
 SyntaxError: assignment to keyword
@@ -87,7 +87,7 @@ SyntaxError: assignment to keyword
 Un \textbf{error de nombre} ocurre al usar una variable que no ha sido
 creada con anterioridad.
 El nombre de la excepción es \lstinline!NameError!:
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> x = 20
 >>> 5 * x
 100
@@ -109,7 +109,7 @@ El nombre de la excepción es \lstinline!TypeError!.
 
 Por ejemplo, no se puede multiplicar dos strings:
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> 'seis' * 'ocho'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -118,7 +118,7 @@ TypeError: can't multiply sequence by non-int of type 'str'
 
 Tampoco se puede obtener el largo de un número:
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> len(68)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -139,7 +139,7 @@ Por ejemplo, la función \lstinline!int! puede convertir un string a un
 entero, pero el string debe ser la representación de un número entero.
 Cualquier otro valor lanza un error de valor:
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> int('41')
 41
 >>> int('perro')
@@ -160,7 +160,7 @@ adecuados.
 El \textbf{error de division por cero} ocurre al intentar dividir por cero.
 El nombre de la excepción es \lstinline!ZeroDivisionError!:
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> 1/0
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -174,7 +174,7 @@ operación es tan grande que el computador no puede representarlo
 internamente.
 El nombre de la excepción es \lstinline!OverflowError!:
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> 20.0 ** 20.0 ** 20.0
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
