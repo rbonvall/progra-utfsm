@@ -138,12 +138,12 @@ x ** 2 = x * x
 
 \section{Entrada}
 
-La \textbf{entrada} es la parte del programa en que el usuario ingresa
-datos.
+La \textbf{entrada} es la parte del programa
+que pide datos al usuario.
 
 La manera más simple de ingresar datos es hacerlo a través del teclado.
 La función \lstinline!raw_input(mensaje)! pide al usuario ingresar un
-valor, que puede ser asignado a una variable para ser usado por el
+valor, que puede ser asignado a una variable para ser usado más adelante por el
 programa. El \lstinline!mensaje! es lo que se mostrará al usuario antes
 de que él ingrese el valor.
 
@@ -159,7 +159,7 @@ f = float(raw_input('Ingrese temperatura en Fahrenheit: '))
 \end{lstlisting}
 
 Cuando el programa llega a esta línea, el mensaje
-\texttt{Ingrese temperatura en Fahrenheit:} es mostrado al usuario,
+«\texttt{Ingrese temperatura en Fahrenheit:}» es mostrado al usuario,
 que entonces debe ingresar un valor, que es convertido a un número real
 y asociado al nombre \lstinline!f!.
 
@@ -189,8 +189,8 @@ siguiente sentencia de salida:
 print 'El equivalente en Celsius es:', c
 \end{lstlisting}
 
-En este caso, se está imprimiendo el mensaje
-\texttt{El equivalente en Celsius es:} y a continuación, en la misma
+El programa imprimirá el mensaje
+«\texttt{El equivalente en Celsius es:}» y a continuación, en la misma
 línea, el valor de la variable \lstinline!c!.
 
 Las comillas sólo sirven para representar un string en el código, y no
@@ -236,8 +236,8 @@ inmediatamente, por lo que no es posible alcanzar a leer la salida del
 programa.
 
 Por ejemplo, al ejecutar el programa \lstinline!temperatura.py! tal como
-está arriba, el usuario verá el mensaje
-\lstinline!Ingrese temperatura...! y a continuación ingresará el valor.
+está al comienzo del capítulo, el usuario verá el mensaje
+«\texttt{Ingrese temperatura}\dots» y a continuación ingresará el valor.
 Una vez que el programa entrega como resultado el equivalente en grados
 Celsius, no quedan más sentencias para ejecutar, por lo que el programa
 se cierra.
