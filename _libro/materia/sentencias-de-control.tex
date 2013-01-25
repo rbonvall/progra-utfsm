@@ -179,7 +179,7 @@ else:
 print 'Usted debe pagar', tasa * sueldo, 'de impuesto'
 \end{lstlisting}
 
-Siempre sólo una de las alternativas será ejecutada. Apenas una de las
+Siempre sólo una de las alternativas será ejecutada. Tan pronto alguna de las
 condiciones es verdadera, el resto de ellas no siguen siendo evaluadas.
 
 Otra manera de escribir el mismo programa usando sólo sentencias
@@ -322,7 +322,7 @@ range(inicial, final, incremento)
 \end{lstlisting}
 
 El valor inicial siempre es parte del rango. El valor final nunca es
-parte del rango. El incremento indica la diferencia entre dos valores
+incluido en el rango. El incremento indica la diferencia entre dos valores
 consecutivos del rango.
 
 Si el valor inicial es omitido, se supone que es 0. Si el incremento es
@@ -363,10 +363,7 @@ de iteraciones es conocido antes de entrar al ciclo.
 
 Además de las condiciones de término propias de los ciclos
 \lstinline!while! y \lstinline!for!, siempre es posible salir de un
-ciclo en medio de una iteración usando la sentencia \lstinline!break!. Lo
-lógico es que sea usada dentro de un \lstinline!if!, para evitar que el
-ciclo termine prematuramente en la primera iteración:
-
+ciclo en medio de una iteración usando la sentencia \lstinline!break!:
 \begin{center}
   \input{diagramas/break}
 \end{center}
@@ -382,6 +379,9 @@ for d in range(2, n):
         es_primo = False
         break
 \end{lstlisting}
+
+Es lógico es que el \lstinline!break! aparezca siempre dentro de un \lstinline!if!,
+pues de otro modo el ciclo terminaría siempre en la primera iteración.
 
 \section{Saltar a la siguiente iteración}
 

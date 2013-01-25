@@ -31,7 +31,7 @@ Las ventajas de usar módulos son:
 
 Python viene «de fábrica» con muchos módulos listos para ser usados.
 Además, es posible descargar de internet e instalar módulos
-prácticamente para hacer cualquier cosa. Por último, aprenderemos a
+prácticamente para hacer cualquier cosa. Aquí aprenderemos a
 crear nuestros propios módulos.
 
 \section{Módulos provistos por Python}
@@ -147,8 +147,7 @@ print math.sin(10)
 print math.cos(10)
 \end{lstlisting}
 
-Las dos formas son equivalentes. Como siempre, hay que optar por la que
-hace que el programa sea más fácil de entender.
+Las dos formas son equivalentes.
 
 \section{Creación de módulos}
 
@@ -173,9 +172,8 @@ En este caso, el nombre del módulo es \lstinline!pares!. Para poder usar
 estas funciones desde otro programa, el archivo \lstinline!pares.py!
 debe estar en la misma carpeta que el programa.
 
-Por ejemplo, el programa \lstinline!mostrar_pares.py! puede ser escrito
-así:
-
+Por ejemplo, un programa \lstinline!mostrar_pares.py! puede ser escrito así:
+%
 \begin{lstlisting}
 from pares import pares_hasta
 
@@ -184,8 +182,8 @@ print 'Los numeros pares hasta', n, 'son:'
 for i in pares_hasta(n):
     print i
 \end{lstlisting}
-
-Y el programa \lstinline!ver_si_es_par.py! puede ser escrito así:
+%
+Y un programa \lstinline!ver_si_es_par.py! puede ser escrito así:
 
 \begin{lstlisting}
 import pares
@@ -224,8 +222,11 @@ Por lo tanto, se puede usar el valor de esta variable para marcar la
 parte del programa que debe ser ejecutada al ejecutar el archivo, pero
 no al importarlo.
 
-Por ejemplo, el siguiente programa convierte unidades de medidas de
-longitud:
+Por ejemplo, el programa listado a continuación
+convierte unidades de medidas de longitud.
+Este programa es útil por sí solo, pero además sus cuatro funciones y
+las constantes \lstinline!km_por_milla! y \lstinline!cm_por_pulgada!
+podrían ser útiles en otro programa:
 
 \begin{lstlisting}
 km_por_milla = 1.609344
@@ -266,10 +267,6 @@ if __name__ == '__main__':
     else:
         print 'Opcion incorrecta'
 \end{lstlisting}
-
-Este programa es útil por sí solo, pero además sus cuatro funciones y
-las constantes \lstinline!km_por_milla! y \lstinline!cm_por_pulgada!
-podrían ser útiles en otro programa.
 
 Al poner el cuerpo del programa dentro del
 \lstinline!if __name__ == '__main__'!, el archivo puede ser usado como

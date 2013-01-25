@@ -251,7 +251,7 @@ perfectamente alineados. Con las listas, esto no ocurre:
 \section{Arreglos aleatorios}
 
 El módulo NumPy contiene a su vez otros módulos que proveen
-funcionalidad adicional a los arreglos y funciones básicos.
+funcio\-na\-lidad adicional a los arreglos y funciones básicos.
 
 El módulo \lstinline!numpy.random! provee funciones para crear
 \textbf{números aleatorios} (es decir, generados al azar), de las cuales
@@ -318,7 +318,8 @@ el resultado:
 \begin{lstlisting}
 >>> a = linspace(0, 1, 9)
 >>> a
-array([ 0.   ,  0.125,  0.25 ,  0.375,  0.5  ,  0.625,  0.75 ,  0.875,  1.   ])
+array([ 0.   ,  0.125,  0.25 ,  0.375,  0.5  ,  0.625,
+0.75 ,  0.875,  1.   ])
 >>> a[1:7:2]
 array([ 0.125,  0.375,  0.625])
 >>> a[::3]
@@ -326,7 +327,8 @@ array([ 0.   ,  0.375,  0.75 ])
 >>> a[-2::-2]
 array([ 0.875,  0.625,  0.375,  0.125])
 >>> a[::-1]
-array([ 1.   ,  0.875,  0.75 ,  0.625,  0.5  ,  0.375,  0.25 ,  0.125,  0.   ])
+array([ 1.   ,  0.875,  0.75 ,  0.625,  0.5  ,  0.375,
+0.25 ,  0.125,  0.   ])
 \end{lstlisting}
 
 Una manera simple de recordar cómo funciona el rebanado es considerar
@@ -374,10 +376,10 @@ respectivamente la posición del mínimo y del máximo:
 2
 \end{lstlisting}
 
-Los métodos \lstinline!sum! y \lstinline!prod! entregan respectivamente
+Los métodos \lstinline[language={}]!sum! y \lstinline!prod! entregan respectivamente
 la suma y el producto de los elementos:
 
-\begin{lstlisting}
+\begin{lstlisting}[language={}]
 >>> a.sum()
 24.041592653589795
 >>> a.prod()

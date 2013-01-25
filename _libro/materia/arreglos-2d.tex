@@ -126,7 +126,8 @@ exactamente la misma forma:
 >>> a + b
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-ValueError: shape mismatch: objects cannot be broadcast to a single shape
+ValueError: shape mismatch: objects cannot be
+            broadcast to a single shape
 \end{lstlisting}
 
 \section{Obtener elementos de un arreglo bidimensional}
@@ -186,7 +187,7 @@ Note que el número de dimensiones es igual a la cantidad de rebanados
 que hay en los índices:
 
 \begin{lstlisting}
->>> a[2, 3]      # valor escalar (arreglo de cero dimensiones)
+>>> a[2, 3]      # valor escalar (cero dimensiones)
 2.56
 >>> a[2:3, 3]    # arreglo de una dimension de 1 elemento
 array([ 2.56])
