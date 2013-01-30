@@ -1,0 +1,146 @@
+\chapter{Punteros}
+
+Un \textbf{puntero} es un tipo de datos cuyo valor es una dirección de
+memoria.
+
+Nunca olvide esta sencilla definición. Los punteros son un concepto que
+suele causar mucha confusión a quienes están aprendiendo C. Sin embargo,
+no se trata de un concepto difícil si uno comprende cómo están
+representadas las variables en la memoria.
+
+Por otra parte, el uso incorrecto de punteros es una fuente muy común de
+errores críticos, y que no siempre son fáciles de depurar. Por esto es
+importante siempre entender muy bien lo que se está haciendo cuando hay
+punteros involucrados.
+
+Cuando una variable de tipo puntero tiene almacenada una dirección de
+memoria, se dice que «apunta» al valor que está en esa dirección.
+
+\begin{verbatim}
+           +----------+
+0x3ad900   |      398 |  int n
+           +----------+
+0x3ad904   | ???????? |
+           +----------+
+0x3ad908   | 0x3ad900 |  int *p
+           +----------+
+0x3ad90c   | 0x3ad904 |  float *q
+           +----------+
+0x3ad910   |    2.717 |  float x
+           +----------+
+\end{verbatim}
+
+En general no importa cuál es valor exacto de un puntero, sino que basta
+con comprender qué es lo que hay «al otro lado». Por esto, en los
+diagramas de la memoria se suele preferir usar flechas en lugar de las
+direcciones explícitas:
+
+\begin{verbatim}
+          +----------+
+   int n  |      398 |<----+
+          +----------+     |
+          | ???????? |     |
+          +----------+     |
+  int *p  |     *----+-----+
+          +----------+
+float *q  |     *----+----+
+          +----------+    |
+ float x  |    2.717 |<---+
+          +----------+
+\end{verbatim}
+
+Un valor especial llamado \lstinline!NULL! puede ser asignado a
+cualquier puntero para indicar aún no está apuntando a ninguna parte de
+la memoria.
+
+\section{Declaración de punteros}
+
+La siguiente es la manera de declarar un puntero que apunte a un entero:
+
+\begin{lstlisting}
+int *x;
+\end{lstlisting}
+
+Esto se puede leer «lo apuntado por \lstinline!x! es un entero». En este
+caso, \lstinline!*! no es una multiplicación, sino una
+derreferenciación, como veremos más abajo.
+
+Una vez declarada \lstinline!x! de la manera ya mostrada, los únicos
+valores válidos que se puede asignar a \lstinline!x! son
+\lstinline!NULL! o una dirección de memoria donde haya un entero:
+
+\begin{lstlisting}
+int a, b, c;
+float z;
+int *p;
+int *q;
+
+p = NULL;   /* valido */
+p = &a;     /* valido */
+p = &b;     /* valido */
+p = &z;     /* invalido (z no es un entero) */
+p = 142857; /* invalido (142857 no es una direccion de memoria) */
+
+q = &b;     /* valido */
+q = p;      /* valido */
+q = NULL;   /* valido */
+q = &p;     /* invalido (p no es un entero) */
+\end{lstlisting}
+
+Por supuesto, es posible cambiar \lstinline!int! por cualquier otro tipo
+para declarar punteros a datos de otra naturaleza.
+
+Ojo con la siguiente sutileza al declarar varios punteros de una vez:
+
+\begin{lstlisting}
+int *x, *y;    /* x e y son punteros */
+int *x, y;     /* x es puntero, y es entero */
+\end{lstlisting}
+
+\section{Derreferenciación de punteros}
+
+El operador unario \lstinline!*! de los punteros es el operador de
+\textbf{derreferenciación}. Lo que hace es entregar el valor que está en
+la dirección de memoria.
+
+En otras palabras, \lstinline!*! significa «lo apuntado por».
+
+Al derreferenciar un puntero a entero, se obtiene un entero. El puntero
+derreferenciado puede ser usado en cualquier contexto en que un entero
+sea válido:
+
+\begin{lstlisting}
+int x, y;
+int *p;
+
+x = 5;
+p = &x;
+
+printf("%d\n", *p);      /* imprime 5 */
+y = *p * 10 - 7;         /* y toma el valor 43 */
+*p = 9;                  /* x toma el valor 9 */
+\end{lstlisting}
+
+En la última sentencia, se está asignando el valor \lstinline!9! en la
+memoria que está reservada para la variable \lstinline!x!, por lo que la
+asignacion cambia en efecto el valor de la variable \lstinline!x! de
+manera indirecta.
+
+Derreferenciar el puntero \lstinline!NULL! no está permitido. Al
+hacerlo, lo más probable es que el programa se termine abruptamente y
+sin razón aparente. Errores de este tipo son muy fastidiosos, pues son
+difíciles de detectar, e incluso pueden ocurrir en un programa que ha
+estado funcionando correctamente durante mucho tiempo.
+
+Si existe alguna remota posibilidad de que un puntero pueda tener el
+valor \lstinline!NULL!, lo sensato es revisar su valor antes de
+derreferenciarlo:
+
+\begin{lstlisting}
+if (p != NULL)
+    hacer_algo(*p);
+\end{lstlisting}
+
+\section{Ejercicio}
+
+¿Qué imprime el siguiente programa?

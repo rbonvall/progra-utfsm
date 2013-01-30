@@ -1,0 +1,115 @@
+\section{Notas de certamenes}
+
+Desarrolle un programa para poder manipular las notas de tres certámenes
+de los 10 alumnos de un curso:
+
+\ctable[pos = H, center, botcap]{lll}
+{% notes
+}
+{% rows
+\FL
+\parbox[b]{0.07\columnwidth}{\raggedright
+C1
+} & \parbox[b]{0.07\columnwidth}{\raggedright
+C2
+} & \parbox[b]{0.07\columnwidth}{\raggedright
+C3
+}
+\ML
+\parbox[t]{0.07\columnwidth}{\raggedright
+58
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+65
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+53
+}
+\\\noalign{\medskip}
+\parbox[t]{0.07\columnwidth}{\raggedright
+44
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+84
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+60
+}
+\\\noalign{\medskip}
+\parbox[t]{0.07\columnwidth}{\raggedright
+\ldots{}
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+\ldots{}
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+\ldots{}
+}
+\\\noalign{\medskip}
+\parbox[t]{0.07\columnwidth}{\raggedright
+65
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+60
+} & \parbox[t]{0.07\columnwidth}{\raggedright
+80
+}
+\LL
+}
+
+Para almacenar la información se puede utilizar una matriz de 10 filas y
+3 columnas, donde en cada columna para una determinada fila, se
+almacenará la nota que el alumno, representado por la fila, obtuvo en
+uno de los tres certámenes (la fila \emph{i} representa al alumno
+\emph{i} y la nota del certamen 1 está en la columna 1, la nota del
+certamen 2 en la columna 2, etc).
+
+Además, utilice un arreglo unidimensional de largo 10 para almacener los
+nombres de los alumnos. Así en la posición \emph{i} del arreglo estará
+el nombre del alumno \emph{i}. El programa debe:
+
+\begin{itemize}
+\item
+  Ingresar el nombre y las notas para todos los alumnos del curso.
+\item
+  Calcular el promedio de cada alumno.
+\item
+  Calcular el promedio del curso en cada certamen.
+\item
+  Calcular el promedio general del curso.
+\item
+  Calcular la cantidad de alumnos aprobados (promedio \textgreater{}=
+  55) y reprobados (promedio \textless{} 55
+\item
+  Ordenar alumnos según promedio
+\item
+  Mostrar el nombre, notas de certámenes y promedio final para cada
+  alumno ordenado.
+\end{itemize}
+
+\begin{lstlisting}
+Nombre 1: Manuel Pavez
+C1: 55
+C2: 60
+C3: 75
+Nombre 2: Guillermo Fuenzalida
+C1: 60
+C2: 60
+C3: 20
+...
+Nombre 10: Cristian Perez
+C1: 100
+C2: 0
+C3: 55
+Promedio 1: 63.3
+Promedio 2: 46.6
+...
+Promedio 10: 51.6
+Promedio del curso C1: 56
+Promedio del curso C2: 30
+Promedio del curso C3: 60
+Promedio Final Curso: 55
+Aprobados: 4
+Reprobados: 6
+...
+Guillermo Fuenzalida 46.6
+...
+Cristian Perez 51.6
+...
+Manuel Pavez 63.3
+...
+\end{lstlisting}
+

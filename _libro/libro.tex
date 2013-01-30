@@ -1,0 +1,104 @@
+\documentclass[dvipsnames]{memoir}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{mathpazo}
+\usepackage{courier}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{listingsutf8}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ctable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{%
+  pdfauthor={Roberto Bonvallet},
+  pdfcreator={Roberto Bonvallet},
+  pdflang={es-CL},
+  pdftitle={Apuntes de Programación},
+  pdfkeywords={Programación, UTFSM, Python, ejercicios},
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes,positioning,arrows}
+\input{diagramas/incluir/flujo}
+
+%\usepackage{titlesec}
+%\titleformat{\section}{\normalfont\slshape}{\makebox[2em][r]{\textbf{\thesection.}}}{1em}{}
+%\titlespacing*{\section}{-3em}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titlespacing*{\subsection}{-3em}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\renewcommand*{\thesection}{\arabic{section}}
+
+\setsechook{\hangsecnum}
+\setsubsechook{\hangsecnum}
+
+\setlist[enumerate]{leftmargin=0pt}
+\setlist[itemize]{leftmargin=0pt}
+
+\lstdefinelanguage{py}{%
+  classoffset=0,%
+    morekeywords={%
+      False,class,finally,is,return,None,continue,for,lambda,try,%
+      True,def,from,nonlocal,while,and,del,global,not,with,print,%
+      as,elif,if,or,yield,assert,else,import,pass,break,except,in,raise},%
+    keywordstyle=\color{black!80}\bfseries,%
+  classoffset=1,
+    morekeywords={int,float,str,abs,len,raw_input,exit,range,min,max,%
+      set,dict,tuple,list,bool,complex,round,sum,all,any,zip,map,filter,%
+      sorted,reversed,dir,file,frozenset,open,%
+      array,zeros,ones,arange,linspace,eye,diag,dot},
+    keywordstyle=\color{black!50}\bfseries,%
+  classoffset=0,%
+  sensitive=true,%
+  morecomment=[l]\#,%
+  morestring=[b]',%
+  morestring=[b]",%
+  stringstyle=\em,%
+}
+
+\lstdefinelanguage{testcase}{%
+  moredelim=[is][\bfseries]{`}{`},%
+  backgroundcolor=\color{gray!20},%
+}
+
+\lstdefinelanguage{file}{%
+  frame=single,%
+}
+
+\lstset{language=py}
+\lstset{basicstyle=\ttfamily}
+\lstset{columns=fixed}
+\lstset{upquote=true}
+\lstset{showstringspaces=false}
+\lstset{rangeprefix=\#\ }
+\lstset{includerangemarker=false}
+
+\title{Apuntes de Programaci\'on}
+\author{
+  Roberto Bonvallet %\\
+%  Departamento de Informática \\
+%  Universidad Técnica Federico Santa María
+}
+\date{2013}
+
+\begin{document}
+  \frontmatter
+  \input{titulo}
+  \newpage
+  \input{colofon}
+
+  \mainmatter
+  \part{Materia}
+  \include{materia}
+  \part{Ejercicios}
+  \include{ejercicios-1}
+  \include{ejercicios-2}
+  \include{ejercicios-3}
+%  \include{c}
+\end{document}

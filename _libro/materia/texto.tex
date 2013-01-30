@@ -1,0 +1,352 @@
+\chapter{Procesamiento de texto}
+
+Hasta ahora, hemos visto cómo los tipos de datos básicos (strings,
+enteros, reales, booleanos) y las estructuras de datos permiten
+representar y manipular información compleja y abstracta en un programa.
+
+Sin embargo, en muchos casos la información no suele estar disponible ya
+organizada en estructuras de datos convenientes de usar, sino en
+documentos de texto.
+
+Por ejemplo, las páginas webs son archivos de puro texto, que describen
+la estructura de un documento en un lenguaje llamado HTML. Usted puede
+ver el texto de una página web buscando una instrucción «Ver código
+fuente» (o algo parecido) en el navegador. A partir de este texto, el
+navegador extrae la información necesaria para reconstruir la página que
+finalmente usted ve.
+
+Un texto siempre es un string, que puede ser tan largo y complejo como
+se desee. El procesamiento de texto consiste en manipular strings, ya
+sea para extraer información del string, para convertir un texto en
+otro, o para codificar información en un string.
+
+En Python, el tipo \lstinline!str! provee muchos métodos convenientes
+para hacer procesamiento de texto, además de las operaciones más simples
+que ya aprendimos (como \lstinline!s + t!, \lstinline!s[i]! y
+\lstinline!s in t!).
+
+\section{Saltos de línea}
+
+Un string puede contener caracteres de \textbf{salto de línea}, que
+tienen el efecto equivalente al de presionar la tecla Enter. El caracter
+de salto de línea se representa con \lstinline!\n!:
+
+\begin{lstlisting}
+>>> a = 'piano\nviolin\noboe'
+>>> print a
+piano
+violin
+oboe
+\end{lstlisting}
+
+Los saltos de línea sólo son visibles al imprimir el string usando la
+sentencia \lstinline!print!. Si uno quiere ver el valor del string en la
+consola, el salto de línea aparecerá representado como \lstinline!\n!:
+
+\begin{lstlisting}
+>>> a
+'piano\nviolin\noboe'
+>>> print a
+piano
+violin
+oboe
+\end{lstlisting}
+
+Aunque dentro del string se representa como una secuencia de dos
+símbolos, el salto de línea es un único caracter:
+
+\begin{lstlisting}
+>>> len('a\nb')
+3
+\end{lstlisting}
+
+En general, hay varios caracteres especiales que se representan
+comenzando con una barra invertida (\lstinline!\!) seguida de una letra.
+Experimente, y determine qué significan los caracteres especiales
+\lstinline!\t! y \lstinline!\b!:
+
+\begin{lstlisting}
+print 'abcde\tefg\thi\tjklm'
+print 'abcde\befg\bhi\bjklm'
+\end{lstlisting}
+
+Para incluir una barra invertida dentro de un string, hay que hacerlo
+con \lstinline!\\!:
+
+\begin{lstlisting}
+>>> print 'c:\\>'
+c:\>
+>>> print '\\o/  o\n |  /|\\\n/ \\ / \\'
+\o/  o
+ |  /|\
+/ \ / \
+\end{lstlisting}
+
+\section{Reemplazar secciones del string}
+
+El método \lstinline!s.replace(antes, despues)! busca en el string
+\lstinline!s! todas las apariciones del texto \lstinline!antes! y las
+reemplaza por \lstinline!despues!:
+
+\begin{lstlisting}
+>>> 'La mar astaba sarana'.replace('a', 'e')
+'Le mer estebe serene'
+>>> 'La mar astaba sarana'.replace('a', 'i')
+'Li mir istibi sirini'
+>>> 'La mar astaba sarana'.replace('a', 'o')
+'Lo mor ostobo sorono'
+\end{lstlisting}
+
+Hay que tener siempre muy claro que esta operación no modifica el
+string, sino que retorna uno nuevo:
+
+\begin{lstlisting}
+>>> orden = 'Quiero arroz con pollo'
+>>> orden.replace('arroz', 'pure').replace('pollo', 'huevo')
+'Quiero pure con huevo'
+>>> orden
+'Quiero arroz con pollo'
+\end{lstlisting}
+
+\section{Separar y juntar strings}
+
+\lstinline!s.split()! separa el strings en varios strings, usando los
+espacios en blanco como separador. El valor retornado es una lista de
+strings:
+
+\begin{lstlisting}
+>>> oracion = 'El veloz  murcielago hindu'
+>>> oracion.split()
+['El', 'veloz', 'murcielago', 'hindu']
+\end{lstlisting}
+
+Además, es posible pasar un parámetro al método \lstinline!split! que
+indica cuál será el separador a usar en vez de los espacios en blanco:
+
+\begin{lstlisting}
+>>> s = 'Ana lavaba las sabanas'
+>>> s.split()
+['Ana', 'lavaba', 'las', 'sabanas']
+>>> s.split('a')
+['An', ' l', 'v', 'b', ' l', 's s', 'b', 'n', 's']
+>>> s.split('l')
+['Ana ', 'avaba ', 'as sabanas']
+>>> s.split('aba')
+['Ana lav', ' las s', 'nas']
+\end{lstlisting}
+
+Esto es muy útil para pedir al usuario que ingrese datos en un programa
+de una manera más conveniente, y no uno por uno. Por ejemplo, antes
+hacíamos programas que funcionaban así:
+\begin{lstlisting}[language=testcase]
+Ingrese a: `2.3`
+Ingrese b: `1.9`
+Ingrese c: `2.3`
+El triangulo es isoceles.
+\end{lstlisting}
+
+Ahora podemos hacerlos así:
+\begin{lstlisting}[language=testcase]
+Ingrese lados del triangulo: `2.3 1.9 2.3`
+El triangulo es isoceles.
+\end{lstlisting}
+
+En este caso, el código del programa podría ser:
+
+\begin{lstlisting}
+entrada = raw_input('Ingrese lados del triangulo: ')
+lados = entrada.split()
+a = int(lados[0])
+b = int(lados[1])
+c = int(lados[2])
+print 'El triangulo es', tipo_triangulo(a, b, c)
+\end{lstlisting}
+
+O usando la función \lstinline!map!, más simplemente:
+
+\begin{lstlisting}
+entrada = raw_input('Ingrese lados del triangulo: ')
+a, b, c = map(int, entrada.split())
+print 'El triangulo es', tipo_triangulo(a, b, c)
+\end{lstlisting}
+
+\lstinline!s.join(lista_de_strings)! une todos los strings de la lista,
+usando al string \lstinline!s! como «pegamento»:
+
+\begin{lstlisting}
+>>> valores = map(str, range(10))
+>>> pegamento = ' '
+>>> pegamento.join(valores)
+'0 1 2 3 4 5 6 7 8 9'
+>>> ''.join(valores)
+'0123456789'
+>>> ','.join(valores)
+'0,1,2,3,4,5,6,7,8,9'
+>>> ' --> '.join(valores)
+'0 --> 1 --> 2 --> 3 --> 4 --> 5 --> 6 --> 7 --> 8 --> 9'
+\end{lstlisting}
+
+\section{Mayúsculas y minúsculas}
+
+\lstinline!s.isupper()! y \lstinline!s.islower()! indican si el string
+está, respectivamente, en mayúsculas o minúsculas:
+
+\begin{lstlisting}
+>>> s = 'hola'
+>>> t = 'Hola'
+>>> u = 'HOLA'
+>>> s.isupper(), s.islower()
+(False, True)
+>>> t.isupper(), t.islower()
+(False, False)
+>>> u.isupper(), u.islower()
+(True, False)
+\end{lstlisting}
+
+\lstinline!s.upper()! y \lstinline!s.lower()! entregan el string
+\lstinline!s! convertido, respectivamente, a mayúsculas y minúsculas:
+
+\begin{lstlisting}
+>>> t
+'Hola'
+>>> t.upper()
+'HOLA'
+>>> t.lower()
+'hola'
+\end{lstlisting}
+
+\lstinline!s.swapcase()! cambia las minúsculas a mayúsculas,
+respectivamente, a mayúsculas y minúsculas:
+
+\begin{lstlisting}
+>>> t.swapcase()
+'hOLA'
+\end{lstlisting}
+
+%Lamentablemente, ninguno de estos métodos funcionan con acentos y eñes:
+%
+%\begin{lstlisting}
+%>>> print 'ñandú'.upper()
+%ñANDú
+%\end{lstlisting}
+%
+\section{Revisar contenidos del string}
+
+\lstinline!s.startswith(t)! y \lstinline!s.endswith(t)! indican si el
+string \lstinline!s! comienza y termina, respectivamente, con el string
+\lstinline!t!:
+
+\begin{lstlisting}
+>>> objeto = 'paraguas'
+>>> objeto.startswith('para')
+True
+>>> objeto.endswith('aguas')
+True
+>>> objeto.endswith('x')
+False
+>>> objeto.endswith('guaguas')
+False
+\end{lstlisting}
+
+Nuestro conocido operador \lstinline!in! indica si un string está
+contenido dentro de otro:
+
+\begin{lstlisting}
+>>> 'pollo' in 'repollos'
+True
+>>> 'pollo' in 'gallinero'
+False
+\end{lstlisting}
+
+\section{Alineación de strings}
+
+Los métodos \lstinline!s.ljust(n)!, \lstinline!s.rjust(n)! y
+\lstinline!s.center(n)! rellenan el string con espacios para que su
+largo sea igual a \lstinline!n!, de modo que el contenido quede
+alineado, respectivamente, a la izquierda, a la derecha y al centro:
+
+\begin{lstlisting}
+>>> contenido.ljust(20)
+'hola                '
+>>> contenido.center(20)
+'        hola        '
+>>> contenido.rjust(20)
+'                hola'
+\end{lstlisting}
+
+Estos métodos son útiles para imprimir tablas bien alineadas:
+
+\begin{lstlisting}
+datos = [
+    ('Pepito', (1991, 12, 5), 'Osorno', '***'),
+    ('Yayita', (1990, 1, 31), 'Arica', '*'),
+    ('Fulanito', (1992, 10, 29), 'Porvenir', '****'),
+]
+
+for n, (a, m, d), c, e in datos:
+    print n.ljust(10),
+    print str(a).rjust(4), str(m).rjust(2), str(d).rjust(2),
+    print c.ljust(10), e.center(5)
+\end{lstlisting}
+
+Este programa imprime lo siguiente:
+\begin{lstlisting}[language=testcase]
+Pepito     1991 12  5 Osorno      ***
+Yayita     1990  1 31 Arica        *
+Fulanito   1992 10 29 Porvenir    ****
+\end{lstlisting}
+
+\section{Interpolación de strings}
+
+El método \lstinline!format! permite usar un string como una plantilla
+que se puede completar con distintos valores dependiendo de la
+situación.
+
+Las posiciones en que se deben rellenar los valores se indican dentro
+del string usando un número entre paréntesis de llaves:
+
+\begin{lstlisting}
+>>> s = 'Soy {0} y vivo en {1}'
+\end{lstlisting}
+
+Estas posiciones se llaman \emph{campos}. En el ejemplo, el string
+\lstinline!s! tiene dos campos, numerados del cero al uno.
+
+Para llenar los campos, hay que llamar al método \lstinline!format!
+pasándole los valores como parámetros:
+
+\begin{lstlisting}
+>>> s.format('Perico', 'Valparaiso')
+'Soy Perico y vivo en Valparaiso'
+>>> s.format('Erika', 'Berlin')
+'Soy Erika y vivo en Berlin'
+>>> s.format('Wang Dawei', 'Beijing')
+'Soy Wang Dawei y vivo en Beijing'
+\end{lstlisting}
+
+El número indica en qué posición va el parámetro que está asociado al
+campo:
+
+\begin{lstlisting}
+>>> '{1}{0}{2}{0}'.format('a', 'v', 'c')
+'vaca'
+>>> '{0} y {1}'.format('carne', 'huevos')
+'carne y huevos'
+>>> '{1} y {0}'.format('carne', 'huevos')
+'huevos y carne'
+\end{lstlisting}
+
+Otra opción es referirse a los campos con un nombre. En este caso, hay
+que llamar al método \lstinline!format! diciendo explícitamente el
+nombre del parámetro para asociarlo al valor:
+
+\begin{lstlisting}
+>>> s = '{nombre} estudia en la {universidad}'
+>>> s.format(nombre='Perico', universidad='UTFSM')
+'Perico estudia en la UTFSM'
+>>> s.format(nombre='Fulana', universidad='PUCV')
+'Fulana estudia en la PUCV'
+>>> s.format(universidad='UPLA', nombre='Yayita')
+'Yayita estudia en la UPLA'
+\end{lstlisting}
+

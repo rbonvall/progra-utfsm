@@ -1,0 +1,99 @@
+\section{Palabras especiales}
+
+\begin{enumerate}
+\item
+  Dos palabras son \emph{anagramas} si tienen las mismas letras pero
+  en otro orden. Por ejemplo, «torpes» y «postre» son anagramas,
+  mientras que «aparta» y «raptar» no lo son, ya que «raptar» tiene una
+  \emph{r} de más y una \emph{a} de menos.
+
+  Escriba la función \lstinline!son_anagramas(p1, p2)! que indique si
+  las palabras \lstinline!p1! y \lstinline!p2! son anagramas:
+
+\begin{lstlisting}
+>>> son_anagramas('torpes', 'postre')
+True
+>>> son_anagramas('aparta', 'raptar')
+False
+\end{lstlisting}
+\item
+  Las palabras \emph{panvocálicas} son las que tienen las cinco
+  vocales. Por ejemplo: centrifugado, bisabuelo, hipotenusa.
+
+  Escriba la función \lstinline!es_panvocalica(palabra)! que indique si
+  una palabra es panvocálica o no:
+
+\begin{lstlisting}
+>>> es_panvocalica('educativo')
+True
+>>> es_panvocalica('pedagogico')
+False
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!cuenta_panvocalicas(oracion)! que cuente
+  cuántas palabras panvocálicas tiene una oración:
+
+\begin{lstlisting}
+>>> cuenta_panvocalicas('la contertulia estudiosa va a casa')
+2
+>>> cuenta_panvocalicas('los hipopotamos bailan al amanecer')
+0
+oracion = 'el abuelito mordisquea el aceituno con contundencia'
+>>> cuenta_panvocalicas(oracion)
+4
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!tiene_letras_en_orden(palabra)! que
+  indique si las letras de la palabra están en orden alfabético:
+
+\begin{lstlisting}
+>>> tiene_letras_en_orden('himnos')
+True
+>>> tiene_letras_en_orden('abenuz')
+True
+>>> tiene_letras_en_orden('zapato')
+False
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!tiene_letras_dos_veces(palabra)! que
+  indique si cada letra de la palabra aparece exactamente dos veces:
+
+\begin{lstlisting}
+>>> tiene_letras_dos_veces('aristocraticos')
+True
+>>> tiene_letras_dos_veces('quisquilloso')
+True
+>>> tiene_letras_dos_veces('aristocracia')
+False
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!palabras_repetidas(oracion)! que
+  entregue una lista de las palabras que están repetidas en la oración:
+
+\begin{lstlisting}
+>>> palabras_repetidas('El partido termino cero a cero')
+['cero']
+>>> palabras_repetidas('El sobre esta sobre el mueble')
+['el', 'sobre']
+>>> palabras_repetidas('Ay, ahi no hay pan')
+[]
+\end{lstlisting}
+\item
+  Un \emph{pangrama} es un texto que tiene todas las letras del
+  alfabeto, de la \emph{a} a la \emph{z}
+  (por las limitaciones de Python 2.7 excluiremos la \emph{ñ}).
+  Escriba la función \lstinline!es_pangrama(texto)!
+  que indique si el texto es o no un pangrama:
+
+\begin{lstlisting}
+>>> a = 'Sylvia wagt quick den Jux bei Pforzheim.'
+>>> b = 'Cada vez que trabajo, Felix me paga un whisky.'
+>>> c = 'Cada vez que trabajo, Luis me invita a una cerveza.'
+>>> es_pangrama(a)
+True
+>>> es_pangrama(b)
+True
+>>> es_pangrama(c)
+False
+\end{lstlisting}
+\end{enumerate}

@@ -1,0 +1,110 @@
+\chapter{Desarrollo de programas}
+
+Un \textbf{programa} es un archivo de texto que contiene código para ser
+ejecutado por el computador.
+En el caso del lenguaje Python, el programa es ejecutado por un
+\textbf{intérprete}. El intérprete es un programa que ejecuta programas.
+
+Los programas escritos en Python deben estar contenidos en un archivo
+que tenga la extensión \lstinline!.py!.
+
+\section{Edición de programas}
+
+Un programa es un
+\href{http://es.wikipedia.org/wiki/Archivo\_de\_texto}{archivo de
+texto}. Por lo tanto, puede ser creado y editado usando cualquier
+\href{http://es.wikipedia.org/wiki/Editor\_de\_texto}{editor de texto},
+como el Bloc de Notas.
+Lo que no se puede usar es un procesador de texto como Microsoft Word.
+
+%Haga la prueba: abra el programa \lstinline!cuadratica.py! con el Bloc
+%de Notas (u otro editor) y verá su contenido.
+
+Otros editores de texto (mucho mejores que el Bloc de Notas) que usted
+puede instalar son:
+
+\begin{itemize}
+  \item en Windows: Notepad++, Textpad;
+  \item en Mac: TextWrangler, Sublime Text, Smultron;
+  \item en Linux: Gedit, Kate.
+\end{itemize}
+
+\section{Instalación del intérprete de Python}
+
+Una cosa es editar el programa y otra es ejecutarlo. Para poder
+ejecutar un programa en Python hay que instalar el \textbf{intérprete}.
+
+En la \href{http://www.python.org/download/}{página de descargas de
+Python}\footnotemark está la lista de instaladores. Debe descargar el indicado para
+su computador y su sistema operativo.
+
+\footnotetext{\url{http://www.python.org/download/}}
+
+La versión que será usada en la asignatura es la \textbf{2.7}, no la 3.\(x\).
+Todo el código presentado en este apunte está escrito en Python 2.7.
+
+No use los instaladores que dicen \lstinline!x86-64! a no ser que esté
+seguro que su computador tiene una arquitectura de 64 bits.
+
+\section{Ejecución de un programa}
+
+Una vez instalado el intérprete, ya podrá ejecutar su programa.
+Para hacerlo, haga doble clic sobre el ícono del programa.
+
+\section{Uso de la consola}
+
+La ejecución de programas no es la única manera de usar el
+intérprete. Si uno ejecuta Python sin pasarle ningún programa, se abre
+la \textbf{consola} (o \textbf{intérprete interactivo}).
+
+La consola permite ingresar un programa línea por línea. Además, sirve
+para evaluar expresiones y ver su resultado inmediatamente. Esto permite
+usarla como si fuera una calculadora.
+
+La consola interactiva siempre muestra el símbolo \lstinline!>>>!, para
+indicar que ahí se puede ingresar código. En todos los libros sobre
+Python, y a lo largo de este apunte, cada vez que aparezca un ejemplo en
+el que aparezca este símbolo, significa que debe ejecutarse en la
+consola, y no en un programa. Por ejemplo:
+
+\begin{lstlisting}[language=py]
+>>> a = 5
+>>> a > 10
+False
+>>> a ** 2
+25
+\end{lstlisting}
+
+En este ejemplo, al ingresar las expresiones \lstinline!a > 10! y
+\lstinline!a ** 2!, el intérprete interactivo entrega los resultados
+\lstinline!False! y \lstinline!25!.
+
+No hay ningún motivo para tipear el símbolo \lstinline!>>>! ni en un
+programa ni en un certamen. No es parte de la sintaxis del
+lenguaje.
+
+\section{Entornos de desarollo}
+
+En general, usar un simple editor de texto (como los mencionados arriba)
+para escribir programas no es la manera más eficiente de trabajar.
+Los \textbf{entornos de desarrollo} (también llamados \emph{IDE}, por
+sus siglas en inglés) son aplicaciones que hacen más fácil la tarea de
+escribir programas.
+
+Python viene con su propio entorno de desarrollo llamado \textbf{IDLE}.
+Este entorno ofrece una consola y un editor de texto.
+
+Además, hay otros buenos entornos de desarrollo más avanzados para
+Python, como
+\href{http://code.google.com/p/pyscripter/downloads/list}{PyScripter},
+\href{http://www.wingware.com/downloads/wingide-101/3.2.12-1/binaries}{WingIDE 101} y
+\href{http://www.jetbrains.com/pycharm/}{PyCharm}.
+Usted puede probarlos y usar el que más le acomode durante el
+semestre.
+
+Haga la prueba:
+usando alguno de estos entornos,
+escriba el programa para resolver ecuaciones cuadráticas
+del capítulo anterior,
+guárdelo con el nombre \verb!cuadratica.py! y ejecútelo.
+

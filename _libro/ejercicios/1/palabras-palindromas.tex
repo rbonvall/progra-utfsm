@@ -1,0 +1,44 @@
+\section{Palabras palíndromas}
+
+Así como hay \href{es-numero-palindromo.html}{números palíndromos},
+también hay palabras palíndromas, que son las que no cambian al invertir
+el orden de sus letras.
+Por ejemplo, «reconocer», «Neuquén» y «acurruca» son palíndromos.
+
+\begin{enumerate}
+
+  \item
+    Escriba un programa que reciba como entrada una palabra e indique si
+    es palíndromo o no. Para simplificar, suponga que la palabra no tiene
+    acentos y todas sus letras son minúsculas:
+
+\begin{lstlisting}[language=testcase]
+Ingrese palabra: `sometemos`
+Es palindromo
+\end{lstlisting}
+
+\begin{lstlisting}[language=testcase]
+Ingrese palabra: `rascar`
+No es palindromo
+\end{lstlisting}
+
+  \item
+    Modifique su programa para que reconozca oraciones palíndromas. La
+    dificultad radica en que hay que ignorar los espacios:
+
+\begin{lstlisting}[language=testcase]
+Ingrese oracion: `dabale arroz a la zorra el abad`
+Es palindromo
+\end{lstlisting}
+
+\begin{lstlisting}[language=testcase]
+Ingrese oracion: `eva usaba rimel y le miraba suave`
+Es palindromo
+\end{lstlisting}
+
+\begin{lstlisting}[language=testcase]
+Ingrese oracion: `puro chile es tu cielo azulado`
+No es palindromo
+\end{lstlisting}
+
+\end{enumerate}

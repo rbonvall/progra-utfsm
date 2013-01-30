@@ -1,0 +1,223 @@
+\chapter{Patrones comunes}
+
+Como hemos visto hasta ahora, los programas son una combinación de
+asignaciones, condicionales y ciclos, organizados de tal manera que
+describan el algoritmo que queremos ejecutar.
+
+Existen algunas tareas muy comunes y que casi siempre se resuelven de la
+misma manera. Por lo tanto, es conveniente conocerlas.
+
+En programación, se llama \textbf{patrón} a una solución que es
+aplicable a un problema que ocurre a menudo. A continuación veremos
+algunos patrones comunes que ocurren en programación.
+
+\section{Sumar y multiplicar cosas}
+
+La suma y la multiplicación son operaciones binarias: operan sobre dos
+valores.
+
+Para sumar y multiplicar más valores, generalmente dentro de un ciclo
+que los vaya generando, hay que usar una variable para ir guardando el
+resultado parcial de la operación. Esta variable se llama
+\textbf{acumulador}.
+
+En el caso de la suma, el acumulador debe partir con el valor cero. Para
+la multiplicación, con el valor uno. En general, el acumulador debe ser
+inicializado con el
+\href{http://es.wikipedia.org/wiki/Elemento\_neutro}{elemento neutro} de
+la operación que será aplicada.
+
+Por ejemplo, el siguiente programa entrega el producto de los mil
+primeros números naturales:
+
+\begin{lstlisting}
+producto = 1
+for i in range(1, 1001):
+    producto = producto * i
+
+print producto
+\end{lstlisting}
+
+El siguiente programa entrega la suma de los cubos de los números
+naturales cuyo cuadrado es menor que mil:
+
+\begin{lstlisting}
+i = 1
+suma = 0
+while i ** 2 < 1000:
+    valor = i ** 3
+    i = i + 1
+    suma = suma + valor
+
+print suma
+\end{lstlisting}
+
+En todos los casos, el patrón a seguir es algo como esto:
+
+\begin{lstlisting}
+acumulador = valor_inicial
+ciclo:
+    valor = ...
+    ...
+    acumulador = acumulador operacion valor
+\end{lstlisting}
+
+El cómo adaptar esta plantilla a cada situación de modo que entregue el
+resultado correcto es responsabilidad del programador.
+
+\section{Contar cosas}
+
+Para contar cuántas veces ocurre algo, hay que usar un acumulador, al
+que se le suele llamar \textbf{contador}.
+
+Tal como en el caso de la suma, debe ser inicializado en cero, y cada
+vez que aparezca lo que queremos contar, hay que incrementarlo en uno.
+
+Por ejemplo, el siguiente programa cuenta cuántos de los números
+naturales menores que mil tienen un cubo terminado en siete:
+
+\begin{lstlisting}
+c = 0
+for i in range(1000):
+    ultimo_digito = (i ** 3) % 10
+    if ultimo_digito == 7:
+        c = c + 1
+
+print c
+\end{lstlisting}
+
+\section{Encontrar el mínimo y el máximo}
+
+Para encontrar el máximo de una secuencia de valores, hay que usar un
+acumulador para recordar cuál es el mayor valor visto hasta el momento.
+En cada iteración, hay que examinar cuál es el valor actual, y si es
+mayor que el máximo, actualizar el acumulador.
+
+El acumulador debe ser inicializado con un valor que sea menor a todos
+los valores que vayan a ser examinados.
+
+Por ejemplo, el siguiente programa pide al usuario que ingrese diez
+números enteros positivos, e indica cuál es el mayor de ellos:
+
+\begin{lstlisting}
+print 'Ingrese diez numeros positivos'
+
+mayor = -1
+for i in range(10):
+    n = int(raw_input())
+    if n > mayor:
+        mayor = n
+
+print 'El mayor es', mayor
+\end{lstlisting}
+
+Otra manera de hacerlo es reemplazando esta parte:
+\begin{lstlisting}
+if n > mayor:
+    mayor = n
+\end{lstlisting}
+por ésta:
+\begin{lstlisting}
+mayor = max(mayor, n)
+\end{lstlisting}
+
+En este caso, como todos los números ingresados son positivos,
+inicializamos el acumulador en \lstinline!-1!, que es menor que todos
+los valores posibles, por lo que el que sea el mayor eventualmente lo
+reemplazará.
+
+¿Qué hacer cuando no exista un valor inicial que sea menor a todas las
+entradas posibles? Una solución tentativa es poner un número «muy negativo», y
+rezar para que el usuario no ingrese uno menor que él. Ésta no es la
+mejor solución, ya que no cubre todos los casos posibles:
+
+\begin{lstlisting}
+mayor = -999999999
+for i in range(10):
+    n = int(raw_input())
+    mayor = max(mayor, n)
+\end{lstlisting}
+
+Una opción más robusta es usar el primero de los valores por examinar:
+
+\begin{lstlisting}
+mayor = int(raw_input())   # preguntar el primer valor
+for i in range(9):         # preguntar los nueve siguientes
+    n = int(raw_input())
+    mayor = max(mayor, n)
+\end{lstlisting}
+
+La otra buena solución es usar explícitamente el valor \(-\infty\), que en
+Python puede representarse usando el tipo \lstinline!float! de la
+siguiente manera:
+
+\begin{lstlisting}
+mayor = -float('inf')     # asi se dice "infinito" en Python
+for i in range(10):
+    n = int(raw_input())
+    mayor = max(mayor, n)
+\end{lstlisting}
+
+Si sabemos de antemano que todos los números por revisar son positivos,
+podemos simplemente inicializar el acumulador en \(-1\).
+
+Por supuesto, para obtener el menor valor se hace de la misma manera,
+pero inicializando el acumulador con un número muy grande, y
+actualizándolo al encontrar un valor menor.
+
+\section{Generar pares}
+
+Para generar pares de cosas en un programa, es necesario usar dos ciclos
+anidados (es decir, uno dentro del otro).
+Ambos ciclos, el exterior y el interior, van asignando valores a sus
+variables de control, y ambas son accesibles desde dentro del doble
+ciclo.
+
+Por ejemplo, todas las casillas de un tablero de ajedrez pueden ser
+identificadas mediante un par \lstinline!(fila, columna)!. Para recorrer
+todas las casillas del tablero, se puede hacer de la siguiente manera:
+
+\begin{lstlisting}
+for i in range(1, 9):
+    for i in range(1, 9):
+        print 'Casilla', i, j
+\end{lstlisting}
+
+Cuando los pares son desordenados (es decir, el par \((a, b)\) es el mismo
+que el par \((b, a)\)), el ciclo interior no debe partir desde cero, sino
+desde el valor que tiene la variable de control del ciclo interior.
+
+Por ejemplo, el siguiente programa muestra todas las piezas de un juego
+de dominó:
+
+\begin{lstlisting}
+for i in range(7):
+    for j in range(i, 7):
+        print i, j
+\end{lstlisting}
+
+Además, otros tipos de restricciones pueden ser necesarias. Por ejemplo,
+en un campeonato de fútbol, todos los equipos deben jugar entre ellos
+dos veces, una como local y una como visita. Por supuesto, no pueden
+jugar consigo mismos, por lo que es necesario excluir los pares
+compuestos por dos valores iguales. El siguiente programa muestra todos
+los partidos que se deben jugar en un campeonato con 6 equipos,
+suponiendo que los equipos están numerados del 0 al 5:
+
+\begin{lstlisting}
+for i in range(6):
+    for j in range(6):
+        if i != j:
+            print i, j
+\end{lstlisting}
+
+Otra manera de escribir el mismo código es:
+
+\begin{lstlisting}
+for i in range(6):
+    for j in range(6):
+        if i == j:
+            continue
+        print i, j
+\end{lstlisting}
+

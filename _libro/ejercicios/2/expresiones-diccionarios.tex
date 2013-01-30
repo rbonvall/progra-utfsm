@@ -1,0 +1,33 @@
+\section{Expresiones con diccionarios}
+
+Considere las siguientes asignaciones:
+\begin{lstlisting}
+>>> a = {'a': 14, 'b': 23, 'c': 88}
+>>> b = {12: True, 55: False, -2: False}
+>>> c = dict()
+>>> d = {1: [2, 3, 4], 5: [6, 7, 8, 9], 10: [11]}
+>>> e = {2 + 3: 4, 5: 6 + 7, 8: 9, 10: 11 + 12}
+\end{lstlisting}
+
+Sin usar el computador, indique cuál es el resultado y el tipo de las
+si\-guien\-tes expresiones. A continuación, verifique sus respuestas en el
+computador.
+
+\begin{itemize}
+  \item \lstinline!a['c']!
+  \item \lstinline!a[23]!
+  \item \lstinline!b[-2] or b[55]!
+  \item \lstinline!23 in a!
+  \item \lstinline!'a' in a!
+  \item \lstinline!5 in d[5]!
+  \item \lstinline!sum(b)!
+  \item \lstinline!len(c)!
+  \item \lstinline!len(d)!
+  \item \lstinline!len(d[1])!
+  \item \lstinline!len(b.values())!
+  \item \lstinline!len(e)!
+  \item \lstinline!sum(a.values())!
+  \item \lstinline!max(list(e))!
+  \item \lstinline!d[1] + d[5] + d[10]!
+  \item \lstinline!max(map(len, d.values()))!
+\end{itemize}

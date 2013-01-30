@@ -1,0 +1,270 @@
+\chapter{Arreglos bidimensionales}
+
+Los \textbf{arreglos bidimensionales} son tablas de valores. Cada
+elemento de un arreglo bidimensional está simultáneamente en una fila y
+en una columna.
+
+En matemáticas, a los arreglos bidimensionales se les llama
+\href{http://es.wikipedia.org/wiki/Matriz\_(matem\%C3\%A1tica)}{matrices},
+y son muy utilizados en problemas de Ingeniería.
+
+En un arreglo bidimensional, cada elemento tiene una posición que se
+identifica mediante dos índices: el de su fila y el de su columna.
+
+\section{Crear arreglos bidimensionales}
+
+Los arreglos bidimensionales también son provistos por NumPy, por lo que
+debemos comenzar importando las funciones de este módulo:
+
+\begin{lstlisting}
+from numpy import *
+\end{lstlisting}
+
+Al igual que los arreglos de una dimensión, los arreglos bidimensionales
+también pueden ser creados usando la función \lstinline!array!, pero
+pasando como argumentos una lista con las filas de la matriz:
+
+\begin{lstlisting}
+a = array([[5.1, 7.4, 3.2, 9.9],
+           [1.9, 6.8, 4.1, 2.3],
+           [2.9, 6.4, 4.3, 1.4]])
+\end{lstlisting}
+
+Todas las filas deben ser del mismo largo, o si no ocurre un error de
+valor:
+
+\begin{lstlisting}
+>>> array([[1], [2, 3]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: setting an array element with a sequence.
+\end{lstlisting}
+
+Los arreglos tienen un atributo llamado \lstinline!shape!, que es una
+tupla con los tamaños de cada dimensión. En el ejemplo, \lstinline!a! es
+un arreglo de dos dimensiones que tiene tres filas y cuatro columnas:
+
+\begin{lstlisting}
+>>> a.shape
+(3, 4)
+\end{lstlisting}
+
+Los arreglos también tienen otro atributo llamado \lstinline!size! que
+indica cuántos elementos tiene el arreglo:
+
+\begin{lstlisting}
+>>> a.size
+12
+\end{lstlisting}
+
+Por supuesto, el valor de \lstinline!a.size! siempre es el producto de
+los elementos de \lstinline!a.shape!.
+
+Hay que tener cuidado con la función \lstinline!len!, ya que no retorna
+el tamaño del arreglo, sino su cantidad de filas:
+
+\begin{lstlisting}
+>>> len(a)
+3
+\end{lstlisting}
+
+Las funciones \lstinline!zeros! y \lstinline!ones! también sirven para
+crear arreglos bidimensionales. En vez de pasarles como argumento un
+entero, hay que entregarles una tupla con las cantidades de filas y
+columnas que tendrá la matriz:
+
+\begin{lstlisting}
+>>> zeros((3, 2))
+array([[ 0.,  0.],
+       [ 0.,  0.],
+       [ 0.,  0.]])
+>>> ones((2, 5))
+array([[ 1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.]])
+\end{lstlisting}
+
+Lo mismo se cumple para muchas otras funciones que crean arreglos; por
+ejemplom la función \lstinline!random!:
+
+\begin{lstlisting}
+>>> from numpy.random import random
+>>> random((5, 2))
+array([[ 0.80177393,  0.46951148],
+       [ 0.37728842,  0.72704627],
+       [ 0.56237317,  0.3491332 ],
+       [ 0.35710483,  0.44033758],
+       [ 0.04107107,  0.47408363]])
+\end{lstlisting}
+
+\section{Operaciones con arreglos bidimensionales}
+
+Al igual que los arreglos de una dimensión, las operaciones sobre las
+matrices se aplican término a término:
+
+\begin{lstlisting}
+>>> a = array([[5, 1, 4],
+...            [0, 3, 2]])
+>>> b = array([[2, 3, -1],
+...            [1, 0, 1]])
+>>> a + 2
+array([[7, 3, 6],
+       [2, 5, 4]])
+>>> a ** b
+array([[25,  1,  0],
+      [ 0,  1,  2]])
+\end{lstlisting}
+
+Cuando dos matrices aparecen en una operación, ambas deben tener
+exactamente la misma forma:
+
+\begin{lstlisting}
+>>> a = array([[5, 1, 4],
+...            [0, 3, 2]])
+>>> b = array([[ 2,  3],
+...            [-1,  1],
+...            [ 0,  1]])
+>>> a + b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: shape mismatch: objects cannot be
+            broadcast to a single shape
+\end{lstlisting}
+
+\section{Obtener elementos de un arreglo bidimensional}
+
+Para obtener un elemento de un arreglo, debe indicarse los índices de su
+fila \lstinline!i! y su columna \lstinline!j! mediante la sintaxis
+\lstinline!a[i, j]!:
+
+\begin{lstlisting}
+>>> a = array([[ 3.21,  5.33,  4.67,  6.41],
+               [ 9.54,  0.30,  2.14,  6.57],
+               [ 5.62,  0.54,  0.71,  2.56],
+               [ 8.19,  2.12,  6.28,  8.76],
+               [ 8.72,  1.47,  0.77,  8.78]])
+>>> a[1, 2]
+2.14
+>>> a[4, 3]
+8.78
+>>> a[-1, -1]
+8.78
+>>> a[0, -1]
+6.41
+\end{lstlisting}
+
+También se puede obtener secciones rectangulares del arreglo usando el
+operador de rebanado con los índices:
+
+\begin{lstlisting}
+>>> a[2:3, 1:4]
+array([[ 0.54,  0.71,  2.56]])
+>>> a[1:4, 0:4]
+array([[ 9.54,  0.3 ,  2.14,  6.57],
+       [ 5.62,  0.54,  0.71,  2.56],
+       [ 8.19,  2.12,  6.28,  8.76]])
+>>> a[1:3, 2]
+array([ 2.14,  0.71])
+>>> a[0:4:2, 3:0:-1]
+array([[ 6.41,  4.67,  5.33],
+       [ 2.56,  0.71,  0.54]])
+>>> a[::4, ::3]
+array([[ 3.21,  6.41],
+       [ 8.72,  8.78]])
+\end{lstlisting}
+
+Para obtener una fila completa, hay que indicar el índice de la fila, y
+poner \lstinline!:! en el de las columnas (significa «desde el principio
+hasta el final»). Lo mismo para las columnas:
+
+\begin{lstlisting}
+>>> a[2, :]
+array([ 5.62,  0.54,  0.71,  2.56])
+>>> a[:, 3]
+array([ 6.41,  6.57,  2.56,  8.76,  8.78])
+\end{lstlisting}
+
+Note que el número de dimensiones es igual a la cantidad de rebanados
+que hay en los índices:
+
+\begin{lstlisting}
+>>> a[2, 3]      # valor escalar (cero dimensiones)
+2.56
+>>> a[2:3, 3]    # arreglo de una dimension de 1 elemento
+array([ 2.56])
+>>> a[2:3, 3:4]  # arreglo de dos dimensiones de 1 x 1
+array([[ 2.56]])
+\end{lstlisting}
+
+\section{Otras operaciones}
+
+La \textbf{trasposicion} consiste en cambiar las filas por las columnas
+y viceversa. Para trasponer un arreglo, se usa el método
+\lstinline!transpose!:
+
+\begin{lstlisting}
+>>> a
+array([[ 3.21,  5.33,  4.67,  6.41],
+       [ 9.54,  0.3 ,  2.14,  6.57],
+       [ 5.62,  0.54,  0.71,  2.56]])
+>>> a.transpose()
+array([[ 3.21,  9.54,  5.62],
+       [ 5.33,  0.3 ,  0.54],
+       [ 4.67,  2.14,  0.71],
+       [ 6.41,  6.57,  2.56]])
+\end{lstlisting}
+
+El método \lstinline!reshape! entrega un arreglo que tiene los mismos
+elementos pero otra forma. El parámetro de \lstinline!reshape! es una
+tupla indicando la nueva forma del arreglo:
+
+\begin{lstlisting}
+>>> a = arange(12)
+>>> a
+array([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+>>> a.reshape((4, 3))
+array([[ 0, 1, 2],
+       [ 3, 4, 5],
+       [ 6, 7, 8],
+       [ 9, 10, 11]])
+>>> a.reshape((2, 6))
+array([[ 0, 1, 2, 3, 4, 5],
+       [ 6, 7, 8, 9, 10, 11]])
+\end{lstlisting}
+
+La función \lstinline!diag! aplicada a un arreglo bidimensional entrega
+la diagonal principal de la matriz (es decir, todos los elementos de la
+forma \lstinline!a[i, i]!):
+
+\begin{lstlisting}
+>>> a
+array([[ 3.21,  5.33,  4.67,  6.41],
+       [ 9.54,  0.3 ,  2.14,  6.57],
+       [ 5.62,  0.54,  0.71,  2.56]])
+>>> diag(a)
+array([ 3.21,  0.3 ,  0.71])
+\end{lstlisting}
+
+Además, \lstinline!diag! recibe un segundo parámetro opcional para
+indicar otra diagonal que se desee obtener. Las diagonales sobre la
+principal son positivas, y las que están bajo son negativas:
+
+\begin{lstlisting}
+>>> diag(a, 2)
+array([ 4.67,  6.57])
+>>> diag(a, -1)
+array([ 9.54,  0.54])
+\end{lstlisting}
+
+La misma función \lstinline!diag! también cumple el rol inverso: al
+recibir un arreglo de una dimensión, retorna un arreglo bidimensional
+que tiene los elementos del parámetro en la diagonal:
+
+\begin{lstlisting}
+>>> diag(arange(5))
+array([[0, 0, 0, 0, 0],
+       [0, 1, 0, 0, 0],
+       [0, 0, 2, 0, 0],
+       [0, 0, 0, 3, 0],
+       [0, 0, 0, 0, 4]])
+\end{lstlisting}
+

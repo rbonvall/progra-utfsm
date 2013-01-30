@@ -1,0 +1,79 @@
+\section{Método de Newton}
+
+\emph{
+  Ejercicio sacado de \emph{SICP}\footnotemark.
+}
+\footnotetext{
+  Harold Abelson, Gerald Jay Sussman y Julie Sussman.
+  \emph{Structure and Interpretation of Computer Programs},
+  2da edición.
+  Publicado en \url{http://mitpress.mit.edu/sicp/}
+  bajo licencia Creative Commons BY-SA 3.0.
+  ¡Este libro es un clásico!
+}
+
+El método computacional más común para calcular raíces cuadradas
+(y otras funciones también) es el
+\href{http://es.wikipedia.org/wiki/M\%C3\%A9todo\_de\_Newton}{método de Newton}
+de aproximaciones sucesivas. Cada vez que tenemos una estimación
+\(y\) del valor de la raíz cuadrada de un número \(x\), podemos hacer una
+pequeña manipulación para obtener una mejor aproximación (una más
+cercana a la verdadera raíz cuadrada) promediando \(y\) con \(x/y\).
+
+\begin{table}
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+      Estimación \(y\) & Cuociente \(x/y\)     & Promedio \\
+    \midrule
+      \(1\)            & \(2/1      = 2\)      & \((2 + 1)          /2 = 1.5\)    \\
+      \(1.5\)          & \(2/1.5    = 1.3333\) & \((1.3333 + 1.5 )  /2 = 1.4167\) \\
+      \(1.4167\)       & \(2/1.4167 = 1.4118\) & \((1.4118 + 1.4167)/2 = 1.4142\) \\
+      \(1.4142\)       & \ldots{}              & \ldots{} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Primeras iteraciones del método de Newton para aproximar la raíz cuadrada de 2
+    usando la aproximación inicial \(y = 1\).}
+  \label{tbl:iteraciones-newton}
+\end{table}
+
+La tabla~\ref{tbl:iteraciones-newton} muestra cómo refinar paso a paso
+la raíz cuadrada de dos a partir de la aproximación inicial \(\sqrt{2}\approx 1\).
+
+Al continuar este proceso, obtenemos cada vez mejores estimaciones de la
+raíz cuadrada.
+
+El algoritmo debe detenerse cuando la estimación es «suficientemente
+buena», que puede ser cualquier criterio bien definido.
+
+\begin{enumerate}
+\item
+  Escriba un programa que reciba como entrada un número real \(x\) y
+  calcule su raíz cuadrada usando el método de Newton. El algoritmo debe
+  detenerse cuando el cuadrado de la raíz cuadrada estimada difiera de
+  \(x\) en menos de 0,0001.
+
+  (Este criterio de detención no es muy bueno).
+\item
+  Escriba un programa que reciba como entrada el número real \(x\) y un
+  número entero indicando con cuántas cifras decimales de precisión se
+  desea obtener su raíz cuadrada.
+
+  El método de Newton debe detenerse cuando las cifras de precisión
+  deseadas no cambien de una iteración a la siguiente.
+
+  Por ejemplo, para calcular~\(\sqrt{2}\) con dos cifras de precisión,
+  las estimaciones sucesivas son 1; 1,5; 1,416667 y 1,414216.
+  El algoritmo debe detenerse en la cuarta iteración, pues en
+  ella las dos primeras cifras decimales no cambiaron con respecto a la
+  iteración anterior:
+
+\begin{lstlisting}[language=testcase]
+Ingrese x: `2`
+Cifras decimales: `2`
+La raiz es 1.4142156862745097
+\end{lstlisting}
+
+  (La cuarta aproximación es bastante cercana a la verdadera raíz
+  1,4142135623730951).
+\end{enumerate}

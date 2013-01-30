@@ -1,0 +1,52 @@
+\section{Informe de producción de gas}
+
+En un informe anual de SansanoGas S.A., el presidente informa a sus
+accionistas la cantidad anual de producción de barriles de 50 litros de
+lubricantes normal, extra y súper, en sus dos refinerías:
+
+\ctable[pos = H, center, botcap]{llll}
+{% notes
+}
+{% rows
+\FL
+Refinería & Normal & Extra & Súper
+\ML
+A & 3000 & 7000 & 2000
+\\\noalign{\medskip}
+B & 4000 & 500 & 600
+\LL
+}
+
+Además, informa que en cada barril de 50 litros de lubricante existe la
+siguiente composición en litros de aceites finos, alquitrán y grasas
+residuales:
+
+\ctable[pos = H, center, botcap]{llll}
+{% notes
+}
+{% rows
+\FL
+Componente & Normal & Extra & Súper
+\ML
+Aceites finos & 10 & 5 & 35
+\\\noalign{\medskip}
+Alquitrán & 15 & 4 & 31
+\\\noalign{\medskip}
+Grasas residuales & 18 & 2 & 30
+\LL
+}
+
+\begin{enumerate}
+\item
+  Escriba la función \lstinline!totales_anuales(a, b)! que reciba como
+  parámetros ambas matrices y retorne un arreglo con los totales de
+  aceites finos, alquitrán y grasas residuales presentes en la
+  producción anual.
+\item
+  Escriba la función \lstinline!maximo_alquitran(a, b)! que reciba como
+  parámetros ambas matrices y retorne el máximo de litros de alquitrán
+  consumidos por ambas refinerías.
+\item
+  Determine cuál es la matriz que entrega el consumo de todos los
+  elementos que forman parte de un lubricante, en cada refinería.
+\end{enumerate}

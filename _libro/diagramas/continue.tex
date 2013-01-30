@@ -1,0 +1,22 @@
+\begin{tikzpicture}[node distance=12ex, auto]
+    \node (start) { };
+    \node [decision, below of=start] (cond) { condición };
+    \node [stmt, right of=cond, node distance=8em] (stmt1) { sentencia };
+    \node [decision, below of=stmt1] (cond-cont) { ¿continuar? };
+    \node [stmt, below of=cond-cont] (stmt2) { sentencia };
+    \node [below of=cond, node distance=30ex] (end) { };
+
+    \path [conn] (start) -- (cond);
+    \path [conn] (cond) -- (stmt1);
+    \path [conn] (stmt1) -- (cond-cont);
+    \path [conn] (cond-cont) --
+                 node[very near start] { no }
+                 (stmt2);
+    \path [conn] (cond) -- (end);
+    \path [conn] (stmt2) --
+                 +(6em, 0) |-
+                 ($ (start)!.5!(cond.north) $);
+    \path [conn] (cond-cont) --
+                 node[very near start] { sí }
+                 +(6em, 0);
+\end{tikzpicture}

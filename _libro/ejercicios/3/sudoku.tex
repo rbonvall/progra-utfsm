@@ -1,0 +1,53 @@
+\section{Sudoku}
+
+\begin{figure}
+  \centering
+  \input{diagramas/sudoku}
+  \caption{%
+    A la izquierda: sudoku sin resolver.
+    A la derecha: sudoku resuelto.
+  }
+  \label{fig:sudoku}
+\end{figure}
+
+El \emph{sudoku} es un puzzle que consiste en llenar
+una grilla de \(9 × 9\)
+(como se ve en la figura~\ref{fig:sudoku})
+con los dígitos del 1 al 9,
+de modo que no haya ningún valor repetido en
+cada fila, en cada columna y en cada uno de las regiones de \(3 × 3\)
+marcadas por las líneas más gruesas.
+
+El sudoku sin resolver tiene algunos de los dígitos puestos de antemano
+en la grilla. Cuando el puzzle ha sido resuelto, todas las casillas
+tienen un dígito, y entre todos satisfacen las condiciones señaladas.
+
+En un programa, un sudoku resuelto puede ser guardado en un arreglo de
+\(9 × 9\):
+
+\begin{lstlisting}
+from numpy import array
+sr = array([[4, 2, 6, 5, 7, 1, 3, 9, 8],
+            [8, 5, 7, 2, 9, 3, 1, 4, 6],
+            [1, 3, 9, 4, 6, 8, 2, 7, 5],
+            [9, 7, 1, 3, 8, 5, 6, 2, 4],
+            [5, 4, 3, 7, 2, 6, 8, 1, 9],
+            [6, 8, 2, 1, 4, 9, 7, 5, 3],
+            [7, 9, 4, 6, 3, 2, 5, 8, 1],
+            [2, 6, 5, 8, 1, 4, 9, 3, 7],
+            [3, 1, 8, 9, 5, 7, 4, 6, 2]])
+\end{lstlisting}
+
+Escriba la función \lstinline!solucion_es_correcta(sudoku)! que reciba
+como parámetro un arreglo de \(9 × 9\) representando un sudoku resuelto, y
+que indique si la solución es correcta (es decir, si no hay elementos
+repetidos en filas, columnas y regiones):
+
+\begin{lstlisting}
+>>> solucion_es_correcta(s)
+True
+>>> s[0, 0] = 9
+>>> solucion_es_correcta(s)
+False
+\end{lstlisting}
+

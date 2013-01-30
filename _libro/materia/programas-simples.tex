@@ -1,0 +1,257 @@
+\chapter{Programas simples}
+
+Un programa es una secuencia de \textbf{sentencias}. Una sentencia
+representa una instrucción bien definida que es ejecutada por el
+computador. En Python, cada línea del código representa una sentencia.
+Hay que distinguir entre:
+\begin{enumerate}
+  \item \textbf{sentencias simples}: son una única instrucción; y
+  \item \textbf{sentencias de control}: contienen varias otras sentencias, que
+    a su vez pueden ser simples o de control.
+\end{enumerate}
+
+Las sentencias simples son ejecutadas secuencialmente, una después de la
+otra.
+
+Todas las sentencias siguen ciertas reglas acerca de cómo deben ser
+escritas. Si no son seguidas, el programa está incorrecto y no se
+ejecutará. A este conjunto de reglas se le denomina \textbf{sintaxis}.
+
+A continuación veremos algunas sentencias simples, con las que se pueden
+escribir algunos programas sencillos. Más adelante introduciremos las
+sentencias de control.
+
+Como ejemplo, consideremos el siguiente programa, que pide al usuario
+ingresar una temperatura en grados Fahrenheit y entrega como resultado
+el equivalente en grados Celsius:
+
+\begin{lstlisting}
+f = float(raw_input('Ingrese temperatura en Fahrenheit: '))
+c = (f - 32.0) * (5.0 / 9.0)
+print 'El equivalente en Celsius es:', c
+\end{lstlisting}
+
+Escriba este programa en el computador
+y ejecútelo para convencerse de que funciona correctamente.
+
+\section{Expresiones y variables}
+
+Una \textbf{expresión} es una combinación de valores y operaciones que
+son eva\-luados durante la ejecución del algoritmo para obtener un
+resultado.
+
+Por ejemplo, \lstinline!2 + 3! es una expresión aritmética que, al ser
+evaluada, siempre entrega el valor \lstinline!5! como resultado. En esta
+expresión, \lstinline!2! y \lstinline!3! son \textbf{valores literales}
+y \lstinline!+! es el operador de adición.
+
+En nuestro programa de conversión de temperaturas aparece la expresión
+\lstinline!(f - 32.0) * (5.0 / 9.0)!, cuyo resultado depende de cuál es
+el valor de \lstinline!f! al momento de la evaluación. A diferencia de
+los valores literales, \lstinline!f! es una \textbf{variable}, que tiene
+un valor específico que puede ser distinto cada vez que la expresión es
+evaluada.
+
+En esta expresión, \lstinline!*! es el operador de multiplicación y
+\lstinline!/! el de división.
+
+Una expresión puede ser usada como una sentencia de un programa por sí
+sola, pero la mayoría de las veces esto no tiene ningún efecto. El
+programa evaluará la expresión, pero no hará nada con el resultado
+obtenido.
+
+\section{Asignaciones}
+
+Una \textbf{asignación} es una sentencia que asocia un nombre al
+resultado de una expresión. El nombre asociado al valor se llama
+\textbf{variable}.
+
+La sintaxis de una asignación es la siguiente:
+
+\begin{lstlisting}
+variable = expresion
+\end{lstlisting}
+
+Por ejemplo, el programa de conversión de temperaturas tiene la
+siguiente asignación:
+
+\begin{lstlisting}
+c = (f - 32.0) * (5.0 / 9.0)
+\end{lstlisting}
+
+Cuando aparece una asignación en un programa, es interpretada de la
+siguiente manera:
+
+\begin{enumerate}
+\item
+  primero la expresión a la derecha del signo \lstinline!=! es evaluada,
+  utilizando los valores que tienen en ese momento las variables que
+  aparecen en ella;
+\item
+  una vez obtenido el resultado, el valor de la variable a la izquierda
+  del signo \lstinline!=! es reemplazado por ese resultado.
+\end{enumerate}
+
+Bajo esta interpretación, es perfectamente posible una asignación como
+ésta:
+\begin{lstlisting}
+i = i + 1
+\end{lstlisting}
+Primero la expresión \lstinline!i + 1! es evaluada, entregando como
+resultado el sucesor del valor actual de \lstinline!i!. A continuación,
+la variable \lstinline!i! toma el nuevo valor. Por ejemplo, si
+\lstinline!i! tiene el valor 15, después de la asignación tendrá el
+valor 16.
+
+Esto no significa que \(15 = 16\). Una asignación no es una igualdad
+matemática ni una ecuación.
+
+Por ejemplo, las siguientes asignaciones son correctas, suponiendo que
+las variables que aparecen en ellas ya fueron asignadas previamente:
+
+\begin{lstlisting}
+nombre = 'Perico Los Palotes'
+discriminante = b ** 2 - 4 * a * c
+pi = 3.14159
+r = 5.0
+perimetro = 2 * pi * r
+sucesor = n + 1
+a = a
+es_menor = x < 4
+x0 = x1 + x2
+r = 2 * abs(x - x0)
+nombre = raw_input('Ingrese su nombre')
+\end{lstlisting}
+
+En contraste, las siguientes no son asignaciones válidas,
+pues no respetan la sintaxis \lstinline!nombre = expresion!:
+
+\begin{lstlisting}[language={}]
+n + 1 = 5
+7 = a
+2_pi_r = 2 * pi * r
+area del circulo = pi * r ** 2
+x ** 2 = x * x
+\end{lstlisting}
+
+¡Identifique los errores!
+
+\section{Entrada}
+
+La \textbf{entrada} es la parte del programa
+que pide datos al usuario.
+
+La manera más simple de ingresar datos es hacerlo a través del teclado.
+La función \lstinline!raw_input(mensaje)! pide al usuario ingresar un
+valor, que puede ser asignado a una variable para ser usado más adelante por el
+programa. El \lstinline!mensaje! es lo que se mostrará al usuario antes
+de que él ingrese el valor.
+
+El valor ingresado por el usuario siempre es interpretado como texto,
+por lo que es de tipo \lstinline!str!. Si es necesario usarlo como si
+fuera de otro tipo, hay que convertirlo explícitamente.
+
+Por ejemplo, en el programa de conversión de temperaturas, la entrada es
+realizada por la sentencia:
+
+\begin{lstlisting}
+f = float(raw_input('Ingrese temperatura en Fahrenheit: '))
+\end{lstlisting}
+
+Cuando el programa llega a esta línea, el mensaje
+«\texttt{Ingrese temperatura en Fahrenheit:}» es mostrado al usuario,
+que entonces debe ingresar un valor, que es convertido a un número real
+y asociado al nombre \lstinline!f!.
+
+Desde esa línea en adelante, la variable \lstinline!f! puede ser usada
+en el programa para referirse al valor ingresado.
+
+\section{Salida}
+
+La \textbf{salida} es la parte del programa en que los resultados son
+entregados al usuario.
+
+La manera más simple de entregar la salida es mostrando texto en la
+pantalla. En Python, la salida del programa es realizada por la
+sentencia \textbf{print} (\emph{imprimir} en inglés).
+
+Si se desea imprimir un texto tal cual, la sintaxis es la siguente:
+
+\begin{lstlisting}
+print valor_a_imprimir
+\end{lstlisting}
+
+Si los valores a imprimir son varios, deben ser puestos separados por
+comas. Por ejemplo, el programa de conversión de temperaturas tiene la
+siguiente sentencia de salida:
+
+\begin{lstlisting}
+print 'El equivalente en Celsius es:', c
+\end{lstlisting}
+
+El programa imprimirá el mensaje
+«\texttt{El equivalente en Celsius es:}» y a continuación, en la misma
+línea, el valor de la variable \lstinline!c!.
+
+Las comillas sólo sirven para representar un string en el código, y no
+forman parte del string. Al imprimir el string usando \lstinline!print!
+las comillas no aparecen:
+
+\begin{lstlisting}
+>>> 'Hola'
+'Hola'
+>>> print 'Hola'
+Hola
+\end{lstlisting}
+
+\section{Comentarios}
+
+Un \textbf{comentario} es una sección del código que es ignorada por el
+intérprete. Un comentario puede ser utilizado por el programador para
+dejar un mensaje en el código que puede ser útil para alguien que tenga
+que leerlo en el futuro.
+
+En Python, cualquier texto que aparezca a la derecha de un signo
+\lstinline!#! es un comentario:
+
+\begin{lstlisting}
+>>> 2 + 3  # Esto es una suma
+5
+>>> # Esto es ignorado
+>>>
+\end{lstlisting}
+
+La excepción son los signos \lstinline!#! que aparecen en un string:
+
+\begin{lstlisting}
+>>> "123 # 456" # 789
+'123 # 456'
+\end{lstlisting}
+
+\section{Evitar que se cierre el programa}
+
+La ejecución de programas en Windows presenta un inconveniente práctico:
+cuando el programa termina, la ventana de ejecución se cierra
+inmediatamente, por lo que no es posible alcanzar a leer la salida del
+programa.
+
+Por ejemplo, al ejecutar el programa \lstinline!temperatura.py! tal como
+está al comienzo del capítulo, el usuario verá el mensaje
+«\texttt{Ingrese temperatura}\dots» y a continuación ingresará el valor.
+Una vez que el programa entrega como resultado el equivalente en grados
+Celsius, no quedan más sentencias para ejecutar, por lo que el programa
+se cierra.
+
+Existen otras maneras de ejecutar programas con las que este problema no
+ocurre. Por ejemplo, al ejecutar un programa desde una IDE,
+generalmente la salida aparece en una ventana que no se cierra.
+
+Una solución para evitar que la ventana se cierre es agregar un
+\lstinline!raw_input()! al final del código. De este modo, el programa
+quedará esperando que el usuario ingrese cualquier cosa (un enter basta)
+antes de cerrarse.
+
+Los programas presentados en este apunte no tendrán el
+\lstinline!raw_input()! al final, pero usted puede agregarlo por su
+cuenta si así lo desea. En controles y certámenes, no será necesario
+hacerlo.

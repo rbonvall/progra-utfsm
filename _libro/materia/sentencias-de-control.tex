@@ -1,0 +1,406 @@
+\chapter{Sentencias de control}
+
+Un programa es una sucesión de \textbf{sentencias} que son ejecutadas
+secuencialmente.
+Por ejemplo, el siguiente programa tiene cuatro sentencias:
+\begin{lstlisting}
+n = int(raw_input('Ingrese n: '))
+m = int(raw_input('Ingrese m: '))
+suma = n + m
+print 'La suma de n y m es:', suma
+\end{lstlisting}
+
+Las primeras tres son asignaciones, y la última es una llamada a
+función. Al ejecutar el programa, cada una de estas sentencias es
+ejecutada, una después de la otra, una sola vez.
+
+Además de las sentencias simples, que son ejecutadas en secuencia,
+existen las \textbf{sentencias de control} que permiten modificar el
+flujo del programa introduciendo ciclos y condicionales.
+
+Un \textbf{condicional} es un conjunto de sentencias que pueden o no
+ejecutarse, dependiendo del resultado de una condición.
+
+Un \textbf{ciclo} es un conjunto de sentencias que son ejecutadas varias
+veces, hasta que una condición de término es satisfecha.
+
+Tanto los condicionales como los ciclos contienen a otras sentencias.
+Para indicar esta relación se utiliza la \textbf{indentación}: las
+sentencias contenidas no se escriben en la misma columna que la
+sentencia de control, sino un poco más a la derecha:
+
+\begin{lstlisting}
+n = int(raw_input())
+m = int(raw_input())
+if m < n:
+    t = m
+    m = n
+    n = t
+print m, n
+\end{lstlisting}
+
+En este ejemplo, las tres asignaciones están contenidas dentro de la
+sentencia de control \lstinline!if!. El \lstinline!print m, n! no está
+indentado, por lo que no es parte de la sentencia \lstinline!if!.
+
+Este programa tiene cuatro sentencias, de las cuales la tercera es una
+sentencia de control, que contiene a otras tres sentencias.
+
+Para indentar, utilizaremos siempre cuatro espacios.
+
+\section{Condicional if}
+
+La sentencia \textbf{if} («si») ejecuta las instrucciones sólo si se
+cumple una condición. Si la condición es falsa, no se hace nada:
+
+\begin{center}
+  \input{diagramas/if}
+\end{center}
+
+
+La sintaxis es la siguiente:
+
+\begin{lstlisting}
+if condicion:
+    sentencias
+\end{lstlisting}
+
+Por ejemplo, el siguente programa felicita a alguien que aprobó el ramo:
+
+\begin{lstlisting}
+nota = int(raw_input('Ingrese su nota: '))
+if nota >= 55:
+    print 'Felicitaciones'
+\end{lstlisting}
+
+Ejecute este programa, probando varias veces con valores diferentes.
+
+\section{Condicional if-else}
+
+La sentencia \textbf{if-else} («si-o-si-no») decide qué instrucciones
+ejecutar dependiendo si una condición es verdadera o falsa:
+
+\begin{center}
+  \input{diagramas/if-else}
+\end{center}
+
+
+La sintaxis es la siguiente:
+
+\begin{lstlisting}
+if condicion:
+    que hacer cuando la condicion es verdadera
+else:
+    que hacer cuando la condicion es falsa
+\end{lstlisting}
+
+Por ejemplo, el siguiente programa indica a alguien si es mayor de edad:
+
+\begin{lstlisting}
+edad = int(raw_input('Cual es su edad? '))
+if edad < 18:
+    print 'Usted es menor de edad'
+else:
+    print 'Usted es adulto'
+\end{lstlisting}
+
+El siguiente programa realiza acciones distintas dependiendo de si el
+número de entrada es par o impar:
+
+\begin{lstlisting}
+n = int(raw_input('Ingrese un numero: '))
+if n % 2 == 0:
+    print 'El numero es par'
+    print 'La mitad del numero es', n / 2
+else:
+    print 'El numero es impar'
+    print 'El sucesor del numero es', n + 1
+print 'Listo'
+\end{lstlisting}
+
+La última sentencia no está indentada, por lo que no es parte del
+condicional, y será ejecutada siempre.
+
+\section{Condicional if-elif-else}
+
+La sentencia \textbf{if-elif-else} depende de dos o más condiciones, que
+son eva\-lua\-das en orden. La primera que es verdadera determina qué
+instrucciones serán ejecutadas:
+
+\begin{center}
+  \input{diagramas/if-elif-else}
+\end{center}
+
+La sintaxis es la siguiente:
+
+\begin{lstlisting}
+if condicion1:
+    que hacer si condicion1 es verdadera
+elif condicion2:
+    que hacer si condicion2 es verdadera
+...
+else:
+    que hacer cuando ninguna de las
+    condiciones anteriores es verdadera
+\end{lstlisting}
+
+El último \lstinline!else! es opcional.
+
+\begin{table}
+  \centering
+  \begin{tabular}{lr}
+    \toprule
+      Sueldo & Tasa de impuesto \\
+    \midrule
+      menos de \(1000\)                 &  0\% \\
+      \(1000 \le \text{sueldo} < 2000\) &  5\% \\
+      \(2000 \le \text{sueldo} < 4000\) & 10\% \\
+      \(4000\) o más                    & 12\% \\
+    \bottomrule
+  \end{tabular}
+  \caption{Ejemplo: tasa de impuesto en función del sueldo recibido.}
+  \label{tbl:tasa-impuesto}
+\end{table}
+
+Por ejemplo, la tasa de impuesto a pagar por una persona según su sueldo
+puede estar dada por la tabla~\ref{tbl:tasa-impuesto}.
+Entonces, el programa que calcula el impuesto a pagar es el siguiente:
+
+\begin{lstlisting}
+sueldo = int(raw_input('Ingrese su sueldo: '))
+if sueldo < 1000:
+    tasa = 0.00
+elif sueldo < 2000:
+    tasa = 0.05
+elif sueldo < 4000:
+    tasa = 0.10
+else:
+    tasa = 0.12
+print 'Usted debe pagar', tasa * sueldo, 'de impuesto'
+\end{lstlisting}
+
+Siempre sólo una de las alternativas será ejecutada. Tan pronto alguna de las
+condiciones es verdadera, el resto de ellas no siguen siendo evaluadas.
+
+Otra manera de escribir el mismo programa usando sólo sentencias
+\lstinline!if! es la siguiente:
+
+\begin{lstlisting}
+sueldo = int(raw_input('Ingrese su sueldo: '))
+if sueldo < 1000:
+    tasa = 0.00
+if 1000 <= sueldo < 2000:
+    tasa = 0.05
+if 2000 <= sueldo < 4000:
+    tasa = 0.10
+if 4000 < sueldo:
+    tasa = 0.12
+print 'Usted debe pagar', tasa * sueldo, 'de impuesto'
+\end{lstlisting}
+
+Esta manera es menos clara, porque no es evidente a primera vista que
+sólo una de las condiciones será verdadera.
+
+\section{Ciclo while}
+
+El ciclo \textbf{while} («mientras») ejecuta una secuencia de
+instrucciones mientras una condición sea verdadera:
+
+\begin{center}
+  \input{diagramas/while}
+\end{center}
+
+Cada una de las veces que el cuerpo del ciclo es ejecutado se llama
+\textbf{iteración}.
+
+La condición es evaluada antes de cada iteración. Si la condición es
+inicialmente falsa, el ciclo no se ejecutará ninguna vez.
+
+La sintaxis es la siguiente:
+
+\begin{lstlisting}
+while condicion:
+    sentencias
+\end{lstlisting}
+
+Por ejemplo, el siguiente programa multiplica dos números enteros sin
+usar el operador \lstinline!*!:
+
+\begin{lstlisting}
+m = int(raw_input())
+n = int(raw_input())
+p = 0
+while m > 0:
+    m = m - 1
+    p = p + n
+print 'El producto de m y n es', p
+\end{lstlisting}
+
+\begin{table}
+  \centering
+  \begin{tabular}{*{3}{r}}
+    \toprule
+      \lstinline!p! & \lstinline!m! & \lstinline!n! \\
+    \midrule
+         &  4 &   \\
+         &    & 7 \\
+       0 &    &   \\
+         &  3 &   \\
+       7 &    &   \\
+         &  2 &   \\
+      14 &    &   \\
+         &  1 &   \\
+      21 &    &   \\
+         &  0 &   \\
+      28 &    &   \\
+    \bottomrule
+  \end{tabular}
+  \caption{%
+    Ruteo del programa de ejemplo.
+    La tabla muestra cómo cambian los valores de cada variable
+    durante la ejecución del programa.
+  }
+  \label{tbl:ruteo-while}
+\end{table}
+
+Para ver cómo funciona este programa, hagamos un ruteo con la entrada
+\lstinline!m! = 4 y \lstinline!n! = 7.
+La tabla~\ref{tbl:ruteo-while} muestra cómo cambian
+los valores de todas las variables
+a medida que las sentencias van siendo ejecutadas.
+
+En cada iteración, el valor de \lstinline!m! decrece en 1. Cuando llega
+a 0, la condición del \lstinline!while! deja de ser verdadera por lo que
+el ciclo termina. De este modo, se consigue que el resultado sea sumar
+\lstinline!m! veces el valor de \lstinline!n!.
+
+Note que el ciclo no termina apenas el valor de \lstinline!m! pasa a ser
+cero. La condición es evaluada una vez que la iteración completa ha
+terminado.
+
+En general, el ciclo \lstinline!while! se utiliza cuando no es posible
+saber de antemano cuántas veces será ejecutado el ciclo, pero sí qué es
+lo que tiene que ocurrir para que se termine.
+
+\section{Ciclo for con rango}
+
+El ciclo \textbf{for con rango} ejecuta una secuencia de sentencias una
+cantidad fija de veces.
+
+Para llevar la cuenta, utiliza una \textbf{variable de control} que toma
+valores distintos en cada iteración.
+
+Una de las sintaxis para usar un \lstinline!for! con rango es la
+siguiente:
+
+\begin{lstlisting}
+for variable in range(fin):
+    que hacer para cada valor de la variable de control
+\end{lstlisting}
+
+En la primera iteración, la variable de control toma el valor 0. Al
+final de cada iteración, el valor de la variable aumenta
+automáticamente. El ciclo termina justo antes que la variable tome el
+valor \lstinline!fin!.
+
+Por ejemplo, el siguiente programa muestra los cubos de los números del
+0 al 20:
+
+\begin{lstlisting}
+for i in range(21):
+    print i, i ** 3
+\end{lstlisting}
+
+Un \textbf{rango} es una sucesión de números enteros equiespaciados.
+Incluyendo la presentada más arriba, hay tres maneras de definir un
+rango:
+
+\begin{lstlisting}
+range(final)
+range(inicial, final)
+range(inicial, final, incremento)
+\end{lstlisting}
+
+El valor inicial siempre es parte del rango. El valor final nunca es
+incluido en el rango. El incremento indica la diferencia entre dos valores
+consecutivos del rango.
+
+Si el valor inicial es omitido, se supone que es 0. Si el incremento es
+omitido, se supone que es 1.
+
+\begin{table}
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+      Rango                        & Valores que incluye \\
+    \midrule
+      \lstinline!range(9)!         & 0, 1, 2, 3, 4, 5, 6, 7, 8 \\
+      \lstinline!range(3, 13)!     & 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 \\
+      \lstinline!range(3, 13, 2)!  & 3, 5, 7, 9, 11 \\
+      \lstinline!range(11, 4)!     & Ningún valor \\
+      \lstinline!range(11, 4, -1)! & 11, 10, 9, 8, 7, 6, 5 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Ejemplos de rangos.}
+  \label{tbl:ejemplos-range}
+\end{table}
+
+Con los ejemplos de la tabla~\ref{tbl:ejemplos-range} quedará más claro.
+
+Usando un incremento negativo, es posible hacer ciclos que van hacia
+atrás:
+
+\begin{lstlisting}
+for i in range(10, 0, -1):
+    print i
+print 'Feliz anno nuevo!'
+\end{lstlisting}
+
+En general, el ciclo \lstinline!for! con rango se usa cuando el número
+de iteraciones es conocido antes de entrar al ciclo.
+
+\section{Salir de un ciclo}
+
+Además de las condiciones de término propias de los ciclos
+\lstinline!while! y \lstinline!for!, siempre es posible salir de un
+ciclo en medio de una iteración usando la sentencia \lstinline!break!:
+\begin{center}
+  \input{diagramas/break}
+\end{center}
+
+Por ejemplo, en el programa para determinar si un número es primo o no,
+la búsqueda de divisores puede ser terminada prematuramente apenas se
+encuentra el primero de ellos:
+
+\begin{lstlisting}
+es_primo = True
+for d in range(2, n):
+    if n % d == 0:
+        es_primo = False
+        break
+\end{lstlisting}
+
+Es lógico es que el \lstinline!break! aparezca siempre dentro de un \lstinline!if!,
+pues de otro modo el ciclo terminaría siempre en la primera iteración.
+
+\section{Saltar a la siguiente iteración}
+
+La sentencia \textbf{continue} se usa para saltar a la iteración
+siguiente sin llegar al final de la que está en curso.
+
+\begin{center}
+  \input{diagramas/continue}
+\end{center}
+
+Por ejemplo, el siguiente programa muestra el seno, el coseno y la
+tangente de los números del 1 al 30, pero omitiendo los que terminan en
+7:
+
+\begin{lstlisting}
+from math import sin, cos, tan
+for i in range(1, 31):
+    if i % 10 == 7:
+        continue
+    print i, sin(i), cos(i), tan(i)
+\end{lstlisting}
+

@@ -1,0 +1,54 @@
+%\def\P{\phantom{-}}
+%\def\M{-}
+
+\tikzstyle{n}=[]%[xshift=.5cm, yshift=.5cm]
+\tikzstyle{r}=[font=\footnotesize, anchor=west]%[xshift=.5cm, yshift=.5cm]
+\begin{tikzpicture}[scale=.6, xscale=2]
+
+  \begin{scope}[yshift=0cm]
+    \node[n] at (-0.4, 0.5){\texttt{a =}};
+    \draw (0, 0) grid (5, 1);
+    \node[n] at (0.5, 0.5) {\(\M{}2.80\)};
+    \node[n] at (1.5, 0.5) {\(\M{}0.88\)};
+    \node[n] at (2.5, 0.5) {\(\P{}2.76\)};
+    \node[n] at (3.5, 0.5) {\(\P{}1.30\)};
+    \node[n] at (4.5, 0.5) {\(\P{}4.43\)};
+  \end{scope}
+
+  \begin{scope}[yshift=-1.5cm]
+    \node[n] at (-0.4, 0.5){\texttt{b =}};
+    \draw (0, 0) grid (5, 1);
+    \node[n] at (0.5, 0.5) {\(\P{}0.25\)};
+    \node[n] at (1.5, 0.5) {\(\M{}1.58\)};
+    \node[n] at (2.5, 0.5) {\(\P{}1.32\)};
+    \node[n] at (3.5, 0.5) {\(\M{}0.34\)};
+    \node[n] at (4.5, 0.5) {\(\M{}4.22\)};
+  \end{scope}
+
+  \begin{scope}[xshift=-.2cm, yshift=-3.2cm, gray]
+    \node[r] at (0.5, 0.5) {\(-0.7\)};
+    \node[r] at (1.5, 0.5) {\(1.3904\)};
+    \node[r] at (2.5, 0.5) {\(3.6432\)};
+    \node[r] at (3.5, 0.5) {\(-0.442\)};
+    \node[r] at (4.5, 0.5) {\(-18.6946\)};
+  \end{scope}
+
+  \begin{scope}[yshift=-2.1cm, xshift=.1cm]
+    \foreach\i in {0,...,4} {
+      \draw[red!80!black, thick, -latex']
+          (\i, 3) -- ++(0, -3)
+          [out=-90, in=120] to ++(.2, -.5);
+      \node[red!80!black, xshift=-.18cm, yshift=-.15cm]
+          at (\i, .5) {\(\times\)};
+    }
+  \end{scope}
+
+  \begin{scope}[yshift=-3.0cm, xshift=.5cm]
+    \draw [-latex', red!80!black, thick] (0, 0)
+        -- node[above, xshift=3.3cm]{\(+\)} ++(5.1, 0)
+        [out=0, in=90] to ++(.2cm, -.5cm);
+    \node[anchor=north] at ++(5.3, -.5) {\(-14.803\)};
+  \end{scope}
+
+\end{tikzpicture}
+

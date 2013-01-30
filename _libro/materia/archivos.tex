@@ -1,0 +1,378 @@
+\chapter{Archivos}
+
+Todos los datos que un programa utiliza durante su ejecución se
+encuentran en sus variables, que están almacenadas en la
+\href{http://es.wikipedia.org/wiki/Memoria\_RAM}{memoria RAM} del
+computador.
+
+La memoria RAM es un medio de almacenamiento \textbf{volátil}: cuando el
+programa termina, o cuando el computador se apaga, todos los datos se
+pierden para siempre.
+
+Para que un programa pueda guardar datos de manera permanente, es
+necesario utilizar un medio de almacenamiento \textbf{persistente}, de
+los cuales el más importante es el
+\href{http://es.wikipedia.org/wiki/Disco\_duro}{disco duro}.
+
+Los datos en el disco duro están organizados en
+%\href{http://es.wikipedia.org/wiki/Archivo\_(informática)}{archivos}.
+archivos.
+Un \textbf{archivo} es una secuencia de datos almacenados en un medio
+persistente que están disponibles para ser utilizados por un programa.
+Todos los archivos tienen un nombre y una ubicación dentro del sistema
+de archivos del sistema operativo.
+
+Los datos en un archivo siguen estando presentes después de que termina
+el programa que lo ha creado. Un programa puede guardar sus datos en
+archivos para usarlos en una ejecución futura, e incluso puede leer
+datos desde archivos creados por otros programas.
+
+Un programa no puede manipular los datos de un archivo directamente.
+Para usar un archivo, un programa siempre abrir el archivo y asignarlo a
+una variable, que llamaremos el \textbf{archivo lógico}. Todas las
+operaciones sobre un archivo se realizan a través del archivo lógico.
+
+Dependiendo del contenido, hay muchos tipos de archivos. Nosotros nos
+preocuparemos sólo de los \textbf{archivos de texto}, que son los que
+contienen texto, y pueden ser abiertos y modificados usando un editor de
+texto como el Bloc de Notas. Los archivos de texto generalmente tienen
+un nombre terminado en \lstinline!.txt!.
+
+\section{Lectura de archivos}
+
+Para leer datos de un archivo, hay que abrirlo de la siguiente manera:
+
+\begin{lstlisting}
+archivo = open(nombre)
+\end{lstlisting}
+
+\lstinline!nombre! es un string que tiene el nombre del archivo.
+\lstinline!archivo! es el archivo lógico a través del que se manipulará
+el archivo.
+
+Si el archivo no existe, ocurrirá un \textbf{error de entrada y salida}
+(\lstinline!IOError!).
+
+Es importante recordar que la variable \lstinline!archivo! es una
+representación abstracta del archivo, y no los contenidos del mismo.
+
+La manera más simple de leer el contenido es hacerlo línea por línea.
+Para esto, basta con poner el archivo lógico en un ciclo for:
+
+\begin{lstlisting}
+for linea in archivo:
+    # hacer algo
+\end{lstlisting}
+
+Una vez que los datos han sido leídos del archivo, hay que cerrarlo:
+
+\begin{lstlisting}
+archivo.close()
+\end{lstlisting}
+
+Por ejemplo, supongamos que tenemos el archivo \lstinline!himno.txt! que
+tiene el siguiente contenido:
+
+\begin{lstlisting}[language=file]
+Puro Chile
+es tu cielo azulado
+puras brisas
+te cruzan tambien.
+\end{lstlisting}
+
+El archivo tiene cuatro líneas. Cada línea termina con un salto de línea
+(\lstinline!\n!), que indica que a continuación comienza una línea
+nueva.
+
+El siguiente programa imprime la primera letra de cada línea del himno:
+
+\begin{lstlisting}
+archivo = open('himno.txt')
+for linea in archivo:
+    print linea[0]
+archivo.close()
+\end{lstlisting}
+
+El ciclo for es ejecutado cuatro veces, una por cada línea del archivo.
+La salida del programa es:
+\begin{lstlisting}[language=testcase]
+P
+e
+p
+t
+\end{lstlisting}
+
+Otro ejemplo: el siguiente programa imprime cuántos símbolos hay en cada
+línea:
+
+\begin{lstlisting}
+archivo = open('himno.txt')
+for linea in archivo:
+    print len(linea)
+archivo.close()
+\end{lstlisting}
+
+La salida es:
+\begin{lstlisting}[language=testcase]
+11
+20
+13
+19
+\end{lstlisting}
+
+Note que el salto de línea (el ``enter'') es considerado en la cuenta:
+
+\begin{tabular}{|*{11}{c|}l}
+  \cline{1-11}
+  \lstinline!P! &
+  \lstinline!u! &
+  \lstinline!r! &
+  \lstinline!o! &
+  \lstinline! ! &
+  \lstinline!C! &
+  \lstinline!h! &
+  \lstinline!i! &
+  \lstinline!l! &
+  \lstinline!e! &
+  \lstinline!\n! &
+  = 11 símbolos \\
+  \cline{1-11}
+\end{tabular}
+
+Para obtener el string sin el salto de línea se puede usar el método
+\lstinline!strip!, que elimina todos los símbolos de espaciado al
+principio y al final del string:
+
+\begin{lstlisting}
+>>> s = '   Hola\n'
+>>> s.strip()
+'Hola'
+\end{lstlisting}
+
+Si modificamos el programa para eliminar el salto de línea:
+
+\begin{lstlisting}
+archivo = open('himno.txt')
+for linea in archivo:
+    print len(linea.strip())
+archivo.close()
+\end{lstlisting}
+entonces la salida es:
+\begin{lstlisting}[language=testcase]
+10
+19
+12
+18
+\end{lstlisting}
+
+Lo importante es comprender que los archivos son leídos línea por línea
+usando el ciclo \lstinline!for!.
+
+\section{Escritura en archivos}
+
+Los ejemplos anteriores suponen que el archivo por leer existe, y está
+listo para ser abierto y leído. Ahora veremos cómo crear los archivos y
+cómo escribir datos en ellos, para que otro programa después pueda
+abrirlos y leerlos.
+
+Uno puede crear un archivo vacío abriéndolo de la siguiente manera:
+
+\begin{lstlisting}
+archivo = open(nombre, 'w')
+\end{lstlisting}
+
+El segundo parámetro de la función \lstinline!open! indica el uso que se
+le dará al archivo. \lstinline!'w'! significa «escribir» (\emph{write}
+en inglés).
+
+Si el archivo señalado no existe, entonces será creado. Si ya existe,
+entonces será sobreescrito. Hay que tener cuidado entonces, pues esta
+operación elimina los datos del archivo que existía previamente.
+
+Una vez abierto el archivo, uno puede escribir datos en él usando el
+método \lstinline!write!:
+
+\begin{lstlisting}
+a = open('prueba.txt', 'w')
+a.write('Hola ')
+a.write('mundo.')
+a.close()
+\end{lstlisting}
+
+Una vez ejecutado este programa, el archivo \lstinline!prueba.txt! será
+creado (o sobreescrito, si ya existía). Al abrirlo en el Bloc de Notas,
+veremos este contenido:
+
+\begin{lstlisting}[language=file]
+Hola mundo.
+\end{lstlisting}
+
+Para escribir varias líneas en el archivo, es necesario agregar
+explícitamente los saltos de línea en cada string que sea escrito. Por
+ejemplo, para crear el archivo \lstinline!himno.txt! que usamos más
+arriba, podemos hacerlo así:
+
+\begin{lstlisting}
+a = open('himno.txt', 'w')
+a.write('Puro Chile\n')
+a.write('es tu cielo azulado\n')
+a.write('puras brisas\n')
+a.write('te cruzan tambien.\n')
+a.close()
+\end{lstlisting}
+
+Además del modo \lstinline!'w'! (\emph{write}), también existe el modo
+\lstinline!'a'! (\emph{append}), que permite escribir datos al final de
+un archivo existente. Por ejemplo, el siguiente programa abre el archivo
+\lstinline!prueba.txt! que creamos más arriba, y agrega más texto al
+final de él:
+
+\begin{lstlisting}
+a = open('prueba.txt', 'a')
+a.write('\n')
+a.write('Chao ')
+a.write('pescao.')
+a.close()
+\end{lstlisting}
+
+Si abrimos el archivo \lstinline!prueba.txt! en el Bloc de Notas,
+veremos esto:
+
+\begin{lstlisting}[language=file]
+Hola mundo.
+
+Chao pescao.
+\end{lstlisting}
+
+De haber abierto el archivo en modo \lstinline!'w'! en vez de
+\lstinline!'a'!, el contenido anterior (la frase \lstinline!Hola mundo!)
+se habría borrado.
+
+\section{Archivos de valores con separadores}
+
+Una manera usual de almacenar datos con estructura de tabla en un
+archivo es la siguiente: cada línea del archivo representa una fila de
+la tabla, y los datos de una fila se ponen separados por algún símbolo
+especial.
+
+Por ejemplo, supongamos que queremos guardar en un archivo los datos de
+esta tabla:
+
+\begin{tabular}{llrrrr}
+  \toprule
+    Nombre & Apellido & Nota 1 & Nota 2 & Nota 3 & Nota 4 \\
+  \midrule
+    Perico & Los Palotes & 90 & 75 & 38 & 65 \\
+    Yayita & Vinagre & 39 & 49 & 58 & 55 \\
+    Fulana & De Tal & 96 & 100 & 36 & 71 \\
+  \bottomrule
+\end{tabular}
+
+Si usamos el símbolo \lstinline!:! como separador, el archivo
+\texttt{alumnos.txt} debería quedar así:
+
+\begin{lstlisting}[language=file]
+Perico:Los Palotes:90:75:38:65
+Yayita:Vinagre:39:49:58:55
+Fulanita:De Tal:96:100:36:71
+\end{lstlisting}
+
+El formato de estos archivos se suele llamar
+\href{http://en.wikipedia.org/wiki/CSV\_(file\_format)}{CSV}, que en
+inglés son las siglas de \emph{comma-separated values} (significa
+«valores separados por comas», aunque técnicamente el separador puede
+ser cualquier símbolo). A pesar del nombre especial que reciben, los
+archivos CSV son archivos de texto como cualquier otro, y se pueden
+tratar como tales.
+
+Los archivos de valores con separadores son muy fáciles de leer y
+escribir, y por esto son muy usados. Como ejemplo práctico, si usted
+desea hacer un programa que analice los datos de una hoja de cálculo
+Excel, puede guardar el archivo con el formato CSV directamente en el
+Excel, y luego abrirlo desde su programa escrito en Python.
+
+Para leer los datos de un archivo de valores con separadores, debe
+hacerlo línea por línea, eliminar el salto de línea usando el método
+\lstinline!strip! y luego extraer los valores de la línea usando el
+método \lstinline!split!. Por ejemplo, al leer la primera línea del
+archivo de más arriba obtendremos el siguiente string:
+
+\begin{lstlisting}
+'Perico:Los Palotes:90:75:38:65\n'
+\end{lstlisting}
+
+Para separar los seis valores, lo podemos hacer así:
+
+\begin{lstlisting}
+>>> linea.strip().split(':')
+['Perico', 'Los Palotes', '90', '75', '38', '65']
+\end{lstlisting}
+
+Como se trata de un archivo de texto, todos los valores son strings. Una
+manera de convertir los valores a sus tipos apropiados es hacerlo uno
+por uno:
+
+\begin{lstlisting}
+valores = linea.strip().split(':')
+nombre   = valores[0]
+apellido = valores[1]
+nota1 = int(valores[2])
+nota2 = int(valores[3])
+nota3 = int(valores[4])
+nota4 = int(valores[5])
+\end{lstlisting}
+
+Una manera más breve es usar las rebanadas y la función \lstinline!map!:
+
+\begin{lstlisting}
+valores = linea.strip().split(':')
+nombre, apellido = valores[0:2]
+nota1, nota2, nota3, nota4 = map(int, valores[2:6])
+\end{lstlisting}
+
+O podríamos dejar las notas en una lista, en vez de usar cuatro
+variables diferentes:
+
+\begin{lstlisting}
+notas = map(int, valores[2:6])
+\end{lstlisting}
+
+Por ejemplo, un programa para imprimir el promedio de todos los alumnos
+se puede escribir así:
+
+\begin{lstlisting}
+archivo_alumnos = open('alumnos.txt')
+for linea in archivo_alumnos:
+    valores = linea.strip().split(':')
+    nombre, apellido = valores[0:2]
+    notas = map(int, valores[2:6])
+    promedio = sum(notas) / 4.0
+    print '{0} obtuvo promedio {1}'.format(nombre, promedio)
+archivo_alumnos.close()
+\end{lstlisting}
+
+Para escribir los datos en un archivo, hay que hacer el proceso inverso:
+convertir todos los datos al tipo string, pegarlos en un único string,
+agregar el salto de línea al final y escribir la línea en el archivo.
+
+Si los datos de la línea ya están en una lista o una tupla, podemos
+convertirlos a string usando la función \lstinline!map! y pegarlos
+usando el método \lstinline!join!:
+
+\begin{lstlisting}
+alumno = ('Perico', 'Los Palotes', 90, 75, 38, 65)
+linea = ':'.join(map(str, alumno)) + '\n'
+archivo.write(linea)
+\end{lstlisting}
+
+Otra manera es armar el string usando una plantilla:
+
+\begin{lstlisting}
+linea = '{0}:{1}:{2}:{3}:{4}:{5}\n'.format(nombre, apellido,
+                                           nota1, nota2,
+                                           nota3, nota4)
+archivo.write(linea)
+\end{lstlisting}
+
+Como siempre, usted debe preferir la manera que le parezca más simple de
+entender.

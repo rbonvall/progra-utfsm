@@ -1,0 +1,32 @@
+\begin{tikzpicture}[xscale=1.2, yscale=0.8]
+
+  % Thanks to Paul Gaborit for this code.
+  % http://www.texample.net/tikz/examples/pascals-triangle-and-sierpinski-triangle/
+
+  % Pascal's triangle
+  % row #0 => value is 1
+  \node (p-0-0) at (0,0) {1};
+  \foreach \pascalrow in {1,...,6} {
+     % col #0 => value is 1
+    \node (p-\pascalrow-0) at (-\pascalrow/2,-\pascalrow) {1};
+    \pgfmathsetmacro{\pascalvalue}{1};
+    \foreach \pascalcol in {1,...,\pascalrow} {
+      % iterative formula : val = precval * (row-col+1)/col
+      % (+ 0.5 to bypass rounding errors)
+      \pgfmathtruncatemacro{\pascalvalue}{\pascalvalue*((\pascalrow-\pascalcol+1)/\pascalcol)+0.5};
+      \global\let\pascalvalue=\pascalvalue
+      % position of each value
+      \coordinate (pascalpos) at (-\pascalrow/2+\pascalcol,-\pascalrow);
+      \node (p-\pascalrow-\pascalcol) at (pascalpos) {\pascalvalue};
+      % for arrows and plus sign
+      \ifnum \pascalcol<\pascalrow
+        \node[Red, above=0mm of p-\pascalrow-\pascalcol]{+};
+        \pgfmathtruncatemacro{\pascalprow}{\pascalrow-1}
+        \pgfmathtruncatemacro{\pascalpcol}{\pascalcol-1}
+        \draw[Red, -latex'] (p-\pascalprow-\pascalpcol) -- (p-\pascalrow-\pascalcol);
+        \draw[Red, -latex'] (p-\pascalprow-\pascalcol) -- (p-\pascalrow-\pascalcol);
+      \fi
+    }
+  }
+\end{tikzpicture}
+

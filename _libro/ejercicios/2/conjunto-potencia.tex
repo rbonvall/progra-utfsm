@@ -1,0 +1,45 @@
+\section{Conjunto potencia}
+
+El \emph{conjunto potencia} de un conjunto \(S\) es el conjunto de todos
+los subconjuntos de \(S\).
+Por ejemplo, el conjunto potencia de \(\{1, 2, 3\}\) es:
+\[
+  \bigl\{
+    \emptyset,
+    \{1\},
+    \{2\},
+    \{3\},
+    \{1, 2\},
+    \{1, 3\},
+    \{2, 3\},
+    \{1, 2, 3\}
+  \bigr\}
+\]
+
+En Python, un conjunto no puede contener a otros conjuntos, ya que no
+puede tener elementos mutables, y los conjuntos lo son:
+\begin{lstlisting}
+>>> a = set()
+>>> a.add({1, 2})        # :(
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: unhashable type: 'set'
+\end{lstlisting}
+
+Lo que sí podemos crear es una lista de conjuntos:
+\begin{lstlisting}
+>>> l = list()
+>>> l.append({1, 2})     # :)
+>>> l
+[set([1, 2])]
+\end{lstlisting}
+
+Escriba la función \lstinline!conjunto_potencia(s)! que reciba como
+parámetro un conjunto cualquiera \lstinline!s! y retorne su «lista
+potencia» (la lista de todos sus subconjuntos):
+\begin{lstlisting}
+>>> conjunto_potencia({6, 1, 4})
+[set(), set([6]), set([1]), set([4]), set([6, 1]),
+set([6, 4]), set([1, 4]), set([6, 1, 4])]
+\end{lstlisting}
+

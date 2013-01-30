@@ -1,0 +1,36 @@
+\section{Triángulo de Pascal}
+
+\begin{figure}
+  \centering
+  \input{diagramas/pascal}
+  \caption{Triángulo de Pascal}
+  \label{fig:triangulo-pascal}
+\end{figure}
+
+Desarrolle un programa que dibuje un
+triángulo de Pascal, o sea, una disposición de números enteros tales que cada uno
+sea la suma de los dos que están por encima de él,
+tal como se ve en la figura~\ref{fig:triangulo-pascal}.
+
+Un programa que genere las primeras cinco líneas
+podría verse así:
+\begin{lstlisting}[language=testcase]
+1
+1  1
+1  2  1
+1  3  3  1
+1  4  6  4  1
+1  5 10 10  5  1
+\end{lstlisting}
+o así:
+\begin{lstlisting}[language=testcase]
+          1
+        1   1
+      1   2   1
+    1   3   3   1
+  1   4   6   4   1
+1   5  10  10   5   1
+\end{lstlisting}
+Usted, empero, debe generar las primeras veinte líneas.
+Considere que en la línea 20 aparecen números de cinco dígitos.
+

@@ -1,0 +1,174 @@
+\chapter{Escribir tabla trigonométrica}
+
+El siguiente programa crea un archivo llamado \lstinline!trig.txt! que
+contiene una tabla con los senos y los cosenos de números reales entre 0
+y \(\pi\), de 0.1 en 0.1.
+
+Si intenta compilar este programa tal como viene haciéndolo hasta ahora,
+es probable que el compilador arroje un error parecido a «referencia
+indefinida a sin». Para evitar este error, debe agregar la opción
+\lstinline!-lm! al momento de compilar ---ya explicaremos por qué---:
+
+\begin{lstlisting}
+$ gcc trig.c -lm -o trig
+\end{lstlisting}
+
+Transcriba, compile y ejecute el programa. Verá que un archivo llamado
+\lstinline!trig.txt! fue creado. Vea el contenido de ese archivo. Si
+está trabajando en la consola, puede usar la instrucción
+\lstinline!cat!:
+
+\begin{lstlisting}
+$ cat trig.txt
+\end{lstlisting}
+
+\section{Escritura de archivos de texto}
+
+La escritura de datos en un archivo no puede hacerse directamente en él,
+sino que debe hacerse a través de operaciones sobre un \textbf{flujo},
+que es una abstracción que permite al programa interactuar con
+dispositivos físicos.
+
+El tipo de datos para representar flujos en C se llama \lstinline!FILE!,
+que es una estructura definida en \lstinline!stdio.h!. Para crear un
+flujo de datos, primero hay que declarar un puntero a \lstinline!FILE!
+(como la variable \lstinline!a_trig! de nuestro programa) y luego
+inicializarlo con el valor que retorna la función \lstinline!fopen!, que
+es la que abre el flujo para poder interactuar con él.
+
+El primer parámetro de \lstinline!fopen! es el nombre del archivo, y el
+segundo es un string que describe el modo en que éste será abierto. Si
+el modo contiene una \lstinline!w!, significa que el archivo se abrirá
+para escribir datos en él. Si tiene una \lstinline!r!, es que se leerán
+datos de él. Además, hay
+\href{http://c.conclase.net/librerias/?ansifun=fopen}{varios otros}
+modos posibles.
+
+En nuestro ejemplo estamos creando un archivo de texto. Para escribir el
+texto, usamos la función \lstinline!fprintf!, pasando como primer
+parámetro el flujo con el que abrimos el archivo.
+
+A esta altura ya no debería sorprender que si hubiéramos abierto un
+archivo de texto para lectura, entonces leeríamos los datos usando una
+función llamada \lstinline!fscanf!.
+
+Por supuesto, siempre que se abre un archivo hay que cerrarlo después de
+terminar de usarlo. Para eso, usamos la función \lstinline!fclose!.
+
+La apertura de un archivo puede fallar por varios motivos. Por ejemplo,
+el disco duro podría estar lleno o uno podría no tener permisos para
+escribir en ese directorio. Cuando la apertura falla, entonces
+\lstinline!fopen! retorna \lstinline!NULL!. Es importante verificar que
+la apertura fue exitosa antes de hacer cualquier lectura o escritura con
+el flujo.
+
+\section{Tipos de datos de coma flotante}
+
+En nuestro programa decidimos declarar la variable \lstinline!theta!
+como \lstinline!double!, que es otro tipo de datos asociado a los
+números reales.
+
+Los números reales no pueden ser representados exactamente en un
+computador, sino que deben ser aproximados de alguna manera que sea lo
+suficientemente general como para abarcar a la vez valores muy grandes y
+muy pequeños, como los que suelen aparecer en ciencia e ingeniería.
+
+La manera estándar que utilizan los computadores para esto es la
+\href{http://es.wikipedia.org/wiki/Coma\_flotante}{representación de
+coma flotante}, que es una especie de notación científica en base 2.
+
+El tipo \lstinline!float! que habíamos usado hasta ahora utiliza 32 bits
+para representar números reales. Lo podemos verificar al imprimir el
+valor de \lstinline!sizeof(float)!. De estos 32 bits, 1 es para
+almacenar el signo del número, 8 son para almacenar el exponente de la
+base, y el resto son para el factor que la acompaña (llamado
+\emph{mantisa}). Esto permite al tipo \lstinline!float! representar
+números reales con aproximadamente 7 cifras decimales de precisión.
+
+A veces esta precisión no es suficiente, y para ello existe el tipo
+\lstinline!double!, que dedica 64 bits para representar el número. Esto
+permite alcanzar una precisión de aproximadamente 15 cifras decimales.
+
+A pesar de lo que parecen indicar sus nombres, ambos tipos son
+representaciones de coma flotante. A los valores \lstinline!float! se le
+llama «de precisión simple» y a los \lstinline!double!, bueno, «de
+precisión doble».
+
+\section{Biblioteca matemática}
+
+La cabecera \lstinline!math.h! provee declaraciones de funciones y
+constantes matemáticas de la biblioteca estándar de C.
+
+Las constantes \(e\) y \(\pi\) están declaradas, respectivamente, como
+\lstinline!M_E! y \lstinline!M_PI!. Además, también están disponibles
+otras constantes precalculadas como \(\pi/2\) (\lstinline!M_PI_2!) y \(\sqrt 2\)
+(\lstinline!M_SQRT2!).
+
+La mayoría de las funciones matemáticas viene en dos versiones: una para
+\lstinline!float! y una para \lstinline!double!. Las primeras llevan una
+letra \lstinline!f! al final de su nombre.
+
+Las funciones \lstinline!sin! y \lstinline!cos! que usamos en nuestro
+programa están declaradas en \lstinline!math.h!. Si \lstinline!theta!
+hubiera sido declarada como \lstinline!float! en vez de
+\lstinline!double!, habríamos tenido que usar las funciones
+\lstinline!sinf! y \lstinline!cosf!.
+
+Para explorar todas las funciones que están disponibles, consulte el
+manual de \lstinline!math.h!.
+
+\section{Enlazado de bibliotecas}
+
+¿Por qué hubo que agregar el \lstinline!-lm! al compilar?
+
+En general, al usar bibliotecas, no basta con sólo incluir al archivo de
+cabecera, sino que además es necesario indicar al compilador que debe
+enlazar nuestro programa compilado con la biblioteca.
+
+La razón es que la cabecera contiene sólo las declaraciones, pero no las
+implementaciones de las funciones, que están en algún archivo ya
+compilado que se encuentra instalado en alguna parte de nuestro sistema.
+
+Las funciones de la mayoría de las cabeceras estándares están
+implementadas en una biblioteca llamada \lstinline!libc!. que es
+enlazada automáticamente al compilar cualquier programa.
+
+Por
+\href{http://stackoverflow.com/questions/1033898/why-do-you-have-to-link-the-math-library-in-c}{razones
+históricas} que podemos obviar, las funciones matemáticas no están
+implementadas en \lstinline!libc! sino en otra biblioteca llamada
+\lstinline!libm!, que no es enlazada automáticamente.
+
+Para enlazar \lstinline!libm! al momento de compilar es que se agrega la
+opción \lstinline!-lm!. Si quisiera enlazar explícitamente con
+\lstinline!libc!, podría agregar \lstinline!-lc!, pero esto no tendría
+ningún efecto.
+
+Cuando usted, más adelante, sea ya una experta programadora en C y
+comience a usar bibliotecas escritas por otros desarrolladores (o
+incluso por usted misma), deberá siempre tener el cuidado de enlazarlas
+correctamente al momento de compilar usando la opción
+\lstinline!-lnombre_de_la_biblioteca!.
+
+\section{Ejercicios}
+
+Interprete qué es lo que ocurre al usar los siguientes descriptores de
+formato para imprimir los valores en el archivo:
+
+\begin{itemize}
+\item
+  \lstinline!%.2lf!
+\item
+  \lstinline!% .2lf!
+\item
+  \lstinline!%+.2lf!
+\item
+  \lstinline!%10.2lf!
+\item
+  \lstinline!%lf!
+\item
+  \lstinline!%lg!
+\end{itemize}
+
+Modifique el programa para que escriba una columna adicional con el
+logaritmo natural de cada número.

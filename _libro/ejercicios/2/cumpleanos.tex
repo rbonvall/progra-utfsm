@@ -1,0 +1,50 @@
+\section{Cumpleaños}
+
+Las fechas pueden ser representadas como tuplas
+\texttt{(ano, mes, dia)}.
+Para asociar a cada persona su fecha de nacimiento, se puede usar un
+diccionario:
+\begin{lstlisting}
+>>> n = {
+...     'Pepito': (1990, 10, 20),
+...     'Yayita': (1992, 3, 3),
+...     'Panchito': (1989, 10, 20),
+...     'Perica': (1989, 12, 8),
+...     'Fulanita': (1991, 2, 14),
+... }
+\end{lstlisting}
+
+\begin{enumerate}
+
+\item
+Escriba la función
+\lstinline!mismo_dia(fecha1, fecha2)! que indique si las dos fechas
+ocurren el mismo día del año (aunque sea en años diferentes):
+
+\begin{lstlisting}
+>>> mismo_dia((2010, 6, 11), (1990, 6, 11))
+True
+>>> mismo_dia((1981, 8, 12), (1981, 5, 12))
+False
+\end{lstlisting}
+
+\item
+Escriba la función \lstinline!mas_viejo(n)! que
+indique quién es la persona más vieja según las fechas de nacimiento del
+diccionario \lstinline!n!:
+
+\begin{lstlisting}
+>>> mas_viejo(n)
+'Panchito'
+\end{lstlisting}
+
+\item
+Escriba la función \lstinline!primer_cumple(n)!
+que indique quién es la persona que tiene el primer cumpleaños del año:
+
+\begin{lstlisting}
+>>> primer_cumple(n)
+'Fulanita'
+\end{lstlisting}
+
+\end{enumerate}

@@ -1,0 +1,28 @@
+\section{Checkouts de dardos}
+
+Un tablero de dardos está dividido en 20 sectores, numerados del 1 al
+20. Al tirar un dardo en uno de los sectores, el puntaje obtenido es el
+número asociado al sector.
+
+Cada sector tiene una zona de doble puntaje (anillo exterior) y una de
+triple puntaje (anillo central). El centro del tablero (llamado
+\emph{bull}) entrega 50 puntos, y el anillo alrededor de él, 25.
+
+\includegraphics{../../diagramas/dardos.png}
+
+En cada juego de una partida de dardos, ambos jugadores comienzan con
+501 puntos. En cada turno, un jugador lanza tres dardos, y descuenta de
+su total el puntaje obtenido.
+
+El objetivo es llegar exactamente a 0 puntos antes que el contrario. La
+única restricción es que el último dardo debe ser un doble (anillo
+exterior) o el \emph{bull}.
+
+Escriba un programa que reciba como entrada el puntaje que le queda a un
+jugador, y entregue todas las combinaciones con las que puede lograr
+exactamente ese puntaje lanzando tres dardos o menos, bajo la
+restricción que el último debe ser un doble o un \emph{bull}.
+
+Como referencia, para hacer 100 puntos hay 546 combinaciones (una de las
+cuales es \lstinline!20 T20 D10!), y para hacer 132 puntos hay 60
+combinaciones (una de las cuales es \lstinline!25 T19 BULL!).

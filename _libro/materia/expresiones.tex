@@ -1,0 +1,527 @@
+\chapter{Expresiones}
+
+Una \textbf{expresión} es una combinación de valores y operaciones que,
+al ser evaluados, entregan un valor como resultado.
+
+Algunos elementos que pueden formar parte de una expresión son: va\-lores
+\textbf{lite\-rales} (como \lstinline!2!, \lstinline!"hola"! o
+\lstinline!5.7!), \textbf{variables}, \textbf{operadores} y
+\textbf{llamadas a funciones}.
+
+Por ejemplo, la expresión \lstinline!4 * 3 - 2! entrega el valor 10 al
+ser evaluada por el intérprete:
+
+\begin{lstlisting}
+>>> 4 * 3 - 2
+10
+\end{lstlisting}
+
+El valor de la siguiente expresión depende del valor que tiene la
+variable \lstinline!n! en el momento de la evaluación:
+
+\begin{lstlisting}
+>>> n / 7 + 5
+\end{lstlisting}
+
+Una expresión está compuesta de otras expresiones, que son evaluadas
+recursivamente hasta llegar a sus componentes más simples, que son los
+literales y las variables.
+
+\section{Operadores}
+
+Un \textbf{operador} es un símbolo en una expresión que representa una
+operación aplicada a los valores sobre los que actúa.
+
+Los valores sobre los que actúa un operador se llaman
+\textbf{operandos}. Un \textbf{operador binario} es el que tiene dos
+operandos, mientras que un \textbf{operador unario} es el que tiene sólo
+uno.
+
+Por ejemplo, en la expresión \lstinline!2.0 + x! el operador
+\lstinline!+! es un operador binario que en este contexto representa la
+operación de adición. Sus operandos son \lstinline!2.0! y \lstinline!x!.
+
+Las operaciones más comunes se pueden clasificar en: aritméticas,
+relacionales, lógicas y de texto.
+
+\subsection{Operadores aritméticos}
+
+Las \textbf{operaciones aritméticas} son las que operan sobre valores
+numéricos y entregan otro valor numérico como resultado. Los valores
+numéricos son los que tienen tipo entero, real o complejo.
+
+Las siguientes son algunas operaciones aritméticas básicas, junto con el
+operador que las representa en Python:
+
+\begin{itemize}
+\item la \textbf{suma} \lstinline!+!;
+\item la \textbf{resta} \lstinline!-!;
+\item la \textbf{multiplicación} \lstinline!*!;
+\item la \textbf{división} \lstinline!/!;
+\item el \textbf{módulo} \lstinline!%! (resto de la división);
+\item la \textbf{potencia} \lstinline!**! («elevado a»).
+\end{itemize}
+
+En general, si los operandos son de tipo entero, el resultado también
+será de tipo entero. Pero basta que uno de los operandos sea real para
+que el resultado también lo sea:
+
+\begin{lstlisting}
+>>> 8 - 5
+3
+>>> 8 - 5.0
+3.0
+>>> 8.0 - 5
+3.0
+>>> 8.0 - 5.0
+3.0
+\end{lstlisting}
+
+Esta regla suele causar confusión en el caso de la división. Al dividir
+números enteros, el resultado siempre es entero, y es igual al resultado
+real \textbf{truncado}, es decir, sin su parte decimal:
+
+\begin{lstlisting}
+>>> 5 / 2
+2
+>>> 5 / -2
+-3
+\end{lstlisting}
+
+Si uno de los operandos es complejo, el resultado también será complejo:
+
+\begin{lstlisting}
+>>> 3 + 4
+7
+>>> 3 + (4+0j)
+(7+0j)
+\end{lstlisting}
+
+El operador de módulo entrega el resto de la división entre sus
+operandos:
+\begin{lstlisting}
+>>> 7 % 3
+1
+\end{lstlisting}
+El operador de módulo es usado comúnmente para determinar
+si un número es divisible por otro:
+\begin{lstlisting}
+>>> 17 % 5   # 17 no es divisible por 5
+2
+>>> 20 % 5   # 20 si es divisible por 5
+0
+\end{lstlisting}
+
+Una relación entre \lstinline!/! y \lstinline!%! que siempre se cumple
+para los números enteros es:
+\begin{lstlisting}
+(a / b) * b + (a % b) == a
+\end{lstlisting}
+
+Hay dos operadores aritméticos unarios:
+el \textbf{positivo} \lstinline!+!, y
+el \textbf{negativo} \lstinline!-!.
+El positivo entrega el mismo valor que su operando, y el negativo
+también pero con el signo cambiado:
+\begin{lstlisting}
+>>> n = -4
+>>> +n
+-4
+>>> -n
+4
+\end{lstlisting}
+
+\subsection{Operaciones relacionales}
+
+Las \textbf{operaciones relacionales} sirven para comparar valores. Sus
+operandos son cualquier cosa que pueda ser comparada, y sus resultados
+siempre son valores lógicos.
+Algunas operaciones relacionales son:
+
+\begin{itemize}
+  \item
+    el \textbf{igual a} \lstinline!==! (no confundir con el \lstinline!=!
+    de las asignaciones);
+  \item
+    el \textbf{distinto a} \lstinline"!=";
+  \item
+    el \textbf{mayor que} \lstinline!>!;
+  \item
+    el \textbf{mayor o igual que} \lstinline!>=!;
+  \item
+    el \textbf{menor que} \lstinline!<!;
+  \item
+    el \textbf{menor o igual que} \lstinline!<=!;
+\end{itemize}
+
+Algunos ejemplos en la consola:
+\begin{lstlisting}
+>>> a = 5
+>>> b = 9
+>>> c = 14
+>>> a < b
+True
+>>> a + b != c
+False
+>>> 2.0 == 2
+True
+>>> 'amarillo' < 'negro'
+True
+\end{lstlisting}
+
+Los operadores relacionales pueden ser encadenados, tal como se acostumbra en
+matemáticas, de la siguiente manera:
+\begin{lstlisting}
+>>> x = 4
+>>> 0 < x <= 10
+True
+>>> 5 <= x <= 20
+False
+\end{lstlisting}
+La expresión \lstinline!0 < x <= 10! es equivalente a
+\lstinline!(0 < x) and (x <= 10)!.
+
+\subsection{Operaciones lógicas}
+
+% TODO: encerrar celdas en \lstinline.
+% Revisar este tip: http://tex.stackexchange.com/a/59788/341
+\begin{table}
+  \centering
+  \begin{tabular}{*{5}{l}}
+    \toprule
+      \lstinline!p!     & \lstinline!q!       & \lstinline!p and q! & \lstinline!p or q! & \lstinline!not p! \\
+    \midrule
+      \lstinline!True!  & \lstinline!True!    & \lstinline!True!    & \lstinline!True!   & \lstinline!False! \\
+      \lstinline!True!  & \lstinline!False!   & \lstinline!False!   & \lstinline!True!   &                   \\
+      \lstinline!False! & \lstinline!True!    & \lstinline!False!   & \lstinline!True!   & \lstinline!True!  \\
+      \lstinline!False! & \lstinline!False!   & \lstinline!False!   & \lstinline!False!  &                   \\
+    \bottomrule
+  \end{tabular}
+  \caption{Resultados posibles de los operadores booleanos.}
+  \label{tbl:operadores-booleanos}
+\end{table}
+
+Los \textbf{operadores lógicos} son los que tienen operandos y resultado
+de tipo lógico.
+En Python hay tres operaciones lógicas:
+
+\begin{itemize}
+ \item la conjunción lógica \textbf{and} (en español: «y»),
+ \item la disyunción lógica \textbf{or} (en español: «o»), y
+ \item la negación lógica \textbf{not} (en español: «no»).
+\end{itemize}
+
+Los operadores \lstinline!and! y \lstinline!or! son binarios, mientras
+que \lstinline!not! es unario:
+\begin{lstlisting}
+>>> True and False
+False
+>>> not True
+False
+\end{lstlisting}
+
+La tabla~\ref{tbl:operadores-booleanos} muestra todos los resultados posibles de las
+operaciones lógicas. Las primeras dos columnas representan los valores
+de los operandos, y las siguientes tres, los resultados de las
+operaciones.
+
+\subsection{Operaciones de texto}
+
+Los operadores \lstinline!+! y \lstinline!*! tienen otras
+interpretaciones cuando sus operandos son strings.
+\lstinline!+! es el operador de \textbf{concatenación} de strings: pega
+dos strings uno después del otro:
+\begin{lstlisting}
+>>> 'perro' + 'gato'
+'perrogato'
+\end{lstlisting}
+La concatenación no es una suma. Ni siquiera es una operación
+conmutativa.
+
+\lstinline!*! es el operador de \textbf{repetición} de strings. Recibe
+un operando string y otro entero, y entrega como resultado el string
+repetido tantas veces como indica el entero:
+
+\begin{lstlisting}
+>>> 'waka' * 2
+'wakawaka'
+\end{lstlisting}
+
+Más adelante veremos muchas más operaciones para trabajar sobre texto.
+Por ahora utilizaremos las más elementales. Otras operaciones que pueden
+serle útiles por el momento son:
+
+\begin{itemize}
+\item
+  obtener el \(i\)-ésimo caracter de un string (partiendo desde cero)
+  usando los corchetes:
+
+\begin{lstlisting}
+>>> nombre = 'Perico'
+>>> nombre[0]
+'P'
+>>> nombre[1]
+'e'
+>>> nombre[2]
+'r'
+\end{lstlisting}
+\item
+  comprarar strings alfabéticamente con los operadores relacionales
+  (lamentablemente no funciona con acentos y eñes):
+
+\begin{lstlisting}
+>>> 'a' < 'abad' < 'abeja'
+True
+>>> 'zapato' <= 'alpargata'
+False
+\end{lstlisting}
+\item
+  obtener el largo de un string con la función \lstinline!len!:
+
+\begin{lstlisting}
+>>> len('papalelepipedo')
+14
+>>> len("")
+0
+\end{lstlisting}
+\item
+  verificar si un string está dentro de otro con el operador
+  \lstinline!in!:
+
+\begin{lstlisting}
+>>> 'pollo' in 'repollos'
+True
+>>> 'pollo' in 'gallinero'
+False
+\end{lstlisting}
+\end{itemize}
+
+\section{Precedencia}
+
+La \textbf{precedencia de operadores} es un conjunto de reglas que
+especifica en qué orden deben ser evaluadas las operaciones de una
+expresión.
+
+La precedencia está dada por la siguiente lista, en que los operadores
+han sido listados en orden de menor a mayor precedencia:
+
+\begin{itemize}
+\item
+  \lstinline!or!;
+\item
+  \lstinline!and!;
+\item
+  \lstinline!not!;
+\item
+  \lstinline!<!, \lstinline!<=!, \lstinline!>!, \lstinline!>=!,
+  \lstinline"!=", \lstinline!==!;
+\item
+  \lstinline!+!, \lstinline!-! (suma y resta);
+\item
+  \lstinline!*!, \lstinline!/!, \lstinline!%!;
+\item
+  \lstinline!+!, \lstinline!-! (positivo y negativo);
+\item
+  \lstinline!**!.
+\end{itemize}
+
+Esto significa, por ejemplo, que las multiplicaciones se evalúan antes
+que las sumas, y que las comparaciones se evalúan antes que las
+operaciones lógicas:
+\begin{lstlisting}
+>>> 2 + 3 * 4
+14
+>>> 1 < 2 and 3 < 4
+True
+\end{lstlisting}
+Operaciones dentro de un mismo nivel son evaluadas en el orden en que
+aparecen en la expresión, de izquierda a derecha:
+\begin{lstlisting}
+>>> 15 * 12 % 7    # es igual a (15 * 12) % 7
+5
+\end{lstlisting}
+La única excepción a la regla anterior son las potencias, que son
+evaluadas de derecha a izquierda:
+\begin{lstlisting}
+>>> 2 ** 3 ** 2    # es igual a 2 ** (3 ** 2)
+512
+\end{lstlisting}
+
+Para forzar un orden de evaluación distinto a la regla de precedencia,
+debe usarse paréntesis:
+\begin{lstlisting}
+>>> (2 + 3) * 4
+20
+>>> 15 * (12 % 7)
+75
+>>> (2 ** 3) ** 2
+64
+\end{lstlisting}
+
+Otra manera de forzar el orden es ir guardando los resultados
+intermedios en variables:
+\begin{lstlisting}
+>>> n = 12 % 7
+>>> 15 * n
+75
+\end{lstlisting}
+
+Como ejemplo, consideremos la siguiente expresión:
+\begin{lstlisting}
+15 + 59 * 75 / 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
+\end{lstlisting}
+y supongamos que la variable \lstinline!n! tiene el valor 2. Aquí
+podemos ver cómo la expresión es evaluada hasta llegar al resultado
+final, que es \lstinline!False!:
+
+\begin{lstlisting}
+15 + 59 * 75 / 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
+15 + 59 * 75 / 9 < 2 **   9    and (15 + 59) * 75 % n == 1
+15 + 59 * 75 / 9 < 512         and (15 + 59) * 75 % n == 1
+15 +  4425   / 9 < 512         and (15 + 59) * 75 % n == 1
+15 +        491  < 512         and (15 + 59) * 75 % n == 1
+15 +        491  < 512         and    74     * 75 % n == 1
+15 +        491  < 512         and          5550  % n == 1
+15 +        491  < 512         and          5550  % 2 == 1
+15 +        491  < 512         and                0   == 1
+  506            < 512         and                0   == 1
+                True           and                0   == 1
+                True           and                  False
+                              False
+\end{lstlisting}
+
+La operación entre paréntesis \lstinline!(15 + 59)! debe ser evaluada
+antes de la multiplicación por 75, ya que es necesario conocer su
+resultado para poder calcular el producto. El momento preciso en que
+ello ocurre no es importante.
+
+Lo mismo ocurre con la evaluación de la variable \lstinline!n!: sólo
+importa que sea evaluada antes de ser usada por el operador de módulo.
+
+En el ejemplo, ambos casos fueron evaluados inmediatamente antes de que
+su valor sea necesario.
+
+Las reglas completas de precedencia, incluyendo otros operadores que aún
+no hemos visto, pueden ser consultados en
+\href{http://docs.python.org/reference/expressions.html\#summary}{la
+sección sobre expresiones} de la documentación oficial de Python.
+
+\subsection{¿Cómo aprenderse las reglas de precedencia?}
+
+La respuesta es: mejor no aprendérselas. Las reglas de precedencia son
+muchas y no siempre son intuitivas.
+
+Un programa queda mucho más fácil de entender si uno explícitamente
+indica el orden de evaluación usando paréntesis o guardando en variables
+los resultados intermedios del cálculo.
+
+Un buen programador siempre se preocupa de que su código sea fácil de
+entender por otras personas, ¡e incluso por él mismo en unas semanas más
+adelante!
+
+\section{Llamadas a función}
+
+Los operadores forman un conjunto bastante reducido de operaciones. Más
+comúnmente, las operaciones más generales son representadas como
+\textbf{funciones}.
+
+Al igual que en matemáticas, las funciones tienen un nombre, y reciben
+\textbf{parámetros} (o \textbf{argumentos}) que van entre paréntesis
+después del nombre. La operación de usar la función para obtener un
+resultado se llama \textbf{llamar la función}.
+
+Ya conocemos la función \lstinline!raw_input!, que entrega como
+resultado el texto ingresado por el usuario mediante el teclado.
+
+La función \lstinline!abs! entrega el valor absoluto de su argumento:
+
+\begin{lstlisting}
+>>> abs(4 - 5)
+1
+>>> abs(5 - 4)
+1
+\end{lstlisting}
+
+La función \lstinline!len! recibe un string y entrega su largo:
+%(más adelante veremos otros usos de la función \lstinline!len!)
+
+\begin{lstlisting}
+>>> len('hola mundo')
+10
+>>> len('hola' * 10)
+40
+\end{lstlisting}
+
+Los nombres de los tipos también sirven como funciones, que entregan el
+equivalente de su parámetro en el tipo correspondiente:
+
+\begin{lstlisting}
+>>> int(3.8)
+3
+>>> float('1.5')
+1.5
+>>> str(5 + 6)
+'11'
+>>> int('5' + '6')
+56
+\end{lstlisting}
+
+Las funciones \lstinline!min! y \lstinline!max! entregan el mínimo y el
+máximo de sus argumentos:
+
+\begin{lstlisting}
+>>> min(6, 1, 8)
+1
+>>> min(6.0, 1.0, 8.0)
+1.0
+>>> max(6, 1, 4, 8)
+8
+\end{lstlisting}
+
+La función \lstinline!round! redondea un número real al entero más
+cercano:
+
+\begin{lstlisting}
+>>> round(4.4)
+4.0
+>>> round(4.6)
+5.0
+\end{lstlisting}
+
+Algunas funciones matemáticas como la exponencial, el logaritmo y las
+trigonométricas pueden ser usadas, pero deben ser importadas antes
+usando la sentencia \lstinline!import!, que veremos en detalle más
+adelante:
+
+\begin{lstlisting}
+>>> from math import exp
+>>> exp(2)
+7.3890560989306504
+>>> from math import sin, cos
+>>> cos(3.14)
+-0.9999987317275395
+>>> sin(3.14)
+0.0015926529164868282
+\end{lstlisting}
+
+La lista completa de funciones matemáticas que pueden ser importadas
+está en la descripción
+del módulo \lstinline!math! en la documentación de Python.
+
+Más adelante también aprenderemos a crear nuestras propias funciones.
+Por ahora, sólo necesitamos saber cómo llamarlas.
+
+Por supuesto, siempre es necesario que los argumentos de una llamada
+tengan el tipo apropiado:
+
+\begin{lstlisting}
+>>> round('perro')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: a float is required
+>>> len(8)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: object of type 'int' has no len()
+\end{lstlisting}
+

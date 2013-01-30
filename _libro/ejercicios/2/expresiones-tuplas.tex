@@ -1,0 +1,32 @@
+\section{Expresiones con tuplas}
+
+Considere las siguientes asignaciones:
+
+\begin{lstlisting}
+>>> a = (2, 10, 1991)
+>>> b = (25, 12, 1990)
+>>> c = ('Donald', True, b)
+>>> x, y = ((27, 3), 9)
+>>> z, w = x
+>>> v = (x, a)
+\end{lstlisting}
+
+Sin usar el computador, indique cuál es el resultado y el tipo de las
+siguientes expresiones. A continuación, verifique sus respuestas en el
+computador.
+
+\begin{itemize}
+  \item \lstinline!a < b!
+  \item \lstinline!y + w!
+  \item \lstinline!x + a!
+  \item \lstinline!len(v)!
+  \item \lstinline!v[1][1]!
+  \item \lstinline!c[0][0]!
+  \item \lstinline!z, y!
+  \item \lstinline!a + b[1:5]!
+  \item \lstinline!(a + b)[1:5]!
+  \item \lstinline!str(a[2]) + str(b[2])!
+  \item \lstinline!str(a[2] + b[2])!
+  \item \lstinline!str((a + b)[2])!
+  \item \lstinline!str(a + b)[2]!
+\end{itemize}

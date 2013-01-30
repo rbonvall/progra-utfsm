@@ -1,0 +1,159 @@
+\chapter{Tipos de datos}
+
+Un \textbf{tipo de datos} es la propiedad de un valor que determina su
+dominio (qué valores puede tomar), qué operaciones se le pueden aplicar
+y cómo es representado internamente por el computador.
+
+Todos los valores que aparecen en un programa tienen un tipo.
+
+A continuación revisaremos los tipos de datos elementales de Python.
+Además de éstos, existen muchos otros, y más adelante aprenderemos a
+crear nuestros propios tipos de datos.
+
+\section{Números enteros}
+
+El tipo \textbf{int} (del inglés \emph{integer}, que significa «entero»)
+permite representar números enteros.
+
+Los valores que puede tomar un \lstinline!int! son todos los números
+enteros: \ldots{} \lstinline!-3!, \lstinline!-2!, \lstinline!-1!,
+\lstinline!0!, \lstinline!1!, \lstinline!2!, \lstinline!3!, \ldots{}
+
+Los números enteros literales se escriben con un signo opcional seguido
+por una secuencia de dígitos:
+
+\begin{lstlisting}[language=py]
+1570
++4591
+-12
+\end{lstlisting}
+
+\section{Números reales}
+
+El tipo \textbf{float} permite representar números reales.
+
+El nombre \lstinline!float! viene del término
+\href{http://es.wikipedia.org/wiki/Punto\_flotante}{\emph{punto flotante}}, que
+es la manera en que el computador representa internamente los números
+reales.
+
+Hay que tener cuidado, porque los números reales no se pueden
+representar de manera exacta en un computador. Por ejemplo, el número
+decimal 0.7 es representado internamente por el computador mediante la
+aproximación 0.69999999999999996. Todas las operaciones entre valores
+\lstinline!float! son aproximaciones. Esto puede conducir a resultados
+algo sorpresivos:
+
+\begin{lstlisting}[language=py]
+>>> 1/7 + 1/7 + 1/7 + 1/7 + 1/7 + 1/7 + 1/7
+0.9999999999999998
+\end{lstlisting}
+
+Los números reales literales se escriben separando la parte entera de la
+decimal con un punto. Las partes entera y decimal pueden ser omitida si
+alguna de ellas es cero:
+
+\begin{lstlisting}[language=py]
+>>> 881.9843000
+881.9843
+>>> -3.14159
+-3.14159
+>>> 1024.
+1024.0
+>>> .22
+0.22
+\end{lstlisting}
+
+Otra representación es la notación científica, en la que se escribe un
+factor y una potencia de diez separados por una letra \lstinline!e!. Por
+ejemplo:
+
+\begin{lstlisting}[language=py]
+>>> -2.45E4
+-24500.0
+>>> 7e-2
+0.07
+>>> 6.02e23
+6.02e+23
+>>> 9.1094E-31
+9.1094e-31
+\end{lstlisting}
+
+Los dos últimos valores del ejemplo son, respectivamente,
+$6.02\times 10^{23}$
+(la \href{http://es.wikipedia.org/wiki/Constante\_de\_Avogadro}{constante de Avogadro}) y
+$9.1094\times 10^{-31}$
+(la \href{http://es.wikipedia.org/wiki/Electr\%C3\%B3n\#Propiedades}{masa del electrón} en kilogramos).
+
+\section{Números complejos}
+
+El tipo \textbf{complex} permite representar números complejos.
+Los números complejos tienen una parte real y una imaginaria. La parte
+imaginaria es denotada agregando una \lstinline!j! pegada inmediatamente
+después de su valor:
+
+\begin{lstlisting}
+3 + 9j
+-1.4 + 2.7j
+\end{lstlisting}
+
+\section{Valores lógicos}
+
+Los valores lógicos \lstinline!True! y \lstinline!False! (verdadero y
+falso) son de tipo \textbf{bool}, que representa valores lógicos.
+
+El nombre \lstinline!bool! viene del matemático
+\href{http://es.wikipedia.org/wiki/George\_Boole}{George Boole}, quien
+creó un sistema algebraico para la lógica binaria. Por lo mismo, a
+\lstinline!True! y \lstinline!False! también se les llama
+\textbf{valores booleanos}. El nombre no es muy intuitivo, pero es el
+que se usa en informática, así que hay que conocerlo.
+
+\section{Texto}
+
+A los valores que representan texto se les llama \textbf{strings}, y
+tienen el tipo \textbf{str}.
+Los strings literales pueden ser representados con texto entre comillas
+simples o comillas dobles:
+
+\begin{lstlisting}[language=py]
+"ejemplo 1"
+'ejemplo 2'
+\end{lstlisting}
+
+La ventaja de tener dos clases de comillas es que se puede usar una de
+ellas cuando la otra aparece como parte del texto:
+
+\begin{lstlisting}[language=py]
+"Let's go!"
+'Ella dijo "hola"'
+\end{lstlisting}
+
+Es importante entender que los strings no son lo mismo que los valores
+que en él pueden estar representados:
+
+\begin{lstlisting}[language=py]
+>>> 5 == '5'
+False
+>>> True == 'True'
+False
+\end{lstlisting}
+
+Los strings que difieren en mayúsculas y minúsculas
+o en espacios en blanco
+también son distintos:
+
+\begin{lstlisting}[language=py]
+>>> 'mesa' == 'Mesa'
+False
+>>> ' mesa' == 'mesa '
+False
+\end{lstlisting}
+
+\section{Nulo}
+
+Existe un valor llamado \textbf{None} (en inglés, «ninguno») que es
+utilizado para representar casos en que ningún valor es válido, o para
+indicar que una variable todavía no tiene un valor que tenga sentido.
+El valor \lstinline!None! tiene su propio tipo, llamado
+\lstinline!NoneType!, que es diferente al de todos los demás valores.

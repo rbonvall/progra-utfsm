@@ -1,0 +1,48 @@
+\section{Ojo con la indentación}
+
+Sin usar el computador, rutee los siguientes tres programas e indique
+cuál es la salida de cada uno de ellos.
+Compruebe que sus respuestas son correctas
+ejecutando los programas en el computador.
+
+\begin{enumerate}
+\item
+\begin{lstlisting}
+s = 0
+t = 0
+for i in range(3):
+    for j in range(3):
+        s = s + 1
+        if i < j:
+            t = t + 1
+    print t
+    print s
+\end{lstlisting}
+
+\item
+\begin{lstlisting}
+s = 0
+t = 0
+for i in range(3):
+    for j in range(3):
+        s = s + 1
+    if i < j:
+        t = t + 1
+        print t
+print s
+\end{lstlisting}
+
+\item
+\begin{lstlisting}
+s = 0
+t = 0
+for i in range(3):
+    for j in range(3):
+        s = s + 1
+if i < j:
+    t = t + 1
+    print t
+print s
+\end{lstlisting}
+\end{enumerate}
+

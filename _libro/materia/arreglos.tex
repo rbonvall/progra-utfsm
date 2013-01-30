@@ -1,0 +1,388 @@
+\chapter{Arreglos}
+
+Las estructuras de datos que hemos visto hasta ahora (listas, tuplas,
+diccionarios, conjuntos) permiten manipular datos de manera muy
+flexible. Combinándolas y anidándolas, es posible organizar información
+de manera estructurada para representar sistemas del mundo real.
+
+En muchas aplicaciones de ingeniería, por otra parte, más importante que
+la organización de los datos es la capacidad de hacer muchas operaciones
+a la vez sobre grandes conjuntos de datos numéricos de manera eficiente.
+Algunos ejemplos de problemas que requieren manipular grandes secuencias
+de números son: la predicción del clima, la construcción de edificios, y
+el análisis de indicadores financieros entre muchos otros.
+
+La estructura de datos que sirve para almacenar estas grandes secuencias
+de números (generalmente de tipo \lstinline!float!) es el
+\textbf{arreglo}.
+
+Los arreglos tienen algunas similitudes con las listas:
+\begin{itemize}
+\item
+  los elementos tienen un orden y se pueden acceder mediante su
+  posición,
+\item
+  los elementos se pueden recorrer usando un ciclo \lstinline!for!.
+\end{itemize}
+Sin embargo, también tienen algunas restricciones:
+\begin{itemize}
+\item
+  todos los elementos del arreglo deben tener el mismo tipo,
+\item
+  en general, el tamaño del arreglo es fijo (no van creciendo
+  dinámicamente como las listas),
+\item
+  se usan principalmente para almacenar datos numéricos.
+\end{itemize}
+
+A la vez, los arreglos tienen muchas ventajas por sobre las listas, que
+iremos descubriendo a medida que avancemos en la materia.
+
+Los arreglos son los equivalentes en programación de las
+\textbf{matrices} y \textbf{vectores} de las matemáticas. Precisamente,
+una gran motivación para usar arreglos es que hay mucha teoría detrás de
+ellos que puede ser usada en el diseño de algoritmos para resolver
+problemas interesantes.
+
+\section{Crear arreglos}
+
+El módulo que provee las estructuras de datos y las funciones para
+trabajar con arreglos se llama \textbf{NumPy}, y no viene incluído con
+Python, por lo que hay que instalarlo por separado.
+
+Descargue el instalador apropiado para su versión de Python desde la
+\href{http://tinyurl.com/bajar-numpy}{página de descargas de NumPy}.
+Para ver qué versión de Python tiene instalada, vea la primera línea que
+aparece al abrir una consola.
+
+Para usar las funciones provistas por NumPy, debemos importarlas al
+principio del programa:
+
+\begin{lstlisting}
+from numpy import array
+\end{lstlisting}
+
+Como estaremos usando frecuentemente muchas funciones de este módulo,
+conviene importarlas todas de una vez usando la siguiente sentencia:
+
+\begin{lstlisting}
+from numpy import *
+\end{lstlisting}
+
+(Si no recuerda cómo usar el \lstinline!import!, puede repasar el
+capítulo sobre módulos).
+
+El tipo de datos de los arreglos se llama \lstinline!array!. Para crear
+un arreglo nuevo, se puede usar la función \lstinline!array! pasándole
+como parámetro la lista de valores que deseamos agregar al arreglo:
+
+\begin{lstlisting}
+>>> a = array([6, 1, 3, 9, 8])
+>>> a
+array([6, 1, 3, 9, 8])
+\end{lstlisting}
+
+Todos los elementos del arreglo tienen exactamente el mismo tipo. Para
+crear un arreglo de números reales, basta con que uno de los valores lo
+sea:
+
+\begin{lstlisting}
+>>> b = array([6.0, 1, 3, 9, 8])
+>>> b
+array([ 6.,  1.,  3.,  9.,  8.])
+\end{lstlisting}
+
+Otra opción es convertir el arreglo a otro tipo usando el método
+\lstinline!astype!:
+
+\begin{lstlisting}
+>>> a
+array([6, 1, 3, 9, 8])
+>>> a.astype(float)
+array([ 6.,  1.,  3.,  9.,  8.])
+>>> a.astype(complex)
+array([ 6.+0.j,  1.+0.j,  3.+0.j,  9.+0.j,  8.+0.j])
+\end{lstlisting}
+
+Hay muchas formas de arreglos que aparecen a menudo en la práctica, por
+lo que existen funciones especiales para crearlos:
+
+\begin{itemize}
+\item
+  \lstinline!zeros(n)! crea un arreglo de \lstinline!n! ceros;
+\item
+  \lstinline!ones(n)! crea un arreglo de \lstinline!n! unos;
+\item
+  \lstinline!arange(a, b, c)! crea un arreglo de forma similar a la
+  función \lstinline!range!, con las diferencias que \lstinline!a!,
+  \lstinline!b! y \lstinline!c! pueden ser reales, y que el resultado es
+  un arreglo y no una lista;
+\item
+  \lstinline!linspace(a, b, n)! crea un arreglo de \lstinline!n! valores
+  equiespaciados entre \lstinline!a! y \lstinline!b!.
+\end{itemize}
+
+\begin{lstlisting}
+>>> zeros(6)
+array([ 0.,  0.,  0.,  0.,  0.,  0.])
+
+>>> ones(5)
+array([ 1.,  1.,  1.,  1.,  1.])
+
+>>> arange(3.0, 9.0)
+array([ 3.,  4.,  5.,  6.,  7.,  8.])
+
+>>> linspace(1, 2, 5)
+array([ 1.  ,  1.25,  1.5 ,  1.75,  2.  ])
+\end{lstlisting}
+
+\section{Operaciones con arreglos}
+
+Las limitaciones que tienen los arreglos respecto de las listas son
+compensadas por la cantidad de operaciones convenientes que permiten
+realizar sobre ellos.
+
+Las operaciones aritméticas entre arreglos se aplican elemento a
+elemento:
+
+\begin{lstlisting}
+>>> a = array([55, 21, 19, 11,  9])
+>>> b = array([12, -9,  0, 22, -9])
+
+# sumar los dos arreglos elemento a elemento
+>>> a + b
+array([67, 12, 19, 33,  0])
+
+# multiplicar elemento a elemento
+>>> a * b
+array([ 660, -189,    0,  242,  -81])
+
+# restar elemento a elemento
+>>> a - b
+array([ 43,  30,  19, -11,  18])
+\end{lstlisting}
+
+Las operaciones entre un arreglo y un valor simple funcionan aplicando
+la operación a todos los elementos del arreglo, usando el valor simple
+como operando todas las veces:
+
+\begin{lstlisting}
+>>> a
+array([55, 21, 19, 11,  9])
+
+# multiplicar por 0.1 todos los elementos
+>>> 0.1 * a
+array([ 5.5,  2.1,  1.9,  1.1,  0.9])
+
+# restar 9.0 a todos los elementos
+>>> a - 9.0
+array([ 46.,  12.,  10.,   2.,   0.])
+\end{lstlisting}
+
+Note que si quisiéramos hacer estas operaciones usando listas,
+necesitaríamos usar un ciclo para hacer las operaciones elemento a
+elemento.
+
+Las operaciones relacionales también se aplican elemento a elemento, y
+retornan un arreglo de valores booleanos:
+
+\begin{lstlisting}
+>>> a = array([5.1, 2.4, 3.8, 3.9])
+>>> b = array([4.2, 8.7, 3.9, 0.3])
+>>> c = array([5, 2, 4, 4]) + array([1, 4, -2, -1]) / 10.0
+>>> a < b
+array([False,  True,  True, False], dtype=bool)
+>>> a == c
+array([ True,  True,  True,  True], dtype=bool)
+\end{lstlisting}
+
+Para reducir el arreglo de booleanos a un único valor, se puede usar las
+funciones \lstinline!any! y \lstinline!all!. \lstinline!any! retorna
+\lstinline!True! si al menos uno de los elementos es verdadero, mientras
+que \lstinline!all! retorna \lstinline!True! sólo si todos lo son (en
+inglés, \emph{any} signfica «alguno», y \emph{all} significa «todos»):
+
+\begin{lstlisting}
+>>> any(a < b)
+True
+>>> any(a == b)
+False
+>>> all(a == c)
+True
+\end{lstlisting}
+
+\section{Funciones sobre arreglos}
+
+NumPy provee muchas funciones matemáticas que también operan elemento a
+elemento. Por ejemplo, podemos obtener el seno de 9 valores
+equiespaciados entre \(0\) y \(\pi/2\) con una sola llamada a la función
+\lstinline!sin!:
+
+\begin{lstlisting}
+>>> from numpy import linspace, pi, sin
+
+>>> x = linspace(0, pi/2, 9)
+>>> x
+array([ 0.        ,  0.19634954,  0.39269908,
+        0.58904862,  0.78539816,  0.9817477 ,
+        1.17809725,  1.37444679,  1.57079633])
+
+>>> sin(x)
+array([ 0.        ,  0.19509032,  0.38268343,
+        0.55557023,  0.70710678,  0.83146961,
+        0.92387953,  0.98078528,  1.        ])
+\end{lstlisting}
+
+Como puede ver, los valores obtenidos crecen desde 0 hasta 1, que es
+justamente como se comporta la función seno en el intervalo
+\(\left[0, \pi/2\right]\).
+
+Aquí también se hace evidente otra de las ventajas de los arreglos: al
+mostrarlos en la consola o al imprimirlos, los valores aparecen
+perfectamente alineados. Con las listas, esto no ocurre:
+
+\begin{lstlisting}
+>>> list(sin(x))
+[0.0, 0.19509032201612825, 0.38268343236508978, 0.5555702330
+1960218, 0.70710678118654746, 0.83146961230254524, 0.9238795
+3251128674, 0.98078528040323043, 1.0]
+\end{lstlisting}
+
+\section{Arreglos aleatorios}
+
+El módulo NumPy contiene a su vez otros módulos que proveen
+funcio\-na\-lidad adicional a los arreglos y funciones básicos.
+
+El módulo \lstinline!numpy.random! provee funciones para crear
+\textbf{números aleatorios} (es decir, generados al azar), de las cuales
+la más usada es la función \lstinline!random!, que entrega un arreglo de
+números al azar distribuidos uniformemente entre 0 y 1:
+
+\begin{lstlisting}
+>>> from numpy.random import random
+>>> random(3)
+array([ 0.53077263,  0.22039319,  0.81268786])
+>>> random(3)
+array([ 0.07405763,  0.04083838,  0.72962968])
+>>> random(3)
+array([ 0.51886706,  0.46220545,  0.95818726])
+\end{lstlisting}
+
+\section{Obtener elementos de un arreglo}
+
+Cada elemento del arreglo tiene un índice, al igual que en las listas.
+El primer elemento tiene índice 0. Los elementos también pueden
+numerarse desde el final hasta el principio usando índices negativos. El
+último elemento tiene índice \(-1\):
+
+\begin{lstlisting}
+>>> a = array([6.2, -2.3, 3.4, 4.7, 9.8])
+
+>>> a[0]
+6.2
+>>> a[1]
+-2.3
+>>> a[-2]
+4.7
+>>> a[3]
+4.7
+\end{lstlisting}
+
+Una seccion del arreglo puede ser obtenida usando el operador de
+rebanado \lstinline!a[i:j]!. Los índices \lstinline!i! y \lstinline!j!
+indican el rango de valores que serán entregados:
+
+\begin{lstlisting}
+>>> a
+array([ 6.2, -2.3,  3.4,  4.7,  9.8])
+>>> a[1:4]
+array([-2.3,  3.4,  4.7])
+>>> a[2:-2]
+array([ 3.4])
+\end{lstlisting}
+
+Si el primer índice es omitido, el rebanado comienza desde el principio
+del arreglo. Si el segundo índice es omitido, el rebanado termina al
+final del arreglo:
+
+\begin{lstlisting}
+>>> a[:2]
+array([ 6.2, -2.3])
+>>> a[2:]
+array([ 3.4,  4.7,  9.8])
+\end{lstlisting}
+
+Un tercer índice puede indicar cada cuántos elementos serán incluídos en
+el resultado:
+
+\begin{lstlisting}
+>>> a = linspace(0, 1, 9)
+>>> a
+array([ 0.   ,  0.125,  0.25 ,  0.375,  0.5  ,  0.625,
+0.75 ,  0.875,  1.   ])
+>>> a[1:7:2]
+array([ 0.125,  0.375,  0.625])
+>>> a[::3]
+array([ 0.   ,  0.375,  0.75 ])
+>>> a[-2::-2]
+array([ 0.875,  0.625,  0.375,  0.125])
+>>> a[::-1]
+array([ 1.   ,  0.875,  0.75 ,  0.625,  0.5  ,  0.375,
+0.25 ,  0.125,  0.   ])
+\end{lstlisting}
+
+Una manera simple de recordar cómo funciona el rebanado es considerar
+que los índices no se refieren a los elementos, sino a los espacios
+entre los elementos:
+
+\begin{center}
+  \input{diagramas/indices}
+\end{center}
+
+\begin{lstlisting}
+>>> b = array([17.41, 2.19, 10.99, -2.29, 3.86, 11.10])
+>>> b[2:5]
+array([ 10.99,  -2.29,   3.86])
+>>> b[:5]
+array([ 17.41,   2.19,  10.99,  -2.29,   3.86])
+>>> b[1:1]
+array([], dtype=float64)
+>>> b[1:5:2]
+array([ 2.19, -2.29])
+\end{lstlisting}
+
+\section{Algunos métodos convenientes}
+
+Los arreglos proveen algunos métodos útiles que conviene conocer.
+
+Los métodos \lstinline!min! y \lstinline!max!, entregan respectivamente
+el mínimo y el máximo de los elementos del arreglo:
+
+\begin{lstlisting}
+>>> a = array([4.1, 2.7, 8.4, pi, -2.5, 3, 5.2])
+>>> a.min()
+-2.5
+>>> a.max()
+8.4000000000000004
+\end{lstlisting}
+
+Los métodos \lstinline!argmin! y \lstinline!argmax! entregan
+respectivamente la posición del mínimo y del máximo:
+
+\begin{lstlisting}
+>>> a.argmin()
+4
+>>> a.argmax()
+2
+\end{lstlisting}
+
+Los métodos \lstinline[language={}]!sum! y \lstinline!prod! entregan respectivamente
+la suma y el producto de los elementos:
+
+\begin{lstlisting}[language={}]
+>>> a.sum()
+24.041592653589795
+>>> a.prod()
+-11393.086289208301
+\end{lstlisting}
+

@@ -1,0 +1,155 @@
+\section{Láminas}
+
+El módulo \lstinline!random! provee funciones para entregar valores al
+azar. En computación, los números creados al azar se llaman
+\textbf{números aleatorios}.
+
+La función \lstinline!randrange(n, m)! entrega un número aleatorio en el
+rango entre \lstinline!n! y \lstinline!m!:
+
+\begin{lstlisting}
+>>> from random import randrange
+>>> randrange(5, 15)
+14
+>>> randrange(5, 15)
+6
+>>> randrange(5, 15)
+14
+>>> randrange(5, 15)
+5
+>>> randrange(5, 15)
+12
+>>> randrange(5, 15)
+9
+\end{lstlisting}
+
+(Recuerde que los rangos incluyen el primer valor pero no el último, así
+que la función retorna números entre 5 y 14).
+
+\begin{enumerate}
+\item
+  Suponga que Pepito colecciona un álbum de láminas. Las láminas están
+  numeradas desde 1 hasta 640, y se compran en sobres de cinco láminas
+  al azar.
+
+  Escriba la función \lstinline!nuevo_sobre()! que entregue una lista
+  con las láminas que vienen en un sobre recién comprado:
+
+\begin{lstlisting}
+>>> nuevo_sobre()
+[27, 31, 207, 455, 529]
+>>> nuevo_sobre()
+[66, 577, 481, 171, 602]
+>>> nuevo_sobre()
+[275, 493, 167, 25, 592]
+>>> nuevo_sobre()
+[113, 35, 592, 560, 244]
+\end{lstlisting}
+\item
+  Pepito lleva un registro de sus láminas en una lista llamada
+  \lstinline!laminas_pepito!. Cada ciertos días, Pepito va al quiosco y
+  compra algunos sobres, y los agrega a su lista.
+
+  Escriba la función \lstinline!agregar_laminas(lista_laminas, m)!, que
+  agregue las láminas de \lstinline!m! nuevos sobres a la
+  \lstinline!lista_laminas!:
+
+\begin{lstlisting}
+>>> laminas_pepito = []
+>>> agregar_laminas(laminas_pepito, 1)
+>>> laminas_pepito
+[190, 130, 53, 537, 167]
+>>> agregar_laminas(laminas_pepito, 2)
+>>> laminas_pepito
+[190, 130, 53, 537, 167, 572, 537, 375, 496, 469, 249, 545, 95, 279, 131]
+>>>
+>>> agregar_laminas(laminas_pepito, 14)
+>>> len(laminas_pepito)
+85
+\end{lstlisting}
+
+  Note que la función no retorna nada. Sólo modifica la lista que recibe
+  como parámetro.
+\item
+  Escriba la función \lstinline!faltantes(lista_laminas)! que entregue
+  el conjunto de las láminas que faltan para completar el álbum:
+
+\begin{lstlisting}
+>>> laminas_pepito = []
+>>> agregar_laminas(laminas_pepito, 128)
+>>> faltantes(laminas_pepito)
+{514, 3, 5, 7, 10, 523, 12, 525, 14, 16, 529, ...}
+\end{lstlisting}
+
+  Note que Pepito compró 128 sobres, que en total tienen el mismo número
+  de láminas del álbum, pero como hay muchas láminas repetidas y otras
+  que no salen, no es suficiente para completar el álbum.
+\item
+  Escriba la función \lstinline!cuenta(lista_laminas)! que entregue un
+  diccionario que asocie a cada lámina el número de veces que está en la
+  lista de láminas:
+
+\begin{lstlisting}
+>>> laminas_pepito = [4, 6, 9, 12, 9, 9, 6, 12, 2]
+>>> cuenta(laminas_pepito)
+{9: 3, 2: 1, 4: 1, 6: 2, 12: 2}
+\end{lstlisting}
+\item
+  Pepito intercambia láminas con Yayita, que también colecciona el
+  álbum. A Pepito le interesa obtener las láminas que Yayita tiene
+  repetidas y que a él le faltan, y viceversa.
+
+  Escriba la función
+  \lstinline!cuales_me_sirven(lista_quiere, lista_tiene)! que entregue
+  el conjunto de las láminas que le faltan a \lstinline!lista_quiere! y
+  que \lstinline!lista_tiene! tiene repetidas:
+
+\begin{lstlisting}
+>>> laminas_pepito = [4, 6, 9, 12, 9, 9, 6, 12, 2]
+>>> laminas_yayita = [4, 9, 7, 7, 4, 4, 8]
+>>> cuales_me_sirven(laminas_pepito, laminas_yayita)
+{7}
+>>> cuales_me_sirven(laminas_yayita, laminas_pepito)
+{12, 6}
+\end{lstlisting}
+
+  A Pepito le falta la lámina 7, que Yayita tiene repetida. También le
+  falta la 8, pero ella no la tiene repetida, así que no le sirve.
+  Yayita tiene repetida la 4, pero Pepito ya la tiene, así que tampoco
+  le sirve.
+\item
+  El sobre de láminas vale \$250. Pepito quiere saber cuánto va a gastar
+  en láminas para completar el álbum.
+
+  Escriba la función \lstinline!costo_laminas()! que vaya comprando
+  sobres hasta completar las 640 láminas distintas, y que retorne cuál
+  fue el gasto total:
+
+\begin{lstlisting}
+# Si no sale ninguna repetida, el resultado será:
+>>> costo_laminas()
+32000
+
+# Si salen algunas repetidas:
+>>> costo_laminas()
+54250
+
+# Muy mala suerte:
+>>> costo_laminas()
+241750
+\end{lstlisting}
+\item
+  Vladimiro es un fanfarrón: él desea sacar pica a Yayita por las
+  láminas que él tiene y que ella no.
+
+  Escriba la función \lstinline!tengo_y_tu_no(mis_laminas, tus_laminas)!
+  que entregue el conjunto de láminas que están en
+  \lstinline!mis_laminas! y no en \lstinline!tus_laminas!:
+
+\begin{lstlisting}
+>>> laminas_vladimiro = [6, 1, 3, 3, 4, 7]
+>>> laminas_yayita = [8, 4, 9, 12, 2, 11, 4, 6, 13, 14]
+>> tengo_y_tu_no(laminas_vladimiro, laminas_yayita)
+{1, 3, 7}
+\end{lstlisting}
+\end{enumerate}

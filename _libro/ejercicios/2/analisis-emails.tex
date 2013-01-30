@@ -1,0 +1,46 @@
+\section{Análisis de correos electrónicos}
+
+La empresa RawInput S.A. desea hacer una segmentación de sus clientes
+según su ubicación geográfica. Para esto, analizará su base de datos de
+correos electrónicos con el fin obtener información sobre el lugar de
+procedencia de cada cliente.
+
+En una dirección de correo electrónico, el \emph{dominio} es la parte
+que va des\-pués de la arroba, y el \emph{TLD} es lo que va después del
+último punto. Por ejemplo, en la dirección
+\lstinline!fulano.de.tal@alumnos.usm.cl!, el dominio es
+\lstinline!alumnos.usm.cl! y el TLD es \lstinline!cl!.
+
+Algunos TLD no están asociados a un país, sino que representan otro tipo
+de entidades. Estos TLD genéricos son los siguentes:
+\begin{lstlisting}
+genericos = {'com', 'gov', 'edu', 'org', 'net', 'mil'}
+\end{lstlisting}
+
+\begin{enumerate}
+\item
+  Escriba la función \lstinline!obtener_dominios(correos)! que reciba
+  como parámetro una lista de correos electrónicos, y retorne la lista
+  de todos los dominios, sin repetir, y en orden alfabético.
+\item
+  Escriba la función \lstinline!contar_tld(correos)! que reciba como
+  parámetro la lista de correos electrónicos, y retorne un diccionario
+  que asocie a cada TLD la cantidad de veces que aparece en la lista. No
+  debe incluir los TLD genéricos.
+\end{enumerate}
+
+\begin{lstlisting}
+>>> c = ['fulano@usm.cl', 'erika@lala.de', 'li@zi.cn',
+...      'a@a.net', 'gudrun@lala.de', 'yayita@abc.cl',
+...      'otto.von.d@lorem.ipsum.de', 'org@cn.de.cl',
+...      'jozin@baz.cz', 'jp@foo.cl', 'dawei@hao.cn',
+...      'pepe@gmail.com', 'ana@usm.cl', 'fer@x.com',
+...      'ada@alumnos.usm.cl', 'dj@foo.cl', 'jan@baz.cz',
+...      'polo@hotmail.com', 'd@abc.cl']
+>>> obtener_dominios(c)
+['abc.cl', 'alumnos.usm.cl', 'baz.cz', 'cn.de.cl', 'foo.cl',
+'hao.cn', 'lala.de', 'lorem.ipsum.de', 'usm.cl', 'zi.cn']
+>>> contar_tld(c)
+{'cz': 2, 'de': 3, 'cn': 2, 'cl': 8}
+\end{lstlisting}
+

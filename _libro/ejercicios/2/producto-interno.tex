@@ -1,0 +1,36 @@
+\section{Producto interno}
+
+El \emph{producto interno} de dos listas de números es la suma de los
+productos de los términos correspondientes de ambas.
+Por ejemplo, si:
+\begin{lstlisting}
+a = [5, 1, 6]
+b = [1, -2, 8]
+\end{lstlisting}
+entonces el producto interno entre \lstinline!a! y \lstinline!b! es:
+\begin{lstlisting}
+(5 * 1) + (1 * -2) + (6 * 8)
+\end{lstlisting}
+
+\begin{enumerate}
+
+\item
+  Escriba la función \lstinline!producto_interno(a, b)! que entregue el
+  producto interno de \lstinline!a! y \lstinline!b!:
+
+\begin{lstlisting}
+>>> a = [7, 1, 4, 9, 8]
+>>> b = range(5)
+>>> producto_interno(a, b)
+68
+\end{lstlisting}
+
+\item
+  Dos listas de números son \emph{ortogonales} si su producto interno
+  es cero. Escriba la función \lstinline!son_ortogonales(a, b)! que
+  indique si \lstinline!a! y \lstinline!b! son ortogonales:
+\begin{lstlisting}
+>>> son_ortogonales([2, 1], [-3, 6])
+True
+\end{lstlisting}
+\end{enumerate}

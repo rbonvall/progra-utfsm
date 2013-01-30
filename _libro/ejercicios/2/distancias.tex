@@ -1,0 +1,89 @@
+\section{Distancias}
+
+La siguiente tabla indica las distancias entre algunas ciudades
+chilenas:
+
+\begin{quote}
+\ctable[pos = H, center, botcap]{llllll}
+{% notes
+}
+{% rows
+\FL
+\textbf{Distancia} & Arica & Santiago & Valparaíso & San
+Fernando & Temuco
+\\\noalign{\medskip}
+Arica & 0 & 2050 & 2015 & 2190 & 2725
+\\\noalign{\medskip}
+Santiago & 2050 & 0 & 119 & 140 & 675
+\\\noalign{\medskip}
+Valparaíso & 2015 & 119 & 0 & 255 & 790
+\\\noalign{\medskip}
+San Fernando & 2190 & 140 & 255 & 0 & 535
+\\\noalign{\medskip}
+Temuco & 2725 & 675 & 790 & 535 & 0
+\LL
+}
+\end{quote}
+
+En un programa, esta información puede representarse mediante un arreglo
+de ciudades y un arreglo bidimensional de distancias.
+
+\begin{itemize}
+\item
+  Escriba la función que pregunte al usuario la cantidad de ciudades y
+  los nombres de las ciudades:
+
+\begin{lstlisting}
+¿Cuántas ciudades?
+\end{lstlisting}
+
+  \begin{quote}
+  \begin{description}
+  \item[5]
+  Ingrese los nombres:
+  \end{description}
+
+  Arica Santiago Valparaíso San Fernando Temuco
+  \end{quote}
+\item
+  Escriba la función que pregunte al usuario las distancias entre cada
+  par de ciudades:
+
+\begin{lstlisting}
+¿Distancia Arica-Santiago?
+\end{lstlisting}
+
+  \begin{quote}
+  \begin{description}
+  \item[2050]
+  ¿Distancia Arica-Valparaíso?
+  \end{description}
+
+  2015 \ldots{} ¿Distancia Temuco-San Fernando? 535
+  \end{quote}
+
+  Tener la precaución de preguntar sólo una vez cada par de ciudades: si
+  se pregunta Arica-Santiago, no debe preguntarse Santiago-Arica.
+  Tampoco debe preguntarse la distancia desde una ciudad a sí misma.
+\item
+  Escriba la función que pida al usuario que ingrese una lista de
+  ciudades, que representan un itinerario por realizar:
+
+\begin{lstlisting}
+¿Cuántas ciudades tiene el itinerario?
+\end{lstlisting}
+
+  \begin{quote}
+  \begin{description}
+  \item[4]
+  Ingrese las ciudades del itinerario:
+  \end{description}
+
+  Temuco Santiago San Fernando Arica
+  \end{quote}
+\item
+  Escriba la función \lstinline!kms! que entregue como resultado los
+  kilómetros que hay que recorrer para visitar las ciudades en orden.
+  Por ejemplo, para el itinerario de arriba, debe entregar como
+  resultado `3005`.
+\end{itemize}

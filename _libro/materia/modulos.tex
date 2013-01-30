@@ -1,0 +1,279 @@
+\chapter{Módulos}
+
+Un \textbf{módulo} (o \textbf{biblioteca}) es una colección de
+definiciones de variables, funciones y tipos (entre otras cosas) que
+pueden ser importadas para ser usadas desde cualquier programa.
+
+Ya hemos visto algunos ejemplos de cómo usar módulos, particularmente el
+módulo matemático, del que podemos importar funciones como la
+exponencial y el coseno, y las constantes \(\pi\) y \(e\):
+
+\begin{lstlisting}
+>>> from math import exp, cos
+>>> from math import pi, e
+>>> print cos(pi / 3)
+0.5
+\end{lstlisting}
+
+Las ventajas de usar módulos son:
+
+\begin{itemize}
+\item
+  las funciones y variables deben ser definidas sólo una vez, y luego
+  pueden ser utilizadas en muchos programas sin necesidad de reescribir
+  el código;
+\item
+  permiten que un programa pueda ser organizado en varias secciones
+  lógicas, puestas cada una en un archivo separado;
+\item
+  hacen más fácil compartir componentes con otros programadores.
+\end{itemize}
+
+Python viene «de fábrica» con muchos módulos listos para ser usados.
+Además, es posible descargar de internet e instalar módulos
+prácticamente para hacer cualquier cosa. Aquí aprenderemos a
+crear nuestros propios módulos.
+
+\section{Módulos provistos por Python}
+
+Éstos son algunos de los módulos estándares de Python, que pueden ser
+usados desde cualquier programa.
+
+El módulo \href{http://docs.python.org/library/math.html}{\lstinline!math!} contiene
+funciones y constantes matemáticas:
+
+\begin{lstlisting}
+>>> from math import floor, radians
+>>> floor(-5.9)
+-6.0
+>>> radians(180)
+3.1415926535897931
+\end{lstlisting}
+
+El módulo \href{http://docs.python.org/library/random.html}{\lstinline!random!}
+contiene funciones para producir números aleatorios (es decir, al azar):
+
+\begin{lstlisting}
+>>> from random import choice, randrange, shuffle
+>>> choice(['cara', 'sello'])
+'cara'
+>>> choice(['cara', 'sello'])
+'sello'
+>>> choice(['cara', 'sello'])
+'sello'
+>>> randrange(10)
+7
+>>> randrange(10)
+2
+>>> randrange(10)
+5
+>>> r = range(5)
+>>> r
+[0, 1, 2, 3, 4]
+>>> shuffle(r)
+>>> r
+[4, 2, 0, 3, 1]
+\end{lstlisting}
+
+El módulo \href{http://docs.python.org/library/datetime.html}{\lstinline!datetime!}
+provee tipos de datos para manipular fechas y horas:
+
+\begin{lstlisting}
+>>> from datetime import date
+>>> hoy = date(2011, 5, 31)
+>>> fin_del_mundo = date(2012, 12, 21)
+>>> (fin_del_mundo - hoy).days
+570
+\end{lstlisting}
+
+El módulo
+\href{http://docs.python.org/library/fractions.html}{\lstinline!fractions!} provee
+un tipo de datos para representar números racionales:
+
+\begin{lstlisting}
+>>> from fractions import Fraction
+>>> a = Fraction(5, 12)
+>>> b = Fraction(9, 7)
+>>> a + b
+Fraction(143, 84)
+\end{lstlisting}
+
+El módulo \href{http://docs.python.org/library/turtle.html}{\lstinline!turtle!}
+permite manejar una tortuga (¡haga la prueba!):
+
+\begin{lstlisting}
+>>> from turtle import Turtle
+>>> t = Turtle()
+>>> t.forward(10)
+>>> t.left(45)
+>>> t.forward(20)
+>>> t.left(45)
+>>> t.forward(30)
+>>> for i in range(10):
+...   t.right(30)
+...   t.forward(10 * i)
+...
+>>>
+\end{lstlisting}
+
+La lista completa de módulos de Python puede ser encontrada en la
+\href{http://docs.python.org/library/index.html}{documentación de la
+biblioteca estándar}.
+
+\section{Importación de nombres}
+
+La sentencia \lstinline!import! importa objetos desde un módulo para
+poder ser usados en el programa actual.
+
+Una manera de usar \lstinline!import! es importar sólo los nombres
+específicos que uno desea utilizar en el programa:
+
+\begin{lstlisting}
+from math import sin, cos
+print sin(10)
+print cos(20)
+\end{lstlisting}
+
+En este caso, las funciones \lstinline!sin! y \lstinline!cos! no fueron
+creadas por nosotros, sino importadas del módulo de matemáticas, donde
+están definidas.
+
+La otra manera de usar \lstinline!import! es importando el módulo
+completo, y accediendo a sus objetos mediante un punto:
+
+\begin{lstlisting}
+import math
+print math.sin(10)
+print math.cos(10)
+\end{lstlisting}
+
+Las dos formas son equivalentes.
+
+\section{Creación de módulos}
+
+Un módulo sencillo es simplemente un archivo con código en Python. El
+nombre del archivo indica cuál es el nombre del módulo.
+
+Por ejemplo, podemos crear un archivo llamado \lstinline!pares.py! que
+tenga funciones relacionadas con los números pares:
+
+\begin{lstlisting}
+def es_par(n):
+    return n % 2 == 0
+
+def es_impar(n):
+    return not es_par(n)
+
+def pares_hasta(n):
+    return range(0, n, 2)
+\end{lstlisting}
+
+En este caso, el nombre del módulo es \lstinline!pares!. Para poder usar
+estas funciones desde otro programa, el archivo \lstinline!pares.py!
+debe estar en la misma carpeta que el programa.
+
+Por ejemplo, un programa \lstinline!mostrar_pares.py! puede ser escrito así:
+%
+\begin{lstlisting}
+from pares import pares_hasta
+
+n = int(raw_input('Ingrese un entero: '))
+print 'Los numeros pares hasta', n, 'son:'
+for i in pares_hasta(n):
+    print i
+\end{lstlisting}
+%
+Y un programa \lstinline!ver_si_es_par.py! puede ser escrito así:
+
+\begin{lstlisting}
+import pares
+
+n = int(raw_input('Ingrese un entero: '))
+if pares.es_par(n):
+    print n, 'es par'
+else:
+    print n, 'no es par'
+\end{lstlisting}
+
+Como se puede ver, ambos programas pueden usar los objetos definidos en
+el módulo simplemente importándolos.
+
+\section{Usar módulos como programas}
+
+Un archivo con extensión \lstinline!.py! puede ser un módulo o un
+programa. Si es un módulo, contiene definiciones que pueden ser
+importadas desde un programa o desde otro módulo. Si es un programa,
+contiene código para ser ejecutado.
+
+A veces, un programa también contiene definiciones (por ejemplo,
+funciones y variables) que también pueden ser útiles desde otro
+programa. Sin embargo, no pueden ser importadas, ya que al usar la
+sentencia \lstinline!import! el programa completo sería ejecutado. Lo
+que ocurriría en este caso es que, al ejecutar el segundo programa,
+también se ejecutaría el primero.
+
+Existe un truco para evitar este problema: siempre que hay código siendo
+ejecutado, existe una variable llamada \lstinline!__name__!. Cuando se
+trata de un programa, el valor de esta variable es
+\lstinline!'__main__'!, mientras que en un módulo, es el nombre del
+módulo.
+
+Por lo tanto, se puede usar el valor de esta variable para marcar la
+parte del programa que debe ser ejecutada al ejecutar el archivo, pero
+no al importarlo.
+
+Por ejemplo, el programa listado a continuación
+convierte unidades de medidas de longitud.
+Este programa es útil por sí solo, pero además sus cuatro funciones y
+las constantes \lstinline!km_por_milla! y \lstinline!cm_por_pulgada!
+podrían ser útiles en otro programa:
+
+\begin{lstlisting}
+km_por_milla = 1.609344
+cm_por_pulgada = 2.54
+
+def millas_a_km(mi):
+    return mi * km_por_milla
+
+def km_a_millas(km):
+    return km / km_por_milla
+
+def pulgadas_a_cm(p):
+    return p * cm_por_pulgada
+
+def cm_a_pulgadas(cm):
+    return cm / cm_por_pulgada
+
+if __name__ == '__main__':
+    print 'Que conversion desea hacer?'
+    print '1) millas a kilometros'
+    print '2) kilometros a millas'
+    print '3) pulgadas a centimetros'
+    print '4) centimetros a pulgadas'
+    opcion = int(raw_input('> '))
+
+    if opcion == 1:
+        x = float(raw_input('Ingrese millas: '))
+        print x, 'millas =', millas_a_km(x), 'km'
+    elif opcion == 2:
+        x = float(raw_input('Ingrese kilometros: '))
+        print x, 'km =', km_a_millas(x), 'millas'
+    elif opcion == 3:
+        x = float(raw_input('Ingrese pulgadas: '))
+        print x, 'in =', pulgadas_a_cm(x), 'cm'
+    elif opcion == 4:
+        x = float(raw_input('Ingrese centimetros: '))
+        print x, 'cm =', cm_a_pulgadas(x), 'in'
+    else:
+        print 'Opcion incorrecta'
+\end{lstlisting}
+
+Al poner el cuerpo del programa dentro del
+\lstinline!if __name__ == '__main__'!, el archivo puede ser usado como
+un módulo. Si no hiciéramos esto, cada vez que otro programa importe una
+función se ejecutaría el programa completo.
+
+Haga la prueba:
+ejecute este programa, y luego escriba otro programa que importe alguna
+de las funciones. A continuación, haga lo mismo, pero eliminando el
+\lstinline!if __name__ == '__main__'!.

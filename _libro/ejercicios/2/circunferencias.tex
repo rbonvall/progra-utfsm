@@ -1,0 +1,52 @@
+\section{Intersección de circunferencias}
+
+En el plano, una circunferencia está determinada por su centro
+\((x, y)\) y por su radio \(r\).
+En un programa, podemos representarla como una tupla
+\lstinline!(centro, radio)!, donde a su vez \lstinline!centro! es una
+tupla \lstinline!(x, y)!:
+\begin{lstlisting}
+c = ((4.0, 5.1), 2.8)
+\end{lstlisting}
+
+\begin{enumerate}
+
+  \item
+    Escriba la función \lstinline!distancia(p1, p2)! que entregue la
+    distancia entre los puntos \lstinline!p1! y \lstinline!p2!:
+\begin{lstlisting}
+>>> distancia((2, 2), (7, 14))
+13.0
+>>> distancia((2, 5), (1, 9))
+4.1231056256176606
+\end{lstlisting}
+
+  \item
+
+    \begin{figure}
+      \centering
+      \input{diagramas/circunferencias}
+      \caption{Algunos casos de intersecciones
+        entre pares de circunferencias.}
+      \label{fig:circunferencias}
+    \end{figure}
+
+    Escriba la función \lstinline!se_intersectan(c1, c2)! que indique si
+    las circunferencias \lstinline!c1! y \lstinline!c2! se intersectan.
+    Por ejemplo,
+    con las circunferencias de la figura~\ref{fig:circunferencias}:
+\begin{lstlisting}
+>>> A = (( 5.0,  4.0), 3.0)
+>>> B = (( 8.0,  6.0), 2.0)
+>>> C = (( 8.4, 12.7), 3.0)
+>>> D = (( 8.0, 12.0), 2.0)
+>>> E = ((16.0,  7.8), 2.7)
+>>> F = ((15.5,  2.7), 2.1)
+>>> se_intersectan(A, B)
+True
+>>> se_intersectan(C, D)
+False
+>>> se_intersectan(E, F)
+False
+\end{lstlisting}
+\end{enumerate}

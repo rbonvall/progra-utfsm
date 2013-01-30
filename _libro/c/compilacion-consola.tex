@@ -1,0 +1,157 @@
+\chapter{Compilación de programas en la consola}
+
+Los sistemas operativos tipo Unix, como Linux o Mac OS, vienen de
+fábrica con entornos de consola. En Mac la consola del sistema se llama
+Terminal. En Linux tiene varios para escoger: Gnome Terminal, Konsole o
+XTerm, entre otros.
+
+En Windows usted puede instalar un entorno tipo Unix (por ejemplo
+Cygwin) para disponer de una consola funcional para probar los ejemplos
+de este apunte.
+
+En los ejemplos de sesiones de consola que se muestran a continuación,
+el signo \lstinline!$! representa lo que sea que aparezca en su terminal
+para indicarle que ya puede ingresar una instrucción. El signo
+\lstinline!$! no es parte del comando, y no debe ser escrito en el
+teclado.
+
+Las líneas que no comienzan con \lstinline!$! muestran la salida del
+último comando ejecutado.
+
+Algunos comandos útiles para manejarse en la consola:
+
+\begin{itemize}
+\item
+  \lstinline!mkdir! crea un directorio nuevo,
+\item
+  \lstinline!cd! sirve para cambiar el directorio actual,
+\item
+  \lstinline!pwd! muestra el directorio actual,
+\item
+  \lstinline!ls! muestra los archivos en el directorio actual.
+\end{itemize}
+
+\begin{lstlisting}
+$ mkdir programacion
+$ ls
+programacion
+$ cd programacion
+$ pwd
+/home/usuario/programacion
+$
+\end{lstlisting}
+
+\section{Compilación usando GCC}
+
+\href{http://gcc.gnu.org/}{GCC} es el más popular de los compiladores de
+C. GCC es libre y multiplataforma, lo que asegura que puede instalarlo y
+usarlo casi en cualquier sistema, y sin necesidad de pagar una licencia.
+
+Para compilar un programa llamado \lstinline!test.c! que está en el
+mismo directorio donde estamos parados, hay que hacerlo así:
+
+\begin{lstlisting}
+$ gcc test.c -o test
+\end{lstlisting}
+
+Esta instrucción indica a GCC que debe compilar el archivo fuente
+\lstinline!test.c!, y crear un binario ejecutable llamado
+\lstinline!test!.
+
+La opción \lstinline!-o! señala que lo que viene a continuación es el
+nombre del archivo de salida (\emph{output}) que debe ser creado por el
+compilador. Si usted omite esta opción, entonces el ejecutable será
+creado con el nombre \lstinline!a.out!:
+
+\begin{lstlisting}
+$ ls
+test.c
+$ gcc test.c
+$ ls
+a.out  test.c
+\end{lstlisting}
+
+No sea flojo: siempre especifique el nombre del archivo de salida.
+
+\section{Compilación usando make}
+
+Make es un programa muy útil que sí nos permite ser flojos. Make conoce
+las maneras más comunes de compilar programas en C (y en otros lenguajes
+también), y hace el trabajo por nosotros.
+
+Para programas pequeños como los que haremos aquí no es mucho lo que
+ayuda, pero conviene aprender a usarlo porque es muy utilizado para
+automatizar la compilación de proyectos más grandes.
+
+Al ejecutar make, no se debe indicar cómo compilar, sino lo que uno
+quiere obtener. En nuestro caso, es el ejecutable \lstinline!test!:
+
+\begin{lstlisting}
+$ ls
+test.c
+$ make test
+cc     test.c   -o test
+$ ls
+test  test.c
+$
+\end{lstlisting}
+
+Make sabe que si queremos obtener un binario llamado \lstinline!test!, y
+en el directorio hay un archivo fuente llamado \lstinline!test.c!, lo
+que hay que hacer es invocar al compilador de C.
+
+Por omisión, make usa el compilador \lstinline!cc! cuando le toca
+compilar un archivo \lstinline!.c!. De todos modos, lo más probable es
+que en su sistema \lstinline!cc! sea un enlace simbólico a
+\lstinline!gcc!:
+
+\begin{lstlisting}
+$ which cc
+/usr/bin/cc
+$ ls -o /usr/bin/cc
+lrwxrwxrwx. 1 root 3 ene  5 22:01 /usr/bin/cc -> gcc
+$
+\end{lstlisting}
+
+Para indicar explícitamente a make que utilice el compilador GCC (o
+cualquier otro) para compilar, se debe asignar el nombre del compilador
+a la variable de entorno \lstinline!CC! usando la instrucción
+\lstinline!export!:
+
+\begin{lstlisting}
+$ make test
+cc     test.c   -o test
+$ rm test
+$ export CC=gcc
+$ make test
+gcc     test.c   -o test
+$
+\end{lstlisting}
+
+Una de las gracias de make es que sólo hace la compilación si es que el
+archivo con el código ha sido modificado desde la última vez que se
+compiló. Si no ha habido cambios desde entonces, make no hace nada:
+
+\begin{lstlisting}
+$ ls
+test.c
+$ make test
+cc     test.c   -o test
+$ make test
+make: `test' esta actualizado.
+$
+\end{lstlisting}
+
+\section{Ejecución de un programa}
+
+Para ejecutar un programa, se debe escribir su nombre precedido de
+\lstinline!./! desde el mismo directorio donde quedó el ejecutable:
+
+\begin{lstlisting}
+$ ./test
+Felicidades! Usted ha ejecutado el programa test.
+\end{lstlisting}
+
+Ahora que sabemos compilar y ejecutar programas, analizaremos varios
+programas en orden creciente de complejidad, e iremos presentando
+gradualmente las características de C.

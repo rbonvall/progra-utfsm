@@ -1,0 +1,30 @@
+\section{Números amistosos}
+
+Un par de números \emph{m} y \emph{n} son llamados \textbf{amistosos} (o
+se conocen como un \textbf{par amigable}), si la suma de todos los
+divisores de \emph{m} (excluyendo a \emph{m}) es igual al número
+\emph{n}, y la suma de todos los divisores del número \emph{n}
+(excluyendo a \emph{n}) es igual a \emph{m} (con \emph{m} ≠ \emph{n}).
+
+Por ejemplo, los números 220 y 284 son un par amigable porque los únicos
+números que dividen de forma exacta 220 son 1, 2, 4, 5, 10, 11, 20, 22,
+44, 55 y 110, y
+
+\begin{quote}
+1 + 2 + 4 + 5 + 10 + 11 + 20 + 22 + 44 + 55 + 110 = 284
+\end{quote}
+
+Por lo tanto, 220 es un número amistoso. Los únicos números que dividen
+exactamente 284 son 1, 2, 4, 71 y 142 y
+
+\begin{quote}
+1 + 2 + 4 + 71 + 142 = 220
+\end{quote}
+
+Por lo tanto, 284 es un número amistoso.
+
+Muchos pares de números amigables son conocidos; sin embargo, sólo uno
+de los pares (220, 284) tiene valores menores que 1000. El siguiente par
+está en el rango {[}1000, 1500{]}.
+
+Desarrolle un programa que permita encontrar dicho par.

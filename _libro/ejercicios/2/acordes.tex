@@ -1,0 +1,77 @@
+\section{Acordes}
+
+En teoría musical, la escala cromática está formada por doce notas:
+\begin{lstlisting}
+notas = ['do', 'do#', 're', 're#', 'mi', 'fa',
+         'fa#', 'sol', 'sol#', 'la', 'la#', 'si']
+\end{lstlisting}
+%
+\begin{figure}
+  \centering
+  \input{diagramas/piano}
+  \caption{Correspondencia entre notas y teclas del piano.}
+  \label{fig:piano}
+\end{figure}
+%
+(El signo \(\sharp\) se lee «sostenido»).
+Cada nota corresponde a una tecla del piano,
+como se muestra en la figura~\ref{fig:piano}.
+Los sostenidos son las teclas negras.
+La escala es circular, y se extiende infinitamente en ambas direcciones.
+Esto signfica que después de si viene nuevamente do.
+
+Cada par de notas consecutivas está separada por un semitono. Por
+ejemplo, entre re y sol\({}^\sharp\) hay 6 semitonos.
+
+Un \emph{acorde} es una combinación
+de notas que suenan bien al unísono.
+
+Existen varios tipos de acordes, que difieren en la cantidad de
+semitonos por las que sus notas están separadas.
+Por ejemplo, los acordes mayores tienen tres notas separadas por 4 y 3
+semitonos. Así es como el acorde de re mayor está formado por las notas:
+\begin{quote}
+re, fa\({}^\sharp\) y la,
+\end{quote}
+pues entre re y fa\({}^\sharp\) hay 4 semitonos,
+y entre fa\({}^\sharp\) y la, 3.
+
+Algunos tipos de acordes están presentados en el siguiente diccionario,
+asociados a las separaciones entre notas consecutivas del acorde:
+
+\begin{lstlisting}
+acordes = {
+    'mayor': (4, 3),
+    'menor': (3, 4),
+    'aumentado': (4, 4),
+    'disminuido': (3, 3),
+    'sus 2': (2, 5),
+    'sus 4': (5, 2),
+    '5': (7,),
+    'menor 7': (3, 4, 3),
+    'mayor 7': (4, 3, 4),
+    '7': (4, 3, 3),
+}
+\end{lstlisting}
+
+Escriba la función \lstinline!acorde(nota, tipo)! que entegue una lista
+de las notas del acorde en el orden correcto:
+
+\begin{lstlisting}
+>>> acorde('la', 'mayor')
+['la', 'do#', 'mi']
+>>> acorde('sol#', 'menor')
+['sol#', 'si', 'do#']
+>>> acorde('si', '7')
+['si', 're#', 'fa#', 'la']
+>>> acorde('do#', '5')
+['do#', 'sol#']
+\end{lstlisting}
+
+Si el tipo no es entregado, la función debe suponer que el acorde es
+mayor:
+\begin{lstlisting}
+>>> acorde('si')
+['si', 're#', 'fa#']
+\end{lstlisting}
+

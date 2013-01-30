@@ -1,0 +1,184 @@
+\chapter{Diccionarios}
+
+Un \textbf{diccionario} es un tipo de datos que sirve para asociar pares
+de objetos.
+
+Un diccionario puede ser visto como una colección de \textbf{llaves},
+cada una de las cuales tiene asociada un \textbf{valor}. Las llaves no
+están ordenadas y no hay llaves repetidas. La única manera de acceder a
+un valor es a través de su llave.
+
+\section{Cómo crear diccionarios}
+
+Los diccionarios literales se crean usando paréntesis de llave
+(\lstinline!{! y \lstinline!}!).
+La llave y el valor van separados por dos puntos:
+\begin{lstlisting}
+>>> telefonos = {'Pepito': 5552437, 'Jaimito': 5551428,
+...              'Yayita': 5550012}
+\end{lstlisting}
+
+En este ejemplo, las llaves son \lstinline!'Pepito'!,
+\lstinline!'Jaimito'! y \lstinline!'Yayita'!, y los valores asociados a
+ellas son, respectivamente, \lstinline!5552437!, \lstinline!5551428! y
+\lstinline!5550012!.
+
+Un diccionario vacío puede ser creado usando \lstinline!{}! o con la
+función \lstinline!dict()!:
+
+\begin{lstlisting}
+>>> d = {}
+>>> d = dict()
+\end{lstlisting}
+
+\section{Cómo usar un diccionario}
+
+El valor asociado a la llave \lstinline!k! en el diccionario
+\lstinline!d! se puede obtener mediante \lstinline!d[k]!:
+
+\begin{lstlisting}
+>>> telefonos['Pepito']
+5552437
+>>> telefonos['Jaimito']
+5551428
+\end{lstlisting}
+
+A diferencia de los índices de las listas, las llaves de los
+diccionarios no necesitan ser números enteros.
+
+Si la llave no está presente en el diccionario, ocurre un \textbf{error
+de llave} (\lstinline!KeyError!):
+
+\begin{lstlisting}
+>>> telefonos['Fulanito']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'Fulanito'
+\end{lstlisting}
+
+Se puede agregar una llave nueva simplemente asignándole un valor:
+
+\begin{lstlisting}
+>>> telefonos['Susanita'] = 4448139
+>>> telefonos
+{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 5551428,
+'Yayita': 5550012}
+\end{lstlisting}
+
+Note que el orden en que quedan las llaves en el diccionario no es
+necesa\-ria\-mente el mismo orden en que fueron agregadas.
+
+Si se asigna un valor a una llave que ya estaba en el diccionario, el
+valor anterior se sobreescribe. Recuerde que un diccionario no puede
+tener llaves repetidas:
+
+\begin{lstlisting}
+>>> telefonos
+{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 5551428,
+'Yayita': 5550012}
+>>> telefonos['Jaimito'] = 4448139
+>>> telefonos
+{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 4448139,
+'Yayita': 5550012}
+\end{lstlisting}
+
+Los valores sí pueden estar repetidos. En el ejemplo anterior, Jaimito y
+Susanita tienen el mismo número.
+
+Para borrar una llave, se puede usar la sentencia \lstinline!del!:
+
+\begin{lstlisting}
+>>> del telefonos['Yayita']
+>>> telefonos
+{'Pepito': 5552437, 'Susanita': 4448139, 'Jaimito': 4448139}
+\end{lstlisting}
+
+Los diccionarios son iterables. Al iterar sobre un diccionario en un
+ciclo \lstinline!for!, se obtiene las llaves:
+
+\begin{lstlisting}
+>>> for k in telefonos:
+...     print k
+...
+Pepito
+Susanita
+Jaimito
+\end{lstlisting}
+
+Para iterar sobre las llaves, se usa \lstinline!d.values()!:
+
+\begin{lstlisting}
+>>> for v in telefonos.values():
+...     print v
+...
+5552437
+4448139
+4448139
+\end{lstlisting}
+
+Para iterar sobre las llaves y los valores simultáneamente, se usa el
+método \lstinline!d.items()!:
+
+\begin{lstlisting}
+>>> for k, v in telefonos.items():
+...     print 'El telefono de', k, 'es', v
+...
+El telefono de Pepito es 5552437
+El telefono de Susanita es 4448139
+El telefono de Jaimito es 4448139
+\end{lstlisting}
+
+También es posible crear listas de llaves o valores:
+
+\begin{lstlisting}
+>>> list(telefonos)
+['Pepito', 'Susanita', 'Jaimito']
+>>> list(telefonos.values())
+[5552437, 4448139, 4448139]
+\end{lstlisting}
+
+\lstinline!len(d)! entrega cuántos pares llave-valor hay en el
+diccionario:
+
+\begin{lstlisting}
+>>> numeros = {15: 'quince', 24: 'veinticuatro'}
+>>> len(numeros)
+2
+>>> len({})
+0
+\end{lstlisting}
+
+\lstinline!k in d! permite saber si la llave \lstinline!k! está en el
+diccionario \lstinline!d!:
+
+\begin{lstlisting}
+>>> patas = {'gato': 4, 'humano': 2, 'pulpo': 8,
+...          'perro': 4, 'ciempies': 100}
+>>> 'perro' in patas
+True
+>>> 'gusano' in patas
+False
+\end{lstlisting}
+
+Para saber si una llave \emph{no} está en el diccionario, se usa el
+operador \lstinline!not in!:
+
+\begin{lstlisting}
+>>> 'gusano' not in patas
+True
+\end{lstlisting}
+
+\section{Restricciones sobre las llaves}
+
+No se puede usar cualquier objeto como llave de un diccionario. Las
+llaves deben ser de un tipo de datos inmutable. Por ejemplo, no se puede
+usar listas:
+
+\begin{lstlisting}
+>>> d = {[1, 2, 3]: 'hola'}
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: unhashable type: 'list'
+\end{lstlisting}
+
+Típicamente, las llaves de los diccionarios suelen ser números, tuplas y strings.

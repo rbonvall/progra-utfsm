@@ -1,0 +1,55 @@
+\section{Compatibilidad entre personas}
+
+Para este problema, consideraremos las siguientes características de una
+persona:
+
+\begin{itemize}
+  \item nombre,
+  \item género (masculino o femenino),
+  \item edad,
+  \item música favorita, y
+  \item signo zodiacal.
+\end{itemize}
+
+En el programa a realizar, una persona será representada como una tupla:
+
+\begin{lstlisting}
+persona_1 = ('Pepito', 'M', 27, 'rock', 'leo')
+persona_2 = ('Yayita', 'F', 23, 'cumbia', 'virgo')
+\end{lstlisting}
+
+Dos personas son compatibles si:
+
+\begin{itemize}
+\item
+  son de géneros opuestos (un hombre y una mujer),
+\item
+  tienen menos de diez años de diferencia,
+\item
+  les gusta la misma música, y
+\item
+  sus signos zodiacales son compatibles.
+\end{itemize}
+
+Para saber los signos compatibles, existe un conjunto
+\lstinline!signos_compatibles! que tiene tuplas
+\lstinline!(signo_mujer, signo_hombre)!, que
+\href{../../\_static/signos.py}{usted puede descargar aquí}. Si una
+tupla está en el conjunto, significa que los signos son compatibles:
+
+\begin{lstlisting}
+>>> ('aries', 'tauro') in signos_compatibles
+True
+
+# Significa que mujer aries
+# es compatible con hombre tauro.
+
+>>> ('capricornio', 'libra') in signos_compatibles
+False
+
+# Significa que mujer capricornio
+# no es compatible con hombre libra.
+\end{lstlisting}
+
+Escriba la función \lstinline!compatibles(p1, p2)! que indique si dos
+personas son compatibles o no.

@@ -1,0 +1,60 @@
+\section{Transmisión de datos}
+
+En varios sistemas de comunicaciones digitales los datos viajan de
+manera serial (es decir, uno tras otro), y en bloques de una cantidad
+fija de bits (valores 0 o 1). La transmisión física de los datos no
+conoce de esta separación por bloques, y por lo tanto es necesario que
+haya programas que separen y organicen los datos recibidos.
+
+Los datos transmitidos los representaremos como arreglos cuyos valores
+son ceros y unos.
+
+\begin{enumerate}
+\item
+  Una secuencia de bits puede interpretarse como un número decimal. Cada
+  bit está asociado a una potencia de dos, partiendo desde el último
+  bit. Por ejemplo, la secuencia 01001 representa al número decimal 9,
+  ya que:
+
+  \[0\cdot2^4 +
+  1\cdot2^3 +
+  0\cdot2^2 +
+  0\cdot2^1 +
+  1\cdot2^0 = 9\]
+
+  Escriba la función \lstinline!numero_decimal(datos)! que entregue la
+  representación decimal de un arreglo de datos:
+
+\begin{lstlisting}
+>>> a = array([0, 1, 0, 0, 1])
+>>> numero_decimal(a)
+9
+\end{lstlisting}
+\item
+  Suponga que el tamaño de los bloques es de cuatro bits. Escriba la
+  función \lstinline!bloque_valido(datos)! que verifique que la
+  corriente de datos tiene una cantidad entera de bloques:
+
+\begin{lstlisting}
+>>> bloque_valido(array([0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0]))
+True
+>>> bloque_valido(array([0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1]))
+False
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!decodificar_bloques(datos)! que entregue
+  un arreglo con la representación entera de cada bloque. Si un bloque
+  está incompleto, esto debe ser indicado con el valor \lstinline!-1!:
+
+\begin{lstlisting}
+>>> a = array([0, 1, 0, 1])
+>>> b = array([0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0])
+>>> c = array([0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1])
+>>> decodificar_bloques(a)
+array([5])
+>>> decodificar_bloques(b)
+array([5, 7, 2])
+>>> decodificar_bloques(c)
+array([5, 7, 2, -1])
+\end{lstlisting}
+\end{enumerate}

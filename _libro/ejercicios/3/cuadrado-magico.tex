@@ -1,0 +1,52 @@
+\section{Cuadrado mágico}
+
+\begin{figure}
+  \centering
+  \input{diagramas/cuadrado-magico}
+  \caption{Cuadrado mágico de \(4\times 4\).}
+  \label{fig:magico}
+\end{figure}
+
+Un \emph{cuadrado mágico} es una disposición de números naturales en una
+tabla cuadrada, de modo que las sumas de cada columna, de cada fila y de
+cada diagonal son iguales.
+Por ejemplo, todas las filas, columnas y diagonales
+del cuadrado mágico de la figura~\ref{fig:magico} suman 34.
+
+
+Los cuadrados mágicos más populares son aquellos que tienen los números
+consecutivos desde el 1 hasta \(n^2\), donde \(n\) es el número de filas
+y de columnas del cuadrado.
+
+\begin{enumerate}
+\item
+  Escriba una función que reciba un arreglo cuadrado de enteros de
+  \(n \times n\), e indique si está conformado por los números consecutivos
+  desde 1 hasta \(n^2\):
+
+\begin{lstlisting}
+>>> from numpy import array
+>>> consecutivos(array([[3, 1, 5],
+...                     [4, 7, 2],
+...                     [9, 8, 6]]))
+True
+>>> consecutivos(array([[3, 1, 4],
+...                     [4, 0, 2],
+...                     [9, 9, 6]]))
+False
+\end{lstlisting}
+\item
+  Escriba una función que reciba un arreglo e indique si se trata o no
+  de un cuadrado mágico:
+
+\begin{lstlisting}
+>>> es_magico(array([[3, 1, 5],
+...                  [4, 7, 2],
+...                  [9, 8, 6]]))
+False
+>>> es_magico(array([[2, 7, 6],
+...                  [9, 5, 1],
+...                  [4, 3, 8]]))
+True
+\end{lstlisting}
+\end{enumerate}

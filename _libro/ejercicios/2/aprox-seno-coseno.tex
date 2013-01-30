@@ -1,0 +1,55 @@
+\section{Aproximación de seno y coseno}
+
+La funciones seno y coseno puede ser representadas mediante sumas
+infinitas:
+
+\[\text{sen}(x) =
+\frac{x^1}{1!} -
+\frac{x^3}{3!} +
+\frac{x^5}{5!} -
+\frac{x^7}{7!} +
+\cdots\]
+
+\[\text{cos}(x) =
+\frac{x^0}{0!} -
+\frac{x^2}{2!} +
+\frac{x^4}{4!} -
+\frac{x^6}{6!} +
+\cdots\]
+
+(Éstas son las
+\href{http://es.wikipedia.org/wiki/Serie\_de\_Taylor}{series de Taylor}
+en torno a \(x=0\) de las funciones seno y coseno, que usted estudiará en
+Matemáticas 2).
+
+Los términos de ambas sumas son cada vez más pequeños, por lo que
+tomando algunos de los primeros términos es posible obtener una buena
+aproximación.
+
+\begin{enumerate}
+\item
+  Escriba la función \lstinline!factorial_reciproco(n)!, que retorne el
+  valor \(1/n!\)
+\item
+  Escriba la función \lstinline!signo(n)! que retorne \(1\) cuando
+  \lstinline!n! es par y \(-1\) cuando \lstinline!n! es impar.
+\item
+  Escriba las funciones \lstinline!seno_aprox(x, m)! y
+  \lstinline!coseno_aprox(x, m)! que aproximen respectivamente el seno y
+  el coseno usando los \lstinline!m! primeros términos de las sumas
+  correspondientes. Las funciones deben llamar a las funciones
+  \lstinline!factorial_reciproco! y \lstinline!signo!.
+\item
+  Escriba la función \lstinline!error(f_exacta, f_aprox, m, x)! que
+  entregue cuál es la diferencia entre el valor exacto de la función
+  \lstinline!f_exacta! y su aproximación con \lstinline!m! términos
+  usando la función \lstinline!f_aprox! en \(x = \text{\lstinline!x!}\).
+
+  Por ejemplo, el error del seno en \(x=2\) al usar 20 términos se
+  obtendría así:
+
+\begin{lstlisting}
+>>> from math import sin
+>>> error(sin, seno_aprox, 20, 2)
+\end{lstlisting}
+\end{enumerate}

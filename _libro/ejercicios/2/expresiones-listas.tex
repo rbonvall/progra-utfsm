@@ -1,0 +1,32 @@
+\section{Expresiones con listas}
+
+Considere las siguientes listas:
+\begin{lstlisting}
+>>> a = [5, 1, 4, 9, 0]
+>>> b = range(3, 10) + range(20, 23)
+>>> c = [[1, 2], [3, 4, 5], [6, 7]]
+>>> d = ['perro', 'gato', 'jirafa', 'elefante']
+>>> e = ['a', a, 2 * a]
+\end{lstlisting}
+
+Sin usar el computador, indique cuál es el resultado y el tipo de las
+si\-guien\-tes expresiones. A continuación, verifique sus respuestas en el
+computador.
+\begin{itemize}
+  \item \lstinline!a[2]!
+  \item \lstinline!b[9]!
+  \item \lstinline!c[1][2]!
+  \item \lstinline!e[0] == e[1]!
+  \item \lstinline!len(c)!
+  \item \lstinline!len(c[0])!
+  \item \lstinline!len(e)!
+  \item \lstinline!c[-1]!
+  \item \lstinline!c[-1][+1]!
+  \item \lstinline!c[2:] + d[2:]!
+  \item \lstinline!a[3:10]!
+  \item \lstinline!a[3:10:2]!
+  \item \lstinline!d.index('jirafa')!
+  \item \lstinline!e[c[0][1]].count(5)!
+  \item \lstinline!sorted(a)[2]!
+  \item \lstinline!complex(b[0], b[1])!
+\end{itemize}

@@ -1,0 +1,87 @@
+\section{Polinomios}
+
+Un \emph{polinomio} de grado \(n\)
+es una función matemática de la forma:
+\[
+  p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n,
+\]
+donde \(x\) es el parámetro y \(a_0, a_1, \dots, a_n\) son números reales
+dados.
+
+Algunos ejemplos de polinomios son:
+\begin{itemize}
+ \item \(p(x) = 1 + 2x + x^2\),
+ \item \(q(x) = 4 - 17x\),
+ \item \(r(x) = -1 - 5x^3 + 3x^5\),
+ \item \(s(x) = 5x^{40} + 2x^{80}\).
+\end{itemize}
+Los grados de estos polinomios son, respectivamente, 2, 1, 5 y 80.
+
+Evaluar un polinomio significa reemplazar \(x\) por un valor y obtener el
+resultado. Por ejemplo, si evaluamos el polinomio \(p\) en el valor
+\(x = 3\), obtenemos el resultado:
+\[
+  p(3) = 1 + 2\cdot 3 + 3^2 = 16.
+\]
+
+Un polinomio puede ser representado como una lista con los valores
+\(a_0, a_1, \dots, a_n\). Por ejemplo, los polinomios anteriores pueden
+ser representados así en un programa:
+\begin{lstlisting}
+>>> p = [1, 2, 1]
+>>> q = [4, -17]
+>>> r = [-1, 0, 0, -5, 0, 3]
+>>> s = [0] * 40 + [5] + [0] * 39 + [2]
+\end{lstlisting}
+
+\begin{enumerate}
+
+  \item
+    Escriba la función \lstinline!grado(p)! que entregue el grado de un
+    polinomio:
+\begin{lstlisting}
+>>> grado(r)
+5
+>>> grado(s)
+80
+\end{lstlisting}
+
+  \item
+    Escriba la función \lstinline!evaluar(p, x)! que evalúe el polinomio
+    \lstinline!p! (representado como una lista) en el valor \lstinline!x!:
+\begin{lstlisting}
+>>> evaluar(p, 3)
+16
+>>> evaluar(q, 0.0)
+4.0
+>>> evaluar(r, 1.1)
+-2.82347
+>>> evaluar([4, 3, 1], 3.14)
+23.2796
+\end{lstlisting}
+
+  \item
+    Escriba la función \lstinline!sumar_polinomios(p1, p2)! que entregue
+    la suma de dos polinomios:
+\begin{lstlisting}
+>>> sumar_polinomios(p, r)
+[0, 2, 1, -5, 0, 3]
+\end{lstlisting}
+
+  \item
+    Escriba la función \lstinline!derivar_polinomio(p)! que entregue la
+    derivada del polinomio \lstinline!p!:
+\begin{lstlisting}
+>>> derivar_polinomio(r)
+[0, 0, -15, 0, 15]
+\end{lstlisting}
+
+  \item
+    Escriba la función \lstinline!multiplicar_polinomios(p1, p2)! que
+    entregue el producto de dos polinomios:
+\begin{lstlisting}
+>>> multiplicar_polinomios(p, q)
+[4, -9, -30, -17]
+\end{lstlisting}
+
+\end{enumerate}

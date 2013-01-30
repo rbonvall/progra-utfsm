@@ -1,0 +1,28 @@
+\section{Expresiones con conjuntos}
+
+Considere las siguientes asignaciones:
+\begin{lstlisting}
+>>> a = {5, 2, 3, 9, 4}
+>>> b = {3, 1}
+>>> c = {7, 5, 5, 1, 8, 6}
+>>> d = [6, 2, 4, 5, 5, 3, 1, 3, 7, 8]
+>>> e = {(2, 3), (3, 4), (4, 5)}
+>>> f = [{2, 3}, {3, 4}, {4, 5}]
+\end{lstlisting}
+
+Sin usar el computador, indique cuál es el resultado y el tipo de las
+si\-guien\-tes expresiones. A continuación, verifique sus respuestas en el
+computador.
+\begin{itemize}
+  \item \lstinline!len(c)!
+  \item \lstinline!len(set(d))!
+  \item \lstinline!a & (b | c)!
+  \item \lstinline!(a & b) | c!
+  \item \lstinline!c - a!
+  \item \lstinline!max(e)!
+  \item \lstinline!f[0] < a!
+  \item \lstinline!set(range(4)) & a!
+  \item \lstinline!(set(range(4)) & a) in f!
+  \item \lstinline!len(set('perro'))!
+  \item \lstinline!len({'perro'})!
+\end{itemize}

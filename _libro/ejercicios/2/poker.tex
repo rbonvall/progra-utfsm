@@ -1,0 +1,131 @@
+\section{Manos de póker}
+
+En los juegos de naipes, una carta tiene dos atributos:
+un valor (2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A)
+y un palo (♡, ♢, ♣, ♠).
+
+En un programa,
+el valor puede ser representado como un número del 1 al 13,
+y el palo como un string:
+♡ → \lstinline!'C'!,
+♢ → \lstinline!'D'!,
+♣ → \lstinline!'T'! y
+♠ → \lstinline!'P'!.
+
+Una carta puede ser representada como una tupla de dos elementos: el
+valor y el palo:
+
+\begin{lstlisting}
+carta1 = (5, 'T')
+carta2 = (10, 'D')
+\end{lstlisting}
+
+Para simplificar, se puede representar el as como un 1, y los «monos» J,
+Q y K como 11, 12 y 13:
+
+\begin{lstlisting}
+carta3 = (1, 'P')    # as de picas
+carta4 = (12, 'C')   # reina de corazones
+\end{lstlisting}
+
+En el juego de póker, una mano tiene cinco cartas, lo que en un programa
+vendría a ser un conjunto de cinco tuplas:
+
+\begin{lstlisting}
+mano = {(1, 'P'), (1, 'C'), (1, 'T'), (13, 'D'), (12, 'P')}
+\end{lstlisting}
+
+\begin{enumerate}
+\item
+  Un \emph{full} es una mano en que tres cartas tienen el mismo valor, y
+  las otras dos tienen otro valor común.
+  Por ejemplo,
+  A♠ A♡ 6♣ A♢ 6♢
+  es un full (tres ases y dos seis), pero
+  2♣ A♡ Q♡ A♢ 6♢
+  no.
+
+  Escriba la función que indique si la mano es un full:
+\begin{lstlisting}
+>>> a = {(1, 'P'), (1, 'C'), (6, 'T'), (1, 'D'), (6, 'D')}
+>>> b = {(2, 'T'), (1, 'C'), (12, 'C'), (1, 'D'), (6, 'D')}
+>>> es_full(a)
+True
+>>> es_full(b)
+False
+\end{lstlisting}
+
+\item
+  Un \emph{color} es una mano en que todas las cartas tienen el mismo
+  palo.
+  Por ejemplo,
+  8♠ K♠ 4♠ 9♠ 2♠
+  es un color (todas las cartas son picas), pero
+  Q♣ A♡ 5♡ 2♡ 2♢
+  no lo es.
+
+  Escriba la función que indique si la mano es un color:
+\begin{lstlisting}
+>>> a = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
+>>> b = {(12, 'T'), (1, 'C'), (5, 'C'), (2, 'C'), (2, 'D')}
+>>> es_color(a)
+True
+>>> es_color(b)
+False
+\end{lstlisting}
+
+\item
+  Una \emph{escalera} es una mano en que las cartas tienen valores
+  consecutivos. Por ejemplo,
+  4♠ 7♡ 3♡ 6♣ 5♣
+  es una escalera (tiene los valores 3, 4, 5, 6 y 7), pero
+  Q♣ 7♡ 3♡ Q♡ 5♣
+  no lo es.
+
+  Escriba la función que indique si la mano es una escalera:
+\begin{lstlisting}
+>>> a = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
+>>> b = {(12, 'T'), (7, 'C'), (3, 'C'), (12, 'C'), (5, 'T')}
+>>> es_escalera(a)
+True
+>>> es_escalera(b)
+False
+\end{lstlisting}
+
+\item
+  Una \emph{escalera de color} es una escalera en la que todas las
+  cartas tienen el mismo palo. Por ejemplo,
+  4♢ 7♢ 3♢ 6♢ 5♢
+  es una escalera de color (son sólo diamantes, y los valores
+  3, 4, 5, 6 y 7 son consecutivos).
+
+  Escriba la función que indique si la mano es una escalera de color:
+\begin{lstlisting}
+>>> a = {(4, 'P'), (7, 'C'), (3, 'C'), (6, 'T'), (5, 'T')}
+>>> b = {(8, 'P'), (13, 'P'), (4, 'P'), (9, 'P'), (2, 'P')}
+>>> c = {(4, 'D'), (7, 'D'), (3, 'D'), (6, 'D'), (5, 'D')}
+>>> es_escalera_de_color(a)
+False
+>>> es_escalera_de_color(b)
+False
+>>> es_escalera_de_color(c)
+True
+\end{lstlisting}
+
+\item
+  Escriba las funciones para identificar las demás manos del póker.
+
+\item
+  Escriba un programa que pida al usuario ingresar cinco cartas, y le
+  indique qué tipo de mano es:
+
+\begin{lstlisting}[language=testcase]
+Carta 1: `5D`
+Carta 2: `QT`
+Carta 3: `QD`
+Carta 4: `10P`
+Carta 5: `5C`
+Doble pareja
+\end{lstlisting}
+
+\end{enumerate}

@@ -1,0 +1,55 @@
+\section{Asistencia}
+
+La asistencia de los alumnos a clases puede ser llevada en una tabla
+como la siguiente:
+
+\begin{tabular}{l*{7}{c}}
+  \toprule
+    Clase    & 1  & 2  & 3  & 4  & 5  & 6  & 7  \\
+  \midrule
+    Pepito   & \checkmark & \checkmark & \checkmark &    &    &    &    \\
+    Yayita   & \checkmark & \checkmark & \checkmark &    & \checkmark &    & \checkmark \\
+    Fulanita & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+    Panchito & \checkmark & \checkmark & \checkmark &    & \checkmark & \checkmark & \checkmark \\
+  \bottomrule
+\end{tabular}
+
+En un programa, esta informacion puede ser representada usando listas:
+\begin{lstlisting}
+>>> alumnos = ['Pepito', 'Yayita', 'Fulanita', 'Panchito']
+>>> asistencia = [
+...  [True, True, True, False, False, False, False],
+...  [True, True, True, False, True,  False, True ],
+...  [True, True, True, True,  True,  True,  True ],
+...  [True, True, True, False, True,  True,  True ]]
+>>>
+\end{lstlisting}
+
+\begin{enumerate}
+\item
+  Escriba la función \lstinline!total_por_alumno(tabla)! que reciba como
+  parámetro la tabla de asistencia y retorne una lista con el número de
+  clases a las que asistió cada alumno:
+
+\begin{lstlisting}
+>>> total_por_alumno(asistencia)
+[3, 5, 7, 6]
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!total_por_clase(tabla)! que reciba como
+  parámetro la tabla de asistencia y retorne una lista con el número de
+  alumnos que asistió a cada clase:
+
+\begin{lstlisting}
+>>> total_por_clase(asistencia)
+[4, 4, 4, 1, 3, 2, 3]
+\end{lstlisting}
+\item
+  Escriba la función \lstinline!alumno_estrella(asistencia)! que indique
+  qué alumno asistió más a clases:
+
+\begin{lstlisting}
+>>> alumno_estrella(asistencia)
+'Fulanita'
+\end{lstlisting}
+\end{enumerate}

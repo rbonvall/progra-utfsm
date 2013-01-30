@@ -1,0 +1,106 @@
+\chapter{Hola mundo}
+
+El siguiente es un programa que le muestra al usuario el mensaje «Hola
+mundo»:
+
+Escriba este programa en su editor favorito. ¡No copie y pegue,
+escríbalo a mano! Así se irá familiarizando con la sintaxis del
+lenguaje. Guarde el programa con el nombre \lstinline!hola.c!.
+
+Compile el programa. Si el programa no compila, entonces cometió algún
+error al transcribirlo. Lea el mensaje de error del compilador, descubra
+los errores, y arregle el programa todas las veces necesarias hasta que
+compile y se ejecute correctamente.
+
+\section{Función main}
+
+En un programa en C, todas las instrucciones deben estar dentro de una
+función.
+
+Todos los programas deben tener una función con nombre \lstinline!main!.
+El código que está dentro de la función \lstinline!main! es lo que hace
+el programa cuando es ejecutado.
+
+La línea \lstinline!int main()! es la que indica que el código que viene
+a continuación, entre los paréntesis de llave (\lstinline!{! y
+\lstinline!}!) es parte de esta función.
+
+Cuando la función \lstinline!main! retorna un valor, entonces el
+programa se termina. El valor que debe retornar debe ser un entero (esto
+es lo que significa el \lstinline!int! de la definición). Si el programa
+se ejecuta correctamente, entonces debe retornarse cero. Si se retorna
+un valor distinto de cero, se está indicando que ocurrió algún error
+durante la ejecución del programa.
+
+Como regla general, al final de la función \lstinline!main! siempre debe
+ir un \lstinline!return 0!, como en el ejemplo.
+
+En C, todas las sentencias deben obligatoriamente terminar con un punto
+y coma.
+
+\section{Salida usando printf}
+
+La función \lstinline!printf! muestra un mensaje en la pantalla. El
+mensaje debe ser un string. Los strings literales se representan entre
+comillas dobles (¡nunca entre comillas simples!):
+
+\begin{lstlisting}
+"Hola mundo\n"
+\end{lstlisting}
+
+A diferencia del \lstinline!print! de Python, \lstinline!printf! no pone
+un salto de línea al final del mensaje. El salto de línea debe ser
+agregado explícitamente usando su representación \lstinline!\n!. Por
+ejemplo, el siguiente código también imprime el mensaje «Hola mundo» en
+una única línea, y pone un salto de línea al final:
+
+\begin{lstlisting}
+printf("Ho");
+printf("la mu");
+printf("ndo\n");
+\end{lstlisting}
+
+\section{Inclusión de cabeceras}
+
+Técnicamente, la función \lstinline!printf! no es parte del lenguaje
+(como lo es el \lstinline!print! de Python), sino que es parte de la
+\href{http://es.wikipedia.org/wiki/Biblioteca\_est\%C3\%A1ndar\_de\_C}{biblioteca
+estándar} de C.
+
+La biblioteca estándar es una colección de funciones, constantes y tipos
+que son comúnmente usados en la mayoría de los programas. Basta con
+tener instalado el compilador de C para tener toda la biblioteca
+estándar a disposición.
+
+Para poder usar una función en un programa, ella debe ser declarada en
+alguna parte del código. Afortunadamente, la biblioteca estándar provee
+\href{http://es.wikipedia.org/wiki/Archivo\_de\_cabecera}{archivos de
+cabecera} (\emph{header files}) que contienen las declaraciones de todas
+sus funciones, organizadas de acuerdo a su utilidad. Los archivos de
+cabecera suelen tener nombres terminados en la extensión \lstinline!.h!.
+
+La función \lstinline!printf! está declarada en el archivo de cabecera
+\lstinline!stdio.h!, que agrupa las funciones de entrada y salida
+(«\lstinline!io!») de la biblioteca estándar («\lstinline!std!»). Para
+poder usar la función, hay que incluir la cabecera usando la directiva
+\lstinline!#include!, tal como se muestra en el ejemplo.
+
+Más adelante veremos otros archivos de cabecera. También podremos crear
+nuestras propias bibliotecas, que requerirán sus respectivas cabeceras.
+
+\section{Ejercicios}
+
+Modifique el programa para que imprima el siguiente haiku:
+
+\begin{lstlisting}
+Al programar,
+cuando digo "hola mundo",
+aprendo C.
+\end{lstlisting}
+
+Puede hacerlo con un único \lstinline!printf! o con varios. Averigüe
+cómo hacer para imprimir las comillas.
+
+¿Qué ocurre si la función tiene un nombre diferente de \lstinline!main!?
+¿Qué ocurre si omite la línea del \lstinline!include!? ¿Qué ocurre si no
+pone el \lstinline!return 0!? Haga la prueba.

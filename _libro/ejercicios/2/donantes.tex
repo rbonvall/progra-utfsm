@@ -1,0 +1,50 @@
+\section{Donantes}
+
+Una institución de beneficiencia tiene un registro de las personas que
+han hecho donaciones en un archivo de registros llamado
+\lstinline!donantes.txt!.
+
+El archivo está ordenado por rut de menor a mayor. Para simplificar,
+vamos a suponer que los ruts tienen cinco dígitos, y no incluyen el
+dígito después de la raya.
+
+Por ejemplo, el contenido del archivo puede ser el siguiente:
+
+\begin{quote}
+\ctable[pos = H, center, botcap]{lll}
+{% notes
+}
+{% rows
+\FL
+Rut & Nombre & Monto
+\ML
+15274 & Fulana de Tal & 200
+\\\noalign{\medskip}
+15891 & Jean Dupont & 150
+\\\noalign{\medskip}
+16443 & Erika Mustermann & 400
+\\\noalign{\medskip}
+16504 & Perico Los Palotes & 80
+\\\noalign{\medskip}
+17004 & Jan Kowalski & 200
+\LL
+}
+\end{quote}
+
+Los problemas son los siguientes:
+
+\begin{enumerate}[1.]
+\item
+  Escribir una función que cree el archivo con los datos de la tabla.
+\item
+  Escribir una función que muestre los datos del archivo.
+\item
+  Escribir una función que pida al usuario ingresar un rut, y muestre
+  como salida el monto donado por esa persona.
+\item
+  Escribir una función que pida al usuario ingresar un rut, y elimine
+  del archivo al donante con ese rut.
+\item
+  Escribir un programa que pida al usuario ingresar los datos de un
+  donante, y los agregue al archivo.
+\end{enumerate}

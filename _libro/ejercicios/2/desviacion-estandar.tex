@@ -1,0 +1,35 @@
+\section{Desviación estándar}
+
+Desarrolle una función llamada \lstinline!desviacion_estandar(valores)!
+cuyo parámetro \lstinline!valores! sea una lista de números reales,
+que retorne la \emph{desviación estándar} de éstos,
+definida como:
+\[\sigma = \sqrt{\sum_{i} \frac{(x_i - \bar{x})^2}{n - 1}}\]
+donde \(n\) es la cantidad de valores, \(\bar{x}\) es el promedio de los
+valores, y los \(x_i\) son cada uno de los valores.
+
+Esto significa que hay que hacerlo siguiendo estos pasos:
+
+\begin{itemize}
+\item
+  calcular el promedio de los valores;
+\item
+  a cada valor hay que restarle el promedio, y el resultado elevarlo al
+  cuadrado;
+\item
+  sumar todos los valores obtenidos;
+\item
+  dividir la suma por la cantidad de valores; y
+\item
+  sacar la raíz cuadrada del resultado.
+\end{itemize}
+
+\begin{lstlisting}
+>>> desviacion_estandar([1.3, 1.3, 1.3])
+0.0
+>>> desviacion_estandar([4.0, 1.0, 11.0, 13.0, 2.0, 7.0])
+4.88535225615
+>>> desviacion_estandar([1.5, 9.5])
+5.65685424949
+\end{lstlisting}
+

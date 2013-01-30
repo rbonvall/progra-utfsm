@@ -1,0 +1,67 @@
+\section{Números de Fibonacci}
+
+Los
+\href{http://es.wikipedia.org/wiki/N\%C3\%BAmeros\_de\_Fibonacci}{números
+de Fibonacci} \(F_k\) son una sucesión de números naturales definidos de
+la siguiente manera:
+\begin{align*}
+  F_0 &= 0, \\
+  F_1 &= 1, \\
+  F_k &= F_{k - 1} + F_{k - 2} \qquad\text{cuando } k\ge 2.
+\end{align*}
+
+En palabras simples, la sucesión de Fibonacci comienza con 0 y 1, y los
+siguientes términos siempre son la suma de los dos anteriores.
+
+\begin{table}
+  \centering
+  \begin{tabular}{l*{14}{r}}
+    \toprule
+    $n$   & 0 & 1 & 2 & 3 & 4 & 5 & 6 &  7 &  8 &  9 & 10 & 11 &  12 & \ldots{} \\
+    \midrule
+    $F_n$ & 0 & 1 & 1 & 2 & 3 & 5 & 8 & 13 & 21 & 34 & 55 & 89 & 144 & \ldots{} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Los primeros términos \(F_n\) de la sucesión de Fibonacci.}
+  \label{tbl:fibonacci}
+\end{table}
+
+En la tabla~\ref{tbl:fibonacci} podemos ver los números de Fibonacci desde el
+0-ésimo hasta el duodécimo.
+
+\begin{enumerate}
+
+  \item
+    Escriba un programa que reciba como entrada un número entero \(n\),
+    y entregue como salida el \(n\)-ésimo número de Fibonacci:
+
+\begin{lstlisting}[language=testcase]
+Ingrese n: `11`
+F11 = 89
+\end{lstlisting}
+
+  \item
+    Escriba un programa que reciba como entrada un número entero e indique
+    si es o no un número de Fibonacci:
+
+\begin{lstlisting}[language=testcase]
+Ingrese un numero: `34`
+34 es numero de Fibonacci
+\end{lstlisting}
+
+\begin{lstlisting}[language=testcase]
+Ingrese un numero: `78`
+78 no es numero de Fibonacci
+\end{lstlisting}
+
+  \item
+    Escriba un programa que muestre los \(m\) primeros números de
+    Fibonacci, donde \(m\) es un número ingresado por el usuario:
+
+\begin{lstlisting}[language=testcase]
+Ingrese m: `7`
+Los 7 primeros numeros de Fibonacci son:
+0 1 1 2 3 5 8
+\end{lstlisting}
+
+\end{enumerate}

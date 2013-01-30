@@ -1,0 +1,167 @@
+\chapter{Calculadora simple}
+
+El siguiente programa es una calculadora simple:
+
+Al ejecutar el programa, primero uno ingresa la operación que será
+aplicada, que puede ser:
+
+\ctable[pos = H, center, botcap]{ll}
+{% notes
+}
+{% rows
+\FL
+Signo & Operación
+\\\noalign{\medskip}
+------- & ---------------
+\\\noalign{\medskip}
+\lstinline!+! & Suma
+\\\noalign{\medskip}
+\lstinline!-! & Resta
+\\\noalign{\medskip}
+\lstinline!*! & Multiplicación
+\\\noalign{\medskip}
+\lstinline!/! & División
+\\\noalign{\medskip}
+\lstinline!^! & Potencia
+\LL
+}
+
+La multiplicación también puede ser indicada con una \lstinline!x!
+minúscula.
+
+A continuación, se debe ingresar los dos operandos. Finalmente, el
+programa muestra el resultado de la operación.
+
+Escriba, compile y ejecute este programa.
+
+En este programa puede ver que es posible asignar un valor inicial a una
+variable al momento de declararla:
+
+\begin{lstlisting}
+float resultado = 1.0;
+int valido = 1;
+\end{lstlisting}
+
+También note que tanto en el \lstinline!if! como en el \lstinline!else!
+del final se ha omitido los paréntesis de llave (\lstinline!{}!) ya que
+en ambos casos hay incluída solamente una única sentencia.
+
+\section{Definición de funciones}
+
+Al principio del programa, se ha definido una función llamada
+\lstinline!potencia!. Ella recibe como parámetros la base (un número
+real) y el exponente (un entero), y retorna el resultado de elevar la
+base al exponente.
+
+En C no existe un operador «elevado a» (como el \lstinline!**! de
+Python), por lo que sí es útil definir una función como ésta.
+
+Es necesario especificar explícitamente cuál será el tipo del valor
+retornado (en este caso \lstinline!float!) y los tipos de cada uno de
+los parámetros (en el ejemplo, \lstinline!float! e \lstinline!int!).
+
+Las variables declaradas dentro de la función se llaman
+\textbf{variables locales}. Estas variables comienzan a existir al
+momento de llamar a la función, y desaparecen cuando la función termina.
+Son invisibles desde fuera de la función.
+
+En nuestro programa, las dos funciones \lstinline!main! y
+\lstinline!potencia! tienen una variable local llamada
+\lstinline!resultado!. Ambas variables son distintas, y sus valores
+respectivos están almacenados en regiones diferentes de la memoria.
+
+\section{Tipo char}
+
+El tipo \lstinline!char! se usa para representar caracteres (símbolos)
+solitarios. La variable \lstinline!op! que almacena la operación es de
+este tipo.
+
+Un valor de tipo \lstinline!char! se representa en un programa entre
+comillas simples. Por ejemplo, el signo más está representado como
+\lstinline!'+'!.
+
+Técnicamente, los valores de tipo \lstinline!char! son números enteros
+que están comprendidos entre −128 y 127. Cada número está asociado a un
+caracter a través de la
+\href{http://es.wikipedia.org/wiki/C\%C3\%B3digo\_ASCII\#Caracteres\_imprimibles\_ASCII}{tabla
+ASCII}. Los enteros y los caracteres asociados son intercambiables; por
+ejemplo, la expresión \lstinline!'m' == 109! es evaluada como verdadera.
+
+No hay que confundir un caracter con un string de largo uno:
+\lstinline!'a'! y \lstinline!"a"! son dos cosas distintas.
+
+\section{Sentencia switch}
+
+El \textbf{switch} es una sentencia de control condicional que permite
+indicar qué hacer si el resultado de una expresión es igual a alguno de
+ciertos valores constantes indicados
+
+Un ejemplo de uso de \lstinline!switch! es el siguiente:
+
+\begin{lstlisting}
+switch (expresion) {
+    case 1:
+        /* que hacer cuando expresion == 1 */
+
+    case 2:
+        /* que hacer cuando expresion == 2 */
+
+    default:
+        /* que hacer cuando la expresion no es igual
+         * a ninguno de los casos anteriores */
+}
+\end{lstlisting}
+
+Cuando el resultado de la expresión es igual a alguno de los valores
+indicados, la ejecución del programa salta al \lstinline!case! con ese
+valor. Si el valor con el resultado no existe, salta a
+\lstinline!default!.
+
+Hay que tener cuidado con una característica extraña del
+\lstinline!switch!: cuando se cumple un caso, los casos que vienen a
+continuación también se ejecutan. En este ejemplo:
+
+\begin{itemize}
+\item
+  si \lstinline!expresion == 1!, el programa saltará a
+  \lstinline!case 1!, y luego continuará con \lstinline!case 2! y
+  \lstinline!default!;
+\item
+  si \lstinline!expresion == 2!, el programa saltará a
+  \lstinline!case 2!, y luego continuará con \lstinline!default!;
+\item
+  si \lstinline!expresion! no es ni 1 ni 2, el programa saltará a
+  \lstinline!default!.
+\end{itemize}
+
+Para evitar que los casos siguientes sean ejecutados, debe ponerse un
+\lstinline!break! al final de cada caso. Esto es lo que se hizo en el
+programa de la calculadora.
+
+\section{Conversión de tipos}
+
+El segundo parámetro de la función \lstinline!potencia! es entero, pero
+los operandos ingresados por el usuario son almacenados como números
+reales.
+
+Para convertir el exponente de real a entero, basta con anteponer al
+valor el tipo entre paréntesis.
+
+En este caso particular, la conversión se hace truncando los decimales
+del número real. Así, si \lstinline!y! vale \lstinline!5.9!, entonces
+\lstinline!(int) y! vale \lstinline!5!. Para conversiones entre otros
+tipos, se siguen otras reglas diferentes.
+
+En inglés, el nombre de esta operación es \emph{cast}. Posiblemente
+usted escuche más de una vez a alguien refiriéndose a esta operación
+como «castear».
+
+\section{Ejercicios}
+
+Modifique el programa de modo que soporte una nueva operación: obtener
+el \href{http://es.wikipedia.org/wiki/Coeficiente\_binomial}{coeficiente
+binomial} entre \lstinline!x! e \lstinline!y!. Esta operación debe ser
+indicada con el símbolo \lstinline!b!:
+
+El coeficiente binomial es una operación entre números enteros. Tenga
+cuidado y use conversiones apropiadas.

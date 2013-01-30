@@ -1,0 +1,45 @@
+\section{Expresiones con estructuras de datos anidadas}
+
+Considere el siguiente trozo de programa:
+\begin{lstlisting}
+d = {
+  (1, 2): [{1, 2}, {3}, {1, 3}],
+  (2, 1): [{3}, {1, 2}, {1, 2, 3}],
+  (2, 2): [{}, {2, 3}, {1, 3}],
+}
+\end{lstlisting}
+Indique el valor y el tipo de las siguientes expresiones:
+\begin{itemize}
+  \item \lstinline!len(d)!
+    \hfill
+    (respuesta: el valor es \lstinline!3!,
+    el tipo es \lstinline!int!).
+  \item \lstinline!d[(1, 2)][2]!
+    \hfill
+    (respuesta: el valor es \lstinline!{1, 3}!,
+    el tipo es \lstinline!set!).
+  \item \lstinline!d[(2, 2)][0]!
+  \item \lstinline!(1, 2)!
+  \item \lstinline!(1, 2)[1]!
+  \item \lstinline!d[(1, 2)][1]!
+  \item \lstinline!d[(1, 2)]!
+  \item \lstinline!d[1, 2]!
+  \item \lstinline!len(d[2, 1])!
+  \item \lstinline!len(d[2, 1][1])!
+  \item \lstinline!d[2, 2][1] & d[1, 2][2]!
+  \item \lstinline!(d[2, 2] + d[2, 1])[4]!
+  \item \lstinline!max(map(len, d.values()))!
+  \item \lstinline!min(map(len, d[2, 1]))!
+  \item \lstinline!d[1, 2][-3] & d[2, 1][-2] & d[2, 2][-1]!
+  \item \lstinline!d[len(d[2, 1][1]), len(d[1, 2][-1])][1]!
+\end{itemize}
+Puede verificar sus respuestas usando la consola interactiva. Para
+obtener el tipo, use la función \lstinline!type!:
+\begin{lstlisting}
+>>> v = d[(1, 2)][2]
+>>> v
+{1, 3}
+>>> type(v)
+<class 'set'>
+\end{lstlisting}
+

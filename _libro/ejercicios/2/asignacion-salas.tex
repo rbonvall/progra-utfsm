@@ -1,0 +1,68 @@
+\section{Asignación de salas}
+
+El edificio de una escuela secundaria tiene tres pisos, cada uno con
+cinco salas de clases de tamaños diversos como se muestra en la
+siguiente tabla:
+
+\ctable[pos = H, center, botcap]{ll}
+{% notes
+}
+{% rows
+\FL
+\parbox[b]{0.10\columnwidth}{\raggedright
+} & \parbox[b]{0.35\columnwidth}{\raggedright
+Número de sala
+}
+\ML
+\parbox[t]{0.10\columnwidth}{\raggedright
+Piso
+} & \parbox[t]{0.35\columnwidth}{\raggedright
+01 \textbar{} 02 \textbar{} 03 \textbar{} 04 \textbar{} 05
+}
+\\\noalign{\medskip}
+\parbox[t]{0.10\columnwidth}{\raggedright
+\begin{quote}
+1
+\end{quote}
+} & \parbox[t]{0.35\columnwidth}{\raggedright
+30 \textbar{} 30 \textbar{} 15 \textbar{} 30 \textbar{} 40
+}
+\\\noalign{\medskip}
+\parbox[t]{0.10\columnwidth}{\raggedright
+\begin{quote}
+2
+\end{quote}
+} & \parbox[t]{0.35\columnwidth}{\raggedright
+25 \textbar{} 30 \textbar{} 25 \textbar{} 10 \textbar{} 110
+}
+\\\noalign{\medskip}
+\parbox[t]{0.10\columnwidth}{\raggedright
+\begin{quote}
+3
+\end{quote}
+} & \parbox[t]{0.35\columnwidth}{\raggedright
+62 \textbar{} 30 \textbar{} 40 \textbar{} 40 \textbar{} 30
+}
+\LL
+}
+
+Cada semestre, la escuela imparte 15 cursos que deben distribuirse en
+las salas.
+
+Desarrolle un programa que intente hacer una asignación de salas
+satisfactoria que acomode 15 clases, teniendo ya los datos de las
+capacidaddes de salas y tambien el tamaño de cada grupo de los cursos.
+
+Para los grupos que no puedan ser adecuadamente ubicados, el programa
+mostrará el mensaje:
+
+\begin{lstlisting}
+No hay sala disponible
+\end{lstlisting}
+
+además, el programa indicará el número de asientos vacíos en cada sala y
+en todo el edificio.
+
+Para realiar la asignación utilice la estrategia del \emph{mejor
+ajuste}: para una demanda dada se asigna la sala disponible cuyo exceso
+de capacidad sea mínimo.

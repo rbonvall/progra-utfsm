@@ -1,0 +1,63 @@
+\section{Caballo de ajedrez}
+
+Un tablero de ajedrez es una grilla de \(8\times 8\) casillas. Cada celda puede
+ser representada mediante las coordenadas de su fila y su columna,
+numeradas desde 1 hasta 8.
+
+\begin{figure}
+  \centering
+  \input{diagramas/caballo}
+  \caption{Ejemplos de los movimientos posibles del caballo de ajedrez.}
+  \label{fig:caballo-ajedrez}
+\end{figure}
+
+El \href{http://es.wikipedia.org/wiki/Caballo\_(ajedrez)}{caballo} es
+una pieza que se desplaza en forma de L: su movimiento consiste en
+avanzar dos casillas en una dirección y luego una casilla en una
+dirección perpendicular a la primera,
+como se muestra en la figura~\ref{fig:caballo-ajedrez}.
+
+Escriba un programa que reciba como entrada las coordenadas en que se
+encuentra un caballo, y entregue como salida todas las casillas hacia
+las cuales el caballo puede desplazarse.
+
+Todas las coordenadas mostradas deben estar dentro del tablero.
+
+Si la coordenada ingresada por el usuario es inválida, el programa debe
+indicarlo.
+
+\begin{lstlisting}[language=testcase]
+Ingrese coordenadas del caballo.
+Fila: `2`
+Columna: `8`
+
+El caballo puede saltar de 2 8 a:
+1 6
+3 6
+4 7
+\end{lstlisting}
+
+\begin{lstlisting}[language=testcase]
+Ingrese coordenadas del caballo.
+Fila: `3`
+Columna: `4`
+
+El caballo puede saltar de 3 4 a:
+1 3
+1 5
+2 2
+2 6
+4 2
+4 6
+5 3
+5 5
+\end{lstlisting}
+
+\begin{lstlisting}[language=testcase]
+Ingrese coordenadas del caballo.
+Fila: `1`
+Columna: `9`
+
+Posicion invalida.
+\end{lstlisting}
+

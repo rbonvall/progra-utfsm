@@ -1,0 +1,28 @@
+\section{Tabla de verdad}
+
+Un \emph{predicado lógico} es una función cuyos parámetros son
+booleanos y su resultado también es booleano.
+
+Escriba la función \lstinline!tabla_de_verdad(predicado)! que reciba
+como parámetro un predicado lógico de tres parámetros e imprima la tabla
+de verdad del predicado.:
+
+\begin{lstlisting}
+>>> def predicado(p, q, r):
+...    return (not p) and (q or r)
+...
+>>> tabla_verdad(predicado)
+p     q     r     predicado
+===== ===== ===== =========
+True  True  True  False
+True  True  False False
+True  False True  False
+True  False False False
+False True  True  True
+False True  False True
+False False True  True
+False False False False
+\end{lstlisting}
+
+Note que la función \lstinline!tabla_verdad! no retorna nada, sólo
+imprime la tabla.

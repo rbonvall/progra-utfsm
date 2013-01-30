@@ -1,0 +1,256 @@
+\chapter{Listas}
+
+Una \textbf{lista} es una colección ordenada de valores. Una lista puede
+contener cualquier cosa.
+
+En Python, el tipo de datos que representa a las listas se llama
+\lstinline!list!.
+
+\section{Cómo crear listas}
+
+Las dos maneras principales de crear una lista son:
+
+\begin{itemize}
+\item
+  usar una lista literal, con los valores entre corchetes:
+
+\begin{lstlisting}
+>>> primos = [2, 3, 5, 7, 11]
+>>> primos
+[2, 3, 5, 7, 11]
+>>> []
+[]
+>>> [1.0 + 2.0, 3.0 + 4.0 + 5.0]
+[3.0, 12.0]
+>>> ['hola ' + 'mundo', 24 * 7, True or False]
+['hola mundo', 168, True]
+\end{lstlisting}
+\end{itemize}
+
+\begin{itemize}
+\item
+  usar la función \lstinline!list! aplicada sobre un iterable:
+
+\begin{lstlisting}
+>>> list('hola')
+['h', 'o', 'l', 'a']
+>>> list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> list()
+[]
+\end{lstlisting}
+\end{itemize}
+
+\section{Operaciones sobre listas}
+
+\lstinline!len(l)! entrega el largo de la lista; es decir, cuántos
+elementos tiene:
+
+\begin{lstlisting}
+>>> colores = ['azul', 'rojo', 'verde', 'amarillo']
+>>> len(colores)
+4
+>>> len([True, True, True])
+3
+>>> len([])
+0
+\end{lstlisting}
+
+\lstinline!l[i]! entrega el \lstinline!i!-ésimo valor de la lista. El
+valor \lstinline!i! se llama \textbf{índice} del valor. Al igual que
+para los strings, los índices parten de cero:
+
+\begin{lstlisting}
+>>> colores = ['azul', 'rojo', 'verde', 'amarillo']
+>>> colores[0]
+'azul'
+>>> colores[3]
+'amarillo'
+\end{lstlisting}
+
+Además, es posible modificar el valor del \lstinline!i!-ésimo elemento:
+
+\begin{lstlisting}
+>>> colores[1] = 'negro'
+>>> colores
+['azul', 'negro', 'verde', 'amarillo']
+\end{lstlisting}
+
+Si el índice \lstinline!i! indica un elemento que no está en la lista,
+ocurre un \textbf{error de índice}:
+
+\begin{lstlisting}
+>>> colores[4]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+\end{lstlisting}
+
+Si el índice es negativo, los elementos se cuentan desde el final hacia
+atrás:
+
+\begin{lstlisting}
+>>> colores[-1]
+'amarillo'
+>>> colores[-4]
+'azul'
+\end{lstlisting}
+
+\lstinline!l.append(x)! agrega el elemento \lstinline!x! al final de la
+lista:
+
+\begin{lstlisting}
+>>> primos = [2, 3, 5, 7, 11]
+>>> primos.append(13)
+>>> primos.append(17)
+>>> primos
+[2, 3, 5, 7, 11, 13, 17]
+\end{lstlisting}
+
+Un comentario al margen: \lstinline!append! es un \textbf{método}. Los
+métodos son funciones que están dentro de un objeto. Cada lista tiene su
+propia función \lstinline!append!. Es importante tener esta distinción
+clara, ya que hay operaciones que están implementadas como funciones y
+otras como métodos.
+
+\lstinline!sum(x)! entrega la suma de los valores de la lista:
+
+\begin{lstlisting}
+>>> sum([1, 2, 1, -1, -2])
+1
+>>> sum([])
+0
+\end{lstlisting}
+
+\lstinline!l1 + l2! concatena las listas \lstinline!l1! y
+\lstinline!l2!:
+
+\begin{lstlisting}
+>>> list('perro') + [2, 3, 4]
+['p', 'e', 'r', 'r', 'o', 2, 3, 4]
+\end{lstlisting}
+
+\lstinline!l * n! repite \lstinline!n! veces la lista \lstinline!l!:
+
+\begin{lstlisting}
+>>> [3.14, 6.28, 9.42] * 2
+[3.14, 6.28, 9.42, 3.14, 6.28, 9.42]
+>>> [3.14, 6.28, 9.42] * 0
+[]
+\end{lstlisting}
+
+Para saber si un elemento \lstinline!x! está en la lista \lstinline!l!,
+se usa \lstinline!x in l!. La versión negativa de \lstinline!in! es
+\lstinline!not in!:
+
+\begin{lstlisting}
+>>> r = range(0, 20, 2)
+>>> r
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+>>> 12 in r
+True
+>>> 15 in r
+False
+>>> 15 not in r
+True
+\end{lstlisting}
+
+\lstinline!l[i:j]! es el operador de rebanado, que entrega una nueva
+lista que tiene desde el \lstinline!i!-ésimo hasta justo antes del
+\lstinline!j!-ésimo elemento de la lista \lstinline!l!:
+
+\begin{lstlisting}
+>>> x = [1.5, 3.3, 8.4, 3.1, 2.9]
+>>> x[2:4]
+[8.4, 3.1]
+\end{lstlisting}
+
+\lstinline!l.count(x)! cuenta cuántas veces está el elemento
+\lstinline!x! en la lista:
+
+\begin{lstlisting}
+>>> letras = list('paralelepipedo')
+>>> letras.count('p')
+3
+\end{lstlisting}
+
+\lstinline!l.index(x)! entrega cuál es el índice del valor
+\lstinline!x!:
+
+\begin{lstlisting}
+>>> colores = ['azul', 'rojo', 'verde', 'amarillo']
+>>> colores.index('verde')
+2
+>>> colores.index('fucsia')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 'fucsia' is not in list
+\end{lstlisting}
+
+\lstinline!l.remove(x)! elimina el elemento \lstinline!x! de la lista:
+
+\begin{lstlisting}
+>>> l = [7, 0, 3, 9, 8, 2, 4]
+>>> l.remove(2)
+>>> l
+[7, 0, 3, 9, 8, 4]
+\end{lstlisting}
+
+\lstinline!del l[i]! elimina el \lstinline!i!-ésimo elemento de la
+lista:
+
+\begin{lstlisting}
+>>> l = [7, 0, 3, 9, 8, 2, 4]
+>>> del l[2]
+>>> l
+[7, 0, 9, 8, 2, 4]
+\end{lstlisting}
+
+\lstinline!l.reverse()! invierte la lista:
+
+\begin{lstlisting}
+>>> l = [7, 0, 3, 9, 8, 2, 4]
+>>> l.reverse()
+>>> l
+[4, 2, 8, 9, 3, 0, 7]
+\end{lstlisting}
+
+\lstinline!l.sort()! ordena la lista:
+
+\begin{lstlisting}
+>>> l = [7, 0, 3, 9, 8, 2, 4]
+>>> l.sort()
+>>> l
+[0, 2, 3, 4, 7, 8, 9]
+\end{lstlisting}
+
+Para todas estas operaciones, siempre hay que tener muy claro si la
+lista es modificada o no. Por ejemplo, el rebanado no modifica la lista,
+sino que crea una nueva:
+
+\begin{lstlisting}
+>>> ramos = ['Progra', 'Mate', 'Fisica', 'Ed.Fisica']
+>>> ramos[:2]
+['Progra', 'Mate']
+>>> len(ramos)    # la lista sigue teniendo cuatro elementos
+4
+\end{lstlisting}
+
+\section{Iteración sobre una lista}
+
+Una lista es un objeto \textbf{iterable}. Esto significa que sus valores
+se pueden recorrer usando un ciclo \lstinline!for!:
+
+\begin{lstlisting}
+valores = [6, 1, 7, 8, 9]
+for i in valores:
+    print i ** 2
+\end{lstlisting}
+
+En cada iteración del \lstinline!for!, la variable \lstinline!i! toma
+uno de los valores de la lista, por lo que este programa imprime los valores
+36,
+1,
+49,
+64 y
+81.

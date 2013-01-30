@@ -1,0 +1,223 @@
+\chapter{Promedios de alumnos}
+
+El siguiente programa pide al usuario ingresar las notas de uno o más
+alumnos, y va mostrando los promedios de cada uno de ellos:
+
+El especificador de formato \lstinline!%.1f! sirve para mostrar un
+número \lstinline!float! con una cifra decimal.
+
+Por ejemplo, una ejecución del programa podría verse así:
+
+Escriba, compile y ejecute este programa.
+
+\section{Arreglos}
+
+Un \textbf{arreglo} es una región continua en la memoria del computador
+en la que se almacenan varios valores del mismo tipo. En C se usa los
+arreglos como colecciones de valores, tal como se hacía con las listas
+de Python.
+
+Un arreglo llamado \lstinline!notas! de tipo \lstinline!int! y tamaño
+\lstinline!10! se declara de la siguiente manera:
+
+\begin{lstlisting}
+int notas[10];
+\end{lstlisting}
+
+Los arreglos son mucho más limitados que las listas de Python. Todos los
+elementos de un arreglo deben ser del mismo tipo. El tamaño de un
+arreglo está fijo, y debe estar especificado al momento de compilar el
+programa. Por ejemplo, es ilegal hacer lo siguiente:
+
+\begin{lstlisting}
+int n;
+scanf("%d", &n);
+
+float arreglo[n];   /* ilegal */
+\end{lstlisting}
+
+Por lo tanto, lo que suele hacerse es declarar arreglos suficientemente
+grandes, y llevar la cuenta de cuántos elementos han sido asignados. Hay
+que tener en cuenta que, al igual que todas las variables, cada elemento
+del arreglo siempre tiene un valor, aunque no haya sido asignado
+explícitamente:
+
+\begin{lstlisting}
+int a[5];
+a[0] = 1000;
+a[1] = 700;
+printf("%d\n", a[2]); /* Esto algo va a imprimir,
+                         pero no sabemos que. */
+\end{lstlisting}
+
+Cada elemento está identificado a través de su índice, que es su
+posición dentro del arreglo. Los índices parten de cero: si el arreglo
+tiene diez elementos, entonces los índices van de cero a nueve. Cada
+elemento del arreglo puede ser considerado por sí solo como una
+variable, a la que se accede usando el índice entre corchetes:
+
+\begin{lstlisting}
+int a[10];
+/* Todas las instrucciones a continuacion
+   son validas. */
+a[0] = 5;
+a[1] = a[0] + 3;
+a[0]++;
+a[2] = (a[0] + a[1]) / 2.0;
+\end{lstlisting}
+
+Es ilegal tratar de acceder a un elemento del arreglo cuyo índice está
+fuera de los límites definidos por su tamaño. Lamentablemente, nunca se
+verifica que los índices utilizados sean válidos, ni al momento de
+compilar ni durante la ejecución del programa. Esto es una fuente de
+errores difíciles de detectar. Por ejemplo, al ejecutar este código el
+programa podría seguir funcionando, o también podría caerse
+estrepitosamente:
+
+\begin{lstlisting}
+int a[10];
+a[20] = 5;  /* ilegal */
+\end{lstlisting}
+
+\section{Funciones que reciben arreglos como parámetros}
+
+La función \lstinline!promedio! recibe como primer parámetro el arreglo
+con los valores que se van a promediar. Lo ideal es que la función sirva
+para arreglos de cualquier tamaño, no sólo para los de tamaño 10 como el
+del ejemplo.
+
+En la declaración del parámetro, hay que especificar que se trata de un
+arreglo, pero no su tamaño. Para esto, hay que poner los corchetes sin
+el tamaño:
+
+\begin{lstlisting}
+int valores[]
+\end{lstlisting}
+
+Sin embargo, cada vez que se llame a la función sí es importante conocer
+el tamaño del arreglo. De otro modo, sería imposible saber hasta qué
+valor promediar. Por lo tanto, es imprescindible pasar el tamaño del
+arreglo como parámetro adicional, que en esta función hemos bautizado
+como \lstinline!cantidad!.
+
+Note que aunque siempre estamos pasando el mismo arreglo
+\lstinline!notas! a la función, \lstinline!cantidad! no necesariamente
+tiene el mismo valor cada vez. Esto no es importante para la función,
+que operará sólo con la cantidad de valores que se le indica. Eso sí, la
+cantidad debe ser siempre menor o igual que el tamaño verdadero del
+arreglo (en este caso, 10).
+
+\section{Strings}
+
+En C no existe un tipo de datos para representar los strings, como el
+tipo \lstinline!str! de Python. En C, \textbf{un string es simplemente
+un arreglo de caracteres}.
+
+Ya vimos que los arreglos deben tener un tamaño fijo. Sin embargo, en
+general uno no conoce de antemano el largo de los textos que serán
+almacenado. Esto en teoría representa un problema: ¿cómo sabe el
+programa cuáles de los caracteres del arreglo son parte del texto, y
+cuáles son simplemente caracteres que están allí sólo porque el arreglo
+es más largo de lo que corresponde?
+
+La manera con la que C resuelve este problema es marcando el final del
+texto con un caracter especial representado como \lstinline!'\0'!.
+
+Por ejemplo, después de ingresar el nombre \lstinline!Perico!, el
+contenido del arreglo \lstinline!nombre! podría ser el siguiente:
+
+\begin{verbatim}
+                0   1   2   3   4   5   6   7   8  ...  19
+              +---+---+---+---+---+---+---+---+---+---+---+
+      nombre: | P | e | r | i | c | o | \0| x | m |...| q |
+              +---+---+---+---+---+---+---+---+---+---+---+
+\end{verbatim}
+
+Lo que hay a continuación del caracter \lstinline!'\0'! es irrelevante.
+Todas las operaciones de strings saben que el texto llega solamente
+hasta ahí.
+
+Como el texto \lstinline!"Perico"! tiene seis caracteres, se utilizará
+siete casillas del arreglo para almacenarlo. En general, siempre debe
+declararse un arreglo de caracteres cuyo tamaño sea uno más que el más
+largo de los textos que se podría almacenar.
+
+Para leer un string como entrada usando la función \lstinline!scanf!, se
+debe usar el descriptor de formato \lstinline!%s!. Una diferencia
+importante con la lectura de otros tipos de variables es que, al leer
+strings, el segundo parámetro del \lstinline!scanf! no debe ir con el
+operador \lstinline!&!, sino que debe ser la variable desnuda:
+
+\begin{lstlisting}
+scanf("%s", nombre);
+\end{lstlisting}
+
+Hay una razón técnica muy precisa para esto que será más sencilla de
+comprender una vez que sepamos más sobre la organización de la memoria,
+pero por ahora aceptémoslo como un dogma: los strings se leen sin
+\lstinline!&!, valores de otros tipos con \lstinline!&!.
+
+Todas las operaciones de strings están implementadas como funciones
+cuyas declaraciones están en la cabecera \lstinline!string.h!:
+
+\begin{itemize}
+\item
+  \lstinline!strlen(s)! retorna el largo del string \lstinline!s!, sin
+  incluir el \lstinline!'\0'! del final.
+\item
+  \lstinline!strcpy(s, t)! copia el contenido del string \lstinline!t!
+  en el string \lstinline!s!; es necesario que el tamaño del arreglo
+  \lstinline!s! sea al menor tan grande como \lstinline!t!.
+\item
+  \lstinline!strcat(s, t)! concatena el string \lstinline!t! al string
+  \lstinline!s!; por ejemplo, al ejecutar el siguiente código, el string
+  \lstinline!s! queda con el contenido \lstinline!"Hola mundo"!:
+
+\begin{lstlisting}
+char s[30], t[30];
+strcpy(s, "Hola ");
+strcpy(t, "mundo");
+strcat(s, t);
+printf("%s\n", s);         /* imprime Hola mundo */
+printf("%d\n", strlen(s)); /* imprime 10 */
+\end{lstlisting}
+\end{itemize}
+
+\section{Ciclo do-while}
+
+El \textbf{do while} es un ciclo similar al \lstinline!while!. El código
+es ejecutado mientras la condición es verdadera. La única diferencia es
+que la condición del \lstinline!do while! es evaluada al final de cada
+iteración, mientras que la del \lstinline!while! es evaluada al
+principio.
+
+En otras palabras, esto significa que el \lstinline!do while! hace algo
+una o más veces, mientras que el \lstinline!while! lo hace cero o más
+veces.
+
+En nuestro programa de ejemplo es apropiado usar \lstinline!do while!,
+ya que no tiene sentido ejecutar el programa para no calcular ningún
+promedio. Por lo tanto, calculamos uno y al final decidimos si queremos
+continuar.
+
+La sintaxis del ciclo \lstinline!do while! es:
+
+\begin{lstlisting}
+do {
+    /* ... */
+}
+while (condicion);
+\end{lstlisting}
+
+El punto y coma al final es obligatorio.
+
+\section{Ejercicios}
+
+¿Qué ocurre con el programa si intenta ingresar más de una palabra al
+ingresar el nombre de un alumno (por ejemplo el nombre completo:
+\lstinline!Perico Los Palotes!)? Haga la prueba. Investigue cómo hacer
+para que el programa sea capaz de leer un nombre con espacios.
+
+¿Qué ocurre si intenta ingresar un nombre que tenga más de 20
+caracteres, como por ejemplo \lstinline!Periiiiiiiiiiiiiiiiico!)? Haga
+la prueba.

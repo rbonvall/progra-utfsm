@@ -1,0 +1,90 @@
+\section{Gato}
+
+Desarrolle un programa para jugar al gato determinando \emph{la mejor}
+jugada del jugador que juega con las \emph{X}.
+
+Considere que todas las celdas están vacías y evalúe las jugadas
+potenciales en ellas utilizando la siguiente estrategia:
+
+\begin{itemize}
+\item
+  Si la jugada ocupa el tercer cuadro en una fila, columna o diagonal
+  que tenga ya dos X, sume 50 al marcador.
+\item
+  Si la jugada ocupa el tercer cuadro de una fila, columna o diagonal
+  con dos O, sume 25 al marcador.
+\item
+  Si tras la jugada una fila, columna o diagonal contiene dos X y un
+  blanco, sume 10.
+\item
+  Sume 8 si una fila, columna o diagonal queda, después de la jugada,
+  con una O, una X o un blanco.
+\item
+  Sume 4 por cada fila, columna o diagonal que quede con una X y el
+  resto blancos.
+\end{itemize}
+
+Seleccione la jugada de mayor marcador.
+
+Considerando el siguiente tablero:
+
+\includegraphics{../../diagramas/gato.png}
+
+Las posibles jugadas y sus marcadores son los siguientes:
+
+\ctable[pos = H, center, botcap]{ll}
+{% notes
+}
+{% rows
+\FL
+\parbox[b]{0.15\columnwidth}{\raggedright
+Posición
+} & \parbox[b]{0.18\columnwidth}{\raggedright
+Marcador
+}
+\ML
+\parbox[t]{0.15\columnwidth}{\raggedright
+\begin{quote}
+1
+\end{quote}
+} & \parbox[t]{0.18\columnwidth}{\raggedright
+10+8=18
+}
+\\\noalign{\medskip}
+\parbox[t]{0.15\columnwidth}{\raggedright
+\begin{quote}
+2
+\end{quote}
+} & \parbox[t]{0.18\columnwidth}{\raggedright
+10+8=18
+}
+\\\noalign{\medskip}
+\parbox[t]{0.15\columnwidth}{\raggedright
+\begin{quote}
+3
+\end{quote}
+} & \parbox[t]{0.18\columnwidth}{\raggedright
+10+10=20
+}
+\\\noalign{\medskip}
+\parbox[t]{0.15\columnwidth}{\raggedright
+\begin{quote}
+4
+\end{quote}
+} & \parbox[t]{0.18\columnwidth}{\raggedright
+\begin{quote}
+8=8
+\end{quote}
+}
+\\\noalign{\medskip}
+\parbox[t]{0.15\columnwidth}{\raggedright
+\begin{quote}
+5
+\end{quote}
+} & \parbox[t]{0.18\columnwidth}{\raggedright
+10+10+8=28
+}
+\LL
+}
+
+En este caso se elige la jugada 5.

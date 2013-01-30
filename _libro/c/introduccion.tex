@@ -1,0 +1,124 @@
+\chapter{El lenguaje C}
+
+Aprender a programar no es lo mismo que aprender un lenguaje de
+programación. Los conceptos importantes de la programación que aparecen
+en un lenguaje generalmente son traspasables a otro.
+
+En términos de paradigmas de programación, C y Python pueden ser
+clasificados como lenguajes procedurales, y como tales comparten muchos
+de sus componentes fundamentales: expresiones, variables, sentencias,
+condicionales, ciclos, funciones, etcétera.
+
+Sintácticamente, ambos lenguajes se ven diferentes a simple vista, pero
+veremos que muchas de las diferencias son sólo cosméticas:
+
+\begin{lstlisting}
+es_primo = True
+for d in range(2, n):
+    if n % d == 0:
+        es_primo = False
+        break
+\end{lstlisting}
+
+\begin{lstlisting}
+es_primo = 1;
+for (d = 2; d < n; d++) {
+    if (n % d == 0) {
+        es_primo = 0;
+        break;
+    }
+}
+\end{lstlisting}
+
+No todas las diferencias sintácticas son tan sutiles, y haremos énfasis
+en las que son más importantes.
+
+Más allá de las diferencias visibles en el código, ambos lenguajes son
+fundamentalmente diferentes en la manera que usan los recursos del
+computador. Estas diferencias no son apreciables con sólo mirar el
+código, sino que deben ser comprendidas desde el principio. La imagen
+mental que uno se forma sobre el programa que está escribiendo es mucho
+más importante al programar en C que en Python.
+
+Este apunte está diseñado para que usted pueda familiarizarse
+rápidamente con el lenguaje C después de haber aprendido Python. No nos
+detendremos mucho tiempo en aspectos que son similares a Python, sino
+que nos enfocaremos en las diferencias.
+
+\section{Compilación versus interpretación}
+
+Cuando programamos en Python, en cierto modo estamos haciendo trampa. El
+código Python no es ejecutado físicamente por el computador, sino por un
+\textbf{intérprete}, que es el programa que ejecuta los programas. El
+lenguaje C permite hacer «menos trampa», ya que sí es un medio para dar
+instrucciones al procesador.
+
+El \textbf{procesador} es el componente del computador que ejecuta las
+instrucciones de un programa.
+
+Las instrucciones que el procesador recibe no están en un lenguaje de
+programación como Python o C, sino en un
+\href{http://en.wikipedia.org/wiki/Machine\_code}{lenguaje de máquina},
+que es mucho más básico. Cada procesador viene diseñado «de fábrica»
+para entender su propio lenguaje de máquina, que se compone de
+\href{http://en.wikipedia.org/wiki/Instruction\_set}{instrucciones} muy
+básicas, como leer un dato, aplicar una operación sobre un par de datos
+o saltar a otra parte de la memoria para leer una nueva instrucción.
+
+Si bien es posible programar directamente en el lenguaje de la máquina,
+esto es extremadamente engorroso, y lo más probable es que usted nunca
+tenga la necesidad de hacerlo. Decimos que el lenguaje de máquina es
+\href{http://en.wikipedia.org/wiki/Low-level\_programming\_language}{de
+bajo nivel}, que en computación no es un término peyorativo, sino que
+significa que está tan ligado al hardware que no es lo suficientemente
+expresivo para describir algoritmos de manera abstracta.
+
+Es más razonable programar en un lenguaje de programación de alto nivel,
+que nos ofrezca abstracciones como: variables, condicionales, ciclos,
+funciones, tipos de datos, etc., que permiten describir algoritmos en
+términos más humanos y menos «ferreteros».
+
+C y Python son lenguajes tales, pero difieren en la forma en que son
+ejecutados. Python es un lenguaje pensado para ser interpretado,
+mientras que C debe ser compilado.
+
+Un programa llamado \textbf{compilador} recibe como entrada el código C
+y genera como salida código \textbf{binario} que el procesador es capaz
+de entender. El binario puede ser un programa ejecutable, o una
+biblioteca con funciones que pueden ser llamadas desde un programa.
+
+\begin{quote}
+  \texttt{.c}
+  \(\to\)
+  Compilador
+  \(\to\)
+  \texttt{BIN}
+  \(\to\)
+  Procesador
+\end{quote}
+
+A pesar de que el compilador actúa de intermediario entre nuestro código
+y el procesador, el lenguaje C sigue siendo de más bajo nivel que
+Python. El programador tiene la libertad (y la responsabilidad) de
+lidiar con aspectos de la ejecución que no son accesibles desde Python.
+Principalmente, la administración de la memoria que usa el programa.
+
+\section{Lecturas adicionales}
+
+Aquí termina el «bla bla» de este apunte. De aquí en adelante, usted
+estará probando y analizando línea por línea programas enteros escritos
+en C.
+
+Para profundizar acerca de la relevancia del lenguaje C y las razones
+para estudiarlo, le sugerimos leer los siguientes enlaces.
+
+\begin{itemize}
+\item
+  \href{http://c.learncodethehardway.org/book/learn-c-the-hard-wayli3.html}{The
+  Cartesian Dream of C}.
+\item
+  \href{http://en.wikibooks.org/wiki/C\_Programming/Why\_learn\_C\%3F}{Why
+  learn C} en el wikibook de C.
+\item
+  \href{http://c2.com/cgi/wiki?CeeLanguage}{C Language} en WikiWikiWeb.
+\end{itemize}

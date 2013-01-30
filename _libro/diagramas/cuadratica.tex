@@ -1,0 +1,44 @@
+\begin{tikzpicture}[node distance=9ex, auto]
+  % Place nodes
+  \node [node] (start) {inicio};
+  \node [io, below of=start] (read) { Leer $a$, $b$ y $c$ };
+  \node [stmt, below of=read] (disc) {$\Delta = b^2 - 4ac$};
+  \node [decision, below of=disc] (neg)  {¿$\Delta < 0$?};
+  \node [decision, below of=neg]  (zero) {¿$\Delta = 0$?};
+  \node [stmt, below of=zero, text width=10em] (pos-sol) {
+      $x_1 = (-b + \sqrt{\Delta})/2a$
+      $x_2 = (-b - \sqrt{\Delta})/2a$
+  };
+  \node [stmt, left of=pos-sol, node distance=12em] (zero-sol) {
+      $x_1 = -b/2a$
+  };
+  \node [io, below of=pos-sol,
+             node distance=20ex,
+             text width=18em] (pos-out) {
+      Escribir ``La primera solución es'', $x_1$ \\ %
+      Escribir ``La segunda solución es'', $x_2$
+  };
+  \node [io, below of=zero-sol, text width=10em] (zero-out) {
+      Escribir ``La única solución es'', $x_1$%
+  };
+  \node [io, right of=zero-out, text width=10em, node distance=23em] (neg-out) {
+      Escribir ``No hay soluciones''
+  };
+  \node [node, below of=pos-out] (end) {fin};
+
+  \path [conn] (start) -- (read);
+  \path [conn] (read)  -- (disc);
+  \path [conn] (disc)  -- (neg);
+  \path [conn] (neg.east)  -| node [very near start] {sí} (neg-out);
+  \path [conn] (neg)       -- node [near start] {no} (zero);
+  \path [conn] (zero.west) -| node [very near start] {sí} (zero-sol);
+  \path [conn] (zero)      -- node [near start] {no} (pos-sol);
+  \path [conn] (zero-sol) -- (zero-out);
+  \path [conn] (pos-sol)  -- (pos-out);
+
+  \node [inner sep=1pt] (m) at ($ (pos-out.south)!.5!(end.north) $) {};
+  \path [conn] (pos-out.south)  -- (end);
+  \path [conn] (neg-out.south)  |- (m);
+  \path [conn] (zero-out.south) |- (m);
+\end{tikzpicture}
+

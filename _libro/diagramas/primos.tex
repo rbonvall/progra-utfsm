@@ -1,0 +1,43 @@
+\newcommand{\str}[1]{\emph{``#1''}}
+
+\begin{tikzpicture}[node distance=8ex, auto]
+  \node [node]  (start) { inicio };
+  \node [io, below of=start]      (read)  { Leer \(n\) };
+  \node [stmt, below of=read]     (init)  { \shortstack{es\_primo = sí \\ \(d = 2\)} };
+  \node [decision, below of=init,
+         node distance=10ex]       (less)  { ¿\(d < n\)? };
+  \node [decision, right of=less,
+         node distance=9em]       (div)   { ¿\(d\mid n\)? };
+  \node [stmt, below of=div]       (isnt)  { es\_primo = no };
+  \node [stmt, right of=div, node distance=8em]      (incr)  { \(d = d + 1\) };
+  \node [decision, below of=less,
+         node distance=16ex]      (ispr)  { ¿es\_primo? };
+  \node [io, right of=ispr,
+         minimum width=0,
+         minimum height=0,
+         node distance=12em] (pr) { Escribir \(n\), ``es primo'' };
+  \node [io, below of=ispr,
+         minimum width=0,
+         minimum height=0,
+         node distance=9ex] (cp) { Escribir \(n\), ``es compuesto'' };
+  \node [node, below of=cp]  (end) { fin };
+
+  \path [conn] (start) -- (read);
+  \path [conn] (read)  -- (init);
+  \path [conn] (init)  -- (less);
+  \path [conn] (less)  -- node [very near start] {sí} (div);
+  \path [conn] (div)   -- node [very near start] {sí} (isnt);
+  \path [conn] (div)   -- node [near start] {no} (incr);
+  \path [conn] (less)  -- node [very near start] {no} (ispr);
+  \path [conn] (isnt) -- ++(-9em, 0);
+  \path [conn] (ispr) -- node [near start] {no} (cp);
+  \path [conn] (ispr) -- node [near start] {sí} (pr);
+  \path [conn] (cp) -- (end);
+
+  \node [inner sep=1pt] (m1) at ($ (init.south)!.4!(less.north) $) {};
+  \path [conn] (incr.north) |- (m1);
+  \node [inner sep=1pt] (m2) at ($ (cp.south)!.4!(end.north) $) {};
+  \path [conn] (pr) |- (m2);
+
+\end{tikzpicture}
+
