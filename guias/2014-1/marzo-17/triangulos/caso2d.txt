@@ -1,0 +1,4 @@
+Ingrese a: `3.14`
+Ingrese b: `3.14`
+Ingrese c: `3.14`
+El triangulo es equilatero.
