@@ -1,0 +1,10 @@
+A: `tijera`
+B: `tijera`
+Empate
+A: `papel`
+B: `papel`
+Empate
+A: `piedra`
+B: `tijera`
+La ganadora es A
+

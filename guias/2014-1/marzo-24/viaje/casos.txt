@@ -1,0 +1,14 @@
+# CASO 1
+Tramo: `15`
+Tramo: `30`
+Tramo: `87`
+Tramo: `0`
+Total: 2 horas y 12 minutos
+# FIN CASO 1
+
+# CASO 2
+Tramo: `51`
+Tramo: `17`
+Tramo: `0`
+Total: 1 hora y 8 minutos
+# FIN CASO 2
