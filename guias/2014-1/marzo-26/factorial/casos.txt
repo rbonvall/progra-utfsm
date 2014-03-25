@@ -1,0 +1,15 @@
+# CASO 1
+n: `5`
+n! = 120
+# FIN CASO 1
+
+# CASO 2
+n: `10`
+n! = 3628800
+# FIN CASO 2
+
+# CASO 3
+n: `0`
+n! = 1
+# FIN CASO 3
+
