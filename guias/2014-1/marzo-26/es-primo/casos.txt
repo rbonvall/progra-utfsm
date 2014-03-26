@@ -13,8 +13,8 @@ n: `32`
 No primo
 # FIN CASO 3
 
-# CASO CUANTOS
-Cantidad de primos: `15`
-2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
-# FIN CASO CUANTOS
+# CASO 4
+n: `7814623`
+Primo
+# FIN CASO 4
 

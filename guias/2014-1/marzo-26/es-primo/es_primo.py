@@ -1,13 +1,10 @@
-m = int(raw_input('Menores que: '))
-
-print 'Los primos menores que', m, 'son:'
-for n in range(m):
-    c = 0
-    for d in range(1, n + 1):
-        if n % d == 0:
-            c += 1
-    if c == 2:
-        print n,
-
-print
+n = int(raw_input('n: '))
+c = 0
+for d in range(1, n + 1):
+    if n % d == 0:
+        c += 1
+if c == 2:
+    print 'Es primo'
+else:
+    print 'No es primo'
 

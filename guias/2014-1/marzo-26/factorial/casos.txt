@@ -13,3 +13,8 @@ n: `0`
 n! = 1
 # FIN CASO 3
 
+# CASO 4
+n: `12`
+n! = 479001600
+# FIN CASO 4
+
