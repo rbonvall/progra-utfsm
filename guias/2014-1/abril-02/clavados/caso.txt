@@ -1,0 +1,10 @@
+Nombre: `Pepe Piqueros`
+Grado de dificultad: `3.0`
+Juez 1: `5.0`
+Juez 2: `5.5`
+Juez 3: `4.0`
+Juez 4: `5.0`
+Juez 5: `4.5`
+Juez 6: `5.5`
+Juez 7: `5.0`
+El puntaje total es 45.0
