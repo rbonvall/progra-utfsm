@@ -1,0 +1,6 @@
+Ingrese oracion: `viva la programacion`
+a aparece 4 veces
+e aparece 0 veces
+i aparece 2 veces
+o aparece 2 veces
+u aparece 0 veces
