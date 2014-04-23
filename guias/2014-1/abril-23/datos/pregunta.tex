@@ -1,0 +1,21 @@
+Escriba un programa que muestre el promedio,
+la desviación estándar y la mediana
+de los datos ingresados por el usuario.
+El programa debe verse así:
+
+\begin{minipage}[t]{.60\textwidth}
+  \lstinputlisting[language=testcase,frame=single]{datos/caso.txt}
+\end{minipage}
+
+La desviación estándar es la raíz cuadrada
+del promedio de los cuadrados
+de las diferencias entre cada dato y el promedio:
+\[
+  \sigma = \sqrt{
+    \frac{1}{N} \sum_{i=0}^{N - 1}(x_i - \bar x)^2
+  }
+\]
+
+La mediana es aquel dato para el que hay
+la misma cantidad de otros datos mayores que él
+y menores que él.
