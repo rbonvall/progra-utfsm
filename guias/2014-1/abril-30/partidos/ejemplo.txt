@@ -1,0 +1,4 @@
+>>> puntos('Chile', partidos)
+6
+>>> puntos('Suiza', partidos)
+4
