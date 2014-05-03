@@ -1,4 +1,4 @@
-TEXFILES = libro.tex
+TEXFILES = libro.tex libro-kindle.tex
 PDFFILES = $(TEXFILES:.tex=.pdf)
 
 all: pdf
