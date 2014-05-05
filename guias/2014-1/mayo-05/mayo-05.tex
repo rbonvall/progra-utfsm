@@ -1,0 +1,44 @@
+\documentclass[12pt,spanish]{article}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{textcomp}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\input{../../../latex/definiciones.tex}
+
+\geometry{
+  papersize={512px,384px},
+  hmargin=2cm,
+  vmargin=1cm
+}
+
+\begin{document}
+  \thispagestyle{empty}
+  \pagestyle{empty}
+  \section*{Lunes 5 de mayo de 2014}
+
+  \begin{certamen}[start=0]
+    \item
+      \input{programitas/pregunta}
+      \newpage
+    \item
+      \input{varias/pregunta}
+      \newpage
+    \item
+      \input{temperaturas/pregunta}
+      \newpage
+    \item
+      \input{partidos/pregunta}
+      \newpage
+  \end{certamen}
+\end{document}
+

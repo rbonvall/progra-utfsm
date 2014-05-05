@@ -1,0 +1,44 @@
+Los resultados de un campeonato de fútbol
+se pueden almacenar en un diccionario
+en que las llaves son los partidos
+(tuplas de dos equipos)
+y cuyos valores son los resultados
+(tuplas con los goles anotados por los equipos):
+
+\lstinputlisting[linerange=PARTIDOS-FIN\ PARTIDOS]{partidos/campeonato.py}
+
+\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+  \item
+    Escriba la función \texttt{puntos(equipo, partidos)}
+    que entregue la cantidad de puntos obtenida por el equipo
+    en el campeonato:
+    \lstinputlisting[linerange=PUNTOS-FIN\ PUNTOS]{partidos/ejemplo.txt}
+
+  \newpage
+  \item
+    Escriba la función \verb!obtener_equipos(campeonato)!
+    que retorne la lista de los equipos que participan
+    en el campeonato:
+
+    \lstinputlisting[linerange=OBTENER\ EQUIPOS-FIN\ OBTENER\ EQUIPOS]{partidos/ejemplo.txt}
+
+  \item
+    Escriba la función \verb!calcular_tabla(campeonato)!
+    que retorne un diccionario con los puntos
+    que obtuvo cada equipo:
+
+    \lstinputlisting[linerange=CALCULAR\ TABLA-FIN\ CALCULAR\ TABLA]{partidos/ejemplo.txt}
+
+  \item
+    Escriba la función \verb!determinar_campeon(campeonato)!
+    que retorne el nombre del equipo que obtuvo más puntos.
+    Si hay varios equipos empatados en el primer lugar,
+    debe retornar cualquiera de ellos.
+
+  \item
+    El módulo \verb!chile2001! contiene un diccionario
+    con todos los partidos del campeonato chileno del año 2001.
+    Escriba un programa que muestre el nombre del equipo
+    que fue el campeón en ese año.
+
+\end{enumerate}
