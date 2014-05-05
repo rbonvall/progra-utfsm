@@ -1,7 +1,7 @@
 # PUNTOS
->>> puntos('Chile', partidos)
+>>> puntos('Chile', campeonato)
 6
->>> puntos('Suiza', partidos)
+>>> puntos('Suiza', campeonato)
 4
 # FIN PUNTOS
 
