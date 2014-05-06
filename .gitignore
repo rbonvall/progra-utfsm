@@ -6,5 +6,6 @@
 *.pdf
 *.aux
 *.log
+*.out
 _build/
 _static/jsMath
