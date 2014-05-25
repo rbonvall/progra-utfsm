@@ -226,3 +226,13 @@ lineas = {
         'Vicente Valdés',
     ],
 }
+
+colores = {
+    '1': 'firebrick',
+    '2': 'gold',
+    '3': 'saddlebrown',
+    '4': 'darkslateblue',
+    '4A': 'dodgerblue',
+    '5': 'forestgreen',
+    '6': 'purple',
+}
