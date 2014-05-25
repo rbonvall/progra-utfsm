@@ -2,8 +2,6 @@
 # SALIDA
 San Pablo es combinacion entre 1 y 5
 Baquedano es combinacion entre 1 y 5
-Tobalaba es combinacion entre 1 y 4
-Santa Ana es combinacion entre 2 y 5
 La Cisterna es combinacion entre 2 y 4A
 ...
 # FIN SALIDA
