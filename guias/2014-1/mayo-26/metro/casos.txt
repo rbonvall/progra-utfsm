@@ -1,0 +1,20 @@
+>>> es_estacion_combinacion('Baquedano')
+True
+>>> es_estacion_combinacion('San Pablo')
+True
+>>> es_estacion_combinacion('Escuela Militar')
+False
+
+>>> es_estacion_terminal('Plaza de Puente Alto')
+True
+>>> es_estacion_terminal('Tobalaba')
+True
+>>> es_estacion_terminal('Escuela Militar')
+False
+
+>>> misma_linea('Baquedano', 'Bellas Artes')
+True
+>>> misma_linea('Baquedano', 'Los Dominicos')
+True
+>>> misma_linea('Baquedano', 'Franklin')
+False
