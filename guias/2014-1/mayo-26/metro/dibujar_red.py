@@ -64,9 +64,26 @@ def dibujar_estaciones():
         else:
             dibujar_circunferencia(x, y, 5)
 
+def escribir_nombres():
+    up()
+    speed('slowest')
+
+    for L in ['2', '4']:
+        color(colores[L])
+
+        for est in lineas[L]:
+            lat, lon = estaciones[est]
+            x, y = escalar(lat, lon)
+            goto(x + 10, y - 5)
+            down()
+            write(est)
+            up()
+
+
 if __name__ == '__main__':
     dibujar_lineas()
     dibujar_estaciones()
+    escribir_nombres()
     color('black')
     up()
     home()
