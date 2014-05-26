@@ -1,3 +1,10 @@
+>>> lineas_a_las_que_pertenece('San Pablo')
+set(['1', '5'])
+>>> lineas_a_las_que_pertenece('Santa Julia')
+set(['4A'])
+>>> lineas_a_las_que_pertenece('San Pancracio')
+set([])
+
 >>> es_estacion_combinacion('Baquedano')
 True
 >>> es_estacion_combinacion('San Pablo')
@@ -18,10 +25,3 @@ True
 True
 >>> misma_linea('Baquedano', 'Franklin')
 False
-
->>> lineas_a_las_que_pertenece('San Pablo')
-set(['1', '5'])
->>> lineas_a_las_que_pertenece('Santa Julia')
-set(['4A'])
->>> lineas_a_las_que_pertenece('San Pancracio')
-set([])
