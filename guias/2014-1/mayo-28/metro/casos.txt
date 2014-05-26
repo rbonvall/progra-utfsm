@@ -18,3 +18,10 @@ True
 True
 >>> misma_linea('Baquedano', 'Franklin')
 False
+
+>>> lineas_a_las_que_pertenece('San Pablo')
+set(['1', '5'])
+>>> lineas_a_las_que_pertenece('Santa Julia')
+set(['4A'])
+>>> lineas_a_las_que_pertenece('San Pancracio')
+set([])
