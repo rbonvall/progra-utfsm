@@ -11,9 +11,8 @@ from metro import estaciones
 
 for a in estaciones:
     for b in estaciones:
-        if a != b:
-            en_comun = set(estaciones[a]) & set(estaciones[b])
-            for estacion in en_comun:
-                print estacion, 'es combinacion entre', a, 'y', b
-
-
+        if a >= b:
+            continue
+        en_comun = set(estaciones[a]) & set(estaciones[b])
+        for estacion in en_comun:
+            print estacion, 'es combinacion entre', a, 'y', b
