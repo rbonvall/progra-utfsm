@@ -3,6 +3,13 @@ from time import sleep
 from metro import coordenadas, estaciones, colores
 from figuras import *
 
+def lineas_a_las_que_pertenece(est):
+    ls = set()
+    for L in estaciones:
+        if est in estaciones[L]:
+            ls.add(L)
+    return ls
+
 def es_estacion_terminal(est):
     for L in estaciones:
         linea = estaciones[L]
@@ -11,26 +18,11 @@ def es_estacion_terminal(est):
     return False
 
 def es_estacion_combinacion(est):
-    c = 0
-    for L in estaciones:
-        linea = estaciones[L]
-        if est in linea:
-            c += 1
-    return c > 1
+    return len(lineas_a_las_que_pertenece(est)) > 1
 
 def misma_linea(est1, est2):
-    for L in estaciones:
-        linea = estaciones[L]
-        if est1 in linea and est2 in linea:
-            return True
-    return False
-
-def lineas_a_las_que_pertenece(est):
-    ls = set()
-    for L in estaciones:
-        if est in estaciones[L]:
-            ls.add(L)
-    return ls
+    c = lineas_a_las_que_pertenece(est1) & lineas_a_las_que_pertenece(est2)
+    return len(c) > 0
 
 def escalar(lat, lon):
     x = 2000 * (lon + 70.6)
