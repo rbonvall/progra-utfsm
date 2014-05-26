@@ -7,7 +7,7 @@ Mas al oeste: Santiago Bueras
 # FIN SALIDA
 '''
 
-from metro import estaciones
+from metro import coordenadas
 
 inf = float('inf')
 min_lat = +inf
@@ -15,20 +15,20 @@ max_lat = -inf
 min_lon = +inf
 max_lon = -inf
 
-for est in estaciones:
-    lat, lon = estaciones[est]
+for estacion in coordenadas:
+    lat, lon = coordenadas[estacion]
     if lat < min_lat:
         min_lat = lat
-        s = est
+        s = estacion
     if lat > max_lat:
         max_lat = lat
-        n = est
+        n = estacion
     if lon < min_lon:
         min_lon = lon
-        o = est
+        o = estacion
     if lon > max_lon:
         max_lon = lon
-        e = est
+        e = estacion
 
 print 'Mas al norte:', n
 print 'Mas al sur:', s

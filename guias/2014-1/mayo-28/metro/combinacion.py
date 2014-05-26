@@ -7,12 +7,12 @@ La Cisterna es combinacion entre 2 y 4A
 # FIN SALIDA
 '''
 
-from metro import lineas
+from metro import estaciones
 
-for a in lineas:
-    for b in lineas:
+for a in estaciones:
+    for b in estaciones:
         if a != b:
-            en_comun = set(lineas[a]) & set(lineas[b])
+            en_comun = set(estaciones[a]) & set(estaciones[b])
             for estacion in en_comun:
                 print estacion, 'es combinacion entre', a, 'y', b
 

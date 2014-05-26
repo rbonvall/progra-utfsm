@@ -1,28 +1,28 @@
 from turtle import *
 from time import sleep
-from metro import estaciones, lineas, colores
+from metro import coordenadas, estaciones, colores
 from figuras import *
 
 
 def es_estacion_terminal(est):
-    for L in lineas:
-        estaciones = lineas[L]
-        if est == estaciones[0] or est == estaciones[-1]:
+    for L in estaciones:
+        linea = estaciones[L]
+        if est == linea[0] or est == linea[-1]:
             return True
     return False
 
 def es_estacion_combinacion(est):
     c = 0
-    for L in lineas:
-        estaciones = lineas[L]
-        if est in estaciones:
+    for L in estaciones:
+        linea = estaciones[L]
+        if est in linea:
             c += 1
     return c > 1
 
 def misma_linea(est1, est2):
-    for L in lineas:
-        estaciones = lineas[L]
-        if est1 in estaciones and est2 in estaciones:
+    for L in estaciones:
+        linea = estaciones[L]
+        if est1 in linea and est2 in linea:
             return True
     return False
 
@@ -36,14 +36,15 @@ def dibujar_lineas():
     speed('slowest')
     width(5)
 
-    for L in lineas:
+    for L in estaciones:
+        linea = estaciones[L]
         print 'Linea', L
         up()
         color(colores[L])
-        for est in lineas[L]:
+        for est in linea:
             print 'Estacion', est
             #sleep(0.1)
-            lat, lon = estaciones[est]
+            lat, lon = coordenadas[est]
             x, y = escalar(lat, lon)
             goto(x, y)
             down()
@@ -54,8 +55,8 @@ def dibujar_estaciones():
     speed('fastest')
     width(3)
 
-    for est in estaciones:
-        lat, lon = estaciones[est]
+    for est in coordenadas:
+        lat, lon = coordenadas[est]
         x, y = escalar(lat, lon)
         if es_estacion_combinacion(est):
             dibujar_cuadrado(x, y, 8)
@@ -71,8 +72,8 @@ def escribir_nombres():
     for L in ['2', '4']:
         color(colores[L])
 
-        for est in lineas[L]:
-            lat, lon = estaciones[est]
+        for est in estaciones[L]:
+            lat, lon = coordenadas[est]
             x, y = escalar(lat, lon)
             goto(x + 10, y - 5)
             down()
