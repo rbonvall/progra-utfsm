@@ -1,0 +1,14 @@
+Numero de alumnos: `3`
+
+Nombre alumno 1: `Isaac Newton`
+Ingrese las notas de Isaac: `98 94 77`
+
+Nombre alumno 2: `Nikola Tesla`
+Ingrese las notas de Nikola: `100 68 94 88`
+
+Nombre alumno 3: `Albert Einstein`
+Ingrese las notas de Albert: `83 85`
+
+El promedio de Isaac es 89.67
+El promedio de Nikola es 87.50
+El promedio de Albert es 84.00
