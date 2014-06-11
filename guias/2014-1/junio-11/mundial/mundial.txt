@@ -1,0 +1,48 @@
+A,Brasil,Croacia,2014/6/12,17:00,Sao Paulo
+A,Mexico,Camerun,2014/6/13,13:00,Natal
+B,Espana,Paises Bajos,2014/6/13,16:00,Salvador
+B,Chile,Australia,2014/6/13,18:00,Cuiaba
+C,Colombia,Grecia,2014/6/14,13:00,Belo Horizonte
+C,Costa de Marfil,Japon,2014/6/14,22:00,Recife
+D,Uruguay,Costa Rica,2014/6/14,16:00,Fortaleza
+D,Inglaterra,Italia,2014/6/14,18:00,Manaos
+E,Suiza,Ecuador,2014/6/15,13:00,Brasilia
+E,Francia,Honduras,2014/6/15,16:00,Porto Alegre
+F,Argentina,Bosnia y Herzegovina,2014/6/15,19:00,Rio de Janeiro
+F,Iran,Nigeria,2014/6/16,16:00,Curitiba
+G,Alemania,Portugal,2014/6/16,13:00,Salvador
+G,Ghana,Estados Unidos,2014/6/16,19:00,Natal
+H,Belgica,Argelia,2014/6/17,13:00,Belo Horizonte
+H,Rusia,Corea del Sur,2014/6/17,18:00,Cuiaba
+A,Brasil,Mexico,2014/6/17,16:00,Fortaleza
+A,Camerun,Croacia,2014/6/18,18:00,Manaos
+B,Espana,Chile,2014/6/18,16:00,Rio de Janeiro
+B,Australia,Paises Bajos,2014/6/18,13:00,Porto Alegre
+C,Colombia,Costa de Marfil,2014/6/19,13:00,Brasilia
+C,Japon,Grecia,2014/6/19,19:00,Natal
+D,Uruguay,Inglaterra,2014/6/19,16:00,Sao Paulo
+D,Italia,Costa Rica,2014/6/20,13:00,Recife
+E,Suiza,Francia,2014/6/20,16:00,Salvador
+E,Honduras,Ecuador,2014/6/20,19:00,Curitiba
+F,Argentina,Iran,2014/6/21,13:00,Belo Horizonte
+F,Nigeria,Bosnia y Herzegovina,2014/6/21,18:00,Cuiaba
+G,Alemania,Ghana,2014/6/21,16:00,Fortaleza
+G,Estados Unidos,Portugal,2014/6/22,18:00,Manaos
+H,Belgica,Rusia,2014/6/22,13:00,Rio de Janeiro
+H,Corea del Sur,Argelia,2014/6/22,16:00,Porto Alegre
+A,Camerun,Brasil,2014/6/23,17:00,Brasilia
+A,Croacia,Mexico,2014/6/23,17:00,Recife
+B,Australia,Espana,2014/6/23,13:00,Curitiba
+B,Paises Bajos,Chile,2014/6/23,13:00,Sao Paulo
+C,Japon,Colombia,2014/6/24,16:00,Cuiaba
+C,Grecia,Costa de Marfil,2014/6/24,17:00,Fortaleza
+D,Italia,Uruguay,2014/6/24,13:00,Natal
+D,Costa Rica,Inglaterra,2014/6/24,13:00,Belo Horizonte
+E,Honduras,Suiza,2014/6/25,16:00,Manaos
+E,Ecuador,Francia,2014/6/25,17:00,Rio de Janeiro
+F,Nigeria,Argentina,2014/6/25,13:00,Porto Alegre
+F,Bosnia y Herzegovina,Iran,2014/6/25,13:00,Salvador
+G,Estados Unidos,Alemania,2014/6/26,13:00,Recife
+G,Portugal,Ghana,2014/6/26,13:00,Brasilia
+H,Corea del Sur,Belgica,2014/6/26,17:00,Sao Paulo
+H,Argelia,Rusia,2014/6/26,17:00,Curitiba

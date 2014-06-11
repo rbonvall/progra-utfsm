@@ -1,0 +1,5 @@
+Equipo: `Chile`
+Los partidos de Chile son:
+Chile-Australia (Cuiaba, 13 de junio)
+Espana-Chile (Rio de Janeiro, 18 de junio)
+Paises Bajos-Chile (Sao Paulo, 23 de junio)
