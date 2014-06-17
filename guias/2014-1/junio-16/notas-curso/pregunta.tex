@@ -1,0 +1,74 @@
+\lstset{language=file,frame=single}
+
+El archivo \texttt{curso.txt} contiene los datos
+de los estudiantes de un curso.
+Cada línea corres\-ponde a un estudiante,
+y contiene varios datos separados por dos puntos («\verb+:+»)
+como en el si\-guiente ejemplo:
+\lstinputlisting[linerange=-5]{notas-curso/curso.txt}
+
+Los dos primeros datos son el nombre y el apellido.
+A conti\-nua\-ción está la fecha de nacimiento
+en formato \texttt{año/mes/día}.
+Finalmente, están las cinco notas obtenidas por el estudiante.
+
+\newpage
+\begin{certamen}
+
+    \item
+      Escriba un programa llamado \texttt{clasificar.py} que,
+      a partir de los datos de \texttt{curso.txt},
+      genere dos nuevos archivos
+      llamados \texttt{aprobados.txt} y \texttt{reprobados.txt},
+      que tengan los datos de los estudiantes aprobados y reprobados,
+      respectivamente,
+      usando el formato \texttt{nombre:apellido:promedio}.
+
+      Por ejemplo,
+      las primeras líneas de \texttt{aprobados.txt} serían éstas:
+      \lstinputlisting[linerange=-4]{notas-curso/aprobados.txt}
+      y las de \texttt{reprobados.txt}:
+      \lstinputlisting[linerange=-4]{notas-curso/reprobados.txt}
+
+      \newpage
+
+    \item
+      Escriba un programa que genere un archivo llamado \texttt{promedios.txt}
+      con un reporte como el siguiente:
+      \lstinputlisting[linerange=-10]{notas-curso/promedios.txt}
+
+      Note que los promedios están alineados a la derecha.
+      Para lograr esto con el método \li!.format(...)!
+      puede usar la siguiente plantilla:
+      \begin{lstlisting}[language=py,frame=none]
+plantilla = '{0:20} {1:>4} {2}\n'
+      \end{lstlisting}
+
+      \newpage
+
+    \item
+      Escriba el programa \texttt{reporte.py}
+      que muestre la siguiente información por pantalla
+      a partir de los datos del archivo:
+      \lstinputlisting[language=testcase]{notas-curso/reporte.txt}
+
+      \newpage
+
+    \item
+      Escriba el programa \texttt{pagina\_web.py}
+      que genere un archivo llamado \texttt{curso.html}
+      con un contenido como el siguiente:
+      \lstinputlisting[basicstyle=\small\ttfamily]{notas-curso/ejemplo.html}
+      (Por brevedad aquí sólo se muestra los primeros dos estu\-diantes;
+      usted debe agregarlos todos).
+      Los datos listados son:
+      el nombre completo,
+      las notas de los cinco certámenes
+      y el promedio final (encerrado entre \verb+<b>+ y \verb+</b>+).
+
+      El archivo generado es una página web.
+      Ábralo con su nave\-gador favorito
+      para verificar que fue creado correctamente.
+
+\end{certamen}
+
