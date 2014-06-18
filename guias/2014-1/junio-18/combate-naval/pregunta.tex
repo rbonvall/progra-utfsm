@@ -64,34 +64,15 @@ y dirección del barco (\verb+V+ si es vertical y \verb+H+ si es horizontal).
 
 \newpage
 
-\begin{enumerate}[leftmargin=0pt,label=\emph{\alph*})]
+Escriba un programa %llamado \verb+crear_tablero.py+
+que le pregunte al usuario
+el nombre del archivo que contiene la flota:
 
-  \item
-    Escriba un programa %llamado \verb+crear_tablero.py+
-    que le pregunte al usuario
-    el nombre del archivo que contiene la flota,
-    y cree un nuevo archivo con un mapa del tablero
-    como el siguiente:
+\lstinputlisting[language=testcase]{combate-naval/caso.txt}
 
-    \begin{minipage}[t]{0.45\textwidth}
-      \lstinputlisting[language=file]{combate-naval/tablero-a.txt}
-    \end{minipage}
+y cree un nuevo archivo con un mapa del tablero
+como el que se muestra a continuación:
 
-    El nombre del nuevo archivo debe ser el del archivo de barcos
-    precedido de «\verb+tablero-+».
-    (Por ejemplo, \verb+a.txt+ \(\to\) \verb+tablero-a.txt+).
-
-    %Al ejecutar el programa debe verse lo siguiente:
-
-    %\lstinputlisting[language=testcase]{combate-naval/caso.txt}
-
-  \newpage
-  \item
-    Escriba un programa llamado \verb+validar.py+
-    que le pregunte al usuario el nombre de un archivo de barcos
-    y le diga los errores que tiene la flota.
-    Por ejemplo:
-    \lstinputlisting[language=testcase]{combate-naval/caso-validar.txt}
-
-\end{enumerate}
-
+\begin{minipage}[t]{0.45\textwidth}
+  \lstinputlisting[language=file,basicstyle=\small\ttfamily]{combate-naval/tablero-a.txt}
+\end{minipage}
