@@ -1,0 +1,42 @@
+Las cartas de una baraja tienen
+un palo (♡, ♢, ♣, ♠)
+y un valor (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K).
+
+En un programa en Python
+podemos representar cada carta
+como una tupla \texttt{(valor, palo)},
+donde el palo es un string
+(\lstinline!'C'!, \lstinline!'D'!, \lstinline!'T'! o \lstinline!'P'!)
+y el valor es un número entre 1 y 13.
+Por ejemplo,
+la carta ``5♡'' sería \lstinline!(5, 'C')!.
+
+Una mano de póker es un conjunto de cinco cartas:
+\begin{lstlisting}
+mano = {(2, 'T'), (1, 'C'), (12, 'C'), (1, 'D'), (6, 'D')}
+\end{lstlisting}
+
+Según las cartas que tenga,
+una mano se puede clasificar como:
+pareja, doble pareja, trío, escalera,
+color, full, póker, escalera de color o escalera real.
+Las reglas para hacer esta clasificación
+las puede ver en esta página:
+
+\url{https://es.wikipedia.org/wiki/Manos_de_p%C3%B3quer#Manos}
+
+Escriba las funciones
+\lstinline!es_pareja!,
+\lstinline!es_doble_pareja!,
+\lstinline!es_trio!,
+\dots,
+que reciban como parámetro una mano
+y que retornen \verb!True! o \verb!False!
+depen\-diendo de si la mano cumple o no la clasificación.
+\begin{lstlisting}
+>>> m = {(3, 'T'), (8, 'C'), (3, 'C'), (8, 'P'), (3, 'D')}
+>>> es_full(m)
+True
+>>> es_escalera(m)
+False
+\end{lstlisting}

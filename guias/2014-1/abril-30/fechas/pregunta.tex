@@ -1,0 +1,24 @@
+Escriba la función \verb!dia_siguiente(fecha)!
+que reciba como parámetro una tupla \texttt{(anno, mes, dia)}
+y retorne la tupla correspondiente al dia siguiente:
+\begin{lstlisting}
+>>> hoy = (2014, 4, 30)
+>>> dia_siguiente(hoy)
+(2014, 5, 1)
+\end{lstlisting}
+
+A continuación, escriba la función \verb!dias_entre(f1, f2)!
+que retorne la cantidad de dias de diferencia
+que hay entre las fechas \verb!f1! y \verb!f2!:
+\begin{lstlisting}
+>>> hoy = (2014, 4, 30)
+>>> junta_gob = (1810, 9, 18)
+>>> navidad = (2014, 12, 25)
+>>> ano_nuevo = (2014, 1, 1)
+>>> dias_entre(junta_gob, hoy)
+74369
+>>> dias_entre(ano_nuevo, hoy)
+119
+>>> dias_entre(hoy, navidad)
+239
+\end{lstlisting}

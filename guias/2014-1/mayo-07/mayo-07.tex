@@ -1,0 +1,44 @@
+\documentclass[12pt,spanish]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{babel}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{enumitem}
+\usepackage{courier}
+\usepackage{textcomp}
+
+\usepackage{hyperref}
+\usepackage{url}
+\urlstyle{sf}
+
+\usepackage{geometry}
+\geometry{%
+  papersize={512px,384px},
+  hmargin=2cm,
+  vmargin=1cm
+}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\input{../../../latex/definiciones.tex}
+
+\begin{document}
+  \thispagestyle{empty}
+  \pagestyle{empty}
+  \section*{Miércoles 7 de mayo de 2014}
+
+  \begin{certamen}[start=0]
+    \item
+      \input{programitas/pregunta}
+      \newpage
+    \item
+      \input{ciudades/pregunta}
+      \newpage
+    \item
+      \input{poker/pregunta}
+      \newpage
+  \end{certamen}
+\end{document}
+

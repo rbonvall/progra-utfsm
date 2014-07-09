@@ -1,0 +1,36 @@
+Un polígono puede ser representado
+como una lista de vértices.
+Cada vértice es un punto \verb!(x, y)!
+en el plano.
+
+\begin{minipage}[T]{0.7\textwidth}
+  Por ejemplo,
+  el polígono de la figura de la derecha
+  quedaría representado así:
+  \begin{lstlisting}
+p = [(40, 40), (50, 0), (20, 10),
+     (10, -10), (-10, 0), (0, 30)]
+  \end{lstlisting}
+
+  Escriba un módulo llamado \texttt{poligonos}
+  que contenga las funciones
+  mostradas a continuación.
+\end{minipage}
+\hfill
+\begin{minipage}[T]{0.25\textwidth}
+  \begin{tikzpicture}[scale=0.4]
+    \draw[dotted] (-2, -2) grid (6, 5); 
+    \draw[-latex'] (-2, 0) -- (6, 0); 
+    \draw[-latex'] (0, -2) -- (0, 5); 
+    \draw[very thick, Blue]
+          ( 4, 4) --
+          ( 5, 0) --
+          ( 2, 1) --
+          ( 1, -1) --
+          (-1, 0) --
+          ( 0, 3) --
+          cycle;
+  \end{tikzpicture}
+\end{minipage}
+
+\lstinputlisting{poligonos/ejemplos.txt}

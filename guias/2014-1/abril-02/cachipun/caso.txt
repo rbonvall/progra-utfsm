@@ -1,0 +1,19 @@
+A: `tijera`
+B: `papel`
+1 - 0
+A: `tijera`
+B: `tijera`
+1 - 0
+A: `piedra`
+B: `papel`
+1 - 1
+A: `piedra`
+B: `tijera`
+2 - 1
+A: `papel`
+B: `papel`
+2 - 1
+A: `papel`
+B: `piedra`
+3 - 1
+La ganadora es A

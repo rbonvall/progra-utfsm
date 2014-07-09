@@ -1,0 +1,15 @@
+Contrasena: `qw3rty!`
+Tiene menos de diez caracteres
+Contrasena: `qwerty!!!!!`
+No tiene numeros
+Tiene caracteres repetidos seguidos
+Contrasena: `qweRty12345!`
+Tiene minuscula antes de primera mayuscula
+Contrasena: `Qwerty12345` 
+No tiene simbolos
+Contrasena: `QQwerty12345`
+No tiene simbolos
+Tiene caracteres repetidos seguidos
+Contrasena: `QweQwe12345!`
+Contrasena valida
+

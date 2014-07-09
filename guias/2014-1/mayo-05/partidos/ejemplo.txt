@@ -1,0 +1,17 @@
+# PUNTOS
+>>> puntos('Chile', campeonato)
+6
+>>> puntos('Suiza', campeonato)
+4
+# FIN PUNTOS
+
+# OBTENER EQUIPOS
+>>> obtener_equipos(campeonato)
+['Chile', 'Espana', 'Honduras', 'Suiza']
+# FIN OBTENER EQUIPOS
+
+# CALCULAR TABLA
+>>> calcular_tabla(campeonato)
+{'Honduras': 1, 'Suiza': 4, 'Espana': 6, 'Chile': 6}
+# FIN CALCULAR TABLA
+

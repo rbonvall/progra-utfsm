@@ -1,0 +1,17 @@
+Los partidos de un campeonato de fútbol
+se pueden almacenar en una lista de tuplas de la forma \verb!(equipos, resultado)!,
+donde a su vez \verb!equipos! y \verb!resultado!
+son tuplas de dos elementos:
+\lstinputlisting[linerange=PARTIDOS-FIN\ PARTIDOS]{partidos/partidos.py}
+
+Escriba la función \verb!puntos(equipo, partidos)!
+que entregue la cantidad de puntos obtenida por el equipo
+en el campeonato:
+\begin{lstlisting}
+>>> puntos('Chile', partidos)
+6
+>>> puntos('Suiza', partidos)
+4
+\end{lstlisting}
+
+No dude en usar la función \verb!ganador! que implementó hace un rato.

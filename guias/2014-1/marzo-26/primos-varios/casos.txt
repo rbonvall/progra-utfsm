@@ -1,0 +1,21 @@
+# MOSTRAR MENORES
+m: `50`
+Los primos menores que 50 son:
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
+# FIN MOSTRAR MENORES
+
+# CONTAR MENORES
+m: `40`
+Hay 12 primos menores que 40
+# FIN CONTAR MENORES
+
+# MOSTRAR PRIMEROS
+m: `10`
+Los 10 primeros primos son:
+2 3 5 7 11 13 17 19 23 29
+# FIN MOSTRAR PRIMEROS
+
+# SUMAR PRIMEROS
+m: `100`
+La suma de los 100 primeros primos es 24133
+# FIN SUMAR PRIMEROS

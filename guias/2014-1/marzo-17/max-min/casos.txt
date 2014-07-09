@@ -1,0 +1,29 @@
+# CASO 1
+Primero: `3.8`
+Segundo: `4.1`
+Tercero: `1.5`
+En orden:
+1.5
+3.8
+4.1
+# FIN CASO 1
+
+# CASO 2
+Primero: `9`
+Segundo: `3.14`
+Tercero: `-5`
+En orden:
+-5.0
+3.14
+9.0
+# FIN CASO 2
+
+# CASO 3
+Primero: `44`
+Segundo: `55`
+Tercero: `66`
+En orden:
+44.0
+55.0
+66.0
+# FIN CASO 3

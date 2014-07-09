@@ -1,0 +1,20 @@
+# CASO 1
+n: `1`
+No primo
+# FIN CASO 1
+
+# CASO 2
+n: `17`
+Primo
+# FIN CASO 2
+
+# CASO 3
+n: `32`
+No primo
+# FIN CASO 3
+
+# CASO 4
+n: `7814623`
+Primo
+# FIN CASO 4
+

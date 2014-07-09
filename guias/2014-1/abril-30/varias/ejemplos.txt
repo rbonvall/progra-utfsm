@@ -1,0 +1,23 @@
+>>> hoy = (2014, 4, 30)
+>>> es_navidad(hoy)
+False
+>>> es_navidad((1961, 12, 25))
+True
+
+>>> persona = ('Justino', 'Vivar', (1994, 3, 1))
+>>> nombre_completo(persona)
+'Justino Vivar'
+>>> edad(persona)
+20
+
+>>> distancia((3, 1), (5, 2))
+2.23606797749979
+>>> punto_medio((3, 1), (5, 2))
+(4.0, 1.5)
+
+>>> p1 = (('Chile', 'Australia'), (5, 1))
+>>> p2 = (('Chile', 'Holanda'), (2, 2))
+>>> ganador(p1)
+'Chile'
+>>> ganador(p2)
+'Empate'

@@ -1,0 +1,8 @@
+>>> ciudades(info)
+set(['Concepcion', 'Osorno', 'Arica', 'Chillan', 'Puerto Montt'])
+>>> regiones(info)
+set(['X', 'XV', 'VIII'])
+>>> ciudades_por_region(info)
+{'X': set(['Puerto Montt', 'Osorno']),
+ 'XV': set(['Arica']),
+ 'VIII': set(['Concepcion', 'Chillan'])}

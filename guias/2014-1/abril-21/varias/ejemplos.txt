@@ -1,0 +1,17 @@
+>>> sumar_palitos('iii', 'ii')
+'iiiii'
+>>> restar_palitos('iiiii', 'iii')
+'ii'
+>>> es_primo(17)
+True
+>>> es_primo(16)
+False
+>>> contar_primos_menores_que(500)
+95
+>>> reflejar(9875)
+5789
+>>> es_palindromo(34143)
+True
+>>> es_palindromo(3414)
+False
+

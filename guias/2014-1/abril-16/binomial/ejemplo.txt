@@ -1,0 +1,6 @@
+>>> binomial(7, 3)
+35
+>>> binomial(10, 1)
+10
+>>> binomial(10, 5)
+252

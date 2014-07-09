@@ -1,0 +1,18 @@
+oracion = 'El sobre esta sobre el pupitre'
+>>> contar_palabras(oracion)
+{'el': 2, 'pupitre': 1, 'esta': 1, 'sobre': 2}
+
+>>> adn = 'cagcccatgaggcagggtg'
+>>> complementaria(adn)
+'gtcgggtactccgtcccac'
+
+>>> tipo_de_correo('ppalotes@gmail.com')
+'gmail'
+>>> tipo_de_correo('yayita@yahoo.com.ar')
+'yahoo'
+
+>>> a = [(3, 6), (7, 5), (6, 2), (6, 4)]
+>>> textualizar(a)
+'3-6, 7-5, 6-2, 6-4'
+>>> destextualizar(textualizar(a))
+[(3, 6), (7, 5), (6, 2), (6, 4)]

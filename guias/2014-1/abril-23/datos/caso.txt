@@ -1,0 +1,11 @@
+Cuantos datos? `7`
+Dato 1: `3.14`
+Dato 2: `5.89`
+Dato 3: `2.17`
+Dato 4: `10.59`
+Dato 5: `7`
+Dato 6: `0.1`
+Dato 7: `6.66`
+El promedio es 5.07857142857
+La desviacion estandar es 3.25644604075
+La mediana es 5.89

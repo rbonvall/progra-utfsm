@@ -1,0 +1,38 @@
+Un \emph{polinomio} de grado \(n\)
+es una función que tiene la siguente forma:
+\[
+  p(x) =
+  a_0     +
+  a_1 x   +
+  a_2 x^2 +
+  a_3 x^3 +
+  \cdots +
+  a_n x^n.
+\]
+Los valores \(a_0, \ldots, a_n\)
+son los \emph{coeficientes} del polinomio,
+y \(x\) es la \emph{variable independiente}.
+
+\begin{minipage}[t]{.63\textwidth}
+  Desarrolle un programa
+  que evalúe un polinomio.
+  \\[1ex]
+  Primero,
+  el usuario debe ingresar \(x\).
+  A continuación,
+  debe ingresar los coeficientes en orden.
+  Para indicar que todos los coeficientes han sido ingresados,
+  se debe escribir el texto \li!FIN!.
+  Finalmente,
+  el programa debe mostrar
+  el valor de \(p(x)\).
+  \\[1ex]
+  El ejemplo de la derecha
+  muestra cómo evaluar el polinomio
+  \(p(x) = -7 - 3x^2 + 2x^3\) en \(x = 2.1\).
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.26\textwidth}
+  \lstinputlisting[language=testcase,frame=single]{polinomio/caso-polinomio.txt}
+\end{minipage}
+

@@ -1,0 +1,9 @@
+Cuantos valores ingresara? `7`
+Valor 1: `5.96`
+Valor 2: `6.74`
+Valor 3: `7.43`
+Valor 4: `4.99`
+Valor 5: `7.20`
+Valor 6: `0.56`
+Valor 7: `2.80`
+El rango es 6.87

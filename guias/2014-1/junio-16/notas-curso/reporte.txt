@@ -1,0 +1,8 @@
+Cantidad de aprobados: 19
+Cantidad de reprobados: 115
+
+Promedio certamen 1: 59.5
+Promedio certamen 2: 59.8
+Promedio certamen 3: 19.4
+Promedio certamen 4: 55.7
+Promedio certamen 5: 39.1

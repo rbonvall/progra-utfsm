@@ -1,0 +1,5 @@
+Ingrese nombre de archivo: `b.txt`
+Hay 3 acorazados, deberian ser 2
+Un acorazado y un submarino se topan
+Un portaaviones se sale del tablero
+
