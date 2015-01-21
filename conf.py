@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 
+
+
 import sys
 from glob import glob
 from os.path import abspath
+import sphinx_rtd_theme
 
 sys.path.insert(0, abspath('.'))
 sys.path.insert(0, abspath('_modules'))
@@ -32,12 +35,10 @@ pygments_style = 'sphinx'
 # -- Options for HTML output ---------------------------------------------------
 
 html_static_path = ['_static']
-html_theme_path = ['_theme']
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-html_theme = 'progra'
-html_theme_options = {
-    'nosidebar': True,
-}
+
+html_theme = "sphinx_rtd_theme"
 html_title = u'Programación'
 html_short_title = u'Programación'
 #html_logo = None
