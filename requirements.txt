@@ -9,4 +9,3 @@ six==1.9.0
 snowballstemmer==1.2.0
 sphinx-rtd-theme==0.1.6
 wsgiref==0.1.2
-s3peat==0.5.0
