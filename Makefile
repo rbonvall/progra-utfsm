@@ -39,5 +39,6 @@ latex:
 	      "run these through (pdf)latex."
 
 deploy: html
-	rsync -a _build/html/ $(DEPLOYDIR)
+#	rsync -a _build/html/ $(DEPLOYDIR)
+	aws s3 cp _build/html s3://progra.cl/ --recursive --profile progra.cl
 
